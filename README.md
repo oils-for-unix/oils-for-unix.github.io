@@ -9,7 +9,7 @@ This repo publishes to:
 This repo:
 
 - <https://codeberg.org/oils/pages>
-- <https://github.com/orgs/oils-for-unix/oils-for-unix.github.io>
+- <https://github.com/oils-for-unix/oils-for-unix.github.io>
 
 All Oils repos:
 
