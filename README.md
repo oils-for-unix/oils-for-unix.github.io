@@ -6,7 +6,12 @@ This repo publishes to:
 - <https://oils.codeberg.page/>
 - <https://oils-for-unix.github.io/>
 
-Our repos:
+This repo:
+
+- <https://codeberg.org/oils/pages>
+- <https://github.com/orgs/oils-for-unix/oils-for-unix.github.io>
+
+All Oils repos:
 
 - <https://codeberg.org/oils/>
 - <https://github.com/orgs/oils-for-unix/repositories>
