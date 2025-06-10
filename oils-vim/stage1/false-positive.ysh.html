@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>~/git/oils-for-unix/oils.vim/testdata/false-positive.ysh.html</title>
+<meta name="Generator" content="Vim/9.0">
+<meta name="plugin-version" content="vim9.0_v1">
+<meta name="syntax" content="ysh">
+<meta name="settings" content="use_css,no_foldcolumn,expand_tabs,pre_wrap,prevent_copy=,use_input_for_pc=fallback">
+<meta name="colorscheme" content="none">
+<style>
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Comment { color: #0000c0; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="Comment"># Command Keywords</span>
+
+<span class="Comment"># Should disallow the command keywords in YSH expressions?</span>
+
+<span class="Comment"># Or the syntax highlighter can match beginning of line</span>
+
+var const = 42
+setvar const = const + 1
+echo $const
+
+var setvar = 42
+setvar setvar = setvar + 1
+echo $setvar
+
+var call  = 42
+setvar call = call + 1
+echo $call
+
+<span class="Comment">#</span>
+<span class="Comment"># These should still be highlighted</span>
+<span class="Comment">#</span>
+
+echo hi;call 42
+echo hi; call 42
+echo hi;var x =42
+echo hi;  var x =42
+echo
+
+<span class="Comment"># hard one</span>
+echo pipeline | proc p { echo pipeline }; p | cat
+
+<span class="Comment">## &amp;&amp; ||</span>
+echo hi &amp;&amp; var x = 42
+echo hi &amp;&amp; call 42
+
+false || var x = 42
+false || call (42)
+
+<span class="Comment"># Odd but valid?</span>
+true | var x = 42
+true | call (42)
+
+<span class="Comment"># first word can come after:</span>
+<span class="Comment"># ; |</span>
+<span class="Comment"># ;;</span>
+<span class="Comment"># &amp;&amp; ||</span>
+
+<span class="Comment">#</span>
+<span class="Comment"># Bugs</span>
+<span class="Comment">#</span>
+
+proc p (...args; x) {
+  json write (args)
+}
+
+<span class="Comment"># TODO: Fix all of these</span>
+p proc a b c (42)
+p func x y z (42)
+
+p var x = (42)
+p setvar x = (42)
+p setglobal a[i] = (42)
+
+p call (42)
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

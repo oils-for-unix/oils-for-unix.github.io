@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>~/git/oils-for-unix/oils.vim/testdata/false-positive.ysh.html</title>
+<meta name="Generator" content="Vim/9.0">
+<meta name="plugin-version" content="vim9.0_v1">
+<meta name="syntax" content="ysh">
+<meta name="settings" content="use_css,no_foldcolumn,expand_tabs,pre_wrap,prevent_copy=,use_input_for_pc=fallback">
+<meta name="colorscheme" content="none">
+<style>
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Comment { color: #0000c0; }
+.funcName { color: #87005f; }
+.yshExpr { color: #0000d7; }
+.procName { color: #5f00af; }
+.Statement { color: #af5f00; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="Comment"># Command Keywords</span>
+
+<span class="Comment"># Should disallow the command keywords in YSH expressions?</span>
+
+<span class="Comment"># Or the syntax highlighter can match beginning of line</span>
+
+<span class="Statement">var</span> <span class="Statement">const</span> = <span class="yshExpr">42</span>
+<span class="Statement">setvar</span> <span class="Statement">const</span> = <span class="yshExpr">const + 1</span>
+echo $<span class="Statement">const</span>
+
+<span class="Statement">var</span> <span class="Statement">setvar</span> = <span class="yshExpr">42</span>
+<span class="Statement">setvar</span> <span class="Statement">setvar</span> = <span class="yshExpr">setvar + 1</span>
+echo $<span class="Statement">setvar</span>
+
+<span class="Statement">var</span> <span class="Statement">call</span><span class="yshExpr">  = 42</span>
+<span class="Statement">setvar</span> <span class="Statement">call</span><span class="yshExpr"> = call + 1</span>
+echo $<span class="Statement">call</span>
+
+<span class="Comment">#</span>
+<span class="Comment"># These should still be highlighted</span>
+<span class="Comment">#</span>
+
+echo hi;<span class="Statement">call</span><span class="yshExpr"> 42</span>
+echo hi; <span class="Statement">call</span><span class="yshExpr"> 42</span>
+echo hi;<span class="Statement">var</span> x =42
+echo hi;  <span class="Statement">var</span> x =42
+echo
+
+<span class="Comment"># hard one</span>
+echo pipeline | <span class="Statement">proc</span> <span class="procName">p</span> { echo pipeline }; p | cat
+
+<span class="Comment">## &amp;&amp; ||</span>
+echo hi &amp;&amp; <span class="Statement">var</span> x = <span class="yshExpr">42</span>
+echo hi &amp;&amp; <span class="Statement">call</span><span class="yshExpr"> 42</span>
+
+false || <span class="Statement">var</span> x = <span class="yshExpr">42</span>
+false || <span class="Statement">call</span><span class="yshExpr"> </span>(<span class="yshExpr">42</span>)
+
+<span class="Comment"># Odd but valid?</span>
+true | <span class="Statement">var</span> x = <span class="yshExpr">42</span>
+true | <span class="Statement">call</span><span class="yshExpr"> </span>(<span class="yshExpr">42</span>)
+
+<span class="Comment"># first word can come after:</span>
+<span class="Comment"># ; |</span>
+<span class="Comment"># ;;</span>
+<span class="Comment"># &amp;&amp; ||</span>
+
+<span class="Comment">#</span>
+<span class="Comment"># Bugs</span>
+<span class="Comment">#</span>
+
+<span class="Statement">proc</span> <span class="procName">p</span> (...args; x) {
+  json write (<span class="yshExpr">args</span>)
+}
+
+<span class="Comment"># TODO: Fix all of these</span>
+p <span class="Statement">proc</span> <span class="procName">a</span> b c (<span class="yshExpr">42</span>)
+p <span class="Statement">func</span> <span class="funcName">x</span> y z (<span class="yshExpr">42</span>)
+
+p <span class="Statement">var</span> x = (<span class="yshExpr">42</span>)
+p <span class="Statement">setvar</span> x = (<span class="yshExpr">42</span>)
+p <span class="Statement">setglobal</span> a[i] = (<span class="yshExpr">42</span>)
+
+p <span class="Statement">call</span><span class="yshExpr"> </span>(<span class="yshExpr">42</span>)
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

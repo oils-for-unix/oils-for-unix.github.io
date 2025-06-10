@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>~/git/oils-for-unix/oils.vim/testdata/nested-double-quotes.ysh.html</title>
+<meta name="Generator" content="Vim/9.0">
+<meta name="plugin-version" content="vim9.0_v1">
+<meta name="syntax" content="ysh">
+<meta name="settings" content="use_css,no_foldcolumn,expand_tabs,pre_wrap,prevent_copy=,use_input_for_pc=fallback">
+<meta name="colorscheme" content="none">
+<style>
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Comment { color: #0000c0; }
+.Constant { color: #c00000; }
+.yshExpr { color: #0000d7; }
+.sigilPair { color: #5f00af; }
+.Statement { color: #af5f00; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="Comment"># Nested Double Quotes</span>
+<span class="Comment">#</span>
+<span class="Comment"># Highlighting this example requires (recursive) coarse parsing, not just</span>
+<span class="Comment"># lexing.</span>
+
+<span class="Statement">var</span> mydict = {<span class="yshExpr">word: </span><span class="Constant">'double'</span>}
+
+echo <span class="Constant">&quot;nested </span><span class="sigilPair">$[</span><span class="yshExpr">mydict</span>[<span class="Constant">&quot;word&quot;</span>]<span class="sigilPair">]</span><span class="Constant"> quotes&quot;</span>
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

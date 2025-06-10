@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>~/git/oils-for-unix/oils.vim/testdata/false-negative.ysh.html</title>
+<meta name="Generator" content="Vim/9.0">
+<meta name="plugin-version" content="vim9.0_v1">
+<meta name="syntax" content="ysh">
+<meta name="settings" content="use_css,no_foldcolumn,expand_tabs,pre_wrap,prevent_copy=,use_input_for_pc=fallback">
+<meta name="colorscheme" content="none">
+<style>
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Comment { color: #0000c0; }
+.Constant { color: #c00000; }
+.yshExpr { color: #0000d7; }
+.Statement { color: #af5f00; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+
+echo yes<span class="Comment"> # comment</span>
+
+<span class="Comment"># should be highlighted, but isn't</span>
+
+echo yes;#comment
+
+
+<span class="Statement">var</span> s=<span class="Constant">'s'</span>
+
+<span class="Comment"># spaces are required</span>
+<span class="Statement">var</span> i =len(s)
+<span class="Statement">var</span> i= len(s)
+
+<span class="Statement">call</span><span class="yshExpr"> len</span>(<span class="yshExpr">s</span>)
+
+<span class="Comment"># these are OK</span>
+pp [<span class="yshExpr"> s </span>]
+pp (<span class="yshExpr"> s </span>)
+
+<span class="Comment"># BUG</span>
+<span class="Comment"># Hm maybe we don't need rhsExpr</span>
+<span class="Comment"># we need exprAfterKeyword for const, var, setvar, setglobal ?</span>
+<span class="Comment"># Including the =</span>
+
+<span class="Statement">setvar</span> i += len(s)
+<span class="Statement">setvar</span> i -= len(s)
+
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

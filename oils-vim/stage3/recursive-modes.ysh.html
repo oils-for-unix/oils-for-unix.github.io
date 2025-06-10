@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>~/git/oils-for-unix/oils.vim/testdata/recursive-modes.ysh.html</title>
+<meta name="Generator" content="Vim/9.0">
+<meta name="plugin-version" content="vim9.0_v1">
+<meta name="syntax" content="ysh">
+<meta name="settings" content="use_css,no_foldcolumn,expand_tabs,pre_wrap,prevent_copy=,use_input_for_pc=fallback">
+<meta name="colorscheme" content="none">
+<style>
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Comment { color: #0000c0; }
+.funcName { color: #87005f; }
+.sigilPair { color: #5f00af; }
+.Constant { color: #c00000; }
+.yshExpr { color: #0000d7; }
+.procName { color: #5f00af; }
+.yshVarSub { color: #87005f; }
+.Statement { color: #af5f00; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="Statement">var</span> x = <span class="yshExpr">42</span> <span class="Comment"> # integer</span>
+
+<span class="Statement">func</span> <span class="funcName">f</span>(x; offset=0) { <span class="Statement">return</span> (<span class="yshExpr">x</span>) }
+
+<span class="Statement">func</span> <span class="funcName">myFunc</span>(x; delimiter=<span class="Constant">r'\'</span>, other=<span class="Constant">&quot;hi </span><span class="yshVarSub">$x</span><span class="Constant">&quot;</span>) { <span class="Statement">return</span> (<span class="yshExpr">x</span>) }
+
+<span class="Statement">proc</span> <span class="procName">my-proc</span>(x, y; d=<span class="sigilPair">$(</span>echo hi<span class="sigilPair">)</span>) { echo hi }
+<span class="Statement">proc</span> <span class="procName">my-proc</span>(x, y; d=<span class="sigilPair">$(</span>echo 2<span class="sigilPair">)</span>) { echo hi }
+
+<span class="Statement">var</span> y = <span class="yshExpr">f</span>(<span class="yshExpr">42</span>) <span class="Comment"> # function call</span>
+
+<span class="Statement">var</span> z = <span class="yshExpr">f</span>(<span class="yshExpr">42; offset=5</span>) <span class="Comment"> # semi-colon doesn't end the expression</span>
+
+<span class="Comment"># comment afterward</span>
+<span class="Statement">var</span> r2 = <span class="Constant">r'C:\Program # Files\'</span><span class="Comment"> # r'' prefix is allowed</span>
+
+<span class="Statement">var</span> a = [<span class="yshExpr">0, 1, 2</span>]
+
+<span class="Comment"># nested</span>
+<span class="Statement">var</span> b = [<span class="yshExpr">a</span>[<span class="yshExpr">2</span>]<span class="yshExpr">, a</span>[<span class="yshExpr">1</span>]<span class="yshExpr">, a</span>[<span class="yshExpr">0</span>]<span class="yshExpr">, f</span>(<span class="yshExpr">1</span>)]
+
+<span class="Statement">var</span> c = (<span class="yshExpr">f</span>(<span class="yshExpr">2</span>)<span class="yshExpr">, f</span>(<span class="yshExpr">1</span>)<span class="yshExpr">, f</span>(<span class="yshExpr">0</span>)<span class="yshExpr">, a</span>[<span class="yshExpr">0</span>]<span class="yshExpr">, </span>{})
+
+<span class="Comment"># bare assignment</span>
+hay define Package
+Package foo {
+  x = <span class="yshExpr">42    </span>
+  y = [<span class="Constant">'foo'</span><span class="yshExpr">, </span><span class="Constant">&quot;</span><span class="yshVarSub">$y</span><span class="Constant">&quot;</span>]
+}
+
+pp (<span class="yshExpr">1 + </span>(<span class="yshExpr">a</span>[<span class="yshExpr">1</span>]<span class="yshExpr"> + 3</span>)); echo next
+
+pp (<span class="yshExpr">1 + </span>
+<span class="yshExpr">    </span>(<span class="yshExpr">a</span>[<span class="yshExpr">1</span>]<span class="yshExpr"> + 3</span>)); echo next
+<span class="Comment"># f(x)</span>
+
+pp (<span class="Constant">'hi'</span><span class="yshExpr"> ++ </span><span class="Constant">&quot;hi </span><span class="yshVarSub">$x</span><span class="Constant">&quot;</span><span class="yshExpr"> ++ </span><span class="Constant">r'c:\'</span><span class="yshExpr"> ++ </span><span class="Constant">b'</span>\n<span class="Constant">'</span>)
+
+echo {a,b}@example.com
+
+<span class="Comment"># we need a space to highlight, but that's OK for now</span>
+<span class="Statement">if</span>(42) { echo yes }
+
+<span class="Statement">if</span> (<span class="yshExpr">42 &gt; a</span>[<span class="yshExpr">0</span>]) {
+  echo <span class="Constant">'yes'</span>
+}
+
+<span class="Statement">for</span> i, item <span class="Statement">in</span> (<span class="yshExpr">a</span>) {
+  echo <span class="Constant">&quot;</span><span class="yshVarSub">$i</span><span class="Constant"> </span><span class="yshVarSub">$item</span><span class="Constant">&quot;</span>
+}
+
+pp [<span class="yshExpr">a</span>]
+
+  pp  (<span class="yshVarSub">${x}</span><span class="yshExpr"> ++ </span><span class="sigilPair">$(</span>echo hi<span class="sigilPair">)</span><span class="yshExpr"> ++ </span><span class="Constant">'hi'</span>)
+  pp  [<span class="yshVarSub">${x}</span><span class="yshExpr"> ++ </span><span class="sigilPair">$(</span>echo hi<span class="sigilPair">)</span><span class="yshExpr"> ++ </span><span class="Constant">'hi'</span>]
+
+<span class="Comment"># Note: this isn't confused for a lazy typed arg, because there's no leading</span>
+<span class="Comment"># space</span>
+echo *.[ch]
+
+<span class="Comment"># Backslash escapes</span>
+
+echo <span class="Constant">\(</span> hi <span class="Constant">\)</span> <span class="Constant">\[</span> hi <span class="Constant">\]</span>
+
+
+: <span class="Constant">'''</span>
+<span class="Constant">&quot; TODO:</span>
+<span class="Constant">&quot;</span>
+<span class="Constant">&quot; More structure</span>
+<span class="Constant">&quot;</span>
+<span class="Constant">&quot; - backslash escapes within strings:</span>
+<span class="Constant">&quot;    - \&quot; \$ in double quotes</span>
+<span class="Constant">&quot;    - \u{123456} in J8-style strings</span>
+<span class="Constant">&quot;</span>
+<span class="Constant">&quot; - Is there way to understand recursion like ${a:-'foo'}?  Or just leave that</span>
+<span class="Constant">&quot;   out</span>
+<span class="Constant">&quot; - There is also recursion of $(hostname) and such.</span>
+<span class="Constant">&quot;</span>
+<span class="Constant">&quot; - Here docs?  They are hard, could leave them out of YSH</span>
+<span class="Constant">'''</span>
+
+<span class="Statement">var</span> foods = <span class="sigilPair">:|</span>
+  pea nut
+ <span class="Comment"> # comment</span>
+  other
+  <span class="Constant">\(</span>
+<span class="sigilPair">|</span>
+
+<span class="Comment">#</span>
+<span class="Comment"># Copied from notes.md</span>
+<span class="Comment">#</span>
+
+<span class="Comment"># Command mode -&gt; Expression</span>
+
+    <span class="Statement">var</span> y = <span class="yshExpr">f</span>(<span class="yshExpr">42</span>)
+    <span class="Statement">var</span> y = <span class="yshExpr">f</span>(<span class="Constant">'str'</span><span class="yshExpr"> ++ </span><span class="Constant">&quot;hi </span><span class="yshVarSub">$x</span><span class="Constant">&quot;</span>)
+
+<span class="Statement">    =</span><span class="yshExpr">  f</span>(<span class="yshExpr">42</span>)
+    <span class="Statement">call</span><span class="yshExpr">  f</span>(<span class="yshExpr">42</span>)
+    pp (<span class="yshExpr">f</span>(<span class="yshExpr">42</span>))
+    pp [<span class="yshExpr">f</span>(<span class="yshExpr">42</span>)]
+
+    echo ls --flag=<span class="sigilPair">$[</span><span class="yshExpr">x + 1</span><span class="sigilPair">]</span>; echo next  <span class="Comment"> # newline not allowed in $[]</span>
+   <span class="Comment"> # escape dollar</span>
+    echo ls --flag=<span class="Constant">\$</span>[x + 1]
+
+    echo <span class="sigilPair">@[</span><span class="yshExpr">glob(</span><span class="Constant">'*.py'</span><span class="yshExpr">)</span><span class="sigilPair">]</span>; echo next <span class="Comment"> # newline not allowed in @[]</span>
+   <span class="Comment"> # escape</span>
+    echo <span class="Constant">\@</span>[glob]
+
+<span class="Comment"># Command mode -&gt; Double quoted</span>
+
+    echo <span class="Constant">&quot;hi </span><span class="yshVarSub">$x</span><span class="Constant">&quot;</span>
+    echo <span class="Constant">$&quot;explicit </span><span class="yshVarSub">$x</span><span class="Constant">&quot;</span>
+
+<span class="Comment"># Expression mode -&gt; Command</span>
+
+<span class="Statement">    =</span><span class="yshExpr"> </span><span class="sigilPair">:|</span> foo.txt *.py <span class="Constant">&quot;</span><span class="yshVarSub">$x</span><span class="Constant">&quot;</span> <span class="sigilPair">|</span><span class="yshExpr"> </span> <span class="Comment"> # note: no redirects here though</span>
+<span class="Statement">    =</span><span class="yshExpr"> </span><span class="sigilPair">:|</span> <span class="yshVarSub">$x</span> <span class="sigilPair">$(</span>echo hi<span class="sigilPair">)</span> <span class="sigilPair">@(</span>echo hi<span class="sigilPair">)</span> <span class="sigilPair">$[</span><span class="yshExpr">42+1</span><span class="sigilPair">]</span> <span class="sigilPair">@[</span><span class="yshExpr">a</span><span class="sigilPair">]</span> <span class="sigilPair">|</span><span class="yshExpr"> </span> <span class="Comment"> # note: no redirects here though</span>
+<span class="Statement">    =</span><span class="yshExpr"> </span><span class="sigilPair">:|</span> <span class="Constant">\'</span> <span class="Constant">\&quot;</span> <span class="Constant">\$</span> <span class="Constant">\@</span> <span class="Constant">\(</span> <span class="Constant">\)</span> <span class="Constant">\[</span> <span class="Constant">\]</span> <span class="sigilPair">|</span><span class="yshExpr"> </span> <span class="Comment"> # backslash quoting</span>
+
+<span class="Statement">    =</span><span class="yshExpr"> </span><span class="sigilPair">$(</span>echo <span class="Constant">'command sub'</span> <span class="sigilPair">$(</span>echo hi<span class="sigilPair">)</span> <span class="sigilPair">)</span>
+<span class="Statement">    =</span><span class="yshExpr"> </span><span class="sigilPair">@(</span>echo <span class="Constant">u'spliced command sub'</span><span class="yshVarSub"> @foods</span> <span class="sigilPair">)</span>
+<span class="Statement">    =</span><span class="yshExpr"> </span><span class="sigilPair">^(</span>echo <span class="Constant">&quot;unevaluated&quot;</span> <span class="yshVarSub">$hi</span> <span class="sigilPair">$[</span><span class="yshExpr">y + 1</span><span class="sigilPair">])</span>
+
+<span class="Comment"># Expression mode -&gt; Double Quoted</span>
+
+<span class="Statement">    =</span><span class="yshExpr"> </span><span class="Constant">&quot;hi </span><span class="yshVarSub">$x</span><span class="Constant">&quot;</span>
+<span class="Statement">    =</span><span class="yshExpr"> </span><span class="Constant">$&quot;explicit </span><span class="yshVarSub">$x</span><span class="Constant">&quot;</span>
+<span class="Statement">    =</span><span class="yshExpr"> </span><span class="sigilPair">^&quot;</span><span class="Constant">unevaluated </span><span class="yshVarSub">$x</span><span class="sigilPair">&quot;</span>
+<span class="Statement">    =</span><span class="yshExpr"> f</span>(<span class="sigilPair">^&quot;</span><span class="Constant">unevaluated </span><span class="yshVarSub">$x</span><span class="sigilPair">&quot;</span>)
+
+<span class="Comment"># Double-Quoted mode -&gt;</span>
+
+    echo <span class="Constant">&quot;greeting = </span><span class="sigilPair">$(</span>echo hi<span class="sigilPair">)</span><span class="Constant">&quot;</span> <span class="Comment"> # Command</span>
+    echo <span class="Constant">&quot;sum = </span><span class="sigilPair">$[</span><span class="yshExpr">x + 99</span><span class="sigilPair">]</span><span class="Constant">&quot;</span>       <span class="Comment"> # Expression</span>
+
+<span class="Comment"># No change</span>
+
+    echo <span class="sigilPair">$(</span>echo hi<span class="sigilPair">)</span>
+    echo <span class="sigilPair">@(</span>echo hi<span class="sigilPair">)</span>
+
+   <span class="Comment"> # TODO: should implement these two in YSH!</span>
+   <span class="Comment"> #= $[42 + a[i]]</span>
+   <span class="Comment"> #= @[a]</span>
+<span class="Statement">    =</span><span class="yshExpr"> </span><span class="sigilPair">^[</span><span class="yshExpr">42 + a</span>[<span class="yshExpr">i</span>]<span class="sigilPair">]</span>
+
+<span class="Comment"># Multi-line versions</span>
+
+    <span class="Statement">func</span> <span class="funcName">g</span>(...args) { <span class="Statement">return</span> (<span class="yshExpr">args</span>[<span class="yshExpr">0</span>]) }
+    <span class="Statement">func</span> <span class="funcName">myfunc</span>(...args) { <span class="Statement">return</span> (<span class="yshExpr">args</span>[<span class="yshExpr">0</span>]) }
+
+<span class="Statement">    =</span><span class="yshExpr"> </span><span class="sigilPair">$(</span>echo 1
+        echo <span class="yshVarSub">$x</span> 2<span class="sigilPair">)</span>
+<span class="Statement">    =</span><span class="yshExpr"> </span><span class="sigilPair">@(</span>echo 3
+        echo <span class="Constant">'yo'</span> 4<span class="sigilPair">)</span>
+<span class="Statement">    =</span><span class="yshExpr"> </span><span class="sigilPair">^(</span>echo 5
+        echo <span class="Constant">&quot;hi </span><span class="yshVarSub">$x</span><span class="Constant">&quot;</span> 6<span class="sigilPair">)</span>
+
+    <span class="Statement">var</span> y = (<span class="yshExpr">42,</span>
+<span class="yshExpr">              43,</span>
+<span class="yshExpr">              f</span>(<span class="yshExpr">5</span>))
+
+   <span class="Comment"> # hard cases with ;</span>
+    <span class="Statement">var</span> z = <span class="yshExpr">f</span>(<span class="yshExpr">1</span>); echo hi
+    <span class="Statement">var</span> z = <span class="yshExpr">g</span>(<span class="yshExpr">1, 2,</span>
+<span class="yshExpr">              3</span>); echo hi
+
+    <span class="Statement">setvar</span> a[0 + 0] = <span class="yshExpr">42</span>
+
+<span class="Statement">    =</span><span class="yshExpr"> g</span>(<span class="yshExpr">42,</span>
+<span class="yshExpr">        43,</span>
+<span class="yshExpr">        f</span>(<span class="yshExpr">5</span>))
+
+    <span class="Statement">call</span><span class="yshExpr"> myfunc</span>(<span class="yshExpr">42,</span>
+<span class="yshExpr">                43,</span>
+<span class="yshExpr">                f</span>(<span class="yshExpr">5</span>)); echo next
+
+    <span class="Statement">call</span><span class="yshExpr"> g</span>(<span class="yshExpr">3, 4, 5</span>); echo hi
+    <span class="Statement">call</span><span class="yshExpr"> g</span>(<span class="yshExpr">3, 4, 5</span>) <span class="Comment"> # comment</span>
+
+    <span class="Statement">var</span> d = {
+<span class="yshExpr">      k: 1,</span>
+<span class="yshExpr">      k: 2,</span>
+<span class="yshExpr">    </span>}; echo next
+
+    <span class="Statement">var</span> d = <span class="yshExpr">len</span>({
+<span class="yshExpr">      k1: </span><span class="Constant">'value'</span><span class="yshExpr">,</span>
+<span class="yshExpr">      k2: g</span>(<span class="yshExpr">5,</span>
+<span class="yshExpr">            6, 7</span>)<span class="yshExpr">,</span>
+<span class="yshExpr">      bracket: </span>[
+<span class="yshExpr">        1, 2, 3</span>
+<span class="yshExpr">      </span>]<span class="yshExpr">,</span>
+<span class="yshExpr">    </span>})<span class="yshExpr"> + 42</span>
+
+    <span class="Statement">var</span> mylist = [
+<span class="yshExpr">      1,</span>
+<span class="yshExpr">      2,</span>
+<span class="yshExpr">      f</span>(<span class="yshExpr">3</span>)<span class="yshExpr">,</span>
+<span class="yshExpr">      foods</span>[<span class="yshExpr">0</span>]<span class="yshExpr">,</span>
+<span class="yshExpr">      </span>{<span class="yshExpr">k: </span><span class="Constant">'value'</span>}<span class="yshExpr">,</span>
+<span class="yshExpr">    </span>]<span class="yshExpr">    </span>
+
+<span class="Statement">    =</span><span class="yshExpr"> len</span>({<span class="yshExpr"> k: </span>[<span class="yshExpr">x, x</span>]<span class="yshExpr"> </span>})<span class="yshExpr"> + 42</span>
+
+<span class="Comment"># Backslash escaped \( \) \[ \] \{ \}</span>
+
+echo <span class="sigilPair">$(</span>echo <span class="Constant">\(</span> <span class="Constant">\)</span><span class="sigilPair">)</span>
+echo <span class="sigilPair">$(</span>echo <span class="Constant">\[</span> <span class="Constant">\]</span><span class="sigilPair">)</span>
+echo <span class="sigilPair">$(</span>echo <span class="Constant">\{</span> <span class="Constant">\}</span><span class="sigilPair">)</span>
+
+<span class="Comment"># These aren't valid</span>
+<span class="Comment">#echo $( echo &quot;\( \)&quot; )</span>
+<span class="Comment">#echo $( echo &quot;\[ \]&quot; )</span>
+<span class="Comment">#echo $( echo &quot;\{ \}&quot; )</span>
+
+<span class="Statement">=</span><span class="yshExpr"> </span><span class="sigilPair">$(</span>echo <span class="Constant">\(</span> <span class="Constant">\)</span><span class="sigilPair">)</span>
+<span class="Statement">=</span><span class="yshExpr"> </span><span class="sigilPair">$(</span>echo <span class="Constant">\[</span> <span class="Constant">\]</span><span class="sigilPair">)</span>
+<span class="Statement">=</span><span class="yshExpr"> </span><span class="sigilPair">$(</span>echo <span class="Constant">\{</span> <span class="Constant">\}</span><span class="sigilPair">)</span>
+
+<span class="Statement">=</span><span class="yshExpr"> </span>(<span class="yshExpr"> </span><span class="sigilPair">$(</span>echo <span class="Constant">\(</span> <span class="Constant">\)</span><span class="sigilPair">)</span><span class="yshExpr"> </span>)
+<span class="Statement">=</span><span class="yshExpr"> </span>(<span class="yshExpr"> </span><span class="sigilPair">$(</span>echo <span class="Constant">\[</span> <span class="Constant">\]</span><span class="sigilPair">)</span><span class="yshExpr"> </span>)
+<span class="Statement">=</span><span class="yshExpr"> </span>(<span class="yshExpr"> </span><span class="sigilPair">$(</span>echo <span class="Constant">\{</span> <span class="Constant">\}</span><span class="sigilPair">)</span><span class="yshExpr"> </span>)
+
+<span class="Statement">=</span><span class="yshExpr"> </span>[<span class="yshExpr"> </span><span class="sigilPair">$(</span>echo <span class="Constant">\(</span> <span class="Constant">\)</span><span class="sigilPair">)</span><span class="yshExpr"> </span>]
+<span class="Statement">=</span><span class="yshExpr"> </span>[<span class="yshExpr"> </span><span class="sigilPair">$(</span>echo <span class="Constant">\[</span> <span class="Constant">\]</span><span class="sigilPair">)</span><span class="yshExpr"> </span>]
+<span class="Statement">=</span><span class="yshExpr"> </span>[<span class="yshExpr"> </span><span class="sigilPair">$(</span>echo <span class="Constant">\{</span> <span class="Constant">\}</span><span class="sigilPair">)</span><span class="yshExpr"> </span>]
+
+<span class="Statement">=</span><span class="yshExpr"> </span>{<span class="yshExpr"> k: </span><span class="sigilPair">$(</span>echo <span class="Constant">\(</span> <span class="Constant">\)</span><span class="sigilPair">)</span><span class="yshExpr"> </span>}
+<span class="Statement">=</span><span class="yshExpr"> </span>{<span class="yshExpr"> k: </span><span class="sigilPair">$(</span>echo <span class="Constant">\[</span> <span class="Constant">\]</span><span class="sigilPair">)</span><span class="yshExpr"> </span>}
+<span class="Statement">=</span><span class="yshExpr"> </span>{<span class="yshExpr"> k: </span><span class="sigilPair">$(</span>echo <span class="Constant">\{</span> <span class="Constant">\}</span><span class="sigilPair">)</span><span class="yshExpr"> </span>}
+
+<span class="Statement">=</span><span class="yshExpr"> </span><span class="sigilPair">$(</span>pp (42)<span class="sigilPair">)</span>
+<span class="Statement">=</span><span class="yshExpr"> </span><span class="sigilPair">$(</span>pp [42]<span class="sigilPair">)</span>
+<span class="Comment">#= $(call f(x))</span>
+
+
+<span class="Comment"># proc is reserved</span>
+<span class="Comment"># var proc = 42</span>
+<span class="Comment"># setvar proc = const + 1</span>
+<span class="Comment"># echo $setvar</span>
+
+<span class="Comment"># Builtins can be highlighted?</span>
+<span class="Comment"># Maybe use a different color</span>
+<span class="Comment">#</span>
+<span class="Comment"># Export from YSH</span>
+<span class="Comment"># - list of builtins - compgen -A builtin?</span>
+<span class="Comment">#   - this contains deprecated shell builtins like [ . : though</span>
+<span class="Comment">#   - alias unalias</span>
+<span class="Comment">#   - I think it's better to have reflection on __builtin_proc__</span>
+<span class="Comment"># - list of backslash chars</span>
+
+pushd /tmp
+cd /
+popd
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

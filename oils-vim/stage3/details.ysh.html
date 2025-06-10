@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>~/git/oils-for-unix/oils.vim/testdata/details.ysh.html</title>
+<meta name="Generator" content="Vim/9.0">
+<meta name="plugin-version" content="vim9.0_v1">
+<meta name="syntax" content="ysh">
+<meta name="settings" content="use_css,no_foldcolumn,expand_tabs,pre_wrap,prevent_copy=,use_input_for_pc=fallback">
+<meta name="colorscheme" content="none">
+<style>
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Comment { color: #0000c0; }
+.Constant { color: #c00000; }
+.yshExpr { color: #0000d7; }
+.yshVarSub { color: #87005f; }
+.Statement { color: #af5f00; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="Comment"># Multi-line</span>
+
+<span class="Comment"># I guess the \ can be highlighted</span>
+
+echo \
+    multi- \
+    line<span class="Comment"> # shell style</span>
+
+... echo
+      multi-
+      line
+    | cat
+    | sort
+    ; <span class="Comment"> # YSH style</span>
+
+echo <span class="Constant">\{</span> <span class="Constant">\}</span>
+
+<span class="Comment"># Expression keywords</span>
+
+<span class="Statement">=</span><span class="yshExpr"> 42 </span><span class="Statement">if</span><span class="yshExpr"> </span><span class="Constant">true</span><span class="yshExpr"> </span><span class="Statement">else</span><span class="yshExpr"> 41</span>
+
+<span class="Statement">var</span> a = [<span class="yshExpr">3, 4, 5</span>]
+
+<span class="Comment">#= [x+1 for x in a if x % 2 === 0]</span>
+
+<span class="Statement">var</span> mydict = {}
+<span class="Statement">if</span> (<span class="Constant">'key'</span><span class="yshExpr"> </span><span class="Statement">not</span><span class="yshExpr"> </span><span class="Statement">in</span><span class="yshExpr"> mydict</span>) {
+  echo nope
+}
+
+<span class="Statement">if</span> (<span class="Constant">true</span><span class="yshExpr"> </span><span class="Statement">and</span><span class="yshExpr"> </span><span class="Constant">false</span><span class="yshExpr"> </span><span class="Statement">or</span><span class="yshExpr"> </span><span class="Constant">null</span>) {
+  echo nope
+}
+
+<span class="Statement">=</span><span class="yshExpr"> </span>{}<span class="yshExpr"> </span><span class="Statement">is</span><span class="yshExpr"> </span>{}<span class="yshExpr"> </span>
+
+
+<span class="Comment"># = proc</span>
+<span class="Comment"># = func</span>
+
+<span class="Comment"># Expression constants</span>
+
+<span class="Statement">=</span><span class="yshExpr"> 3.14</span>
+<span class="Statement">=</span><span class="yshExpr"> 3.14e-5</span>
+
+<span class="Statement">=</span><span class="yshExpr"> /d+ </span><span class="Constant">'.'</span><span class="yshExpr"> </span>[<span class="yshExpr">a-z A-Z 0-9 </span><span class="Constant">'-'</span>]<span class="yshExpr">+/</span>
+
+<span class="Statement">=</span><span class="yshExpr"> /&lt;</span><span class="Statement">capture</span><span class="yshExpr"> d d </span><span class="Statement">as</span><span class="yshExpr"> month&gt; </span><span class="Constant">'-'</span><span class="yshExpr"> &lt;</span><span class="Statement">capture</span><span class="yshExpr"> d d </span><span class="Statement">as</span><span class="yshExpr"> day&gt;/</span>
+
+<span class="Comment"># Redirects</span>
+
+echo stdout &gt; /dev/null
+echo stderr 2&gt; /dev/null
+
+redir {out}&gt; /tmp/out.txt {
+  <span class="Statement">for</span> i <span class="Statement">in</span> 55 66 77 {
+    echo <span class="yshVarSub">$i</span> &gt;&amp; <span class="yshVarSub">$out</span>
+  }
+}
+
+tac /tmp/out.txt
+
+
+<span class="Comment"># Word Sequence</span>
+
+echo *.py
+
+echo {a,b}@example.com
+
+echo {0..4}-{a,b}
+
+
+<span class="Comment"># Word Language</span>
+
+echo ~/src
+
+echo ~root/src
+
+
+<span class="Comment"># Builtin procs</span>
+
+pushd /tmp
+popd
+
+
+<span class="Comment"># J8 strings</span>
+
+echo <span class="Constant">u'newline </span>\n<span class="Constant"> backslash </span>\\<span class="Constant"> double </span>\&quot;<span class="Constant"> single </span>\'<span class="Constant"> tab </span>\t<span class="Constant"> other'</span>
+echo <span class="Constant">b'byte </span>\yff<span class="Constant"> what'</span>
+echo <span class="Constant">b'mu = </span>\u{3bc}<span class="Constant">'</span>
+
+echo <span class="Constant">'''</span>
+<span class="Constant">  mu = \u{3bc}</span>
+<span class="Constant">  '''</span>
+
+echo <span class="Constant">u'''</span>
+<span class="Constant">  mu = </span>\u{3bc}
+<span class="Constant">  '''</span>
+
+<span class="Statement">var</span> b = <span class="Constant">b'''</span>
+<span class="Constant">  mu = </span>\u{3bc}
+<span class="Constant">  '''</span>
+
+<span class="Comment"># echo b'\u{badG}'</span>
+<span class="Comment"># echo b'\y BAD'</span>
+<span class="Comment"># echo b'\yGG BAD'</span>
+<span class="Comment"># echo b'\m BAD'</span>
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

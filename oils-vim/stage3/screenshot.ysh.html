@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>~/git/oils-for-unix/oils.vim/testdata/screenshot.ysh.html</title>
+<meta name="Generator" content="Vim/9.0">
+<meta name="plugin-version" content="vim9.0_v1">
+<meta name="syntax" content="ysh">
+<meta name="settings" content="use_css,no_foldcolumn,expand_tabs,pre_wrap,prevent_copy=,use_input_for_pc=fallback">
+<meta name="colorscheme" content="none">
+<style>
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Comment { color: #0000c0; }
+.funcName { color: #87005f; }
+.sigilPair { color: #5f00af; }
+.Constant { color: #c00000; }
+.Statement { color: #af5f00; }
+.procName { color: #5f00af; }
+.yshVarSub { color: #87005f; }
+.yshExpr { color: #0000d7; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="Comment">#!/usr/bin/env ysh</span>
+<span class="Comment"># YSH syntax demo</span>
+
+use <span class="yshVarSub">$LIB_YSH</span>/math.ysh --pick min max
+
+assert [<span class="yshExpr">-5 === min</span>(<span class="yshExpr">0, -5</span>)]
+
+<span class="Statement">func</span> <span class="funcName">abs</span>(x) {
+  <span class="Statement">return</span> (<span class="yshExpr">x </span><span class="Statement">if</span><span class="yshExpr"> x &gt; 0 </span><span class="Statement">else</span><span class="yshExpr"> -x</span>)
+}
+
+assert [<span class="yshExpr">42 === abs</span>(<span class="yshExpr">-42</span>)]
+
+<span class="Statement">proc</span> <span class="procName">read-write</span> (prefix; ; offset=1) {
+  json read (<span class="yshExpr">&amp;message</span>) &lt; <span class="yshVarSub">$prefix</span>.json
+
+  <span class="Statement">var</span> next = <span class="yshExpr">message.counts</span>[<span class="yshExpr">0</span>]<span class="yshExpr"> + offset</span>
+  echo <span class="Constant">&quot;Writing new message with </span><span class="yshVarSub">$next</span><span class="Constant">&quot;</span>
+
+  <span class="Statement">var</span> new = {<span class="yshExpr">next</span>}<span class="yshExpr"> </span>
+  json write (<span class="yshExpr">new</span>) &gt; <span class="sigilPair">$[</span><span class="yshExpr">prefix</span><span class="sigilPair">]</span>_v2.json
+}
+
+<span class="Statement">proc</span> <span class="procName">demo</span> {
+  <span class="Statement">var</span> prefix = <span class="Constant">'_tmp/foo'</span>
+
+  echo <span class="Constant">r'''</span>
+<span class="Constant">  {</span>
+<span class="Constant">    &quot;counts&quot;: [</span>
+<span class="Constant">      42, 99</span>
+<span class="Constant">    ]</span>
+<span class="Constant">  }</span>
+<span class="Constant">  '''</span> &gt; <span class="yshVarSub">$prefix</span>.json
+
+  read-write <span class="yshVarSub">$prefix</span> (<span class="yshExpr">offset=99</span>)
+  echo
+
+  head <span class="yshVarSub">$prefix</span>*.json
+}
+
+<span class="Comment">#</span>
+<span class="Comment"># $0 Dispatch Pattern</span>
+<span class="Comment">#</span>
+
+<span class="Statement">proc</span> <span class="procName">make-jobs</span> {
+  <span class="Statement">for</span> line <span class="Statement">in</span> (<span class="yshExpr">io.stdin</span>) {
+   <span class="Comment"> # 15 ms minimum</span>
+    <span class="Statement">var</span> milliseconds = <span class="yshExpr">max</span>(<span class="yshExpr">line, 150</span>)
+    <span class="Statement">var</span> seconds = <span class="yshExpr">milliseconds / 1000</span>
+    echo <span class="Constant">&quot;</span><span class="yshVarSub">$seconds</span><span class="Constant">&quot;</span>
+  }
+}
+
+<span class="Statement">proc</span> <span class="procName">do-one</span> (seconds) {
+  echo <span class="Constant">&quot;sleep </span><span class="yshVarSub">$seconds</span><span class="Constant">&quot;</span>
+  sleep <span class="yshVarSub">$seconds</span>
+}
+
+<span class="Statement">proc</span> <span class="procName">do-all</span> {
+  ... time
+      seq 100 40 300 <span class="Comment"> # 100 milliseconds to 300, by increments of 30</span>
+    | make-jobs
+   <span class="Comment"> #| xargs -n 1 echo</span>
+    | xargs -n 1 -P 3 --verbose -- <span class="yshVarSub">$0</span> do-one
+    ;
+}
+
+<span class="Statement">if</span> is-main {
+  runproc<span class="yshVarSub"> @ARGV</span>
+}
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>~/git/oils-for-unix/oils.vim/testdata/details.ysh.html</title>
+<meta name="Generator" content="Vim/9.0">
+<meta name="plugin-version" content="vim9.0_v1">
+<meta name="syntax" content="ysh">
+<meta name="settings" content="use_css,no_foldcolumn,expand_tabs,pre_wrap,prevent_copy=,use_input_for_pc=fallback">
+<meta name="colorscheme" content="none">
+<style>
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Comment { color: #0000c0; }
+.Constant { color: #c00000; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="Comment"># Multi-line</span>
+
+<span class="Comment"># I guess the \ can be highlighted</span>
+
+echo \
+    multi- \
+    line<span class="Comment"> # shell style</span>
+
+... echo
+      multi-
+      line
+    | cat
+    | sort
+    ; <span class="Comment"> # YSH style</span>
+
+echo \{ \}
+
+<span class="Comment"># Expression keywords</span>
+
+= 42 if true else 41
+
+var a = [3, 4, 5]
+
+<span class="Comment">#= [x+1 for x in a if x % 2 === 0]</span>
+
+var mydict = {}
+if (<span class="Constant">'key'</span> not in mydict) {
+  echo nope
+}
+
+if (true and false or null) {
+  echo nope
+}
+
+= {} is {}
+
+
+<span class="Comment"># = proc</span>
+<span class="Comment"># = func</span>
+
+<span class="Comment"># Expression constants</span>
+
+= 3.14
+= 3.14e-5
+
+= /d+ <span class="Constant">'.'</span> [a-z A-Z 0-9 <span class="Constant">'-'</span>]+/
+
+= /&lt;capture d d as month&gt; <span class="Constant">'-'</span> &lt;capture d d as day&gt;/
+
+<span class="Comment"># Redirects</span>
+
+echo stdout &gt; /dev/null
+echo stderr 2&gt; /dev/null
+
+redir {out}&gt; /tmp/out.txt {
+  for i in 55 66 77 {
+    echo $i &gt;&amp; $out
+  }
+}
+
+tac /tmp/out.txt
+
+
+<span class="Comment"># Word Sequence</span>
+
+echo *.py
+
+echo {a,b}@example.com
+
+echo {0..4}-{a,b}
+
+
+<span class="Comment"># Word Language</span>
+
+echo ~/src
+
+echo ~root/src
+
+
+<span class="Comment"># Builtin procs</span>
+
+pushd /tmp
+popd
+
+
+<span class="Comment"># J8 strings</span>
+
+echo <span class="Constant">u'newline \n backslash \\ double \&quot; single \' tab \t other'</span>
+echo <span class="Constant">b'byte \yff what'</span>
+echo <span class="Constant">b'mu = \u{3bc}'</span>
+
+echo <span class="Constant">'''</span>
+<span class="Constant">  mu = \u{3bc}</span>
+<span class="Constant">  '''</span>
+
+echo <span class="Constant">u'''</span>
+<span class="Constant">  mu = \u{3bc}</span>
+<span class="Constant">  '''</span>
+
+var b = <span class="Constant">b'''</span>
+<span class="Constant">  mu = \u{3bc}</span>
+<span class="Constant">  '''</span>
+
+<span class="Comment"># echo b'\u{badG}'</span>
+<span class="Comment"># echo b'\y BAD'</span>
+<span class="Comment"># echo b'\yGG BAD'</span>
+<span class="Comment"># echo b'\m BAD'</span>
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

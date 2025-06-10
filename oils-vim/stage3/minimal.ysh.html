@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>~/git/oils-for-unix/oils.vim/testdata/minimal.ysh.html</title>
+<meta name="Generator" content="Vim/9.0">
+<meta name="plugin-version" content="vim9.0_v1">
+<meta name="syntax" content="ysh">
+<meta name="settings" content="use_css,no_foldcolumn,expand_tabs,pre_wrap,prevent_copy=,use_input_for_pc=fallback">
+<meta name="colorscheme" content="none">
+<style>
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Comment { color: #0000c0; }
+.funcName { color: #87005f; }
+.sigilPair { color: #5f00af; }
+.Constant { color: #c00000; }
+.yshExpr { color: #0000d7; }
+.procName { color: #5f00af; }
+.yshVarSub { color: #87005f; }
+.Statement { color: #af5f00; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="Comment">#</span>
+<span class="Comment"># Keywords</span>
+<span class="Comment">#</span>
+
+<span class="Comment"># YSH keywords</span>
+<span class="Statement">var</span> v = <span class="yshExpr">42</span>; echo next
+<span class="Statement">const</span> c = <span class="yshExpr">99</span> <span class="Comment"> # comment</span>
+<span class="Statement">setvar</span> dq = <span class="Constant">'zz'</span>
+<span class="Statement">setglobal</span> g = <span class="Constant">&quot;yy&quot;</span>
+
+<span class="Statement">proc</span> <span class="procName">p</span> { echo hi }
+<span class="Statement">func</span> <span class="funcName">f</span>(x) { <span class="Statement">return</span> (<span class="yshExpr">x</span>) }
+
+<span class="Statement">call</span><span class="yshExpr"> len</span>(<span class="Constant">'str'</span>); echo next
+<span class="Statement">call</span><span class="yshExpr"> len</span>(<span class="Constant">'str'</span>) <span class="Comment"> # comment</span>
+
+<span class="Statement">=</span><span class="yshExpr"> len</span>(<span class="yshExpr">g</span>); echo next
+<span class="Statement">  =</span><span class="yshExpr"> len</span>(<span class="yshExpr">g</span>) <span class="Comment"> # = keyword</span>
+
+<span class="Comment">#=foo</span>
+<span class="Comment">#echo =foo</span>
+
+echo <span class="Constant">\#</span> not a comment
+echo <span class="Constant">\\</span> backslash
+
+<span class="Comment"># Shell keywords</span>
+<span class="Statement">if</span> test --file / {
+  echo <span class="Constant">'exists'</span>
+} <span class="Statement">elif</span> true {
+  echo <span class="Constant">'true'</span>
+} <span class="Statement">else</span> {
+  echo <span class="Constant">'else'</span>
+}
+
+<span class="Statement">case</span> (<span class="yshExpr">42</span>) {
+  (<span class="yshExpr">42</span>)   { echo <span class="Constant">'match'</span> }
+  /d+/   { echo <span class="Constant">'pattern'</span> }
+  <span class="Constant">'str'</span>  { echo <span class="Constant">'str'</span> }
+  (<span class="Statement">else</span>) { echo <span class="Constant">'other'</span> }
+}
+
+<span class="Statement">for</span> x <span class="Statement">in</span> a b {
+  echo <span class="yshVarSub">$x</span>
+}
+
+<span class="Statement">while</span> false {
+  echo hi
+}
+
+<span class="Comment"># Comment at beginning of line</span>
+
+echo not#comment <span class="Comment"> # space required before comment</span>
+
+<span class="Comment">#</span>
+<span class="Comment"># Quotes can be quoted with \</span>
+<span class="Comment"># e.g. with \' \&quot;</span>
+<span class="Comment">#</span>
+
+echo <span class="Constant">\'</span>single <span class="Constant">\'</span>single <span class="Constant">\&quot;</span>double <span class="Constant">\&quot;</span>double
+
+<span class="Comment">#</span>
+<span class="Comment"># Single-quoted strings are raw by default</span>
+<span class="Comment">#</span>
+
+<span class="Comment"># Command mode</span>
+echo <span class="Constant">'/usr/bin'</span>
+echo <span class="Constant">r'C:\Program Files\'</span> <span class="Comment"> # r'' prefix is allowed</span>
+
+<span class="Comment"># expression mode</span>
+<span class="Statement">var</span> r1 = <span class="Constant">'/usr/bin/'</span>
+<span class="Statement">var</span> r2 = <span class="Constant">r'C:\Program Files\'</span><span class="Comment"> # r'' prefix is allowed</span>
+
+<span class="Comment"># corner cases for r''</span>
+echo ls --foo=<span class="Constant">'bar'</span>
+echo ls --foo=<span class="Constant">r'bar'</span>
+echo ls bar<span class="Constant">'bar'</span>
+echo ls -<span class="Constant">r'bar'</span>
+
+<span class="Comment"># beginning of line</span>
+<span class="Constant">'echo'</span>
+<span class="Constant">r'echo'</span>
+<span class="Constant">u'echo'</span>
+<span class="Constant">$&quot;echo&quot;</span>
+
+<span class="Comment">#</span>
+<span class="Comment"># Double-quoted strings support interpolation (and a few \ escapes)</span>
+<span class="Comment">#</span>
+
+echo <span class="Constant">&quot;hi </span><span class="yshVarSub">$r1</span><span class="Constant"> \$ \&quot; \\&quot;</span>
+<span class="Statement">var</span> dq = <span class="Constant">&quot;hi </span><span class="yshVarSub">$r2</span><span class="Constant"> \$ \&quot; \\&quot;</span>
+
+echo <span class="Constant">$&quot;hi </span><span class="yshVarSub">$r1</span><span class="Constant"> \$ \&quot; \\&quot;</span>
+<span class="Statement">var</span> dq = <span class="Constant">$&quot;hi </span><span class="yshVarSub">$r2</span><span class="Constant"> \$ \&quot; \\&quot;</span>
+
+echo --foo=<span class="Constant">$&quot;bar&quot;</span>
+
+<span class="Comment">#</span>
+<span class="Comment"># J8 strings have \ escapes</span>
+<span class="Comment">#</span>
+
+echo <span class="Constant">b'hi </span>\t<span class="Constant"> </span>\'<span class="Constant"> </span>\\<span class="Constant">'</span>
+<span class="Statement">var</span> j8 = <span class="Constant">b'hi </span>\t<span class="Constant"> </span>\'<span class="Constant"> </span>\\<span class="Constant">'</span>
+
+echo <span class="Constant">u'hi </span>\t<span class="Constant"> </span>\'<span class="Constant"> </span>\\<span class="Constant">'</span>
+<span class="Statement">var</span> j8 = <span class="Constant">u'hi </span>\t<span class="Constant"> </span>\'<span class="Constant"> </span>\\<span class="Constant">'</span>
+
+<span class="Comment">#</span>
+<span class="Comment"># Triple-quoted strings</span>
+<span class="Comment">#  ''' r'''</span>
+<span class="Comment">#  &quot;&quot;&quot;</span>
+<span class="Comment">#  b&quot;&quot;&quot; u&quot;&quot;&quot;</span>
+<span class="Comment">#</span>
+
+<span class="Statement">var</span> empty = <span class="Constant">''</span>
+
+<span class="Comment"># raw</span>
+
+echo <span class="Constant">'''</span>
+<span class="Constant">  $r1</span>
+<span class="Constant">  C:\Program Files\</span>
+<span class="Constant">  one ' </span>
+<span class="Constant">  two ''</span>
+<span class="Constant">  '''</span> | cat
+
+<span class="Statement">var</span> x = <span class="Constant">'''</span>
+<span class="Constant">  C:\Program Files\</span>
+<span class="Constant">  one ' </span>
+<span class="Constant">  two ''</span>
+<span class="Constant">  '''</span><span class="yshExpr"> ++ empty</span>
+
+echo <span class="Constant">r'''</span>
+<span class="Constant">  $r1</span>
+<span class="Constant">  C:\Program Files\</span>
+<span class="Constant">  one '</span>
+<span class="Constant">  two ''</span>
+<span class="Constant">  '''</span> | cat
+
+<span class="Statement">var</span> x = <span class="Constant">r'''</span>
+<span class="Constant">  C:\Program Files\</span>
+<span class="Constant">  one '</span>
+<span class="Constant">  two ''</span>
+<span class="Constant">  '''</span><span class="yshExpr"> ++ empty</span>
+
+<span class="Comment"># double quoted</span>
+
+echo <span class="Constant">&quot;&quot;&quot;</span>
+<span class="Constant">  </span><span class="yshVarSub">$r1</span>
+<span class="Constant">  one &quot;</span>
+<span class="Constant">  two &quot;&quot;</span>
+<span class="Constant">  &quot;&quot;&quot;</span>
+
+<span class="Statement">var</span> x = <span class="Constant">&quot;&quot;&quot;</span>
+<span class="Constant">  </span><span class="yshVarSub">$r1</span>
+<span class="Constant">  one &quot;</span>
+<span class="Constant">  two &quot;&quot;</span>
+<span class="Constant">  \&quot;&quot;&quot;&quot;</span>
+
+echo <span class="Constant">$&quot;&quot;&quot;</span>
+<span class="Constant">  </span><span class="yshVarSub">$r1</span>
+<span class="Constant">  \$ one &quot;</span>
+<span class="Constant">  \$ two &quot;&quot;</span>
+<span class="Constant">  \&quot;&quot;&quot;&quot;</span> other
+
+<span class="Statement">var</span> x = <span class="Constant">$&quot;&quot;&quot;</span>
+<span class="Constant">  </span><span class="yshVarSub">$r1</span>
+<span class="Constant">  \$ one &quot;</span>
+<span class="Constant">  \$ two &quot;&quot;</span>
+<span class="Constant">  &quot;&quot;&quot;</span><span class="yshExpr"> ++ </span><span class="Constant">'other'</span>
+
+<span class="Comment"># j8</span>
+
+echo <span class="Constant">b'''</span>
+<span class="Constant">  one '</span>
+<span class="Constant">  two ''</span>
+<span class="Constant">  three </span>\'<span class="Constant">''</span>
+<span class="Constant">  '''</span> | cat
+
+<span class="Statement">var</span> x = <span class="Constant">b'''</span>
+<span class="Constant">  j8 </span>\'<span class="Constant">''</span>
+<span class="Constant">  one '</span>
+<span class="Constant">  two ''</span>
+<span class="Constant">  three </span>\'<span class="Constant">''</span>
+<span class="Constant">  '''</span><span class="yshExpr"> ++ empty</span>
+
+echo <span class="Constant">u'''</span>
+<span class="Constant">  one '</span>
+<span class="Constant">  two ''</span>
+<span class="Constant">  three </span>\'<span class="Constant">''</span>
+<span class="Constant">  '''</span> | cat
+
+<span class="Statement">var</span> x = <span class="Constant">u'''</span>
+<span class="Constant">  j8 </span>\'<span class="Constant">''</span>
+<span class="Constant">  one '</span>
+<span class="Constant">  two ''</span>
+<span class="Constant">  three </span>\'<span class="Constant">''</span>
+<span class="Constant">  '''</span><span class="yshExpr"> ++ empty</span>
+
+<span class="Comment">#</span>
+<span class="Comment"># Expression Work Fine, Without Color</span>
+<span class="Comment">#</span>
+
+<span class="Statement">var</span> mydict = {<span class="yshExpr">hi: 42</span>}
+
+echo <span class="sigilPair">$[</span><span class="yshExpr">42 + mydict</span>[<span class="Constant">'hi'</span>]<span class="sigilPair">]</span>
+echo <span class="Constant">&quot;sum = </span><span class="sigilPair">$[</span><span class="yshExpr">42 + mydict</span>[<span class="Constant">'hi'</span>]<span class="sigilPair">]</span><span class="Constant">&quot;</span>
+
+<span class="Comment">#</span>
+<span class="Comment"># Bug in the MINIMAL style: nested double quotes aren't matched correctly.</span>
+<span class="Comment">#</span>
+<span class="Comment"># This is a limitation of NON-recursive lexing.</span>
+<span class="Comment">#</span>
+
+echo  <span class="Constant">&quot;</span><span class="sigilPair">$[</span><span class="yshExpr">42 + mydict</span>[<span class="Constant">&quot;hi&quot;</span>]<span class="sigilPair">]</span><span class="Constant">&quot;</span>
+echo <span class="Constant">&quot;hi </span><span class="sigilPair">$[</span><span class="Constant">&quot;inner&quot;</span><span class="sigilPair">]</span><span class="Constant">&quot;</span>
+
+
+<span class="Statement">var</span> ch = <span class="Constant">'i'</span>
+echo  <span class="sigilPair">$[</span><span class="yshExpr">42 + mydict</span>[<span class="Constant">&quot;h</span><span class="sigilPair">$[</span><span class="yshExpr">ch</span><span class="sigilPair">]</span><span class="Constant">&quot;</span>]<span class="sigilPair">]</span>
+echo <span class="Constant">&quot;</span><span class="sigilPair">$[</span><span class="yshExpr">42 + mydict</span>[<span class="Constant">&quot;h</span><span class="sigilPair">$[</span><span class="yshExpr">ch</span><span class="sigilPair">]</span><span class="Constant">&quot;</span>]<span class="sigilPair">]</span><span class="Constant">&quot;</span>
+
+<span class="Comment">#</span>
+<span class="Comment"># Interpolation</span>
+<span class="Comment">#</span>
+
+<span class="Statement">var</span> base_dir = <span class="Constant">'/bin'</span>
+<span class="Statement">var</span> file = <span class="Constant">'zz'</span>
+
+echo <span class="yshVarSub">$base_dir</span>/file /tmp/<span class="yshVarSub">$file</span>-suffix
+
+<span class="Comment"># Inside double quotes - require modes, Vim regions</span>
+echo <span class="Constant">&quot;</span><span class="yshVarSub">$base_dir</span><span class="Constant">/file /tmp/</span><span class="yshVarSub">$file</span><span class="Constant">-suffix&quot;</span>
+
+<span class="Statement">var</span> name42 = <span class="yshExpr">x</span>
+<span class="Statement">var</span> name42x = <span class="yshExpr">x</span>
+<span class="Statement">var</span> _x = <span class="yshExpr">x</span>
+
+echo <span class="yshVarSub">$name42</span> <span class="yshVarSub">$name42x</span>
+echo <span class="yshVarSub">${name42}</span> <span class="yshVarSub">${name42x}</span>
+echo <span class="yshVarSub">$_x</span> <span class="yshVarSub">${_x}</span>
+
+echo foo@example.com  foo@example <span class="Comment"> # should not be highlighted as a splice</span>
+
+<span class="Statement">var</span> my_array = <span class="sigilPair">:|</span> echo b c <span class="sigilPair">|</span>
+echo x<span class="yshVarSub"> @my_array</span>
+<span class="Statement">setvar</span> myarray = <span class="sigilPair">:|</span> a b c<span class="yshVarSub"> @my_array</span> <span class="sigilPair">|</span>
+
+<span class="yshVarSub">@my_array</span>
+
+set -- {0..11}
+
+echo <span class="yshVarSub">$0</span> <span class="yshVarSub">${11}</span>
+echo bad <span class="yshVarSub">$0</span>0 <span class="yshVarSub">$1</span>a
+
+echo <span class="Constant">&quot;hi </span><span class="yshVarSub">$0</span><span class="Constant"> x </span><span class="yshVarSub">${11}</span><span class="Constant">&quot;</span>
+echo <span class="Constant">&quot;bad </span><span class="yshVarSub">$0</span><span class="Constant">0 </span><span class="yshVarSub">$1</span><span class="Constant">a&quot;</span>
+
+
+<span class="Comment">#</span>
+<span class="Comment"># Multi-Line</span>
+<span class="Comment">#</span>
+
+... echo
+    multi-
+    line ;
+
+<span class="Comment"># not valid</span>
+<span class="Comment"># var x = (...)</span>
+
+echo \
+  multi- \
+  line \
+  <span class="sigilPair">$(</span>echo next<span class="sigilPair">)</span>
+
+
+echo <span class="sigilPair">$(</span>
+  echo 1
+  echo 2
+ <span class="Comment"> # no highlighting here, but we don't encourage complex code</span>
+  for x in 3 4 { echo <span class="yshVarSub">$x</span> }
+  <span class="sigilPair">)</span>
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>~/git/oils-for-unix/oils.vim/testdata/screenshot.ysh.html</title>
+<meta name="Generator" content="Vim/9.0">
+<meta name="plugin-version" content="vim9.0_v1">
+<meta name="syntax" content="ysh">
+<meta name="settings" content="use_css,no_foldcolumn,expand_tabs,pre_wrap,prevent_copy=,use_input_for_pc=fallback">
+<meta name="colorscheme" content="none">
+<style>
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Comment { color: #0000c0; }
+.Constant { color: #c00000; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+<span class="Comment">#!/usr/bin/env ysh</span>
+<span class="Comment"># YSH syntax demo</span>
+
+use $LIB_YSH/math.ysh --pick min max
+
+assert [-5 === min(0, -5)]
+
+func abs(x) {
+  return (x if x &gt; 0 else -x)
+}
+
+assert [42 === abs(-42)]
+
+proc read-write (prefix; ; offset=1) {
+  json read (&amp;message) &lt; $prefix.json
+
+  var next = message.counts[0] + offset
+  echo <span class="Constant">&quot;Writing new message with $next&quot;</span>
+
+  var new = {next}
+  json write (new) &gt; $[prefix]_v2.json
+}
+
+proc demo {
+  var prefix = <span class="Constant">'_tmp/foo'</span>
+
+  echo <span class="Constant">r'''</span>
+<span class="Constant">  {</span>
+<span class="Constant">    &quot;counts&quot;: [</span>
+<span class="Constant">      42, 99</span>
+<span class="Constant">    ]</span>
+<span class="Constant">  }</span>
+<span class="Constant">  '''</span> &gt; $prefix.json
+
+  read-write $prefix (offset=99)
+  echo
+
+  head $prefix*.json
+}
+
+<span class="Comment">#</span>
+<span class="Comment"># $0 Dispatch Pattern</span>
+<span class="Comment">#</span>
+
+proc make-jobs {
+  for line in (io.stdin) {
+   <span class="Comment"> # 15 ms minimum</span>
+    var milliseconds = max(line, 150)
+    var seconds = milliseconds / 1000
+    echo <span class="Constant">&quot;$seconds&quot;</span>
+  }
+}
+
+proc do-one (seconds) {
+  echo <span class="Constant">&quot;sleep $seconds&quot;</span>
+  sleep $seconds
+}
+
+proc do-all {
+  ... time
+      seq 100 40 300 <span class="Comment"> # 100 milliseconds to 300, by increments of 30</span>
+    | make-jobs
+   <span class="Comment"> #| xargs -n 1 echo</span>
+    | xargs -n 1 -P 3 --verbose -- $0 do-one
+    ;
+}
+
+if is-main {
+  runproc @ARGV
+}
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

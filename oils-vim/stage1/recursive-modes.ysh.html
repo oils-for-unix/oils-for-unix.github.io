@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>~/git/oils-for-unix/oils.vim/testdata/recursive-modes.ysh.html</title>
+<meta name="Generator" content="Vim/9.0">
+<meta name="plugin-version" content="vim9.0_v1">
+<meta name="syntax" content="ysh">
+<meta name="settings" content="use_css,no_foldcolumn,expand_tabs,pre_wrap,prevent_copy=,use_input_for_pc=fallback">
+<meta name="colorscheme" content="none">
+<style>
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.Comment { color: #0000c0; }
+.Constant { color: #c00000; }
+-->
+</style>
+</head>
+<body>
+<pre id='vimCodeElement'>
+var x = 42 <span class="Comment"> # integer</span>
+
+func f(x; offset=0) { return (x) }
+
+func myFunc(x; delimiter=<span class="Constant">r'\'</span>, other=<span class="Constant">&quot;hi $x&quot;</span>) { return (x) }
+
+proc my-proc(x, y; d=$(echo hi)) { echo hi }
+proc my-proc(x, y; d=$(echo 2)) { echo hi }
+
+var y = f(42) <span class="Comment"> # function call</span>
+
+var z = f(42; offset=5) <span class="Comment"> # semi-colon doesn't end the expression</span>
+
+<span class="Comment"># comment afterward</span>
+var r2 = <span class="Constant">r'C:\Program # Files\'</span><span class="Comment"> # r'' prefix is allowed</span>
+
+var a = [0, 1, 2]
+
+<span class="Comment"># nested</span>
+var b = [a[2], a[1], a[0], f(1)]
+
+var c = (f(2), f(1), f(0), a[0], {})
+
+<span class="Comment"># bare assignment</span>
+hay define Package
+Package foo {
+  x = 42
+  y = [<span class="Constant">'foo'</span>, <span class="Constant">&quot;$y&quot;</span>]
+}
+
+pp (1 + (a[1] + 3)); echo next
+
+pp (1 +
+    (a[1] + 3)); echo next
+<span class="Comment"># f(x)</span>
+
+pp (<span class="Constant">'hi'</span> ++ <span class="Constant">&quot;hi $x&quot;</span> ++ <span class="Constant">r'c:\'</span> ++ <span class="Constant">b'\n'</span>)
+
+echo {a,b}@example.com
+
+<span class="Comment"># we need a space to highlight, but that's OK for now</span>
+if(42) { echo yes }
+
+if (42 &gt; a[0]) {
+  echo <span class="Constant">'yes'</span>
+}
+
+for i, item in (a) {
+  echo <span class="Constant">&quot;$i $item&quot;</span>
+}
+
+pp [a]
+
+  pp  (${x} ++ $(echo hi) ++ <span class="Constant">'hi'</span>)
+  pp  [${x} ++ $(echo hi) ++ <span class="Constant">'hi'</span>]
+
+<span class="Comment"># Note: this isn't confused for a lazy typed arg, because there's no leading</span>
+<span class="Comment"># space</span>
+echo *.[ch]
+
+<span class="Comment"># Backslash escapes</span>
+
+echo \( hi \) \[ hi \]
+
+
+: <span class="Constant">'''</span>
+<span class="Constant">&quot; TODO:</span>
+<span class="Constant">&quot;</span>
+<span class="Constant">&quot; More structure</span>
+<span class="Constant">&quot;</span>
+<span class="Constant">&quot; - backslash escapes within strings:</span>
+<span class="Constant">&quot;    - \&quot; \$ in double quotes</span>
+<span class="Constant">&quot;    - \u{123456} in J8-style strings</span>
+<span class="Constant">&quot;</span>
+<span class="Constant">&quot; - Is there way to understand recursion like ${a:-'foo'}?  Or just leave that</span>
+<span class="Constant">&quot;   out</span>
+<span class="Constant">&quot; - There is also recursion of $(hostname) and such.</span>
+<span class="Constant">&quot;</span>
+<span class="Constant">&quot; - Here docs?  They are hard, could leave them out of YSH</span>
+<span class="Constant">'''</span>
+
+var foods = :|
+  pea nut
+ <span class="Comment"> # comment</span>
+  other
+  \(
+|
+
+<span class="Comment">#</span>
+<span class="Comment"># Copied from notes.md</span>
+<span class="Comment">#</span>
+
+<span class="Comment"># Command mode -&gt; Expression</span>
+
+    var y = f(42)
+    var y = f(<span class="Constant">'str'</span> ++ <span class="Constant">&quot;hi $x&quot;</span>)
+
+    =  f(42)
+    call  f(42)
+    pp (f(42))
+    pp [f(42)]
+
+    echo ls --flag=$[x + 1]; echo next  <span class="Comment"> # newline not allowed in $[]</span>
+   <span class="Comment"> # escape dollar</span>
+    echo ls --flag=\$[x + 1]
+
+    echo @[glob(<span class="Constant">'*.py'</span>)]; echo next <span class="Comment"> # newline not allowed in @[]</span>
+   <span class="Comment"> # escape</span>
+    echo \@[glob]
+
+<span class="Comment"># Command mode -&gt; Double quoted</span>
+
+    echo <span class="Constant">&quot;hi $x&quot;</span>
+    echo <span class="Constant">$&quot;explicit $x&quot;</span>
+
+<span class="Comment"># Expression mode -&gt; Command</span>
+
+    = :| foo.txt *.py <span class="Constant">&quot;$x&quot;</span> |  <span class="Comment"> # note: no redirects here though</span>
+    = :| $x $(echo hi) @(echo hi) $[42+1] @[a] |  <span class="Comment"> # note: no redirects here though</span>
+    = :| <span class="Constant">\'</span> <span class="Constant">\&quot;</span> \$ \@ \( \) \[ \] |  <span class="Comment"> # backslash quoting</span>
+
+    = $(echo <span class="Constant">'command sub'</span> $(echo hi) )
+    = @(echo <span class="Constant">u'spliced command sub'</span> @foods )
+    = ^(echo <span class="Constant">&quot;unevaluated&quot;</span> $hi $[y + 1])
+
+<span class="Comment"># Expression mode -&gt; Double Quoted</span>
+
+    = <span class="Constant">&quot;hi $x&quot;</span>
+    = <span class="Constant">$&quot;explicit $x&quot;</span>
+    = ^<span class="Constant">&quot;unevaluated $x&quot;</span>
+    = f(^<span class="Constant">&quot;unevaluated $x&quot;</span>)
+
+<span class="Comment"># Double-Quoted mode -&gt;</span>
+
+    echo <span class="Constant">&quot;greeting = $(echo hi)&quot;</span> <span class="Comment"> # Command</span>
+    echo <span class="Constant">&quot;sum = $[x + 99]&quot;</span>       <span class="Comment"> # Expression</span>
+
+<span class="Comment"># No change</span>
+
+    echo $(echo hi)
+    echo @(echo hi)
+
+   <span class="Comment"> # TODO: should implement these two in YSH!</span>
+   <span class="Comment"> #= $[42 + a[i]]</span>
+   <span class="Comment"> #= @[a]</span>
+    = ^[42 + a[i]]
+
+<span class="Comment"># Multi-line versions</span>
+
+    func g(...args) { return (args[0]) }
+    func myfunc(...args) { return (args[0]) }
+
+    = $(echo 1
+        echo $x 2)
+    = @(echo 3
+        echo <span class="Constant">'yo'</span> 4)
+    = ^(echo 5
+        echo <span class="Constant">&quot;hi $x&quot;</span> 6)
+
+    var y = (42,
+              43,
+              f(5))
+
+   <span class="Comment"> # hard cases with ;</span>
+    var z = f(1); echo hi
+    var z = g(1, 2,
+              3); echo hi
+
+    setvar a[0 + 0] = 42
+
+    = g(42,
+        43,
+        f(5))
+
+    call myfunc(42,
+                43,
+                f(5)); echo next
+
+    call g(3, 4, 5); echo hi
+    call g(3, 4, 5) <span class="Comment"> # comment</span>
+
+    var d = {
+      k: 1,
+      k: 2,
+    }; echo next
+
+    var d = len({
+      k1: <span class="Constant">'value'</span>,
+      k2: g(5,
+            6, 7),
+      bracket: [
+        1, 2, 3
+      ],
+    }) + 42
+
+    var mylist = [
+      1,
+      2,
+      f(3),
+      foods[0],
+      {k: <span class="Constant">'value'</span>},
+    ]
+
+    = len({ k: [x, x] }) + 42
+
+<span class="Comment"># Backslash escaped \( \) \[ \] \{ \}</span>
+
+echo $(echo \( \))
+echo $(echo \[ \])
+echo $(echo \{ \})
+
+<span class="Comment"># These aren't valid</span>
+<span class="Comment">#echo $( echo &quot;\( \)&quot; )</span>
+<span class="Comment">#echo $( echo &quot;\[ \]&quot; )</span>
+<span class="Comment">#echo $( echo &quot;\{ \}&quot; )</span>
+
+= $(echo \( \))
+= $(echo \[ \])
+= $(echo \{ \})
+
+= ( $(echo \( \)) )
+= ( $(echo \[ \]) )
+= ( $(echo \{ \}) )
+
+= [ $(echo \( \)) ]
+= [ $(echo \[ \]) ]
+= [ $(echo \{ \}) ]
+
+= { k: $(echo \( \)) }
+= { k: $(echo \[ \]) }
+= { k: $(echo \{ \}) }
+
+= $(pp (42))
+= $(pp [42])
+<span class="Comment">#= $(call f(x))</span>
+
+
+<span class="Comment"># proc is reserved</span>
+<span class="Comment"># var proc = 42</span>
+<span class="Comment"># setvar proc = const + 1</span>
+<span class="Comment"># echo $setvar</span>
+
+<span class="Comment"># Builtins can be highlighted?</span>
+<span class="Comment"># Maybe use a different color</span>
+<span class="Comment">#</span>
+<span class="Comment"># Export from YSH</span>
+<span class="Comment"># - list of builtins - compgen -A builtin?</span>
+<span class="Comment">#   - this contains deprecated shell builtins like [ . : though</span>
+<span class="Comment">#   - alias unalias</span>
+<span class="Comment">#   - I think it's better to have reflection on __builtin_proc__</span>
+<span class="Comment"># - list of backslash chars</span>
+
+pushd /tmp
+cd /
+popd
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->
