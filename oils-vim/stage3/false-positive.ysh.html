@@ -38,8 +38,8 @@ echo <span class="yshVarSub">$const</span>
 <span class="Statement">setvar</span> <span class="Statement">setvar</span> = <span class="yshExpr">setvar + 1</span>
 echo <span class="yshVarSub">$setvar</span>
 
-<span class="Statement">var</span> <span class="Statement">call</span><span class="yshExpr">  = 42</span>
-<span class="Statement">setvar</span> <span class="Statement">call</span><span class="yshExpr"> = call + 1</span>
+<span class="Statement">var</span> call  = <span class="yshExpr">42</span>
+<span class="Statement">setvar</span> call = <span class="yshExpr">call + 1</span>
 echo <span class="yshVarSub">$call</span>
 
 echo calling <span class="Comment"> # should not match</span>
@@ -89,7 +89,7 @@ p <span class="Statement">var</span> x = (<span class="yshExpr">42</span>)
 p <span class="Statement">setvar</span> x = (<span class="yshExpr">42</span>)
 p <span class="Statement">setglobal</span> a[i] = (<span class="yshExpr">42</span>)
 
-p <span class="Statement">call</span><span class="yshExpr"> </span>(<span class="yshExpr">42</span>)
+p call (<span class="yshExpr">42</span>)
 </pre>
 </body>
 </html>
