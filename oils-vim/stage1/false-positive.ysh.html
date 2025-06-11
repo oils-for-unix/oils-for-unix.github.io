@@ -37,6 +37,8 @@ var call  = 42
 setvar call = call + 1
 echo $call
 
+echo calling <span class="Comment"> # should not match</span>
+
 <span class="Comment">#</span>
 <span class="Comment"># These should still be highlighted</span>
 <span class="Comment">#</span>
