@@ -72,7 +72,7 @@ assert [<span class="yshExpr">42 === abs</span>(<span class="yshExpr">-42</span>
 
 <span class="Statement">proc</span> <span class="procName">make-jobs</span> {
   <span class="Statement">for</span> line <span class="Statement">in</span> (<span class="yshExpr">io.stdin</span>) {
-   <span class="Comment"> # 15 ms minimum</span>
+   <span class="Comment"> # 150 ms minimum</span>
     <span class="Statement">var</span> milliseconds = <span class="yshExpr">max</span>(<span class="yshExpr">line, 150</span>)
     <span class="Statement">var</span> seconds = <span class="yshExpr">milliseconds / 1000</span>
     echo <span class="Constant">&quot;</span><span class="yshVarSub">$seconds</span><span class="Constant">&quot;</span>
