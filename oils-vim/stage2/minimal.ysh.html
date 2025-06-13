@@ -32,8 +32,8 @@ body { font-family: monospace; color: #000000; background-color: #ffffff; }
 <span class="Comment"># YSH keywords</span>
 <span class="Statement">var</span><span class="yshExpr"> v = 42</span>; echo next
 <span class="Statement">const</span><span class="yshExpr"> c = 99</span> <span class="Comment"> # comment</span>
-<span class="Statement">setvar</span> dq = <span class="Constant">'zz'</span>
-<span class="Statement">setglobal</span> g = <span class="Constant">&quot;yy&quot;</span>
+<span class="Statement">setvar</span><span class="yshExpr"> dq = </span><span class="Constant">'zz'</span>
+<span class="Statement">setglobal</span><span class="yshExpr"> g = </span><span class="Constant">&quot;yy&quot;</span>
 
 <span class="Statement">proc</span> <span class="procName">p</span> { echo hi }
 <span class="Statement">func</span> <span class="funcName">f</span>(x) { <span class="Statement">return</span> (<span class="yshExpr">x</span>) }
@@ -269,7 +269,7 @@ echo foo@example.com  foo@example <span class="Comment"> # should not be highlig
 
 <span class="Statement">var</span><span class="yshExpr"> my_array = </span><span class="sigilPair">:|</span> echo b c <span class="sigilPair">|</span>
 echo x @my_array
-<span class="Statement">setvar</span> myarray = <span class="sigilPair">:|</span> a b c @my_array <span class="sigilPair">|</span>
+<span class="Statement">setvar</span><span class="yshExpr"> myarray = </span><span class="sigilPair">:|</span> a b c @my_array <span class="sigilPair">|</span>
 
 @my_array
 

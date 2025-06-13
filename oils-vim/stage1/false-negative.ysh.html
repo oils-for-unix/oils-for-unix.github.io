@@ -29,7 +29,7 @@ echo yes;#comment
 
 var s=<span class="Constant">'s'</span>
 
-<span class="Comment"># fixed</span>
+<span class="Comment"># bug FIXED</span>
 var i =len(s)
 var i= len(s)
 
@@ -39,11 +39,7 @@ call len(s)
 pp [ s ]
 pp ( s )
 
-<span class="Comment"># BUG</span>
-<span class="Comment"># Hm maybe we don't need rhsExpr</span>
-<span class="Comment"># we need exprAfterKeyword for const, var, setvar, setglobal ?</span>
-<span class="Comment"># Including the =</span>
-
+<span class="Comment"># bug FIXED</span>
 setvar i += len(s)
 setvar i -= len(s)
 

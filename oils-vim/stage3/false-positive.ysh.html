@@ -31,15 +31,15 @@ body { font-family: monospace; color: #000000; background-color: #ffffff; }
 <span class="Comment"># Or the syntax highlighter can match beginning of line</span>
 
 <span class="Statement">var</span><span class="yshExpr"> const = 42</span>
-<span class="Statement">setvar</span> const = <span class="yshExpr">const + 1</span>
+<span class="Statement">setvar</span><span class="yshExpr"> const = const + 1</span>
 echo <span class="yshVarSub">$const</span>
 
 <span class="Statement">var</span><span class="yshExpr"> setvar = 42</span>
-<span class="Statement">setvar</span> <span class="Statement">setvar</span> = <span class="yshExpr">setvar + 1</span>
+<span class="Statement">setvar</span><span class="yshExpr"> setvar = setvar + 1</span>
 echo <span class="yshVarSub">$setvar</span>
 
 <span class="Statement">var</span><span class="yshExpr"> call  = 42</span>
-<span class="Statement">setvar</span> call = <span class="yshExpr">call + 1</span>
+<span class="Statement">setvar</span><span class="yshExpr"> call = call + 1</span>
 echo <span class="yshVarSub">$call</span>
 
 echo calling <span class="Comment"> # should not match</span>
@@ -86,8 +86,8 @@ p <span class="Statement">proc</span> <span class="procName">a</span> b c (<span
 p <span class="Statement">func</span> <span class="funcName">x</span> y z (<span class="yshExpr">42</span>)
 
 p var x = (<span class="yshExpr">42</span>)
-p <span class="Statement">setvar</span> x = (<span class="yshExpr">42</span>)
-p <span class="Statement">setglobal</span> a[i] = (<span class="yshExpr">42</span>)
+p setvar x = (<span class="yshExpr">42</span>)
+p setglobal a[i] = (<span class="yshExpr">42</span>)
 
 p call (<span class="yshExpr">42</span>)
 </pre>
