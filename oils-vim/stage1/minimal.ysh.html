@@ -31,13 +31,16 @@ setvar dq = <span class="Constant">'zz'</span>
 setglobal g = <span class="Constant">&quot;yy&quot;</span>
 
 proc p { echo hi }
-func f(x) { return (x) }
+func myFunc(x; offset=0) { return (x) }
 
 call len(<span class="Constant">'str'</span>); echo next
 call len(<span class="Constant">'str'</span>) <span class="Comment"> # comment</span>
 
 = len(g); echo next
   = len(g) <span class="Comment"> # = keyword</span>
+
+<span class="Comment"># test for ; inside ()</span>
+call myFunc(42; offset=10); echo next
 
 <span class="Comment">#=foo</span>
 <span class="Comment">#echo =foo</span>
@@ -259,6 +262,10 @@ var _x = x
 echo $name42 $name42x
 echo ${name42} ${name42x}
 echo $_x ${_x}
+
+<span class="Comment"># YSH has non-recursive ${}</span>
+echo ${file:-} <span class="Constant">&quot;foo ${base_dir:-}&quot;</span>
+echo ${12:-} <span class="Constant">&quot;foo ${12:-}&quot;</span>
 
 echo foo@example.com  foo@example <span class="Comment"> # should not be highlighted as a splice</span>
 

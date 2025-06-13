@@ -37,13 +37,16 @@ body { font-family: monospace; color: #000000; background-color: #ffffff; }
 <span class="Statement">setglobal</span><span class="yshExpr"> g = </span><span class="Constant">&quot;yy&quot;</span>
 
 <span class="Statement">proc</span> <span class="procName">p</span> { echo hi }
-<span class="Statement">func</span> <span class="funcName">f</span>(x) { <span class="Statement">return</span> (<span class="yshExpr">x</span>) }
+<span class="Statement">func</span> <span class="funcName">myFunc</span>(x; offset=0) { <span class="Statement">return</span> (<span class="yshExpr">x</span>) }
 
 <span class="Statement">call</span><span class="yshExpr"> len</span>(<span class="Constant">'str'</span>); echo next
 <span class="Statement">call</span><span class="yshExpr"> len</span>(<span class="Constant">'str'</span>) <span class="Comment"> # comment</span>
 
 <span class="Statement">=</span><span class="yshExpr"> len</span>(<span class="yshExpr">g</span>); echo next
   <span class="Statement">=</span><span class="yshExpr"> len</span>(<span class="yshExpr">g</span>) <span class="Comment"> # = keyword</span>
+
+<span class="Comment"># test for ; inside ()</span>
+<span class="Statement">call</span><span class="yshExpr"> myFunc</span>(<span class="yshExpr">42; offset=10</span>); echo next
 
 <span class="Comment">#=foo</span>
 <span class="Comment">#echo =foo</span>
@@ -265,6 +268,10 @@ echo <span class="Constant">&quot;</span><span class="yshVarSub">$base_dir</span
 echo <span class="yshVarSub">$name42</span> <span class="yshVarSub">$name42x</span>
 echo <span class="yshVarSub">${name42}</span> <span class="yshVarSub">${name42x}</span>
 echo <span class="yshVarSub">$_x</span> <span class="yshVarSub">${_x}</span>
+
+<span class="Comment"># YSH has non-recursive ${}</span>
+echo <span class="yshVarSub">${file:-}</span> <span class="Constant">&quot;foo </span><span class="yshVarSub">${base_dir:-}</span><span class="Constant">&quot;</span>
+echo <span class="yshVarSub">${12:-}</span> <span class="Constant">&quot;foo </span><span class="yshVarSub">${12:-}</span><span class="Constant">&quot;</span>
 
 echo foo@example.com  foo@example <span class="Comment"> # should not be highlighted as a splice</span>
 
