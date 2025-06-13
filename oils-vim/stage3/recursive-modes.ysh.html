@@ -123,7 +123,7 @@ echo <span class="Constant">\(</span> hi <span class="Constant">\)</span> <span 
     <span class="Statement">var</span><span class="yshExpr"> y = f</span>(<span class="yshExpr">42</span>)
     <span class="Statement">var</span><span class="yshExpr"> y = f</span>(<span class="Constant">'str'</span><span class="yshExpr"> ++ </span><span class="Constant">&quot;hi </span><span class="yshVarSub">$x</span><span class="Constant">&quot;</span>)
 
-    = <span class="yshExpr"> f</span>(<span class="yshExpr">42</span>)
+    <span class="Statement">=</span><span class="yshExpr">  f</span>(<span class="yshExpr">42</span>)
     <span class="Statement">call</span><span class="yshExpr">  f</span>(<span class="yshExpr">42</span>)
     pp (<span class="yshExpr">f</span>(<span class="yshExpr">42</span>))
     pp [<span class="yshExpr">f</span>(<span class="yshExpr">42</span>)]
@@ -143,20 +143,20 @@ echo <span class="Constant">\(</span> hi <span class="Constant">\)</span> <span 
 
 <span class="Comment"># Expression mode -&gt; Command</span>
 
-    = <span class="sigilPair">:|</span> foo.txt *.py <span class="Constant">&quot;</span><span class="yshVarSub">$x</span><span class="Constant">&quot;</span> <span class="sigilPair">|</span><span class="yshExpr"> </span> <span class="Comment"> # note: no redirects here though</span>
-    = <span class="sigilPair">:|</span> <span class="yshVarSub">$x</span> <span class="sigilPair">$(</span>echo hi<span class="sigilPair">)</span> <span class="sigilPair">@(</span>echo hi<span class="sigilPair">)</span> <span class="sigilPair">$[</span><span class="yshExpr">42+1</span><span class="sigilPair">]</span> <span class="sigilPair">@[</span><span class="yshExpr">a</span><span class="sigilPair">]</span> <span class="sigilPair">|</span><span class="yshExpr"> </span> <span class="Comment"> # note: no redirects here though</span>
-    = <span class="sigilPair">:|</span> <span class="Constant">\'</span> <span class="Constant">\&quot;</span> <span class="Constant">\$</span> <span class="Constant">\@</span> <span class="Constant">\(</span> <span class="Constant">\)</span> <span class="Constant">\[</span> <span class="Constant">\]</span> <span class="sigilPair">|</span><span class="yshExpr"> </span> <span class="Comment"> # backslash quoting</span>
+    <span class="Statement">=</span><span class="yshExpr"> </span><span class="sigilPair">:|</span> foo.txt *.py <span class="Constant">&quot;</span><span class="yshVarSub">$x</span><span class="Constant">&quot;</span> <span class="sigilPair">|</span><span class="yshExpr"> </span> <span class="Comment"> # note: no redirects here though</span>
+    <span class="Statement">=</span><span class="yshExpr"> </span><span class="sigilPair">:|</span> <span class="yshVarSub">$x</span> <span class="sigilPair">$(</span>echo hi<span class="sigilPair">)</span> <span class="sigilPair">@(</span>echo hi<span class="sigilPair">)</span> <span class="sigilPair">$[</span><span class="yshExpr">42+1</span><span class="sigilPair">]</span> <span class="sigilPair">@[</span><span class="yshExpr">a</span><span class="sigilPair">]</span> <span class="sigilPair">|</span><span class="yshExpr"> </span> <span class="Comment"> # note: no redirects here though</span>
+    <span class="Statement">=</span><span class="yshExpr"> </span><span class="sigilPair">:|</span> <span class="Constant">\'</span> <span class="Constant">\&quot;</span> <span class="Constant">\$</span> <span class="Constant">\@</span> <span class="Constant">\(</span> <span class="Constant">\)</span> <span class="Constant">\[</span> <span class="Constant">\]</span> <span class="sigilPair">|</span><span class="yshExpr"> </span> <span class="Comment"> # backslash quoting</span>
 
-    = <span class="sigilPair">$(</span>echo <span class="Constant">'command sub'</span> <span class="sigilPair">$(</span>echo hi<span class="sigilPair">)</span> <span class="sigilPair">)</span>
-    = <span class="sigilPair">@(</span>echo <span class="Constant">u'spliced command sub'</span><span class="yshVarSub"> @foods</span> <span class="sigilPair">)</span>
-    = <span class="sigilPair">^(</span>echo <span class="Constant">&quot;unevaluated&quot;</span> <span class="yshVarSub">$hi</span> <span class="sigilPair">$[</span><span class="yshExpr">y + 1</span><span class="sigilPair">])</span>
+    <span class="Statement">=</span><span class="yshExpr"> </span><span class="sigilPair">$(</span>echo <span class="Constant">'command sub'</span> <span class="sigilPair">$(</span>echo hi<span class="sigilPair">)</span> <span class="sigilPair">)</span>
+    <span class="Statement">=</span><span class="yshExpr"> </span><span class="sigilPair">@(</span>echo <span class="Constant">u'spliced command sub'</span><span class="yshVarSub"> @foods</span> <span class="sigilPair">)</span>
+    <span class="Statement">=</span><span class="yshExpr"> </span><span class="sigilPair">^(</span>echo <span class="Constant">&quot;unevaluated&quot;</span> <span class="yshVarSub">$hi</span> <span class="sigilPair">$[</span><span class="yshExpr">y + 1</span><span class="sigilPair">])</span>
 
 <span class="Comment"># Expression mode -&gt; Double Quoted</span>
 
-    = <span class="Constant">&quot;hi </span><span class="yshVarSub">$x</span><span class="Constant">&quot;</span>
-    = <span class="Constant">$&quot;explicit </span><span class="yshVarSub">$x</span><span class="Constant">&quot;</span>
-    = <span class="sigilPair">^&quot;</span><span class="Constant">unevaluated </span><span class="yshVarSub">$x</span><span class="sigilPair">&quot;</span>
-    = <span class="yshExpr">f</span>(<span class="sigilPair">^&quot;</span><span class="Constant">unevaluated </span><span class="yshVarSub">$x</span><span class="sigilPair">&quot;</span>)
+    <span class="Statement">=</span><span class="yshExpr"> </span><span class="Constant">&quot;hi </span><span class="yshVarSub">$x</span><span class="Constant">&quot;</span>
+    <span class="Statement">=</span><span class="yshExpr"> </span><span class="Constant">$&quot;explicit </span><span class="yshVarSub">$x</span><span class="Constant">&quot;</span>
+    <span class="Statement">=</span><span class="yshExpr"> </span><span class="sigilPair">^&quot;</span><span class="Constant">unevaluated </span><span class="yshVarSub">$x</span><span class="sigilPair">&quot;</span>
+    <span class="Statement">=</span><span class="yshExpr"> f</span>(<span class="sigilPair">^&quot;</span><span class="Constant">unevaluated </span><span class="yshVarSub">$x</span><span class="sigilPair">&quot;</span>)
 
 <span class="Comment"># Double-Quoted mode -&gt;</span>
 
@@ -171,18 +171,18 @@ echo <span class="Constant">\(</span> hi <span class="Constant">\)</span> <span 
    <span class="Comment"> # TODO: should implement these two in YSH!</span>
    <span class="Comment"> #= $[42 + a[i]]</span>
    <span class="Comment"> #= @[a]</span>
-    = <span class="sigilPair">^[</span><span class="yshExpr">42 + a</span>[<span class="yshExpr">i</span>]<span class="sigilPair">]</span>
+    <span class="Statement">=</span><span class="yshExpr"> </span><span class="sigilPair">^[</span><span class="yshExpr">42 + a</span>[<span class="yshExpr">i</span>]<span class="sigilPair">]</span>
 
 <span class="Comment"># Multi-line versions</span>
 
     <span class="Statement">func</span> <span class="funcName">g</span>(...args) { <span class="Statement">return</span> (<span class="yshExpr">args</span>[<span class="yshExpr">0</span>]) }
     <span class="Statement">func</span> <span class="funcName">myfunc</span>(...args) { <span class="Statement">return</span> (<span class="yshExpr">args</span>[<span class="yshExpr">0</span>]) }
 
-    = <span class="sigilPair">$(</span>echo 1
+    <span class="Statement">=</span><span class="yshExpr"> </span><span class="sigilPair">$(</span>echo 1
         echo <span class="yshVarSub">$x</span> 2<span class="sigilPair">)</span>
-    = <span class="sigilPair">@(</span>echo 3
+    <span class="Statement">=</span><span class="yshExpr"> </span><span class="sigilPair">@(</span>echo 3
         echo <span class="Constant">'yo'</span> 4<span class="sigilPair">)</span>
-    = <span class="sigilPair">^(</span>echo 5
+    <span class="Statement">=</span><span class="yshExpr"> </span><span class="sigilPair">^(</span>echo 5
         echo <span class="Constant">&quot;hi </span><span class="yshVarSub">$x</span><span class="Constant">&quot;</span> 6<span class="sigilPair">)</span>
 
     <span class="Statement">var</span><span class="yshExpr"> y = </span>(<span class="yshExpr">42,</span>
@@ -196,7 +196,7 @@ echo <span class="Constant">\(</span> hi <span class="Constant">\)</span> <span 
 
     <span class="Statement">setvar</span><span class="yshExpr"> a</span>[<span class="yshExpr">0 + 0</span>]<span class="yshExpr"> = 42</span>
 
-    = <span class="yshExpr">g</span>(<span class="yshExpr">42,</span>
+    <span class="Statement">=</span><span class="yshExpr"> g</span>(<span class="yshExpr">42,</span>
 <span class="yshExpr">        43,</span>
 <span class="yshExpr">        f</span>(<span class="yshExpr">5</span>))
 
@@ -229,7 +229,7 @@ echo <span class="Constant">\(</span> hi <span class="Constant">\)</span> <span 
 <span class="yshExpr">      </span>{<span class="yshExpr">k: </span><span class="Constant">'value'</span>}<span class="yshExpr">,</span>
 <span class="yshExpr">    </span>]<span class="yshExpr">    </span>
 
-    = <span class="yshExpr">len</span>({<span class="yshExpr"> k: </span>[<span class="yshExpr">x, x</span>]<span class="yshExpr"> </span>})<span class="yshExpr"> + 42</span>
+    <span class="Statement">=</span><span class="yshExpr"> len</span>({<span class="yshExpr"> k: </span>[<span class="yshExpr">x, x</span>]<span class="yshExpr"> </span>})<span class="yshExpr"> + 42</span>
 
 <span class="Comment"># Backslash escaped \( \) \[ \] \{ \}</span>
 
