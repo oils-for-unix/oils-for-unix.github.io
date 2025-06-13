@@ -127,6 +127,14 @@ var b = <span class="Constant">b'''</span>
 <span class="Comment"># echo b'\y BAD'</span>
 <span class="Comment"># echo b'\yGG BAD'</span>
 <span class="Comment"># echo b'\m BAD'</span>
+
+
+FOO=bar env -i echo
+
+FOO=bar SPAM_EGGS=<span class="Constant">'baz'</span> env -i echo
+
+<span class="Comment"># Invalid env name</span>
+<span class="Comment"># FOO=bar SPAM-EGGS='baz' env -i echo</span>
 </pre>
 </body>
 </html>
