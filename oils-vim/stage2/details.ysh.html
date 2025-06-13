@@ -14,6 +14,7 @@ pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-
 body { font-family: monospace; color: #000000; background-color: #ffffff; }
 * { font-size: 1em; }
 .Comment { color: #0000c0; }
+.sigilPair { color: #5f00af; }
 .Constant { color: #c00000; }
 .yshExpr { color: #0000d7; }
 .Statement { color: #af5f00; }
@@ -137,6 +138,10 @@ FOO=bar SPAM_EGGS=<span class="Constant">'baz'</span> env -i echo
 
 <span class="Comment"># Invalid env name</span>
 <span class="Comment"># FOO=bar SPAM-EGGS='baz' env -i echo</span>
+
+<span class="Statement">var</span><span class="yshExpr"> argv_array = </span><span class="sigilPair">:|</span> echo hi <span class="sigilPair">|</span>
+@argv_array bye
+echo @argv_array bye
 </pre>
 </body>
 </html>
