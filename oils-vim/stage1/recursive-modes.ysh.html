@@ -48,6 +48,11 @@ hay define Package
 Package foo {
   x = 42
   y = [<span class="Constant">'foo'</span>, <span class="Constant">&quot;$y&quot;</span>]
+  multi_line = [
+    <span class="Constant">'a'</span>,
+    <span class="Constant">'b'</span>,
+    $(echo hi),
+  ]
 }
 
 pp (1 + (a[1] + 3)); echo next

@@ -13,12 +13,12 @@
 pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-color: #ffffff; }
 body { font-family: monospace; color: #000000; background-color: #ffffff; }
 * { font-size: 1em; }
-.yshExpr { color: #0000d7; }
 .Comment { color: #0000c0; }
+.sigilPair { color: #5f00af; }
 .Constant { color: #c00000; }
 .funcName { color: #87005f; }
 .procName { color: #5f00af; }
-.sigilPair { color: #5f00af; }
+.yshExpr { color: #0000d7; }
 .Statement { color: #af5f00; }
 -->
 </style>
@@ -51,8 +51,13 @@ body { font-family: monospace; color: #000000; background-color: #ffffff; }
 <span class="Comment"># bare assignment</span>
 hay define Package
 Package foo {
-  x = <span class="yshExpr">42    </span>
-  y = [<span class="Constant">'foo'</span><span class="yshExpr">, </span><span class="Constant">&quot;$y&quot;</span>]
+  <span class="yshExpr">x = </span>42
+  <span class="yshExpr">y = </span>[<span class="Constant">'foo'</span>, <span class="Constant">&quot;$y&quot;</span>]
+  <span class="yshExpr">multi_line = </span>[
+    <span class="Constant">'a'</span>,
+    <span class="Constant">'b'</span>,
+    <span class="sigilPair">$(</span>echo hi<span class="sigilPair">)</span>,
+  ]
 }
 
 pp (<span class="yshExpr">1 + </span>(<span class="yshExpr">a</span>[<span class="yshExpr">1</span>]<span class="yshExpr"> + 3</span>)); echo next
