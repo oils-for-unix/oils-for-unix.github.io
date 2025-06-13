@@ -14,11 +14,11 @@ pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-
 body { font-family: monospace; color: #000000; background-color: #ffffff; }
 * { font-size: 1em; }
 .Comment { color: #0000c0; }
-.funcName { color: #87005f; }
-.Constant { color: #c00000; }
-.yshExpr { color: #0000d7; }
-.procName { color: #5f00af; }
 .sigilPair { color: #5f00af; }
+.Constant { color: #c00000; }
+.funcName { color: #87005f; }
+.procName { color: #5f00af; }
+.yshExpr { color: #0000d7; }
 .Statement { color: #af5f00; }
 -->
 </style>
@@ -30,8 +30,8 @@ body { font-family: monospace; color: #000000; background-color: #ffffff; }
 <span class="Comment">#</span>
 
 <span class="Comment"># YSH keywords</span>
-<span class="Statement">var</span> v = <span class="yshExpr">42</span>; echo next
-<span class="Statement">const</span> c = <span class="yshExpr">99</span> <span class="Comment"> # comment</span>
+<span class="Statement">var</span><span class="yshExpr"> v = 42</span>; echo next
+<span class="Statement">const</span><span class="yshExpr"> c = 99</span> <span class="Comment"> # comment</span>
 <span class="Statement">setvar</span> dq = <span class="Constant">'zz'</span>
 <span class="Statement">setglobal</span> g = <span class="Constant">&quot;yy&quot;</span>
 
@@ -94,8 +94,8 @@ echo <span class="Constant">'/usr/bin'</span>
 echo <span class="Constant">r'C:\Program Files\'</span> <span class="Comment"> # r'' prefix is allowed</span>
 
 <span class="Comment"># expression mode</span>
-<span class="Statement">var</span> r1 = <span class="Constant">'/usr/bin/'</span>
-<span class="Statement">var</span> r2 = <span class="Constant">r'C:\Program Files\'</span><span class="Comment"> # r'' prefix is allowed</span>
+<span class="Statement">var</span><span class="yshExpr"> r1 = </span><span class="Constant">'/usr/bin/'</span>
+<span class="Statement">var</span><span class="yshExpr"> r2 = </span><span class="Constant">r'C:\Program Files\'</span><span class="Comment"> # r'' prefix is allowed</span>
 
 <span class="Comment"># corner cases for r''</span>
 echo ls --foo=<span class="Constant">'bar'</span>
@@ -114,10 +114,10 @@ echo ls -<span class="Constant">r'bar'</span>
 <span class="Comment">#</span>
 
 echo <span class="Constant">&quot;hi $r1 \$ \&quot; \\&quot;</span>
-<span class="Statement">var</span> dq = <span class="Constant">&quot;hi $r2 \$ \&quot; \\&quot;</span>
+<span class="Statement">var</span><span class="yshExpr"> dq = </span><span class="Constant">&quot;hi $r2 \$ \&quot; \\&quot;</span>
 
 echo <span class="Constant">$&quot;hi $r1 \$ \&quot; \\&quot;</span>
-<span class="Statement">var</span> dq = <span class="Constant">$&quot;hi $r2 \$ \&quot; \\&quot;</span>
+<span class="Statement">var</span><span class="yshExpr"> dq = </span><span class="Constant">$&quot;hi $r2 \$ \&quot; \\&quot;</span>
 
 echo --foo=<span class="Constant">$&quot;bar&quot;</span>
 
@@ -126,10 +126,10 @@ echo --foo=<span class="Constant">$&quot;bar&quot;</span>
 <span class="Comment">#</span>
 
 echo <span class="Constant">b'hi \t \' \\'</span>
-<span class="Statement">var</span> j8 = <span class="Constant">b'hi \t \' \\'</span>
+<span class="Statement">var</span><span class="yshExpr"> j8 = </span><span class="Constant">b'hi \t \' \\'</span>
 
 echo <span class="Constant">u'hi \t \' \\'</span>
-<span class="Statement">var</span> j8 = <span class="Constant">u'hi \t \' \\'</span>
+<span class="Statement">var</span><span class="yshExpr"> j8 = </span><span class="Constant">u'hi \t \' \\'</span>
 
 <span class="Comment">#</span>
 <span class="Comment"># Triple-quoted strings</span>
@@ -138,7 +138,7 @@ echo <span class="Constant">u'hi \t \' \\'</span>
 <span class="Comment">#  b&quot;&quot;&quot; u&quot;&quot;&quot;</span>
 <span class="Comment">#</span>
 
-<span class="Statement">var</span> empty = <span class="Constant">''</span>
+<span class="Statement">var</span><span class="yshExpr"> empty = </span><span class="Constant">''</span>
 
 <span class="Comment"># raw</span>
 
@@ -149,7 +149,7 @@ echo <span class="Constant">'''</span>
 <span class="Constant">  two ''</span>
 <span class="Constant">  '''</span> | cat
 
-<span class="Statement">var</span> x = <span class="Constant">'''</span>
+<span class="Statement">var</span><span class="yshExpr"> x = </span><span class="Constant">'''</span>
 <span class="Constant">  C:\Program Files\</span>
 <span class="Constant">  one ' </span>
 <span class="Constant">  two ''</span>
@@ -162,7 +162,7 @@ echo <span class="Constant">r'''</span>
 <span class="Constant">  two ''</span>
 <span class="Constant">  '''</span> | cat
 
-<span class="Statement">var</span> x = <span class="Constant">r'''</span>
+<span class="Statement">var</span><span class="yshExpr"> x = </span><span class="Constant">r'''</span>
 <span class="Constant">  C:\Program Files\</span>
 <span class="Constant">  one '</span>
 <span class="Constant">  two ''</span>
@@ -176,7 +176,7 @@ echo <span class="Constant">&quot;&quot;&quot;</span>
 <span class="Constant">  two &quot;&quot;</span>
 <span class="Constant">  &quot;&quot;&quot;</span>
 
-<span class="Statement">var</span> x = <span class="Constant">&quot;&quot;&quot;</span>
+<span class="Statement">var</span><span class="yshExpr"> x = </span><span class="Constant">&quot;&quot;&quot;</span>
 <span class="Constant">  $r1</span>
 <span class="Constant">  one &quot;</span>
 <span class="Constant">  two &quot;&quot;</span>
@@ -188,7 +188,7 @@ echo <span class="Constant">$&quot;&quot;&quot;</span>
 <span class="Constant">  \$ two &quot;&quot;</span>
 <span class="Constant">  \&quot;&quot;&quot;&quot;</span> other
 
-<span class="Statement">var</span> x = <span class="Constant">$&quot;&quot;&quot;</span>
+<span class="Statement">var</span><span class="yshExpr"> x = </span><span class="Constant">$&quot;&quot;&quot;</span>
 <span class="Constant">  $r1</span>
 <span class="Constant">  \$ one &quot;</span>
 <span class="Constant">  \$ two &quot;&quot;</span>
@@ -202,7 +202,7 @@ echo <span class="Constant">b'''</span>
 <span class="Constant">  three \'''</span>
 <span class="Constant">  '''</span> | cat
 
-<span class="Statement">var</span> x = <span class="Constant">b'''</span>
+<span class="Statement">var</span><span class="yshExpr"> x = </span><span class="Constant">b'''</span>
 <span class="Constant">  j8 \'''</span>
 <span class="Constant">  one '</span>
 <span class="Constant">  two ''</span>
@@ -215,7 +215,7 @@ echo <span class="Constant">u'''</span>
 <span class="Constant">  three \'''</span>
 <span class="Constant">  '''</span> | cat
 
-<span class="Statement">var</span> x = <span class="Constant">u'''</span>
+<span class="Statement">var</span><span class="yshExpr"> x = </span><span class="Constant">u'''</span>
 <span class="Constant">  j8 \'''</span>
 <span class="Constant">  one '</span>
 <span class="Constant">  two ''</span>
@@ -226,7 +226,7 @@ echo <span class="Constant">u'''</span>
 <span class="Comment"># Expression Work Fine, Without Color</span>
 <span class="Comment">#</span>
 
-<span class="Statement">var</span> mydict = {<span class="yshExpr">hi: 42</span>}
+<span class="Statement">var</span><span class="yshExpr"> mydict = </span>{<span class="yshExpr">hi: 42</span>}
 
 echo <span class="sigilPair">$[</span><span class="yshExpr">42 + mydict</span>[<span class="Constant">'hi'</span>]<span class="sigilPair">]</span>
 echo <span class="Constant">&quot;sum = </span><span class="sigilPair">$[</span><span class="yshExpr">42 + mydict</span>[<span class="Constant">'hi'</span>]<span class="sigilPair">]</span><span class="Constant">&quot;</span>
@@ -241,7 +241,7 @@ echo  <span class="Constant">&quot;</span><span class="sigilPair">$[</span><span
 echo <span class="Constant">&quot;hi </span><span class="sigilPair">$[</span><span class="Constant">&quot;inner&quot;</span><span class="sigilPair">]</span><span class="Constant">&quot;</span>
 
 
-<span class="Statement">var</span> ch = <span class="Constant">'i'</span>
+<span class="Statement">var</span><span class="yshExpr"> ch = </span><span class="Constant">'i'</span>
 echo  <span class="sigilPair">$[</span><span class="yshExpr">42 + mydict</span>[<span class="Constant">&quot;h</span><span class="sigilPair">$[</span><span class="yshExpr">ch</span><span class="sigilPair">]</span><span class="Constant">&quot;</span>]<span class="sigilPair">]</span>
 echo <span class="Constant">&quot;</span><span class="sigilPair">$[</span><span class="yshExpr">42 + mydict</span>[<span class="Constant">&quot;h</span><span class="sigilPair">$[</span><span class="yshExpr">ch</span><span class="sigilPair">]</span><span class="Constant">&quot;</span>]<span class="sigilPair">]</span><span class="Constant">&quot;</span>
 
@@ -249,17 +249,17 @@ echo <span class="Constant">&quot;</span><span class="sigilPair">$[</span><span 
 <span class="Comment"># Interpolation</span>
 <span class="Comment">#</span>
 
-<span class="Statement">var</span> base_dir = <span class="Constant">'/bin'</span>
-<span class="Statement">var</span> file = <span class="Constant">'zz'</span>
+<span class="Statement">var</span><span class="yshExpr"> base_dir = </span><span class="Constant">'/bin'</span>
+<span class="Statement">var</span><span class="yshExpr"> file = </span><span class="Constant">'zz'</span>
 
 echo $base_dir/file /tmp/$file-suffix
 
 <span class="Comment"># Inside double quotes - require modes, Vim regions</span>
 echo <span class="Constant">&quot;$base_dir/file /tmp/$file-suffix&quot;</span>
 
-<span class="Statement">var</span> name42 = <span class="yshExpr">x</span>
-<span class="Statement">var</span> name42x = <span class="yshExpr">x</span>
-<span class="Statement">var</span> _x = <span class="yshExpr">x</span>
+<span class="Statement">var</span><span class="yshExpr"> name42 = x</span>
+<span class="Statement">var</span><span class="yshExpr"> name42x = x</span>
+<span class="Statement">var</span><span class="yshExpr"> _x = x</span>
 
 echo $name42 $name42x
 echo ${name42} ${name42x}
@@ -267,7 +267,7 @@ echo $_x ${_x}
 
 echo foo@example.com  foo@example <span class="Comment"> # should not be highlighted as a splice</span>
 
-<span class="Statement">var</span> my_array = <span class="sigilPair">:|</span> echo b c <span class="sigilPair">|</span>
+<span class="Statement">var</span><span class="yshExpr"> my_array = </span><span class="sigilPair">:|</span> echo b c <span class="sigilPair">|</span>
 echo x @my_array
 <span class="Statement">setvar</span> myarray = <span class="sigilPair">:|</span> a b c @my_array <span class="sigilPair">|</span>
 

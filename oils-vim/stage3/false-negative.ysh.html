@@ -26,15 +26,14 @@ body { font-family: monospace; color: #000000; background-color: #ffffff; }
 echo yes<span class="Comment"> # comment</span>
 
 <span class="Comment"># should be highlighted, but isn't</span>
-
 echo yes;#comment
 
 
-<span class="Statement">var</span> s=<span class="Constant">'s'</span>
+<span class="Statement">var</span><span class="yshExpr"> s=</span><span class="Constant">'s'</span>
 
-<span class="Comment"># spaces are required</span>
-<span class="Statement">var</span> i =len(s)
-<span class="Statement">var</span> i= len(s)
+<span class="Comment"># fixed</span>
+<span class="Statement">var</span><span class="yshExpr"> i =len</span>(<span class="yshExpr">s</span>)
+<span class="Statement">var</span><span class="yshExpr"> i= len</span>(<span class="yshExpr">s</span>)
 
 <span class="Statement">call</span><span class="yshExpr"> len</span>(<span class="yshExpr">s</span>)
 

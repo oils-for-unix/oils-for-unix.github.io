@@ -15,6 +15,7 @@ body { font-family: monospace; color: #000000; background-color: #ffffff; }
 * { font-size: 1em; }
 .Comment { color: #0000c0; }
 .sigilPair { color: #5f00af; }
+.yshExpr { color: #0000d7; }
 .yshVarSub { color: #87005f; }
 .Statement { color: #af5f00; }
 -->
@@ -24,7 +25,7 @@ body { font-family: monospace; color: #000000; background-color: #ffffff; }
 <pre id='vimCodeElement'>
 echo foo@example.com  foo@example <span class="Comment"> # should not be highlighted as a splice</span>
 
-<span class="Statement">var</span> my_array = <span class="sigilPair">:|</span> a b c <span class="sigilPair">|</span>
+<span class="Statement">var</span><span class="yshExpr"> my_array = </span><span class="sigilPair">:|</span> a b c <span class="sigilPair">|</span>
 echo x<span class="yshVarSub"> @my_array</span>
 <span class="Statement">setvar</span> myarray = <span class="sigilPair">:|</span> a b c<span class="yshVarSub"> @my_array</span> <span class="sigilPair">|</span>
 </pre>

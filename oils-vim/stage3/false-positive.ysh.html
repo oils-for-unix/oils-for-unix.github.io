@@ -15,8 +15,8 @@ body { font-family: monospace; color: #000000; background-color: #ffffff; }
 * { font-size: 1em; }
 .Comment { color: #0000c0; }
 .funcName { color: #87005f; }
-.yshExpr { color: #0000d7; }
 .procName { color: #5f00af; }
+.yshExpr { color: #0000d7; }
 .yshVarSub { color: #87005f; }
 .Statement { color: #af5f00; }
 -->
@@ -30,15 +30,15 @@ body { font-family: monospace; color: #000000; background-color: #ffffff; }
 
 <span class="Comment"># Or the syntax highlighter can match beginning of line</span>
 
-<span class="Statement">var</span> <span class="Statement">const</span> = <span class="yshExpr">42</span>
-<span class="Statement">setvar</span> <span class="Statement">const</span> = <span class="yshExpr">const + 1</span>
+<span class="Statement">var</span><span class="yshExpr"> const = 42</span>
+<span class="Statement">setvar</span> const = <span class="yshExpr">const + 1</span>
 echo <span class="yshVarSub">$const</span>
 
-<span class="Statement">var</span> <span class="Statement">setvar</span> = <span class="yshExpr">42</span>
+<span class="Statement">var</span><span class="yshExpr"> setvar = 42</span>
 <span class="Statement">setvar</span> <span class="Statement">setvar</span> = <span class="yshExpr">setvar + 1</span>
 echo <span class="yshVarSub">$setvar</span>
 
-<span class="Statement">var</span> call  = <span class="yshExpr">42</span>
+<span class="Statement">var</span><span class="yshExpr"> call  = 42</span>
 <span class="Statement">setvar</span> call = <span class="yshExpr">call + 1</span>
 echo <span class="yshVarSub">$call</span>
 
@@ -50,22 +50,22 @@ echo calling <span class="Comment"> # should not match</span>
 
 echo hi;<span class="Statement">call</span><span class="yshExpr"> 42</span>
 echo hi; <span class="Statement">call</span><span class="yshExpr"> 42</span>
-echo hi;<span class="Statement">var</span> x =42
-echo hi;  <span class="Statement">var</span> x =42
+echo hi;<span class="Statement">var</span><span class="yshExpr"> x =42</span>
+echo hi;  <span class="Statement">var</span><span class="yshExpr"> x =42</span>
 echo
 
 <span class="Comment"># hard one</span>
 echo pipeline | <span class="Statement">proc</span> <span class="procName">p</span> { echo pipeline }; p | cat
 
 <span class="Comment">## &amp;&amp; ||</span>
-echo hi &amp;&amp; <span class="Statement">var</span> x = <span class="yshExpr">42</span>
+echo hi &amp;&amp; <span class="Statement">var</span><span class="yshExpr"> x = 42</span>
 echo hi &amp;&amp; <span class="Statement">call</span><span class="yshExpr"> 42</span>
 
-false || <span class="Statement">var</span> x = <span class="yshExpr">42</span>
+false || <span class="Statement">var</span><span class="yshExpr"> x = 42</span>
 false || <span class="Statement">call</span><span class="yshExpr"> </span>(<span class="yshExpr">42</span>)
 
 <span class="Comment"># Odd but valid?</span>
-true | <span class="Statement">var</span> x = <span class="yshExpr">42</span>
+true | <span class="Statement">var</span><span class="yshExpr"> x = 42</span>
 true | <span class="Statement">call</span><span class="yshExpr"> </span>(<span class="yshExpr">42</span>)
 
 <span class="Comment"># first word can come after:</span>
@@ -85,7 +85,7 @@ true | <span class="Statement">call</span><span class="yshExpr"> </span>(<span c
 p <span class="Statement">proc</span> <span class="procName">a</span> b c (<span class="yshExpr">42</span>)
 p <span class="Statement">func</span> <span class="funcName">x</span> y z (<span class="yshExpr">42</span>)
 
-p <span class="Statement">var</span> x = (<span class="yshExpr">42</span>)
+p var x = (<span class="yshExpr">42</span>)
 p <span class="Statement">setvar</span> x = (<span class="yshExpr">42</span>)
 p <span class="Statement">setglobal</span> a[i] = (<span class="yshExpr">42</span>)
 

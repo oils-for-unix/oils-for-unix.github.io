@@ -14,18 +14,18 @@ pre { white-space: pre-wrap; font-family: monospace; color: #000000; background-
 body { font-family: monospace; color: #000000; background-color: #ffffff; }
 * { font-size: 1em; }
 .Comment { color: #0000c0; }
-.funcName { color: #87005f; }
-.Constant { color: #c00000; }
-.yshExpr { color: #0000d7; }
-.procName { color: #5f00af; }
 .sigilPair { color: #5f00af; }
+.Constant { color: #c00000; }
+.funcName { color: #87005f; }
+.procName { color: #5f00af; }
+.yshExpr { color: #0000d7; }
 .Statement { color: #af5f00; }
 -->
 </style>
 </head>
 <body>
 <pre id='vimCodeElement'>
-<span class="Statement">var</span> x = <span class="yshExpr">42</span> <span class="Comment"> # integer</span>
+<span class="Statement">var</span><span class="yshExpr"> x = 42</span> <span class="Comment"> # integer</span>
 
 <span class="Statement">func</span> <span class="funcName">f</span>(x; offset=0) { <span class="Statement">return</span> (<span class="yshExpr">x</span>) }
 
@@ -34,19 +34,19 @@ body { font-family: monospace; color: #000000; background-color: #ffffff; }
 <span class="Statement">proc</span> <span class="procName">my-proc</span>(x, y; d=<span class="sigilPair">$(</span>echo hi<span class="sigilPair">)</span>) { echo hi }
 <span class="Statement">proc</span> <span class="procName">my-proc</span>(x, y; d=<span class="sigilPair">$(</span>echo 2<span class="sigilPair">)</span>) { echo hi }
 
-<span class="Statement">var</span> y = <span class="yshExpr">f</span>(<span class="yshExpr">42</span>) <span class="Comment"> # function call</span>
+<span class="Statement">var</span><span class="yshExpr"> y = f</span>(<span class="yshExpr">42</span>) <span class="Comment"> # function call</span>
 
-<span class="Statement">var</span> z = <span class="yshExpr">f</span>(<span class="yshExpr">42; offset=5</span>) <span class="Comment"> # semi-colon doesn't end the expression</span>
+<span class="Statement">var</span><span class="yshExpr"> z = f</span>(<span class="yshExpr">42; offset=5</span>) <span class="Comment"> # semi-colon doesn't end the expression</span>
 
 <span class="Comment"># comment afterward</span>
-<span class="Statement">var</span> r2 = <span class="Constant">r'C:\Program # Files\'</span><span class="Comment"> # r'' prefix is allowed</span>
+<span class="Statement">var</span><span class="yshExpr"> r2 = </span><span class="Constant">r'C:\Program # Files\'</span><span class="Comment"> # r'' prefix is allowed</span>
 
-<span class="Statement">var</span> a = [<span class="yshExpr">0, 1, 2</span>]
+<span class="Statement">var</span><span class="yshExpr"> a = </span>[<span class="yshExpr">0, 1, 2</span>]
 
 <span class="Comment"># nested</span>
-<span class="Statement">var</span> b = [<span class="yshExpr">a</span>[<span class="yshExpr">2</span>]<span class="yshExpr">, a</span>[<span class="yshExpr">1</span>]<span class="yshExpr">, a</span>[<span class="yshExpr">0</span>]<span class="yshExpr">, f</span>(<span class="yshExpr">1</span>)]
+<span class="Statement">var</span><span class="yshExpr"> b = </span>[<span class="yshExpr">a</span>[<span class="yshExpr">2</span>]<span class="yshExpr">, a</span>[<span class="yshExpr">1</span>]<span class="yshExpr">, a</span>[<span class="yshExpr">0</span>]<span class="yshExpr">, f</span>(<span class="yshExpr">1</span>)]
 
-<span class="Statement">var</span> c = (<span class="yshExpr">f</span>(<span class="yshExpr">2</span>)<span class="yshExpr">, f</span>(<span class="yshExpr">1</span>)<span class="yshExpr">, f</span>(<span class="yshExpr">0</span>)<span class="yshExpr">, a</span>[<span class="yshExpr">0</span>]<span class="yshExpr">, </span>{})
+<span class="Statement">var</span><span class="yshExpr"> c = </span>(<span class="yshExpr">f</span>(<span class="yshExpr">2</span>)<span class="yshExpr">, f</span>(<span class="yshExpr">1</span>)<span class="yshExpr">, f</span>(<span class="yshExpr">0</span>)<span class="yshExpr">, a</span>[<span class="yshExpr">0</span>]<span class="yshExpr">, </span>{})
 
 <span class="Comment"># bare assignment</span>
 hay define Package
@@ -106,7 +106,7 @@ echo <span class="Constant">\(</span> hi <span class="Constant">\)</span> <span 
 <span class="Constant">&quot; - Here docs?  They are hard, could leave them out of YSH</span>
 <span class="Constant">'''</span>
 
-<span class="Statement">var</span> foods = <span class="sigilPair">:|</span>
+<span class="Statement">var</span><span class="yshExpr"> foods = </span><span class="sigilPair">:|</span>
   pea nut
  <span class="Comment"> # comment</span>
   other
@@ -119,8 +119,8 @@ echo <span class="Constant">\(</span> hi <span class="Constant">\)</span> <span 
 
 <span class="Comment"># Command mode -&gt; Expression</span>
 
-    <span class="Statement">var</span> y = <span class="yshExpr">f</span>(<span class="yshExpr">42</span>)
-    <span class="Statement">var</span> y = <span class="yshExpr">f</span>(<span class="Constant">'str'</span><span class="yshExpr"> ++ </span><span class="Constant">&quot;hi $x&quot;</span>)
+    <span class="Statement">var</span><span class="yshExpr"> y = f</span>(<span class="yshExpr">42</span>)
+    <span class="Statement">var</span><span class="yshExpr"> y = f</span>(<span class="Constant">'str'</span><span class="yshExpr"> ++ </span><span class="Constant">&quot;hi $x&quot;</span>)
 
     = <span class="yshExpr"> f</span>(<span class="yshExpr">42</span>)
     <span class="Statement">call</span><span class="yshExpr">  f</span>(<span class="yshExpr">42</span>)
@@ -184,13 +184,13 @@ echo <span class="Constant">\(</span> hi <span class="Constant">\)</span> <span 
     = <span class="sigilPair">^(</span>echo 5
         echo <span class="Constant">&quot;hi $x&quot;</span> 6<span class="sigilPair">)</span>
 
-    <span class="Statement">var</span> y = (<span class="yshExpr">42,</span>
+    <span class="Statement">var</span><span class="yshExpr"> y = </span>(<span class="yshExpr">42,</span>
 <span class="yshExpr">              43,</span>
 <span class="yshExpr">              f</span>(<span class="yshExpr">5</span>))
 
    <span class="Comment"> # hard cases with ;</span>
-    <span class="Statement">var</span> z = <span class="yshExpr">f</span>(<span class="yshExpr">1</span>); echo hi
-    <span class="Statement">var</span> z = <span class="yshExpr">g</span>(<span class="yshExpr">1, 2,</span>
+    <span class="Statement">var</span><span class="yshExpr"> z = f</span>(<span class="yshExpr">1</span>); echo hi
+    <span class="Statement">var</span><span class="yshExpr"> z = g</span>(<span class="yshExpr">1, 2,</span>
 <span class="yshExpr">              3</span>); echo hi
 
     <span class="Statement">setvar</span> a[0 + 0] = <span class="yshExpr">42</span>
@@ -206,12 +206,12 @@ echo <span class="Constant">\(</span> hi <span class="Constant">\)</span> <span 
     <span class="Statement">call</span><span class="yshExpr"> g</span>(<span class="yshExpr">3, 4, 5</span>); echo hi
     <span class="Statement">call</span><span class="yshExpr"> g</span>(<span class="yshExpr">3, 4, 5</span>) <span class="Comment"> # comment</span>
 
-    <span class="Statement">var</span> d = {
+    <span class="Statement">var</span><span class="yshExpr"> d = </span>{
 <span class="yshExpr">      k: 1,</span>
 <span class="yshExpr">      k: 2,</span>
 <span class="yshExpr">    </span>}; echo next
 
-    <span class="Statement">var</span> d = <span class="yshExpr">len</span>({
+    <span class="Statement">var</span><span class="yshExpr"> d = len</span>({
 <span class="yshExpr">      k1: </span><span class="Constant">'value'</span><span class="yshExpr">,</span>
 <span class="yshExpr">      k2: g</span>(<span class="yshExpr">5,</span>
 <span class="yshExpr">            6, 7</span>)<span class="yshExpr">,</span>
@@ -220,7 +220,7 @@ echo <span class="Constant">\(</span> hi <span class="Constant">\)</span> <span 
 <span class="yshExpr">      </span>]<span class="yshExpr">,</span>
 <span class="yshExpr">    </span>})<span class="yshExpr"> + 42</span>
 
-    <span class="Statement">var</span> mylist = [
+    <span class="Statement">var</span><span class="yshExpr"> mylist = </span>[
 <span class="yshExpr">      1,</span>
 <span class="yshExpr">      2,</span>
 <span class="yshExpr">      f</span>(<span class="yshExpr">3</span>)<span class="yshExpr">,</span>
