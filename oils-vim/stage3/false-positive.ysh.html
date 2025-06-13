@@ -73,14 +73,13 @@ true | <span class="Statement">call</span><span class="yshExpr"> </span>(<span c
 <span class="Comment"># &amp;&amp; ||</span>
 
 <span class="Comment">#</span>
-<span class="Comment"># Bugs</span>
+<span class="Comment"># Bugs fixed</span>
 <span class="Comment">#</span>
 
 <span class="Statement">proc</span> <span class="procName">p</span> (...args; x) {
   json write (<span class="yshExpr">args</span>)
 }
 
-<span class="Comment"># TODO: Fix all of these</span>
 p proc a b c (<span class="yshExpr">42</span>)
 p func x y z (<span class="yshExpr">42</span>)
 
@@ -89,6 +88,8 @@ p setvar x = (<span class="yshExpr">42</span>)
 p setglobal a[i] = (<span class="yshExpr">42</span>)
 
 p call (<span class="yshExpr">42</span>)
+
+echo notbare = 42
 </pre>
 </body>
 </html>

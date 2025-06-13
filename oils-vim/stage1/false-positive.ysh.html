@@ -69,14 +69,13 @@ true | call (42)
 <span class="Comment"># &amp;&amp; ||</span>
 
 <span class="Comment">#</span>
-<span class="Comment"># Bugs</span>
+<span class="Comment"># Bugs fixed</span>
 <span class="Comment">#</span>
 
 proc p (...args; x) {
   json write (args)
 }
 
-<span class="Comment"># TODO: Fix all of these</span>
 p proc a b c (42)
 p func x y z (42)
 
@@ -85,6 +84,8 @@ p setvar x = (42)
 p setglobal a[i] = (42)
 
 p call (42)
+
+echo notbare = 42
 </pre>
 </body>
 </html>
