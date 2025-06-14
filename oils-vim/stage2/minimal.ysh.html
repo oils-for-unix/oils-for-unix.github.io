@@ -102,9 +102,11 @@ echo <span class="Constant">r'C:\Program Files\'</span> <span class="Comment"> #
 
 <span class="Comment"># corner cases for r''</span>
 echo ls --foo=<span class="Constant">'bar'</span>
-echo ls --foo=<span class="Constant">r'bar'</span>
-echo ls bar<span class="Constant">'bar'</span>
-echo ls -<span class="Constant">r'bar'</span>
+
+<span class="Comment"># disallowed</span>
+<span class="Comment">#echo ls --foo=r'bar'</span>
+<span class="Comment">#echo ls bar'bar'</span>
+<span class="Comment">#echo ls -r'bar' </span>
 
 <span class="Comment"># beginning of line</span>
 <span class="Constant">'echo'</span>
