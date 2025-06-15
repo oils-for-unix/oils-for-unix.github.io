@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>zsh-idioms: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for zsh-idioms.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>3</td><td>2</td><td>2</td><td>2</td><td>3</td><td>2</td><td>3</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="zsh-idioms.test.html#L3">git-completion snippet</a></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="zsh-idioms.test.html#L16">asdf snippet</a></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="zsh-idioms.test.html#L27">zsh var sub is rejected at runtime</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>17 passed, 0 OK, 0 not implemented, 1 BUG, 3 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="zsh-idioms.test.html#L27">zsh var sub is rejected at runtime</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: ${(m)foo}: bad substitution
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="zsh-idioms.test.html#L27">zsh var sub is rejected at runtime</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=1\nstatus=1\nstatus=1\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: ${(m)foo}: bad substitution
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="zsh-idioms.test.html#L27">zsh var sub is rejected at runtime</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=1\nstatus=1\nstatus=1\n', got 'status=1\n${(m)foo}\nstatus=0\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+${(m)foo}
+status=0
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: : bad substitution
+main: line 7: sh: : bad substitution
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="zsh-idioms.test.html#L27">zsh var sub is rejected at runtime</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=1\nstatus=1\nstatus=1\n', got 'z ${(m)foo} z\nstatus=0\n${(m)foo}\nstatus=0\n${(m)foo}\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>z ${(m)foo} z
+status=0
+${(m)foo}
+status=0
+${(m)foo}
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

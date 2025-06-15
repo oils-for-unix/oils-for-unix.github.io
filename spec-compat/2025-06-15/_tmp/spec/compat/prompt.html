@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>prompt: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for prompt.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>31</td><td>6</td><td>0</td><td>0</td><td>0</td><td>19</td><td>25</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>27</td><td>33</td><td>33</td><td>33</td><td>13</td><td>8</td><td></td></tr>
+<tr><td class="timeout">TIME</td> <td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>33</td><td>33</td><td>33</td><td>33</td><td>33</td><td>33</td><td>33</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L4">sh -i</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-0-bash">details</a></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"><a href="#details-0-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L15">\[\] are non-printing</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L22">literal escapes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L27">special case for $</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L48">PS1 evaluation order</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L57">PS1 evaluation order 2</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L69">\1004</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L76">\001 octal literals are supported</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L83">\555 is beyond max octal byte of \377 and wrapped to m</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L90">\x55 hex literals not supported</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L97">Single backslash</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L104">Escaped backslash</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-ksh">details</a></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L111">\0001 octal literals are not supported</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L118">\u0001 unicode literals not supported</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"><a href="#details-13-ksh">details</a></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L127">constant string</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L134">hostname</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-mksh">details</a></td><td class="details-row"><a href="#details-15-ksh">details</a></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L150">username</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-mksh">details</a></td><td class="details-row"><a href="#details-16-ksh">details</a></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"><a href="#details-16-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L159">current working dir</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-mksh">details</a></td><td class="details-row"><a href="#details-17-ksh">details</a></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"><a href="#details-17-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L167">\W is basename of working dir</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-mksh">details</a></td><td class="details-row"><a href="#details-18-ksh">details</a></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="prompt.test.html#L175">\t for 24h time (HH:MM:SS)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-mksh">details</a></td><td class="details-row"><a href="#details-19-ksh">details</a></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"><a href="#details-19-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-19-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="prompt.test.html#L184">\T for 12h time (HH:MM:SS)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-mksh">details</a></td><td class="details-row"><a href="#details-20-ksh">details</a></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"><a href="#details-20-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-20-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="prompt.test.html#L193">\@ for 12h time (HH:MM AM/PM)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-mksh">details</a></td><td class="details-row"><a href="#details-21-ksh">details</a></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-21-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L202">\A for 24h time (HH:MM)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-mksh">details</a></td><td class="details-row"><a href="#details-22-ksh">details</a></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"><a href="#details-22-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="prompt.test.html#L210">\d for date</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-mksh">details</a></td><td class="details-row"><a href="#details-23-ksh">details</a></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"><a href="#details-23-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-23-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L219">\D{%H:%M} for strftime</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-mksh">details</a></td><td class="details-row"><a href="#details-24-ksh">details</a></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"><a href="#details-24-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L233">\D{} for locale specific strftime</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-mksh">details</a></td><td class="details-row"><a href="#details-25-ksh">details</a></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"><a href="#details-25-sush">details</a></td><td class="details-row"><a href="#details-25-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L245">\s for shell, \v for major.minor version, and \V for full version</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-mksh">details</a></td><td class="details-row"><a href="#details-26-ksh">details</a></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"><a href="#details-26-sush">details</a></td><td class="details-row"><a href="#details-26-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="prompt.test.html#L265">\j for number of jobs</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-mksh">details</a></td><td class="details-row"><a href="#details-27-ksh">details</a></td><td class="details-row"><a href="#details-27-toysh">details</a></td><td class="details-row"><a href="#details-27-sush">details</a></td><td class="details-row"><a href="#details-27-brush">details</a></td><td class="details-row"><a href="#details-27-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="prompt.test.html#L285">\l for TTY device basename</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-mksh">details</a></td><td class="details-row"><a href="#details-28-ksh">details</a></td><td class="details-row"><a href="#details-28-toysh">details</a></td><td class="details-row"><a href="#details-28-sush">details</a></td><td class="details-row"><a href="#details-28-brush">details</a></td><td class="details-row"><a href="#details-28-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="prompt.test.html#L301">\! for history number</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-mksh">details</a></td><td class="details-row"><a href="#details-29-ksh">details</a></td><td class="details-row"><a href="#details-29-toysh">details</a></td><td class="details-row"><a href="#details-29-sush">details</a></td><td class="details-row"><a href="#details-29-brush">details</a></td><td class="details-row"><a href="#details-29-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 30</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="prompt.test.html#L315">\# for command number</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-mksh">details</a></td><td class="details-row"><a href="#details-30-ksh">details</a></td><td class="details-row"><a href="#details-30-toysh">details</a></td><td class="details-row"><a href="#details-30-sush">details</a></td><td class="details-row"><a href="#details-30-brush">details</a></td><td class="details-row"><a href="#details-30-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 31</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L325">@P with array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-ksh">details</a></td><td class="details-row"><a href="#details-31-toysh">details</a></td><td class="details-row"><a href="#details-31-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 32</td><td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="prompt.test.html#L341">default PS1</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-32-bash">details</a></td><td class="details-row"><a href="#details-32-mksh">details</a></td><td class="details-row"><a href="#details-32-ksh">details</a></td><td class="details-row"><a href="#details-32-toysh">details</a></td><td class="details-row"><a href="#details-32-sush">details</a></td><td class="details-row"><a href="#details-32-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>81 passed, 0 OK, 0 not implemented, 0 BUG, 147 failed, 3 timeouts, 0 cases skipped
+8 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="prompt.test.html#L4">sh -i</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'match=0\n', got 'match=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>match=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="prompt.test.html#L4">sh -i</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'match=0\n', got 'match=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>match=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="prompt.test.html#L4">sh -i</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'match=0\n', got 'match=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>match=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="prompt.test.html#L4">sh -i</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'match=0\n', got 'match=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>match=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-brush"></a><b>brush</b></td><td>0 <a href="prompt.test.html#L4">sh -i</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'match=0\n', got 'match=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>match=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="prompt.test.html#L15">\[\] are non-printing</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'foo$\n', got '\\[foo\\]\\$\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>\[foo\]\$
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="prompt.test.html#L15">\[\] are non-printing</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'foo$\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="prompt.test.html#L15">\[\] are non-printing</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'foo$\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="prompt.test.html#L15">\[\] are non-printing</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'foo$\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="prompt.test.html#L22">literal escapes</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected u'\x07\x1b\r\n\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="prompt.test.html#L22">literal escapes</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected u'\x07\x1b\r\n\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="prompt.test.html#L22">literal escapes</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'\x07\x1b\r\n\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="prompt.test.html#L27">special case for $</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '$\n$\n$\n\\$\n\\$\n', got '$\n\\$\n\\$\n\\\\$\n\\\\$\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>$
+\$
+\$
+\\$
+\\$
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="prompt.test.html#L27">special case for $</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '$\n$\n$\n\\$\n\\$\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="prompt.test.html#L27">special case for $</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '$\n$\n$\n\\$\n\\$\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+main: line 4: sh: PS1: @P}"
+main: line 6: sh: PS1: @P}"
+main: line 8: sh: PS1: @P}"
+main: line 10: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="prompt.test.html#L27">special case for $</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '$\n$\n$\n\\$\n\\$\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: `${PS1@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: `${PS1@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: `${PS1@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 10: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="prompt.test.html#L27">special case for $</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '$\n$\n$\n\\$\n\\$\n', got '$\n$\n\\$\n\\$\n\\\\$\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>$
+$
+\$
+\$
+\\$
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="prompt.test.html#L48">PS1 evaluation order</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '\\h\n', got '$x$y\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>$x$y
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="prompt.test.html#L48">PS1 evaluation order</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '\\h\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[4]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="prompt.test.html#L48">PS1 evaluation order</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '\\h\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 4: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="prompt.test.html#L48">PS1 evaluation order</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '\\h\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="prompt.test.html#L48">PS1 evaluation order</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '\\h\n', got '$x$y\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>$x$y
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="prompt.test.html#L57">PS1 evaluation order 2</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'status=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="prompt.test.html#L57">PS1 evaluation order 2</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=0\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[6]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="prompt.test.html#L57">PS1 evaluation order 2</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>main: line 6: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="prompt.test.html#L57">PS1 evaluation order 2</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="prompt.test.html#L57">PS1 evaluation order 2</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="prompt.test.html#L69">\1004</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '@4$\n', got '\\1004$\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>\1004$
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="prompt.test.html#L69">\1004</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '@4$\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="prompt.test.html#L69">\1004</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '@4$\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="prompt.test.html#L69">\1004</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '@4$\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="prompt.test.html#L76">\001 octal literals are supported</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '[%]\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="prompt.test.html#L76">\001 octal literals are supported</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[%]\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="prompt.test.html#L76">\001 octal literals are supported</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[%]\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-8-mksh"></a><b>mksh</b></td><td>8 <a href="prompt.test.html#L83">\555 is beyond max octal byte of \377 and wrapped to m</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'm$\n', got '\\555$\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>\555$
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-ksh"></a><b>ksh</b></td><td>8 <a href="prompt.test.html#L83">\555 is beyond max octal byte of \377 and wrapped to m</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'm$\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="prompt.test.html#L83">\555 is beyond max octal byte of \377 and wrapped to m</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'm$\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="prompt.test.html#L83">\555 is beyond max octal byte of \377 and wrapped to m</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'm$\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="prompt.test.html#L83">\555 is beyond max octal byte of \377 and wrapped to m</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'm$\n', got '\xc5\xad$\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ŭ$
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-mksh"></a><b>mksh</b></td><td>9 <a href="prompt.test.html#L90">\x55 hex literals not supported</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '[\\x55]\n', got '[U]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[U]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-ksh"></a><b>ksh</b></td><td>9 <a href="prompt.test.html#L90">\x55 hex literals not supported</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '[\\x55]\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="prompt.test.html#L90">\x55 hex literals not supported</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[\\x55]\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="prompt.test.html#L90">\x55 hex literals not supported</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[\\x55]\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="prompt.test.html#L97">Single backslash</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '\\\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="prompt.test.html#L97">Single backslash</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '\\\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="prompt.test.html#L97">Single backslash</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '\\\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-11-ksh"></a><b>ksh</b></td><td>11 <a href="prompt.test.html#L104">Escaped backslash</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '\\\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="prompt.test.html#L104">Escaped backslash</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '\\\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="prompt.test.html#L104">Escaped backslash</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '\\\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="prompt.test.html#L111">\0001 octal literals are not supported</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '[%5]\n', got '[-]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[-]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="prompt.test.html#L111">\0001 octal literals are not supported</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '[%5]\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="prompt.test.html#L111">\0001 octal literals are not supported</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[%5]\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="prompt.test.html#L111">\0001 octal literals are not supported</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[%5]\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="prompt.test.html#L118">\u0001 unicode literals not supported</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'status=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-ksh"></a><b>ksh</b></td><td>13 <a href="prompt.test.html#L118">\u0001 unicode literals not supported</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=0\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="prompt.test.html#L118">\u0001 unicode literals not supported</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>main: line 3: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="prompt.test.html#L118">\u0001 unicode literals not supported</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="prompt.test.html#L127">constant string</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '$ \n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="prompt.test.html#L127">constant string</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '$ \n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="prompt.test.html#L127">constant string</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '$ \n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-15-mksh"></a><b>mksh</b></td><td>15 <a href="prompt.test.html#L134">hostname</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'status=0\nstatus=0\n', got 'status=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-ksh"></a><b>ksh</b></td><td>15 <a href="prompt.test.html#L134">hostname</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=0\nstatus=0\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="prompt.test.html#L134">hostname</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=0\nstatus=0\n', got 'status=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+main: line 5: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="prompt.test.html#L134">hostname</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=0\nstatus=0\n', got 'status=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-16-mksh"></a><b>mksh</b></td><td>16 <a href="prompt.test.html#L150">username</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'status=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-ksh"></a><b>ksh</b></td><td>16 <a href="prompt.test.html#L150">username</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=0\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="prompt.test.html#L150">username</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>main: line 3: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-16-sush"></a><b>sush</b></td><td>16 <a href="prompt.test.html#L150">username</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-17-mksh"></a><b>mksh</b></td><td>17 <a href="prompt.test.html#L159">current working dir</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'status=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-ksh"></a><b>ksh</b></td><td>17 <a href="prompt.test.html#L159">current working dir</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=0\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="prompt.test.html#L159">current working dir</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="prompt.test.html#L159">current working dir</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-17-brush"></a><b>brush</b></td><td>17 <a href="prompt.test.html#L159">current working dir</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-mksh"></a><b>mksh</b></td><td>18 <a href="prompt.test.html#L167">\W is basename of working dir</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'status=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-ksh"></a><b>ksh</b></td><td>18 <a href="prompt.test.html#L167">\W is basename of working dir</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=0\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="prompt.test.html#L167">\W is basename of working dir</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="prompt.test.html#L167">\W is basename of working dir</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-19-mksh"></a><b>mksh</b></td><td>19 <a href="prompt.test.html#L175">\t for 24h time (HH:MM:SS)</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-ksh"></a><b>ksh</b></td><td>19 <a href="prompt.test.html#L175">\t for 24h time (HH:MM:SS)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="prompt.test.html#L175">\t for 24h time (HH:MM:SS)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-19-sush"></a><b>sush</b></td><td>19 <a href="prompt.test.html#L175">\t for 24h time (HH:MM:SS)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-19-osh"></a><b>osh</b></td><td>19 <a href="prompt.test.html#L175">\t for 24h time (HH:MM:SS)</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-mksh"></a><b>mksh</b></td><td>20 <a href="prompt.test.html#L184">\T for 12h time (HH:MM:SS)</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-ksh"></a><b>ksh</b></td><td>20 <a href="prompt.test.html#L184">\T for 12h time (HH:MM:SS)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="prompt.test.html#L184">\T for 12h time (HH:MM:SS)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-20-sush"></a><b>sush</b></td><td>20 <a href="prompt.test.html#L184">\T for 12h time (HH:MM:SS)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-20-osh"></a><b>osh</b></td><td>20 <a href="prompt.test.html#L184">\T for 12h time (HH:MM:SS)</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-mksh"></a><b>mksh</b></td><td>21 <a href="prompt.test.html#L193">\@ for 12h time (HH:MM AM/PM)</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-ksh"></a><b>ksh</b></td><td>21 <a href="prompt.test.html#L193">\@ for 12h time (HH:MM AM/PM)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="prompt.test.html#L193">\@ for 12h time (HH:MM AM/PM)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="prompt.test.html#L193">\@ for 12h time (HH:MM AM/PM)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-21-osh"></a><b>osh</b></td><td>21 <a href="prompt.test.html#L193">\@ for 12h time (HH:MM AM/PM)</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-mksh"></a><b>mksh</b></td><td>22 <a href="prompt.test.html#L202">\A for 24h time (HH:MM)</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-ksh"></a><b>ksh</b></td><td>22 <a href="prompt.test.html#L202">\A for 24h time (HH:MM)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="prompt.test.html#L202">\A for 24h time (HH:MM)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="prompt.test.html#L202">\A for 24h time (HH:MM)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-22-brush"></a><b>brush</b></td><td>22 <a href="prompt.test.html#L202">\A for 24h time (HH:MM)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-mksh"></a><b>mksh</b></td><td>23 <a href="prompt.test.html#L210">\d for date</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-ksh"></a><b>ksh</b></td><td>23 <a href="prompt.test.html#L210">\d for date</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="prompt.test.html#L210">\d for date</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-23-sush"></a><b>sush</b></td><td>23 <a href="prompt.test.html#L210">\d for date</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-23-osh"></a><b>osh</b></td><td>23 <a href="prompt.test.html#L210">\d for date</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-mksh"></a><b>mksh</b></td><td>24 <a href="prompt.test.html#L219">\D{%H:%M} for strftime</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'matched=0\nmatched=0\n', got 'matched=1\nmatched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+matched=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-ksh"></a><b>ksh</b></td><td>24 <a href="prompt.test.html#L219">\D{%H:%M} for strftime</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'matched=0\nmatched=0\n', got 'matched=1\nmatched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+matched=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+E: ksh: &lt;stdin&gt;[6]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="prompt.test.html#L219">\D{%H:%M} for strftime</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'matched=0\nmatched=0\n', got 'matched=1\nmatched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+matched=1
+</pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+main: line 6: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-24-sush"></a><b>sush</b></td><td>24 <a href="prompt.test.html#L219">\D{%H:%M} for strftime</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'matched=0\nmatched=0\n', got 'matched=1\nmatched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+matched=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-25-mksh"></a><b>mksh</b></td><td>25 <a href="prompt.test.html#L233">\D{} for locale specific strftime</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-ksh"></a><b>ksh</b></td><td>25 <a href="prompt.test.html#L233">\D{} for locale specific strftime</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="prompt.test.html#L233">\D{} for locale specific strftime</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-25-sush"></a><b>sush</b></td><td>25 <a href="prompt.test.html#L233">\D{} for locale specific strftime</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-25-brush"></a><b>brush</b></td><td>25 <a href="prompt.test.html#L233">\D{} for locale specific strftime</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-mksh"></a><b>mksh</b></td><td>26 <a href="prompt.test.html#L245">\s for shell, \v for major.minor version, and \V for full version</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'match=0\nmatch=0\nmatch=0\n', got 'match=1\nmatch=1\nmatch=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>match=1
+match=1
+match=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-ksh"></a><b>ksh</b></td><td>26 <a href="prompt.test.html#L245">\s for shell, \v for major.minor version, and \V for full version</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'match=0\nmatch=0\nmatch=0\n', got 'match=1\nmatch=1\nmatch=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>match=1
+match=1
+match=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+E: ksh: &lt;stdin&gt;[6]: ${PS1@P}: bad substitution
+E: ksh: &lt;stdin&gt;[10]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="prompt.test.html#L245">\s for shell, \v for major.minor version, and \V for full version</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'match=0\nmatch=0\nmatch=0\n', got 'match=1\nmatch=1\nmatch=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>match=1
+match=1
+match=1
+</pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+main: line 6: sh: PS1: @P}"
+main: line 10: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-26-sush"></a><b>sush</b></td><td>26 <a href="prompt.test.html#L245">\s for shell, \v for major.minor version, and \V for full version</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'match=0\nmatch=0\nmatch=0\n', got 'match=1\nmatch=1\nmatch=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>match=1
+match=1
+match=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: `${PS1@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 10: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-26-brush"></a><b>brush</b></td><td>26 <a href="prompt.test.html#L245">\s for shell, \v for major.minor version, and \V for full version</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'match=0\nmatch=0\nmatch=0\n', got 'match=1\nmatch=0\nmatch=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>match=1
+match=0
+match=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-mksh"></a><b>mksh</b></td><td>27 <a href="prompt.test.html#L265">\j for number of jobs</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'matched=0\nmatched=0\nsleep 5\nmatched=0\n', got 'matched=1\nmatched=1\nsleep 5 \nmatched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+matched=1
+sleep 5 
+matched=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-ksh"></a><b>ksh</b></td><td>27 <a href="prompt.test.html#L265">\j for number of jobs</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'matched=0\nmatched=0\nsleep 5\nmatched=0\n', got 'matched=1\nmatched=1\n\\sleep 5\nmatched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+matched=1
+\sleep 5
+matched=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: ${PS1@P}: bad substitution
+E: ksh: &lt;stdin&gt;[6]: ${PS1@P}: bad substitution
+Terminated 
+E: ksh: &lt;stdin&gt;[10]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-27-toysh"></a><b>toysh</b></td><td>27 <a href="prompt.test.html#L265">\j for number of jobs</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'matched=0\nmatched=0\nsleep 5\nmatched=0\n', got 'matched=1\nmatched=1\nmatched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+matched=1
+matched=1
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -m
+main: line 3: sh: PS1: @P}"
+main: line 6: sh: PS1: @P}"
+kill: bad pid '%%': No such process
+sh: fg: No such file or directory
+main: line 10: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-27-sush"></a><b>sush</b></td><td>27 <a href="prompt.test.html#L265">\j for number of jobs</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'matched=0\nmatched=0\nsleep 5\nmatched=0\n', got 'matched=1\nmatched=1\nmatched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+matched=1
+matched=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: `${PS1@P}': bad substitution
+3492867
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: `${PS1@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 10: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-27-osh"></a><b>osh</b></td><td>27 <a href="prompt.test.html#L265">\j for number of jobs</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'matched=0\nmatched=0\nsleep 5\nmatched=0\n', got 'matched=1\nmatched=1\nmatched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+matched=1
+matched=1
+</pre><i>stderr:</i> <br/>
+<pre>  set -m # enable job control
+      ^~
+[ stdin ]:1: 'set' got invalid flag '-m'
+kill: failed to parse argument: '%%'
+[ stdin ]:9: fg builtin I/O error: No such process
+</pre></td></tr><tr><td><a name="details-28-mksh"></a><b>mksh</b></td><td>28 <a href="prompt.test.html#L285">\l for TTY device basename</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-ksh"></a><b>ksh</b></td><td>28 <a href="prompt.test.html#L285">\l for TTY device basename</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[8]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-28-toysh"></a><b>toysh</b></td><td>28 <a href="prompt.test.html#L285">\l for TTY device basename</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>main: line 8: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-28-sush"></a><b>sush</b></td><td>28 <a href="prompt.test.html#L285">\l for TTY device basename</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-28-brush"></a><b>brush</b></td><td>28 <a href="prompt.test.html#L285">\l for TTY device basename</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'matched=0\n', got ''</span><br/>
+<span class="assertion">[brush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: not yet implemented: prompt: terminal device base name
+</pre></td></tr><tr><td><a name="details-28-osh"></a><b>osh</b></td><td>28 <a href="prompt.test.html#L285">\l for TTY device basename</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-mksh"></a><b>mksh</b></td><td>29 <a href="prompt.test.html#L301">\! for history number</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'matched=0\nmatched=0\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: set: history: bad option
+</pre></td></tr><tr><td><a name="details-29-ksh"></a><b>ksh</b></td><td>29 <a href="prompt.test.html#L301">\! for history number</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'matched=0\nmatched=0\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: set: history: unknown option
+</pre></td></tr><tr><td><a name="details-29-toysh"></a><b>toysh</b></td><td>29 <a href="prompt.test.html#L301">\! for history number</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'matched=0\nmatched=0\n', got 'matched=1\nmatched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+matched=1
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o history
+sh: history: No such file or directory
+main: line 4: sh: PS1: @P}"
+main: line 6: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-29-sush"></a><b>sush</b></td><td>29 <a href="prompt.test.html#L301">\! for history number</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'matched=0\nmatched=0\n', got 'matched=1\nmatched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+matched=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: `${PS1@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-29-brush"></a><b>brush</b></td><td>29 <a href="prompt.test.html#L301">\! for history number</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'matched=0\nmatched=0\n', got ''</span><br/>
+<span class="assertion">[brush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: not yet implemented: prompt: current history number
+</pre></td></tr><tr><td><a name="details-29-osh"></a><b>osh</b></td><td>29 <a href="prompt.test.html#L301">\! for history number</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'matched=0\nmatched=0\n', got 'matched=1\nmatched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+matched=1
+</pre><i>stderr:</i> <br/>
+<pre>  set -o history # enable history
+  ^~~
+[ stdin ]:1: 'set' got invalid option 'history'
+</pre></td></tr><tr><td><a name="details-30-mksh"></a><b>mksh</b></td><td>30 <a href="prompt.test.html#L315">\# for command number</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-ksh"></a><b>ksh</b></td><td>30 <a href="prompt.test.html#L315">\# for command number</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${PS1@P}: bad substitution
+E: ksh: &lt;stdin&gt;[3]: ${PS1@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-30-toysh"></a><b>toysh</b></td><td>30 <a href="prompt.test.html#L315">\# for command number</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: PS1: @P}"
+main: line 3: sh: PS1: @P}"
+</pre></td></tr><tr><td><a name="details-30-sush"></a><b>sush</b></td><td>30 <a href="prompt.test.html#L315">\# for command number</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${PS1@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: `${PS1@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-30-brush"></a><b>brush</b></td><td>30 <a href="prompt.test.html#L315">\# for command number</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'matched=0\n', got ''</span><br/>
+<span class="assertion">[brush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: not yet implemented: prompt: current command number
+</pre></td></tr><tr><td><a name="details-30-osh"></a><b>osh</b></td><td>30 <a href="prompt.test.html#L315">\# for command number</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'matched=0\n', got 'matched=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-ksh"></a><b>ksh</b></td><td>31 <a href="prompt.test.html#L325">@P with array</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'a b c\nstatus=0\na b c\nstatus=0\nx\nstatus=0\n'
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: dummy: ${@@P}: bad substitution
+E: dummy: ${*@P}: bad substitution
+E: dummy: ${a@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-31-toysh"></a><b>toysh</b></td><td>31 <a href="prompt.test.html#L325">@P with array</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'a b c\nstatus=0\na b c\nstatus=0\nx\nstatus=0\n'
+Got      'status=1\nstatus=1\nstatus=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>-c: line 1: sh: @: @P}
+-c: line 1: sh: *: @P}
+-c: line 1: sh: syntax error: x
+</pre></td></tr><tr><td><a name="details-31-sush"></a><b>sush</b></td><td>31 <a href="prompt.test.html#L325">@P with array</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'a b c\nstatus=0\na b c\nstatus=0\nx\nstatus=0\n'
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>dummy: line 1: `${@@P}': bad substitution
+dummy: line 1: `${*@P}': bad substitution
+dummy: line 1: `${a@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-32-mksh"></a><b>mksh</b></td><td>32 <a href="prompt.test.html#L341">default PS1</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '_\\s-\\v\\$ _\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: mksh: --: unknown option
+</pre></td></tr><tr><td><a name="details-32-ksh"></a><b>ksh</b></td><td>32 <a href="prompt.test.html#L341">default PS1</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '_\\s-\\v\\$ _\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: --: unknown option
+</pre></td></tr><tr><td><a name="details-32-toysh"></a><b>toysh</b></td><td>32 <a href="prompt.test.html#L341">default PS1</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '_\\s-\\v\\$ _\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: Unknown option 'rcfile' (see "sh --help")
+</pre></td></tr><tr><td><a name="details-32-sush"></a><b>sush</b></td><td>32 <a href="prompt.test.html#L341">default PS1</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '_\\s-\\v\\$ _\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>: line : set: --: invalid option
+</pre></td></tr><tr><td><a name="details-32-brush"></a><b>brush</b></td><td>32 <a href="prompt.test.html#L341">default PS1</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '_\\s-\\v\\$ _\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: failed to source file: --rcfile; i/o error: No such file or directory (os error 2)
+</pre></td></tr></table></body></html>

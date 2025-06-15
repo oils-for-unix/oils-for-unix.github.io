@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shell Compatibility Reports</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+  </head>
+
+  <body class="width35">
+    <p id="home-link">
+      <a href="/">Root</a> |
+      <a href="https://oils.pub/">oils.pub</a>
+    </p>
+  
+<h2>Shell Compatibility Reports</h2>
+<p>These reports are based on <a href="https://github.com/oils-for-unix/oils/wiki/Spec-Tests">spec tests written for Oils</a>.</p>
+<p>Here are some summary tables.  <strong>Click</strong> on the column headers to sort:</p>
+<ul>
+<li><a href="PASSING.html">Total Passing</a>
+<ul>
+<li>Each shell gets 1 point for each case we marked passing.</li>
+<li>Our assertions are usually based on a <strong>survey</strong> of <code>bash</code>, <code>dash</code>, <code>mksh</code>,
+<code>zsh</code>, and other shells.  Assertions from 2016-2018 may favor OSH, but
+there shouldn't be many of them.</li>
+</ul>
+</li>
+<li><a href="DELTA-bash.html">Delta bash</a>
+<ul>
+<li>Compare each shell's passing count vs. bash</li>
+</ul>
+</li>
+<li><a href="DELTA-osh.html">Delta OSH</a>
+<ul>
+<li>Compare each shell's passing count vs. OSH</li>
+</ul>
+</li>
+</ul>
+<h3>Notes and Caveats</h3>
+<ul>
+<li>Some tests may fail for innocuous reasons, e.g. printing <code>'$'</code> versus <code>\$</code>
+<ul>
+<li>Shell authors are welcome to use our test suite, and add assertions.</li>
+</ul>
+</li>
+<li>OSH has some features that bash doesn't have.
+<ul>
+<li>e.g. I removed <code>spec/strict-options</code> so shells aren't penalized for not
+having these features.</li>
+<li>But I left <code>spec/errexit-osh</code> in because I think new shells should provide
+alternatives to the <strong>bugs</strong> in POSIX:
+<a href="https://oils.pub/release/latest/doc/error-handling.html">YSH Fixes Shell's Error Handling (<code>errexit</code>)</a></li>
+</ul>
+</li>
+<li>Other ideas
+<ul>
+<li>We could add a  &quot;majority agreement&quot; metric, for a more neutral report.</li>
+<li>We could add the Smoosh test suite.  Results are published on our <a href="https://oils.pub/release/latest/quality.html">quality
+page</a>.</li>
+</ul>
+</li>
+</ul>
+<h3>More Comparisons</h3>
+<p>Possibly TODO</p>
+<ul>
+<li>Binary size</li>
+<li>Build times</li>
+<li>Lines of code?
+<ul>
+<li><a href="https://www.oilshell.org/blog/2024/09/line-counts.html">Oils has a &quot;compressed&quot; implementation</a></li>
+</ul>
+</li>
+<li>Memory safety</li>
+</ul>
+<h3>Links</h3>
+<ul>
+<li>Wiki:
+<ul>
+<li><a href="https://github.com/oils-for-unix/oils/wiki/Spec-Tests">Spec Tests</a></li>
+<li><a href="https://github.com/oils-for-unix/oils/wiki/Contributing">Contributing</a></li>
+</ul>
+</li>
+<li><a href="https://oilshell.zulipchat.com/">https://oilshell.zulipchat.com/</a></li>
+</ul>
+<h3>Features Not Yet Implemented in OSH</h3>
+<p>We know about these gaps:</p>
+<ul>
+<li><code>kill</code> builtin, <code>let</code> keyword - we do have some spec tests for them</li>
+<li><code>coproc</code> keyword</li>
+</ul>
+
+  </body>
+</html>
+

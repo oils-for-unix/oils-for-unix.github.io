@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>array: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for array.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>63</td><td>41</td><td>45</td><td>8</td><td>46</td><td>47</td><td>76</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>11</td><td>7</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>3</td><td>24</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>1</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>33</td><td>66</td><td>32</td><td>31</td><td>2</td><td></td></tr>
+<tr><td class="timeout">TIME</td> <td>0</td><td>0</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>78</td><td>78</td><td>78</td><td>78</td><td>78</td><td>78</td><td>78</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L4">nounset / set -u with empty array (bug in bash 4.3, fixed in 4.4)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L19">local array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L31">Command with with word splitting in array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L36">space before ( in array initialization</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L44">array over multiple lines</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L53">array with invalid token</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L63">array with empty string</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L68">Retrieve index</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L73">Retrieve out of bounds index</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L78">Negative index</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L84">Negative index and sparse array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L121">Negative index and sparse array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-mksh">details</a></td><td class="details-row"><a href="#details-11-ksh">details</a></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L142">Length after unset</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L157">Retrieve index that is a variable</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L163">Retrieve index that is a variable without $</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L169">Retrieve index that is a command sub</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L174">Retrieve array indices with ${!a}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="timeout">TIME</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L179">Retrieve sparse array indices with ${!a}</a></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L187">${!a[1]} is named ref in bash</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-mksh">details</a></td><td class="details-row"><a href="#details-18-ksh">details</a></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L196">${!a} on array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-mksh">details</a></td><td class="details-row"><a href="#details-19-ksh">details</a></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L209">All elements unquoted</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L214">All elements quoted</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L219">$*</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L224">"$*"</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L229">Interpolate array into array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L235">Exporting array doesn't do anything, not even first element</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"><a href="#details-25-sush">details</a></td><td class="details-row"><a href="#details-25-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L258">strict_array prevents exporting array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-26-bash">details</a></td><td class="details-row"><a href="#details-26-mksh">details</a></td><td class="details-row"><a href="#details-26-ksh">details</a></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"><a href="#details-26-sush">details</a></td><td class="details-row"><a href="#details-26-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L275">Arrays can't be used as env bindings</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-27-bash">details</a></td><td class="details-row"><a href="#details-27-mksh">details</a></td><td class="details-row"><a href="#details-27-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-27-sush">details</a></td><td class="details-row"><a href="#details-27-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L287">Associative arrays can't be used as env bindings either</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-28-bash">details</a></td><td class="details-row"><a href="#details-28-mksh">details</a></td><td class="details-row"><a href="#details-28-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-28-sush">details</a></td><td class="details-row"><a href="#details-28-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L297">Set element</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 30</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L303">Set element with var ref</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 31</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L310">Set element with array ref</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-31-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 32</td><td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L319">Set array item to array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-32-bash">details</a></td><td class="details-row"><a href="#details-32-mksh">details</a></td><td class="details-row"><a href="#details-32-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-32-sush">details</a></td><td class="details-row"><a href="#details-32-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 33</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L329">Slice of array with [@]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-33-mksh">details</a></td><td class="details-row"><a href="#details-33-ksh">details</a></td><td class="details-row"><a href="#details-33-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 34</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L337">Negative slice begin</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-34-mksh">details</a></td><td class="details-row"><a href="#details-34-ksh">details</a></td><td class="details-row"><a href="#details-34-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 35</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L347">Negative slice length</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-35-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-35-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 36</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L353">Slice with arithmetic</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-36-mksh">details</a></td><td class="details-row"><a href="#details-36-ksh">details</a></td><td class="details-row"><a href="#details-36-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 37</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L361">Number of elements</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-37-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 38</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L366">Length of an element</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-38-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 39</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L371">Iteration</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-39-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 40</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L381">glob within array yields separate elements</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-40-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 41</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L387">declare array and then append</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-41-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 42</td><td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L394">Array syntax in wrong place</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-42-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-42-toysh">details</a></td><td class="details-row"><a href="#details-42-sush">details</a></td><td class="details-row"><a href="#details-42-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 43</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L399">Single array with :-</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-43-toysh">details</a></td><td class="details-row"><a href="#details-43-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 44</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L410">Stripping a whole array unquoted</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-44-mksh">details</a></td><td class="details-row"><a href="#details-44-ksh">details</a></td><td class="details-row"><a href="#details-44-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 45</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L419">Stripping a whole array quoted</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-45-mksh">details</a></td><td class="details-row"><a href="#details-45-ksh">details</a></td><td class="details-row"><a href="#details-45-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 46</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L427">Multiple subscripts not allowed</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-46-bash">details</a></td><td class="details-row"><a href="#details-46-mksh">details</a></td><td class="details-row"><a href="#details-46-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-46-sush">details</a></td><td class="details-row"><a href="#details-46-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 47</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L436">Length op, index op, then transform op is not allowed</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-47-bash">details</a></td><td class="details-row"><a href="#details-47-mksh">details</a></td><td class="details-row"><a href="#details-47-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-47-sush">details</a></td><td class="details-row"><a href="#details-47-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 48</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L443">${mystr[@]} and ${mystr[*]} are no-ops</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-48-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 49</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L452">${mystr[@]} and ${mystr[*]} disallowed with strict_array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-49-bash">details</a></td><td class="details-row"><a href="#details-49-mksh">details</a></td><td class="details-row"><a href="#details-49-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-49-sush">details</a></td><td class="details-row"><a href="#details-49-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 50</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L472">Create a "user" array out of the argv array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-50-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 51</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L479">Tilde expansion within array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-51-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 52</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L485">Brace Expansion within Array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-52-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 53</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L490">array default</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-53-toysh">details</a></td><td class="details-row"><a href="#details-53-sush">details</a></td><td class="details-row"><a href="#details-53-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 54</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L495">Singleton Array Copy and Assign.  OSH can't index strings with ints</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-54-bash">details</a></td><td class="details-row"><a href="#details-54-mksh">details</a></td><td class="details-row"><a href="#details-54-ksh">details</a></td><td class="details-row"><a href="#details-54-toysh">details</a></td><td class="details-row"><a href="#details-54-sush">details</a></td><td class="details-row"><a href="#details-54-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 55</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L520">declare -a / local -a is empty array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-55-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 56</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="timeout">TIME</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L540">Create sparse array</a></td></tr>
+<tr><td> 57</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L554">Create sparse array implicitly</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-57-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 58</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L567">Append sparse arrays</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-58-toysh">details</a></td><td class="details-row"><a href="#details-58-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 59</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L581">Slice of sparse array with [@]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-59-mksh">details</a></td><td class="details-row"><a href="#details-59-ksh">details</a></td><td class="details-row"><a href="#details-59-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-59-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 60</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L591">Using an array itself as the index on LHS</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-60-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 61</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L602">Using an array itself as the index on RHS</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-61-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 62</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L612">a[$x$y] on LHS and RHS</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-62-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 63</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L629">Dynamic parsing of LHS a[$code]=value</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-63-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 64</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L650">Dynamic parsing of RHS ${a[$code]}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-64-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 65</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L672">Is element set?  test -v a[i]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-65-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-65-toysh">details</a></td><td class="details-row"><a href="#details-65-sush">details</a></td><td class="details-row"><a href="#details-65-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 66</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L700">[[ -v a[i] ]]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-66-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-66-toysh">details</a></td><td class="details-row"><a href="#details-66-sush">details</a></td><td class="details-row"><a href="#details-66-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 67</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="array.test.html#L721">test -v a[i] with arith expressions</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-67-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-67-toysh">details</a></td><td class="details-row"><a href="#details-67-sush">details</a></td><td class="details-row"><a href="#details-67-brush">details</a></td><td class="details-row"><a href="#details-67-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 68</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="array.test.html#L758">More arith expressions in [[ -v array[expr]] ]]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-68-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-68-toysh">details</a></td><td class="details-row"><a href="#details-68-sush">details</a></td><td class="details-row"><a href="#details-68-brush">details</a></td><td class="details-row"><a href="#details-68-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 69</td><td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L823">Regression: Assigning with out-of-range negative index</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-69-bash">details</a></td><td class="details-row"><a href="#details-69-mksh">details</a></td><td class="details-row"><a href="#details-69-ksh">details</a></td><td class="details-row"><a href="#details-69-toysh">details</a></td><td class="details-row"><a href="#details-69-sush">details</a></td><td class="details-row"><a href="#details-69-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 70</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L846">Regression: Negative index in [[ -v a[index] ]]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-70-mksh">details</a></td><td class="details-row"><a href="#details-70-ksh">details</a></td><td class="details-row"><a href="#details-70-toysh">details</a></td><td class="details-row"><a href="#details-70-sush">details</a></td><td class="details-row"><a href="#details-70-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 71</td><td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L868">Regression: Negative out-of-range index in [[ -v a[index] ]]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-71-bash">details</a></td><td class="details-row"><a href="#details-71-mksh">details</a></td><td class="details-row"><a href="#details-71-ksh">details</a></td><td class="details-row"><a href="#details-71-toysh">details</a></td><td class="details-row"><a href="#details-71-sush">details</a></td><td class="details-row"><a href="#details-71-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 72</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L888">a+=() modifies existing instance of BashArray</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-72-bash">details</a></td><td class="details-row"><a href="#details-72-mksh">details</a></td><td class="details-row"><a href="#details-72-ksh">details</a></td><td class="details-row"><a href="#details-72-toysh">details</a></td><td class="details-row"><a href="#details-72-sush">details</a></td><td class="details-row"><a href="#details-72-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 73</td><td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L906">Regression: unset a[-2]: out-of-bound negative index should cause error</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-73-bash">details</a></td><td class="details-row"><a href="#details-73-mksh">details</a></td><td class="details-row"><a href="#details-73-ksh">details</a></td><td class="details-row"><a href="#details-73-toysh">details</a></td><td class="details-row"><a href="#details-73-sush">details</a></td><td class="details-row"><a href="#details-73-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 74</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L930">Regression: Out-of-bound negative offset for ${a[@]:offset}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-74-mksh">details</a></td><td class="details-row"><a href="#details-74-ksh">details</a></td><td class="details-row"><a href="#details-74-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 75</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L954">Regression: Array length after unset</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-75-mksh">details</a></td><td class="details-row"><a href="#details-75-ksh">details</a></td><td class="details-row"><a href="#details-75-toysh">details</a></td><td class="details-row"><a href="#details-75-sush">details</a></td><td class="details-row"><a href="#details-75-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 76</td><td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L975">Regression: ${a[@]@Q} crash with `a[0]=x a[2]=y`</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-76-bash">details</a></td><td class="details-row"><a href="#details-76-mksh">details</a></td><td class="details-row"><a href="#details-76-ksh">details</a></td><td class="details-row"><a href="#details-76-toysh">details</a></td><td class="details-row"><a href="#details-76-sush">details</a></td><td class="details-row"><a href="#details-76-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 77</td><td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array.test.html#L994">Regression: silent out-of-bound negative index in ${a[-2]} and $((a[-2]))</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-77-bash">details</a></td><td class="details-row"><a href="#details-77-mksh">details</a></td><td class="details-row"><a href="#details-77-ksh">details</a></td><td class="details-row"><a href="#details-77-toysh">details</a></td><td class="details-row"><a href="#details-77-sush">details</a></td><td class="details-row"><a href="#details-77-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>326 passed, 18 OK, 27 not implemented, 7 BUG, 164 failed, 4 timeouts, 0 cases skipped
+2 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="array.test.html#L4">nounset / set -u with empty array (bug in bash 4.3, fixed in 4.4)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: empty[@]: parameter not set
+</pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="array.test.html#L4">nounset / set -u with empty array (bug in bash 4.3, fixed in 4.4)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '[]\nstatus=0\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: empty[@]: parameter not set
+</pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="array.test.html#L4">nounset / set -u with empty array (bug in bash 4.3, fixed in 4.4)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[]\nstatus=0\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>set: bad -o nounset
+main: line 2: sh: syntax error: argv.py
+</pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="array.test.html#L19">local array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="array.test.html#L19">local array</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['1']\n", got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="array.test.html#L19">local array</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['1']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="array.test.html#L31">Command with with word splitting in array</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['1 2', '3', '4']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: '1 2'
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="array.test.html#L36">space before ( in array initialization</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="array.test.html#L36">space before ( in array initialization</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="array.test.html#L36">space before ( in array initialization</a><br/><br/>
+<span class="assertion">[sush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: Unexpected token: (1
+</pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="array.test.html#L36">space before ( in array initialization</a><br/><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="array.test.html#L44">array over multiple lines</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['1', '2 3']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: function(
+</pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="array.test.html#L53">array with invalid token</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: syntax error: '&amp;' unexpected
+</pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="array.test.html#L53">array with invalid token</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: syntax error: unexpected '&amp;'
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="array.test.html#L53">array with invalid token</a><br/><br/>
+<span class="assertion">[sush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: syntax error near &amp;
+</pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="array.test.html#L53">array with invalid token</a><br/><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error near token `&amp;' (line 3 col 1)
+2 3: command not found
+[31mERROR[0m main: syntax error near token `)' (line 1 col 1)
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="array.test.html#L63">array with empty string</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: ''
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="array.test.html#L63">array with empty string</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "['']\n", got '[]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="array.test.html#L68">Retrieve index</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['2 3']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="array.test.html#L73">Retrieve out of bounds index</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-9-mksh"></a><b>mksh</b></td><td>9 <a href="array.test.html#L78">Negative index</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['', '', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-ksh"></a><b>ksh</b></td><td>9 <a href="array.test.html#L78">Negative index</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['2 3', '1', '']\n", got "['', '', '']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['', '', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="array.test.html#L78">Negative index</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['2 3', '1', '']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="array.test.html#L78">Negative index</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "['2 3', '1', '']\n", got "['', '', '']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['', '', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="array.test.html#L84">Negative index and sparse array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>0 2 3
+-1
+-2
+-3
+-4
+-5
+0 2 3 0
+0 2 3 42
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="array.test.html#L84">Negative index and sparse array</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '0 2 3\n-1 3\n-2 2\n-3\n-4 0\n-5\n0 2 30\n0 2 72\n'
+Got      '0 2 3\n-1\n-2\n-3\n-4\n-5\n0 2 3 0\n0 2 3 42\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0 2 3
+-1
+-2
+-3
+-4
+-5
+0 2 3 0
+0 2 3 42
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="array.test.html#L84">Negative index and sparse array</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '0 2 3\n-1 3\n-2 2\n-3\n-4 0\n-5\n0 2 30\n0 2 72\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 0
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="array.test.html#L84">Negative index and sparse array</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '0 2 3\n-1 3\n-2 2\n-3\n-4 0\n-5\n0 2 30\n0 2 72\n'
+Got      '0 2 3\n-1\n-2\n-3\n-4\n-5\n0 2 3\n0 2 3\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0 2 3
+-1
+-2
+-3
+-4
+-5
+0 2 3
+0 2 3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="array.test.html#L84">Negative index and sparse array</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '0 2 3\n-1 3\n-2 2\n-3\n-4 0\n-5\n0 2 30\n0 2 72\n'
+Got      '0 2 3\n-1 2\n-2\n-3 0\n-4\n-5\n00 2 3\n44 2 3\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0 2 3
+-1 2
+-2
+-3 0
+-4
+-5
+00 2 3
+44 2 3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-mksh"></a><b>mksh</b></td><td>11 <a href="array.test.html#L121">Negative index and sparse array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>0 0
+1 1
+2 2
+3 3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-ksh"></a><b>ksh</b></td><td>11 <a href="array.test.html#L121">Negative index and sparse array</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '0 0\n2 2\n3 3\n0\n', got '0 0\n1 1\n2 2\n3 3\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0 0
+1 1
+2 2
+3 3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="array.test.html#L121">Negative index and sparse array</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '0 0\n2 2\n3 3\n0\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 0
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="array.test.html#L121">Negative index and sparse array</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '0 0\n2 2\n3 3\n0\n', got '0 0\n1 1\n2 2\n3 3\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0 0
+1 1
+2 2
+3 3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="array.test.html#L121">Negative index and sparse array</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '0 0\n2 2\n3 3\n0\n', got '0\n1 1\n2 2\n3 3\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+1 1
+2 2
+3 3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="array.test.html#L142">Length after unset</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>len=4
+len=4
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="array.test.html#L142">Length after unset</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'len=3\nlen=2\n', got 'len=4\nlen=4\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=4
+len=4
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="array.test.html#L142">Length after unset</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'len=3\nlen=2\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 0
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="array.test.html#L142">Length after unset</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'len=3\nlen=2\n', got 'len=4\nlen=4\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=4
+len=4
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="array.test.html#L142">Length after unset</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'len=3\nlen=2\n', got 'len=3\nlen=3\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=3
+len=3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="array.test.html#L157">Retrieve index that is a variable</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['2 3']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="array.test.html#L163">Retrieve index that is a variable without $</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['2 3']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="array.test.html#L169">Retrieve index that is a command sub</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['2 3']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="array.test.html#L174">Retrieve array indices with ${!a}</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['0', '1']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-18-mksh"></a><b>mksh</b></td><td>18 <a href="array.test.html#L187">${!a[1]} is named ref in bash</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['a[1]']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-ksh"></a><b>ksh</b></td><td>18 <a href="array.test.html#L187">${!a[1]} is named ref in bash</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['bar']\n", got "['a[1]']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a[1]']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="array.test.html#L187">${!a[1]} is named ref in bash</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['bar']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: '1 2'
+</pre></td></tr><tr><td><a name="details-19-mksh"></a><b>mksh</b></td><td>19 <a href="array.test.html#L196">${!a} on array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['a']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-ksh"></a><b>ksh</b></td><td>19 <a href="array.test.html#L196">${!a} on array</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['']\n", got "['a']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="array.test.html#L196">${!a} on array</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="array.test.html#L209">All elements unquoted</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['1', '2', '3']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="array.test.html#L214">All elements quoted</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['1', '2 3']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="array.test.html#L219">$*</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['1', '2', '3']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="array.test.html#L224">"$*"</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['1 2 3']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="array.test.html#L229">Interpolate array into array</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['0', '1', '2 3', '4 5']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="array.test.html#L235">Exporting array doesn't do anything, not even first element</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'mystr\nNone\nNone\n', got 'mystr\n'</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>mystr
+</pre><i>stderr:</i> <br/>
+<pre>main: line 6: sh: syntax error: myarray
+</pre></td></tr><tr><td><a name="details-25-sush"></a><b>sush</b></td><td>25 <a href="array.test.html#L235">Exporting array doesn't do anything, not even first element</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'mystr\nNone\nNone\n', got 'mystr\nmystr\nmystr\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>mystr
+mystr
+mystr
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-brush"></a><b>brush</b></td><td>25 <a href="array.test.html#L235">Exporting array doesn't do anything, not even first element</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'mystr\nNone\nNone\n', got 'None\nNone\nNone\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>None
+None
+None
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-bash"></a><b>bash</b></td><td>26 <a href="array.test.html#L258">strict_array prevents exporting array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>None
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: shopt: strict_array: invalid shell option name
+</pre></td></tr><tr><td><a name="details-26-mksh"></a><b>mksh</b></td><td>26 <a href="array.test.html#L258">strict_array prevents exporting array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>None
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-26-ksh"></a><b>ksh</b></td><td>26 <a href="array.test.html#L258">strict_array prevents exporting array</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '', got 'None\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>None
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="array.test.html#L258">strict_array prevents exporting array</a><br/><br/>
+<span class="assertion">[toysh status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+main: line 4: sh: syntax error: a
+</pre></td></tr><tr><td><a name="details-26-sush"></a><b>sush</b></td><td>26 <a href="array.test.html#L258">strict_array prevents exporting array</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '', got '\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: shopt: strict_array: not supported yet
+</pre></td></tr><tr><td><a name="details-26-brush"></a><b>brush</b></td><td>26 <a href="array.test.html#L258">strict_array prevents exporting array</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '', got 'None\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>None
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_array: invalid shell option name
+</pre></td></tr><tr><td><a name="details-27-bash"></a><b>bash</b></td><td>27 <a href="array.test.html#L275">Arrays can't be used as env bindings</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a
+(b b)
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-mksh"></a><b>mksh</b></td><td>27 <a href="array.test.html#L275">Arrays can't be used as env bindings</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-27-ksh"></a><b>ksh</b></td><td>27 <a href="array.test.html#L275">Arrays can't be used as env bindings</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-27-sush"></a><b>sush</b></td><td>27 <a href="array.test.html#L275">Arrays can't be used as env bindings</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got 'a\n\n'</span><br/>
+<span class="assertion">[sush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-brush"></a><b>brush</b></td><td>27 <a href="array.test.html#L275">Arrays can't be used as env bindings</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'a\nb\n'</span><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-bash"></a><b>bash</b></td><td>28 <a href="array.test.html#L287">Associative arrays can't be used as env bindings either</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a
+([k]=v)
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-mksh"></a><b>mksh</b></td><td>28 <a href="array.test.html#L287">Associative arrays can't be used as env bindings either</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-28-ksh"></a><b>ksh</b></td><td>28 <a href="array.test.html#L287">Associative arrays can't be used as env bindings either</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-28-sush"></a><b>sush</b></td><td>28 <a href="array.test.html#L287">Associative arrays can't be used as env bindings either</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got 'a\n\n'</span><br/>
+<span class="assertion">[sush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-brush"></a><b>brush</b></td><td>28 <a href="array.test.html#L287">Associative arrays can't be used as env bindings either</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'a\nv\n'</span><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+v
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-toysh"></a><b>toysh</b></td><td>29 <a href="array.test.html#L297">Set element</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['9', '2 3']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-30-toysh"></a><b>toysh</b></td><td>30 <a href="array.test.html#L303">Set element with var ref</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['9', '2 3']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-31-toysh"></a><b>toysh</b></td><td>31 <a href="array.test.html#L310">Set element with array ref</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['1', '9']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-31-brush"></a><b>brush</b></td><td>31 <a href="array.test.html#L310">Set element with array ref</a><br/><br/>
+<span class="assertion">[brush stdout] Expected "['1', '9']\n", got "['1', '2 3']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1', '2 3']
+</pre><i>stderr:</i> <br/>
+<pre>a[1]=9: command not found
+</pre></td></tr><tr><td><a name="details-32-bash"></a><b>bash</b></td><td>32 <a href="array.test.html#L319">Set array item to array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 2: a[0]: cannot assign list to array member
+</pre></td></tr><tr><td><a name="details-32-mksh"></a><b>mksh</b></td><td>32 <a href="array.test.html#L319">Set array item to array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: set: a[0]: is not an identifier
+</pre></td></tr><tr><td><a name="details-32-ksh"></a><b>ksh</b></td><td>32 <a href="array.test.html#L319">Set array item to array</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: set: a[0]: not an identifier
+</pre></td></tr><tr><td><a name="details-32-sush"></a><b>sush</b></td><td>32 <a href="array.test.html#L319">Set array item to array</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got 'status=1\n'</span><br/>
+<span class="assertion">[sush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: a[0]: cannot assign list to array member
+</pre></td></tr><tr><td><a name="details-32-brush"></a><b>brush</b></td><td>32 <a href="array.test.html#L319">Set array item to array</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'status=1\n'</span><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: not yet implemented: replacing an array item with an array
+</pre></td></tr><tr><td><a name="details-33-mksh"></a><b>mksh</b></td><td>33 <a href="array.test.html#L329">Slice of array with [@]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: ${a[@]: 1:2}: bad substitution
+</pre></td></tr><tr><td><a name="details-33-ksh"></a><b>ksh</b></td><td>33 <a href="array.test.html#L329">Slice of array with [@]</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['2', '3']\n", got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${a[@]: 1:2}: bad substitution
+</pre></td></tr><tr><td><a name="details-33-toysh"></a><b>toysh</b></td><td>33 <a href="array.test.html#L329">Slice of array with [@]</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['2', '3']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-34-mksh"></a><b>mksh</b></td><td>34 <a href="array.test.html#L337">Negative slice begin</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: ${a[@]: (-4)}: bad substitution
+</pre></td></tr><tr><td><a name="details-34-ksh"></a><b>ksh</b></td><td>34 <a href="array.test.html#L337">Negative slice begin</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['2', '3', '4', '5']\n", got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${a[@]: (-4)}: bad substitution
+</pre></td></tr><tr><td><a name="details-34-toysh"></a><b>toysh</b></td><td>34 <a href="array.test.html#L337">Negative slice begin</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['2', '3', '4', '5']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-35-toysh"></a><b>toysh</b></td><td>35 <a href="array.test.html#L347">Negative slice length</a><br/><br/>
+<span class="assertion">[toysh status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-35-brush"></a><b>brush</b></td><td>35 <a href="array.test.html#L347">Negative slice length</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got "['2', '3']\n"</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['2', '3']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-mksh"></a><b>mksh</b></td><td>36 <a href="array.test.html#L353">Slice with arithmetic</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: ${a[@]:i-4:2}: bad substitution
+</pre></td></tr><tr><td><a name="details-36-ksh"></a><b>ksh</b></td><td>36 <a href="array.test.html#L353">Slice with arithmetic</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['2', '3']\n", got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: ${a[@]: i-4:2}: bad substitution
+</pre></td></tr><tr><td><a name="details-36-toysh"></a><b>toysh</b></td><td>36 <a href="array.test.html#L353">Slice with arithmetic</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['2', '3']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-37-toysh"></a><b>toysh</b></td><td>37 <a href="array.test.html#L361">Number of elements</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '2 2\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-38-toysh"></a><b>toysh</b></td><td>38 <a href="array.test.html#L366">Length of an element</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '3\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-39-toysh"></a><b>toysh</b></td><td>39 <a href="array.test.html#L371">Iteration</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1\n2 3\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-40-toysh"></a><b>toysh</b></td><td>40 <a href="array.test.html#L381">glob within array yields separate elements</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['_tmp/y.Y', '_tmp/yy.Y']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: _tmp/*.Y
+</pre></td></tr><tr><td><a name="details-41-toysh"></a><b>toysh</b></td><td>41 <a href="array.test.html#L387">declare array and then append</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['a', 'b', 'c']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: a
+</pre></td></tr><tr><td><a name="details-42-bash"></a><b>bash</b></td><td>42 <a href="array.test.html#L394">Array syntax in wrong place</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>bash: line 1: syntax error near unexpected token `('
+bash: line 1: `ls foo=(1 2)'
+</pre></td></tr><tr><td><a name="details-42-toysh"></a><b>toysh</b></td><td>42 <a href="array.test.html#L394">Array syntax in wrong place</a><br/><br/>
+<span class="assertion">[toysh status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-42-sush"></a><b>sush</b></td><td>42 <a href="array.test.html#L394">Array syntax in wrong place</a><br/><br/>
+<span class="assertion">[sush status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: Unexpected token: (1
+</pre></td></tr><tr><td><a name="details-42-brush"></a><b>brush</b></td><td>42 <a href="array.test.html#L394">Array syntax in wrong place</a><br/><br/>
+<span class="assertion">[brush status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ls: cannot access 'foo=(1': No such file or directory
+ls: cannot access '2)': No such file or directory
+</pre></td></tr><tr><td><a name="details-43-toysh"></a><b>toysh</b></td><td>43 <a href="array.test.html#L399">Single array with :-</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['none', 'x', 'none']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: ''
+</pre></td></tr><tr><td><a name="details-43-sush"></a><b>sush</b></td><td>43 <a href="array.test.html#L399">Single array with :-</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "['none', 'x', 'none']\n", got "['none', 'x']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['none', 'x']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-44-mksh"></a><b>mksh</b></td><td>44 <a href="array.test.html#L410">Stripping a whole array unquoted</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: ${files[@]%.c}: bad substitution
+</pre></td></tr><tr><td><a name="details-44-ksh"></a><b>ksh</b></td><td>44 <a href="array.test.html#L410">Stripping a whole array unquoted</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['foo', 'sp', 'ace.h', 'bar']\n", got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${files[@]%.c}: bad substitution
+</pre></td></tr><tr><td><a name="details-44-toysh"></a><b>toysh</b></td><td>44 <a href="array.test.html#L410">Stripping a whole array unquoted</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['foo', 'sp', 'ace.h', 'bar']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 'foo.c'
+</pre></td></tr><tr><td><a name="details-45-mksh"></a><b>mksh</b></td><td>45 <a href="array.test.html#L419">Stripping a whole array quoted</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: ${files[@]%.c}: bad substitution
+</pre></td></tr><tr><td><a name="details-45-ksh"></a><b>ksh</b></td><td>45 <a href="array.test.html#L419">Stripping a whole array quoted</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['foo', 'sp ace.h', 'bar']\n", got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${files[@]%.c}: bad substitution
+</pre></td></tr><tr><td><a name="details-45-toysh"></a><b>toysh</b></td><td>45 <a href="array.test.html#L419">Stripping a whole array quoted</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['foo', 'sp ace.h', 'bar']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 'foo.c'
+</pre></td></tr><tr><td><a name="details-46-bash"></a><b>bash</b></td><td>46 <a href="array.test.html#L427">Multiple subscripts not allowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>bash: line 2: ${a[0][0]}: bad substitution
+</pre></td></tr><tr><td><a name="details-46-mksh"></a><b>mksh</b></td><td>46 <a href="array.test.html#L427">Multiple subscripts not allowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: ${a[0][0]}: bad substitution
+</pre></td></tr><tr><td><a name="details-46-ksh"></a><b>ksh</b></td><td>46 <a href="array.test.html#L427">Multiple subscripts not allowed</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${a[0][0]}: bad substitution
+</pre></td></tr><tr><td><a name="details-46-sush"></a><b>sush</b></td><td>46 <a href="array.test.html#L427">Multiple subscripts not allowed</a><br/><br/>
+<span class="assertion">[sush status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${a[0][0]}': bad substitution
+</pre></td></tr><tr><td><a name="details-46-brush"></a><b>brush</b></td><td>46 <a href="array.test.html#L427">Multiple subscripts not allowed</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got "['123', '${a[0][0]}']\n"</span><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['123', '${a[0][0]}']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-47-bash"></a><b>bash</b></td><td>47 <a href="array.test.html#L436">Length op, index op, then transform op is not allowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>bash: line 2: ${#a[0]/1/xxx}: bad substitution
+</pre></td></tr><tr><td><a name="details-47-mksh"></a><b>mksh</b></td><td>47 <a href="array.test.html#L436">Length op, index op, then transform op is not allowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: ${#a[0]/1/xxx}: bad substitution
+</pre></td></tr><tr><td><a name="details-47-ksh"></a><b>ksh</b></td><td>47 <a href="array.test.html#L436">Length op, index op, then transform op is not allowed</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${#a[0]/1/xxx}: bad substitution
+</pre></td></tr><tr><td><a name="details-47-sush"></a><b>sush</b></td><td>47 <a href="array.test.html#L436">Length op, index op, then transform op is not allowed</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got '3 3\n'</span><br/>
+<span class="assertion">[sush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>3 3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-47-brush"></a><b>brush</b></td><td>47 <a href="array.test.html#L436">Length op, index op, then transform op is not allowed</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got '3 ${#a[0]/1/xxx}\n'</span><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>3 ${#a[0]/1/xxx}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-48-toysh"></a><b>toysh</b></td><td>48 <a href="array.test.html#L443">${mystr[@]} and ${mystr[*]} are no-ops</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'abc\nabc\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: s: [@]}
+main: line 3: sh: s: [*]}
+</pre></td></tr><tr><td><a name="details-49-bash"></a><b>bash</b></td><td>49 <a href="array.test.html#L452">${mystr[@]} and ${mystr[*]} disallowed with strict_array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>abc
+status=0
+abc
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: shopt: strict_array: invalid shell option name
+bash: line 1: shopt: strict_array: invalid shell option name
+</pre></td></tr><tr><td><a name="details-49-mksh"></a><b>mksh</b></td><td>49 <a href="array.test.html#L452">${mystr[@]} and ${mystr[*]} disallowed with strict_array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>abc
+status=0
+abc
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: shopt: not found
+mksh: shopt: not found
+</pre></td></tr><tr><td><a name="details-49-ksh"></a><b>ksh</b></td><td>49 <a href="array.test.html#L452">${mystr[@]} and ${mystr[*]} disallowed with strict_array</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=1\nstatus=1\n', got 'abc\nstatus=0\nabc\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>abc
+status=0
+abc
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: shopt: inaccessible or not found
+E: ksh: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-49-sush"></a><b>sush</b></td><td>49 <a href="array.test.html#L452">${mystr[@]} and ${mystr[*]} disallowed with strict_array</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=1\nstatus=1\n', got 'abc\nstatus=0\nabc\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>abc
+status=0
+abc
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: shopt: strict_array: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: shopt: strict_array: not supported yet
+</pre></td></tr><tr><td><a name="details-49-brush"></a><b>brush</b></td><td>49 <a href="array.test.html#L452">${mystr[@]} and ${mystr[*]} disallowed with strict_array</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=1\nstatus=1\n', got 'abc\nstatus=0\nabc\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>abc
+status=0
+abc
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_array: invalid shell option name
+shopt: strict_array: invalid shell option name
+</pre></td></tr><tr><td><a name="details-50-toysh"></a><b>toysh</b></td><td>50 <a href="array.test.html#L472">Create a "user" array out of the argv array</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['x y', 'z', 'a b', 'c']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>set: bad --
+main: line 2: sh: syntax error: 'x y'
+</pre></td></tr><tr><td><a name="details-51-toysh"></a><b>toysh</b></td><td>51 <a href="array.test.html#L479">Tilde expansion within array</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '/home/bob/src /home/bob/git\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: ~/src
+</pre></td></tr><tr><td><a name="details-52-toysh"></a><b>toysh</b></td><td>52 <a href="array.test.html#L485">Brace Expansion within Array</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '-a -b c- d-\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: -{a,b}
+</pre></td></tr><tr><td><a name="details-53-toysh"></a><b>toysh</b></td><td>53 <a href="array.test.html#L490">array default</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['1 2', '3']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: '1 2'
+</pre></td></tr><tr><td><a name="details-53-sush"></a><b>sush</b></td><td>53 <a href="array.test.html#L490">array default</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "['1 2', '3']\n", got '[]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-53-brush"></a><b>brush</b></td><td>53 <a href="array.test.html#L490">array default</a><br/><br/>
+<span class="assertion">[brush stdout] Expected "['1 2', '3']\n", got "['1 2 3']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1 2 3']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-54-bash"></a><b>bash</b></td><td>54 <a href="array.test.html#L495">Singleton Array Copy and Assign.  OSH can't index strings with ints</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>4 4
+1 1
+4 4
+1 1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-54-mksh"></a><b>mksh</b></td><td>54 <a href="array.test.html#L495">Singleton Array Copy and Assign.  OSH can't index strings with ints</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>4 4
+1 1
+4 4
+1 1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-54-ksh"></a><b>ksh</b></td><td>54 <a href="array.test.html#L495">Singleton Array Copy and Assign.  OSH can't index strings with ints</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '4 4\n1 1\n', got '4 4\n1 1\n4 4\n1 1\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>4 4
+1 1
+4 4
+1 1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-54-toysh"></a><b>toysh</b></td><td>54 <a href="array.test.html#L495">Singleton Array Copy and Assign.  OSH can't index strings with ints</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '4 4\n1 1\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: '12 3'
+</pre></td></tr><tr><td><a name="details-54-sush"></a><b>sush</b></td><td>54 <a href="array.test.html#L495">Singleton Array Copy and Assign.  OSH can't index strings with ints</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '4 4\n1 1\n', got '4 4\n1 1\n4 4\n0 0\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>4 4
+1 1
+4 4
+0 0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-54-brush"></a><b>brush</b></td><td>54 <a href="array.test.html#L495">Singleton Array Copy and Assign.  OSH can't index strings with ints</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '4 4\n1 1\n', got '4 4\n1 1\n4 4\n1 1\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>4 4
+1 1
+4 4
+1 1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-55-toysh"></a><b>toysh</b></td><td>55 <a href="array.test.html#L520">declare -a / local -a is empty array</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "[]\n['x']\n[]\n['x']\n", got "['']\n"</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre>main: line 3: sh: syntax error: 'x'
+</pre></td></tr><tr><td><a name="details-57-toysh"></a><b>toysh</b></td><td>57 <a href="array.test.html#L554">Create sparse array implicitly</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "len=1\n['1']\nunset=\nlen-of-unset=0\n", got "['']\nunset=\n"</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+unset=
+</pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: bad math:  a[99]=1  @ 2
+main: line 2: sh: a: [@]}
+main: line 5: sh: a: [33]}
+</pre></td></tr><tr><td><a name="details-58-sush"></a><b>sush</b></td><td>58 <a href="array.test.html#L567">Append sparse arrays</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "['1', '2', '3']\n['1', '2', '3']\n", got "['1', '2', '3']\n['', '', '']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1', '2', '3']
+['', '', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-59-mksh"></a><b>mksh</b></td><td>59 <a href="array.test.html#L581">Slice of sparse array with [@]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[4]: ${a[@]: 15:2}: bad substitution
+</pre></td></tr><tr><td><a name="details-59-ksh"></a><b>ksh</b></td><td>59 <a href="array.test.html#L581">Slice of sparse array with [@]</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['1', '2']\n", got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[4]: ${a[@]: 15:2}: bad substitution
+</pre></td></tr><tr><td><a name="details-59-toysh"></a><b>toysh</b></td><td>59 <a href="array.test.html#L581">Slice of sparse array with [@]</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['1', '2']\n", got "['']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: bad math:  a[33]=1  @ 2
+main: line 2: sh: bad math:  a[66]=2  @ 2
+main: line 3: sh: bad math:  a[99]=2  @ 2
+</pre></td></tr><tr><td><a name="details-59-brush"></a><b>brush</b></td><td>59 <a href="array.test.html#L581">Slice of sparse array with [@]</a><br/><br/>
+<span class="assertion">[brush stdout] Expected "['1', '2']\n", got '[]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-60-toysh"></a><b>toysh</b></td><td>60 <a href="array.test.html#L591">Using an array itself as the index on LHS</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['42', '99', '42', '99', '']\n", got "['', '', '', '']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['', '', '', '']
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+sh: a[a]=42: No such file or directory
+sh: a[a]=99: No such file or directory
+</pre></td></tr><tr><td><a name="details-61-toysh"></a><b>toysh</b></td><td>61 <a href="array.test.html#L602">Using an array itself as the index on RHS</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '2\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+main: line 2: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-62-toysh"></a><b>toysh</b></td><td>62 <a href="array.test.html#L612">a[$x$y] on LHS and RHS</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'foo\n1\n', got '\n'</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>sh: a[12]=foo: No such file or directory
+main: line 7: sh: a: [@]}
+</pre></td></tr><tr><td><a name="details-63-toysh"></a><b>toysh</b></td><td>63 <a href="array.test.html#L629">Dynamic parsing of LHS a[$code]=value</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['one', 'two']\nx=1\ny=2\n", got "['']\nx=\ny=\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+x=
+y=
+</pre><i>stderr:</i> <br/>
+<pre>sh: array[x=1]=one: No such file or directory
+sh: array[y=2]=two: No such file or directory
+</pre></td></tr><tr><td><a name="details-64-toysh"></a><b>toysh</b></td><td>64 <a href="array.test.html#L650">Dynamic parsing of RHS ${a[$code]}</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'three\nthree\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: zero
+</pre></td></tr><tr><td><a name="details-65-mksh"></a><b>mksh</b></td><td>65 <a href="array.test.html#L672">Is element set?  test -v a[i]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>set=2
+empty=2
+unset=2
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: test: array[1]: unexpected operator/operand
+mksh: &lt;stdin&gt;[6]: test: array[3]: unexpected operator/operand
+mksh: &lt;stdin&gt;[9]: test: array[4]: unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-65-toysh"></a><b>toysh</b></td><td>65 <a href="array.test.html#L672">Is element set?  test -v a[i]</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'set=0\nempty=0\nunset=1\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-65-sush"></a><b>sush</b></td><td>65 <a href="array.test.html#L672">Is element set?  test -v a[i]</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'set=0\nempty=0\nunset=1\n', got 'set=2\nempty=2\nunset=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>set=2
+empty=2
+unset=2
+</pre><i>stderr:</i> <br/>
+<pre>test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+</pre></td></tr><tr><td><a name="details-65-brush"></a><b>brush</b></td><td>65 <a href="array.test.html#L672">Is element set?  test -v a[i]</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'set=0\nempty=0\nunset=1\n', got 'set=1\nempty=1\nunset=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>set=1
+empty=1
+unset=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-66-mksh"></a><b>mksh</b></td><td>66 <a href="array.test.html#L700">[[ -v a[i] ]]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: syntax error: 'array[1]' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-66-toysh"></a><b>toysh</b></td><td>66 <a href="array.test.html#L700">[[ -v a[i] ]]</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=0\nstatus=1\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-66-sush"></a><b>sush</b></td><td>66 <a href="array.test.html#L700">[[ -v a[i] ]]</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=0\nstatus=1\n', got 'status=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-66-brush"></a><b>brush</b></td><td>66 <a href="array.test.html#L700">[[ -v a[i] ]]</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=0\nstatus=1\n', got 'status=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-67-mksh"></a><b>mksh</b></td><td>67 <a href="array.test.html#L721">test -v a[i] with arith expressions</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=2
+
+dbracket
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: test: array[1+1]: unexpected operator/operand
+mksh: &lt;stdin&gt;[6]: test: array[4+1]: unexpected operator/operand
+mksh: &lt;stdin&gt;[12]: syntax error: 'array[1+1]' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-67-toysh"></a><b>toysh</b></td><td>67 <a href="array.test.html#L721">test -v a[i] with arith expressions</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nstatus=1\n\ndbracket\nstatus=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-67-sush"></a><b>sush</b></td><td>67 <a href="array.test.html#L721">test -v a[i] with arith expressions</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\nstatus=1\n\ndbracket\nstatus=0\nstatus=1\n'
+Got      'status=2\nstatus=2\n\ndbracket\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=2
+
+dbracket
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+</pre></td></tr><tr><td><a name="details-67-brush"></a><b>brush</b></td><td>67 <a href="array.test.html#L721">test -v a[i] with arith expressions</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=0\nstatus=1\n\ndbracket\nstatus=0\nstatus=1\n'
+Got      'status=1\nstatus=1\n\ndbracket\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+
+dbracket
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-67-osh"></a><b>osh</b></td><td>67 <a href="array.test.html#L721">test -v a[i] with arith expressions</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'status=0\nstatus=1\n\ndbracket\nstatus=0\nstatus=1\n'
+Got      'status=1\nstatus=1\n\ndbracket\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+
+dbracket
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-68-mksh"></a><b>mksh</b></td><td>68 <a href="array.test.html#L758">More arith expressions in [[ -v array[expr]] ]]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[6]: syntax error: 'array[zero+0]' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-68-toysh"></a><b>toysh</b></td><td>68 <a href="array.test.html#L758">More arith expressions in [[ -v array[expr]] ]]</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'zero=0\none=0\ntwo=1\n---\nzero=0\none=0\ntwo=1\n---\nzero=0\none=0\ntwo=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+main: line 2: sh: syntax error: ''
+</pre></td></tr><tr><td><a name="details-68-sush"></a><b>sush</b></td><td>68 <a href="array.test.html#L758">More arith expressions in [[ -v array[expr]] ]]</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'zero=0\none=0\ntwo=1\n---\nzero=0\none=0\ntwo=1\n---\nzero=0\none=0\ntwo=1\n'
+Got      'zero=1\none=1\ntwo=1\n---\nzero=1\none=1\ntwo=1\n---\nzero=1\none=1\ntwo=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zero=1
+one=1
+two=1
+---
+zero=1
+one=1
+two=1
+---
+zero=1
+one=1
+two=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-68-brush"></a><b>brush</b></td><td>68 <a href="array.test.html#L758">More arith expressions in [[ -v array[expr]] ]]</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'zero=0\none=0\ntwo=1\n---\nzero=0\none=0\ntwo=1\n---\nzero=0\none=0\ntwo=1\n'
+Got      'zero=1\none=1\ntwo=1\n---\nzero=1\none=1\ntwo=1\n---\nzero=1\none=1\ntwo=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zero=1
+one=1
+two=1
+---
+zero=1
+one=1
+two=1
+---
+zero=1
+one=1
+two=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-68-osh"></a><b>osh</b></td><td>68 <a href="array.test.html#L758">More arith expressions in [[ -v array[expr]] ]]</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'zero=0\none=0\ntwo=1\n---\nzero=0\none=0\ntwo=1\n---\nzero=0\none=0\ntwo=1\n'
+Got      'zero=1\none=1\ntwo=1\n---\nzero=1\none=1\ntwo=1\n---\nzero=1\none=1\ntwo=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zero=1
+one=1
+two=1
+---
+zero=1
+one=1
+two=1
+---
+zero=1
+one=1
+two=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-69-bash"></a><b>bash</b></td><td>69 <a href="array.test.html#L823">Regression: Assigning with out-of-range negative index</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>bash: line 2: a[-1]: bad array subscript
+</pre></td></tr><tr><td><a name="details-69-mksh"></a><b>mksh</b></td><td>69 <a href="array.test.html#L823">Regression: Assigning with out-of-range negative index</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-69-ksh"></a><b>ksh</b></td><td>69 <a href="array.test.html#L823">Regression: Assigning with out-of-range negative index</a><br/><br/>
+<span class="assertion">
+[ksh stderr]
+Expected '  a[-1]=1\n  ^~\n[ stdin ]:2: fatal: Index -1 is out of bounds for array of length 0\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-69-toysh"></a><b>toysh</b></td><td>69 <a href="array.test.html#L823">Regression: Assigning with out-of-range negative index</a><br/><br/>
+<span class="assertion">
+[toysh stderr]
+Expected '  a[-1]=1\n  ^~\n[ stdin ]:2: fatal: Index -1 is out of bounds for array of length 0\n'
+Got      'main: line 1: sh: syntax error: a[-1]=1\n'
+</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: a[-1]=1
+</pre></td></tr><tr><td><a name="details-69-sush"></a><b>sush</b></td><td>69 <a href="array.test.html#L823">Regression: Assigning with out-of-range negative index</a><br/><br/>
+<span class="assertion">
+[sush stderr]
+Expected '  a[-1]=1\n  ^~\n[ stdin ]:2: fatal: Index -1 is out of bounds for array of length 0\n'
+Got      ''
+</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-69-brush"></a><b>brush</b></td><td>69 <a href="array.test.html#L823">Regression: Assigning with out-of-range negative index</a><br/><br/>
+<span class="assertion">
+[brush stderr]
+Expected '  a[-1]=1\n  ^~\n[ stdin ]:2: fatal: Index -1 is out of bounds for array of length 0\n'
+Got      ''
+</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-70-mksh"></a><b>mksh</b></td><td>70 <a href="array.test.html#L846">Regression: Negative index in [[ -v a[index] ]]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[4]: syntax error: 'a[-1]' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-70-ksh"></a><b>ksh</b></td><td>70 <a href="array.test.html#L846">Regression: Negative index in [[ -v a[index] ]]</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'a has -1\na has -6\na has -11\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-70-toysh"></a><b>toysh</b></td><td>70 <a href="array.test.html#L846">Regression: Negative index in [[ -v a[index] ]]</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'a has -1\na has -6\na has -11\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: a[0]=x: No such file or directory
+sh: a[5]=y: No such file or directory
+sh: a[10]=z: No such file or directory
+[[: too many arguments
+[[: too many arguments
+[[: too many arguments
+[[: too many arguments
+[[: too many arguments
+[[: too many arguments
+</pre></td></tr><tr><td><a name="details-70-sush"></a><b>sush</b></td><td>70 <a href="array.test.html#L846">Regression: Negative index in [[ -v a[index] ]]</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'a has -1\na has -6\na has -11\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-70-brush"></a><b>brush</b></td><td>70 <a href="array.test.html#L846">Regression: Negative index in [[ -v a[index] ]]</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'a has -1\na has -6\na has -11\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-71-bash"></a><b>bash</b></td><td>71 <a href="array.test.html#L868">Regression: Negative out-of-range index in [[ -v a[index] ]]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>bash: line 2: e: bad array subscript
+</pre></td></tr><tr><td><a name="details-71-mksh"></a><b>mksh</b></td><td>71 <a href="array.test.html#L868">Regression: Negative out-of-range index in [[ -v a[index] ]]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: syntax error: 'e[-1]' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-71-ksh"></a><b>ksh</b></td><td>71 <a href="array.test.html#L868">Regression: Negative out-of-range index in [[ -v a[index] ]]</a><br/><br/>
+<span class="assertion">
+[ksh stderr]
+Expected "  [[ -v e[-1] ]] &amp;&amp; echo 'e has -1'\n        ^\n[ stdin ]:2: fatal: -v got index -1, which is out of bounds for array of length 0\n"
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-71-sush"></a><b>sush</b></td><td>71 <a href="array.test.html#L868">Regression: Negative out-of-range index in [[ -v a[index] ]]</a><br/><br/>
+<span class="assertion">
+[sush stderr]
+Expected "  [[ -v e[-1] ]] &amp;&amp; echo 'e has -1'\n        ^\n[ stdin ]:2: fatal: -v got index -1, which is out of bounds for array of length 0\n"
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-71-brush"></a><b>brush</b></td><td>71 <a href="array.test.html#L868">Regression: Negative out-of-range index in [[ -v a[index] ]]</a><br/><br/>
+<span class="assertion">
+[brush stderr]
+Expected "  [[ -v e[-1] ]] &amp;&amp; echo 'e has -1'\n        ^\n[ stdin ]:2: fatal: -v got index -1, which is out of bounds for array of length 0\n"
+Got      ''
+</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-72-bash"></a><b>bash</b></td><td>72 <a href="array.test.html#L888">a+=() modifies existing instance of BashArray</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-72-mksh"></a><b>mksh</b></td><td>72 <a href="array.test.html#L888">a+=() modifies existing instance of BashArray</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-72-ksh"></a><b>ksh</b></td><td>72 <a href="array.test.html#L888">a+=() modifies existing instance of BashArray</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'a=(1 2 3 4 5)\nb=(1 2 3 4 5)\n', got 'a=(1 2 3 4 5)\nb=()\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a=(1 2 3 4 5)
+b=()
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[4]: var: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-72-toysh"></a><b>toysh</b></td><td>72 <a href="array.test.html#L888">a+=() modifies existing instance of BashArray</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'a=(1 2 3 4 5)\nb=(1 2 3 4 5)\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-72-sush"></a><b>sush</b></td><td>72 <a href="array.test.html#L888">a+=() modifies existing instance of BashArray</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'a=(1 2 3 4 5)\nb=(1 2 3 4 5)\n', got 'a=(1 2 3 4 5)\nb=()\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a=(1 2 3 4 5)
+b=()
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: var: command not found
+</pre></td></tr><tr><td><a name="details-72-brush"></a><b>brush</b></td><td>72 <a href="array.test.html#L888">a+=() modifies existing instance of BashArray</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'a=(1 2 3 4 5)\nb=(1 2 3 4 5)\n', got 'a=(1 2 3 4 5)\nb=()\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a=(1 2 3 4 5)
+b=()
+</pre><i>stderr:</i> <br/>
+<pre>var: command not found
+</pre></td></tr><tr><td><a name="details-73-bash"></a><b>bash</b></td><td>73 <a href="array.test.html#L906">Regression: unset a[-2]: out-of-bound negative index should cause error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>bash: line 4: unset: [-2]: bad array subscript
+</pre></td></tr><tr><td><a name="details-73-mksh"></a><b>mksh</b></td><td>73 <a href="array.test.html#L906">Regression: unset a[-2]: out-of-bound negative index should cause error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-73-ksh"></a><b>ksh</b></td><td>73 <a href="array.test.html#L906">Regression: unset a[-2]: out-of-bound negative index should cause error</a><br/><br/>
+<span class="assertion">
+[ksh stderr]
+Expected "  unset -v 'a[-2]'\n           ^\n[ stdin ]:4: a[-2]: Index is out of bounds for array of length 1\n"
+Got      ''
+</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-73-toysh"></a><b>toysh</b></td><td>73 <a href="array.test.html#L906">Regression: unset a[-2]: out-of-bound negative index should cause error</a><br/><br/>
+<span class="assertion">
+[toysh stderr]
+Expected "  unset -v 'a[-2]'\n           ^\n[ stdin ]:4: a[-2]: Index is out of bounds for array of length 1\n"
+Got      'munmap_chunk(): invalid pointer\n'
+</span><br/>
+<span class="assertion">[toysh status] Expected 1, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-73-sush"></a><b>sush</b></td><td>73 <a href="array.test.html#L906">Regression: unset a[-2]: out-of-bound negative index should cause error</a><br/><br/>
+<span class="assertion">
+[sush stderr]
+Expected "  unset -v 'a[-2]'\n           ^\n[ stdin ]:4: a[-2]: Index is out of bounds for array of length 1\n"
+Got      ''
+</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-73-brush"></a><b>brush</b></td><td>73 <a href="array.test.html#L906">Regression: unset a[-2]: out-of-bound negative index should cause error</a><br/><br/>
+<span class="assertion">
+[brush stderr]
+Expected "  unset -v 'a[-2]'\n           ^\n[ stdin ]:4: a[-2]: Index is out of bounds for array of length 1\n"
+Got      ''
+</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-74-mksh"></a><b>mksh</b></td><td>74 <a href="array.test.html#L930">Regression: Out-of-bound negative offset for ${a[@]:offset}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-74-ksh"></a><b>ksh</b></td><td>74 <a href="array.test.html#L930">Regression: Out-of-bound negative offset for ${a[@]:offset}</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'a=(1 2 3 4)\nbegin=-1 -&gt; (4)\nbegin=-2 -&gt; (3 4)\nbegin=-3 -&gt; (2 3 4)\nbegin=-4 -&gt; (1 2 3 4)\nbegin=-5 -&gt; ()\n'
+Got      'a=(1 2 3 4)\n'
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a=(1 2 3 4)
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: ${a[*]: -1}: bad substitution
+</pre></td></tr><tr><td><a name="details-74-toysh"></a><b>toysh</b></td><td>74 <a href="array.test.html#L930">Regression: Out-of-bound negative offset for ${a[@]:offset}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'a=(1 2 3 4)\nbegin=-1 -&gt; (4)\nbegin=-2 -&gt; (3 4)\nbegin=-3 -&gt; (2 3 4)\nbegin=-4 -&gt; (1 2 3 4)\nbegin=-5 -&gt; ()\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-75-mksh"></a><b>mksh</b></td><td>75 <a href="array.test.html#L954">Regression: Array length after unset</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-75-ksh"></a><b>ksh</b></td><td>75 <a href="array.test.html#L954">Regression: Array length after unset</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'len 2;\nlen 1;\nlast x;\n', got 'len 2;\nlen 2;\n'</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len 2;
+len 2;
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[9]: ${a[@]: -1}: bad substitution
+</pre></td></tr><tr><td><a name="details-75-toysh"></a><b>toysh</b></td><td>75 <a href="array.test.html#L954">Regression: Array length after unset</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'len 2;\nlen 1;\nlast x;\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-75-sush"></a><b>sush</b></td><td>75 <a href="array.test.html#L954">Regression: Array length after unset</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'len 2;\nlen 1;\nlast x;\n', got 'len 2;\nlen 2;\nlast y;\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len 2;
+len 2;
+last y;
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-75-brush"></a><b>brush</b></td><td>75 <a href="array.test.html#L954">Regression: Array length after unset</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'len 2;\nlen 1;\nlast x;\n', got 'len 2;\nlen 1;\nlast y;\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len 2;
+len 1;
+last y;
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-76-bash"></a><b>bash</b></td><td>76 <a href="array.test.html#L975">Regression: ${a[@]@Q} crash with `a[0]=x a[2]=y`</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>quoted = ('x' 'y')
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-76-mksh"></a><b>mksh</b></td><td>76 <a href="array.test.html#L975">Regression: ${a[@]@Q} crash with `a[0]=x a[2]=y`</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-76-ksh"></a><b>ksh</b></td><td>76 <a href="array.test.html#L975">Regression: ${a[@]@Q} crash with `a[0]=x a[2]=y`</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'quoted = (x y)\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: ${a[@]@Q}: bad substitution
+</pre></td></tr><tr><td><a name="details-76-toysh"></a><b>toysh</b></td><td>76 <a href="array.test.html#L975">Regression: ${a[@]@Q} crash with `a[0]=x a[2]=y`</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'quoted = (x y)\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-76-sush"></a><b>sush</b></td><td>76 <a href="array.test.html#L975">Regression: ${a[@]@Q} crash with `a[0]=x a[2]=y`</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'quoted = (x y)\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: `${a[@]@Q}': bad substitution
+</pre></td></tr><tr><td><a name="details-76-brush"></a><b>brush</b></td><td>76 <a href="array.test.html#L975">Regression: ${a[@]@Q} crash with `a[0]=x a[2]=y`</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'quoted = (x y)\n', got "quoted = ('x' 'y')\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>quoted = ('x' 'y')
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-77-bash"></a><b>bash</b></td><td>77 <a href="array.test.html#L994">Regression: silent out-of-bound negative index in ${a[-2]} and $((a[-2]))</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[]
+0
+[0]
+0
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 4: a: bad array subscript
+bash: line 6: a: bad array subscript
+</pre></td></tr><tr><td><a name="details-77-mksh"></a><b>mksh</b></td><td>77 <a href="array.test.html#L994">Regression: silent out-of-bound negative index in ${a[-2]} and $((a[-2]))</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-77-ksh"></a><b>ksh</b></td><td>77 <a href="array.test.html#L994">Regression: silent out-of-bound negative index in ${a[-2]} and $((a[-2]))</a><br/><br/>
+<span class="assertion">
+[ksh stderr]
+Expected '  echo "[${a[-2]}]"\n           ^\n[ stdin ]:4: Index -2 out of bounds for array of length 1\n  echo "[$((a[-2]))]"\n             ^\n[ stdin ]:6: Index -2 out of bounds for array of length 1\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+0
+[0]
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-77-toysh"></a><b>toysh</b></td><td>77 <a href="array.test.html#L994">Regression: silent out-of-bound negative index in ${a[-2]} and $((a[-2]))</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[]\n0\n[0]\n0\n', got ''</span><br/>
+<span class="assertion">
+[toysh stderr]
+Expected '  echo "[${a[-2]}]"\n           ^\n[ stdin ]:4: Index -2 out of bounds for array of length 1\n  echo "[$((a[-2]))]"\n             ^\n[ stdin ]:6: Index -2 out of bounds for array of length 1\n'
+Got      'munmap_chunk(): invalid pointer\n'
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-77-sush"></a><b>sush</b></td><td>77 <a href="array.test.html#L994">Regression: silent out-of-bound negative index in ${a[-2]} and $((a[-2]))</a><br/><br/>
+<span class="assertion">
+[sush stderr]
+Expected '  echo "[${a[-2]}]"\n           ^\n[ stdin ]:4: Index -2 out of bounds for array of length 1\n  echo "[$((a[-2]))]"\n             ^\n[ stdin ]:6: Index -2 out of bounds for array of length 1\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+0
+[0]
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-77-brush"></a><b>brush</b></td><td>77 <a href="array.test.html#L994">Regression: silent out-of-bound negative index in ${a[-2]} and $((a[-2]))</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '[]\n0\n[0]\n0\n', got '[]\n0\n1\n'</span><br/>
+<span class="assertion">
+[brush stderr]
+Expected '  echo "[${a[-2]}]"\n           ^\n[ stdin ]:4: Index -2 out of bounds for array of length 1\n  echo "[$((a[-2]))]"\n             ^\n[ stdin ]:6: Index -2 out of bounds for array of length 1\n'
+Got      '\x1b[31mERROR\x1b[0m error: arithmetic evaluation error: failed to access array\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+0
+1
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: arithmetic evaluation error: failed to access array
+</pre></td></tr></table></body></html>

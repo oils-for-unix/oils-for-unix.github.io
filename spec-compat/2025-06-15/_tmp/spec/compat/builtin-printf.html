@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-printf: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-printf.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>52</td><td>33</td><td>35</td><td>33</td><td>12</td><td>34</td><td>41</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>4</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>15</td><td>0</td><td>0</td><td>0</td><td>0</td><td>7</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>21</td><td>23</td><td>44</td><td>21</td><td>0</td><td></td></tr>
+<tr><td class="timeout">TIME</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>56</td><td>56</td><td>56</td><td>56</td><td>56</td><td>56</td><td>56</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L18">printf with no args</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L24">printf -v %s</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L38">printf -v %q</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L60">printf -v a[1]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L76">printf -v syntax error</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L84">dynamic declare instead of %s</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-printf.test.html#L95">dynamic declare instead of %q</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"><a href="#details-6-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-printf.test.html#L115">printf -v dynamic scope</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L156">printf with too few arguments</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L162">printf with too many arguments</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L170">printf width strings</a></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L178">printf integer</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L198">printf %6.4d -- "precision" does padding for integers</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L216">printf %6.4x X o</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L242">%06d zero padding vs. %6.6d</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L256">%06x %06X %06o</a></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L266">%06s is no-op</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-mksh">details</a></td><td class="details-row"><a href="#details-16-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L286">printf %6.4s does both truncation and padding</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L302">printf %6.0s and %0.0s</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-mksh">details</a></td><td class="details-row"><a href="#details-18-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"><a href="#details-18-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L312">printf %6.s and %0.s</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-mksh">details</a></td><td class="details-row"><a href="#details-19-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-19-sush">details</a></td><td class="details-row"><a href="#details-19-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L326">printf %*.*s (width/precision from args)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L340">unsigned / octal / hex</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L360">unsigned / octal / hex big</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-mksh">details</a></td><td class="details-row"><a href="#details-22-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-printf.test.html#L396">empty string (osh is more strict)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-23-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L405">No char after ' =&gt; zero code point</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-mksh">details</a></td><td class="details-row"><a href="#details-24-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-24-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L417">Unicode char with '</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"><a href="#details-25-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L500">Invalid UTF-8</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-sush">details</a></td><td class="details-row"><a href="#details-26-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-printf.test.html#L557">Too large</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-27-toysh">details</a></td><td class="details-row"><a href="#details-27-sush">details</a></td><td class="details-row"><a href="#details-27-brush">details</a></td><td class="details-row"><a href="#details-27-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="builtin-printf.test.html#L598">negative numbers with unsigned / octal / hex</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="builtin-printf.test.html#L630">printf floating point (not required, but they all implement it)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-29-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 30</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="builtin-printf.test.html#L648">printf floating point with - and 0</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-30-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 31</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="builtin-printf.test.html#L676">printf eE fF gG</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-31-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 32</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L694">printf backslash escapes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-32-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 33</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L712">printf octal backslash escapes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-33-sush">details</a></td><td class="details-row"><a href="#details-33-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 34</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L720">printf unicode backslash escapes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-34-toysh">details</a></td><td class="details-row"><a href="#details-34-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 35</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L732">printf invalid backslash escape (is ignored)</a></td></tr>
+<tr><td> 36</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L738">printf % escapes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-36-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 37</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L744">printf %b backslash escaping</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-37-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 38</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L754">printf %b with \c early return</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-38-sush">details</a></td><td class="details-row"><a href="#details-38-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 39</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="builtin-printf.test.html#L762">printf %c -- doesn't respect UTF-8!  Bad.</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-39-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-39-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 40</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-printf.test.html#L783">printf invalid format</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-40-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 41</td><td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L798">printf %q</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-41-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-41-toysh">details</a></td><td class="details-row"><a href="#details-41-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 42</td><td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L811">printf %6q (width)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-42-bash">details</a></td><td class="details-row"><a href="#details-42-mksh">details</a></td><td class="details-row"><a href="#details-42-ksh">details</a></td><td class="details-row"><a href="#details-42-toysh">details</a></td><td class="details-row"><a href="#details-42-sush">details</a></td><td class="details-row"><a href="#details-42-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 43</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-printf.test.html#L828">printf negative numbers</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-43-sush">details</a></td><td class="details-row"><a href="#details-43-brush">details</a></td><td class="details-row"><a href="#details-43-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 44</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="builtin-printf.test.html#L901">printf + and space flags</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-44-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-44-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 45</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="builtin-printf.test.html#L916">printf # flag</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-45-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-45-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 46</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-printf.test.html#L940">Runtime error for invalid integer</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-46-sush">details</a></td><td class="details-row"><a href="#details-46-brush">details</a></td><td class="details-row"><a href="#details-46-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 47</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L972">%(strftime format)T</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-47-mksh">details</a></td><td class="details-row"><a href="#details-47-ksh">details</a></td><td class="details-row"><a href="#details-47-toysh">details</a></td><td class="details-row"><a href="#details-47-sush">details</a></td><td class="details-row"><a href="#details-47-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 48</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L991">%(strftime format)T doesn't respect TZ if not exported</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-48-mksh">details</a></td><td class="details-row"><a href="#details-48-ksh">details</a></td><td class="details-row"><a href="#details-48-toysh">details</a></td><td class="details-row"><a href="#details-48-sush">details</a></td><td class="details-row"><a href="#details-48-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 49</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L1013">%(strftime format)T TZ in environ but not in shell's memory</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-49-mksh">details</a></td><td class="details-row"><a href="#details-49-ksh">details</a></td><td class="details-row"><a href="#details-49-toysh">details</a></td><td class="details-row"><a href="#details-49-sush">details</a></td><td class="details-row"><a href="#details-49-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 50</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L1034">%10.5(strftime format)T</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-50-mksh">details</a></td><td class="details-row"><a href="#details-50-ksh">details</a></td><td class="details-row"><a href="#details-50-toysh">details</a></td><td class="details-row"><a href="#details-50-sush">details</a></td><td class="details-row"><a href="#details-50-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 51</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="timeout">TIME</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L1053">Regression for 'printf x y'</a></td></tr>
+<tr><td> 52</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-printf.test.html#L1060">bash truncates long strftime string at 128</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-52-mksh">details</a></td><td class="details-row"><a href="#details-52-ksh">details</a></td><td class="details-row"><a href="#details-52-toysh">details</a></td><td class="details-row"><a href="#details-52-sush">details</a></td><td class="details-row"><a href="#details-52-brush">details</a></td><td class="details-row"><a href="#details-52-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 53</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L1118">printf with explicit NUL byte</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-53-toysh">details</a></td><td class="details-row"><a href="#details-53-sush">details</a></td><td class="details-row"><a href="#details-53-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 54</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L1129">printf positive integer overflow</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-54-bash">details</a></td><td class="details-row"><a href="#details-54-mksh">details</a></td><td class="details-row"><a href="#details-54-ksh">details</a></td><td class="details-row"><a href="#details-54-toysh">details</a></td><td class="details-row"><a href="#details-54-sush">details</a></td><td class="details-row"><a href="#details-54-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 55</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-printf.test.html#L1210">printf negative integer overflow</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-55-bash">details</a></td><td class="details-row"><a href="#details-55-mksh">details</a></td><td class="details-row"><a href="#details-55-ksh">details</a></td><td class="details-row"><a href="#details-55-toysh">details</a></td><td class="details-row"><a href="#details-55-sush">details</a></td><td class="details-row"><a href="#details-55-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>240 passed, 17 OK, 22 not implemented, 3 BUG, 109 failed, 1 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="builtin-printf.test.html#L18">printf with no args</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>printf: missing operand
+Try 'printf --help' for more information.
+</pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="builtin-printf.test.html#L18">printf with no args</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>printf: missing operand
+Try 'printf --help' for more information.
+</pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="builtin-printf.test.html#L18">printf with no args</a><br/><br/>
+<span class="assertion">[toysh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>printf: Needs 1 argument (see "printf --help")
+</pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="builtin-printf.test.html#L24">printf -v %s</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-v['']
+</pre><i>stderr:</i> <br/>
+<pre>printf: warning: ignoring excess arguments, starting with ‘foo’
+</pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="builtin-printf.test.html#L24">printf -v %s</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['hello there']\n", got "-v['']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-v['']
+</pre><i>stderr:</i> <br/>
+<pre>printf: warning: ignoring excess arguments, starting with ‘foo’
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-printf.test.html#L24">printf -v %s</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['hello there']\n", got "-v['']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-v['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="builtin-printf.test.html#L38">printf -v %q</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-v</pre><i>stderr:</i> <br/>
+<pre>printf: warning: ignoring excess arguments, starting with ‘foo’
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="builtin-printf.test.html#L38">printf -v %q</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'OK\n', got '-v'</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-v</pre><i>stderr:</i> <br/>
+<pre>printf: warning: ignoring excess arguments, starting with ‘foo’
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="builtin-printf.test.html#L38">printf -v %q</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'OK\n', got '-v'</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-v</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="builtin-printf.test.html#L38">printf -v %q</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'OK\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: with: command not found
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="builtin-printf.test.html#L60">printf -v a[1]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-vstatus=0
+['a', 'b', 'c']
+</pre><i>stderr:</i> <br/>
+<pre>printf: warning: ignoring excess arguments, starting with ‘a[1]’
+</pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="builtin-printf.test.html#L60">printf -v a[1]</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "status=0\n['a', 'foo', 'c']\n", got "-vstatus=0\n['a', 'b', 'c']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-vstatus=0
+['a', 'b', 'c']
+</pre><i>stderr:</i> <br/>
+<pre>printf: warning: ignoring excess arguments, starting with ‘a[1]’
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="builtin-printf.test.html#L60">printf -v a[1]</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "status=0\n['a', 'foo', 'c']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: a
+</pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="builtin-printf.test.html#L76">printf -v syntax error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-vstatus=0
+</pre><i>stderr:</i> <br/>
+<pre>printf: warning: ignoring excess arguments, starting with ‘a[’
+</pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="builtin-printf.test.html#L76">printf -v syntax error</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=2\n', got '-vstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-vstatus=0
+</pre><i>stderr:</i> <br/>
+<pre>printf: warning: ignoring excess arguments, starting with ‘a[’
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="builtin-printf.test.html#L76">printf -v syntax error</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=2\n', got '-vstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-vstatus=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="builtin-printf.test.html#L76">printf -v syntax error</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=2\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="builtin-printf.test.html#L76">printf -v syntax error</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=2\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m failed to parse parameter 'a['
+</pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="builtin-printf.test.html#L84">dynamic declare instead of %s</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: declare: not found
+</pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="builtin-printf.test.html#L84">dynamic declare instead of %s</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['hello there']\n", got "['']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: declare: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="builtin-printf.test.html#L84">dynamic declare instead of %s</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "['hello there']\n", got "['']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="builtin-printf.test.html#L84">dynamic declare instead of %s</a><br/><br/>
+<span class="assertion">[brush stdout] Expected "['hello there']\n", got "['']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="builtin-printf.test.html#L95">dynamic declare instead of %q</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: declare: not found
+</pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="builtin-printf.test.html#L95">dynamic declare instead of %q</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '\'"quoted" with spaces and \\\'\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: declare: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="builtin-printf.test.html#L95">dynamic declare instead of %q</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '\'"quoted" with spaces and \\\'\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>main: line 3: sh: val: @Q}"
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="builtin-printf.test.html#L95">dynamic declare instead of %q</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '\'"quoted" with spaces and \\\'\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: `${val@Q}': bad substitution
+</pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="builtin-printf.test.html#L95">dynamic declare instead of %q</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '\'"quoted" with spaces and \\\'\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-osh"></a><b>osh</b></td><td>6 <a href="builtin-printf.test.html#L95">dynamic declare instead of %q</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>$'"quoted" with spaces and \\'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="builtin-printf.test.html#L115">printf -v dynamic scope</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>not implemented
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="builtin-printf.test.html#L115">printf -v dynamic scope</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'dollar=dollar\n--\ndollar=\\$\nmylocal=mylocal\n--\ndollar=\\$\nmylocal=\n'
+Got      'dollar=dollar\n--\n-v-vdollar=dollar\nmylocal=foo\n--\ndollar=dollar\nmylocal=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>dollar=dollar
+--
+-v-vdollar=dollar
+mylocal=foo
+--
+dollar=dollar
+mylocal=
+</pre><i>stderr:</i> <br/>
+<pre>printf: warning: ignoring excess arguments, starting with ‘dollar’
+printf: warning: ignoring excess arguments, starting with ‘mylocal’
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="builtin-printf.test.html#L115">printf -v dynamic scope</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'dollar=dollar\n--\ndollar=\\$\nmylocal=mylocal\n--\ndollar=\\$\nmylocal=\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-7-osh"></a><b>osh</b></td><td>7 <a href="builtin-printf.test.html#L115">printf -v dynamic scope</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>dollar=dollar
+--
+dollar='$'
+mylocal=mylocal
+--
+dollar='$'
+mylocal=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="builtin-printf.test.html#L156">printf with too few arguments</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '-a b-x y--\n', got '--'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="builtin-printf.test.html#L162">printf with too many arguments</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '-a-b-\n-c-d-\n-e--\n', got '--'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="builtin-printf.test.html#L178">printf integer</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '42\n42\n97\n97\n[   42]\n[42   ]\n[00042]\n', got '42\n42\n\'a\n"a\n[   42]\n[42   ]\n[00042]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>42
+42
+'a
+"a
+[   42]
+[42   ]
+[00042]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="builtin-printf.test.html#L198">printf %6.4d -- "precision" does padding for integers</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '[  0042]\n[0042]\n[    42]\n--\n[ -0042]\n[-0042]\n[   -42]\n'
+Got      '[  0042]\n[0042]\n[    42]\n\n[ -0042]\n[-0042]\n[   -42]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[  0042]
+[0042]
+[    42]
+
+[ -0042]
+[-0042]
+[   -42]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="builtin-printf.test.html#L198">printf %6.4d -- "precision" does padding for integers</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[  0042]\n[0042]\n[    42]\n--\n[ -0042]\n[-0042]\n[   -42]\n'
+Got      '[42]\n[42]\n[42]\n--\n[-42]\n[-42]\n[-42]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[42]
+[42]
+[42]
+--
+[-42]
+[-42]
+[-42]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="builtin-printf.test.html#L216">printf %6.4x X o</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '[  002a]\n[002a]\n[    2a]\n--\n[  002A]\n[002A]\n[    2A]\n--\n[  0052]\n[0052]\n[    52]\n'
+Got      '[  002a]\n[002a]\n[    2a]\n\n[  002A]\n[002A]\n[    2A]\n\n[  0052]\n[0052]\n[    52]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[  002a]
+[002a]
+[    2a]
+
+[  002A]
+[002A]
+[    2A]
+
+[  0052]
+[0052]
+[    52]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="builtin-printf.test.html#L216">printf %6.4x X o</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[  002a]\n[002a]\n[    2a]\n--\n[  002A]\n[002A]\n[    2A]\n--\n[  0052]\n[0052]\n[    52]\n'
+Got      '[2a]\n[2a]\n[2a]\n--\n[2A]\n[2A]\n[2A]\n--\n[52]\n[52]\n[52]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[2a]
+[2a]
+[2a]
+--
+[2A]
+[2A]
+[2A]
+--
+[52]
+[52]
+[52]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="builtin-printf.test.html#L242">%06d zero padding vs. %6.6d</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '[000042]\n[-00042]\n--\n[000042]\n[-000042]\n'
+Got      '[000042]\n[-00042]\n\n[000042]\n[-000042]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[000042]
+[-00042]
+
+[000042]
+[-000042]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="builtin-printf.test.html#L242">%06d zero padding vs. %6.6d</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[000042]\n[-00042]\n--\n[000042]\n[-000042]\n'
+Got      '[000042]\n[-00042]\n--\n[42]\n[-42]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[000042]
+[-00042]
+--
+[42]
+[-42]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-mksh"></a><b>mksh</b></td><td>16 <a href="builtin-printf.test.html#L266">%06s is no-op</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>(    42)
+(   -42)
+((status=1
+</pre><i>stderr:</i> <br/>
+<pre>printf: %06s: invalid conversion specification
+printf: %06s: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-16-ksh"></a><b>ksh</b></td><td>16 <a href="builtin-printf.test.html#L266">%06s is no-op</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '(    42)\n(   -42)\n(    42)\n(   -42)\nstatus=0\n'
+Got      '(    42)\n(   -42)\n((status=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>(    42)
+(   -42)
+((status=1
+</pre><i>stderr:</i> <br/>
+<pre>printf: %06s: invalid conversion specification
+printf: %06s: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-16-brush"></a><b>brush</b></td><td>16 <a href="builtin-printf.test.html#L266">%06s is no-op</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '(    42)\n(   -42)\n(    42)\n(   -42)\nstatus=0\n'
+Got      '(    42)\n(   -42)\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>(    42)
+(   -42)
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m printf: printf parsing error: %06s: invalid conversion specification
+[31mERROR[0m printf: printf parsing error: %06s: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="builtin-printf.test.html#L286">printf %6.4s does both truncation and padding</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[   foo]\n[   foo]\n[foo   ]\n[spam-eggs]\n[  spam]\n[spam  ]\n'
+Got      '[   foo]\n[foo]\n[foo]\n[spam-eggs]\n[spam-eggs]\n[spam-eggs]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[   foo]
+[foo]
+[foo]
+[spam-eggs]
+[spam-eggs]
+[spam-eggs]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-mksh"></a><b>mksh</b></td><td>18 <a href="builtin-printf.test.html#L302">printf %6.0s and %0.0s</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[      ]
+[</pre><i>stderr:</i> <br/>
+<pre>printf: %0.0s: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-18-ksh"></a><b>ksh</b></td><td>18 <a href="builtin-printf.test.html#L302">printf %6.0s and %0.0s</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '[      ]\n[]\n', got '[      ]\n['</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[      ]
+[</pre><i>stderr:</i> <br/>
+<pre>printf: %0.0s: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="builtin-printf.test.html#L302">printf %6.0s and %0.0s</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[      ]\n[]\n', got '[foo]\n[foo]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[foo]
+[foo]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-brush"></a><b>brush</b></td><td>18 <a href="builtin-printf.test.html#L302">printf %6.0s and %0.0s</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '[      ]\n[]\n', got '[      ]\n'</span><br/>
+<span class="assertion">[brush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[      ]
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m printf: printf parsing error: %0.0s: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-19-mksh"></a><b>mksh</b></td><td>19 <a href="builtin-printf.test.html#L312">printf %6.s and %0.s</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[      ]
+[</pre><i>stderr:</i> <br/>
+<pre>printf: %0.s: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-19-ksh"></a><b>ksh</b></td><td>19 <a href="builtin-printf.test.html#L312">printf %6.s and %0.s</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '[      ]\n[]\n', got '[      ]\n['</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[      ]
+[</pre><i>stderr:</i> <br/>
+<pre>printf: %0.s: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-19-sush"></a><b>sush</b></td><td>19 <a href="builtin-printf.test.html#L312">printf %6.s and %0.s</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[      ]\n[]\n', got '[foo]\n[foo]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[foo]
+[foo]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-brush"></a><b>brush</b></td><td>19 <a href="builtin-printf.test.html#L312">printf %6.s and %0.s</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '[      ]\n[]\n', got '[      ]\n'</span><br/>
+<span class="assertion">[brush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[      ]
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m printf: printf parsing error: %0.s: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-20-sush"></a><b>sush</b></td><td>20 <a href="builtin-printf.test.html#L326">printf %*.*s (width/precision from args)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[    hello]\n[hel]\n[      hel]\n[      hel]\n[      hel]\n'
+Got      ''
+</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: printf: Other("Error parsing the format string %* 9")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: printf: Other("Error parsing the format string %.* 3")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: printf: Other("Error parsing the format string %* 9")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: printf: Other("Error parsing the format string %9.* 3")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: printf: Other("Error parsing the format string %* 9")
+</pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="builtin-printf.test.html#L340">unsigned / octal / hex</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[42]\n[52]\n[2a]\n[2A]\n\n[61]\n[61]\n', got '[42]\n[52]\n[2a]\n[2A]\n\n'</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[42]
+[52]
+[2a]
+[2A]
+
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: printf: ArithError("", InvalidNumber("'a"))
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: printf: ArithError("", InvalidNumber("'ab"))
+</pre></td></tr><tr><td><a name="details-22-mksh"></a><b>mksh</b></td><td>22 <a href="builtin-printf.test.html#L360">unsigned / octal / hex big</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[1]
+[1]
+[1]
+[1]
+
+[2147483647]
+[17777777777]
+[7fffffff]
+[7FFFFFFF]
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-ksh"></a><b>ksh</b></td><td>22 <a href="builtin-printf.test.html#L360">unsigned / octal / hex big</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '[4294967296]\n[40000000000]\n[100000000]\n[100000000]\n\n[9223372036854775807]\n[777777777777777777777]\n[7fffffffffffffff]\n[7FFFFFFFFFFFFFFF]\n\n'
+Got      '[1]\n[1]\n[1]\n[1]\n\n[2147483647]\n[17777777777]\n[7fffffff]\n[7FFFFFFF]\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[1]
+[1]
+[1]
+[1]
+
+[2147483647]
+[17777777777]
+[7fffffff]
+[7FFFFFFF]
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-sush"></a><b>sush</b></td><td>23 <a href="builtin-printf.test.html#L396">empty string (osh is more strict)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '0\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-osh"></a><b>osh</b></td><td>23 <a href="builtin-printf.test.html#L396">empty string (osh is more strict)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  printf '%d\n' ''
+                ^
+[ stdin ]:1: printf expected an integer, got ''
+</pre></td></tr><tr><td><a name="details-24-mksh"></a><b>mksh</b></td><td>24 <a href="builtin-printf.test.html#L405">No char after ' =&gt; zero code point</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre>printf: ‘'’: expected a numeric value
+printf: ‘"’: expected a numeric value
+</pre></td></tr><tr><td><a name="details-24-ksh"></a><b>ksh</b></td><td>24 <a href="builtin-printf.test.html#L405">No char after ' =&gt; zero code point</a><br/><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre>printf: ‘'’: expected a numeric value
+printf: ‘"’: expected a numeric value
+</pre></td></tr><tr><td><a name="details-24-sush"></a><b>sush</b></td><td>24 <a href="builtin-printf.test.html#L405">No char after ' =&gt; zero code point</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '0\n0\n', got '\'\n"\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>'
+"
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-mksh"></a><b>mksh</b></td><td>25 <a href="builtin-printf.test.html#L417">Unicode char with '</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>weird bug
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="builtin-printf.test.html#L417">Unicode char with '</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '3bc\n956\n1674\n\n4e09\n19977\n47011\n\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-25-sush"></a><b>sush</b></td><td>25 <a href="builtin-printf.test.html#L417">Unicode char with '</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '3bc\n956\n1674\n\n4e09\n19977\n47011\n\n', got "'\xce\xbc\n\n'\xe4\xb8\x89\n\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>'μ
+
+'三
+
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: printf: ArithError("", InvalidNumber("'μ"))
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: printf: ArithError("", InvalidNumber("'μ"))
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: printf: ArithError("", InvalidNumber("'三"))
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: printf: ArithError("", InvalidNumber("'三"))
+</pre></td></tr><tr><td><a name="details-26-sush"></a><b>sush</b></td><td>26 <a href="builtin-printf.test.html#L500">Invalid UTF-8</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'bytes1\nce\n206\n316\n\nbytes2\nbc\n188\n274\n\noverlong2\nc1\n193\n301\n\noverlong3\ne0\n224\n340\n\n'
+Got      "bytes1\n'\n\nbytes2\n'\n\noverlong2\n'\n\noverlong3\n'\n\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>bytes1
+'
+
+bytes2
+'
+
+overlong2
+'
+
+overlong3
+'
+
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: printf: ArithError("", InvalidNumber("'"))
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: printf: ArithError("", InvalidNumber("'"))
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: printf: ArithError("", InvalidNumber("'"))
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: printf: ArithError("", InvalidNumber("'"))
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 19: printf: ArithError("", InvalidNumber("'"))
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 21: printf: ArithError("", InvalidNumber("'"))
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 26: printf: ArithError("", InvalidNumber("'"))
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 28: printf: ArithError("", InvalidNumber("'"))
+</pre></td></tr><tr><td><a name="details-26-brush"></a><b>brush</b></td><td>26 <a href="builtin-printf.test.html#L500">Invalid UTF-8</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'bytes1\nce\n206\n316\n\nbytes2\nbc\n188\n274\n\noverlong2\nc1\n193\n301\n\noverlong3\ne0\n224\n340\n\n'
+Got      'bytes1\n0\n0\n0\n\nbytes2\n0\n0\n0\n\noverlong2\n0\n0\n0\n\noverlong3\n0\n0\n0\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>bytes1
+0
+0
+0
+
+bytes2
+0
+0
+0
+
+overlong2
+0
+0
+0
+
+overlong3
+0
+0
+0
+
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: i/o error: stream did not contain valid UTF-8
+[31mERROR[0m error: i/o error: stream did not contain valid UTF-8
+[31mERROR[0m error: i/o error: stream did not contain valid UTF-8
+[31mERROR[0m error: i/o error: stream did not contain valid UTF-8
+</pre></td></tr><tr><td><a name="details-27-mksh"></a><b>mksh</b></td><td>27 <a href="builtin-printf.test.html#L557">Too large</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>weird bug
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-toysh"></a><b>toysh</b></td><td>27 <a href="builtin-printf.test.html#L557">Too large</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'too large\n111111\n1118481\n4210421\n\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-27-sush"></a><b>sush</b></td><td>27 <a href="builtin-printf.test.html#L557">Too large</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'too large\n111111\n1118481\n4210421\n\n', got "too large\n'\n\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>too large
+'
+
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: printf: ArithError("", InvalidNumber("'"))
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: printf: ArithError("", InvalidNumber("'"))
+</pre></td></tr><tr><td><a name="details-27-brush"></a><b>brush</b></td><td>27 <a href="builtin-printf.test.html#L557">Too large</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'too large\n111111\n1118481\n4210421\n\n', got 'too large\n0\n0\n0\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>too large
+0
+0
+0
+
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: i/o error: stream did not contain valid UTF-8
+</pre></td></tr><tr><td><a name="details-27-osh"></a><b>osh</b></td><td>27 <a href="builtin-printf.test.html#L557">Too large</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>too large
+f4
+244
+364
+
+</pre><i>stderr:</i> <br/>
+<pre>  printf '%x\n' \'$too_large
+                ^~
+[ stdin ]:5: Warning: UTF-8 decode: Integer too large at offset 1 in string of 5 bytes
+  printf '%u\n' \'$too_large
+                ^~
+[ stdin ]:6: Warning: UTF-8 decode: Integer too large at offset 1 in string of 5 bytes
+  printf '%o\n' \'$too_large
+                ^~
+[ stdin ]:7: Warning: UTF-8 decode: Integer too large at offset 1 in string of 5 bytes
+</pre></td></tr><tr><td><a name="details-28-osh"></a><b>osh</b></td><td>28 <a href="builtin-printf.test.html#L598">negative numbers with unsigned / octal / hex</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>  [%u]\n
+    ^
+[ printf arg at line 1 of [ stdin ] ]:1
+
+  printf '[%u]\n' -42
+         ^
+[ stdin ]:1: Can't format negative number with %u: -42
+  [%o]\n
+    ^
+[ printf arg at line 4 of [ stdin ] ]:1
+
+  printf '[%o]\n' -42
+         ^
+[ stdin ]:4: Can't format negative number with %o: -42
+  [%x]\n
+    ^
+[ printf arg at line 7 of [ stdin ] ]:1
+
+  printf '[%x]\n' -42
+         ^
+[ stdin ]:7: Can't format negative number with %x: -42
+  [%X]\n
+    ^
+[ printf arg at line 10 of [ stdin ] ]:1
+
+  printf '[%X]\n' -42
+         ^
+[ stdin ]:10: Can't format negative number with %X: -42
+</pre></td></tr><tr><td><a name="details-29-sush"></a><b>sush</b></td><td>29 <a href="builtin-printf.test.html#L630">printf floating point (not required, but they all implement it)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[3.141590]\n[3.14]\n[    3.14]\n[3.14    ]\n[3.141590]\n[3.140000]\n'
+Got      '[3.141590]\n[3.141590]\n[3.141590]\n[3.141590]\n[3.141590]\n[3.140000]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[3.141590]
+[3.141590]
+[3.141590]
+[3.141590]
+[3.141590]
+[3.140000]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-osh"></a><b>osh</b></td><td>29 <a href="builtin-printf.test.html#L630">printf floating point (not required, but they all implement it)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  [%f]\n
+    ^
+[ printf arg at line 1 of [ stdin ] ]:1
+
+  printf '[%f]\n' 3.14159
+         ^
+[ stdin ]:1: osh printf doesn't support floating point
+  [%.2f]\n
+      ^
+[ printf arg at line 2 of [ stdin ] ]:1
+
+  printf '[%.2f]\n' 3.14159
+         ^
+[ stdin ]:2: osh printf doesn't support floating point
+  [%8.2f]\n
+       ^
+[ printf arg at line 3 of [ stdin ] ]:1
+
+  printf '[%8.2f]\n' 3.14159
+         ^
+[ stdin ]:3: osh printf doesn't support floating point
+  [%-8.2f]\n
+        ^
+[ printf arg at line 4 of [ stdin ] ]:1
+
+  printf '[%-8.2f]\n' 3.14159
+         ^
+[ stdin ]:4: osh printf doesn't support floating point
+  [%-f]\n
+     ^
+[ printf arg at line 5 of [ stdin ] ]:1
+
+  printf '[%-f]\n' 3.14159
+         ^
+[ stdin ]:5: osh printf doesn't support floating point
+  [%-f]\n
+     ^
+[ printf arg at line 6 of [ stdin ] ]:1
+
+  printf '[%-f]\n' 3.14
+         ^
+[ stdin ]:6: osh printf doesn't support floating point
+</pre></td></tr><tr><td><a name="details-30-sush"></a><b>sush</b></td><td>30 <a href="builtin-printf.test.html#L648">printf floating point with - and 0</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[  3.1400]\n[003.1400]\n[  3.1400]\n[003.1400]\n---\n[3.1400  ]\n[3.1400  ]\n[3.1400  ]\n[3.1400  ]\n'
+Got      '[3.140000]\n[3.140000]\n[3.140000]\n[3.140000]\n---\n[3.140000]\n[3.140000]\n[3.140000]\n[3.140000]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[3.140000]
+[3.140000]
+[3.140000]
+[3.140000]
+---
+[3.140000]
+[3.140000]
+[3.140000]
+[3.140000]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-osh"></a><b>osh</b></td><td>30 <a href="builtin-printf.test.html#L648">printf floating point with - and 0</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>---
+</pre><i>stderr:</i> <br/>
+<pre>  [%8.4f]\n
+       ^
+[ printf arg at line 1 of [ stdin ] ]:1
+
+  printf '[%8.4f]\n' 3.14
+         ^
+[ stdin ]:1: osh printf doesn't support floating point
+  [%08.4f]\n
+        ^
+[ printf arg at line 2 of [ stdin ] ]:1
+
+  printf '[%08.4f]\n' 3.14
+         ^
+[ stdin ]:2: osh printf doesn't support floating point
+  [%8.04f]\n
+       ^
+[ printf arg at line 3 of [ stdin ] ]:1
+
+  printf '[%8.04f]\n' 3.14  # meaning less 0
+         ^
+[ stdin ]:3: Expected a printf format character
+  [%08.04f]\n
+        ^
+[ printf arg at line 4 of [ stdin ] ]:1
+
+  printf '[%08.04f]\n' 3.14
+         ^
+[ stdin ]:4: Expected a printf format character
+  [%-8.4f]\n
+        ^
+[ printf arg at line 6 of [ stdin ] ]:1
+
+  printf '[%-8.4f]\n' 3.14
+         ^
+[ stdin ]:6: osh printf doesn't support floating point
+  [%-08.4f]\n
+         ^
+[ printf arg at line 7 of [ stdin ] ]:1
+
+  printf '[%-08.4f]\n' 3.14
+         ^
+[ stdin ]:7: osh printf doesn't support floating point
+  [%-8.04f]\n
+        ^
+[ printf arg at line 8 of [ stdin ] ]:1
+
+  printf '[%-8.04f]\n' 3.14
+         ^
+[ stdin ]:8: Expected a printf format character
+  [%-08.04f]\n
+         ^
+[ printf arg at line 9 of [ stdin ] ]:1
+
+  printf '[%-08.04f]\n' 3.14
+         ^
+[ stdin ]:9: Expected a printf format character
+</pre></td></tr><tr><td><a name="details-31-sush"></a><b>sush</b></td><td>31 <a href="builtin-printf.test.html#L676">printf eE fF gG</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[3.140000e+00]\n[3.140000E+00]\n[3.140000]\n[3.14]\n[3.14]\n'
+Got      '[3.140000]\n'
+</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[3.140000]
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: printf: Other("Incorrect type passed as an argument %e 3.14")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: printf: Other("Incorrect type passed as an argument %E 3.14")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: printf: Other("Incorrect type passed as an argument %g 3.14")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: printf: Other("Incorrect type passed as an argument %G 3.14")
+</pre></td></tr><tr><td><a name="details-31-osh"></a><b>osh</b></td><td>31 <a href="builtin-printf.test.html#L676">printf eE fF gG</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  [%e]\n
+    ^
+[ printf arg at line 1 of [ stdin ] ]:1
+
+  printf '[%e]\n' 3.14
+         ^
+[ stdin ]:1: osh printf doesn't support floating point
+  [%E]\n
+    ^
+[ printf arg at line 2 of [ stdin ] ]:1
+
+  printf '[%E]\n' 3.14
+         ^
+[ stdin ]:2: osh printf doesn't support floating point
+  [%f]\n
+    ^
+[ printf arg at line 3 of [ stdin ] ]:1
+
+  printf '[%f]\n' 3.14
+         ^
+[ stdin ]:3: osh printf doesn't support floating point
+  [%g]\n
+    ^
+[ printf arg at line 4 of [ stdin ] ]:1
+
+  printf '[%g]\n' 3.14
+         ^
+[ stdin ]:4: osh printf doesn't support floating point
+  [%G]\n
+    ^
+[ printf arg at line 5 of [ stdin ] ]:1
+
+  printf '[%G]\n' 3.14
+         ^
+[ stdin ]:5: osh printf doesn't support floating point
+</pre></td></tr><tr><td><a name="details-32-sush"></a><b>sush</b></td><td>32 <a href="builtin-printf.test.html#L694">printf backslash escapes</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['a\\tb']\n['\\xe2\\x98\\xa0']\n['$e']\n['\\x1f7']\n"
+Got      "['a\\tb']\n['\\\\xE2\\\\x98\\\\xA0']\n['\\\\044e']\n['\\\\0377']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a\tb']
+['\\xE2\\x98\\xA0']
+['\\044e']
+['\\0377']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-sush"></a><b>sush</b></td><td>33 <a href="builtin-printf.test.html#L712">printf octal backslash escapes</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "['\\x1f7']\n['\\xff']\n", got "['\\\\0377']\n['\\\\377']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['\\0377']
+['\\377']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-brush"></a><b>brush</b></td><td>33 <a href="builtin-printf.test.html#L712">printf octal backslash escapes</a><br/><br/>
+<span class="assertion">[brush stdout] Expected "['\\x1f7']\n['\\xff']\n", got "['\\x1f7']\n"</span><br/>
+<span class="assertion">[brush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['\x1f7']
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: i/o error: stream did not contain valid UTF-8
+</pre></td></tr><tr><td><a name="details-34-toysh"></a><b>toysh</b></td><td>34 <a href="builtin-printf.test.html#L720">printf unicode backslash escapes</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['\\xe2\\x98\\xa0']\n['\\xd9\\x9f']\n", got "['\\\\u2620']\n['\\\\U0000065f']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['\\u2620']
+['\\U0000065f']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-sush"></a><b>sush</b></td><td>34 <a href="builtin-printf.test.html#L720">printf unicode backslash escapes</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "['\\xe2\\x98\\xa0']\n['\\xd9\\x9f']\n", got "['\\\\u2620']\n['\\\\U0000065f']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['\\u2620']
+['\\U0000065f']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-sush"></a><b>sush</b></td><td>36 <a href="builtin-printf.test.html#L738">printf % escapes</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[%]\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: printf: Other("Too many arguments passed %% ")
+</pre></td></tr><tr><td><a name="details-37-sush"></a><b>sush</b></td><td>37 <a href="builtin-printf.test.html#L744">printf %b backslash escaping</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[\\044]\n[$]\nstatus=0\n', got '[\\044]\n[\\044]\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[\044]
+[\044]
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-sush"></a><b>sush</b></td><td>38 <a href="builtin-printf.test.html#L754">printf %b with \c early return</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[ab\ncd0\n', got '[ab\ncd\\cxy]\n0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[ab
+cd\cxy]
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-brush"></a><b>brush</b></td><td>38 <a href="builtin-printf.test.html#L754">printf %b with \c early return</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '[ab\ncd0\n', got '[ab\ncd]\n0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[ab
+cd]
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-sush"></a><b>sush</b></td><td>39 <a href="builtin-printf.test.html#L762">printf %c -- doesn't respect UTF-8!  Bad.</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[\xce\xbc\xce\xbc]\n1\n', got '[\xce\xbc\xce\xbc]\n0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[μμ]
+0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: printf: Other("Incorrect type passed as an argument %c μμ")
+</pre></td></tr><tr><td><a name="details-39-osh"></a><b>osh</b></td><td>39 <a href="builtin-printf.test.html#L762">printf %c -- doesn't respect UTF-8!  Bad.</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[μμ]
+0
+</pre><i>stderr:</i> <br/>
+<pre>  %c
+   ^
+[ printf arg at line 3 of [ stdin ] ]:1
+
+  printf '%c' "$twomu" | wc --bytes
+         ^
+[ stdin ]:3: osh printf doesn't support single characters (bytes)
+</pre></td></tr><tr><td><a name="details-40-osh"></a><b>osh</b></td><td>40 <a href="builtin-printf.test.html#L783">printf invalid format</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>  %z
+   ^
+[ printf arg at line 1 of [ stdin ] ]:1
+
+  printf '%z' 42
+         ^
+[ stdin ]:1: Invalid printf format character
+  %-z
+    ^
+[ printf arg at line 3 of [ stdin ] ]:1
+
+  printf '%-z' 42
+         ^
+[ stdin ]:3: Invalid printf format character
+</pre></td></tr><tr><td><a name="details-41-bash"></a><b>bash</b></td><td>41 <a href="builtin-printf.test.html#L798">printf %q</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[a\ b]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-41-toysh"></a><b>toysh</b></td><td>41 <a href="builtin-printf.test.html#L798">printf %q</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['a b']\n", got '['</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[</pre><i>stderr:</i> <br/>
+<pre>printf: bad %q@3
+</pre></td></tr><tr><td><a name="details-41-sush"></a><b>sush</b></td><td>41 <a href="builtin-printf.test.html#L798">printf %q</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "['a b']\n", got '[a b]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[a b]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-bash"></a><b>bash</b></td><td>42 <a href="builtin-printf.test.html#L811">printf %6q (width)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[  a\ b]
+[a\ b]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-mksh"></a><b>mksh</b></td><td>42 <a href="builtin-printf.test.html#L811">printf %6q (width)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[[</pre><i>stderr:</i> <br/>
+<pre>printf: %6q: invalid conversion specification
+printf: %1q: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-42-ksh"></a><b>ksh</b></td><td>42 <a href="builtin-printf.test.html#L811">printf %6q (width)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "[ 'a b']\n['a b']\n", got '[['</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[[</pre><i>stderr:</i> <br/>
+<pre>printf: %6q: invalid conversion specification
+printf: %1q: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-42-toysh"></a><b>toysh</b></td><td>42 <a href="builtin-printf.test.html#L811">printf %6q (width)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "[ 'a b']\n['a b']\n", got '[['</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[[</pre><i>stderr:</i> <br/>
+<pre>printf: bad %q@4
+printf: bad %q@4
+</pre></td></tr><tr><td><a name="details-42-sush"></a><b>sush</b></td><td>42 <a href="builtin-printf.test.html#L811">printf %6q (width)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "[ 'a b']\n['a b']\n", got '[a b]\n[a b]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[a b]
+[a b]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-brush"></a><b>brush</b></td><td>42 <a href="builtin-printf.test.html#L811">printf %6q (width)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected "[ 'a b']\n['a b']\n", got ''</span><br/>
+<span class="assertion">[brush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m printf: printf parsing error: %6q: invalid conversion specification
+[31mERROR[0m printf: printf parsing error: %1q: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-43-sush"></a><b>sush</b></td><td>43 <a href="builtin-printf.test.html#L828">printf negative numbers</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[-42] status=0\n[-42] status=0\n[-42] status=0\n[-42] status=0\n[-42] status=1\n[-42] status=1\n[-42] status=1\n[-42] status=1\n'
+Got      '[-42] status=0\n[-42] status=0\n[ -42] status=0\n[ -42] status=0\n[ -42 ] status=0\n[ -42 ] status=0\n[ -42z] status=0\n[ -42z] status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[-42] status=0
+[-42] status=0
+[ -42] status=0
+[ -42] status=0
+[ -42 ] status=0
+[ -42 ] status=0
+[ -42z] status=0
+[ -42z] status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-43-brush"></a><b>brush</b></td><td>43 <a href="builtin-printf.test.html#L828">printf negative numbers</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '[-42] status=0\n[-42] status=0\n[-42] status=0\n[-42] status=0\n[-42] status=1\n[-42] status=1\n[-42] status=1\n[-42] status=1\n'
+Got      '[-42] status=0\n[-42] status=0\n[-42] status=0\n[-42] status=0\n[-42] status=0\n[-42] status=0\n[-42] status=0\n[-42] status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[-42] status=0
+[-42] status=0
+[-42] status=0
+[-42] status=0
+[-42] status=0
+[-42] status=0
+[-42] status=0
+[-42] status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/brush/target/release/brush: '\ -42\ ': value not completely converted
+/home/andy/git/oils-for-unix/oils/../../shells/brush/target/release/brush: '\ -42\ ': value not completely converted
+/home/andy/git/oils-for-unix/oils/../../shells/brush/target/release/brush: '\ -42z': value not completely converted
+/home/andy/git/oils-for-unix/oils/../../shells/brush/target/release/brush: '\ -42z': value not completely converted
+</pre></td></tr><tr><td><a name="details-43-osh"></a><b>osh</b></td><td>43 <a href="builtin-printf.test.html#L828">printf negative numbers</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[-42] status=0
+[-42] status=0
+[-42] status=0
+[-42] status=0
+[-42] status=0
+[-42] status=0
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>  printf '[%d] ' ' -42z'
+                 ^
+[ stdin ]:16: printf expected an integer, got ' -42z'
+  printf '[%i] ' ' -42z'
+                 ^
+[ stdin ]:18: printf expected an integer, got ' -42z'
+</pre></td></tr><tr><td><a name="details-44-sush"></a><b>sush</b></td><td>44 <a href="builtin-printf.test.html#L901">printf + and space flags</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[+42]\n[-42]\n[ 42]\n[-42]\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: printf: Other("Error parsing the format string %+ 42")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: printf: Other("Error parsing the format string %+ -42")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: printf: Other("Error parsing the format string %  42")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: printf: Other("Error parsing the format string %  -42")
+</pre></td></tr><tr><td><a name="details-44-osh"></a><b>osh</b></td><td>44 <a href="builtin-printf.test.html#L901">printf + and space flags</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  [%+d]\n
+    ^
+[ printf arg at line 1 of [ stdin ] ]:1
+
+  printf '[%+d]\n' 42
+         ^
+[ stdin ]:1: osh printf doesn't support the '+' flag
+  [%+d]\n
+    ^
+[ printf arg at line 2 of [ stdin ] ]:1
+
+  printf '[%+d]\n' -42
+         ^
+[ stdin ]:2: osh printf doesn't support the '+' flag
+  [% d]\n
+    ^
+[ printf arg at line 3 of [ stdin ] ]:1
+
+  printf '[% d]\n' 42
+         ^
+[ stdin ]:3: osh printf doesn't support the ' ' flag
+  [% d]\n
+    ^
+[ printf arg at line 4 of [ stdin ] ]:1
+
+  printf '[% d]\n' -42
+         ^
+[ stdin ]:4: osh printf doesn't support the ' ' flag
+</pre></td></tr><tr><td><a name="details-45-sush"></a><b>sush</b></td><td>45 <a href="builtin-printf.test.html#L916">printf # flag</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[0][052]\n[0][0x2a]\n[0][0X2A]\n---\n[3][3.]\n[3][3.00000]\n'
+Got      '---\n'
+</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>---
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: printf: Other("Error parsing the format string %# 0")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: printf: Other("Error parsing the format string %# 0")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: printf: Other("Error parsing the format string %# 0")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: printf: Other("Error parsing the format string %# 3")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: printf: Other("Incorrect type passed as an argument %g 3")
+</pre></td></tr><tr><td><a name="details-45-osh"></a><b>osh</b></td><td>45 <a href="builtin-printf.test.html#L916">printf # flag</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>---
+</pre><i>stderr:</i> <br/>
+<pre>  [%#o][%#o]\n
+    ^
+[ printf arg at line 1 of [ stdin ] ]:1
+
+  printf '[%#o][%#o]\n' 0 42
+         ^
+[ stdin ]:1: osh printf doesn't support the '#' flag
+  [%#x][%#x]\n
+    ^
+[ printf arg at line 2 of [ stdin ] ]:1
+
+  printf '[%#x][%#x]\n' 0 42
+         ^
+[ stdin ]:2: osh printf doesn't support the '#' flag
+  [%#X][%#X]\n
+    ^
+[ printf arg at line 3 of [ stdin ] ]:1
+
+  printf '[%#X][%#X]\n' 0 42
+         ^
+[ stdin ]:3: osh printf doesn't support the '#' flag
+  [%.0f][%#.0f]\n
+      ^
+[ printf arg at line 5 of [ stdin ] ]:1
+
+  printf '[%.0f][%#.0f]\n' 3 3
+         ^
+[ stdin ]:5: osh printf doesn't support floating point
+  [%g][%#g]\n
+    ^
+[ printf arg at line 6 of [ stdin ] ]:1
+
+  printf '[%g][%#g]\n' 3 3
+         ^
+[ stdin ]:6: osh printf doesn't support floating point
+</pre></td></tr><tr><td><a name="details-46-sush"></a><b>sush</b></td><td>46 <a href="builtin-printf.test.html#L940">Runtime error for invalid integer</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '3\nstatus=1\n0\nstatus=1\n', got '3abc\nstatus=0\nxyz\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>3abc
+status=0
+xyz
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-46-brush"></a><b>brush</b></td><td>46 <a href="builtin-printf.test.html#L940">Runtime error for invalid integer</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '3\nstatus=1\n0\nstatus=1\n', got '3\nstatus=0\n0\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>3
+status=0
+0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/brush/target/release/brush: '3abc': value not completely converted
+/home/andy/git/oils-for-unix/oils/../../shells/brush/target/release/brush: 'xyz': expected a numeric value
+</pre></td></tr><tr><td><a name="details-46-osh"></a><b>osh</b></td><td>46 <a href="builtin-printf.test.html#L940">Runtime error for invalid integer</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>  printf '%d\n' $x
+                ^~
+[ stdin ]:2: printf expected an integer, got '3abc'
+  printf '%d\n' xyz
+                ^~~
+[ stdin ]:4: printf expected an integer, got 'xyz'
+</pre></td></tr><tr><td><a name="details-47-mksh"></a><b>mksh</b></td><td>47 <a href="builtin-printf.test.html#L972">%(strftime format)T</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>printf: %(: invalid conversion specification
+printf: %(: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-47-ksh"></a><b>ksh</b></td><td>47 <a href="builtin-printf.test.html#L972">%(strftime format)T</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '2019-05-16\n2019-05-15\nstatus=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>printf: %(: invalid conversion specification
+printf: %(: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-47-toysh"></a><b>toysh</b></td><td>47 <a href="builtin-printf.test.html#L972">%(strftime format)T</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '2019-05-16\n2019-05-15\nstatus=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>printf: bad %(@2
+printf: bad %(@2
+</pre></td></tr><tr><td><a name="details-47-sush"></a><b>sush</b></td><td>47 <a href="builtin-printf.test.html#L972">%(strftime format)T</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '2019-05-16\n2019-05-15\nstatus=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: printf: Other("Error parsing the format string %( 1557978599")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: printf: Other("Error parsing the format string %( 1557978599")
+</pre></td></tr><tr><td><a name="details-47-brush"></a><b>brush</b></td><td>47 <a href="builtin-printf.test.html#L972">%(strftime format)T</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '2019-05-16\n2019-05-15\nstatus=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m printf: printf parsing error: %(: invalid conversion specification
+[31mERROR[0m printf: printf parsing error: %(: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-48-mksh"></a><b>mksh</b></td><td>48 <a href="builtin-printf.test.html#L991">%(strftime format)T doesn't respect TZ if not exported</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>printf: %(: invalid conversion specification
+printf: %(: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-48-ksh"></a><b>ksh</b></td><td>48 <a href="builtin-printf.test.html#L991">%(strftime format)T doesn't respect TZ if not exported</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'not equal\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>printf: %(: invalid conversion specification
+printf: %(: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-48-toysh"></a><b>toysh</b></td><td>48 <a href="builtin-printf.test.html#L991">%(strftime format)T doesn't respect TZ if not exported</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'not equal\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>printf: bad %(@2
+printf: bad %(@2
+</pre></td></tr><tr><td><a name="details-48-sush"></a><b>sush</b></td><td>48 <a href="builtin-printf.test.html#L991">%(strftime format)T doesn't respect TZ if not exported</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'not equal\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: printf: Other("Error parsing the format string %( 1557978599")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: printf: Other("Error parsing the format string %( 1557978599")
+</pre></td></tr><tr><td><a name="details-48-brush"></a><b>brush</b></td><td>48 <a href="builtin-printf.test.html#L991">%(strftime format)T doesn't respect TZ if not exported</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'not equal\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m printf: printf parsing error: %(: invalid conversion specification
+[31mERROR[0m printf: printf parsing error: %(: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-49-mksh"></a><b>mksh</b></td><td>49 <a href="builtin-printf.test.html#L1013">%(strftime format)T TZ in environ but not in shell's memory</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>printf: %(: invalid conversion specification
+printf: %(: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-49-ksh"></a><b>ksh</b></td><td>49 <a href="builtin-printf.test.html#L1013">%(strftime format)T TZ in environ but not in shell's memory</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'not equal\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>printf: %(: invalid conversion specification
+printf: %(: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-49-toysh"></a><b>toysh</b></td><td>49 <a href="builtin-printf.test.html#L1013">%(strftime format)T TZ in environ but not in shell's memory</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'not equal\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>printf: bad %(@2
+printf: bad %(@2
+</pre></td></tr><tr><td><a name="details-49-sush"></a><b>sush</b></td><td>49 <a href="builtin-printf.test.html#L1013">%(strftime format)T TZ in environ but not in shell's memory</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'not equal\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: printf: Other("Error parsing the format string %( 1557978599")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: printf: Other("Error parsing the format string %( 1557978599")
+</pre></td></tr><tr><td><a name="details-49-brush"></a><b>brush</b></td><td>49 <a href="builtin-printf.test.html#L1013">%(strftime format)T TZ in environ but not in shell's memory</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'not equal\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m printf: printf parsing error: %(: invalid conversion specification
+[31mERROR[0m printf: printf parsing error: %(: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-50-mksh"></a><b>mksh</b></td><td>50 <a href="builtin-printf.test.html#L1034">%10.5(strftime format)T</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[[status=1
+</pre><i>stderr:</i> <br/>
+<pre>printf: %10.5(: invalid conversion specification
+printf: %10.5(: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-50-ksh"></a><b>ksh</b></td><td>50 <a href="builtin-printf.test.html#L1034">%10.5(strftime format)T</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '[     2019-]\n[     2019-]\nstatus=0\n', got '[[status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[[status=1
+</pre><i>stderr:</i> <br/>
+<pre>printf: %10.5(: invalid conversion specification
+printf: %10.5(: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-50-toysh"></a><b>toysh</b></td><td>50 <a href="builtin-printf.test.html#L1034">%10.5(strftime format)T</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[     2019-]\n[     2019-]\nstatus=0\n', got '[[status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[[status=1
+</pre><i>stderr:</i> <br/>
+<pre>printf: bad %(@7
+printf: bad %(@7
+</pre></td></tr><tr><td><a name="details-50-sush"></a><b>sush</b></td><td>50 <a href="builtin-printf.test.html#L1034">%10.5(strftime format)T</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[     2019-]\n[     2019-]\nstatus=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: printf: Other("Error parsing the format string %10.5( 1557978599")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: printf: Other("Error parsing the format string %10.5( 1557978599")
+</pre></td></tr><tr><td><a name="details-50-brush"></a><b>brush</b></td><td>50 <a href="builtin-printf.test.html#L1034">%10.5(strftime format)T</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '[     2019-]\n[     2019-]\nstatus=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m printf: printf parsing error: %10.5(: invalid conversion specification
+[31mERROR[0m printf: printf parsing error: %10.5(: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-52-mksh"></a><b>mksh</b></td><td>52 <a href="builtin-printf.test.html#L1060">bash truncates long strftime string at 128</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-52-ksh"></a><b>ksh</b></td><td>52 <a href="builtin-printf.test.html#L1060">bash truncates long strftime string at 128</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '4\n40\n120\n124\n0\n', got '0\n0\n0\n0\n0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+0
+0
+0
+</pre><i>stderr:</i> <br/>
+<pre>printf: %(: invalid conversion specification
+printf: %(: invalid conversion specification
+printf: %(: invalid conversion specification
+printf: %(: invalid conversion specification
+printf: %(: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-52-toysh"></a><b>toysh</b></td><td>52 <a href="builtin-printf.test.html#L1060">bash truncates long strftime string at 128</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '4\n40\n120\n124\n0\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-52-sush"></a><b>sush</b></td><td>52 <a href="builtin-printf.test.html#L1060">bash truncates long strftime string at 128</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '4\n40\n120\n124\n0\n', got '%()T0\n0\n0\n0\n0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>%()T0
+0
+0
+0
+0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: Unexpected token: ()
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: local: can only be used in a function
+seq: missing operand
+Try 'seq --help' for more information.
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: Unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 14: strftime-format: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 14: printf: usage: printf [-v var] format [arguments]
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 15: strftime-format: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 15: printf: usage: printf [-v var] format [arguments]
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 16: strftime-format: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 16: printf: usage: printf [-v var] format [arguments]
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 17: strftime-format: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 17: printf: usage: printf [-v var] format [arguments]
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 18: strftime-format: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 18: printf: usage: printf [-v var] format [arguments]
+</pre></td></tr><tr><td><a name="details-52-brush"></a><b>brush</b></td><td>52 <a href="builtin-printf.test.html#L1060">bash truncates long strftime string at 128</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '4\n40\n120\n124\n0\n', got '0\n0\n0\n0\n0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+0
+0
+0
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m printf: printf parsing error: %(: invalid conversion specification
+[31mERROR[0m printf: printf parsing error: %(: invalid conversion specification
+[31mERROR[0m printf: printf parsing error: %(: invalid conversion specification
+[31mERROR[0m printf: printf parsing error: %(: invalid conversion specification
+[31mERROR[0m printf: printf parsing error: %(: invalid conversion specification
+</pre></td></tr><tr><td><a name="details-52-osh"></a><b>osh</b></td><td>52 <a href="builtin-printf.test.html#L1060">bash truncates long strftime string at 128</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>4
+40
+120
+124
+128
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-53-toysh"></a><b>toysh</b></td><td>53 <a href="builtin-printf.test.html#L1118">printf with explicit NUL byte</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected u'x', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-53-sush"></a><b>sush</b></td><td>53 <a href="builtin-printf.test.html#L1118">printf with explicit NUL byte</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'x', got 'x\x00z\x00z'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x z z</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-53-brush"></a><b>brush</b></td><td>53 <a href="builtin-printf.test.html#L1118">printf with explicit NUL byte</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'x', got 'x\x00z\x00z'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x z z</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-54-bash"></a><b>bash</b></td><td>54 <a href="builtin-printf.test.html#L1129">printf positive integer overflow</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>18446744073709551615
+status=0
+18446744073709551615
+status=0
+
+9223372036854775807
+status=0
+9223372036854775807
+status=0
+
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 4: printf: warning: 18446744073709551616: Numerical result out of range
+bash: line 2: printf: warning: 18446744073709551615: Numerical result out of range
+bash: line 4: printf: warning: 18446744073709551616: Numerical result out of range
+</pre></td></tr><tr><td><a name="details-54-mksh"></a><b>mksh</b></td><td>54 <a href="builtin-printf.test.html#L1129">printf positive integer overflow</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>18446744073709551615
+status=0
+18446744073709551615
+status=1
+
+9223372036854775807
+status=1
+9223372036854775807
+status=1
+
+</pre><i>stderr:</i> <br/>
+<pre>printf: ‘18446744073709551616’: Numerical result out of range
+printf: ‘18446744073709551615’: Numerical result out of range
+printf: ‘18446744073709551616’: Numerical result out of range
+</pre></td></tr><tr><td><a name="details-54-ksh"></a><b>ksh</b></td><td>54 <a href="builtin-printf.test.html#L1129">printf positive integer overflow</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=1\nstatus=1\n\nstatus=1\nstatus=1\n\n', got '18446744073709551615\nstatus=0\n18446744073709551615\nstatus=1\n\n9223372036854775807\nstatus=1\n9223372036854775807\nstatus=1\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>18446744073709551615
+status=0
+18446744073709551615
+status=1
+
+9223372036854775807
+status=1
+9223372036854775807
+status=1
+
+</pre><i>stderr:</i> <br/>
+<pre>printf: ‘18446744073709551616’: Numerical result out of range
+printf: ‘18446744073709551615’: Numerical result out of range
+printf: ‘18446744073709551616’: Numerical result out of range
+</pre></td></tr><tr><td><a name="details-54-toysh"></a><b>toysh</b></td><td>54 <a href="builtin-printf.test.html#L1129">printf positive integer overflow</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=1\nstatus=1\n\nstatus=1\nstatus=1\n\n', got '9223372036854775807\nstatus=1\n9223372036854775807\nstatus=1\n\n9223372036854775807\nstatus=1\n9223372036854775807\nstatus=1\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>9223372036854775807
+status=1
+9223372036854775807
+status=1
+
+9223372036854775807
+status=1
+9223372036854775807
+status=1
+
+</pre><i>stderr:</i> <br/>
+<pre>printf: bad %u 18446744073709551615: Numerical result out of range
+printf: bad %u 18446744073709551616: Numerical result out of range
+printf: bad %d 18446744073709551615: Numerical result out of range
+printf: bad %d 18446744073709551616: Numerical result out of range
+</pre></td></tr><tr><td><a name="details-54-sush"></a><b>sush</b></td><td>54 <a href="builtin-printf.test.html#L1129">printf positive integer overflow</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=1\nstatus=1\n\nstatus=1\nstatus=1\n\n', got '18446744073709551615\nstatus=0\n18446744073709551616\nstatus=0\n\n18446744073709551615\nstatus=0\n18446744073709551616\nstatus=0\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>18446744073709551615
+status=0
+18446744073709551616
+status=0
+
+18446744073709551615
+status=0
+18446744073709551616
+status=0
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-54-brush"></a><b>brush</b></td><td>54 <a href="builtin-printf.test.html#L1129">printf positive integer overflow</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=1\nstatus=1\n\nstatus=1\nstatus=1\n\n', got '18446744073709551615\nstatus=0\n18446744073709551615\nstatus=0\n\n9223372036854775807\nstatus=0\n9223372036854775807\nstatus=0\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>18446744073709551615
+status=0
+18446744073709551615
+status=0
+
+9223372036854775807
+status=0
+9223372036854775807
+status=0
+
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/brush/target/release/brush: '18446744073709551616': Numerical result out of range
+/home/andy/git/oils-for-unix/oils/../../shells/brush/target/release/brush: '18446744073709551615': Numerical result out of range
+/home/andy/git/oils-for-unix/oils/../../shells/brush/target/release/brush: '18446744073709551616': Numerical result out of range
+</pre></td></tr><tr><td><a name="details-55-bash"></a><b>bash</b></td><td>55 <a href="builtin-printf.test.html#L1210">printf negative integer overflow</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+status=0
+18446744073709551615
+status=0
+
+-9223372036854775808
+status=0
+-9223372036854775808
+status=0
+
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 5: printf: warning: -18446744073709551616: Numerical result out of range
+bash: line 3: printf: warning: -18446744073709551615: Numerical result out of range
+bash: line 5: printf: warning: -18446744073709551616: Numerical result out of range
+</pre></td></tr><tr><td><a name="details-55-mksh"></a><b>mksh</b></td><td>55 <a href="builtin-printf.test.html#L1210">printf negative integer overflow</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+status=0
+18446744073709551615
+status=1
+
+-9223372036854775808
+status=1
+-9223372036854775808
+status=1
+
+</pre><i>stderr:</i> <br/>
+<pre>printf: ‘-18446744073709551616’: Numerical result out of range
+printf: ‘-18446744073709551615’: Numerical result out of range
+printf: ‘-18446744073709551616’: Numerical result out of range
+</pre></td></tr><tr><td><a name="details-55-ksh"></a><b>ksh</b></td><td>55 <a href="builtin-printf.test.html#L1210">printf negative integer overflow</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=1\nstatus=1\n\nstatus=1\nstatus=1\n\n', got '1\nstatus=0\n18446744073709551615\nstatus=1\n\n-9223372036854775808\nstatus=1\n-9223372036854775808\nstatus=1\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+status=0
+18446744073709551615
+status=1
+
+-9223372036854775808
+status=1
+-9223372036854775808
+status=1
+
+</pre><i>stderr:</i> <br/>
+<pre>printf: ‘-18446744073709551616’: Numerical result out of range
+printf: ‘-18446744073709551615’: Numerical result out of range
+printf: ‘-18446744073709551616’: Numerical result out of range
+</pre></td></tr><tr><td><a name="details-55-toysh"></a><b>toysh</b></td><td>55 <a href="builtin-printf.test.html#L1210">printf negative integer overflow</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=1\nstatus=1\n\nstatus=1\nstatus=1\n\n', got '9223372036854775808\nstatus=1\n9223372036854775808\nstatus=1\n\n-9223372036854775808\nstatus=1\n-9223372036854775808\nstatus=1\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>9223372036854775808
+status=1
+9223372036854775808
+status=1
+
+-9223372036854775808
+status=1
+-9223372036854775808
+status=1
+
+</pre><i>stderr:</i> <br/>
+<pre>printf: bad %u -18446744073709551615: Numerical result out of range
+printf: bad %u -18446744073709551616: Numerical result out of range
+printf: bad %d -18446744073709551615: Numerical result out of range
+printf: bad %d -18446744073709551616: Numerical result out of range
+</pre></td></tr><tr><td><a name="details-55-sush"></a><b>sush</b></td><td>55 <a href="builtin-printf.test.html#L1210">printf negative integer overflow</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=1\nstatus=1\n\nstatus=1\nstatus=1\n\n', got '1\nstatus=0\nstatus=1\n\n-18446744073709551615\nstatus=0\n-18446744073709551616\nstatus=0\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+status=0
+status=1
+
+-18446744073709551615
+status=0
+-18446744073709551616
+status=0
+
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: printf: ParseIntError("number too large to fit in target type")
+</pre></td></tr><tr><td><a name="details-55-brush"></a><b>brush</b></td><td>55 <a href="builtin-printf.test.html#L1210">printf negative integer overflow</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=1\nstatus=1\n\nstatus=1\nstatus=1\n\n', got '1\nstatus=0\n18446744073709551615\nstatus=0\n\n-9223372036854775808\nstatus=0\n-9223372036854775808\nstatus=0\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+status=0
+18446744073709551615
+status=0
+
+-9223372036854775808
+status=0
+-9223372036854775808
+status=0
+
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/brush/target/release/brush: '-18446744073709551616': Numerical result out of range
+/home/andy/git/oils-for-unix/oils/../../shells/brush/target/release/brush: '-18446744073709551615': Numerical result out of range
+/home/andy/git/oils-for-unix/oils/../../shells/brush/target/release/brush: '-18446744073709551616': Numerical result out of range
+</pre></td></tr></table></body></html>

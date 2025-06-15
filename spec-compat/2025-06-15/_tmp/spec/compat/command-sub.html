@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>command-sub: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for command-sub.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>29</td><td>27</td><td>27</td><td>13</td><td>28</td><td>15</td><td>30</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>3</td><td>17</td><td>2</td><td>15</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>30</td><td>30</td><td>30</td><td>30</td><td>30</td><td>30</td><td>30</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L3">case</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L7">case in subshell</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L15">Command sub word part</a></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L20">Backtick</a></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L24">Backtick 2</a></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L28">Nested backticks</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L35">Making command out of command sub should work</a></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L40">Making keyword out of command sub should NOT work</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L47">Command sub with here doc</a></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L55">Here doc with pipeline</a></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L62">Command Sub word split</a></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L66">Command Sub trailing newline removed</a></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L71">Command Sub trailing whitespace not removed</a></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L76">Command Sub and exit code</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L88">Command Sub in local sets exit code</a></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L103">Double Quotes in Command Sub in Double Quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"><a href="#details-15-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L123">Escaped quote in [[ ]]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-16-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L133">Quoting " within ``</a></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L143">Quoting $ within ``</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-18-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L157">Quoting $ within `` within double quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-19-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L171">Quoting \ within ``</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-20-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L182">Quoting \ within `` within double quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-21-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L192">Quoting ( within ``</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-22-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L202">Quoting ( within `` within double quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-23-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L212">Quoting non-special characters within ``</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-24-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L224">Quoting non-special characters within `` within double quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-25-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L236">Quoting double quotes within backticks</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-26-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L246">More levels of double quotes in backticks</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-mksh">details</a></td><td class="details-row"><a href="#details-27-ksh">details</a></td><td class="details-row"><a href="#details-27-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-27-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L266">Syntax errors with double quotes within backticks</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-28-bash">details</a></td><td class="details-row"><a href="#details-28-mksh">details</a></td><td class="details-row"><a href="#details-28-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="command-sub.test.html#L291">Empty command sub $() (command::NoOp)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>169 passed, 3 OK, 0 not implemented, 1 BUG, 37 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="command-sub.test.html#L3">case</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'letter\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>free(): invalid pointer
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="command-sub.test.html#L7">case in subshell</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'letter\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: ;;
+</pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="command-sub.test.html#L7">case in subshell</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'letter\n', got ''</span><br/>
+<span class="assertion">[brush status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error near token `;;' (line 1 col 46)
+</pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="command-sub.test.html#L28">Nested backticks</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '000000-first\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>sh: `echo: No such file or directory
+</pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="command-sub.test.html#L40">Making keyword out of command sub should NOT work</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: 'do' unexpected
+</pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="command-sub.test.html#L40">Making keyword out of command sub should NOT work</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected 'do'
+</pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="command-sub.test.html#L40">Making keyword out of command sub should NOT work</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got 'status=2\n'</span><br/>
+<span class="assertion">[sush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: Unexpected token: do
+</pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="command-sub.test.html#L40">Making keyword out of command sub should NOT work</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'status=2\n'</span><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error near token `echo' (line 1 col 36)
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="command-sub.test.html#L76">Command Sub and exit code</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'x\n0\n33\n', got 'x\n0\n0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x
+0
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="command-sub.test.html#L103">Double Quotes in Command Sub in Double Quotes</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'x hi\nx hi\nx "hi"\nx hi\nx hi\nx hi\n', got 'x hi\nx hi\nx "hi"\nx hi\nx hi\nx "hi"\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x hi
+x hi
+x "hi"
+x hi
+x hi
+x "hi"
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="command-sub.test.html#L103">Double Quotes in Command Sub in Double Quotes</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'x hi\nx hi\nx "hi"\nx hi\nx hi\nx hi\n', got 'x hi\nx hi\nx "hi"\nx hi\nx hi\nx "hi"\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x hi
+x hi
+x "hi"
+x hi
+x hi
+x "hi"
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-brush"></a><b>brush</b></td><td>15 <a href="command-sub.test.html#L103">Double Quotes in Command Sub in Double Quotes</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'x hi\nx hi\nx "hi"\nx hi\nx hi\nx hi\n', got 'x hi\nx hi\nx "hi"\nx hi\nx hi\nx "hi"\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x hi
+x hi
+x "hi"
+x hi
+x hi
+x "hi"
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="command-sub.test.html#L123">Escaped quote in [[ ]]</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '123  456\n"\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: unexpected end of file
+</pre></td></tr><tr><td><a name="details-16-brush"></a><b>brush</b></td><td>16 <a href="command-sub.test.html#L123">Escaped quote in [[ ]]</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '123  456\n"\n', got '123  456\n'</span><br/>
+<span class="assertion">[brush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>123  456
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: unterminated double quote at line 1 col 13 (detected near line 1 column 26)
+cat: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/command-sub.test.sh.3447537/16-brush/command-sub-dbracket: No such file or directory
+</pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="command-sub.test.html#L143">Quoting $ within ``</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1 $\n2 $\n3 $\n4 $\n5 \\$\n', got '1 $\n2 $\n3 \\$\n4 \\$\n5 \\\\$\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1 $
+2 $
+3 \$
+4 \$
+5 \\$
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-brush"></a><b>brush</b></td><td>18 <a href="command-sub.test.html#L143">Quoting $ within ``</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '1 $\n2 $\n3 $\n4 $\n5 \\$\n', got '1 $\n2 $\n3 \\$\n4 \\$\n5 \\\\$\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1 $
+2 $
+3 \$
+4 \$
+5 \\$
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="command-sub.test.html#L157">Quoting $ within `` within double quotes</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1 $\n2 $\n3 $\n4 $\n5 \\$\n', got '1 $\n2 $\n3 \\$\n4 \\$\n5 \\\\$\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1 $
+2 $
+3 \$
+4 \$
+5 \\$
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-brush"></a><b>brush</b></td><td>19 <a href="command-sub.test.html#L157">Quoting $ within `` within double quotes</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '1 $\n2 $\n3 $\n4 $\n5 \\$\n', got '1 $\n2 $\n3 \\$\n4 \\$\n5 \\\\$\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1 $
+2 $
+3 \$
+4 \$
+5 \\$
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="command-sub.test.html#L171">Quoting \ within ``</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[1 ]\n[2 ]\n[3 \\]\n', got '[1  ]\n[2 \\]\n[3 \\\\]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[1  ]
+[2 \]
+[3 \\]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-brush"></a><b>brush</b></td><td>20 <a href="command-sub.test.html#L171">Quoting \ within ``</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '[1 ]\n[2 ]\n[3 \\]\n', got '[1 ]\n[2 \\]\n[3 \\\\]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[1 ]
+[2 \]
+[3 \\]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="command-sub.test.html#L182">Quoting \ within `` within double quotes</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[1  ]\n[2  ]\n[3 \\]\n', got '[1  ]\n[2 \\]\n[3 \\\\]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[1  ]
+[2 \]
+[3 \\]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-brush"></a><b>brush</b></td><td>21 <a href="command-sub.test.html#L182">Quoting \ within `` within double quotes</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '[1  ]\n[2  ]\n[3 \\]\n', got '[1  ]\n[2 \\]\n[3 \\\\]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[1  ]
+[2 \]
+[3 \\]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="command-sub.test.html#L192">Quoting ( within ``</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1 (\n2 (\n3 (\n', got '1 (\n2 \\ (\n3 \\ \\ (\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1 (
+2 \ (
+3 \ \ (
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-brush"></a><b>brush</b></td><td>22 <a href="command-sub.test.html#L192">Quoting ( within ``</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '1 (\n2 (\n3 (\n', got '1 (\n2\n3\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1 (
+2
+3
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error at end of input
+[31mERROR[0m main: syntax error at end of input
+</pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="command-sub.test.html#L202">Quoting ( within `` within double quotes</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1 (\n2 (\n3  (\n', got '1 (\n2 \\ (\n3 \\ \\ (\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1 (
+2 \ (
+3 \ \ (
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-brush"></a><b>brush</b></td><td>23 <a href="command-sub.test.html#L202">Quoting ( within `` within double quotes</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '1 (\n2 (\n3  (\n', got '1 (\n2 \n3 \n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1 (
+2 
+3 
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error at end of input
+[31mERROR[0m main: syntax error at end of input
+</pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="command-sub.test.html#L212">Quoting non-special characters within ``</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[1 z]\n[2 z]\n[3 \\z]\n[4 \\z]\n', got '[1 z]\n[2 \\z]\n[3 \\z]\n[4 \\\\z]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[1 z]
+[2 \z]
+[3 \z]
+[4 \\z]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-brush"></a><b>brush</b></td><td>24 <a href="command-sub.test.html#L212">Quoting non-special characters within ``</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '[1 z]\n[2 z]\n[3 \\z]\n[4 \\z]\n', got '[1 z]\n[2 \\z]\n[3 \\z]\n[4 \\\\z]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[1 z]
+[2 \z]
+[3 \z]
+[4 \\z]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="command-sub.test.html#L224">Quoting non-special characters within `` within double quotes</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[1 z]\n[2 z]\n[3 \\z]\n[4 \\z]\n', got '[1 z]\n[2 \\z]\n[3 \\z]\n[4 \\\\z]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[1 z]
+[2 \z]
+[3 \z]
+[4 \\z]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-brush"></a><b>brush</b></td><td>25 <a href="command-sub.test.html#L224">Quoting non-special characters within `` within double quotes</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '[1 z]\n[2 z]\n[3 \\z]\n[4 \\z]\n', got '[1 z]\n[2 \\z]\n[3 \\z]\n[4 \\\\z]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[1 z]
+[2 \z]
+[3 \z]
+[4 \\z]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="command-sub.test.html#L236">Quoting double quotes within backticks</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '"foo"\n"foo"\n"foo"\n', got '"foo"\n"foo"\n\\foo\\\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>"foo"
+"foo"
+\foo\
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-brush"></a><b>brush</b></td><td>26 <a href="command-sub.test.html#L236">Quoting double quotes within backticks</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '"foo"\n"foo"\n"foo"\n', got '"foo"\n"foo"\n\\foo\\\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>"foo"
+"foo"
+\foo\
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-mksh"></a><b>mksh</b></td><td>27 <a href="command-sub.test.html#L246">More levels of double quotes in backticks</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>oo\ -
+oo\ -
+\"foo\" -
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-ksh"></a><b>ksh</b></td><td>27 <a href="command-sub.test.html#L246">More levels of double quotes in backticks</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '\\foo\\ -\n\\foo\\ -\n\\"foo\\" -\n', got '\x0coo\\ -\n\x0coo\\ -\n\\"foo\\" -\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>oo\ -
+oo\ -
+\"foo\" -
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-toysh"></a><b>toysh</b></td><td>27 <a href="command-sub.test.html#L246">More levels of double quotes in backticks</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '\\foo\\ -\n\\foo\\ -\n\\"foo\\" -\n', got '\\"foo\\" -\n\\\\foo\\\\ -\n\\\\"foo\\\\" -\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>\"foo\" -
+\\foo\\ -
+\\"foo\\" -
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-brush"></a><b>brush</b></td><td>27 <a href="command-sub.test.html#L246">More levels of double quotes in backticks</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '\\foo\\ -\n\\foo\\ -\n\\"foo\\" -\n', got '\\"foo\\" -\n\\\\foo\\\\ -\n\\\\"foo\\\\" -\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>\"foo\" -
+\\foo\\ -
+\\"foo\\" -
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-bash"></a><b>bash</b></td><td>28 <a href="command-sub.test.html#L266">Syntax errors with double quotes within backticks</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>
+status=0
+
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>bash: command substitution: line 1: unexpected EOF while looking for matching `"'
+bash: command substitution: line 1: unexpected EOF while looking for matching `"'
+</pre></td></tr><tr><td><a name="details-28-mksh"></a><b>mksh</b></td><td>28 <a href="command-sub.test.html#L266">Syntax errors with double quotes within backticks</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: no closing quote
+mksh: no closing quote
+</pre></td></tr><tr><td><a name="details-28-ksh"></a><b>ksh</b></td><td>28 <a href="command-sub.test.html#L266">Syntax errors with double quotes within backticks</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=2\nstatus=2\n', got 'status=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: no closing quote
+E: ksh: no closing quote
+</pre></td></tr><tr><td><a name="details-28-brush"></a><b>brush</b></td><td>28 <a href="command-sub.test.html#L266">Syntax errors with double quotes within backticks</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=2\nstatus=2\n', got '\nstatus=0\n\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+status=0
+
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: unterminated double quote at line 1 col 6 (detected near line 1 column 7)
+[31mERROR[0m main: unterminated double quote at line 1 col 10 (detected near line 1 column 11)
+</pre></td></tr><tr><td><a name="details-29-toysh"></a><b>toysh</b></td><td>29 <a href="command-sub.test.html#L291">Empty command sub $() (command::NoOp)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '-- ..\n', got '..\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>..
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr></table></body></html>

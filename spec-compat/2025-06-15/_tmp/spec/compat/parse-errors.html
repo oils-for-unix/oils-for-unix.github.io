@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>parse-errors: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for parse-errors.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>21</td><td>7</td><td>7</td><td>21</td><td>14</td><td>12</td><td>24</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>2</td><td>18</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>3</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>19</td><td>6</td><td>13</td><td>15</td><td>3</td><td></td></tr>
+<tr><td class="timeout">TIME</td> <td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>27</td><td>27</td><td>27</td><td>27</td><td>27</td><td>27</td><td>27</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L4">Long Token - 65535 bytes</a></td></tr>
+<tr><td>  1</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L14">Token that's too long for Oils - 65536 bytes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-1-bash">details</a></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L32">$% is not a parse error</a></td></tr>
+<tr><td>  3</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L36">Bad braced var sub -- not allowed</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-3-bash">details</a></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L41">Bad var sub caught at parse time</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-4-bash">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L50">Incomplete while</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L57">Incomplete for</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L64">Incomplete if</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L71">do unexpected</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L77">} is a parse error</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L84">{ is its own word, needs a space</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L93">} on the second line</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="bug">BUG</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L99">Invalid for loop variable name</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-12-bash">details</a></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L110">bad var name globally isn't parsed like an assignment</a></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L115">bad var name in export</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"><a href="#details-14-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L121">bad var name in local</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"><a href="#details-15-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L130">misplaced parentheses are not a subshell</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-mksh">details</a></td><td class="details-row"><a href="#details-16-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L135">incomplete command sub</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-mksh">details</a></td><td class="details-row"><a href="#details-17-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L140">incomplete backticks</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-mksh">details</a></td><td class="details-row"><a href="#details-18-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L145">misplaced ;;</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-mksh">details</a></td><td class="details-row"><a href="#details-19-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L151">empty clause in [[</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-mksh">details</a></td><td class="details-row"><a href="#details-20-ksh">details</a></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-20-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L160">interactive parse error (regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-21-bash">details</a></td><td class="details-row"><a href="#details-21-mksh">details</a></td><td class="details-row"><a href="#details-21-ksh">details</a></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-21-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="bug">BUG</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="parse-errors.test.html#L172">array literal inside array is a parse error</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-22-bash">details</a></td><td class="details-row"><a href="#details-22-mksh">details</a></td><td class="details-row"><a href="#details-22-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"><a href="#details-22-brush">details</a></td><td class="details-row"><a href="#details-22-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="parse-errors.test.html#L181">array literal inside loop is a parse error</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-mksh">details</a></td><td class="details-row"><a href="#details-23-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-23-sush">details</a></td><td class="details-row"><a href="#details-23-brush">details</a></td><td class="details-row"><a href="#details-23-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="parse-errors.test.html#L193">array literal in case</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-mksh">details</a></td><td class="details-row"><a href="#details-24-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-24-sush">details</a></td><td class="details-row"><a href="#details-24-brush">details</a></td><td class="details-row"><a href="#details-24-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L206">%foo=() is parse error (regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-mksh">details</a></td><td class="details-row"><a href="#details-25-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="parse-errors.test.html#L217">echo =word is allowed</a></td></tr>
+</table>
+<pre>106 passed, 20 OK, 0 not implemented, 4 BUG, 56 failed, 3 timeouts, 0 cases skipped
+3 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-1-bash"></a><b>bash</b></td><td>1 <a href="parse-errors.test.html#L14">Token that's too long for Oils - 65536 bytes</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+65536 out
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="parse-errors.test.html#L14">Token that's too long for Oils - 65536 bytes</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+65536 out
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="parse-errors.test.html#L14">Token that's too long for Oils - 65536 bytes</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=2\n0 out\n', got 'status=0\n65536 out\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+65536 out
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="parse-errors.test.html#L14">Token that's too long for Oils - 65536 bytes</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=2\n0 out\n', got 'status=0\n65536 out\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+65536 out
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="parse-errors.test.html#L14">Token that's too long for Oils - 65536 bytes</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=2\n0 out\n', got 'status=0\n65536 out\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+65536 out
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="parse-errors.test.html#L14">Token that's too long for Oils - 65536 bytes</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=2\n0 out\n', got 'status=0\n65536 out\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+65536 out
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-bash"></a><b>bash</b></td><td>3 <a href="parse-errors.test.html#L36">Bad braced var sub -- not allowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>bash: line 1: ${%}: bad substitution
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="parse-errors.test.html#L36">Bad braced var sub -- not allowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: ${%}: bad substitution
+</pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="parse-errors.test.html#L36">Bad braced var sub -- not allowed</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: ${%}: bad substitution
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="parse-errors.test.html#L36">Bad braced var sub -- not allowed</a><br/><br/>
+<span class="assertion">[toysh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: : bad substitution
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="parse-errors.test.html#L36">Bad braced var sub -- not allowed</a><br/><br/>
+<span class="assertion">[sush status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: `${%}': bad substitution
+</pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="parse-errors.test.html#L36">Bad braced var sub -- not allowed</a><br/><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>${%}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-bash"></a><b>bash</b></td><td>4 <a href="parse-errors.test.html#L41">Bad var sub caught at parse time</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="parse-errors.test.html#L41">Bad var sub caught at parse time</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="parse-errors.test.html#L41">Bad var sub caught at parse time</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="parse-errors.test.html#L41">Bad var sub caught at parse time</a><br/><br/>
+<span class="assertion">[toysh status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="parse-errors.test.html#L41">Bad var sub caught at parse time</a><br/><br/>
+<span class="assertion">[sush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="parse-errors.test.html#L41">Bad var sub caught at parse time</a><br/><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="parse-errors.test.html#L50">Incomplete while</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: 'while' unmatched
+</pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="parse-errors.test.html#L50">Incomplete while</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unmatched 'while'
+</pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="parse-errors.test.html#L57">Incomplete for</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: 'newline' unexpected
+</pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="parse-errors.test.html#L57">Incomplete for</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected 'newline'
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="parse-errors.test.html#L57">Incomplete for</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got 'hi\nstatus=0\n'</span><br/>
+<span class="assertion">[sush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="parse-errors.test.html#L57">Incomplete for</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'status=2\n'</span><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error near token `
+' (line 1 col 13)
+</pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="parse-errors.test.html#L64">Incomplete if</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: 'if' unmatched
+</pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="parse-errors.test.html#L64">Incomplete if</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unmatched 'if'
+</pre></td></tr><tr><td><a name="details-8-mksh"></a><b>mksh</b></td><td>8 <a href="parse-errors.test.html#L71">do unexpected</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: 'do' unexpected
+</pre></td></tr><tr><td><a name="details-8-ksh"></a><b>ksh</b></td><td>8 <a href="parse-errors.test.html#L71">do unexpected</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected 'do'
+</pre></td></tr><tr><td><a name="details-9-mksh"></a><b>mksh</b></td><td>9 <a href="parse-errors.test.html#L77">} is a parse error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '}' unexpected
+</pre></td></tr><tr><td><a name="details-9-ksh"></a><b>ksh</b></td><td>9 <a href="parse-errors.test.html#L77">} is a parse error</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '}'
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="parse-errors.test.html#L77">} is a parse error</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got 'should not get here\n'</span><br/>
+<span class="assertion">[sush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>should not get here
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: Unexpected token: }
+
+</pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="parse-errors.test.html#L77">} is a parse error</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'should not get here\n'</span><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>should not get here
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error near token `
+' (line 1 col 2)
+</pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="parse-errors.test.html#L84">{ is its own word, needs a space</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '}' unexpected
+</pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="parse-errors.test.html#L84">{ is its own word, needs a space</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '}'
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="parse-errors.test.html#L84">{ is its own word, needs a space</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got 'status=2\n'</span><br/>
+<span class="assertion">[sush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: Unexpected token: }
+
+</pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="parse-errors.test.html#L84">{ is its own word, needs a space</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'status=2\n'</span><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error near token `
+' (line 1 col 7)
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="parse-errors.test.html#L93">} on the second line</a><br/><br/>
+<span class="assertion">[toysh status] Expected 127, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: {ls: No such file or directory
+main: line 3: sh: syntax error: }
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="parse-errors.test.html#L93">} on the second line</a><br/><br/>
+<span class="assertion">[sush status] Expected 127, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: {ls: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: Unexpected token: }
+
+</pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="parse-errors.test.html#L93">} on the second line</a><br/><br/>
+<span class="assertion">[brush status] Expected 127, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>{ls: command not found
+[31mERROR[0m main: syntax error near token `
+' (line 1 col 2)
+</pre></td></tr><tr><td><a name="details-12-bash"></a><b>bash</b></td><td>12 <a href="parse-errors.test.html#L99">Invalid for loop variable name</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>done
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 3: `i.j': not a valid identifier
+</pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="parse-errors.test.html#L99">Invalid for loop variable name</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: for: bad identifier
+</pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="parse-errors.test.html#L99">Invalid for loop variable name</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: for: bad identifier
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="parse-errors.test.html#L99">Invalid for loop variable name</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got 'hi\ndone\n'</span><br/>
+<span class="assertion">[sush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+done
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: Unexpected token: .j
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: Unexpected token: done
+
+</pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="parse-errors.test.html#L99">Invalid for loop variable name</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'hi\nhi\nhi\ndone\n'</span><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+hi
+hi
+done
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="parse-errors.test.html#L115">bad var name in export</a><br/><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-brush"></a><b>brush</b></td><td>14 <a href="parse-errors.test.html#L115">bad var name in export</a><br/><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="parse-errors.test.html#L121">bad var name in local</a><br/><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-brush"></a><b>brush</b></td><td>15 <a href="parse-errors.test.html#L121">bad var name in local</a><br/><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-mksh"></a><b>mksh</b></td><td>16 <a href="parse-errors.test.html#L130">misplaced parentheses are not a subshell</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-16-ksh"></a><b>ksh</b></td><td>16 <a href="parse-errors.test.html#L130">misplaced parentheses are not a subshell</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-17-mksh"></a><b>mksh</b></td><td>17 <a href="parse-errors.test.html#L135">incomplete command sub</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unmatched
+</pre></td></tr><tr><td><a name="details-17-ksh"></a><b>ksh</b></td><td>17 <a href="parse-errors.test.html#L135">incomplete command sub</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unmatched '('
+</pre></td></tr><tr><td><a name="details-18-mksh"></a><b>mksh</b></td><td>18 <a href="parse-errors.test.html#L140">incomplete backticks</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: no closing quote
+</pre></td></tr><tr><td><a name="details-18-ksh"></a><b>ksh</b></td><td>18 <a href="parse-errors.test.html#L140">incomplete backticks</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: no closing quote
+</pre></td></tr><tr><td><a name="details-19-mksh"></a><b>mksh</b></td><td>19 <a href="parse-errors.test.html#L145">misplaced ;;</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: ';;' unexpected
+</pre></td></tr><tr><td><a name="details-19-ksh"></a><b>ksh</b></td><td>19 <a href="parse-errors.test.html#L145">misplaced ;;</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected ';;'
+</pre></td></tr><tr><td><a name="details-20-mksh"></a><b>mksh</b></td><td>20 <a href="parse-errors.test.html#L151">empty clause in [[</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '||' expression expected
+</pre></td></tr><tr><td><a name="details-20-ksh"></a><b>ksh</b></td><td>20 <a href="parse-errors.test.html#L151">empty clause in [[</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: expression expected '||'
+</pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="parse-errors.test.html#L151">empty clause in [[</a><br/><br/>
+<span class="assertion">[toysh status] Expected 2, got -11</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-brush"></a><b>brush</b></td><td>20 <a href="parse-errors.test.html#L151">empty clause in [[</a><br/><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error near token `||' (line 1 col 4)
+</pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="parse-errors.test.html#L160">interactive parse error (regression)</a><br/><br/>
+<span class="assertion">[toysh status] Expected 2, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-21-brush"></a><b>brush</b></td><td>21 <a href="parse-errors.test.html#L160">interactive parse error (regression)</a><br/><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error near token `)' (line 1 col 5)
+</pre></td></tr><tr><td><a name="details-22-bash"></a><b>bash</b></td><td>22 <a href="parse-errors.test.html#L172">array literal inside array is a parse error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>len=0
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: syntax error near unexpected token `('
+bash: line 1: `a=( inside=() )'
+</pre></td></tr><tr><td><a name="details-22-mksh"></a><b>mksh</b></td><td>22 <a href="parse-errors.test.html#L172">array literal inside array is a parse error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-22-ksh"></a><b>ksh</b></td><td>22 <a href="parse-errors.test.html#L172">array literal inside array is a parse error</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="parse-errors.test.html#L172">array literal inside array is a parse error</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got 'len=0\n'</span><br/>
+<span class="assertion">[sush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: Unexpected token: )
+
+</pre></td></tr><tr><td><a name="details-22-brush"></a><b>brush</b></td><td>22 <a href="parse-errors.test.html#L172">array literal inside array is a parse error</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'len=0\n'</span><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=0
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error near token `(' (line 1 col 12)
+</pre></td></tr><tr><td><a name="details-22-osh"></a><b>osh</b></td><td>22 <a href="parse-errors.test.html#L172">array literal inside array is a parse error</a><br/><br/>
+<span class="assertion">[osh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  a=( inside=() )
+             ^
+[ stdin ]:1: fatal: Unexpected associative array literal
+</pre></td></tr><tr><td><a name="details-23-mksh"></a><b>mksh</b></td><td>23 <a href="parse-errors.test.html#L181">array literal inside loop is a parse error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-23-ksh"></a><b>ksh</b></td><td>23 <a href="parse-errors.test.html#L181">array literal inside loop is a parse error</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-23-sush"></a><b>sush</b></td><td>23 <a href="parse-errors.test.html#L181">array literal inside loop is a parse error</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got 'x=\ndone\n'</span><br/>
+<span class="assertion">[sush status] Expected 2, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=
+done
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: Unexpected token: ();
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: Unexpected token: done
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: Unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: f: command not found
+</pre></td></tr><tr><td><a name="details-23-brush"></a><b>brush</b></td><td>23 <a href="parse-errors.test.html#L181">array literal inside loop is a parse error</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'x=\ndone\n'</span><br/>
+<span class="assertion">[brush status] Expected 2, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=
+done
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error near token `(' (line 2 col 14)
+[31mERROR[0m main: syntax error near token `
+' (line 1 col 7)
+[31mERROR[0m main: syntax error near token `
+' (line 1 col 2)
+f: command not found
+</pre></td></tr><tr><td><a name="details-23-osh"></a><b>osh</b></td><td>23 <a href="parse-errors.test.html#L181">array literal inside loop is a parse error</a><br/><br/>
+<span class="assertion">[osh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>    for x in a=(); do
+               ^
+[ stdin ]:2: fatal: Unexpected associative array literal
+</pre></td></tr><tr><td><a name="details-24-mksh"></a><b>mksh</b></td><td>24 <a href="parse-errors.test.html#L193">array literal in case</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-24-ksh"></a><b>ksh</b></td><td>24 <a href="parse-errors.test.html#L193">array literal in case</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-24-sush"></a><b>sush</b></td><td>24 <a href="parse-errors.test.html#L193">array literal in case</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got 'hi\n'</span><br/>
+<span class="assertion">[sush status] Expected 2, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: Unexpected token: ()
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: Unexpected token: )
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: Unexpected token: ;;
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: Unexpected token: esac
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: Unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: f: command not found
+</pre></td></tr><tr><td><a name="details-24-brush"></a><b>brush</b></td><td>24 <a href="parse-errors.test.html#L193">array literal in case</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'hi\n'</span><br/>
+<span class="assertion">[brush status] Expected 2, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error near token `(' (line 2 col 10)
+[31mERROR[0m main: syntax error near token `)' (line 1 col 8)
+[31mERROR[0m main: syntax error near token `;;' (line 1 col 7)
+[31mERROR[0m main: syntax error near token `
+' (line 1 col 7)
+[31mERROR[0m main: syntax error near token `
+' (line 1 col 2)
+f: command not found
+</pre></td></tr><tr><td><a name="details-24-osh"></a><b>osh</b></td><td>24 <a href="parse-errors.test.html#L193">array literal in case</a><br/><br/>
+<span class="assertion">[osh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>    case a=() in
+           ^
+[ stdin ]:2: fatal: Unexpected associative array literal
+</pre></td></tr><tr><td><a name="details-25-mksh"></a><b>mksh</b></td><td>25 <a href="parse-errors.test.html#L206">%foo=() is parse error (regression)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: %foo=: invalid function name
+</pre></td></tr><tr><td><a name="details-25-ksh"></a><b>ksh</b></td><td>25 <a href="parse-errors.test.html#L206">%foo=() is parse error (regression)</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: %foo=: invalid function name
+</pre></td></tr></table></body></html>

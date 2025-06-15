@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-dirs: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-dirs.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>16</td><td>0</td><td>0</td><td>0</td><td>0</td><td>16</td><td>16</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>15</td><td>16</td><td>16</td><td>16</td><td>0</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>16</td><td>16</td><td>16</td><td>16</td><td>16</td><td>16</td><td>16</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-dirs.test.html#L5">pushd/popd</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-dirs.test.html#L26">pushd usage</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-dirs.test.html#L44">popd usage error</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-dirs.test.html#L65">popd returns error on empty directory stack</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-dirs.test.html#L74">cd replaces the lowest entry on the directory stack!</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-dirs.test.html#L107">dirs builtin</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-dirs.test.html#L115">dirs -c to clear the stack</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-dirs.test.html#L132">dirs -v to print numbered stack, one entry per line</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-dirs.test.html#L155">dirs -p to print one entry per line</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-dirs.test.html#L174">dirs -l to print in long format, no tilde prefix</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-dirs.test.html#L189">dirs to print using tilde-prefix format</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-dirs.test.html#L198">dirs test converting true home directory to tilde</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-mksh">details</a></td><td class="details-row"><a href="#details-11-ksh">details</a></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-dirs.test.html#L207">dirs don't convert to tilde when $HOME is substring</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-dirs.test.html#L215">dirs tilde test when $HOME is exactly $PWD</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"><a href="#details-13-ksh">details</a></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-dirs.test.html#L231">dirs test of path alias `..`</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-dirs.test.html#L238">dirs test of path alias `.`</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-mksh">details</a></td><td class="details-row"><a href="#details-15-ksh">details</a></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>48 passed, 0 OK, 1 not implemented, 0 BUG, 63 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="builtin-dirs.test.html#L5">pushd/popd</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: pushd: not found
+</pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="builtin-dirs.test.html#L5">pushd/popd</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '/tmp /\npwd=/tmp\n/\npwd=/\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: pushd: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="builtin-dirs.test.html#L5">pushd/popd</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '/tmp /\npwd=/tmp\n/\npwd=/\n', got 'pwd=/\npwd=/\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pwd=/
+pwd=/
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: pushd: No such file or directory
+sh: popd: No such file or directory
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="builtin-dirs.test.html#L5">pushd/popd</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '/tmp /\npwd=/tmp\n/\npwd=/\n', got 'pwd=/\npwd=/\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pwd=/
+pwd=/
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: pushd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: popd: command not found
+</pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="builtin-dirs.test.html#L26">pushd usage</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'status=2\nstatus=0\nstatus=0\n', got 'status=127\nstatus=127\nstatus=127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: pushd: not found
+mksh: &lt;stdin&gt;[3]: pushd: not found
+mksh: &lt;stdin&gt;[5]: pushd: not found
+</pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="builtin-dirs.test.html#L26">pushd usage</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=2\nstatus=0\nstatus=0\n', got 'status=127\nstatus=127\nstatus=127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: pushd: inaccessible or not found
+E: ksh: &lt;stdin&gt;[3]: pushd: inaccessible or not found
+E: ksh: &lt;stdin&gt;[5]: pushd: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-dirs.test.html#L26">pushd usage</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=2\nstatus=0\nstatus=0\n', got 'status=127\nstatus=127\nstatus=127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: pushd: No such file or directory
+sh: pushd: No such file or directory
+sh: pushd: No such file or directory
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="builtin-dirs.test.html#L26">pushd usage</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=2\nstatus=0\nstatus=0\n', got 'status=127\nstatus=127\nstatus=127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: pushd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: pushd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: pushd: command not found
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="builtin-dirs.test.html#L44">popd usage error</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'status=2\nstatus=0\nstatus=2\n', got 'status=127\nstatus=127\nstatus=127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: pushd: not found
+mksh: &lt;stdin&gt;[2]: popd: not found
+mksh: &lt;stdin&gt;[5]: popd: not found
+mksh: &lt;stdin&gt;[8]: popd: not found
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="builtin-dirs.test.html#L44">popd usage error</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=2\nstatus=0\nstatus=2\n', got 'status=127\nstatus=127\nstatus=127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: pushd: inaccessible or not found
+E: ksh: &lt;stdin&gt;[2]: popd: inaccessible or not found
+E: ksh: &lt;stdin&gt;[5]: popd: inaccessible or not found
+E: ksh: &lt;stdin&gt;[8]: popd: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="builtin-dirs.test.html#L44">popd usage error</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=2\nstatus=0\nstatus=2\n', got 'status=127\nstatus=127\nstatus=127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: pushd: No such file or directory
+sh: popd: No such file or directory
+sh: popd: No such file or directory
+sh: popd: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="builtin-dirs.test.html#L44">popd usage error</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=2\nstatus=0\nstatus=2\n', got 'status=127\nstatus=127\nstatus=127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: pushd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: popd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: popd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: popd: command not found
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="builtin-dirs.test.html#L65">popd returns error on empty directory stack</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '1\ndirectory stack\n', got '127\n'</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>127
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="builtin-dirs.test.html#L65">popd returns error on empty directory stack</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '1\ndirectory stack\n', got '127\n'</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>127
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="builtin-dirs.test.html#L65">popd returns error on empty directory stack</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1\ndirectory stack\n', got '0\n'</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="builtin-dirs.test.html#L65">popd returns error on empty directory stack</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '1\ndirectory stack\n', got '127\n'</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>127
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="builtin-dirs.test.html#L74">cd replaces the lowest entry on the directory stack!</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'pushd=0\n/tmp /tmp/oils-spec/builtin-dirs\ncd=0\n/ /tmp/oils-spec/builtin-dirs\npopd=0\npopd=1\n'
+Got      'pushd=127\ncd=0\npopd=127\npopd=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pushd=127
+cd=0
+popd=127
+popd=127
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[6]: pushd: not found
+mksh: &lt;stdin&gt;[9]: dirs: not found
+mksh: &lt;stdin&gt;[14]: dirs: not found
+mksh: &lt;stdin&gt;[16]: popd: not found
+mksh: &lt;stdin&gt;[19]: popd: not found
+</pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="builtin-dirs.test.html#L74">cd replaces the lowest entry on the directory stack!</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'pushd=0\n/tmp /tmp/oils-spec/builtin-dirs\ncd=0\n/ /tmp/oils-spec/builtin-dirs\npopd=0\npopd=1\n'
+Got      'pushd=127\ncd=0\npopd=127\npopd=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pushd=127
+cd=0
+popd=127
+popd=127
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[6]: pushd: inaccessible or not found
+E: ksh: &lt;stdin&gt;[9]: dirs: inaccessible or not found
+E: ksh: &lt;stdin&gt;[14]: dirs: inaccessible or not found
+E: ksh: &lt;stdin&gt;[16]: popd: inaccessible or not found
+E: ksh: &lt;stdin&gt;[19]: popd: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="builtin-dirs.test.html#L74">cd replaces the lowest entry on the directory stack!</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'pushd=0\n/tmp /tmp/oils-spec/builtin-dirs\ncd=0\n/ /tmp/oils-spec/builtin-dirs\npopd=0\npopd=1\n'
+Got      'pushd=127\ncd=0\npopd=127\npopd=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pushd=127
+cd=0
+popd=127
+popd=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: pushd: No such file or directory
+sh: dirs: No such file or directory
+sh: dirs: No such file or directory
+sh: popd: No such file or directory
+sh: popd: No such file or directory
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="builtin-dirs.test.html#L74">cd replaces the lowest entry on the directory stack!</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'pushd=0\n/tmp /tmp/oils-spec/builtin-dirs\ncd=0\n/ /tmp/oils-spec/builtin-dirs\npopd=0\npopd=1\n'
+Got      'pushd=127\ncd=0\npopd=127\npopd=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pushd=127
+cd=0
+popd=127
+popd=127
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: pushd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: dirs: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 14: dirs: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 16: popd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 19: popd: command not found
+</pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="builtin-dirs.test.html#L107">dirs builtin</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '/\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: dirs: not found
+</pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="builtin-dirs.test.html#L107">dirs builtin</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '/\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: dirs: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="builtin-dirs.test.html#L107">dirs builtin</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '/\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: dirs: No such file or directory
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="builtin-dirs.test.html#L107">dirs builtin</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '/\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: dirs: command not found
+</pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="builtin-dirs.test.html#L115">dirs -c to clear the stack</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '--\n/tmp /\n--\n/tmp\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: pushd: not found
+</pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="builtin-dirs.test.html#L115">dirs -c to clear the stack</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '--\n/tmp /\n--\n/tmp\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: pushd: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="builtin-dirs.test.html#L115">dirs -c to clear the stack</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '--\n/tmp /\n--\n/tmp\n', got '\n\n'</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: pushd: No such file or directory
+sh: dirs: No such file or directory
+sh: dirs: No such file or directory
+sh: dirs: No such file or directory
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="builtin-dirs.test.html#L115">dirs -c to clear the stack</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '--\n/tmp /\n--\n/tmp\n', got '--\n--\n'</span><br/>
+<span class="assertion">[sush status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+--
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: pushd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: dirs: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: dirs: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: dirs: command not found
+</pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="builtin-dirs.test.html#L132">dirs -v to print numbered stack, one entry per line</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '--\n 0  /tmp\n 1  /\n--\n 0  /dev\n 1  /tmp\n 2  /\n'
+Got      ''
+</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: pushd: not found
+</pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="builtin-dirs.test.html#L132">dirs -v to print numbered stack, one entry per line</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '--\n 0  /tmp\n 1  /\n--\n 0  /dev\n 1  /tmp\n 2  /\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: pushd: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="builtin-dirs.test.html#L132">dirs -v to print numbered stack, one entry per line</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '--\n 0  /tmp\n 1  /\n--\n 0  /dev\n 1  /tmp\n 2  /\n'
+Got      '\n\n'
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: pushd: No such file or directory
+sh: dirs: No such file or directory
+sh: pushd: No such file or directory
+sh: dirs: No such file or directory
+</pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="builtin-dirs.test.html#L132">dirs -v to print numbered stack, one entry per line</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '--\n 0  /tmp\n 1  /\n--\n 0  /dev\n 1  /tmp\n 2  /\n'
+Got      '--\n--\n'
+</span><br/>
+<span class="assertion">[sush status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+--
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: pushd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: dirs: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: pushd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: dirs: command not found
+</pre></td></tr><tr><td><a name="details-8-mksh"></a><b>mksh</b></td><td>8 <a href="builtin-dirs.test.html#L155">dirs -p to print one entry per line</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '--\n/tmp\n/\n--\n/dev\n/tmp\n/\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: pushd: not found
+</pre></td></tr><tr><td><a name="details-8-ksh"></a><b>ksh</b></td><td>8 <a href="builtin-dirs.test.html#L155">dirs -p to print one entry per line</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '--\n/tmp\n/\n--\n/dev\n/tmp\n/\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: pushd: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="builtin-dirs.test.html#L155">dirs -p to print one entry per line</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '--\n/tmp\n/\n--\n/dev\n/tmp\n/\n', got '\n\n'</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: pushd: No such file or directory
+sh: dirs: No such file or directory
+sh: pushd: No such file or directory
+sh: dirs: No such file or directory
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="builtin-dirs.test.html#L155">dirs -p to print one entry per line</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '--\n/tmp\n/\n--\n/dev\n/tmp\n/\n', got '--\n--\n'</span><br/>
+<span class="assertion">[sush status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+--
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: pushd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: dirs: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: pushd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: dirs: command not found
+</pre></td></tr><tr><td><a name="details-9-mksh"></a><b>mksh</b></td><td>9 <a href="builtin-dirs.test.html#L174">dirs -l to print in long format, no tilde prefix</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '~/oil_test /\n/tmp/oil_test /\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[4]: pushd: not found
+mksh: &lt;stdin&gt;[5]: dirs: not found
+mksh: &lt;stdin&gt;[6]: dirs: not found
+</pre></td></tr><tr><td><a name="details-9-ksh"></a><b>ksh</b></td><td>9 <a href="builtin-dirs.test.html#L174">dirs -l to print in long format, no tilde prefix</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '~/oil_test /\n/tmp/oil_test /\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[4]: pushd: inaccessible or not found
+E: ksh: &lt;stdin&gt;[5]: dirs: inaccessible or not found
+E: ksh: &lt;stdin&gt;[6]: dirs: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="builtin-dirs.test.html#L174">dirs -l to print in long format, no tilde prefix</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '~/oil_test /\n/tmp/oil_test /\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: pushd: No such file or directory
+sh: dirs: No such file or directory
+sh: dirs: No such file or directory
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="builtin-dirs.test.html#L174">dirs -l to print in long format, no tilde prefix</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '~/oil_test /\n/tmp/oil_test /\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: pushd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: dirs: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: dirs: command not found
+</pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="builtin-dirs.test.html#L189">dirs to print using tilde-prefix format</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '~/oil_test /\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[4]: pushd: not found
+mksh: &lt;stdin&gt;[5]: dirs: not found
+</pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="builtin-dirs.test.html#L189">dirs to print using tilde-prefix format</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '~/oil_test /\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[4]: pushd: inaccessible or not found
+E: ksh: &lt;stdin&gt;[5]: dirs: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="builtin-dirs.test.html#L189">dirs to print using tilde-prefix format</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '~/oil_test /\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: pushd: No such file or directory
+sh: dirs: No such file or directory
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="builtin-dirs.test.html#L189">dirs to print using tilde-prefix format</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '~/oil_test /\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: pushd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: dirs: command not found
+</pre></td></tr><tr><td><a name="details-11-mksh"></a><b>mksh</b></td><td>11 <a href="builtin-dirs.test.html#L198">dirs test converting true home directory to tilde</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '~/oil_test/tmp /\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[4]: pushd: not found
+mksh: &lt;stdin&gt;[5]: dirs: not found
+</pre></td></tr><tr><td><a name="details-11-ksh"></a><b>ksh</b></td><td>11 <a href="builtin-dirs.test.html#L198">dirs test converting true home directory to tilde</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '~/oil_test/tmp /\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[4]: pushd: inaccessible or not found
+E: ksh: &lt;stdin&gt;[5]: dirs: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="builtin-dirs.test.html#L198">dirs test converting true home directory to tilde</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '~/oil_test/tmp /\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: pushd: No such file or directory
+sh: dirs: No such file or directory
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="builtin-dirs.test.html#L198">dirs test converting true home directory to tilde</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '~/oil_test/tmp /\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: pushd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: dirs: command not found
+</pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="builtin-dirs.test.html#L207">dirs don't convert to tilde when $HOME is substring</a><br/><br/>
+<span class="assertion">[mksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: pushd: not found
+mksh: &lt;stdin&gt;[6]: dirs: not found
+</pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="builtin-dirs.test.html#L207">dirs don't convert to tilde when $HOME is substring</a><br/><br/>
+<span class="assertion">[ksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: pushd: inaccessible or not found
+E: ksh: &lt;stdin&gt;[6]: dirs: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="builtin-dirs.test.html#L207">dirs don't convert to tilde when $HOME is substring</a><br/><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: pushd: No such file or directory
+sh: dirs: No such file or directory
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="builtin-dirs.test.html#L207">dirs don't convert to tilde when $HOME is substring</a><br/><br/>
+<span class="assertion">[sush status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: pushd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: dirs: command not found
+</pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="builtin-dirs.test.html#L215">dirs tilde test when $HOME is exactly $PWD</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '~ /\n~ /\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[4]: pushd: not found
+mksh: &lt;stdin&gt;[5]: dirs: not found
+</pre></td></tr><tr><td><a name="details-13-ksh"></a><b>ksh</b></td><td>13 <a href="builtin-dirs.test.html#L215">dirs tilde test when $HOME is exactly $PWD</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '~ /\n~ /\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[4]: pushd: inaccessible or not found
+E: ksh: &lt;stdin&gt;[5]: dirs: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="builtin-dirs.test.html#L215">dirs tilde test when $HOME is exactly $PWD</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '~ /\n~ /\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: pushd: No such file or directory
+sh: dirs: No such file or directory
+</pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="builtin-dirs.test.html#L215">dirs tilde test when $HOME is exactly $PWD</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '~ /\n~ /\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: pushd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: dirs: command not found
+</pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="builtin-dirs.test.html#L231">dirs test of path alias `..`</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '/ /tmp\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: pushd: not found
+mksh: &lt;stdin&gt;[3]: dirs: not found
+</pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="builtin-dirs.test.html#L231">dirs test of path alias `..`</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '/ /tmp\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: pushd: inaccessible or not found
+E: ksh: &lt;stdin&gt;[3]: dirs: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="builtin-dirs.test.html#L231">dirs test of path alias `..`</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '/ /tmp\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: pushd: No such file or directory
+sh: dirs: No such file or directory
+</pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="builtin-dirs.test.html#L231">dirs test of path alias `..`</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '/ /tmp\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: pushd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: dirs: command not found
+</pre></td></tr><tr><td><a name="details-15-mksh"></a><b>mksh</b></td><td>15 <a href="builtin-dirs.test.html#L238">dirs test of path alias `.`</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '/tmp /tmp\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: pushd: not found
+mksh: &lt;stdin&gt;[3]: dirs: not found
+</pre></td></tr><tr><td><a name="details-15-ksh"></a><b>ksh</b></td><td>15 <a href="builtin-dirs.test.html#L238">dirs test of path alias `.`</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '/tmp /tmp\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: pushd: inaccessible or not found
+E: ksh: &lt;stdin&gt;[3]: dirs: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="builtin-dirs.test.html#L238">dirs test of path alias `.`</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '/tmp /tmp\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: pushd: No such file or directory
+sh: dirs: No such file or directory
+</pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="builtin-dirs.test.html#L238">dirs test of path alias `.`</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '/tmp /tmp\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: pushd: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: dirs: command not found
+</pre></td></tr></table></body></html>

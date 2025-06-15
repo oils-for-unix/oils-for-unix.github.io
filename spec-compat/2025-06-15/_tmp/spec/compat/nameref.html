@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>nameref: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for nameref.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>25</td><td>13</td><td>13</td><td>2</td><td>2</td><td>3</td><td>25</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>2</td><td>9</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>2</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>3</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>19</td><td>30</td><td>30</td><td>29</td><td>7</td><td></td></tr>
+<tr><td>total</td><td>32</td><td>32</td><td>32</td><td>32</td><td>32</td><td>32</td><td>32</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L4">pass array by reference</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"><a href="#details-0-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L14">mutate array by reference</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L27">pass assoc array by reference</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L39">pass local array by reference, relying on DYNAMIC SCOPING</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L56">flag -n and +n</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L80">mutating through nameref: ref=</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="nameref.test.html#L107">flag -n combined ${!ref} -- bash INVERTS</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"><a href="#details-6-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L137">named ref with $# doesn't work</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L157">named ref with $# and shopt -s strict_nameref</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-8-bash">details</a></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L179">named ref with 1 $1 etc.</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L218">assign to invalid ref</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L238">assign to invalid ref with strict_nameref</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-11-bash">details</a></td><td class="details-row"><a href="#details-11-mksh">details</a></td><td class="details-row"><a href="#details-11-ksh">details</a></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L258">name ref on Undef cell</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L275">assign to empty nameref and invalid nameref</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"><a href="#details-13-ksh">details</a></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L299">-n attribute before it has a value</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"><a href="#details-14-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L316">-n attribute on array is hard error, not a warning</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-15-bash">details</a></td><td class="details-row"><a href="#details-15-mksh">details</a></td><td class="details-row"><a href="#details-15-ksh">details</a></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"><a href="#details-15-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L337">exported nameref</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-mksh">details</a></td><td class="details-row"><a href="#details-16-ksh">details</a></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"><a href="#details-16-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L362">readonly nameref doesn't prevent assigning through it</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"><a href="#details-17-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L384">readonly var can't be assigned through nameref</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-18-bash">details</a></td><td class="details-row"><a href="#details-18-mksh">details</a></td><td class="details-row"><a href="#details-18-ksh">details</a></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"><a href="#details-18-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L417">unset nameref</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"><a href="#details-19-sush">details</a></td><td class="details-row"><a href="#details-19-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L433">Chain of namerefs</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"><a href="#details-20-sush">details</a></td><td class="details-row"><a href="#details-20-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="bug">BUG</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L444">Mutually recursive namerefs detected on READ</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-21-bash">details</a></td><td class="details-row"><a href="#details-21-mksh">details</a></td><td class="details-row"><a href="#details-21-ksh">details</a></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"><a href="#details-21-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="bug">BUG</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L462">Mutually recursive namerefs detected on WRITE</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-22-bash">details</a></td><td class="details-row"><a href="#details-22-mksh">details</a></td><td class="details-row"><a href="#details-22-ksh">details</a></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"><a href="#details-22-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L479">Dynamic scope with namerefs</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"><a href="#details-23-sush">details</a></td><td class="details-row"><a href="#details-23-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L504">change reference itself</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"><a href="#details-24-sush">details</a></td><td class="details-row"><a href="#details-24-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="nameref.test.html#L537">a[2] in nameref</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"><a href="#details-25-sush">details</a></td><td class="details-row"><a href="#details-25-brush">details</a></td><td class="details-row"><a href="#details-25-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="nameref.test.html#L546">a[expr] in nameref</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"><a href="#details-26-sush">details</a></td><td class="details-row"><a href="#details-26-brush">details</a></td><td class="details-row"><a href="#details-26-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="nameref.test.html#L556">a[@] in nameref</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-mksh">details</a></td><td class="details-row"><a href="#details-27-ksh">details</a></td><td class="details-row"><a href="#details-27-toysh">details</a></td><td class="details-row"><a href="#details-27-sush">details</a></td><td class="details-row"><a href="#details-27-brush">details</a></td><td class="details-row"><a href="#details-27-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nameref.test.html#L577">mutate through nameref: ref[0]=</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-toysh">details</a></td><td class="details-row"><a href="#details-28-sush">details</a></td><td class="details-row"><a href="#details-28-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="nameref.test.html#L589">bad mutation through nameref: ref[0]= where ref is array[0]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-mksh">details</a></td><td class="details-row"><a href="#details-29-ksh">details</a></td><td class="details-row"><a href="#details-29-toysh">details</a></td><td class="details-row"><a href="#details-29-sush">details</a></td><td class="details-row"><a href="#details-29-brush">details</a></td><td class="details-row"><a href="#details-29-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 30</td><td class="ok">ok</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="nameref.test.html#L604">@ in nameref isn't supported, unlike in ${!ref}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-30-bash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-30-ksh">details</a></td><td class="details-row"><a href="#details-30-toysh">details</a></td><td class="details-row"><a href="#details-30-sush">details</a></td><td class="details-row"><a href="#details-30-brush">details</a></td><td class="details-row"><a href="#details-30-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 31</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="nameref.test.html#L621">Unquoted assoc reference on RHS</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-mksh">details</a></td><td class="details-row"><a href="#details-31-ksh">details</a></td><td class="details-row"><a href="#details-31-toysh">details</a></td><td class="details-row"><a href="#details-31-sush">details</a></td><td class="details-row"><a href="#details-31-brush">details</a></td><td class="details-row"><a href="#details-31-osh">details</a></td><td class="details-row"></td></tr>
+</table>
+<pre>83 passed, 11 OK, 8 not implemented, 7 BUG, 115 failed, 0 timeouts, 0 cases skipped
+7 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="nameref.test.html#L4">pass array by reference</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'zo\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 6: sh: syntax error: ga
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="nameref.test.html#L4">pass array by reference</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'zo\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-brush"></a><b>brush</b></td><td>0 <a href="nameref.test.html#L4">pass array by reference</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'zo\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="nameref.test.html#L14">mutate array by reference</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'a ZZZ c d\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 6: sh: syntax error: a
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="nameref.test.html#L14">mutate array by reference</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'a ZZZ c d\n', got 'a b c d\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a b c d
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="nameref.test.html#L14">mutate array by reference</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'a ZZZ c d\n', got 'a b c d\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a b c d
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="nameref.test.html#L27">pass assoc array by reference</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[monday]=eggs
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="nameref.test.html#L27">pass assoc array by reference</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'jam\n', got '[monday]=eggs\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[monday]=eggs
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="nameref.test.html#L27">pass assoc array by reference</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'jam\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 6: sh: syntax error: [monday]=eggs
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="nameref.test.html#L27">pass assoc array by reference</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'jam\n', got 'days\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>days
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="nameref.test.html#L27">pass assoc array by reference</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'jam\n', got 'days\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>days
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="nameref.test.html#L39">pass local array by reference, relying on DYNAMIC SCOPING</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[7]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="nameref.test.html#L39">pass local array by reference, relying on DYNAMIC SCOPING</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'zo\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[7]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="nameref.test.html#L39">pass local array by reference, relying on DYNAMIC SCOPING</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'zo\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 6: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="nameref.test.html#L39">pass local array by reference, relying on DYNAMIC SCOPING</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'zo\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="nameref.test.html#L39">pass local array by reference, relying on DYNAMIC SCOPING</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'zo\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="nameref.test.html#L56">flag -n and +n</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'ref=x\nref=foo\nref=bar\nref=x\n', got 'ref=x\nref=x\nref=x\nref=x\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=x
+ref=x
+ref=x
+ref=x
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+sh: typeset: No such file or directory
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="nameref.test.html#L56">flag -n and +n</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'ref=x\nref=foo\nref=bar\nref=x\n', got 'ref=x\nref=x\nref=x\nref=x\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=x
+ref=x
+ref=x
+ref=x
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="nameref.test.html#L56">flag -n and +n</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'ref=x\nref=foo\nref=bar\nref=x\n', got 'ref=x\nref=x\nref=x\nref=x\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=x
+ref=x
+ref=x
+ref=x
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="nameref.test.html#L80">mutating through nameref: ref=</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1 ref=y\n2 ref=YY\n3 ref=XXXX\n4 y=XXXX\n', got '1 ref=y\n2 ref=y\n3 ref=XXXX\n4 y=YY\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1 ref=y
+2 ref=y
+3 ref=XXXX
+4 y=YY
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="nameref.test.html#L80">mutating through nameref: ref=</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '1 ref=y\n2 ref=YY\n3 ref=XXXX\n4 y=XXXX\n', got '1 ref=y\n2 ref=y\n3 ref=XXXX\n4 y=YY\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1 ref=y
+2 ref=y
+3 ref=XXXX
+4 y=YY
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="nameref.test.html#L80">mutating through nameref: ref=</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '1 ref=y\n2 ref=YY\n3 ref=XXXX\n4 y=XXXX\n', got '1 ref=y\n2 ref=y\n3 ref=XXXX\n4 y=YY\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1 ref=y
+2 ref=y
+3 ref=XXXX
+4 y=YY
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="nameref.test.html#L107">flag -n combined ${!ref} -- bash INVERTS</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ref=x
+!ref=ref
+NOW A NAMEREF
+ref=foo
+!ref=x
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="nameref.test.html#L107">flag -n combined ${!ref} -- bash INVERTS</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'ref=x\n!ref=foo\nNOW A NAMEREF\nref=foo\n!ref=x\n'
+Got      'ref=x\n!ref=ref\nNOW A NAMEREF\nref=foo\n!ref=x\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=x
+!ref=ref
+NOW A NAMEREF
+ref=foo
+!ref=x
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="nameref.test.html#L107">flag -n combined ${!ref} -- bash INVERTS</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'ref=x\n!ref=foo\nNOW A NAMEREF\nref=foo\n!ref=x\n'
+Got      'ref=x\n!ref=foo\nNOW A NAMEREF\nref=x\n!ref=foo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=x
+!ref=foo
+NOW A NAMEREF
+ref=x
+!ref=foo
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="nameref.test.html#L107">flag -n combined ${!ref} -- bash INVERTS</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'ref=x\n!ref=foo\nNOW A NAMEREF\nref=foo\n!ref=x\n'
+Got      'ref=x\n!ref=foo\nNOW A NAMEREF\nref=x\n!ref=foo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=x
+!ref=foo
+NOW A NAMEREF
+ref=x
+!ref=foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="nameref.test.html#L107">flag -n combined ${!ref} -- bash INVERTS</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'ref=x\n!ref=foo\nNOW A NAMEREF\nref=foo\n!ref=x\n'
+Got      'ref=x\n!ref=foo\nNOW A NAMEREF\nref=x\n!ref=foo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=x
+!ref=foo
+NOW A NAMEREF
+ref=x
+!ref=foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-osh"></a><b>osh</b></td><td>6 <a href="nameref.test.html#L107">flag -n combined ${!ref} -- bash INVERTS</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'ref=x\n!ref=foo\nNOW A NAMEREF\nref=foo\n!ref=x\n'
+Got      'ref=x\n!ref=foo\nNOW A NAMEREF\nref=foo\n!ref=FOO\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=x
+!ref=foo
+NOW A NAMEREF
+ref=foo
+!ref=FOO
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="nameref.test.html#L137">named ref with $# doesn't work</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ref=#
+ref=3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="nameref.test.html#L137">named ref with $# doesn't work</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'ref=#\nref=#\n', got 'ref=#\nref=3\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=#
+ref=3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-bash"></a><b>bash</b></td><td>8 <a href="nameref.test.html#L157">named ref with $# and shopt -s strict_nameref</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ref=#
+ref=#
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: shopt: strict_nameref: invalid shell option name
+bash: line 5: typeset: `#': invalid variable name for name reference
+</pre></td></tr><tr><td><a name="details-8-mksh"></a><b>mksh</b></td><td>8 <a href="nameref.test.html#L157">named ref with $# and shopt -s strict_nameref</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ref=#
+ref=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-8-ksh"></a><b>ksh</b></td><td>8 <a href="nameref.test.html#L157">named ref with $# and shopt -s strict_nameref</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'ref=#\n', got 'ref=#\nref=0\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=#
+ref=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="nameref.test.html#L157">named ref with $# and shopt -s strict_nameref</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'ref=#\n', got 'ref=#\nref=#\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=#
+ref=#
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+sh: typeset: No such file or directory
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="nameref.test.html#L157">named ref with $# and shopt -s strict_nameref</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'ref=#\n', got 'ref=#\nref=#\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=#
+ref=#
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: shopt: strict_nameref: not supported yet
+</pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="nameref.test.html#L157">named ref with $# and shopt -s strict_nameref</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'ref=#\n', got 'ref=#\nref=#\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=#
+ref=#
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_nameref: invalid shell option name
+</pre></td></tr><tr><td><a name="details-9-mksh"></a><b>mksh</b></td><td>9 <a href="nameref.test.html#L179">named ref with 1 $1 etc.</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ref=1
+ref=one
+ref2=$1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[12]: ref2: empty nameref target
+</pre></td></tr><tr><td><a name="details-9-ksh"></a><b>ksh</b></td><td>9 <a href="nameref.test.html#L179">named ref with 1 $1 etc.</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'ref=1\nref=1\nref2=$1\nref2=$1\nref3=x\nref3=foo\n'
+Got      'ref=1\nref=one\nref2=$1\nref2=$1\nref3=x\nref3=foo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=1
+ref=one
+ref2=$1
+ref2=$1
+ref3=x
+ref3=foo
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[12]: typeset: ref2: empty nameref target
+</pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="nameref.test.html#L179">named ref with 1 $1 etc.</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'ref=1\nref=1\nref2=$1\nref2=$1\nref3=x\nref3=foo\n'
+Got      'ref=1\nref=1\nref2=$1\nref2=$1\nref3=x\nref3=x\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=1
+ref=1
+ref2=$1
+ref2=$1
+ref3=x
+ref3=x
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+sh: typeset: No such file or directory
+sh: typeset: No such file or directory
+sh: typeset: No such file or directory
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="nameref.test.html#L179">named ref with 1 $1 etc.</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'ref=1\nref=1\nref2=$1\nref2=$1\nref3=x\nref3=foo\n'
+Got      'ref=1\nref=1\nref2=$1\nref2=$1\nref3=x\nref3=x\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=1
+ref=1
+ref2=$1
+ref2=$1
+ref3=x
+ref3=x
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="nameref.test.html#L179">named ref with 1 $1 etc.</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'ref=1\nref=1\nref2=$1\nref2=$1\nref3=x\nref3=foo\n'
+Got      'ref=1\nref=1\nref2=$1\nref2=$1\nref3=x\nref3=x\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=1
+ref=1
+ref2=$1
+ref2=$1
+ref3=x
+ref3=x
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="nameref.test.html#L218">assign to invalid ref</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ref=1
+ref=
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[7]: read-only: ref
+</pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="nameref.test.html#L218">assign to invalid ref</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'ref=1\nref=1\nref=foo\n', got 'ref=1\nref=\n'</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=1
+ref=
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[7]: read-only: ref
+</pre></td></tr><tr><td><a name="details-11-bash"></a><b>bash</b></td><td>11 <a href="nameref.test.html#L238">assign to invalid ref with strict_nameref</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-mksh"></a><b>mksh</b></td><td>11 <a href="nameref.test.html#L238">assign to invalid ref with strict_nameref</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-ksh"></a><b>ksh</b></td><td>11 <a href="nameref.test.html#L238">assign to invalid ref with strict_nameref</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'ref=1\n', got 'ref=1\nref=\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=1
+ref=
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[11]: read-only: ref
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="nameref.test.html#L238">assign to invalid ref with strict_nameref</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'ref=1\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 1, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="nameref.test.html#L238">assign to invalid ref with strict_nameref</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'ref=1\n', got 'ref=1\nref=1\nref=foo\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=1
+ref=1
+ref=foo
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: shopt: strict_nameref: not supported yet
+</pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="nameref.test.html#L238">assign to invalid ref with strict_nameref</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'ref=1\n', got 'ref=1\nref=1\nref=foo\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=1
+ref=1
+ref=foo
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_nameref: invalid shell option name
+</pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="nameref.test.html#L258">name ref on Undef cell</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: ref: empty nameref target
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="nameref.test.html#L258">name ref on Undef cell</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'ref=\nnounset\n', got 'ref=\nnounset\nref=\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=
+nounset
+ref=
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+set: bad -o nounset
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="nameref.test.html#L258">name ref on Undef cell</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'ref=\nnounset\n', got 'ref=\nnounset\nref=\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=
+nounset
+ref=
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: set: nounset: invalid option name
+</pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="nameref.test.html#L258">name ref on Undef cell</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'ref=\nnounset\n', got 'ref=\nnounset\nref=\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=
+nounset
+ref=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="nameref.test.html#L275">assign to empty nameref and invalid nameref</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: ref: empty nameref target
+</pre></td></tr><tr><td><a name="details-13-ksh"></a><b>ksh</b></td><td>13 <a href="nameref.test.html#L275">assign to empty nameref and invalid nameref</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'ref=\nref=\nref2=\nref2=x\n', got 'ref=\nref=x\nref2=\nref2=x\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=
+ref=x
+ref2=
+ref2=x
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: typeset: ref: empty nameref target
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="nameref.test.html#L275">assign to empty nameref and invalid nameref</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'ref=\nref=\nref2=\nref2=x\n', got 'ref=\nref=x\nref2=\nref2=x\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=
+ref=x
+ref2=
+ref2=x
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+sh: typeset: No such file or directory
+</pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="nameref.test.html#L275">assign to empty nameref and invalid nameref</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'ref=\nref=\nref2=\nref2=x\n', got 'ref=\nref=x\nref2=undef\nref2=x\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=
+ref=x
+ref2=undef
+ref2=x
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="nameref.test.html#L275">assign to empty nameref and invalid nameref</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'ref=\nref=\nref2=\nref2=x\n', got 'ref=\nref=x\nref2=undef\nref2=x\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=
+ref=x
+ref2=undef
+ref2=x
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="nameref.test.html#L299">-n attribute before it has a value</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: ref: empty nameref target
+</pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="nameref.test.html#L299">-n attribute before it has a value</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'ref=\nref=XX\n', got 'ref=\nref=x\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=
+ref=x
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: typeset: ref: empty nameref target
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="nameref.test.html#L299">-n attribute before it has a value</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'ref=\nref=XX\n', got 'ref=\nref=x\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=
+ref=x
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+</pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="nameref.test.html#L299">-n attribute before it has a value</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'ref=\nref=XX\n', got 'ref=\nref=x\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=
+ref=x
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-brush"></a><b>brush</b></td><td>14 <a href="nameref.test.html#L299">-n attribute before it has a value</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'ref=\nref=XX\n', got 'ref=\nref=x\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=
+ref=x
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-bash"></a><b>bash</b></td><td>15 <a href="nameref.test.html#L316">-n attribute on array is hard error, not a warning</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hi
+ref=x
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 5: warning: ref: removing nameref attribute
+</pre></td></tr><tr><td><a name="details-15-mksh"></a><b>mksh</b></td><td>15 <a href="nameref.test.html#L316">-n attribute on array is hard error, not a warning</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: ref: empty nameref target
+</pre></td></tr><tr><td><a name="details-15-ksh"></a><b>ksh</b></td><td>15 <a href="nameref.test.html#L316">-n attribute on array is hard error, not a warning</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'hi\n', got 'hi\nref=x\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+ref=x
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: typeset: ref: empty nameref target
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="nameref.test.html#L316">-n attribute on array is hard error, not a warning</a><br/><br/>
+<span class="assertion">[toysh status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+main: line 5: sh: syntax error: x
+</pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="nameref.test.html#L316">-n attribute on array is hard error, not a warning</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'hi\n', got 'hi\nref=x\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+ref=x
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-brush"></a><b>brush</b></td><td>15 <a href="nameref.test.html#L316">-n attribute on array is hard error, not a warning</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'hi\n', got 'hi\nref=x\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+ref=x
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-mksh"></a><b>mksh</b></td><td>16 <a href="nameref.test.html#L337">exported nameref</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>None
+None
+---
+foo
+None
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-ksh"></a><b>ksh</b></td><td>16 <a href="nameref.test.html#L337">exported nameref</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'None\nx\n---\nfoo\nx\n', got 'None\nNone\n---\nfoo\nNone\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>None
+None
+---
+foo
+None
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="nameref.test.html#L337">exported nameref</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'None\nx\n---\nfoo\nx\n', got 'None\nNone\n---\nfoo\nNone\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>None
+None
+---
+foo
+None
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+</pre></td></tr><tr><td><a name="details-16-sush"></a><b>sush</b></td><td>16 <a href="nameref.test.html#L337">exported nameref</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'None\nx\n---\nfoo\nx\n', got 'None\nNone\n---\nfoo\nNone\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>None
+None
+---
+foo
+None
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="nameref.test.html#L362">readonly nameref doesn't prevent assigning through it</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'ref=XX\nref=XXXX\nx=X\n', got 'ref=\nref=XXXX\nx=X\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=
+ref=XXXX
+x=X
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+</pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="nameref.test.html#L362">readonly nameref doesn't prevent assigning through it</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'ref=XX\nref=XXXX\nx=X\n', got 'ref=x\nref=x\nx=X\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=x
+ref=x
+x=X
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: ref: readonly variable
+</pre></td></tr><tr><td><a name="details-17-brush"></a><b>brush</b></td><td>17 <a href="nameref.test.html#L362">readonly nameref doesn't prevent assigning through it</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'ref=XX\nref=XXXX\nx=X\n', got 'ref=x\nref=x\nx=X\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=x
+ref=x
+x=X
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: cannot mutate readonly variable
+</pre></td></tr><tr><td><a name="details-18-bash"></a><b>bash</b></td><td>18 <a href="nameref.test.html#L384">readonly var can't be assigned through nameref</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ref=X
+ref=XX
+ref=XX
+x=XX
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 11: x: readonly variable
+</pre></td></tr><tr><td><a name="details-18-mksh"></a><b>mksh</b></td><td>18 <a href="nameref.test.html#L384">readonly var can't be assigned through nameref</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ref=X
+ref=XX
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[11]: read-only: ref
+</pre></td></tr><tr><td><a name="details-18-ksh"></a><b>ksh</b></td><td>18 <a href="nameref.test.html#L384">readonly var can't be assigned through nameref</a><br/><br/>
+<span class="assertion">[ksh status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=X
+ref=XX
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[11]: read-only: ref
+</pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="nameref.test.html#L384">readonly var can't be assigned through nameref</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'ref=X\nref=XX\n', got 'ref=\nref=XX\nref=XXX\nx=X\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=
+ref=XX
+ref=XXX
+x=X
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+sh: typeset: No such file or directory
+</pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="nameref.test.html#L384">readonly var can't be assigned through nameref</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'ref=X\nref=XX\n', got 'ref=x\nref=x\nref=x\nx=X\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=x
+ref=x
+ref=x
+x=X
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: ref: readonly variable
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: ref: readonly variable
+</pre></td></tr><tr><td><a name="details-18-brush"></a><b>brush</b></td><td>18 <a href="nameref.test.html#L384">readonly var can't be assigned through nameref</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'ref=X\nref=XX\n', got 'ref=x\nref=x\nref=x\nx=X\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=x
+ref=x
+ref=x
+x=X
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: cannot mutate readonly variable
+[31mERROR[0m error: cannot mutate readonly variable
+</pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="nameref.test.html#L417">unset nameref</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'ref=X\nref=\nx=\n', got 'ref=\nref=\nx=X\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=
+ref=
+x=X
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+</pre></td></tr><tr><td><a name="details-19-sush"></a><b>sush</b></td><td>19 <a href="nameref.test.html#L417">unset nameref</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'ref=X\nref=\nx=\n', got 'ref=x\nref=\nx=X\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=x
+ref=
+x=X
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-brush"></a><b>brush</b></td><td>19 <a href="nameref.test.html#L417">unset nameref</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'ref=X\nref=\nx=\n', got 'ref=x\nref=\nx=X\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=x
+ref=
+x=X
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="nameref.test.html#L433">Chain of namerefs</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'ref_to_ref=foo\nref=foo\n', got 'ref_to_ref=\nref=\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref_to_ref=
+ref=
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+sh: typeset: No such file or directory
+</pre></td></tr><tr><td><a name="details-20-sush"></a><b>sush</b></td><td>20 <a href="nameref.test.html#L433">Chain of namerefs</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'ref_to_ref=foo\nref=foo\n', got 'ref_to_ref=ref\nref=x\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref_to_ref=ref
+ref=x
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-brush"></a><b>brush</b></td><td>20 <a href="nameref.test.html#L433">Chain of namerefs</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'ref_to_ref=foo\nref=foo\n', got 'ref_to_ref=ref\nref=x\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref_to_ref=ref
+ref=x
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-bash"></a><b>bash</b></td><td>21 <a href="nameref.test.html#L444">Mutually recursive namerefs detected on READ</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>defined
+ref1=
+ref2=
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 4: warning: ref1: circular name reference
+bash: line 5: warning: ref1: circular name reference
+</pre></td></tr><tr><td><a name="details-21-mksh"></a><b>mksh</b></td><td>21 <a href="nameref.test.html#L444">Mutually recursive namerefs detected on READ</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: ref2: expression recurses on parameter
+</pre></td></tr><tr><td><a name="details-21-ksh"></a><b>ksh</b></td><td>21 <a href="nameref.test.html#L444">Mutually recursive namerefs detected on READ</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'defined\n', got 'defined\nref1=\nref2=\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>defined
+ref1=
+ref2=
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: typeset: ref2: expression recurses on parameter
+</pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="nameref.test.html#L444">Mutually recursive namerefs detected on READ</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'defined\n', got 'defined\nref1=\nref2=\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>defined
+ref1=
+ref2=
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+sh: typeset: No such file or directory
+</pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="nameref.test.html#L444">Mutually recursive namerefs detected on READ</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'defined\n', got 'defined\nref1=ref2\nref2=ref2\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>defined
+ref1=ref2
+ref2=ref2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-brush"></a><b>brush</b></td><td>21 <a href="nameref.test.html#L444">Mutually recursive namerefs detected on READ</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'defined\n', got 'defined\nref1=ref2\nref2=ref2\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>defined
+ref1=ref2
+ref2=ref2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-bash"></a><b>bash</b></td><td>22 <a href="nameref.test.html#L462">Mutually recursive namerefs detected on WRITE</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>defined 0
+mutated 1
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 4: warning: ref1: circular name reference
+</pre></td></tr><tr><td><a name="details-22-mksh"></a><b>mksh</b></td><td>22 <a href="nameref.test.html#L462">Mutually recursive namerefs detected on WRITE</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: ref2: expression recurses on parameter
+</pre></td></tr><tr><td><a name="details-22-ksh"></a><b>ksh</b></td><td>22 <a href="nameref.test.html#L462">Mutually recursive namerefs detected on WRITE</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'defined 0\n', got 'defined 1\nmutated 0\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>defined 1
+mutated 0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: typeset: ref2: expression recurses on parameter
+</pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="nameref.test.html#L462">Mutually recursive namerefs detected on WRITE</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'defined 0\n', got 'defined 127\nmutated 0\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>defined 127
+mutated 0
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+sh: typeset: No such file or directory
+</pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="nameref.test.html#L462">Mutually recursive namerefs detected on WRITE</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'defined 0\n', got 'defined 0\nmutated 0\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>defined 0
+mutated 0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-brush"></a><b>brush</b></td><td>22 <a href="nameref.test.html#L462">Mutually recursive namerefs detected on WRITE</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'defined 0\n', got 'defined 0\nmutated 0\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>defined 0
+mutated 0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="nameref.test.html#L479">Dynamic scope with namerefs</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'F1=F1\nF1=x\n', got 'F1=F1\nF1=F1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>F1=F1
+F1=F1
+</pre><i>stderr:</i> <br/>
+<pre>local: bad -n
+</pre></td></tr><tr><td><a name="details-23-sush"></a><b>sush</b></td><td>23 <a href="nameref.test.html#L479">Dynamic scope with namerefs</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'F1=F1\nF1=x\n', got 'F1=F1\nF1=F1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>F1=F1
+F1=F1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-brush"></a><b>brush</b></td><td>23 <a href="nameref.test.html#L479">Dynamic scope with namerefs</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'F1=F1\nF1=x\n', got 'F1=F1\nF1=F1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>F1=F1
+F1=F1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="nameref.test.html#L504">change reference itself</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'ref=XX\nx=XX\ny=YY\n----\nref=YY\nx=XX\ny=YY\n----\nref=z\nx=XX\ny=z\n'
+Got      'ref=\nx=XX\ny=YY\n----\nref=\nx=XX\ny=YY\n----\nref=z\nx=XX\ny=YY\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=
+x=XX
+y=YY
+----
+ref=
+x=XX
+y=YY
+----
+ref=z
+x=XX
+y=YY
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+sh: typeset: No such file or directory
+</pre></td></tr><tr><td><a name="details-24-sush"></a><b>sush</b></td><td>24 <a href="nameref.test.html#L504">change reference itself</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'ref=XX\nx=XX\ny=YY\n----\nref=YY\nx=XX\ny=YY\n----\nref=z\nx=XX\ny=z\n'
+Got      'ref=x\nx=XX\ny=YY\n----\nref=y\nx=XX\ny=YY\n----\nref=z\nx=XX\ny=YY\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=x
+x=XX
+y=YY
+----
+ref=y
+x=XX
+y=YY
+----
+ref=z
+x=XX
+y=YY
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-brush"></a><b>brush</b></td><td>24 <a href="nameref.test.html#L504">change reference itself</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'ref=XX\nx=XX\ny=YY\n----\nref=YY\nx=XX\ny=YY\n----\nref=z\nx=XX\ny=z\n'
+Got      'ref=x\nx=XX\ny=YY\n----\nref=y\nx=XX\ny=YY\n----\nref=z\nx=XX\ny=YY\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=x
+x=XX
+y=YY
+----
+ref=y
+x=XX
+y=YY
+----
+ref=z
+x=XX
+y=YY
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="nameref.test.html#L537">a[2] in nameref</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'ref=two\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+main: line 2: sh: syntax error: zero
+</pre></td></tr><tr><td><a name="details-25-sush"></a><b>sush</b></td><td>25 <a href="nameref.test.html#L537">a[2] in nameref</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'ref=two\n', got 'ref=a[2]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=a[2]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-brush"></a><b>brush</b></td><td>25 <a href="nameref.test.html#L537">a[2] in nameref</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'ref=two\n', got 'ref=a[2]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=a[2]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-osh"></a><b>osh</b></td><td>25 <a href="nameref.test.html#L537">a[2] in nameref</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'ref=two\n', got 'ref=a[2]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=a[2]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="nameref.test.html#L546">a[expr] in nameref</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'ref=three\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+main: line 2: sh: syntax error: zero
+</pre></td></tr><tr><td><a name="details-26-sush"></a><b>sush</b></td><td>26 <a href="nameref.test.html#L546">a[expr] in nameref</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'ref=three\n', got 'ref=a[$(echo 2) + 1]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=a[$(echo 2) + 1]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-brush"></a><b>brush</b></td><td>26 <a href="nameref.test.html#L546">a[expr] in nameref</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'ref=three\n', got 'ref=a[$(echo 2) + 1]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=a[$(echo 2) + 1]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-osh"></a><b>osh</b></td><td>26 <a href="nameref.test.html#L546">a[expr] in nameref</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'ref=three\n', got 'ref=a[$(echo 2) + 1]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=a[$(echo 2) + 1]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-mksh"></a><b>mksh</b></td><td>27 <a href="nameref.test.html#L556">a[@] in nameref</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: @: unexpected '@'
+</pre></td></tr><tr><td><a name="details-27-ksh"></a><b>ksh</b></td><td>27 <a href="nameref.test.html#L556">a[@] in nameref</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['ref', 'A B', 'C']\nstatus=1\n['ref[@]']\n['ref', 'A B', 'C']\n['a[@]', 'A B', 'C']\n"
+Got      ''
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[3]: @: unexpected '@'
+</pre></td></tr><tr><td><a name="details-27-toysh"></a><b>toysh</b></td><td>27 <a href="nameref.test.html#L556">a[@] in nameref</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['ref', 'A B', 'C']\nstatus=1\n['ref[@]']\n['ref', 'A B', 'C']\n['a[@]', 'A B', 'C']\n"
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+main: line 2: sh: syntax error: 'A B'
+</pre></td></tr><tr><td><a name="details-27-sush"></a><b>sush</b></td><td>27 <a href="nameref.test.html#L556">a[@] in nameref</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['ref', 'A B', 'C']\nstatus=1\n['ref[@]']\n['ref', 'A B', 'C']\n['a[@]', 'A B', 'C']\n"
+Got      "['ref', 'a[@]']\nstatus=0\n['ref[@]', 'X', 'Y', 'Z']\n['ref', 'X']\n['a[@]', 'A B', 'C']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['ref', 'a[@]']
+status=0
+['ref[@]', 'X', 'Y', 'Z']
+['ref', 'X']
+['a[@]', 'A B', 'C']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-brush"></a><b>brush</b></td><td>27 <a href="nameref.test.html#L556">a[@] in nameref</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['ref', 'A B', 'C']\nstatus=1\n['ref[@]']\n['ref', 'A B', 'C']\n['a[@]', 'A B', 'C']\n"
+Got      "['ref', 'a[@]']\nstatus=0\n['ref[@]', 'X', 'Y', 'Z']\n['ref', 'X']\n['a[@]', 'A B', 'C']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['ref', 'a[@]']
+status=0
+['ref[@]', 'X', 'Y', 'Z']
+['ref', 'X']
+['a[@]', 'A B', 'C']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-osh"></a><b>osh</b></td><td>27 <a href="nameref.test.html#L556">a[@] in nameref</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected "['ref', 'A B', 'C']\nstatus=1\n['ref[@]']\n['ref', 'A B', 'C']\n['a[@]', 'A B', 'C']\n"
+Got      "['ref', 'a[@]']\nstatus=0\n['ref[@]', 'X', 'Y', 'Z']\n['ref', 'X']\n['a[@]', 'A B', 'C']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['ref', 'a[@]']
+status=0
+['ref[@]', 'X', 'Y', 'Z']
+['ref', 'X']
+['a[@]', 'A B', 'C']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-toysh"></a><b>toysh</b></td><td>28 <a href="nameref.test.html#L577">mutate through nameref: ref[0]=</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'xx Y Z\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: X
+</pre></td></tr><tr><td><a name="details-28-sush"></a><b>sush</b></td><td>28 <a href="nameref.test.html#L577">mutate through nameref: ref[0]=</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'xx Y Z\n', got 'X Y Z\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>X Y Z
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-brush"></a><b>brush</b></td><td>28 <a href="nameref.test.html#L577">mutate through nameref: ref[0]=</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'xx Y Z\n', got 'X Y Z\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>X Y Z
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-mksh"></a><b>mksh</b></td><td>29 <a href="nameref.test.html#L589">bad mutation through nameref: ref[0]= where ref is array[0]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+foo Y Z
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-ksh"></a><b>ksh</b></td><td>29 <a href="nameref.test.html#L589">bad mutation through nameref: ref[0]= where ref is array[0]</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=1\nX Y Z\n', got 'status=0\nfoo Y Z\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+foo Y Z
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-toysh"></a><b>toysh</b></td><td>29 <a href="nameref.test.html#L589">bad mutation through nameref: ref[0]= where ref is array[0]</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=1\nX Y Z\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: X
+</pre></td></tr><tr><td><a name="details-29-sush"></a><b>sush</b></td><td>29 <a href="nameref.test.html#L589">bad mutation through nameref: ref[0]= where ref is array[0]</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=1\nX Y Z\n', got 'status=0\nX Y Z\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+X Y Z
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-brush"></a><b>brush</b></td><td>29 <a href="nameref.test.html#L589">bad mutation through nameref: ref[0]= where ref is array[0]</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=1\nX Y Z\n', got 'status=0\nX Y Z\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+X Y Z
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-osh"></a><b>osh</b></td><td>29 <a href="nameref.test.html#L589">bad mutation through nameref: ref[0]= where ref is array[0]</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'status=1\nX Y Z\n', got ''</span><br/>
+<span class="assertion">[osh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  ref[0]=foo  # error in bash: 'array[0]': not a valid identifier
+  ^~~~
+[ stdin ]:3: fatal: Can't assign to items in a string
+</pre></td></tr><tr><td><a name="details-30-bash"></a><b>bash</b></td><td>30 <a href="nameref.test.html#L604">@ in nameref isn't supported, unlike in ${!ref}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+ref=
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 2: typeset: `@': invalid variable name for name reference
+</pre></td></tr><tr><td><a name="details-30-ksh"></a><b>ksh</b></td><td>30 <a href="nameref.test.html#L604">@ in nameref isn't supported, unlike in ${!ref}</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected u'', got 'status=1\nref=\nstatus=0\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+ref=
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: typeset: ref=@: empty nameref target
+</pre></td></tr><tr><td><a name="details-30-toysh"></a><b>toysh</b></td><td>30 <a href="nameref.test.html#L604">@ in nameref isn't supported, unlike in ${!ref}</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected u'', got 'status=127\nref=\nstatus=0\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+ref=
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+sh: typeset: No such file or directory
+</pre></td></tr><tr><td><a name="details-30-sush"></a><b>sush</b></td><td>30 <a href="nameref.test.html#L604">@ in nameref isn't supported, unlike in ${!ref}</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got 'status=0\nref=@\nstatus=0\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+ref=@
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-brush"></a><b>brush</b></td><td>30 <a href="nameref.test.html#L604">@ in nameref isn't supported, unlike in ${!ref}</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'status=0\nref=@\nstatus=0\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+ref=@
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-osh"></a><b>osh</b></td><td>30 <a href="nameref.test.html#L604">@ in nameref isn't supported, unlike in ${!ref}</a><br/><br/>
+<span class="assertion">[osh stdout] Expected u'', got 'status=0\nref=@\nstatus=0\n'</span><br/>
+<span class="assertion">[osh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+ref=@
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-mksh"></a><b>mksh</b></td><td>31 <a href="nameref.test.html#L621">Unquoted assoc reference on RHS</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: typeset: -A: unknown option
+mksh: &lt;stdin&gt;[2]: 'foo': multi-character character constant
+</pre></td></tr><tr><td><a name="details-31-ksh"></a><b>ksh</b></td><td>31 <a href="nameref.test.html#L621">Unquoted assoc reference on RHS</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['bar']\n", got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: typeset: -A: unknown option
+W: ksh: &lt;stdin&gt;[2]: 'foo': multi-character character constant
+</pre></td></tr><tr><td><a name="details-31-toysh"></a><b>toysh</b></td><td>31 <a href="nameref.test.html#L621">Unquoted assoc reference on RHS</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['bar']\n", got "['bashup_ev_r[foo]']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['bashup_ev_r[foo]']
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+sh: bashup_ev_r[foo]=bar: No such file or directory
+local: bad -n
+</pre></td></tr><tr><td><a name="details-31-sush"></a><b>sush</b></td><td>31 <a href="nameref.test.html#L621">Unquoted assoc reference on RHS</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "['bar']\n", got "['bashup_ev_r[foo]']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['bashup_ev_r[foo]']
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: 'foo': syntax error: operand expected (error token is "'foo'")
+</pre></td></tr><tr><td><a name="details-31-brush"></a><b>brush</b></td><td>31 <a href="nameref.test.html#L621">Unquoted assoc reference on RHS</a><br/><br/>
+<span class="assertion">[brush stdout] Expected "['bar']\n", got "['bashup_ev_r[foo]']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['bashup_ev_r[foo]']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-osh"></a><b>osh</b></td><td>31 <a href="nameref.test.html#L621">Unquoted assoc reference on RHS</a><br/><br/>
+<span class="assertion">[osh stdout] Expected "['bar']\n", got "['bashup_ev_r[foo]']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['bashup_ev_r[foo]']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

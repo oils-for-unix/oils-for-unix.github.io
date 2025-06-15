@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>spec/ble-unset.test.sh</title>
+<link rel="stylesheet" type="text/css" href="../../../web/src-tree.css" />
+  </head>
+
+      <body class="">
+        <div id="home-link">
+          <a href="https://github.com/oilshell/oil/blob/master/spec/ble-unset.test.sh">View on Github</a>
+          |
+          <a href="/">oils.pub</a>
+        </div>
+        <table>
+      <tr>
+  <td class=num>1</td>
+  <td id=L1>
+    <span class="line comm">## compare_shells: bash zsh mksh ash dash yash</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>2</td>
+  <td id=L2>
+    <span class="line comm">## oils_failures_allowed: 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>3</td>
+  <td id=L3>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>4</td>
+  <td id=L4>
+    <span class="line comm"># Some tests moved here for spec/ble-features</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>5</td>
+  <td id=L5>
+    <span class="line comm"># We could move others too</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>6</td>
+  <td id=L6>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>7</td>
+  <td id=L7>
+    <span class="line spec-comment">#### [bash_unset] nested context by tempenv-eval</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>8</td>
+  <td id=L8>
+    <span class="line ">f1() {</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>9</td>
+  <td id=L9>
+    <span class="line ">  local v=local1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>10</td>
+  <td id=L10>
+    <span class="line ">  echo "[$1,local1] v: ${v-(unset)}"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>11</td>
+  <td id=L11>
+    <span class="line ">  v=tempenv2 eval '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>12</td>
+  <td id=L12>
+    <span class="line ">    echo "[$1,local1,tempenv2,(eval)] v: ${v-(unset)}"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>13</td>
+  <td id=L13>
+    <span class="line ">    local v=local2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>14</td>
+  <td id=L14>
+    <span class="line ">    echo "[$1,local1,tempenv2,(eval),local2] v: ${v-(unset)}"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>15</td>
+  <td id=L15>
+    <span class="line ">  '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>16</td>
+  <td id=L16>
+    <span class="line ">  echo "[$1,local1] v: ${v-(unset)} (after)"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>17</td>
+  <td id=L17>
+    <span class="line ">}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>18</td>
+  <td id=L18>
+    <span class="line ">v=global</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>19</td>
+  <td id=L19>
+    <span class="line ">v=tempenv1 f1 global,tempenv1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>20</td>
+  <td id=L20>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>21</td>
+  <td id=L21>
+    <span class="line comm">## OK bash/zsh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>22</td>
+  <td id=L22>
+    <span class="line comm"># localvar-nest yes</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>23</td>
+  <td id=L23>
+    <span class="line ">[global,tempenv1,local1] v: local1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>24</td>
+  <td id=L24>
+    <span class="line ">[global,tempenv1,local1,tempenv2,(eval)] v: tempenv2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>25</td>
+  <td id=L25>
+    <span class="line ">[global,tempenv1,local1,tempenv2,(eval),local2] v: local2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>26</td>
+  <td id=L26>
+    <span class="line ">[global,tempenv1,local1] v: local1 (after)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>27</td>
+  <td id=L27>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>28</td>
+  <td id=L28>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>29</td>
+  <td id=L29>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>30</td>
+  <td id=L30>
+    <span class="line comm"># localvar-nest no</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>31</td>
+  <td id=L31>
+    <span class="line ">[global,tempenv1,local1] v: local1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>32</td>
+  <td id=L32>
+    <span class="line ">[global,tempenv1,local1,tempenv2,(eval)] v: tempenv2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>33</td>
+  <td id=L33>
+    <span class="line ">[global,tempenv1,local1,tempenv2,(eval),local2] v: local2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>34</td>
+  <td id=L34>
+    <span class="line ">[global,tempenv1,local1] v: local2 (after)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>35</td>
+  <td id=L35>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>36</td>
+  <td id=L36>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>37</td>
+  <td id=L37>
+    <span class="line spec-comment">#### [bash_unset] local-unset / dynamic-unset for localvar on nested-context</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>38</td>
+  <td id=L38>
+    <span class="line ">unlocal() { unset -v "$1"; }</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>39</td>
+  <td id=L39>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>40</td>
+  <td id=L40>
+    <span class="line ">f2() {</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>41</td>
+  <td id=L41>
+    <span class="line ">  local v=local1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>42</td>
+  <td id=L42>
+    <span class="line ">  v=tempenv2 eval '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>43</td>
+  <td id=L43>
+    <span class="line ">    local v=local2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>44</td>
+  <td id=L44>
+    <span class="line ">    (unset v  ; echo "[$1,local1,tempenv2,(eval),local2,(unset)] v: ${v-(unset)}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>45</td>
+  <td id=L45>
+    <span class="line ">    (unlocal v; echo "[$1,local1,tempenv2,(eval),local2,(unlocal)] v: ${v-(unset)}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>46</td>
+  <td id=L46>
+    <span class="line ">  '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>47</td>
+  <td id=L47>
+    <span class="line ">}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>48</td>
+  <td id=L48>
+    <span class="line ">v=global</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>49</td>
+  <td id=L49>
+    <span class="line ">v=tempenv1 f2 global,tempenv1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>50</td>
+  <td id=L50>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>51</td>
+  <td id=L51>
+    <span class="line comm">## OK bash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>52</td>
+  <td id=L52>
+    <span class="line comm"># bash-unset (bash-5.1)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>53</td>
+  <td id=L53>
+    <span class="line ">[global,tempenv1,local1,tempenv2,(eval),local2,(unset)] v: (unset)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>54</td>
+  <td id=L54>
+    <span class="line ">[global,tempenv1,local1,tempenv2,(eval),local2,(unlocal)] v: local1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>55</td>
+  <td id=L55>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>56</td>
+  <td id=L56>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>57</td>
+  <td id=L57>
+    <span class="line comm"># Note that bash-4.3 to bash 5.0 behave differently</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>58</td>
+  <td id=L58>
+    <span class="line comm"># [global,tempenv1,local1,tempenv2,(eval),local2,(unset)] v: local1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>59</td>
+  <td id=L59>
+    <span class="line comm"># [global,tempenv1,local1,tempenv2,(eval),local2,(unlocal)] v: local1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>60</td>
+  <td id=L60>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>61</td>
+  <td id=L61>
+    <span class="line comm">## OK-2 zsh/ash/dash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>62</td>
+  <td id=L62>
+    <span class="line comm"># always-value-unset</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>63</td>
+  <td id=L63>
+    <span class="line ">[global,tempenv1,local1,tempenv2,(eval),local2,(unset)] v: (unset)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>64</td>
+  <td id=L64>
+    <span class="line ">[global,tempenv1,local1,tempenv2,(eval),local2,(unlocal)] v: (unset)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>65</td>
+  <td id=L65>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>66</td>
+  <td id=L66>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>67</td>
+  <td id=L67>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>68</td>
+  <td id=L68>
+    <span class="line comm"># always-cell-unset (remove all localvar/tempenv)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>69</td>
+  <td id=L69>
+    <span class="line ">[global,tempenv1,local1,tempenv2,(eval),local2,(unset)] v: tempenv1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>70</td>
+  <td id=L70>
+    <span class="line ">[global,tempenv1,local1,tempenv2,(eval),local2,(unlocal)] v: tempenv1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>71</td>
+  <td id=L71>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>72</td>
+  <td id=L72>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>73</td>
+  <td id=L73>
+    <span class="line spec-comment">#### [bash_unset] dynamic-unset for nested localvars</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>74</td>
+  <td id=L74>
+    <span class="line ">unlocal() { unset -v "$1"; }</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>75</td>
+  <td id=L75>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>76</td>
+  <td id=L76>
+    <span class="line ">f3() {</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>77</td>
+  <td id=L77>
+    <span class="line ">  local v=local1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>78</td>
+  <td id=L78>
+    <span class="line ">  v=tempenv2 eval '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>79</td>
+  <td id=L79>
+    <span class="line ">    local v=local2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>80</td>
+  <td id=L80>
+    <span class="line ">    v=tempenv3 eval "</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>81</td>
+  <td id=L81>
+    <span class="line ">      local v=local3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>82</td>
+  <td id=L82>
+    <span class="line ">      echo \"[\$1/local1,tempenv2/local2,tempenv3/local3] v: \${v-(unset)}\"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>83</td>
+  <td id=L83>
+    <span class="line ">      unlocal v</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>84</td>
+  <td id=L84>
+    <span class="line ">      echo \"[\$1/local1,tempenv2/local2,tempenv3/local3] v: \${v-(unset)} (unlocal 1)\"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>85</td>
+  <td id=L85>
+    <span class="line ">      unlocal v</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>86</td>
+  <td id=L86>
+    <span class="line ">      echo \"[\$1/local1,tempenv2/local2,tempenv3/local3] v: \${v-(unset)} (unlocal 2)\"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>87</td>
+  <td id=L87>
+    <span class="line ">      unlocal v</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>88</td>
+  <td id=L88>
+    <span class="line ">      echo \"[\$1/local1,tempenv2/local2,tempenv3/local3] v: \${v-(unset)} (unlocal 3)\"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>89</td>
+  <td id=L89>
+    <span class="line ">      unlocal v</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>90</td>
+  <td id=L90>
+    <span class="line ">      echo \"[\$1/local1,tempenv2/local2,tempenv3/local3] v: \${v-(unset)} (unlocal 4)\"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>91</td>
+  <td id=L91>
+    <span class="line ">    "</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>92</td>
+  <td id=L92>
+    <span class="line ">  '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>93</td>
+  <td id=L93>
+    <span class="line ">}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>94</td>
+  <td id=L94>
+    <span class="line ">v=global</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>95</td>
+  <td id=L95>
+    <span class="line ">v=tempenv1 f3 global,tempenv1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>96</td>
+  <td id=L96>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>97</td>
+  <td id=L97>
+    <span class="line comm">## OK bash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>98</td>
+  <td id=L98>
+    <span class="line comm"># cell-unset x localvar-tempenv-share x tempenv-in-localctx</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>99</td>
+  <td id=L99>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: local3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>100</td>
+  <td id=L100>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: local2 (unlocal 1)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>101</td>
+  <td id=L101>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: local1 (unlocal 2)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>102</td>
+  <td id=L102>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: global (unlocal 3)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>103</td>
+  <td id=L103>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: (unset) (unlocal 4)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>104</td>
+  <td id=L104>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>105</td>
+  <td id=L105>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>106</td>
+  <td id=L106>
+    <span class="line comm">## OK-2 zsh/ash/dash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>107</td>
+  <td id=L107>
+    <span class="line comm"># value-unset</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>108</td>
+  <td id=L108>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: local3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>109</td>
+  <td id=L109>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: (unset) (unlocal 1)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>110</td>
+  <td id=L110>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: (unset) (unlocal 2)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>111</td>
+  <td id=L111>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: (unset) (unlocal 3)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>112</td>
+  <td id=L112>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: (unset) (unlocal 4)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>113</td>
+  <td id=L113>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>114</td>
+  <td id=L114>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>115</td>
+  <td id=L115>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>116</td>
+  <td id=L116>
+    <span class="line comm"># cell-unset (remove all localvar)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>117</td>
+  <td id=L117>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: local3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>118</td>
+  <td id=L118>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: tempenv1 (unlocal 1)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>119</td>
+  <td id=L119>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: global (unlocal 2)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>120</td>
+  <td id=L120>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: (unset) (unlocal 3)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>121</td>
+  <td id=L121>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: (unset) (unlocal 4)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>122</td>
+  <td id=L122>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>123</td>
+  <td id=L123>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>124</td>
+  <td id=L124>
+    <span class="line comm">## OK-3 mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>125</td>
+  <td id=L125>
+    <span class="line comm"># cell-unset (remove all localvar/tempenv) x tempenv-value-unset</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>126</td>
+  <td id=L126>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: local3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>127</td>
+  <td id=L127>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: tempenv1 (unlocal 1)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>128</td>
+  <td id=L128>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: (unset) (unlocal 2)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>129</td>
+  <td id=L129>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: (unset) (unlocal 3)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>130</td>
+  <td id=L130>
+    <span class="line ">[global,tempenv1/local1,tempenv2/local2,tempenv3/local3] v: (unset) (unlocal 4)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>131</td>
+  <td id=L131>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>132</td>
+  <td id=L132>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>133</td>
+  <td id=L133>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>134</td>
+  <td id=L134>
+    <span class="line spec-comment">#### [bash_unset] dynamic-unset for nested tempenvs</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>135</td>
+  <td id=L135>
+    <span class="line ">unlocal() { unset -v "$1"; }</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>136</td>
+  <td id=L136>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>137</td>
+  <td id=L137>
+    <span class="line ">f4_unlocal() {</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>138</td>
+  <td id=L138>
+    <span class="line ">  v=tempenv2 eval '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>139</td>
+  <td id=L139>
+    <span class="line ">    v=tempenv3 eval "</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>140</td>
+  <td id=L140>
+    <span class="line ">      echo \"[\$1,tempenv2,tempenv3] v: \${v-(unset)}\"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>141</td>
+  <td id=L141>
+    <span class="line ">      unlocal v</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>142</td>
+  <td id=L142>
+    <span class="line ">      echo \"[\$1,tempenv2,tempenv3] v: \${v-(unset)} (unlocal 1)\"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>143</td>
+  <td id=L143>
+    <span class="line ">      unlocal v</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>144</td>
+  <td id=L144>
+    <span class="line ">      echo \"[\$1,tempenv2,tempenv3] v: \${v-(unset)} (unlocal 2)\"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>145</td>
+  <td id=L145>
+    <span class="line ">      unlocal v</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>146</td>
+  <td id=L146>
+    <span class="line ">      echo \"[\$1,tempenv2,tempenv3] v: \${v-(unset)} (unlocal 3)\"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>147</td>
+  <td id=L147>
+    <span class="line ">      unlocal v</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>148</td>
+  <td id=L148>
+    <span class="line ">      echo \"[\$1,tempenv2,tempenv3] v: \${v-(unset)} (unlocal 4)\"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>149</td>
+  <td id=L149>
+    <span class="line ">    "</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>150</td>
+  <td id=L150>
+    <span class="line ">  '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>151</td>
+  <td id=L151>
+    <span class="line ">}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>152</td>
+  <td id=L152>
+    <span class="line ">v=global</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>153</td>
+  <td id=L153>
+    <span class="line ">v=tempenv1 f4_unlocal global,tempenv1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>154</td>
+  <td id=L154>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>155</td>
+  <td id=L155>
+    <span class="line comm">## OK bash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>156</td>
+  <td id=L156>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: tempenv3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>157</td>
+  <td id=L157>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: tempenv2 (unlocal 1)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>158</td>
+  <td id=L158>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: tempenv1 (unlocal 2)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>159</td>
+  <td id=L159>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: global (unlocal 3)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>160</td>
+  <td id=L160>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unlocal 4)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>161</td>
+  <td id=L161>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>162</td>
+  <td id=L162>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>163</td>
+  <td id=L163>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>164</td>
+  <td id=L164>
+    <span class="line comm"># value-unset, mksh-unset</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>165</td>
+  <td id=L165>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: tempenv3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>166</td>
+  <td id=L166>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unlocal 1)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>167</td>
+  <td id=L167>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unlocal 2)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>168</td>
+  <td id=L168>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unlocal 3)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>169</td>
+  <td id=L169>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unlocal 4)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>170</td>
+  <td id=L170>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>171</td>
+  <td id=L171>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>172</td>
+  <td id=L172>
+    <span class="line comm">## OK-3 osh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>173</td>
+  <td id=L173>
+    <span class="line comm"># cell-unset</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>174</td>
+  <td id=L174>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: tempenv3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>175</td>
+  <td id=L175>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: tempenv1 (unlocal 1)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>176</td>
+  <td id=L176>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: global (unlocal 2)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>177</td>
+  <td id=L177>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unlocal 3)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>178</td>
+  <td id=L178>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unlocal 4)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>179</td>
+  <td id=L179>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>180</td>
+  <td id=L180>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>181</td>
+  <td id=L181>
+    <span class="line comm">## OK-2 yash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>182</td>
+  <td id=L182>
+    <span class="line comm"># remove all tempenv3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>183</td>
+  <td id=L183>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: tempenv3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>184</td>
+  <td id=L184>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unlocal 1)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>185</td>
+  <td id=L185>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unlocal 2)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>186</td>
+  <td id=L186>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unlocal 3)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>187</td>
+  <td id=L187>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unlocal 4)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>188</td>
+  <td id=L188>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>189</td>
+  <td id=L189>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>190</td>
+  <td id=L190>
+    <span class="line spec-comment">#### [bash_unset] local-unset for nested tempenvs</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>191</td>
+  <td id=L191>
+    <span class="line ">f4_unset() {</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>192</td>
+  <td id=L192>
+    <span class="line ">  v=tempenv2 eval '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>193</td>
+  <td id=L193>
+    <span class="line ">    v=tempenv3 eval "</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>194</td>
+  <td id=L194>
+    <span class="line ">      echo \"[\$1,tempenv2,tempenv3] v: \${v-(unset)}\"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>195</td>
+  <td id=L195>
+    <span class="line ">      unset v</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>196</td>
+  <td id=L196>
+    <span class="line ">      echo \"[\$1,tempenv2,tempenv3] v: \${v-(unset)} (unset 1)\"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>197</td>
+  <td id=L197>
+    <span class="line ">      unset v</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>198</td>
+  <td id=L198>
+    <span class="line ">      echo \"[\$1,tempenv2,tempenv3] v: \${v-(unset)} (unset 2)\"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>199</td>
+  <td id=L199>
+    <span class="line ">      unset v</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>200</td>
+  <td id=L200>
+    <span class="line ">      echo \"[\$1,tempenv2,tempenv3] v: \${v-(unset)} (unset 3)\"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>201</td>
+  <td id=L201>
+    <span class="line ">      unset v</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>202</td>
+  <td id=L202>
+    <span class="line ">      echo \"[\$1,tempenv2,tempenv3] v: \${v-(unset)} (unset 4)\"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>203</td>
+  <td id=L203>
+    <span class="line ">    "</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>204</td>
+  <td id=L204>
+    <span class="line ">  '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>205</td>
+  <td id=L205>
+    <span class="line ">}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>206</td>
+  <td id=L206>
+    <span class="line ">v=global</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>207</td>
+  <td id=L207>
+    <span class="line ">v=tempenv1 f4_unset global,tempenv1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>208</td>
+  <td id=L208>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>209</td>
+  <td id=L209>
+    <span class="line comm">## OK bash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>210</td>
+  <td id=L210>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: tempenv3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>211</td>
+  <td id=L211>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: tempenv2 (unset 1)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>212</td>
+  <td id=L212>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: tempenv1 (unset 2)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>213</td>
+  <td id=L213>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: global (unset 3)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>214</td>
+  <td id=L214>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unset 4)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>215</td>
+  <td id=L215>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>216</td>
+  <td id=L216>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>217</td>
+  <td id=L217>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>218</td>
+  <td id=L218>
+    <span class="line comm"># value-unset, mksh-unset, tempenv-value-unset?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>219</td>
+  <td id=L219>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: tempenv3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>220</td>
+  <td id=L220>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unset 1)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>221</td>
+  <td id=L221>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unset 2)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>222</td>
+  <td id=L222>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unset 3)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>223</td>
+  <td id=L223>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unset 4)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>224</td>
+  <td id=L224>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>225</td>
+  <td id=L225>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>226</td>
+  <td id=L226>
+    <span class="line comm">## OK-2 osh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>227</td>
+  <td id=L227>
+    <span class="line comm"># cell-unset</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>228</td>
+  <td id=L228>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: tempenv3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>229</td>
+  <td id=L229>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: tempenv1 (unset 1)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>230</td>
+  <td id=L230>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: global (unset 2)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>231</td>
+  <td id=L231>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unset 3)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>232</td>
+  <td id=L232>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unset 4)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>233</td>
+  <td id=L233>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>234</td>
+  <td id=L234>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>235</td>
+  <td id=L235>
+    <span class="line comm">## BUG yash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>236</td>
+  <td id=L236>
+    <span class="line comm"># value-unset? inconsistent with other test cases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>237</td>
+  <td id=L237>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: tempenv3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>238</td>
+  <td id=L238>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unset 1)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>239</td>
+  <td id=L239>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unset 2)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>240</td>
+  <td id=L240>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unset 3)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>241</td>
+  <td id=L241>
+    <span class="line ">[global,tempenv1,tempenv2,tempenv3] v: (unset) (unset 4)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>242</td>
+  <td id=L242>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>243</td>
+  <td id=L243>
+    <span class="line "></span>
+  </td>
+</tr>
+
+        </table>
+      </body>
+    </html>

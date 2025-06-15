@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>extglob-match: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for extglob-match.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>29</td><td>22</td><td>26</td><td>1</td><td>23</td><td>28</td><td>25</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>3</td><td>28</td><td>6</td><td>1</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L5">@ matches exactly one</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L14">@() with variable arms</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="extglob-match.test.html#L25">extglob in variable</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L55">Matching literal '@(cc)'</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L77">nested @()</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L94">nested @() with quotes and vars</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L103">? matches 0 or 1</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L112">+ matches 1 or more</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L121">* matches 0 or more</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L130">simple repetition with *(foo) and +(Foo)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L139">! matches none</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L148">match is anchored</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L159">repeated match is anchored</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L170">repetition with glob</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L181">No brace expansion in ==</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L191">adjacent extglob</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L201">nested extglob</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L215">extglob empty string</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L224">extglob empty pattern</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L237">case with extglob</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"><a href="#details-19-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L272">[[ $x == !($str) ]]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"><a href="#details-20-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="extglob-match.test.html#L283">Turning extglob on changes the meaning of [[ !(str) ]] in bash</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-mksh">details</a></td><td class="details-row"><a href="#details-21-ksh">details</a></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"><a href="#details-21-brush">details</a></td><td class="details-row"><a href="#details-21-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L308">With extglob on, !($str) on the left or right of == has different meanings</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="extglob-match.test.html#L317">extglob inside arg word</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-mksh">details</a></td><td class="details-row"><a href="#details-23-ksh">details</a></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L336">extglob is not detected in regex!</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-mksh">details</a></td><td class="details-row"><a href="#details-24-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L346">regular glob of single unicode char</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L361">extended glob of single unicode char</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="extglob-match.test.html#L376">Extended glob in ${x//pat/replace}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L388">Extended glob in ${x%PATTERN}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>154 passed, 4 OK, 3 not implemented, 4 BUG, 38 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="extglob-match.test.html#L5">@ matches exactly one</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'TRUE\nFALSE\n', got 'FALSE\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="extglob-match.test.html#L14">@() with variable arms</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'TRUE\nFALSE\n', got 'FALSE\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="extglob-match.test.html#L25">extglob in variable</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+FALSE
+FALSE
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="extglob-match.test.html#L25">extglob in variable</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'TRUE\nTRUE\nFALSE\nFALSE\nFALSE\n', got 'FALSE\nFALSE\nFALSE\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+FALSE
+FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+[[: too many arguments
+[[: too many arguments
+</pre></td></tr><tr><td><a name="details-2-osh"></a><b>osh</b></td><td>2 <a href="extglob-match.test.html#L25">extglob in variable</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  g=--@(help|verbose)
+    ^~
+[ stdin ]:3: fatal: extended glob not allowed in this word
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="extglob-match.test.html#L55">Matching literal '@(cc)'</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=0\nstatus=1\nstatus=0\nstatus=1\n', got 'status=1\nstatus=1\nstatus=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="extglob-match.test.html#L55">Matching literal '@(cc)'</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=0\nstatus=1\nstatus=0\nstatus=1\n', got 'status=0\nstatus=0\nstatus=0\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="extglob-match.test.html#L77">nested @()</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="extglob-match.test.html#L77">nested @()</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'TRUE\nTRUE\nTRUE\nFALSE\n', got 'FALSE\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="extglob-match.test.html#L94">nested @() with quotes and vars</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'TRUE\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="extglob-match.test.html#L94">nested @() with quotes and vars</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'TRUE\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="extglob-match.test.html#L103">? matches 0 or 1</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'TRUE\nFALSE\n', got 'FALSE\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="extglob-match.test.html#L112">+ matches 1 or more</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'TRUE\nFALSE\n', got 'FALSE\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="extglob-match.test.html#L121">* matches 0 or more</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'TRUE\nFALSE\n', got 'FALSE\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="extglob-match.test.html#L130">simple repetition with *(foo) and +(Foo)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'TRUE\nTRUE\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="extglob-match.test.html#L139">! matches none</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'TRUE\nFALSE\n', got 'FALSE\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="extglob-match.test.html#L148">match is anchored</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'FALSE\nFALSE\nTRUE\n', got 'FALSE\nFALSE\n'</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="extglob-match.test.html#L159">repeated match is anchored</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'FALSE\nFALSE\nTRUE\n', got 'FALSE\nFALSE\n'</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="extglob-match.test.html#L170">repetition with glob</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'TRUE\nFALSE\n', got 'FALSE\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="extglob-match.test.html#L181">No brace expansion in ==</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'TRUE\nFALSE\n', got 'FALSE\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+[[: too many arguments
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="extglob-match.test.html#L191">adjacent extglob</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'TRUE\nTRUE\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="extglob-match.test.html#L201">nested extglob</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'TRUE\nTRUE\nTRUE\nFALSE\n', got 'FALSE\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="extglob-match.test.html#L215">extglob empty string</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'FALSE\nTRUE\n', got 'FALSE\n'</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="extglob-match.test.html#L224">extglob empty pattern</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'TRUE\nTRUE\nFALSE\nFALSE\n', got 'FALSE\nFALSE\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="extglob-match.test.html#L237">case with extglob</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'A\nA\nU\nB\nC\nD\n', got 'U\n'</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>U
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+free(): invalid pointer
+</pre></td></tr><tr><td><a name="details-19-sush"></a><b>sush</b></td><td>19 <a href="extglob-match.test.html#L237">case with extglob</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'A\nA\nU\nB\nC\nD\n', got 'A\nU\nC\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>A
+U
+C
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="extglob-match.test.html#L272">[[ $x == !($str) ]]</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'TRUE\nFALSE\n', got 'FALSE\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+[[: too many arguments
+</pre></td></tr><tr><td><a name="details-20-sush"></a><b>sush</b></td><td>20 <a href="extglob-match.test.html#L272">[[ $x == !($str) ]]</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'TRUE\nFALSE\n', got 'FALSE\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-mksh"></a><b>mksh</b></td><td>21 <a href="extglob-match.test.html#L283">Turning extglob on changes the meaning of [[ !(str) ]] in bash</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+TRUE
+TRUE
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: shopt: not found
+</pre></td></tr><tr><td><a name="details-21-ksh"></a><b>ksh</b></td><td>21 <a href="extglob-match.test.html#L283">Turning extglob on changes the meaning of [[ !(str) ]] in bash</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'TRUE\nFALSE\nTRUE\nTRUE\n', got 'TRUE\nTRUE\nTRUE\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+TRUE
+TRUE
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="extglob-match.test.html#L283">Turning extglob on changes the meaning of [[ !(str) ]] in bash</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'TRUE\nFALSE\nTRUE\nTRUE\n', got 'TRUE\nTRUE\nTRUE\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+TRUE
+TRUE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="extglob-match.test.html#L283">Turning extglob on changes the meaning of [[ !(str) ]] in bash</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'TRUE\nFALSE\nTRUE\nTRUE\n', got 'TRUE\nFALSE\nTRUE\n'</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+FALSE
+TRUE
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-brush"></a><b>brush</b></td><td>21 <a href="extglob-match.test.html#L283">Turning extglob on changes the meaning of [[ !(str) ]] in bash</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'TRUE\nFALSE\nTRUE\nTRUE\n', got 'TRUE\nTRUE\nTRUE\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+TRUE
+TRUE
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-osh"></a><b>osh</b></td><td>21 <a href="extglob-match.test.html#L283">Turning extglob on changes the meaning of [[ !(str) ]] in bash</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  [[ !($empty) ]]  &amp;&amp; echo TRUE   # test if $empty is empty
+     ^~
+[ stdin ]:3: fatal: extended glob not allowed in this word
+</pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="extglob-match.test.html#L308">With extglob on, !($str) on the left or right of == has different meanings</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'TRUE\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="extglob-match.test.html#L308">With extglob on, !($str) on the left or right of == has different meanings</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'TRUE\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-mksh"></a><b>mksh</b></td><td>23 <a href="extglob-match.test.html#L317">extglob inside arg word</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+FALSE
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-23-ksh"></a><b>ksh</b></td><td>23 <a href="extglob-match.test.html#L317">extglob inside arg word</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'TRUE\nTRUE\nFALSE\n', got 'TRUE\nFALSE\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+FALSE
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="extglob-match.test.html#L317">extglob inside arg word</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'TRUE\nTRUE\nFALSE\n', got 'FALSE\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-23-osh"></a><b>osh</b></td><td>23 <a href="extglob-match.test.html#L317">extglob inside arg word</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+</pre><i>stderr:</i> <br/>
+<pre>  [[ foo == ${unset:-@(foo|bar)} ]] &amp;&amp; echo TRUE
+                     ^~
+[ stdin ]:3: fatal: Extended glob not allowed in this word
+</pre></td></tr><tr><td><a name="details-24-mksh"></a><b>mksh</b></td><td>24 <a href="extglob-match.test.html#L336">extglob is not detected in regex!</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+mksh: &lt;stdin&gt;[2]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-24-ksh"></a><b>ksh</b></td><td>24 <a href="extglob-match.test.html#L336">extglob is not detected in regex!</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'FALSE\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[2]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-25-mksh"></a><b>mksh</b></td><td>25 <a href="extglob-match.test.html#L346">regular glob of single unicode char</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>0
+1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="extglob-match.test.html#L346">regular glob of single unicode char</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '0\n0\n', got '1\n1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+1
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-26-mksh"></a><b>mksh</b></td><td>26 <a href="extglob-match.test.html#L361">extended glob of single unicode char</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>0
+1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="extglob-match.test.html#L361">extended glob of single unicode char</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '0\n0\n', got '1\n1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+1
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-27-toysh"></a><b>toysh</b></td><td>27 <a href="extglob-match.test.html#L376">Extended glob in ${x//pat/replace}</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'foZ\n', got 'foo.py\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo.py
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-27-osh"></a><b>osh</b></td><td>27 <a href="extglob-match.test.html#L376">Extended glob in ${x//pat/replace}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  echo ${x//@(?.py)/Z}
+            ^~
+[ stdin ]:3: fatal: extended globs not supported in ${x//GLOB/}
+</pre></td></tr><tr><td><a name="details-28-toysh"></a><b>toysh</b></td><td>28 <a href="extglob-match.test.html#L388">Extended glob in ${x%PATTERN}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'strip %  foo\nstrip %% foo\nstrip #  .py\nstrip ## .py\n'
+Got      'strip %  foo.py\nstrip %% foo.py\nstrip #  foo.py\nstrip ## foo.py\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>strip %  foo.py
+strip %% foo.py
+strip #  foo.py
+strip ## foo.py
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr></table></body></html>

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-bind: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-bind.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>9</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>2</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>9</td><td>9</td><td>9</td><td>8</td><td>8</td><td>7</td><td></td></tr>
+<tr><td>total</td><td>9</td><td>9</td><td>9</td><td>9</td><td>9</td><td>9</td><td>9</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bind.test.html#L8">bind -l should report readline functions</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"><a href="#details-0-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-bind.test.html#L23">bind -p -P to print function names and key bindings</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"><a href="#details-1-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bind.test.html#L37">bind -s -S accepted</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-bind.test.html#L47">bind -v -V accepted</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"><a href="#details-3-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-bind.test.html#L61">bind -q</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"><a href="#details-4-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-bind.test.html#L83">bind -X</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"><a href="#details-5-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-bind.test.html#L100">bind -m with bind -x/-X</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"><a href="#details-6-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-bind.test.html#L121">bind -r</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"><a href="#details-7-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-bind.test.html#L141">bind -r of bind -x commands</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"><a href="#details-8-osh">details</a></td><td class="details-row"></td></tr>
+</table>
+<pre>13 passed, 0 OK, 0 not implemented, 0 BUG, 50 failed, 0 timeouts, 0 cases skipped
+7 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="builtin-bind.test.html#L8">bind -l should report readline functions</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'accept-line\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: bind: can't bind, not a tty
+</pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="builtin-bind.test.html#L8">bind -l should report readline functions</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'accept-line\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: bind: can't bind, not a tty
+</pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="builtin-bind.test.html#L8">bind -l should report readline functions</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'accept-line\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: bind: No such file or directory
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="builtin-bind.test.html#L8">bind -l should report readline functions</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'accept-line\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-brush"></a><b>brush</b></td><td>0 <a href="builtin-bind.test.html#L8">bind -l should report readline functions</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'accept-line\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>bind: key bindings not supported in this config
+</pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="builtin-bind.test.html#L23">bind -p -P to print function names and key bindings</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '% vi-subst (not bound)\n\nvi-subst is not bound to any keys\n'
+Got      '\n'
+</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: bind: -p: unknown option
+mksh: &lt;stdin&gt;[4]: bind: -P: unknown option
+</pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="builtin-bind.test.html#L23">bind -p -P to print function names and key bindings</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '% vi-subst (not bound)\n\nvi-subst is not bound to any keys\n'
+Got      '\n'
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[4]: bind: can't bind, not a tty
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-bind.test.html#L23">bind -p -P to print function names and key bindings</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '% vi-subst (not bound)\n\nvi-subst is not bound to any keys\n'
+Got      '\n'
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>sh: bind: No such file or directory
+sh: bind: No such file or directory
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="builtin-bind.test.html#L23">bind -p -P to print function names and key bindings</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '% vi-subst (not bound)\n\nvi-subst is not bound to any keys\n'
+Got      '\n'
+</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="builtin-bind.test.html#L23">bind -p -P to print function names and key bindings</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '% vi-subst (not bound)\n\nvi-subst is not bound to any keys\n'
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>bind: key bindings not supported in this config
+bind: key bindings not supported in this config
+</pre></td></tr><tr><td><a name="details-1-osh"></a><b>osh</b></td><td>1 <a href="builtin-bind.test.html#L23">bind -p -P to print function names and key bindings</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected '% vi-subst (not bound)\n\nvi-subst is not bound to any keys\n'
+Got      '\n'
+</span><br/>
+<span class="assertion">[osh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="builtin-bind.test.html#L37">bind -s -S accepted</a><br/><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: bind: -s: unknown option
+mksh: &lt;stdin&gt;[2]: bind: -S: unknown option
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="builtin-bind.test.html#L37">bind -s -S accepted</a><br/><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[2]: bind: can't bind, not a tty
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="builtin-bind.test.html#L37">bind -s -S accepted</a><br/><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: bind: No such file or directory
+sh: bind: No such file or directory
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="builtin-bind.test.html#L47">bind -v -V accepted</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "set blink-matching-paren off\n\nblink-matching-paren is set to 'off'\n"
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: bind: -v: unknown option
+mksh: &lt;stdin&gt;[4]: bind: -V: unknown option
+</pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="builtin-bind.test.html#L47">bind -v -V accepted</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "set blink-matching-paren off\n\nblink-matching-paren is set to 'off'\n"
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[4]: bind: can't bind, not a tty
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="builtin-bind.test.html#L47">bind -v -V accepted</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "set blink-matching-paren off\n\nblink-matching-paren is set to 'off'\n"
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>sh: bind: No such file or directory
+sh: bind: No such file or directory
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="builtin-bind.test.html#L47">bind -v -V accepted</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "set blink-matching-paren off\n\nblink-matching-paren is set to 'off'\n"
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="builtin-bind.test.html#L47">bind -v -V accepted</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "set blink-matching-paren off\n\nblink-matching-paren is set to 'off'\n"
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>bind: key bindings not supported in this config
+bind: key bindings not supported in this config
+</pre></td></tr><tr><td><a name="details-3-osh"></a><b>osh</b></td><td>3 <a href="builtin-bind.test.html#L47">bind -v -V accepted</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected "set blink-matching-paren off\n\nblink-matching-paren is set to 'off'\n"
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="builtin-bind.test.html#L61">bind -q</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'status=1\nvi-subst is not bound to any keys.\nstatus=1\nyank can be invoked via "\\C-y".\nstatus=0\n'
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: bind: -q: unknown option
+mksh: &lt;stdin&gt;[5]: bind: -q: unknown option
+mksh: &lt;stdin&gt;[8]: bind: -q: unknown option
+</pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="builtin-bind.test.html#L61">bind -q</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=1\nvi-subst is not bound to any keys.\nstatus=1\nyank can be invoked via "\\C-y".\nstatus=0\n'
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[5]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[8]: bind: can't bind, not a tty
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="builtin-bind.test.html#L61">bind -q</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=1\nvi-subst is not bound to any keys.\nstatus=1\nyank can be invoked via "\\C-y".\nstatus=0\n'
+Got      'status=127\nstatus=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: bind: No such file or directory
+sh: bind: No such file or directory
+sh: bind: No such file or directory
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="builtin-bind.test.html#L61">bind -q</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=1\nvi-subst is not bound to any keys.\nstatus=1\nyank can be invoked via "\\C-y".\nstatus=0\n'
+Got      'status=0\nstatus=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="builtin-bind.test.html#L61">bind -q</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=1\nvi-subst is not bound to any keys.\nstatus=1\nyank can be invoked via "\\C-y".\nstatus=0\n'
+Got      'status=99\nstatus=99\nstatus=99\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=99
+status=99
+status=99
+</pre><i>stderr:</i> <br/>
+<pre>bind: key bindings not supported in this config
+bind: key bindings not supported in this config
+bind: key bindings not supported in this config
+</pre></td></tr><tr><td><a name="details-4-osh"></a><b>osh</b></td><td>4 <a href="builtin-bind.test.html#L61">bind -q</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'status=1\nvi-subst is not bound to any keys.\nstatus=1\nyank can be invoked via "\\C-y".\nstatus=0\n'
+Got      'status=0\nstatus=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="builtin-bind.test.html#L83">bind -X</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'status=1\n\\C-o\\C-s\\C-h\necho foo\nstatus=0\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: bind: -X: unknown option
+mksh: &lt;stdin&gt;[4]: bind: -x: unknown option
+mksh: &lt;stdin&gt;[5]: bind: -X: unknown option
+mksh: &lt;stdin&gt;[6]: bind: -X: unknown option
+</pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="builtin-bind.test.html#L83">bind -X</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=1\n\\C-o\\C-s\\C-h\necho foo\nstatus=0\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[4]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[5]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[6]: bind: can't bind, not a tty
+</pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="builtin-bind.test.html#L83">bind -X</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=1\n\\C-o\\C-s\\C-h\necho foo\nstatus=0\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>sh: bind: No such file or directory
+sh: bind: No such file or directory
+sh: bind: No such file or directory
+sh: bind: No such file or directory
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="builtin-bind.test.html#L83">bind -X</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=1\n\\C-o\\C-s\\C-h\necho foo\nstatus=0\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="builtin-bind.test.html#L83">bind -X</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=1\n\\C-o\\C-s\\C-h\necho foo\nstatus=0\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>bind: key bindings not supported in this config
+bind: key bindings not supported in this config
+bind: key bindings not supported in this config
+bind: key bindings not supported in this config
+</pre></td></tr><tr><td><a name="details-5-osh"></a><b>osh</b></td><td>5 <a href="builtin-bind.test.html#L83">bind -X</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'status=1\n\\C-o\\C-s\\C-h\necho foo\nstatus=0\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="builtin-bind.test.html#L100">bind -m with bind -x/-X</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'status=1\nemacs\nstatus=0\nvi\nstatus=0\n', got 'status=1\nstatus=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: bind: -X: unknown option
+mksh: &lt;stdin&gt;[4]: bind: can't bind, not a tty
+mksh: &lt;stdin&gt;[4]: bind: can't bind, not a tty
+mksh: &lt;stdin&gt;[4]: bind: can't bind, not a tty
+mksh: &lt;stdin&gt;[5]: bind: can't bind, not a tty
+mksh: &lt;stdin&gt;[5]: bind: can't bind, not a tty
+mksh: &lt;stdin&gt;[8]: bind: can't bind, not a tty
+mksh: &lt;stdin&gt;[8]: bind: can't bind, not a tty
+mksh: &lt;stdin&gt;[8]: bind: can't bind, not a tty
+mksh: &lt;stdin&gt;[9]: bind: can't bind, not a tty
+mksh: &lt;stdin&gt;[9]: bind: can't bind, not a tty
+</pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="builtin-bind.test.html#L100">bind -m with bind -x/-X</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=1\nemacs\nstatus=0\nvi\nstatus=0\n', got 'status=1\nstatus=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[4]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[5]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[8]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[9]: bind: can't bind, not a tty
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="builtin-bind.test.html#L100">bind -m with bind -x/-X</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=1\nemacs\nstatus=0\nvi\nstatus=0\n', got 'status=1\nstatus=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>sh: bind: No such file or directory
+sh: bind: No such file or directory
+sh: bind: No such file or directory
+sh: bind: No such file or directory
+sh: bind: No such file or directory
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="builtin-bind.test.html#L100">bind -m with bind -x/-X</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=1\nemacs\nstatus=0\nvi\nstatus=0\n', got 'status=1\nstatus=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="builtin-bind.test.html#L100">bind -m with bind -x/-X</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=1\nemacs\nstatus=0\nvi\nstatus=0\n', got 'status=1\nstatus=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>bind: key bindings not supported in this config
+bind: key bindings not supported in this config
+bind: key bindings not supported in this config
+bind: key bindings not supported in this config
+bind: key bindings not supported in this config
+</pre></td></tr><tr><td><a name="details-6-osh"></a><b>osh</b></td><td>6 <a href="builtin-bind.test.html#L100">bind -m with bind -x/-X</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'status=1\nemacs\nstatus=0\nvi\nstatus=0\n', got 'status=1\nstatus=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="builtin-bind.test.html#L121">bind -r</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'status=1\n\\C-o\\C-s\\C-h\nstatus=0\nstatus=1\n'
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: bind: -q: unknown option
+mksh: &lt;stdin&gt;[4]: bind: can't bind, not a tty
+mksh: &lt;stdin&gt;[5]: bind: -q: unknown option
+mksh: &lt;stdin&gt;[8]: bind: -r: unknown option
+mksh: &lt;stdin&gt;[9]: bind: -q: unknown option
+</pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="builtin-bind.test.html#L121">bind -r</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=1\n\\C-o\\C-s\\C-h\nstatus=0\nstatus=1\n'
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[4]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[5]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[8]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[9]: bind: can't bind, not a tty
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="builtin-bind.test.html#L121">bind -r</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=1\n\\C-o\\C-s\\C-h\nstatus=0\nstatus=1\n'
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>sh: bind: No such file or directory
+sh: bind: No such file or directory
+sh: bind: No such file or directory
+sh: bind: No such file or directory
+sh: bind: No such file or directory
+</pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="builtin-bind.test.html#L121">bind -r</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=1\n\\C-o\\C-s\\C-h\nstatus=0\nstatus=1\n'
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="builtin-bind.test.html#L121">bind -r</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=1\n\\C-o\\C-s\\C-h\nstatus=0\nstatus=1\n'
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>bind: key bindings not supported in this config
+bind: key bindings not supported in this config
+bind: key bindings not supported in this config
+bind: key bindings not supported in this config
+bind: key bindings not supported in this config
+</pre></td></tr><tr><td><a name="details-7-osh"></a><b>osh</b></td><td>7 <a href="builtin-bind.test.html#L121">bind -r</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'status=1\n\\C-o\\C-s\\C-h\nstatus=0\nstatus=1\n'
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-mksh"></a><b>mksh</b></td><td>8 <a href="builtin-bind.test.html#L141">bind -r of bind -x commands</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'status=1\n\\C-o\\C-s\\C-h\nstatus=0\nstatus=1\n'
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: bind: -X: unknown option
+mksh: &lt;stdin&gt;[4]: bind: -x: unknown option
+mksh: &lt;stdin&gt;[5]: bind: -X: unknown option
+mksh: &lt;stdin&gt;[8]: bind: -r: unknown option
+mksh: &lt;stdin&gt;[9]: bind: -X: unknown option
+</pre></td></tr><tr><td><a name="details-8-ksh"></a><b>ksh</b></td><td>8 <a href="builtin-bind.test.html#L141">bind -r of bind -x commands</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=1\n\\C-o\\C-s\\C-h\nstatus=0\nstatus=1\n'
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[4]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[5]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[8]: bind: can't bind, not a tty
+E: ksh: &lt;stdin&gt;[9]: bind: can't bind, not a tty
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="builtin-bind.test.html#L141">bind -r of bind -x commands</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=1\n\\C-o\\C-s\\C-h\nstatus=0\nstatus=1\n'
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>sh: bind: No such file or directory
+sh: bind: No such file or directory
+sh: bind: No such file or directory
+sh: bind: No such file or directory
+sh: bind: No such file or directory
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="builtin-bind.test.html#L141">bind -r of bind -x commands</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=1\n\\C-o\\C-s\\C-h\nstatus=0\nstatus=1\n'
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="builtin-bind.test.html#L141">bind -r of bind -x commands</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=1\n\\C-o\\C-s\\C-h\nstatus=0\nstatus=1\n'
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>bind: key bindings not supported in this config
+bind: key bindings not supported in this config
+bind: key bindings not supported in this config
+bind: key bindings not supported in this config
+bind: key bindings not supported in this config
+</pre></td></tr><tr><td><a name="details-8-osh"></a><b>osh</b></td><td>8 <a href="builtin-bind.test.html#L141">bind -r of bind -x commands</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'status=1\n\\C-o\\C-s\\C-h\nstatus=0\nstatus=1\n'
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

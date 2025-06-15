@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>assign-dialects: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for assign-dialects.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>1</td><td>1</td><td>1</td><td>0</td><td>1</td><td>2</td><td>1</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>1</td><td>2</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+<tr><td>total</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="assign-dialects.test.html#L4">K and V are variables in (( array[K] = V ))</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="assign-dialects.test.html#L19">when are variables set with 'test -v'</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-1-bash">details</a></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-1-osh">details</a></td><td class="details-row"></td></tr>
+</table>
+<pre>7 passed, 0 OK, 1 not implemented, 1 BUG, 5 failed, 0 timeouts, 0 cases skipped
+1 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="assign-dialects.test.html#L4">K and V are variables in (( array[K] = V ))</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'array[5]=42\nkeys = 5\nvalues = 42\n', got 'array[5]=\nkeys =\nvalues =\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>array[5]=
+keys =
+values =
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+main: line 4: sh: bad math:  array[K] = V  @ 6
+</pre></td></tr><tr><td><a name="details-1-bash"></a><b>bash</b></td><td>1 <a href="assign-dialects.test.html#L19">when are variables set with 'test -v'</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>unset=1
+a=1
+A=1
+a=0
+A=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="assign-dialects.test.html#L19">when are variables set with 'test -v'</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>unset=2
+a=2
+A=2
+a=2
+A=2
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: test: unset: unexpected operator/operand
+mksh: &lt;stdin&gt;[5]: test: a: unexpected operator/operand
+mksh: &lt;stdin&gt;[8]: typeset: -A: unknown option
+mksh: &lt;stdin&gt;[9]: test: A: unexpected operator/operand
+mksh: &lt;stdin&gt;[15]: test: a: unexpected operator/operand
+mksh: &lt;stdin&gt;[18]: test: A: unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="assign-dialects.test.html#L19">when are variables set with 'test -v'</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'unset=1\na=1\nA=1\na=0\nA=0\n', got 'unset=1\na=1\nA=1\na=0\nA=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>unset=1
+a=1
+A=1
+a=0
+A=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[8]: typeset: -A: unknown option
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="assign-dialects.test.html#L19">when are variables set with 'test -v'</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'unset=1\na=1\nA=1\na=0\nA=0\n', got 'unset=2\na=2\nA=2\na=2\nA=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>unset=2
+a=2
+A=2
+a=2
+A=2
+</pre><i>stderr:</i> <br/>
+<pre>test: too many arguments
+sh: typeset: No such file or directory
+test: too many arguments
+sh: typeset: No such file or directory
+test: too many arguments
+sh: a[0]=1: No such file or directory
+sh: A[x]=x: No such file or directory
+test: too many arguments
+test: too many arguments
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="assign-dialects.test.html#L19">when are variables set with 'test -v'</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'unset=1\na=1\nA=1\na=0\nA=0\n', got 'unset=2\na=2\nA=2\na=2\nA=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>unset=2
+a=2
+A=2
+a=2
+A=2
+</pre><i>stderr:</i> <br/>
+<pre>test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: 'x': syntax error: operand expected (error token is "'x'")
+test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+</pre></td></tr><tr><td><a name="details-1-osh"></a><b>osh</b></td><td>1 <a href="assign-dialects.test.html#L19">when are variables set with 'test -v'</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'unset=1\na=1\nA=1\na=0\nA=0\n', got 'unset=1\na=0\nA=0\na=0\nA=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>unset=1
+a=0
+A=0
+a=0
+A=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

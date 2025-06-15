@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>nul-bytes: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for nul-bytes.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>15</td><td>13</td><td>13</td><td>1</td><td>1</td><td>2</td><td>10</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug-2">BUG-2</td> <td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>2</td><td>14</td><td>14</td><td>13</td><td>1</td><td></td></tr>
+<tr><td>total</td><td>15</td><td>15</td><td>15</td><td>15</td><td>15</td><td>15</td><td>15</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nul-bytes.test.html#L5">NUL bytes with echo -e</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nul-bytes.test.html#L16">NUL bytes in printf format</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="nul-bytes.test.html#L20">NUL bytes in printf value (OSH and zsh agree)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"><a href="#details-2-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="nul-bytes.test.html#L33">NUL bytes with echo $'\0' (OSH and zsh agree)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"><a href="#details-3-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nul-bytes.test.html#L47">NUL bytes and IFS splitting</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="nul-bytes.test.html#L71">NUL bytes with test -n</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"><a href="#details-5-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nul-bytes.test.html#L100">NUL bytes with test -f</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="nul-bytes.test.html#L137">NUL bytes with ${#s} (OSH and zsh agree)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"><a href="#details-7-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nul-bytes.test.html#L161">Compare \x00 byte versus \x01 byte - command sub</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nul-bytes.test.html#L199">Compare \x00 byte versus \x01 byte - read builtin</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="bug-2">BUG-2</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nul-bytes.test.html#L232">Compare \x00 byte versus \x01 byte - read -n</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="nul-bytes.test.html#L275">Compare \x00 byte versus \x01 byte - mapfile builtin</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-mksh">details</a></td><td class="details-row"><a href="#details-11-ksh">details</a></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"><a href="#details-11-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nul-bytes.test.html#L302">Strip ops # ## % %% with NUL bytes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nul-bytes.test.html#L354">Issue 2269 Reduction</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="nul-bytes.test.html#L403">Issue 2269 - Do NUL bytes match ? in ${a#?}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"><a href="#details-14-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>55 passed, 4 OK, 1 not implemented, 1 BUG, 44 failed, 0 timeouts, 0 cases skipped
+1 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="nul-bytes.test.html#L5">NUL bytes with echo -e</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '\x00-\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="nul-bytes.test.html#L16">NUL bytes in printf format</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '\x00\n', got '\\0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>\0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="nul-bytes.test.html#L20">NUL bytes in printf value (OSH and zsh agree)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '\n\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="nul-bytes.test.html#L20">NUL bytes in printf value (OSH and zsh agree)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '\n\n', got '\x00\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre> 
+</pre><i>stderr:</i> <br/>
+<pre>
+thread 'main' panicked at src/proc_ctrl.rs:181:46:
+called `Result::unwrap()` on an `Err` value: NulError(0, [0])
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="nul-bytes.test.html#L20">NUL bytes in printf value (OSH and zsh agree)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '\n\n', got '\x00\n\x00\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre> 
+ 
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-osh"></a><b>osh</b></td><td>2 <a href="nul-bytes.test.html#L20">NUL bytes in printf value (OSH and zsh agree)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre> 
+ 
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="nul-bytes.test.html#L33">NUL bytes with echo $'\0' (OSH and zsh agree)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="nul-bytes.test.html#L33">NUL bytes with echo $'\0' (OSH and zsh agree)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 101</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>
+thread 'main' panicked at src/proc_ctrl.rs:181:46:
+called `Result::unwrap()` on an `Err` value: NulError(0, [0])
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+</pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="nul-bytes.test.html#L33">NUL bytes with echo $'\0' (OSH and zsh agree)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '\n', got '\x00\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre> 
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-osh"></a><b>osh</b></td><td>3 <a href="nul-bytes.test.html#L33">NUL bytes with echo $'\0' (OSH and zsh agree)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre> 
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="nul-bytes.test.html#L47">NUL bytes and IFS splitting</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "[]\n['']\n['ab']\n['ab']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="nul-bytes.test.html#L47">NUL bytes and IFS splitting</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "[]\n['']\n['ab']\n['ab']\n", got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 101</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>
+thread 'main' panicked at src/proc_ctrl.rs:181:46:
+called `Result::unwrap()` on an `Err` value: NulError(0, [0])
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'main' panicked at src/proc_ctrl.rs:181:46:
+called `Result::unwrap()` on an `Err` value: NulError(0, [0])
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'main' panicked at src/proc_ctrl.rs:181:46:
+called `Result::unwrap()` on an `Err` value: NulError(1, [97, 0, 98])
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'main' panicked at src/proc_ctrl.rs:181:46:
+called `Result::unwrap()` on an `Err` value: NulError(1, [97, 0, 98])
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+</pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="nul-bytes.test.html#L47">NUL bytes and IFS splitting</a><br/><br/>
+<span class="assertion">[brush stdout] Expected "[]\n['']\n['ab']\n['ab']\n", got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m nul byte found in provided data
+[31mERROR[0m nul byte found in provided data
+[31mERROR[0m nul byte found in provided data
+[31mERROR[0m nul byte found in provided data
+</pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="nul-bytes.test.html#L71">NUL bytes with test -n</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=1\nstatus=1\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="nul-bytes.test.html#L71">NUL bytes with test -n</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=1\nstatus=1\n', got 'status=1\nstatus=101\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=101
+</pre><i>stderr:</i> <br/>
+<pre>
+thread 'main' panicked at src/proc_ctrl.rs:181:46:
+called `Result::unwrap()` on an `Err` value: NulError(0, [0])
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+</pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="nul-bytes.test.html#L71">NUL bytes with test -n</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=1\nstatus=1\n', got 'status=1\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-osh"></a><b>osh</b></td><td>5 <a href="nul-bytes.test.html#L71">NUL bytes with test -n</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="nul-bytes.test.html#L100">NUL bytes with test -f</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=1\nstatus=0\nstatus=0\nstatus=1\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="nul-bytes.test.html#L100">NUL bytes with test -f</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=1\nstatus=0\nstatus=0\nstatus=1\n', got 'status=101\nstatus=101\nstatus=101\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=101
+status=101
+status=101
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>
+thread 'main' panicked at src/proc_ctrl.rs:181:46:
+called `Result::unwrap()` on an `Err` value: NulError(0, [0])
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'main' panicked at src/proc_ctrl.rs:181:46:
+called `Result::unwrap()` on an `Err` value: NulError(3, [102, 111, 111, 0])
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'main' panicked at src/proc_ctrl.rs:181:46:
+called `Result::unwrap()` on an `Err` value: NulError(3, [102, 111, 111, 0, 98, 97, 114])
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+</pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="nul-bytes.test.html#L100">NUL bytes with test -f</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=1\nstatus=0\nstatus=0\nstatus=1\n', got 'status=1\nstatus=1\nstatus=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="nul-bytes.test.html#L137">NUL bytes with ${#s} (OSH and zsh agree)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'empty=0\nnul=0\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="nul-bytes.test.html#L137">NUL bytes with ${#s} (OSH and zsh agree)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'empty=0\nnul=0\n', got 'empty=0\nnul=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>empty=0
+nul=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="nul-bytes.test.html#L137">NUL bytes with ${#s} (OSH and zsh agree)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'empty=0\nnul=0\n', got 'empty=0\nnul=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>empty=0
+nul=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-osh"></a><b>osh</b></td><td>7 <a href="nul-bytes.test.html#L137">NUL bytes with ${#s} (OSH and zsh agree)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>empty=0
+nul=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="nul-bytes.test.html#L161">Compare \x00 byte versus \x01 byte - command sub</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'len=3\n 2e 01 2e\nlen=2\n 2e 2e\nlen=0\n', got 'len=3\n 2e 01 2e\nlen=1\n 2e\nlen=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=3
+ 2e 01 2e
+len=1
+ 2e
+len=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="nul-bytes.test.html#L161">Compare \x00 byte versus \x01 byte - command sub</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'len=3\n 2e 01 2e\nlen=2\n 2e 2e\nlen=0\n', got 'len=6\n 2e 5c 30 30 31 2e\nlen=6\n 2e 5c 30 30 30 2e\nlen=4\n 5c 30 30 30\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=6
+ 2e 5c 30 30 31 2e
+len=6
+ 2e 5c 30 30 30 2e
+len=4
+ 5c 30 30 30
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="nul-bytes.test.html#L161">Compare \x00 byte versus \x01 byte - command sub</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'len=3\n 2e 01 2e\nlen=2\n 2e 2e\nlen=0\n', got 'len=3\n 2e 01 2e\nlen=3\n 2e 00 2e\nlen=1\n 00\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=3
+ 2e 01 2e
+len=3
+ 2e 00 2e
+len=1
+ 00
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="nul-bytes.test.html#L199">Compare \x00 byte versus \x01 byte - read builtin</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'len=3\n 2e 01 2e\nlen=2\n 2e 2e\nlen=0\n', got 'len=0\nlen=0\nlen=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=0
+len=0
+len=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+sh: read: No such file or directory
+sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="nul-bytes.test.html#L199">Compare \x00 byte versus \x01 byte - read builtin</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'len=3\n 2e 01 2e\nlen=2\n 2e 2e\nlen=0\n', got 'len=5\n 2e 30 30 31 2e\nlen=5\n 2e 30 30 30 2e\nlen=3\n 30 30 30\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=5
+ 2e 30 30 31 2e
+len=5
+ 2e 30 30 30 2e
+len=3
+ 30 30 30
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="nul-bytes.test.html#L199">Compare \x00 byte versus \x01 byte - read builtin</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'len=3\n 2e 01 2e\nlen=2\n 2e 2e\nlen=0\n', got 'len=2\n 2e 2e\nlen=2\n 2e 2e\nlen=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=2
+ 2e 2e
+len=2
+ 2e 2e
+len=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="nul-bytes.test.html#L232">Compare \x00 byte versus \x01 byte - read -n</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>len=3
+ 2e 01 2e
+len=1
+ 2e
+len=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="nul-bytes.test.html#L232">Compare \x00 byte versus \x01 byte - read -n</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'len=3\n 2e 01 2e\nlen=2\n 2e 2e\nlen=0\n', got 'len=3\n 2e 01 2e\nlen=1\n 2e\nlen=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=3
+ 2e 01 2e
+len=1
+ 2e
+len=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="nul-bytes.test.html#L232">Compare \x00 byte versus \x01 byte - read -n</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'len=3\n 2e 01 2e\nlen=2\n 2e 2e\nlen=0\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="nul-bytes.test.html#L232">Compare \x00 byte versus \x01 byte - read -n</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'len=3\n 2e 01 2e\nlen=2\n 2e 2e\nlen=0\n', got 'len=3\n 2e 30 30\nlen=3\n 2e 30 30\nlen=3\n 30 30 30\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=3
+ 2e 30 30
+len=3
+ 2e 30 30
+len=3
+ 30 30 30
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="nul-bytes.test.html#L232">Compare \x00 byte versus \x01 byte - read -n</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'len=3\n 2e 01 2e\nlen=2\n 2e 2e\nlen=0\n', got 'len=2\n 2e 2e\nlen=2\n 2e 2e\nlen=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=2
+ 2e 2e
+len=2
+ 2e 2e
+len=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-mksh"></a><b>mksh</b></td><td>11 <a href="nul-bytes.test.html#L275">Compare \x00 byte versus \x01 byte - mapfile builtin</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-ksh"></a><b>ksh</b></td><td>11 <a href="nul-bytes.test.html#L275">Compare \x00 byte versus \x01 byte - mapfile builtin</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'len=2\n 2e\n 2e\n', got 'len=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[12]: mapfile: inaccessible or not found
+printf: write error: Broken pipe
+printf: write error: Broken pipe
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="nul-bytes.test.html#L275">Compare \x00 byte versus \x01 byte - mapfile builtin</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'len=2\n 2e\n 2e\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="nul-bytes.test.html#L275">Compare \x00 byte versus \x01 byte - mapfile builtin</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'len=2\n 2e\n 2e\n', got 'len=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: mapfile: command not found
+</pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="nul-bytes.test.html#L275">Compare \x00 byte versus \x01 byte - mapfile builtin</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'len=2\n 2e\n 2e\n', got 'len=2\n 2e 00 2e\n 2e 00 2e\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=2
+ 2e 00 2e
+ 2e 00 2e
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-osh"></a><b>osh</b></td><td>11 <a href="nul-bytes.test.html#L275">Compare \x00 byte versus \x01 byte - mapfile builtin</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'len=2\n 2e\n 2e\n', got 'len=2\n 2e 00 2e\n 2e 00 2e\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=2
+ 2e 00 2e
+ 2e 00 2e
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="nul-bytes.test.html#L302">Strip ops # ## % %% with NUL bytes</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'len=1\n 2e\n---\nlen=0\nlen=0\nlen=0\nlen=0\n', got 'len=0\n---\nlen=20\n 28 70 72 69 6e 74 66 20 27 5c 30 30 30 2e 5c 30\n 30 30 27 29\nlen=20\n 28 70 72 69 6e 74 66 20 27 5c 30 30 30 2e 5c 30\n 30 30 27 29\nlen=0\nlen=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=0
+---
+len=20
+ 28 70 72 69 6e 74 66 20 27 5c 30 30 30 2e 5c 30
+ 30 30 27 29
+len=20
+ 28 70 72 69 6e 74 66 20 27 5c 30 30 30 2e 5c 30
+ 30 30 27 29
+len=0
+len=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="nul-bytes.test.html#L302">Strip ops # ## % %% with NUL bytes</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'len=1\n 2e\n---\nlen=0\nlen=0\nlen=0\nlen=0\n', got 'len=9\n 5c 30 30 30 2e 5c 30 30 30\n---\nlen=8\n 30 30 30 2e 5c 30 30 30\nlen=8\n 30 30 30 2e 5c 30 30 30\nlen=8\n 5c 30 30 30 2e 5c 30 30\nlen=8\n 5c 30 30 30 2e 5c 30 30\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=9
+ 5c 30 30 30 2e 5c 30 30 30
+---
+len=8
+ 30 30 30 2e 5c 30 30 30
+len=8
+ 30 30 30 2e 5c 30 30 30
+len=8
+ 5c 30 30 30 2e 5c 30 30
+len=8
+ 5c 30 30 30 2e 5c 30 30
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="nul-bytes.test.html#L302">Strip ops # ## % %% with NUL bytes</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'len=1\n 2e\n---\nlen=0\nlen=0\nlen=0\nlen=0\n', got 'len=3\n 00 2e 00\n---\nlen=2\n 2e 00\nlen=2\n 2e 00\nlen=2\n 00 2e\nlen=2\n 00 2e\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=3
+ 00 2e 00
+---
+len=2
+ 2e 00
+len=2
+ 2e 00
+len=2
+ 00 2e
+len=2
+ 00 2e
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="nul-bytes.test.html#L354">Issue 2269 Reduction</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'len=1\n 78\nlen=0\n---\nlen=2\n 01 78\nlen=1\n 78\n'
+Got      'len=0\nlen=16\n 28 70 72 69 6e 74 66 20 27 5c 30 30 30 78 27 29\n---\nlen=2\n 01 78\nlen=1\n 78\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=0
+len=16
+ 28 70 72 69 6e 74 66 20 27 5c 30 30 30 78 27 29
+---
+len=2
+ 01 78
+len=1
+ 78
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="nul-bytes.test.html#L354">Issue 2269 Reduction</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'len=1\n 78\nlen=0\n---\nlen=2\n 01 78\nlen=1\n 78\n'
+Got      'len=5\n 5c 30 30 30 78\nlen=4\n 30 30 30 78\n---\nlen=5\n 5c 30 30 31 78\nlen=4\n 30 30 31 78\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=5
+ 5c 30 30 30 78
+len=4
+ 30 30 30 78
+---
+len=5
+ 5c 30 30 31 78
+len=4
+ 30 30 31 78
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="nul-bytes.test.html#L354">Issue 2269 Reduction</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'len=1\n 78\nlen=0\n---\nlen=2\n 01 78\nlen=1\n 78\n'
+Got      'len=2\n 00 78\nlen=1\n 78\n---\nlen=2\n 01 78\nlen=1\n 78\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=2
+ 00 78
+len=1
+ 78
+---
+len=2
+ 01 78
+len=1
+ 78
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="nul-bytes.test.html#L403">Issue 2269 - Do NUL bytes match ? in ${a#?}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'escaped that\'"\'"\'s it!\nthat\'s it!\n---\nescaped ::\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="nul-bytes.test.html#L403">Issue 2269 - Do NUL bytes match ? in ${a#?}</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'escaped that\'"\'"\'s it!\nthat\'s it!\n---\nescaped ::\n'
+Got      'escaped \n\n---\nescaped \n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>escaped 
+
+---
+escaped 
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: Unexpected token: do
+
+len=0
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 12: Unexpected token: done
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: Unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 14: escape_arg: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 25: escape_arg: command not found
+</pre></td></tr><tr><td><a name="details-14-brush"></a><b>brush</b></td><td>14 <a href="nul-bytes.test.html#L403">Issue 2269 - Do NUL bytes match ? in ${a#?}</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'escaped that\'"\'"\'s it!\nthat\'s it!\n---\nescaped ::\n'
+Got      'escaped that\'"\'"\'s it!\nthat\'s it!\n---\nescaped :\x00:\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>escaped that'"'"'s it!
+that's it!
+---
+escaped : :
+</pre><i>stderr:</i> <br/>
+<pre>len=9
+len=8
+len=7
+len=6
+len=5
+len=4
+len=3
+len=2
+len=1
+len=0
+len=2
+len=1
+len=0
+</pre></td></tr></table></body></html>

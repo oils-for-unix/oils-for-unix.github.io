@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-trap-err: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-trap-err.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>20</td><td>14</td><td>15</td><td>3</td><td>3</td><td>3</td><td>20</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>1</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>2</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>8</td><td>20</td><td>20</td><td>20</td><td>2</td><td></td></tr>
+<tr><td>total</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L15">trap can use original $LINENO</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"><a href="#details-0-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L29">trap ERR and set -o errexit</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L50">trap ERR and errexit disabled context</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L72">trap ERR and if statement</a></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L85">trap ERR and || conditional</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L101">trap ERR and pipeline</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L127">trap ERR pipelines without simple commands</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-6-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L174">Pipeline group quirk</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L188">trap ERR does not run in errexit situations</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L223">trap ERR doesn't run in subprograms - subshell, command sub, async</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L245">set -o errtrace: trap ERR runs in subprograms</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L275">trap ERR doesn't run with &amp;</a></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L288">set -o errtrace: trap ERR with &amp;</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"><a href="#details-12-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L312">trap ERR not active in shell functions in (bash behavior)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"><a href="#details-13-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L330">set -o errtrace - trap ERR runs in shell functions</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"><a href="#details-14-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L370">set -o errtrace - trap ERR runs in shell functions (LINENO)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-mksh">details</a></td><td class="details-row"><a href="#details-15-ksh">details</a></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"><a href="#details-15-brush">details</a></td><td class="details-row"><a href="#details-15-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L410">trap ERR with "atoms": assignment (( [[</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-mksh">details</a></td><td class="details-row"><a href="#details-16-ksh">details</a></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"><a href="#details-16-sush">details</a></td><td class="details-row"><a href="#details-16-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L436">trap ERR with for,  case, { }</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"><a href="#details-17-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L462">trap ERR with redirect</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-18-bash">details</a></td><td class="details-row"><a href="#details-18-mksh">details</a></td><td class="details-row"><a href="#details-18-ksh">details</a></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"><a href="#details-18-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L493">trap ERR with YSH proc</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-19-bash">details</a></td><td class="details-row"><a href="#details-19-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"><a href="#details-19-sush">details</a></td><td class="details-row"><a href="#details-19-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L523">trap ERR</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"><a href="#details-20-sush">details</a></td><td class="details-row"><a href="#details-20-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L566">trap ERR and pipelines - PIPESTATUS difference</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"><a href="#details-21-brush">details</a></td><td class="details-row"><a href="#details-21-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-err.test.html#L617">error in trap ERR (recursive)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"><a href="#details-22-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>78 passed, 1 OK, 5 not implemented, 7 BUG, 70 failed, 0 timeouts, 0 cases skipped
+2 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="builtin-trap-err.test.html#L15">trap can use original $LINENO</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'line=3\nline=4\nok\n', got 'ok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="builtin-trap-err.test.html#L15">trap can use original $LINENO</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'line=3\nline=4\nok\n', got 'ok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: trap: ERR: invalid signal specification
+</pre></td></tr><tr><td><a name="details-0-brush"></a><b>brush</b></td><td>0 <a href="builtin-trap-err.test.html#L15">trap can use original $LINENO</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'line=3\nline=4\nok\n', got 'ok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-trap-err.test.html#L29">trap ERR and set -o errexit</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'line=3\na\nb\nline=9\n', got 'a\nb\nc\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+set: bad -o errexit
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="builtin-trap-err.test.html#L29">trap ERR and set -o errexit</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'line=3\na\nb\nline=9\n', got 'a\nb\nc\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: trap: ERR: invalid signal specification
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="builtin-trap-err.test.html#L29">trap ERR and set -o errexit</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'line=3\na\nb\nline=9\n', got 'a\nb\nc\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="builtin-trap-err.test.html#L50">trap ERR and errexit disabled context</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'line=3\na\nb\nc\n', got 'a\nb\nc\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+set: bad -o errexit
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="builtin-trap-err.test.html#L50">trap ERR and errexit disabled context</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'line=3\na\nb\nc\n', got 'a\nb\nc\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: trap: ERR: invalid signal specification
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="builtin-trap-err.test.html#L50">trap ERR and errexit disabled context</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'line=3\na\nb\nc\n', got 'a\nb\nc\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="builtin-trap-err.test.html#L85">trap ERR and || conditional</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'line=3\nok\nok\n', got 'ok\nok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+ok
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="builtin-trap-err.test.html#L85">trap ERR and || conditional</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'line=3\nok\nok\n', got 'ok\nok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: trap: ERR: invalid signal specification
+</pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="builtin-trap-err.test.html#L85">trap ERR and || conditional</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'line=3\nok\nok\n', got 'ok\nok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="builtin-trap-err.test.html#L101">trap ERR and pipeline</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>line=1
+line=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="builtin-trap-err.test.html#L101">trap ERR and pipeline</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'line=3\nline=5\n', got 'line=1\nline=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line=1
+line=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="builtin-trap-err.test.html#L101">trap ERR and pipeline</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'line=3\nline=5\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="builtin-trap-err.test.html#L101">trap ERR and pipeline</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'line=3\nline=5\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: trap: ERR: invalid signal specification
+Pid: Pid(3437961), Signal: SIGPIPE
+</pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="builtin-trap-err.test.html#L101">trap ERR and pipeline</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'line=3\nline=5\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-bash"></a><b>bash</b></td><td>6 <a href="builtin-trap-err.test.html#L127">trap ERR pipelines without simple commands</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>assign
+dparen
+dbracket
+subshell
+subshell
+subshell2
+subshell2
+group
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="builtin-trap-err.test.html#L127">trap ERR pipelines without simple commands</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'assign\ndparen\ndbracket\nsubshell\nsubshell2\ngroup\nok\n'
+Got      'ok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+sh: trap: No such file or directory
+sh: trap: No such file or directory
+sh: trap: No such file or directory
+sh: trap: No such file or directory
+sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="builtin-trap-err.test.html#L127">trap ERR pipelines without simple commands</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'assign\ndparen\ndbracket\nsubshell\nsubshell2\ngroup\nok\n'
+Got      ''
+</span><br/>
+<span class="assertion">[sush status] Expected 0, got 101</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: trap: ERR: invalid signal specification
+
+thread 'main' panicked at src/elements/pipeline.rs:47:32:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+</pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="builtin-trap-err.test.html#L127">trap ERR pipelines without simple commands</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'assign\ndparen\ndbracket\nsubshell\nsubshell2\ngroup\nok\n'
+Got      'ok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="builtin-trap-err.test.html#L174">Pipeline group quirk</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'group2\nok\n', got 'ok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="builtin-trap-err.test.html#L174">Pipeline group quirk</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'group2\nok\n', got 'ok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: trap: ERR: invalid signal specification
+</pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="builtin-trap-err.test.html#L174">Pipeline group quirk</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'group2\nok\n', got 'ok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="builtin-trap-err.test.html#L188">trap ERR does not run in errexit situations</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'until\nline=16\nline=20\nline=20\nline=20\nok\n'
+Got      'until\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>until
+ok
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="builtin-trap-err.test.html#L188">trap ERR does not run in errexit situations</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'until\nline=16\nline=20\nline=20\nline=20\nok\n'
+Got      'until\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>until
+ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: trap: ERR: invalid signal specification
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 12: Unexpected token: do
+
+sush: break: only meaningful in a `for', `while', or `until' loop
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 15: Unexpected token: done
+
+</pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="builtin-trap-err.test.html#L188">trap ERR does not run in errexit situations</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'until\nline=16\nline=20\nline=20\nline=20\nok\n'
+Got      'until\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>until
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="builtin-trap-err.test.html#L223">trap ERR doesn't run in subprograms - subshell, command sub, async</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'subshell\nasync\nline=11\nok\n', got 'subshell\nasync\nok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>subshell
+async
+ok
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="builtin-trap-err.test.html#L223">trap ERR doesn't run in subprograms - subshell, command sub, async</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'subshell\nasync\nline=11\nok\n', got 'subshell\nasync\nok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>subshell
+async
+ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: trap: ERR: invalid signal specification
+3439112
+3439117
+</pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="builtin-trap-err.test.html#L223">trap ERR doesn't run in subprograms - subshell, command sub, async</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'subshell\nasync\nline=11\nok\n', got 'subshell\nasync\nok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>subshell
+async
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="builtin-trap-err.test.html#L245">set -o errtrace: trap ERR runs in subprograms</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="builtin-trap-err.test.html#L245">set -o errtrace: trap ERR runs in subprograms</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'line=6\nsubshell\nline=10\nok\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: set: errtrace: unknown option
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="builtin-trap-err.test.html#L245">set -o errtrace: trap ERR runs in subprograms</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'line=6\nsubshell\nline=10\nok\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="builtin-trap-err.test.html#L245">set -o errtrace: trap ERR runs in subprograms</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'line=6\nsubshell\nline=10\nok\n', got 'subshell\nok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>subshell
+ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: set: errtrace: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: trap: ERR: invalid signal specification
+</pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="builtin-trap-err.test.html#L245">set -o errtrace: trap ERR runs in subprograms</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'line=6\nsubshell\nline=10\nok\n', got 'subshell\nok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>subshell
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="builtin-trap-err.test.html#L288">set -o errtrace: trap ERR with &amp;</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="builtin-trap-err.test.html#L288">set -o errtrace: trap ERR with &amp;</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'line=8\nasync\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: set: errtrace: unknown option
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="builtin-trap-err.test.html#L288">set -o errtrace: trap ERR with &amp;</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'line=8\nasync\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="builtin-trap-err.test.html#L288">set -o errtrace: trap ERR with &amp;</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'line=8\nasync\n', got 'async\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>async
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: set: errtrace: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: trap: ERR: invalid signal specification
+3439840
+3439843
+</pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="builtin-trap-err.test.html#L288">set -o errtrace: trap ERR with &amp;</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'line=8\nasync\n', got 'async\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>async
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-osh"></a><b>osh</b></td><td>12 <a href="builtin-trap-err.test.html#L288">set -o errtrace: trap ERR with &amp;</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'line=8\nasync\n', got 'line=6\nline=8\nasync\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line=6
+line=8
+async
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="builtin-trap-err.test.html#L312">trap ERR not active in shell functions in (bash behavior)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>line=4
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-ksh"></a><b>ksh</b></td><td>13 <a href="builtin-trap-err.test.html#L312">trap ERR not active in shell functions in (bash behavior)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '', got 'line=4\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line=4
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="builtin-trap-err.test.html#L330">set -o errtrace - trap ERR runs in shell functions</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>err
+err
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[16]: set: errtrace: bad option
+</pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="builtin-trap-err.test.html#L330">set -o errtrace - trap ERR runs in shell functions</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'err\nnow with errtrace\nerr\nerr\nerr\nok\n', got 'err\nerr\n'</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>err
+err
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[16]: set: errtrace: unknown option
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="builtin-trap-err.test.html#L330">set -o errtrace - trap ERR runs in shell functions</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'err\nnow with errtrace\nerr\nerr\nerr\nok\n', got 'now with errtrace\nok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>now with errtrace
+ok
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+set: bad -o errtrace
+</pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="builtin-trap-err.test.html#L330">set -o errtrace - trap ERR runs in shell functions</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'err\nnow with errtrace\nerr\nerr\nerr\nok\n', got 'now with errtrace\nok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>now with errtrace
+ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: trap: ERR: invalid signal specification
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 16: set: errtrace: invalid option name
+</pre></td></tr><tr><td><a name="details-14-brush"></a><b>brush</b></td><td>14 <a href="builtin-trap-err.test.html#L330">set -o errtrace - trap ERR runs in shell functions</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'err\nnow with errtrace\nerr\nerr\nerr\nok\n', got 'now with errtrace\nok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>now with errtrace
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-mksh"></a><b>mksh</b></td><td>15 <a href="builtin-trap-err.test.html#L370">set -o errtrace - trap ERR runs in shell functions (LINENO)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>line=4
+line=10
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[16]: set: errtrace: bad option
+</pre></td></tr><tr><td><a name="details-15-ksh"></a><b>ksh</b></td><td>15 <a href="builtin-trap-err.test.html#L370">set -o errtrace - trap ERR runs in shell functions (LINENO)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'line=14\nnow with errtrace\nline=4\nline=10\nline=20\nok\n'
+Got      'line=4\nline=10\n'
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line=4
+line=10
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[16]: set: errtrace: unknown option
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="builtin-trap-err.test.html#L370">set -o errtrace - trap ERR runs in shell functions (LINENO)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'line=14\nnow with errtrace\nline=4\nline=10\nline=20\nok\n'
+Got      'now with errtrace\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>now with errtrace
+ok
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+set: bad -o errtrace
+</pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="builtin-trap-err.test.html#L370">set -o errtrace - trap ERR runs in shell functions (LINENO)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'line=14\nnow with errtrace\nline=4\nline=10\nline=20\nok\n'
+Got      'now with errtrace\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>now with errtrace
+ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: trap: ERR: invalid signal specification
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 16: set: errtrace: invalid option name
+</pre></td></tr><tr><td><a name="details-15-brush"></a><b>brush</b></td><td>15 <a href="builtin-trap-err.test.html#L370">set -o errtrace - trap ERR runs in shell functions (LINENO)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'line=14\nnow with errtrace\nline=4\nline=10\nline=20\nok\n'
+Got      'now with errtrace\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>now with errtrace
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-osh"></a><b>osh</b></td><td>15 <a href="builtin-trap-err.test.html#L370">set -o errtrace - trap ERR runs in shell functions (LINENO)</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'line=14\nnow with errtrace\nline=4\nline=10\nline=20\nok\n'
+Got      'line=10\nnow with errtrace\nline=4\nline=10\nline=10\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line=10
+now with errtrace
+line=4
+line=10
+line=10
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-mksh"></a><b>mksh</b></td><td>16 <a href="builtin-trap-err.test.html#L410">trap ERR with "atoms": assignment (( [[</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>line=3
+line=3
+line=7
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-ksh"></a><b>ksh</b></td><td>16 <a href="builtin-trap-err.test.html#L410">trap ERR with "atoms": assignment (( [[</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'line=3\nline=5\nline=7\nok\n', got 'line=3\nline=3\nline=7\nok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line=3
+line=3
+line=7
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="builtin-trap-err.test.html#L410">trap ERR with "atoms": assignment (( [[</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'line=3\nline=5\nline=7\nok\n', got 'ok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-16-sush"></a><b>sush</b></td><td>16 <a href="builtin-trap-err.test.html#L410">trap ERR with "atoms": assignment (( [[</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'line=3\nline=5\nline=7\nok\n', got 'ok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: trap: ERR: invalid signal specification
+</pre></td></tr><tr><td><a name="details-16-brush"></a><b>brush</b></td><td>16 <a href="builtin-trap-err.test.html#L410">trap ERR with "atoms": assignment (( [[</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'line=3\nline=5\nline=7\nok\n', got 'ok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="builtin-trap-err.test.html#L436">trap ERR with for,  case, { }</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'line=4\nline=4\nline=8\nline=12\nline=12\nline=12\nok\n'
+Got      'ok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="builtin-trap-err.test.html#L436">trap ERR with for,  case, { }</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'line=4\nline=4\nline=8\nline=12\nline=12\nline=12\nok\n'
+Got      'ok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: trap: ERR: invalid signal specification
+</pre></td></tr><tr><td><a name="details-17-brush"></a><b>brush</b></td><td>17 <a href="builtin-trap-err.test.html#L436">trap ERR with for,  case, { }</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'line=4\nline=4\nline=8\nline=12\nline=12\nline=12\nok\n'
+Got      'ok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-bash"></a><b>bash</b></td><td>18 <a href="builtin-trap-err.test.html#L462">trap ERR with redirect</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>line=3
+line=3
+ok
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 7: /zz: Permission denied
+</pre></td></tr><tr><td><a name="details-18-mksh"></a><b>mksh</b></td><td>18 <a href="builtin-trap-err.test.html#L462">trap ERR with redirect</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>line=3
+line=3
+ok
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[7]: can't create /zz: Permission denied
+</pre></td></tr><tr><td><a name="details-18-ksh"></a><b>ksh</b></td><td>18 <a href="builtin-trap-err.test.html#L462">trap ERR with redirect</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'line=3\nline=7\nok\n', got 'line=3\nline=3\nok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line=3
+line=3
+ok
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[7]: /zz: create: Permission denied
+</pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="builtin-trap-err.test.html#L462">trap ERR with redirect</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'line=3\nline=7\nok\n', got 'ok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+sh: /zz: Permission denied
+</pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="builtin-trap-err.test.html#L462">trap ERR with redirect</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'line=3\nline=7\nok\n', got 'ok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: trap: ERR: invalid signal specification
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: /zz: permission denied
+</pre></td></tr><tr><td><a name="details-18-brush"></a><b>brush</b></td><td>18 <a href="builtin-trap-err.test.html#L462">trap ERR with redirect</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'line=3\nline=7\nok\n', got 'ok\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: failed to redirect to /zz: Permission denied (os error 13)
+</pre></td></tr><tr><td><a name="details-19-bash"></a><b>bash</b></td><td>19 <a href="builtin-trap-err.test.html#L493">trap ERR with YSH proc</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-mksh"></a><b>mksh</b></td><td>19 <a href="builtin-trap-err.test.html#L493">trap ERR with YSH proc</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="builtin-trap-err.test.html#L493">trap ERR with YSH proc</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'err\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 1, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-19-sush"></a><b>sush</b></td><td>19 <a href="builtin-trap-err.test.html#L493">trap ERR with YSH proc</a><br/><br/>
+<span class="assertion">[sush status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>err
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: shopt: ysh:upgrade: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: proc: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: Unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: syntax error: unexpected end of file
+</pre></td></tr><tr><td><a name="details-19-brush"></a><b>brush</b></td><td>19 <a href="builtin-trap-err.test.html#L493">trap ERR with YSH proc</a><br/><br/>
+<span class="assertion">[brush status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>err
+</pre><i>stderr:</i> <br/>
+<pre>shopt: ysh:upgrade: invalid shell option name
+proc: command not found
+[31mERROR[0m main: syntax error near token `
+' (line 1 col 2)
+[31mERROR[0m main: syntax error at end of input
+</pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="builtin-trap-err.test.html#L523">trap ERR</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'A\nerr [x y] 1\nB\nerr [x y] 42\nC\nD\nafter errexit 99\n'
+Got      'A\nB\nC\nD\nE\n'
+</span><br/>
+<span class="assertion">[toysh status] Expected 99, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>A
+B
+C
+D
+E
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+sh: trap: No such file or directory
+sh: trap: No such file or directory
+set: bad -o errexit
+</pre></td></tr><tr><td><a name="details-20-sush"></a><b>sush</b></td><td>20 <a href="builtin-trap-err.test.html#L523">trap ERR</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'A\nerr [x y] 1\nB\nerr [x y] 42\nC\nD\nafter errexit 99\n'
+Got      'A\nB\nC\nD\nE\n'
+</span><br/>
+<span class="assertion">[sush status] Expected 99, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>A
+B
+C
+D
+E
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: trap: ERR: invalid signal specification
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 14: trap: ERR: invalid signal specification
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 19: trap: ERR: invalid signal specification
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 21: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-20-brush"></a><b>brush</b></td><td>20 <a href="builtin-trap-err.test.html#L523">trap ERR</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'A\nerr [x y] 1\nB\nerr [x y] 42\nC\nD\nafter errexit 99\n'
+Got      'A\nB\nC\nD\nE\n'
+</span><br/>
+<span class="assertion">[brush status] Expected 99, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>A
+B
+C
+D
+E
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="builtin-trap-err.test.html#L566">trap ERR and pipelines - PIPESTATUS difference</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'A\nerr [] status=1 [1]\nB\nerr [] status=1 [0 1]\nerr [] status=1 [0 1 0]\nok\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="builtin-trap-err.test.html#L566">trap ERR and pipelines - PIPESTATUS difference</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'A\nerr [] status=1 [1]\nB\nerr [] status=1 [0 1]\nerr [] status=1 [0 1 0]\nok\n'
+Got      'A\nB\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>A
+B
+ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: trap: ERR: invalid signal specification
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 21: trap: ERR: invalid signal specification
+</pre></td></tr><tr><td><a name="details-21-brush"></a><b>brush</b></td><td>21 <a href="builtin-trap-err.test.html#L566">trap ERR and pipelines - PIPESTATUS difference</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'A\nerr [] status=1 [1]\nB\nerr [] status=1 [0 1]\nerr [] status=1 [0 1 0]\nok\n'
+Got      'A\nB\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>A
+B
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-osh"></a><b>osh</b></td><td>21 <a href="builtin-trap-err.test.html#L566">trap ERR and pipelines - PIPESTATUS difference</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>A
+err [] status=1 []
+B
+err [] status=1 [0 1]
+err [] status=1 [0 1 0]
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="builtin-trap-err.test.html#L617">error in trap ERR (recursive)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'A\nerr status 1\nerr 2\nB\nerr status 1\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 1, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="builtin-trap-err.test.html#L617">error in trap ERR (recursive)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'A\nerr status 1\nerr 2\nB\nerr status 1\n', got 'A\nB\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>A
+B
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: trap: ERR: invalid signal specification
+</pre></td></tr><tr><td><a name="details-22-brush"></a><b>brush</b></td><td>22 <a href="builtin-trap-err.test.html#L617">error in trap ERR (recursive)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'A\nerr status 1\nerr 2\nB\nerr status 1\n', got 'A\nB\nC\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>A
+B
+C
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>array-compat: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for array-compat.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>12</td><td>9</td><td>9</td><td>0</td><td>10</td><td>9</td><td>7</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>3</td><td>12</td><td>2</td><td>3</td><td>2</td><td></td></tr>
+<tr><td>total</td><td>12</td><td>12</td><td>12</td><td>12</td><td>12</td><td>12</td><td>12</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-compat.test.html#L7">Assignment Causes Array Decay</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-compat.test.html#L17">Array Decay with IFS</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-compat.test.html#L24">User arrays decay</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="array-compat.test.html#L39">strict_array: $array is not valid in OSH, is ${array[0]} in ksh/bash</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="array-compat.test.html#L50">strict_array: ${array} is not valid in OSH, is ${array[0]} in ksh/bash</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-compat.test.html#L61">Assign to array index without initialization</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-compat.test.html#L67">a[40] grows array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-compat.test.html#L75">array decays to string when comparing with [[ a = b ]]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="array-compat.test.html#L85">++ on a whole array increments the first element (disallowed with strict_array)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-compat.test.html#L95">Apply vectorized operations on ${a[*]}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="array-compat.test.html#L106">value.BashArray internal representation - Indexed</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"><a href="#details-10-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="array-compat.test.html#L159">value.BashArray internal representation - Assoc (ordering is a problem)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-mksh">details</a></td><td class="details-row"><a href="#details-11-ksh">details</a></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"><a href="#details-11-osh">details</a></td><td class="details-row"></td></tr>
+</table>
+<pre>56 passed, 3 OK, 3 not implemented, 0 BUG, 22 failed, 0 timeouts, 0 cases skipped
+2 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="array-compat.test.html#L7">Assignment Causes Array Decay</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['[x', 'y', 'z]']\n['[x y z]']\n", got "['[]']\n['[]']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['[]']
+['[]']
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="array-compat.test.html#L17">Array Decay with IFS</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['[x y z]']\n", got "['[]']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['[]']
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="array-compat.test.html#L17">Array Decay with IFS</a><br/><br/>
+<span class="assertion">[brush stdout] Expected "['[x y z]']\n", got "['[y z]']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['[y z]']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="array-compat.test.html#L24">User arrays decay</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['x', 'y', 'z']\n['x y z']\n['x', 'YYY', 'z']\n"
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: x
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="array-compat.test.html#L39">strict_array: $array is not valid in OSH, is ${array[0]} in ksh/bash</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+main: line 3: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-3-osh"></a><b>osh</b></td><td>3 <a href="array-compat.test.html#L39">strict_array: $array is not valid in OSH, is ${array[0]} in ksh/bash</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  echo $a
+       ^~
+[ stdin ]:4: fatal: Array 'a' can't be referred to as a scalar (without @ or *)
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="array-compat.test.html#L50">strict_array: ${array} is not valid in OSH, is ${array[0]} in ksh/bash</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+main: line 3: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-4-osh"></a><b>osh</b></td><td>4 <a href="array-compat.test.html#L50">strict_array: ${array} is not valid in OSH, is ${array[0]} in ksh/bash</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  echo ${a}
+       ^~
+[ stdin ]:4: fatal: Array 'a' can't be referred to as a scalar (without @ or *)
+</pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="array-compat.test.html#L61">Assign to array index without initialization</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '5 6 2\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: a[5]=5: No such file or directory
+sh: a[6]=6: No such file or directory
+main: line 3: sh: a: [@]}
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="array-compat.test.html#L67">a[40] grows array</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1 5 3 20 30 5\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="array-compat.test.html#L75">array decays to string when comparing with [[ a = b ]]</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '2 7\nEQUAL\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: '1 2'
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="array-compat.test.html#L85">++ on a whole array increments the first element (disallowed with strict_array)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '2 10\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+main: line 3: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-8-osh"></a><b>osh</b></td><td>8 <a href="array-compat.test.html#L85">++ on a whole array increments the first element (disallowed with strict_array)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  (( a++ ))  # doesn't make sense
+     ^
+[ stdin ]:4: fatal: Expected a value convertible to integer, got BashArray
+</pre></td></tr><tr><td><a name="details-9-mksh"></a><b>mksh</b></td><td>9 <a href="array-compat.test.html#L95">Apply vectorized operations on ${a[*]}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: ${a[*]#-}: bad substitution
+</pre></td></tr><tr><td><a name="details-9-ksh"></a><b>ksh</b></td><td>9 <a href="array-compat.test.html#L95">Apply vectorized operations on ${a[*]}</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['x- y-y z-']\n", got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: ${a[*]#-}: bad substitution
+</pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="array-compat.test.html#L95">Apply vectorized operations on ${a[*]}</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['x- y-y z-']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: '-x-'
+</pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="array-compat.test.html#L106">value.BashArray internal representation - Indexed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="array-compat.test.html#L106">value.BashArray internal representation - Indexed</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'declare -a z=()\ndeclare -a z=([0]="b" [1]="c")\ndeclare -a z=([0]="b" [1]="c" [5]="d")\ndeclare -a z=([0]="b" [1]="ZZZ" [5]="d")\ndeclare -a z=([0]="b" [1]="ZZZ" [5]="d" [6]="f" [7]="g")\ndeclare -a z=([0]="b-mystr" [1]="ZZZ" [5]="d" [6]="f" [7]="g")\ndeclare -a z=([0]="b-mystr" [1]="ZZZ-append" [5]="d" [6]="f" [7]="g")\n[\'keys\', \'0\', \'1\', \'5\', \'6\', \'7\']\n[\'values\', \'b-mystr\', \'ZZZ-append\', \'d\', \'f\', \'g\']\nstatus=1\n'
+Got      "['keys', '0', '1', '5', '6', '7']\n['values', 'b-mystr', 'ZZZ-append', 'd', 'f', 'g']\nstatus=1\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['keys', '0', '1', '5', '6', '7']
+['values', 'b-mystr', 'ZZZ-append', 'd', 'f', 'g']
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[4]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[7]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[10]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[13]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[16]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[19]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[22]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[27]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[28]: declare: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="array-compat.test.html#L106">value.BashArray internal representation - Indexed</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'declare -a z=()\ndeclare -a z=([0]="b" [1]="c")\ndeclare -a z=([0]="b" [1]="c" [5]="d")\ndeclare -a z=([0]="b" [1]="ZZZ" [5]="d")\ndeclare -a z=([0]="b" [1]="ZZZ" [5]="d" [6]="f" [7]="g")\ndeclare -a z=([0]="b-mystr" [1]="ZZZ" [5]="d" [6]="f" [7]="g")\ndeclare -a z=([0]="b-mystr" [1]="ZZZ-append" [5]="d" [6]="f" [7]="g")\n[\'keys\', \'0\', \'1\', \'5\', \'6\', \'7\']\n[\'values\', \'b-mystr\', \'ZZZ-append\', \'d\', \'f\', \'g\']\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="array-compat.test.html#L106">value.BashArray internal representation - Indexed</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'declare -a z=()\ndeclare -a z=([0]="b" [1]="c")\ndeclare -a z=([0]="b" [1]="c" [5]="d")\ndeclare -a z=([0]="b" [1]="ZZZ" [5]="d")\ndeclare -a z=([0]="b" [1]="ZZZ" [5]="d" [6]="f" [7]="g")\ndeclare -a z=([0]="b-mystr" [1]="ZZZ" [5]="d" [6]="f" [7]="g")\ndeclare -a z=([0]="b-mystr" [1]="ZZZ-append" [5]="d" [6]="f" [7]="g")\n[\'keys\', \'0\', \'1\', \'5\', \'6\', \'7\']\n[\'values\', \'b-mystr\', \'ZZZ-append\', \'d\', \'f\', \'g\']\nstatus=1\n'
+Got      'declare -a z=([0]="b" [1]="c")\ndeclare -a z=([0]="b" [1]="c" [5]="d")\ndeclare -a z=([0]="b" [1]="ZZZ" [5]="d")\ndeclare -a z=([0]="b" [1]="ZZZ" [2]="d" [3]="f" [4]="g")\ndeclare -a z=([0]="b-mystr" [1]="ZZZ" [2]="d" [3]="f" [4]="g")\ndeclare -a z=([0]="b-mystr" [1]="-append" [2]="d" [3]="f" [4]="g")\n[\'keys\', \'0\', \'1\', \'2\', \'3\', \'4\']\n[\'values\', \'b-mystr\', \'-append\', \'d\', \'f\', \'g\']\ndeclare -A z=([0]="b-mystr" )\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>declare -a z=([0]="b" [1]="c")
+declare -a z=([0]="b" [1]="c" [5]="d")
+declare -a z=([0]="b" [1]="ZZZ" [5]="d")
+declare -a z=([0]="b" [1]="ZZZ" [2]="d" [3]="f" [4]="g")
+declare -a z=([0]="b-mystr" [1]="ZZZ" [2]="d" [3]="f" [4]="g")
+declare -a z=([0]="b-mystr" [1]="-append" [2]="d" [3]="f" [4]="g")
+['keys', '0', '1', '2', '3', '4']
+['values', 'b-mystr', '-append', 'd', 'f', 'g']
+declare -A z=([0]="b-mystr" )
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="array-compat.test.html#L106">value.BashArray internal representation - Indexed</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'declare -a z=()\ndeclare -a z=([0]="b" [1]="c")\ndeclare -a z=([0]="b" [1]="c" [5]="d")\ndeclare -a z=([0]="b" [1]="ZZZ" [5]="d")\ndeclare -a z=([0]="b" [1]="ZZZ" [5]="d" [6]="f" [7]="g")\ndeclare -a z=([0]="b-mystr" [1]="ZZZ" [5]="d" [6]="f" [7]="g")\ndeclare -a z=([0]="b-mystr" [1]="ZZZ-append" [5]="d" [6]="f" [7]="g")\n[\'keys\', \'0\', \'1\', \'5\', \'6\', \'7\']\n[\'values\', \'b-mystr\', \'ZZZ-append\', \'d\', \'f\', \'g\']\nstatus=1\n'
+Got      'z=()\nz=([0]="b" [1]="c")\nz=([0]="b" [1]="c" [5]="d")\nz=([0]="b" [1]="ZZZ" [5]="d")\nz=([0]="b" [1]="ZZZ" [5]="d" [6]="f" [7]="g")\nz=([0]="b-mystr" [1]="ZZZ" [5]="d" [6]="f" [7]="g")\nz=([0]="b-mystr" [1]="ZZZ-append" [5]="d" [6]="f" [7]="g")\n[\'keys\', \'0\', \'1\', \'5\', \'6\', \'7\']\n[\'values\', \'b-mystr\', \'ZZZ-append\', \'d\', \'f\', \'g\']\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>z=()
+z=([0]="b" [1]="c")
+z=([0]="b" [1]="c" [5]="d")
+z=([0]="b" [1]="ZZZ" [5]="d")
+z=([0]="b" [1]="ZZZ" [5]="d" [6]="f" [7]="g")
+z=([0]="b-mystr" [1]="ZZZ" [5]="d" [6]="f" [7]="g")
+z=([0]="b-mystr" [1]="ZZZ-append" [5]="d" [6]="f" [7]="g")
+['keys', '0', '1', '5', '6', '7']
+['values', 'b-mystr', 'ZZZ-append', 'd', 'f', 'g']
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m cannot convert indexed array to associative array
+</pre></td></tr><tr><td><a name="details-10-osh"></a><b>osh</b></td><td>10 <a href="array-compat.test.html#L106">value.BashArray internal representation - Indexed</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'declare -a z=()\ndeclare -a z=([0]="b" [1]="c")\ndeclare -a z=([0]="b" [1]="c" [5]="d")\ndeclare -a z=([0]="b" [1]="ZZZ" [5]="d")\ndeclare -a z=([0]="b" [1]="ZZZ" [5]="d" [6]="f" [7]="g")\ndeclare -a z=([0]="b-mystr" [1]="ZZZ" [5]="d" [6]="f" [7]="g")\ndeclare -a z=([0]="b-mystr" [1]="ZZZ-append" [5]="d" [6]="f" [7]="g")\n[\'keys\', \'0\', \'1\', \'5\', \'6\', \'7\']\n[\'values\', \'b-mystr\', \'ZZZ-append\', \'d\', \'f\', \'g\']\nstatus=1\n'
+Got      'z=()\nz=(b c)\nz=([0]=b [1]=c [5]=d)\nz=([0]=b [1]=ZZZ [5]=d)\nz=([0]=b [1]=ZZZ [5]=d [6]=f [7]=g)\n'
+</span><br/>
+<span class="assertion">[osh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>z=()
+z=(b c)
+z=([0]=b [1]=c [5]=d)
+z=([0]=b [1]=ZZZ [5]=d)
+z=([0]=b [1]=ZZZ [5]=d [6]=f [7]=g)
+</pre><i>stderr:</i> <br/>
+<pre>  z+=-mystr
+  ^~~
+[ stdin ]:18: fatal: Can't append string to array
+</pre></td></tr><tr><td><a name="details-11-mksh"></a><b>mksh</b></td><td>11 <a href="array-compat.test.html#L159">value.BashArray internal representation - Assoc (ordering is a problem)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-ksh"></a><b>ksh</b></td><td>11 <a href="array-compat.test.html#L159">value.BashArray internal representation - Assoc (ordering is a problem)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'declare -A A=([k]="v" )\n[\'keys\', \'k\']\n[\'values\', \'v\']\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="array-compat.test.html#L159">value.BashArray internal representation - Assoc (ordering is a problem)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'declare -A A=([k]="v" )\n[\'keys\', \'k\']\n[\'values\', \'v\']\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="array-compat.test.html#L159">value.BashArray internal representation - Assoc (ordering is a problem)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'declare -A A=([k]="v" )\n[\'keys\', \'k\']\n[\'values\', \'v\']\n'
+Got      "['keys', '0']\n['values', 'v']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['keys', '0']
+['values', 'v']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="array-compat.test.html#L159">value.BashArray internal representation - Assoc (ordering is a problem)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'declare -A A=([k]="v" )\n[\'keys\', \'k\']\n[\'values\', \'v\']\n'
+Got      'A=([k]="v" )\n[\'keys\', \'k\']\n[\'values\', \'v\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>A=([k]="v" )
+['keys', 'k']
+['values', 'v']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-osh"></a><b>osh</b></td><td>11 <a href="array-compat.test.html#L159">value.BashArray internal representation - Assoc (ordering is a problem)</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'declare -A A=([k]="v" )\n[\'keys\', \'k\']\n[\'values\', \'v\']\n'
+Got      "A=(['k']=v)\n['keys', 'k']\n['values', 'v']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>A=(['k']=v)
+['keys', 'k']
+['values', 'v']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

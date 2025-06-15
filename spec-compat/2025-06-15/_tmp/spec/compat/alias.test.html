@@ -1,0 +1,3445 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>spec/alias.test.sh</title>
+<link rel="stylesheet" type="text/css" href="../../../web/src-tree.css" />
+  </head>
+
+      <body class="">
+        <div id="home-link">
+          <a href="https://github.com/oilshell/oil/blob/master/spec/alias.test.sh">View on Github</a>
+          |
+          <a href="/">oils.pub</a>
+        </div>
+        <table>
+      <tr>
+  <td class=num>1</td>
+  <td id=L1>
+    <span class="line comm">## compare_shells: bash dash mksh zsh</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>2</td>
+  <td id=L2>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>3</td>
+  <td id=L3>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>4</td>
+  <td id=L4>
+    <span class="line comm"># Alias is in POSIX.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>5</td>
+  <td id=L5>
+    <span class="line comm">#</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>6</td>
+  <td id=L6>
+    <span class="line comm"># http://pubs.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html#tag_02_03_01</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>7</td>
+  <td id=L7>
+    <span class="line comm">#</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>8</td>
+  <td id=L8>
+    <span class="line comm"># Bash is the only one that doesn't support aliases by default!</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>9</td>
+  <td id=L9>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>10</td>
+  <td id=L10>
+    <span class="line spec-comment">#### Usage of builtins</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>11</td>
+  <td id=L11>
+    <span class="line ">shopt -s expand_aliases || true</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>12</td>
+  <td id=L12>
+    <span class="line ">alias -- foo=echo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>13</td>
+  <td id=L13>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>14</td>
+  <td id=L14>
+    <span class="line ">foo x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>15</td>
+  <td id=L15>
+    <span class="line ">unalias -- foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>16</td>
+  <td id=L16>
+    <span class="line ">foo x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>17</td>
+  <td id=L17>
+    <span class="line comm">## status: 127</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>18</td>
+  <td id=L18>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>19</td>
+  <td id=L19>
+    <span class="line ">status=0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>20</td>
+  <td id=L20>
+    <span class="line ">x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>21</td>
+  <td id=L21>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>22</td>
+  <td id=L22>
+    <span class="line comm"># dash doesn't accept --</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>23</td>
+  <td id=L23>
+    <span class="line comm">## BUG dash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>24</td>
+  <td id=L24>
+    <span class="line ">status=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>25</td>
+  <td id=L25>
+    <span class="line ">x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>26</td>
+  <td id=L26>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>27</td>
+  <td id=L27>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>28</td>
+  <td id=L28>
+    <span class="line spec-comment">#### Basic alias</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>29</td>
+  <td id=L29>
+    <span class="line ">shopt -s expand_aliases  # bash requires this</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>30</td>
+  <td id=L30>
+    <span class="line ">alias hi='echo hello world'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>31</td>
+  <td id=L31>
+    <span class="line ">hi || echo 'should not run this'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>32</td>
+  <td id=L32>
+    <span class="line ">echo hi  # second word is not</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>33</td>
+  <td id=L33>
+    <span class="line ">'hi' || echo 'expected failure'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>34</td>
+  <td id=L34>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>35</td>
+  <td id=L35>
+    <span class="line ">hello world</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>36</td>
+  <td id=L36>
+    <span class="line ">hi</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>37</td>
+  <td id=L37>
+    <span class="line ">expected failure</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>38</td>
+  <td id=L38>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>39</td>
+  <td id=L39>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>40</td>
+  <td id=L40>
+    <span class="line spec-comment">#### define and use alias on a single line</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>41</td>
+  <td id=L41>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>42</td>
+  <td id=L42>
+    <span class="line ">alias e=echo; e one  # this is not alias-expanded because we parse lines at once</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>43</td>
+  <td id=L43>
+    <span class="line ">e two; e three</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>44</td>
+  <td id=L44>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>45</td>
+  <td id=L45>
+    <span class="line ">two</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>46</td>
+  <td id=L46>
+    <span class="line ">three</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>47</td>
+  <td id=L47>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>48</td>
+  <td id=L48>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>49</td>
+  <td id=L49>
+    <span class="line spec-comment">#### alias can override builtin</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>50</td>
+  <td id=L50>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>51</td>
+  <td id=L51>
+    <span class="line ">alias echo='echo foo'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>52</td>
+  <td id=L52>
+    <span class="line ">echo bar</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>53</td>
+  <td id=L53>
+    <span class="line comm">## stdout: foo bar</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>54</td>
+  <td id=L54>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>55</td>
+  <td id=L55>
+    <span class="line spec-comment">#### defining multiple aliases, then unalias</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>56</td>
+  <td id=L56>
+    <span class="line ">shopt -s expand_aliases  # bash requires this</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>57</td>
+  <td id=L57>
+    <span class="line ">x=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>58</td>
+  <td id=L58>
+    <span class="line ">y=y</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>59</td>
+  <td id=L59>
+    <span class="line ">alias echo-x='echo $x' echo-y='echo $y'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>60</td>
+  <td id=L60>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>61</td>
+  <td id=L61>
+    <span class="line ">echo-x X</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>62</td>
+  <td id=L62>
+    <span class="line ">echo-y Y</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>63</td>
+  <td id=L63>
+    <span class="line ">unalias echo-x echo-y</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>64</td>
+  <td id=L64>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>65</td>
+  <td id=L65>
+    <span class="line ">echo-x X || echo undefined</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>66</td>
+  <td id=L66>
+    <span class="line ">echo-y Y || echo undefined</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>67</td>
+  <td id=L67>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>68</td>
+  <td id=L68>
+    <span class="line ">status=0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>69</td>
+  <td id=L69>
+    <span class="line ">x X</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>70</td>
+  <td id=L70>
+    <span class="line ">y Y</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>71</td>
+  <td id=L71>
+    <span class="line ">status=0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>72</td>
+  <td id=L72>
+    <span class="line ">undefined</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>73</td>
+  <td id=L73>
+    <span class="line ">undefined</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>74</td>
+  <td id=L74>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>75</td>
+  <td id=L75>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>76</td>
+  <td id=L76>
+    <span class="line spec-comment">#### alias not defined</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>77</td>
+  <td id=L77>
+    <span class="line ">alias e='echo' nonexistentZ</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>78</td>
+  <td id=L78>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>79</td>
+  <td id=L79>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>80</td>
+  <td id=L80>
+    <span class="line ">status=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>81</td>
+  <td id=L81>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>82</td>
+  <td id=L82>
+    <span class="line comm">## OK mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>83</td>
+  <td id=L83>
+    <span class="line ">nonexistentZ alias not found</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>84</td>
+  <td id=L84>
+    <span class="line ">status=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>85</td>
+  <td id=L85>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>86</td>
+  <td id=L86>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>87</td>
+  <td id=L87>
+    <span class="line spec-comment">#### unalias not defined</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>88</td>
+  <td id=L88>
+    <span class="line ">alias e=echo ll='ls -l'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>89</td>
+  <td id=L89>
+    <span class="line ">unalias e nonexistentZ ll</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>90</td>
+  <td id=L90>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>91</td>
+  <td id=L91>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>92</td>
+  <td id=L92>
+    <span class="line ">status=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>93</td>
+  <td id=L93>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>94</td>
+  <td id=L94>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>95</td>
+  <td id=L95>
+    <span class="line spec-comment">#### unalias -a</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>96</td>
+  <td id=L96>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>97</td>
+  <td id=L97>
+    <span class="line ">alias foo=bar</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>98</td>
+  <td id=L98>
+    <span class="line ">alias spam=eggs</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>99</td>
+  <td id=L99>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>100</td>
+  <td id=L100>
+    <span class="line ">alias | egrep 'foo|spam' | wc -l</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>101</td>
+  <td id=L101>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>102</td>
+  <td id=L102>
+    <span class="line ">unalias -a</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>103</td>
+  <td id=L103>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>104</td>
+  <td id=L104>
+    <span class="line ">alias</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>105</td>
+  <td id=L105>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>106</td>
+  <td id=L106>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>107</td>
+  <td id=L107>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>108</td>
+  <td id=L108>
+    <span class="line ">2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>109</td>
+  <td id=L109>
+    <span class="line ">status=0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>110</td>
+  <td id=L110>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>111</td>
+  <td id=L111>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>112</td>
+  <td id=L112>
+    <span class="line spec-comment">#### List aliases by providing names</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>113</td>
+  <td id=L113>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>114</td>
+  <td id=L114>
+    <span class="line ">alias e=echo ll='ls -l'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>115</td>
+  <td id=L115>
+    <span class="line ">alias e ll</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>116</td>
+  <td id=L116>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>117</td>
+  <td id=L117>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>118</td>
+  <td id=L118>
+    <span class="line ">alias e='echo'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>119</td>
+  <td id=L119>
+    <span class="line ">alias ll='ls -l'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>120</td>
+  <td id=L120>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>121</td>
+  <td id=L121>
+    <span class="line comm">## OK mksh/zsh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>122</td>
+  <td id=L122>
+    <span class="line ">e=echo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>123</td>
+  <td id=L123>
+    <span class="line ">ll='ls -l'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>124</td>
+  <td id=L124>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>125</td>
+  <td id=L125>
+    <span class="line comm">## OK dash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>126</td>
+  <td id=L126>
+    <span class="line ">e='echo'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>127</td>
+  <td id=L127>
+    <span class="line ">ll='ls -l'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>128</td>
+  <td id=L128>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>129</td>
+  <td id=L129>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>130</td>
+  <td id=L130>
+    <span class="line spec-comment">#### alias without args lists all aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>131</td>
+  <td id=L131>
+    <span class="line ">alias ex=exit ll='ls -l'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>132</td>
+  <td id=L132>
+    <span class="line ">alias | grep -E 'ex=|ll='  # need to grep because mksh/zsh have builtin aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>133</td>
+  <td id=L133>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>134</td>
+  <td id=L134>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>135</td>
+  <td id=L135>
+    <span class="line ">alias ex='exit'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>136</td>
+  <td id=L136>
+    <span class="line ">alias ll='ls -l'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>137</td>
+  <td id=L137>
+    <span class="line ">status=0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>138</td>
+  <td id=L138>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>139</td>
+  <td id=L139>
+    <span class="line comm">## OK dash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>140</td>
+  <td id=L140>
+    <span class="line ">ex='exit'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>141</td>
+  <td id=L141>
+    <span class="line ">ll='ls -l'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>142</td>
+  <td id=L142>
+    <span class="line ">status=0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>143</td>
+  <td id=L143>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>144</td>
+  <td id=L144>
+    <span class="line comm">## OK mksh/zsh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>145</td>
+  <td id=L145>
+    <span class="line ">ex=exit</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>146</td>
+  <td id=L146>
+    <span class="line ">ll='ls -l'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>147</td>
+  <td id=L147>
+    <span class="line ">status=0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>148</td>
+  <td id=L148>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>149</td>
+  <td id=L149>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>150</td>
+  <td id=L150>
+    <span class="line spec-comment">#### unalias without args is a usage error</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>151</td>
+  <td id=L151>
+    <span class="line ">unalias</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>152</td>
+  <td id=L152>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>153</td>
+  <td id=L153>
+    <span class="line comm">## stdout: status=2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>154</td>
+  <td id=L154>
+    <span class="line comm">## BUG mksh/dash stdout: status=0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>155</td>
+  <td id=L155>
+    <span class="line comm">## BUG zsh stdout: status=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>156</td>
+  <td id=L156>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>157</td>
+  <td id=L157>
+    <span class="line spec-comment">#### alias with trailing space causes alias expansion on second word</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>158</td>
+  <td id=L158>
+    <span class="line ">shopt -s expand_aliases  # bash requires this</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>159</td>
+  <td id=L159>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>160</td>
+  <td id=L160>
+    <span class="line ">alias hi='echo hello world '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>161</td>
+  <td id=L161>
+    <span class="line ">alias punct='!!!'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>162</td>
+  <td id=L162>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>163</td>
+  <td id=L163>
+    <span class="line ">hi punct</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>164</td>
+  <td id=L164>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>165</td>
+  <td id=L165>
+    <span class="line ">alias hi='echo hello world'  # No trailing space</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>166</td>
+  <td id=L166>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>167</td>
+  <td id=L167>
+    <span class="line ">hi punct</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>168</td>
+  <td id=L168>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>169</td>
+  <td id=L169>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>170</td>
+  <td id=L170>
+    <span class="line ">hello world !!!</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>171</td>
+  <td id=L171>
+    <span class="line ">hello world punct</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>172</td>
+  <td id=L172>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>173</td>
+  <td id=L173>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>174</td>
+  <td id=L174>
+    <span class="line spec-comment">#### Recursive alias expansion of first word</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>175</td>
+  <td id=L175>
+    <span class="line ">shopt -s expand_aliases  # bash requires this</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>176</td>
+  <td id=L176>
+    <span class="line ">alias hi='e_ hello world'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>177</td>
+  <td id=L177>
+    <span class="line ">alias e_='echo __'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>178</td>
+  <td id=L178>
+    <span class="line ">hi   # first hi is expanded to echo hello world; then echo is expanded.  gah.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>179</td>
+  <td id=L179>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>180</td>
+  <td id=L180>
+    <span class="line ">__ hello world</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>181</td>
+  <td id=L181>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>182</td>
+  <td id=L182>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>183</td>
+  <td id=L183>
+    <span class="line spec-comment">#### Recursive alias expansion of SECOND word</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>184</td>
+  <td id=L184>
+    <span class="line ">shopt -s expand_aliases  # bash requires this</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>185</td>
+  <td id=L185>
+    <span class="line ">alias one='ONE '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>186</td>
+  <td id=L186>
+    <span class="line ">alias two='TWO '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>187</td>
+  <td id=L187>
+    <span class="line ">alias e_='echo one '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>188</td>
+  <td id=L188>
+    <span class="line ">e_ two hello world</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>189</td>
+  <td id=L189>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>190</td>
+  <td id=L190>
+    <span class="line ">one TWO hello world</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>191</td>
+  <td id=L191>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>192</td>
+  <td id=L192>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>193</td>
+  <td id=L193>
+    <span class="line spec-comment">#### Expansion of alias with variable</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>194</td>
+  <td id=L194>
+    <span class="line ">shopt -s expand_aliases  # bash requires this</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>195</td>
+  <td id=L195>
+    <span class="line ">x=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>196</td>
+  <td id=L196>
+    <span class="line ">alias echo-x='echo $x'  # nothing is evaluated here</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>197</td>
+  <td id=L197>
+    <span class="line ">x=y</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>198</td>
+  <td id=L198>
+    <span class="line ">echo-x hi</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>199</td>
+  <td id=L199>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>200</td>
+  <td id=L200>
+    <span class="line ">y hi</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>201</td>
+  <td id=L201>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>202</td>
+  <td id=L202>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>203</td>
+  <td id=L203>
+    <span class="line spec-comment">#### Alias must be an unquoted word, no expansions allowed</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>204</td>
+  <td id=L204>
+    <span class="line ">shopt -s expand_aliases  # bash requires this</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>205</td>
+  <td id=L205>
+    <span class="line ">alias echo_alias_='echo'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>206</td>
+  <td id=L206>
+    <span class="line ">cmd=echo_alias_</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>207</td>
+  <td id=L207>
+    <span class="line ">echo_alias_ X  # this works</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>208</td>
+  <td id=L208>
+    <span class="line ">$cmd X  # this fails because it's quoted</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>209</td>
+  <td id=L209>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>210</td>
+  <td id=L210>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>211</td>
+  <td id=L211>
+    <span class="line ">X</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>212</td>
+  <td id=L212>
+    <span class="line ">status=127</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>213</td>
+  <td id=L213>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>214</td>
+  <td id=L214>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>215</td>
+  <td id=L215>
+    <span class="line spec-comment">#### first and second word are the same alias, but no trailing space</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>216</td>
+  <td id=L216>
+    <span class="line ">shopt -s expand_aliases  # bash requires this</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>217</td>
+  <td id=L217>
+    <span class="line ">x=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>218</td>
+  <td id=L218>
+    <span class="line ">alias echo-x='echo $x'  # nothing is evaluated here</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>219</td>
+  <td id=L219>
+    <span class="line ">echo-x echo-x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>220</td>
+  <td id=L220>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>221</td>
+  <td id=L221>
+    <span class="line ">x echo-x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>222</td>
+  <td id=L222>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>223</td>
+  <td id=L223>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>224</td>
+  <td id=L224>
+    <span class="line spec-comment">#### first and second word are the same alias, with trailing space</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>225</td>
+  <td id=L225>
+    <span class="line ">shopt -s expand_aliases  # bash requires this</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>226</td>
+  <td id=L226>
+    <span class="line ">x=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>227</td>
+  <td id=L227>
+    <span class="line ">alias echo-x='echo $x '  # nothing is evaluated here</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>228</td>
+  <td id=L228>
+    <span class="line ">echo-x echo-x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>229</td>
+  <td id=L229>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>230</td>
+  <td id=L230>
+    <span class="line ">x echo x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>231</td>
+  <td id=L231>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>232</td>
+  <td id=L232>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>233</td>
+  <td id=L233>
+    <span class="line spec-comment">#### Invalid syntax of alias</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>234</td>
+  <td id=L234>
+    <span class="line ">shopt -s expand_aliases  # bash requires this</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>235</td>
+  <td id=L235>
+    <span class="line ">alias echo_alias_= 'echo --; echo'  # bad space here</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>236</td>
+  <td id=L236>
+    <span class="line ">echo_alias_ x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>237</td>
+  <td id=L237>
+    <span class="line comm">## status: 127</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>238</td>
+  <td id=L238>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>239</td>
+  <td id=L239>
+    <span class="line spec-comment">#### Dynamic alias definition</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>240</td>
+  <td id=L240>
+    <span class="line ">shopt -s expand_aliases  # bash requires this</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>241</td>
+  <td id=L241>
+    <span class="line ">x=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>242</td>
+  <td id=L242>
+    <span class="line ">name='echo_alias_'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>243</td>
+  <td id=L243>
+    <span class="line ">val='=echo'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>244</td>
+  <td id=L244>
+    <span class="line ">alias "$name$val"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>245</td>
+  <td id=L245>
+    <span class="line ">echo_alias_ X</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>246</td>
+  <td id=L246>
+    <span class="line comm">## stdout: X</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>247</td>
+  <td id=L247>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>248</td>
+  <td id=L248>
+    <span class="line spec-comment">#### Alias name with punctuation</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>249</td>
+  <td id=L249>
+    <span class="line comm"># NOTE: / is not OK in bash, but OK in other shells.  Must less restrictive</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>250</td>
+  <td id=L250>
+    <span class="line comm"># than var names.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>251</td>
+  <td id=L251>
+    <span class="line ">shopt -s expand_aliases  # bash requires this</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>252</td>
+  <td id=L252>
+    <span class="line ">alias e_+.~x='echo'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>253</td>
+  <td id=L253>
+    <span class="line ">e_+.~x X</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>254</td>
+  <td id=L254>
+    <span class="line comm">## stdout: X</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>255</td>
+  <td id=L255>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>256</td>
+  <td id=L256>
+    <span class="line spec-comment">#### Syntax error after expansion</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>257</td>
+  <td id=L257>
+    <span class="line ">shopt -s expand_aliases  # bash requires this</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>258</td>
+  <td id=L258>
+    <span class="line ">alias e_=';; oops'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>259</td>
+  <td id=L259>
+    <span class="line ">e_ x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>260</td>
+  <td id=L260>
+    <span class="line comm">## status: 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>261</td>
+  <td id=L261>
+    <span class="line comm">## OK mksh/zsh status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>262</td>
+  <td id=L262>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>263</td>
+  <td id=L263>
+    <span class="line spec-comment">#### Loop split across alias and arg works</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>264</td>
+  <td id=L264>
+    <span class="line ">shopt -s expand_aliases  # bash requires this</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>265</td>
+  <td id=L265>
+    <span class="line ">alias e_='for i in 1 2 3; do echo $i;'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>266</td>
+  <td id=L266>
+    <span class="line ">e_ done</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>267</td>
+  <td id=L267>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>268</td>
+  <td id=L268>
+    <span class="line ">1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>269</td>
+  <td id=L269>
+    <span class="line ">2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>270</td>
+  <td id=L270>
+    <span class="line ">3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>271</td>
+  <td id=L271>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>272</td>
+  <td id=L272>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>273</td>
+  <td id=L273>
+    <span class="line spec-comment">#### Loop split across alias in another way</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>274</td>
+  <td id=L274>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>275</td>
+  <td id=L275>
+    <span class="line ">alias e_='for i in 1 2 3; do echo '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>276</td>
+  <td id=L276>
+    <span class="line ">e_ $i; done</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>277</td>
+  <td id=L277>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>278</td>
+  <td id=L278>
+    <span class="line ">1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>279</td>
+  <td id=L279>
+    <span class="line ">2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>280</td>
+  <td id=L280>
+    <span class="line ">3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>281</td>
+  <td id=L281>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>282</td>
+  <td id=L282>
+    <span class="line comm">## OK osh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>283</td>
+  <td id=L283>
+    <span class="line comm">## OK osh status: 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>284</td>
+  <td id=L284>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>285</td>
+  <td id=L285>
+    <span class="line spec-comment">#### Loop split across both iterative and recursive aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>286</td>
+  <td id=L286>
+    <span class="line ">shopt -s expand_aliases  # bash requires this</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>287</td>
+  <td id=L287>
+    <span class="line ">alias FOR1='for '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>288</td>
+  <td id=L288>
+    <span class="line ">alias FOR2='FOR1 '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>289</td>
+  <td id=L289>
+    <span class="line ">alias eye1='i '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>290</td>
+  <td id=L290>
+    <span class="line ">alias eye2='eye1 '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>291</td>
+  <td id=L291>
+    <span class="line ">alias IN='in '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>292</td>
+  <td id=L292>
+    <span class="line ">alias onetwo='$one "2" '  # NOTE: this does NOT work in any shell except bash.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>293</td>
+  <td id=L293>
+    <span class="line ">one=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>294</td>
+  <td id=L294>
+    <span class="line ">FOR2 eye2 IN onetwo 3; do echo $i; done</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>295</td>
+  <td id=L295>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>296</td>
+  <td id=L296>
+    <span class="line ">1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>297</td>
+  <td id=L297>
+    <span class="line ">2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>298</td>
+  <td id=L298>
+    <span class="line ">3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>299</td>
+  <td id=L299>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>300</td>
+  <td id=L300>
+    <span class="line comm">## OK osh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>301</td>
+  <td id=L301>
+    <span class="line comm">## OK osh status: 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>302</td>
+  <td id=L302>
+    <span class="line comm">## BUG zsh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>303</td>
+  <td id=L303>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>304</td>
+  <td id=L304>
+    <span class="line spec-comment">#### Alias with a quote in the middle is a syntax error</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>305</td>
+  <td id=L305>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>306</td>
+  <td id=L306>
+    <span class="line ">alias e_='echo "'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>307</td>
+  <td id=L307>
+    <span class="line ">var=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>308</td>
+  <td id=L308>
+    <span class="line ">e_ '${var}"'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>309</td>
+  <td id=L309>
+    <span class="line comm">## status: 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>310</td>
+  <td id=L310>
+    <span class="line comm">## OK mksh/zsh status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>311</td>
+  <td id=L311>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>312</td>
+  <td id=L312>
+    <span class="line spec-comment">#### Alias with internal newlines</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>313</td>
+  <td id=L313>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>314</td>
+  <td id=L314>
+    <span class="line ">alias e_='echo 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>315</td>
+  <td id=L315>
+    <span class="line ">echo 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>316</td>
+  <td id=L316>
+    <span class="line ">echo 3'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>317</td>
+  <td id=L317>
+    <span class="line ">var='echo foo'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>318</td>
+  <td id=L318>
+    <span class="line ">e_ ${var}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>319</td>
+  <td id=L319>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>320</td>
+  <td id=L320>
+    <span class="line ">1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>321</td>
+  <td id=L321>
+    <span class="line ">2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>322</td>
+  <td id=L322>
+    <span class="line ">3 echo foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>323</td>
+  <td id=L323>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>324</td>
+  <td id=L324>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>325</td>
+  <td id=L325>
+    <span class="line spec-comment">#### Alias trailing newline</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>326</td>
+  <td id=L326>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>327</td>
+  <td id=L327>
+    <span class="line ">alias e_='echo 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>328</td>
+  <td id=L328>
+    <span class="line ">echo 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>329</td>
+  <td id=L329>
+    <span class="line ">echo 3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>330</td>
+  <td id=L330>
+    <span class="line ">'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>331</td>
+  <td id=L331>
+    <span class="line ">var='echo foo'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>332</td>
+  <td id=L332>
+    <span class="line ">e_ ${var}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>333</td>
+  <td id=L333>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>334</td>
+  <td id=L334>
+    <span class="line ">1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>335</td>
+  <td id=L335>
+    <span class="line ">2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>336</td>
+  <td id=L336>
+    <span class="line ">3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>337</td>
+  <td id=L337>
+    <span class="line ">foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>338</td>
+  <td id=L338>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>339</td>
+  <td id=L339>
+    <span class="line comm">## OK zsh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>340</td>
+  <td id=L340>
+    <span class="line ">1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>341</td>
+  <td id=L341>
+    <span class="line ">2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>342</td>
+  <td id=L342>
+    <span class="line ">3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>343</td>
+  <td id=L343>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>344</td>
+  <td id=L344>
+    <span class="line comm">## OK zsh status: 127</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>345</td>
+  <td id=L345>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>346</td>
+  <td id=L346>
+    <span class="line spec-comment">#### Two aliases in pipeline</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>347</td>
+  <td id=L347>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>348</td>
+  <td id=L348>
+    <span class="line ">alias SEQ='seq '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>349</td>
+  <td id=L349>
+    <span class="line ">alias THREE='3 '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>350</td>
+  <td id=L350>
+    <span class="line ">alias WC='wc '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>351</td>
+  <td id=L351>
+    <span class="line ">SEQ THREE | WC -l</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>352</td>
+  <td id=L352>
+    <span class="line comm">## stdout: 3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>353</td>
+  <td id=L353>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>354</td>
+  <td id=L354>
+    <span class="line spec-comment">#### Alias not respected inside $()</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>355</td>
+  <td id=L355>
+    <span class="line comm"># This could be parsed correctly, but it is only defined in a child process.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>356</td>
+  <td id=L356>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>357</td>
+  <td id=L357>
+    <span class="line ">echo $(alias sayhi='echo hello')</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>358</td>
+  <td id=L358>
+    <span class="line ">sayhi</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>359</td>
+  <td id=L359>
+    <span class="line comm">## status: 127</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>360</td>
+  <td id=L360>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>361</td>
+  <td id=L361>
+    <span class="line spec-comment">#### Alias can be defined and used on a single line</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>362</td>
+  <td id=L362>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>363</td>
+  <td id=L363>
+    <span class="line ">alias sayhi='echo hello'; sayhi same line</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>364</td>
+  <td id=L364>
+    <span class="line ">sayhi other line</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>365</td>
+  <td id=L365>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>366</td>
+  <td id=L366>
+    <span class="line ">hello other line</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>367</td>
+  <td id=L367>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>368</td>
+  <td id=L368>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>369</td>
+  <td id=L369>
+    <span class="line spec-comment">#### Alias is respected inside eval</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>370</td>
+  <td id=L370>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>371</td>
+  <td id=L371>
+    <span class="line ">eval "alias sayhi='echo hello'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>372</td>
+  <td id=L372>
+    <span class="line ">sayhi inside"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>373</td>
+  <td id=L373>
+    <span class="line ">sayhi outside</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>374</td>
+  <td id=L374>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>375</td>
+  <td id=L375>
+    <span class="line ">hello inside</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>376</td>
+  <td id=L376>
+    <span class="line ">hello outside</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>377</td>
+  <td id=L377>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>378</td>
+  <td id=L378>
+    <span class="line comm">## BUG zsh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>379</td>
+  <td id=L379>
+    <span class="line ">hello outside</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>380</td>
+  <td id=L380>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>381</td>
+  <td id=L381>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>382</td>
+  <td id=L382>
+    <span class="line spec-comment">#### alias with redirects works</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>383</td>
+  <td id=L383>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>384</td>
+  <td id=L384>
+    <span class="line ">alias e_=echo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>385</td>
+  <td id=L385>
+    <span class="line ">&gt;$TMP/alias1.txt e_ 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>386</td>
+  <td id=L386>
+    <span class="line ">e_ &gt;$TMP/alias2.txt 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>387</td>
+  <td id=L387>
+    <span class="line ">e_ 3 &gt;$TMP/alias3.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>388</td>
+  <td id=L388>
+    <span class="line ">cat $TMP/alias1.txt $TMP/alias2.txt $TMP/alias3.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>389</td>
+  <td id=L389>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>390</td>
+  <td id=L390>
+    <span class="line ">1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>391</td>
+  <td id=L391>
+    <span class="line ">2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>392</td>
+  <td id=L392>
+    <span class="line ">3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>393</td>
+  <td id=L393>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>394</td>
+  <td id=L394>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>395</td>
+  <td id=L395>
+    <span class="line spec-comment">#### alias with environment bindings works</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>396</td>
+  <td id=L396>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>397</td>
+  <td id=L397>
+    <span class="line ">alias p_=printenv.py</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>398</td>
+  <td id=L398>
+    <span class="line ">FOO=1 printenv.py FOO</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>399</td>
+  <td id=L399>
+    <span class="line ">FOO=2 p_ FOO</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>400</td>
+  <td id=L400>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>401</td>
+  <td id=L401>
+    <span class="line ">1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>402</td>
+  <td id=L402>
+    <span class="line ">2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>403</td>
+  <td id=L403>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>404</td>
+  <td id=L404>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>405</td>
+  <td id=L405>
+    <span class="line spec-comment">#### alias with line continuation in the middle</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>406</td>
+  <td id=L406>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>407</td>
+  <td id=L407>
+    <span class="line ">alias e_='echo '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>408</td>
+  <td id=L408>
+    <span class="line ">alias one='ONE '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>409</td>
+  <td id=L409>
+    <span class="line ">alias two='TWO '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>410</td>
+  <td id=L410>
+    <span class="line ">alias three='THREE'  # no trailing space</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>411</td>
+  <td id=L411>
+    <span class="line ">e_ one \</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>412</td>
+  <td id=L412>
+    <span class="line ">  two one \</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>413</td>
+  <td id=L413>
+    <span class="line ">  two three two \</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>414</td>
+  <td id=L414>
+    <span class="line ">  one</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>415</td>
+  <td id=L415>
+    <span class="line comm">## stdout: ONE TWO ONE TWO THREE two one</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>416</td>
+  <td id=L416>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>417</td>
+  <td id=L417>
+    <span class="line spec-comment">#### alias for left brace </span>
+  </td>
+</tr>
+<tr>
+  <td class=num>418</td>
+  <td id=L418>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>419</td>
+  <td id=L419>
+    <span class="line ">alias LEFT='{'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>420</td>
+  <td id=L420>
+    <span class="line ">LEFT echo one; echo two; }</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>421</td>
+  <td id=L421>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>422</td>
+  <td id=L422>
+    <span class="line ">one</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>423</td>
+  <td id=L423>
+    <span class="line ">two</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>424</td>
+  <td id=L424>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>425</td>
+  <td id=L425>
+    <span class="line comm">## OK osh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>426</td>
+  <td id=L426>
+    <span class="line comm">## OK osh status: 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>427</td>
+  <td id=L427>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>428</td>
+  <td id=L428>
+    <span class="line spec-comment">#### alias for left paren</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>429</td>
+  <td id=L429>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>430</td>
+  <td id=L430>
+    <span class="line ">alias LEFT='('</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>431</td>
+  <td id=L431>
+    <span class="line ">LEFT echo one; echo two )</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>432</td>
+  <td id=L432>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>433</td>
+  <td id=L433>
+    <span class="line ">one</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>434</td>
+  <td id=L434>
+    <span class="line ">two</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>435</td>
+  <td id=L435>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>436</td>
+  <td id=L436>
+    <span class="line comm">## OK osh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>437</td>
+  <td id=L437>
+    <span class="line comm">## OK osh status: 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>438</td>
+  <td id=L438>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>439</td>
+  <td id=L439>
+    <span class="line spec-comment">#### alias used in subshell and command sub</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>440</td>
+  <td id=L440>
+    <span class="line comm"># This spec seems to be contradictoary?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>441</td>
+  <td id=L441>
+    <span class="line comm"># http://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html#tag_18_03_01</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>442</td>
+  <td id=L442>
+    <span class="line comm"># "When used as specified by this volume of POSIX.1-2017, alias definitions</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>443</td>
+  <td id=L443>
+    <span class="line comm"># shall not be inherited by separate invocations of the shell or by the utility</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>444</td>
+  <td id=L444>
+    <span class="line comm"># execution environments invoked by the shell; see Shell Execution</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>445</td>
+  <td id=L445>
+    <span class="line comm"># Environment."</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>446</td>
+  <td id=L446>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>447</td>
+  <td id=L447>
+    <span class="line ">alias echo_='echo [ '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>448</td>
+  <td id=L448>
+    <span class="line ">( echo_ subshell; )</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>449</td>
+  <td id=L449>
+    <span class="line ">echo $(echo_ commandsub)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>450</td>
+  <td id=L450>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>451</td>
+  <td id=L451>
+    <span class="line ">[ subshell</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>452</td>
+  <td id=L452>
+    <span class="line ">[ commandsub</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>453</td>
+  <td id=L453>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>454</td>
+  <td id=L454>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>455</td>
+  <td id=L455>
+    <span class="line spec-comment">#### alias used in here doc</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>456</td>
+  <td id=L456>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>457</td>
+  <td id=L457>
+    <span class="line ">alias echo_='echo [ '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>458</td>
+  <td id=L458>
+    <span class="line ">cat &lt;&lt;EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>459</td>
+  <td id=L459>
+    <span class="line ">$(echo_ ])</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>460</td>
+  <td id=L460>
+    <span class="line ">EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>461</td>
+  <td id=L461>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>462</td>
+  <td id=L462>
+    <span class="line ">[ ]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>463</td>
+  <td id=L463>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>464</td>
+  <td id=L464>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>465</td>
+  <td id=L465>
+    <span class="line spec-comment">#### here doc inside alias</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>466</td>
+  <td id=L466>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>467</td>
+  <td id=L467>
+    <span class="line ">alias c='cat &lt;&lt;EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>468</td>
+  <td id=L468>
+    <span class="line ">$(echo hi)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>469</td>
+  <td id=L469>
+    <span class="line ">EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>470</td>
+  <td id=L470>
+    <span class="line ">'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>471</td>
+  <td id=L471>
+    <span class="line ">c</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>472</td>
+  <td id=L472>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>473</td>
+  <td id=L473>
+    <span class="line ">hi</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>474</td>
+  <td id=L474>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>475</td>
+  <td id=L475>
+    <span class="line comm">## BUG bash stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>476</td>
+  <td id=L476>
+    <span class="line comm">## BUG bash status: 127</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>477</td>
+  <td id=L477>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>478</td>
+  <td id=L478>
+    <span class="line spec-comment">#### Corner case: alias inside LHS array arithmetic expression</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>479</td>
+  <td id=L479>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>480</td>
+  <td id=L480>
+    <span class="line ">alias zero='echo 0'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>481</td>
+  <td id=L481>
+    <span class="line ">a[$(zero)]=ZERO</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>482</td>
+  <td id=L482>
+    <span class="line ">a[1]=ONE</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>483</td>
+  <td id=L483>
+    <span class="line ">argv.py "${a[@]}"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>484</td>
+  <td id=L484>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>485</td>
+  <td id=L485>
+    <span class="line ">['ZERO', 'ONE']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>486</td>
+  <td id=L486>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>487</td>
+  <td id=L487>
+    <span class="line comm">## N-I dash stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>488</td>
+  <td id=L488>
+    <span class="line comm">## N-I dash status: 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>489</td>
+  <td id=L489>
+    <span class="line comm">## N-I zsh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>490</td>
+  <td id=L490>
+    <span class="line comm">## N-I zsh status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>491</td>
+  <td id=L491>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>492</td>
+  <td id=L492>
+    <span class="line spec-comment">#### Alias that is pipeline</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>493</td>
+  <td id=L493>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>494</td>
+  <td id=L494>
+    <span class="line ">alias t1='echo hi|wc -c'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>495</td>
+  <td id=L495>
+    <span class="line ">t1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>496</td>
+  <td id=L496>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>497</td>
+  <td id=L497>
+    <span class="line ">3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>498</td>
+  <td id=L498>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>499</td>
+  <td id=L499>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>500</td>
+  <td id=L500>
+    <span class="line spec-comment">#### Alias that is &amp;&amp; || ;</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>501</td>
+  <td id=L501>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>502</td>
+  <td id=L502>
+    <span class="line ">alias t1='echo one &amp;&amp; echo two &amp;&amp; echo 3 | wc -l;</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>503</td>
+  <td id=L503>
+    <span class="line ">echo four'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>504</td>
+  <td id=L504>
+    <span class="line ">t1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>505</td>
+  <td id=L505>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>506</td>
+  <td id=L506>
+    <span class="line ">one</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>507</td>
+  <td id=L507>
+    <span class="line ">two</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>508</td>
+  <td id=L508>
+    <span class="line ">1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>509</td>
+  <td id=L509>
+    <span class="line ">four</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>510</td>
+  <td id=L510>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>511</td>
+  <td id=L511>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>512</td>
+  <td id=L512>
+    <span class="line spec-comment">#### Alias and command sub (bug regression)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>513</td>
+  <td id=L513>
+    <span class="line ">cd $TMP</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>514</td>
+  <td id=L514>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>515</td>
+  <td id=L515>
+    <span class="line ">echo foo bar &gt; tmp.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>516</td>
+  <td id=L516>
+    <span class="line ">alias a=argv.py</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>517</td>
+  <td id=L517>
+    <span class="line ">a `cat tmp.txt`</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>518</td>
+  <td id=L518>
+    <span class="line comm">## stdout: ['foo', 'bar']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>519</td>
+  <td id=L519>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>520</td>
+  <td id=L520>
+    <span class="line spec-comment">#### Alias and arithmetic</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>521</td>
+  <td id=L521>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>522</td>
+  <td id=L522>
+    <span class="line ">alias a=argv.py</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>523</td>
+  <td id=L523>
+    <span class="line ">a $((1 + 2))</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>524</td>
+  <td id=L524>
+    <span class="line comm">## stdout: ['3']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>525</td>
+  <td id=L525>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>526</td>
+  <td id=L526>
+    <span class="line spec-comment">#### Alias and PS4</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>527</td>
+  <td id=L527>
+    <span class="line comm"># dash enters an infinite loop!</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>528</td>
+  <td id=L528>
+    <span class="line ">case $SH in</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>529</td>
+  <td id=L529>
+    <span class="line ">  dash)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>530</td>
+  <td id=L530>
+    <span class="line ">    exit 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>531</td>
+  <td id=L531>
+    <span class="line ">    ;;</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>532</td>
+  <td id=L532>
+    <span class="line ">esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>533</td>
+  <td id=L533>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>534</td>
+  <td id=L534>
+    <span class="line ">set -x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>535</td>
+  <td id=L535>
+    <span class="line ">PS4='+$(echo trace) '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>536</td>
+  <td id=L536>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>537</td>
+  <td id=L537>
+    <span class="line ">alias a=argv.py</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>538</td>
+  <td id=L538>
+    <span class="line ">a foo bar</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>539</td>
+  <td id=L539>
+    <span class="line comm">## stdout: ['foo', 'bar']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>540</td>
+  <td id=L540>
+    <span class="line comm">## BUG dash status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>541</td>
+  <td id=L541>
+    <span class="line comm">## BUG dash stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>542</td>
+  <td id=L542>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>543</td>
+  <td id=L543>
+    <span class="line spec-comment">#### alias with keywords</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>544</td>
+  <td id=L544>
+    <span class="line comm"># from issue #299</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>545</td>
+  <td id=L545>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>546</td>
+  <td id=L546>
+    <span class="line ">alias a=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>547</td>
+  <td id=L547>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>548</td>
+  <td id=L548>
+    <span class="line comm"># both of these fail to parse in OSH</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>549</td>
+  <td id=L549>
+    <span class="line comm"># this is because of our cleaner evaluation model</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>550</td>
+  <td id=L550>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>551</td>
+  <td id=L551>
+    <span class="line ">a (( var = 0 ))</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>552</td>
+  <td id=L552>
+    <span class="line comm">#a case x in x) true;; esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>553</td>
+  <td id=L553>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>554</td>
+  <td id=L554>
+    <span class="line ">echo done</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>555</td>
+  <td id=L555>
+    <span class="line comm">## stdout: done</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>556</td>
+  <td id=L556>
+    <span class="line comm">## OK osh status: 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>557</td>
+  <td id=L557>
+    <span class="line comm">## OK osh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>558</td>
+  <td id=L558>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>559</td>
+  <td id=L559>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>560</td>
+  <td id=L560>
+    <span class="line spec-comment">#### alias with word of multiple lines</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>561</td>
+  <td id=L561>
+    <span class="line ">shopt -s expand_aliases</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>562</td>
+  <td id=L562>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>563</td>
+  <td id=L563>
+    <span class="line ">alias ll='ls -l'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>564</td>
+  <td id=L564>
+    <span class="line ">ll '1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>565</td>
+  <td id=L565>
+    <span class="line ">  2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>566</td>
+  <td id=L566>
+    <span class="line ">  3'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>567</td>
+  <td id=L567>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>568</td>
+  <td id=L568>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>569</td>
+  <td id=L569>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>570</td>
+  <td id=L570>
+    <span class="line ">status=2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>571</td>
+  <td id=L571>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+
+        </table>
+      </body>
+    </html>

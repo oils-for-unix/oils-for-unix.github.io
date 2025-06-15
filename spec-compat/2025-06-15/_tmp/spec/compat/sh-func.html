@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sh-func: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for sh-func.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>11</td><td>11</td><td>11</td><td>11</td><td>9</td><td>10</td><td>11</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>1</td><td>1</td><td>3</td><td>2</td><td>1</td><td></td></tr>
+<tr><td>total</td><td>12</td><td>12</td><td>12</td><td>12</td><td>12</td><td>12</td><td>12</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-func.test.html#L4">Locals don't leak</a></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-func.test.html#L12">Globals leak</a></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-func.test.html#L20">Return statement</a></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-func.test.html#L30">Dynamic Scope</a></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-func.test.html#L41">Dynamic Scope Mutation (wow this is bad)</a></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-func.test.html#L59">Assign local separately</a></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-func.test.html#L69">Assign a local and global on same line</a></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-func.test.html#L84">Return without args gives previous</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-func.test.html#L95">return "" (a lot of disagreement)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-8-bash">details</a></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-func.test.html#L124">return $empty</a></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="sh-func.test.html#L138">Subshell function</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-10-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-func.test.html#L158">Scope of global variable when sourced in function (Shell Functions aren't Closures)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>74 passed, 0 OK, 0 not implemented, 2 BUG, 8 failed, 0 timeouts, 0 cases skipped
+1 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="sh-func.test.html#L84">Return without args gives previous</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=42\n', got 'status=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="sh-func.test.html#L84">Return without args gives previous</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=42\n', got 'status=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-bash"></a><b>bash</b></td><td>8 <a href="sh-func.test.html#L95">return "" (a lot of disagreement)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>f
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>main: line 3: return: : numeric argument required
+</pre></td></tr><tr><td><a name="details-8-mksh"></a><b>mksh</b></td><td>8 <a href="sh-func.test.html#L95">return "" (a lot of disagreement)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>f
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[6]: return: : bad number
+</pre></td></tr><tr><td><a name="details-8-ksh"></a><b>ksh</b></td><td>8 <a href="sh-func.test.html#L95">return "" (a lot of disagreement)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'f\nstatus=0\n', got 'f\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>f
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[6]: return: bad number: 
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="sh-func.test.html#L95">return "" (a lot of disagreement)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'f\nstatus=0\n', got 'f\nstatus=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>f
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>sush: return: : numeric argument required
+</pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="sh-func.test.html#L95">return "" (a lot of disagreement)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'f\nstatus=0\n', got 'f\nstatus=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>f
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>error: invalid value '' for '[CODE]': cannot parse integer from empty string
+
+For more information, try '--help'.
+
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="sh-func.test.html#L138">Subshell function</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=42\nstatus=42\n', got 'status=0\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-osh"></a><b>osh</b></td><td>10 <a href="sh-func.test.html#L138">Subshell function</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'status=42\nstatus=42\n', got 'status=42\n'</span><br/>
+<span class="assertion">[osh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=42
+</pre><i>stderr:</i> <br/>
+<pre>  g() ( return 42 )
+        ^~~~~~
+[ stdin ]:2: fatal: Invalid control flow 'return' in pipeline / subshell / background
+</pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="sh-func.test.html#L158">Scope of global variable when sourced in function (Shell Functions aren't Closures)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'g = global\n', got 'g = global\nL = \n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>g = global
+L = 
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

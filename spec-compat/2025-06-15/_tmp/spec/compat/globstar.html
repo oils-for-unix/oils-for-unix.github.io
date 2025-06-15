@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>globstar: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for globstar.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>4</td><td>1</td><td>1</td><td>0</td><td>4</td><td>1</td><td>1</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>4</td><td>4</td><td>5</td><td>1</td><td>4</td><td>4</td><td></td></tr>
+<tr><td>total</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="globstar.test.html#L4">globstar is off -&gt; ** is treated like *</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="globstar.test.html#L19">each occurrence of ** recurses through all depths</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"><a href="#details-1-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="globstar.test.html#L51">within braces, globstar works when there is a comma</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"><a href="#details-2-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="globstar.test.html#L62">** behaves like * if adjacent to anything other than /</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"><a href="#details-3-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="globstar.test.html#L82">in zsh, ***/ follows symlinked directories, while **/ does not</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-4-bash">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"><a href="#details-4-osh">details</a></td><td class="details-row"></td></tr>
+</table>
+<pre>12 passed, 0 OK, 1 not implemented, 0 BUG, 22 failed, 0 timeouts, 0 cases skipped
+4 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="globstar.test.html#L4">globstar is off -&gt; ** is treated like *</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'c/leaf.md\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="globstar.test.html#L19">each occurrence of ** recurses through all depths</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'c/leaf.md\nc/subdir/leaf.md\nleaf.md\n\nc/leaf.md\nc/subdir/leaf.md\nleaf.md\n'
+Got      'c/leaf.md\n\nc/subdir/leaf.md\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>c/leaf.md
+
+c/subdir/leaf.md
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="globstar.test.html#L19">each occurrence of ** recurses through all depths</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'c/leaf.md\nc/subdir/leaf.md\nleaf.md\n\nc/leaf.md\nc/subdir/leaf.md\nleaf.md\n'
+Got      'c/leaf.md\n\nc/subdir/leaf.md\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>c/leaf.md
+
+c/subdir/leaf.md
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="globstar.test.html#L19">each occurrence of ** recurses through all depths</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'c/leaf.md\nc/subdir/leaf.md\nleaf.md\n\nc/leaf.md\nc/subdir/leaf.md\nleaf.md\n'
+Got      'c/leaf.md\n\nc/subdir/leaf.md\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>c/leaf.md
+
+c/subdir/leaf.md
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="globstar.test.html#L19">each occurrence of ** recurses through all depths</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'c/leaf.md\nc/subdir/leaf.md\nleaf.md\n\nc/leaf.md\nc/subdir/leaf.md\nleaf.md\n'
+Got      'c/leaf.md\n\nc/subdir/leaf.md\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>c/leaf.md
+
+c/subdir/leaf.md
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-osh"></a><b>osh</b></td><td>1 <a href="globstar.test.html#L19">each occurrence of ** recurses through all depths</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'c/leaf.md\nc/subdir/leaf.md\nleaf.md\n\nc/leaf.md\nc/subdir/leaf.md\nleaf.md\n'
+Got      'c/leaf.md\n\nc/subdir/leaf.md\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>c/leaf.md
+
+c/subdir/leaf.md
+</pre><i>stderr:</i> <br/>
+<pre>  shopt -s globstar
+  ^~~~~
+[ stdin ]:1: 'shopt' got invalid option 'globstar'
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="globstar.test.html#L51">within braces, globstar works when there is a comma</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'c/subdir/leaf.md\n', got '**/*.*\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>**/*.*
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="globstar.test.html#L51">within braces, globstar works when there is a comma</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'c/subdir/leaf.md\n', got '**/*.*\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>**/*.*
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="globstar.test.html#L51">within braces, globstar works when there is a comma</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'c/subdir/leaf.md\n', got '**/*.*\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>**/*.*
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="globstar.test.html#L51">within braces, globstar works when there is a comma</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'c/subdir/leaf.md\n', got '**/*.*\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>**/*.*
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-osh"></a><b>osh</b></td><td>2 <a href="globstar.test.html#L51">within braces, globstar works when there is a comma</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'c/subdir/leaf.md\n', got '**/*.*\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>**/*.*
+</pre><i>stderr:</i> <br/>
+<pre>  shopt -s globstar
+  ^~~~~
+[ stdin ]:1: 'shopt' got invalid option 'globstar'
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="globstar.test.html#L62">** behaves like * if adjacent to anything other than /</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'directory/leaf.md leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\n'
+Got      'directory/leaf.md\ndirectory/**/*.md\ndirectory/leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>directory/leaf.md
+directory/**/*.md
+directory/leaf.md
+directory/leaf.md
+directory/leaf.md
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="globstar.test.html#L62">** behaves like * if adjacent to anything other than /</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'directory/leaf.md leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\n'
+Got      'directory/leaf.md\ndirectory/**/*.md\ndirectory/leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>directory/leaf.md
+directory/**/*.md
+directory/leaf.md
+directory/leaf.md
+directory/leaf.md
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="globstar.test.html#L62">** behaves like * if adjacent to anything other than /</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'directory/leaf.md leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\n'
+Got      'directory/leaf.md\ndirectory/**/*.md\ndirectory/leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>directory/leaf.md
+directory/**/*.md
+directory/leaf.md
+directory/leaf.md
+directory/leaf.md
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="globstar.test.html#L62">** behaves like * if adjacent to anything other than /</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'directory/leaf.md leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\n'
+Got      'directory/leaf.md\ndirectory/**/*.md\ndirectory/leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>directory/leaf.md
+directory/**/*.md
+directory/leaf.md
+directory/leaf.md
+directory/leaf.md
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-osh"></a><b>osh</b></td><td>3 <a href="globstar.test.html#L62">** behaves like * if adjacent to anything other than /</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'directory/leaf.md leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\n'
+Got      'directory/leaf.md\ndirectory/**/*.md\ndirectory/leaf.md\ndirectory/leaf.md\ndirectory/leaf.md\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>directory/leaf.md
+directory/**/*.md
+directory/leaf.md
+directory/leaf.md
+directory/leaf.md
+</pre><i>stderr:</i> <br/>
+<pre>  shopt -s globstar
+  ^~~~~
+[ stdin ]:1: 'shopt' got invalid option 'globstar'
+</pre></td></tr><tr><td><a name="details-4-bash"></a><b>bash</b></td><td>4 <a href="globstar.test.html#L82">in zsh, ***/ follows symlinked directories, while **/ does not</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="globstar.test.html#L82">in zsh, ***/ follows symlinked directories, while **/ does not</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'directory-2/leaf-2.md\ndirectory-1/symlink/leaf-2.md directory-2/leaf-2.md\n'
+Got      'directory-2/leaf-2.md\ndirectory-2/leaf-2.md\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>directory-2/leaf-2.md
+directory-2/leaf-2.md
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="globstar.test.html#L82">in zsh, ***/ follows symlinked directories, while **/ does not</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'directory-2/leaf-2.md\ndirectory-1/symlink/leaf-2.md directory-2/leaf-2.md\n'
+Got      'directory-2/leaf-2.md\ndirectory-2/leaf-2.md\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>directory-2/leaf-2.md
+directory-2/leaf-2.md
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="globstar.test.html#L82">in zsh, ***/ follows symlinked directories, while **/ does not</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'directory-2/leaf-2.md\ndirectory-1/symlink/leaf-2.md directory-2/leaf-2.md\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="globstar.test.html#L82">in zsh, ***/ follows symlinked directories, while **/ does not</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'directory-2/leaf-2.md\ndirectory-1/symlink/leaf-2.md directory-2/leaf-2.md\n'
+Got      'directory-2/leaf-2.md\ndirectory-2/leaf-2.md\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>directory-2/leaf-2.md
+directory-2/leaf-2.md
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="globstar.test.html#L82">in zsh, ***/ follows symlinked directories, while **/ does not</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'directory-2/leaf-2.md\ndirectory-1/symlink/leaf-2.md directory-2/leaf-2.md\n'
+Got      'directory-2/leaf-2.md\ndirectory-2/leaf-2.md\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>directory-2/leaf-2.md
+directory-2/leaf-2.md
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-osh"></a><b>osh</b></td><td>4 <a href="globstar.test.html#L82">in zsh, ***/ follows symlinked directories, while **/ does not</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'directory-2/leaf-2.md\ndirectory-1/symlink/leaf-2.md directory-2/leaf-2.md\n'
+Got      'directory-2/leaf-2.md\ndirectory-2/leaf-2.md\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>directory-2/leaf-2.md
+directory-2/leaf-2.md
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-eval-source: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-eval-source.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>19</td><td>12</td><td>13</td><td>9</td><td>15</td><td>14</td><td>22</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>2</td><td>0</td><td>9</td><td>13</td><td>7</td><td>8</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>22</td><td>22</td><td>22</td><td>22</td><td>22</td><td>22</td><td>22</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L4">Eval</a></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L9">eval accepts/ignores --</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L17">eval usage</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L39">eval string with 'break continue return error'</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L88">eval YSH block with 'break continue return error'</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-4-bash">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L134">exit within eval (regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L140">exit within source (regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L148">Source</a></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L155">source accepts/ignores --</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L164">Source nonexistent</a></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L170">Source with no arguments</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L177">Source with arguments</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L186">Source from a function, mutating argv and defining a local var</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L210">Source with syntax error</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-13-bash">details</a></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"><a href="#details-13-ksh">details</a></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L224">Eval with syntax error</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-14-bash">details</a></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L234">Eval in does tilde expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-mksh">details</a></td><td class="details-row"><a href="#details-15-ksh">details</a></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L258">Eval in bash does tilde expansion in array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-mksh">details</a></td><td class="details-row"><a href="#details-16-ksh">details</a></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L291">source works for files in current directory (bash only)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-mksh">details</a></td><td class="details-row"><a href="#details-17-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L311">source looks in PATH for files</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"><a href="#details-18-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L321">source finds files in PATH before current dir</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"><a href="#details-19-sush">details</a></td><td class="details-row"><a href="#details-19-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L334">source works for files in subdirectory</a></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-eval-source.test.html#L343">source doesn't crash when targeting a directory</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-mksh">details</a></td><td class="details-row"><a href="#details-21-ksh">details</a></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>104 passed, 5 OK, 3 not implemented, 3 BUG, 39 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-eval-source.test.html#L9">eval accepts/ignores --</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'hi\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: --: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="builtin-eval-source.test.html#L17">eval usage</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>127
+</pre><i>stderr:</i> <br/>
+<pre>mksh: -: not found
+mksh: &lt;stdin&gt;[3]: eval: -z: unknown option
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="builtin-eval-source.test.html#L17">eval usage</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '127\n2\n', got '127\n'</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>127
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: -: inaccessible or not found
+E: ksh: &lt;stdin&gt;[3]: eval: -z: unknown option
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="builtin-eval-source.test.html#L17">eval usage</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '127\n2\n', got '127\n127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>127
+127
+</pre><i>stderr:</i> <br/>
+<pre>sh: -: No such file or directory
+sh: -z: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="builtin-eval-source.test.html#L17">eval usage</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '127\n2\n', got '127\n127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>127
+127
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: -: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: -z: command not found
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="builtin-eval-source.test.html#L17">eval usage</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '127\n2\n', got '127\n127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>127
+127
+</pre><i>stderr:</i> <br/>
+<pre>-: command not found
+-z: command not found
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="builtin-eval-source.test.html#L39">eval string with 'break continue return error'</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>--- break
+1
+2
+end func
+--- continue
+1
+2
+end func
+--- return
+1
+--- false
+1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: break: can't break
+mksh: break: can't break
+mksh: continue: can't continue
+mksh: continue: can't continue
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="builtin-eval-source.test.html#L39">eval string with 'break continue return error'</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '--- break\n1\nend func\n--- continue\n1\n2\nend func\n--- return\n1\n--- false\n1\n'
+Got      '--- break\n1\n'
+</span><br/>
+<span class="assertion">[toysh status] Expected 1, got -11</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--- break
+1
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -e
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="builtin-eval-source.test.html#L39">eval string with 'break continue return error'</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '--- break\n1\nend func\n--- continue\n1\n2\nend func\n--- return\n1\n--- false\n1\n'
+Got      '--- break\n1\nend func\n--- continue\n1\nend func\n--- return\n1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--- break
+1
+end func
+--- continue
+1
+end func
+--- return
+1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="builtin-eval-source.test.html#L39">eval string with 'break continue return error'</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '--- break\n1\nend func\n--- continue\n1\n2\nend func\n--- return\n1\n--- false\n1\n'
+Got      '--- break\n1\n2\nend func\n--- continue\n1\n2\nend func\n--- return\n1\n2\nend func\n--- false\n1\n2\nend func\nstatus=0\n'
+</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--- break
+1
+2
+end func
+--- continue
+1
+2
+end func
+--- return
+1
+2
+end func
+--- false
+1
+2
+end func
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-bash"></a><b>bash</b></td><td>4 <a href="builtin-eval-source.test.html#L88">eval YSH block with 'break continue return error'</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="builtin-eval-source.test.html#L88">eval YSH block with 'break continue return error'</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="builtin-eval-source.test.html#L88">eval YSH block with 'break continue return error'</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '--- break\n1\nend func\n--- continue\n1\n2\nend func\n--- return\n1\n--- false\n1\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[5]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="builtin-eval-source.test.html#L88">eval YSH block with 'break continue return error'</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '--- break\n1\nend func\n--- continue\n1\n2\nend func\n--- return\n1\n--- false\n1\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 1, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="builtin-eval-source.test.html#L88">eval YSH block with 'break continue return error'</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '--- break\n1\nend func\n--- continue\n1\n2\nend func\n--- return\n1\n--- false\n1\n'
+Got      'end func\n--- \nstatus=2\n'
+</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>end func
+--- 
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: shopt: ysh:all: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: Unexpected token: (;
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: Unexpected token: (b)
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 10: Unexpected token: done
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 12: Unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: var: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 15: Unexpected token: (break)],
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 16: Unexpected token: (continue)],
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 17: Unexpected token: (return)],
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 18: Unexpected token: (false)],
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 18: ]: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 21: Unexpected token: (cases)
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 21: var: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 24: Unexpected token: (;
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 25: Unexpected token: }
+
+</pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="builtin-eval-source.test.html#L88">eval YSH block with 'break continue return error'</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '--- break\n1\nend func\n--- continue\n1\n2\nend func\n--- return\n1\n--- false\n1\n'
+Got      'end func\n--- \nstatus=2\n'
+</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>end func
+--- 
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>shopt: ysh:all: invalid shell option name
+[31mERROR[0m main: syntax error near token `;' (line 1 col 22)
+[31mERROR[0m main: syntax error near token `(' (line 3 col 18)
+[31mERROR[0m main: syntax error near token `
+' (line 1 col 7)
+[31mERROR[0m main: syntax error near token `
+' (line 1 col 2)
+var: command not found
+[31mERROR[0m main: syntax error near token `],' (line 1 col 21)
+[31mERROR[0m main: syntax error near token `],' (line 1 col 27)
+[31mERROR[0m main: syntax error near token `],' (line 1 col 23)
+[31mERROR[0m main: syntax error near token `],' (line 1 col 21)
+]: command not found
+[31mERROR[0m main: syntax error near token `(' (line 1 col 18)
+var: command not found
+[31mERROR[0m main: syntax error near token `;' (line 1 col 20)
+[31mERROR[0m main: syntax error near token `
+' (line 1 col 2)
+</pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="builtin-eval-source.test.html#L134">exit within eval (regression)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'should not get here\n'</span><br/>
+<span class="assertion">[brush status] Expected 42, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>should not get here
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="builtin-eval-source.test.html#L140">exit within source (regression)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'should not get here\n'</span><br/>
+<span class="assertion">[brush status] Expected 42, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>should not get here
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="builtin-eval-source.test.html#L155">source accepts/ignores --</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'foo\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: --: No such file or directory
+</pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="builtin-eval-source.test.html#L170">Source with no arguments</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: source: missing argument
+</pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="builtin-eval-source.test.html#L170">Source with no arguments</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=2\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: source: missing argument
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="builtin-eval-source.test.html#L170">Source with no arguments</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=2\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>source: Needs 1 argument (see "source --help")
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="builtin-eval-source.test.html#L177">Source with arguments</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'show-argv: foo bar\n', got 'show-argv: /home/andy/git/oils-for-unix/oils/spec/testdata/show-argv.sh foo bar\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>show-argv: /home/andy/git/oils-for-unix/oils/spec/testdata/show-argv.sh foo bar
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="builtin-eval-source.test.html#L186">Source from a function, mutating argv and defining a local var</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'source-argv: args to func\nsource-argv: args to src\nto func\nfoo=foo_val\nfoo=\n'
+Got      'source-argv: /home/andy/git/oils-for-unix/oils/spec/testdata/source-argv.sh\nsource-argv: /home/andy/git/oils-for-unix/oils/spec/testdata/source-argv.sh args to src\nargs to func\nfoo=foo_val\nfoo=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>source-argv: /home/andy/git/oils-for-unix/oils/spec/testdata/source-argv.sh
+source-argv: /home/andy/git/oils-for-unix/oils/spec/testdata/source-argv.sh args to src
+args to func
+foo=foo_val
+foo=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="builtin-eval-source.test.html#L186">Source from a function, mutating argv and defining a local var</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'source-argv: args to func\nsource-argv: args to src\nto func\nfoo=foo_val\nfoo=\n'
+Got      'source-argv:\nsource-argv: args to src\nargs to func\nfoo=\nfoo=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>source-argv:
+source-argv: args to src
+args to func
+foo=
+foo=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="builtin-eval-source.test.html#L186">Source from a function, mutating argv and defining a local var</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'source-argv: args to func\nsource-argv: args to src\nto func\nfoo=foo_val\nfoo=\n'
+Got      'source-argv:\nsource-argv: args to src\nargs to func\nfoo=foo_val\nfoo=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>source-argv:
+source-argv: args to src
+args to func
+foo=foo_val
+foo=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-bash"></a><b>bash</b></td><td>13 <a href="builtin-eval-source.test.html#L210">Source with syntax error</a><br/><br/>
+<span class="assertion">[bash stdout] Expected 'status=1\n', got 'status=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-eval-source.test.sh.3427284/13-bash/syntax-error.sh: line 1: syntax error near unexpected token `newline'
+/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-eval-source.test.sh.3427284/13-bash/syntax-error.sh: line 1: `echo &gt;'
+</pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="builtin-eval-source.test.html#L210">Source with syntax error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-eval-source.test.sh.3427284/13-mksh/syntax-error.sh[1]: syntax error: 'newline' unexpected
+</pre></td></tr><tr><td><a name="details-13-ksh"></a><b>ksh</b></td><td>13 <a href="builtin-eval-source.test.html#L210">Source with syntax error</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=2\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-eval-source.test.sh.3427284/13-ksh/syntax-error.sh[1]: syntax error: unexpected 'newline'
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="builtin-eval-source.test.html#L210">Source with syntax error</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=2\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-eval-source.test.sh.3427284/13-toysh/syntax-error.sh: line 1: sh: syntax error: \n
+</pre></td></tr><tr><td><a name="details-14-bash"></a><b>bash</b></td><td>14 <a href="builtin-eval-source.test.html#L224">Eval with syntax error</a><br/><br/>
+<span class="assertion">[bash stdout] Expected 'status=1\n', got 'status=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>bash: eval: line 1: syntax error near unexpected token `newline'
+bash: eval: line 1: `echo &gt;'
+</pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="builtin-eval-source.test.html#L224">Eval with syntax error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: syntax error: 'newline' unexpected
+</pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="builtin-eval-source.test.html#L224">Eval with syntax error</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=2\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: syntax error: unexpected 'newline'
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="builtin-eval-source.test.html#L224">Eval with syntax error</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=2\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: \n
+</pre></td></tr><tr><td><a name="details-15-mksh"></a><b>mksh</b></td><td>15 <a href="builtin-eval-source.test.html#L234">Eval in does tilde expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-ksh"></a><b>ksh</b></td><td>15 <a href="builtin-eval-source.test.html#L234">Eval in does tilde expansion</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'FALSE\nFALSE\nTRUE\n', got 'FALSE\n'</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="builtin-eval-source.test.html#L234">Eval in does tilde expansion</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'FALSE\nFALSE\nTRUE\n', got 'FALSE\n'</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-mksh"></a><b>mksh</b></td><td>16 <a href="builtin-eval-source.test.html#L258">Eval in bash does tilde expansion in array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-ksh"></a><b>ksh</b></td><td>16 <a href="builtin-eval-source.test.html#L258">Eval in bash does tilde expansion in array</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'FALSE\nFALSE\nTRUE\n', got 'FALSE\n'</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="builtin-eval-source.test.html#L258">Eval in bash does tilde expansion in array</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'FALSE\nFALSE\nTRUE\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 6: sh: syntax error: ~
+</pre></td></tr><tr><td><a name="details-17-mksh"></a><b>mksh</b></td><td>17 <a href="builtin-eval-source.test.html#L291">source works for files in current directory (bash only)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: .: cmd: No such file or directory
+</pre></td></tr><tr><td><a name="details-17-ksh"></a><b>ksh</b></td><td>17 <a href="builtin-eval-source.test.html#L291">source works for files in current directory (bash only)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'current dir\nstatus=0\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: .: cmd: No such file or directory
+</pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="builtin-eval-source.test.html#L311">source looks in PATH for files</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'hi\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: cmd: No such file or directory
+</pre></td></tr><tr><td><a name="details-18-brush"></a><b>brush</b></td><td>18 <a href="builtin-eval-source.test.html#L311">source looks in PATH for files</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'hi\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m failed to source file: cmd; i/o error: No such file or directory (os error 2)
+</pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="builtin-eval-source.test.html#L321">source finds files in PATH before current dir</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'path\nstatus=0\n', got 'current dir\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>current dir
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-sush"></a><b>sush</b></td><td>19 <a href="builtin-eval-source.test.html#L321">source finds files in PATH before current dir</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'path\nstatus=0\n', got 'current dir\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>current dir
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-brush"></a><b>brush</b></td><td>19 <a href="builtin-eval-source.test.html#L321">source finds files in PATH before current dir</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'path\nstatus=0\n', got 'current dir\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>current dir
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-mksh"></a><b>mksh</b></td><td>21 <a href="builtin-eval-source.test.html#L343">source doesn't crash when targeting a directory</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-ksh"></a><b>ksh</b></td><td>21 <a href="builtin-eval-source.test.html#L343">source doesn't crash when targeting a directory</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=1\n', got 'status=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="builtin-eval-source.test.html#L343">source doesn't crash when targeting a directory</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=1\n', got 'status=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

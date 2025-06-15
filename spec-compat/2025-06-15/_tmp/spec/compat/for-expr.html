@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>for-expr: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for for-expr.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>8</td><td>0</td><td>0</td><td>0</td><td>3</td><td>4</td><td>9</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>1</td><td>9</td><td>9</td><td>9</td><td>6</td><td>5</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>9</td><td>9</td><td>9</td><td>9</td><td>9</td><td>9</td><td>9</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="for-expr.test.html#L6">C-style for loop</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="for-expr.test.html#L26">For loop with and without semicolon</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="for-expr.test.html#L43">Accepts { } syntax too</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="for-expr.test.html#L53">Empty init</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="for-expr.test.html#L65">Empty init and cond</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="for-expr.test.html#L80">Infinite loop with ((;;))</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="for-expr.test.html#L96">Arith lexer mode</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-6-bash">details</a></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="for-expr.test.html#L120">Integers near 31, 32, 62 bits</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="for-expr.test.html#L155">Condition that's greater than 32 bits</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>24 passed, 0 OK, 0 not implemented, 0 BUG, 39 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="for-expr.test.html#L6">C-style for loop</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '1\n2\n4\n5\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: syntax error: '((' unexpected
+</pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="for-expr.test.html#L6">C-style for loop</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '1\n2\n4\n5\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: syntax error: unexpected '(('
+</pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="for-expr.test.html#L6">C-style for loop</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1\n2\n4\n5\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: ((a=1; a &lt;= n ; a++))
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="for-expr.test.html#L6">C-style for loop</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '1\n2\n4\n5\n', got '1\n2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="for-expr.test.html#L26">For loop with and without semicolon</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '1\n2\n3\n1\n2\n3\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '((' unexpected
+</pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="for-expr.test.html#L26">For loop with and without semicolon</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '1\n2\n3\n1\n2\n3\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '(('
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="for-expr.test.html#L26">For loop with and without semicolon</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1\n2\n3\n1\n2\n3\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: ;
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="for-expr.test.html#L26">For loop with and without semicolon</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '1\n2\n3\n1\n2\n3\n', got '1\n2\n3\n4\n'</span><br/>
+<span class="assertion">[sush status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: Unexpected token: do
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: Unexpected token: done
+
+</pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="for-expr.test.html#L26">For loop with and without semicolon</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '1\n2\n3\n1\n2\n3\n', got '1\n2\n3\n4\n'</span><br/>
+<span class="assertion">[brush status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error near token `do' (line 1 col 26)
+[31mERROR[0m main: syntax error near token `
+' (line 1 col 5)
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="for-expr.test.html#L43">Accepts { } syntax too</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '1\n2\n3\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '((' unexpected
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="for-expr.test.html#L43">Accepts { } syntax too</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '1\n2\n3\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '(('
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="for-expr.test.html#L43">Accepts { } syntax too</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1\n2\n3\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: {
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="for-expr.test.html#L43">Accepts { } syntax too</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '1\n2\n3\n', got '\n'</span><br/>
+<span class="assertion">[sush status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: Unexpected token: {
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: Unexpected token: }
+
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="for-expr.test.html#L43">Accepts { } syntax too</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '1\n2\n3\n', got '\n'</span><br/>
+<span class="assertion">[brush status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error near token `{' (line 1 col 26)
+[31mERROR[0m main: syntax error near token `
+' (line 1 col 2)
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="for-expr.test.html#L53">Empty init</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '1\n2\n3\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: syntax error: '((' unexpected
+</pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="for-expr.test.html#L53">Empty init</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '1\n2\n3\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: syntax error: unexpected '(('
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="for-expr.test.html#L53">Empty init</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1\n2\n3\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: ;
+</pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="for-expr.test.html#L65">Empty init and cond</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '1\n2\n3\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: syntax error: '((' unexpected
+</pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="for-expr.test.html#L65">Empty init and cond</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '1\n2\n3\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: syntax error: unexpected '(('
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="for-expr.test.html#L65">Empty init and cond</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1\n2\n3\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: ;
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="for-expr.test.html#L65">Empty init and cond</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '1\n2\n3\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="for-expr.test.html#L65">Empty init and cond</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '1\n2\n3\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="for-expr.test.html#L80">Infinite loop with ((;;))</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '1\n2\n3\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: syntax error: '((' unexpected
+</pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="for-expr.test.html#L80">Infinite loop with ((;;))</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '1\n2\n3\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: syntax error: unexpected '(('
+</pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="for-expr.test.html#L80">Infinite loop with ((;;))</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1\n2\n3\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: ;
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="for-expr.test.html#L80">Infinite loop with ((;;))</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '1\n2\n3\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="for-expr.test.html#L80">Infinite loop with ((;;))</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '1\n2\n3\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-bash"></a><b>bash</b></td><td>6 <a href="for-expr.test.html#L96">Arith lexer mode</a><br/><br/>
+<span class="assertion">[bash stdout] Expected '3\n4\n3\n4\n3\n4\n3\n4\n', got '3\n4\n3\n4\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>3
+4
+3
+4
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: ((: i = '3': syntax error: operand expected (error token is "'3'")
+bash: line 3: ((: i = '3': syntax error: operand expected (error token is "'3'")
+</pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="for-expr.test.html#L96">Arith lexer mode</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '3\n4\n3\n4\n3\n4\n3\n4\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '((' unexpected
+</pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="for-expr.test.html#L96">Arith lexer mode</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '3\n4\n3\n4\n3\n4\n3\n4\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '(('
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="for-expr.test.html#L96">Arith lexer mode</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '3\n4\n3\n4\n3\n4\n3\n4\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: ;
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="for-expr.test.html#L96">Arith lexer mode</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '3\n4\n3\n4\n3\n4\n3\n4\n', got '3\n4\n3\n4\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>3
+4
+3
+4
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="for-expr.test.html#L120">Integers near 31, 32, 62 bits</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '2147483646\n2147483647\n2147483648\n2147483649\n---\n4294967294\n4294967295\n4294967296\n4294967297\n---\n4611686018427387902\n4611686018427387903\n4611686018427387904\n4611686018427387905\n---\n'
+Got      ''
+</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[6]: syntax error: '((' unexpected
+</pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="for-expr.test.html#L120">Integers near 31, 32, 62 bits</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '2147483646\n2147483647\n2147483648\n2147483649\n---\n4294967294\n4294967295\n4294967296\n4294967297\n---\n4611686018427387902\n4611686018427387903\n4611686018427387904\n4611686018427387905\n---\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[6]: syntax error: unexpected '(('
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="for-expr.test.html#L120">Integers near 31, 32, 62 bits</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '2147483646\n2147483647\n2147483648\n2147483649\n---\n4294967294\n4294967295\n4294967296\n4294967297\n---\n4611686018427387902\n4611686018427387903\n4611686018427387904\n4611686018427387905\n---\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: ;
+</pre></td></tr><tr><td><a name="details-8-mksh"></a><b>mksh</b></td><td>8 <a href="for-expr.test.html#L155">Condition that's greater than 32 bits</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '4294967296\n4294967297\n4294967298\n4294967299\n4294967300\n'
+Got      ''
+</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: syntax error: '((' unexpected
+</pre></td></tr><tr><td><a name="details-8-ksh"></a><b>ksh</b></td><td>8 <a href="for-expr.test.html#L155">Condition that's greater than 32 bits</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '4294967296\n4294967297\n4294967298\n4294967299\n4294967300\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: syntax error: unexpected '(('
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="for-expr.test.html#L155">Condition that's greater than 32 bits</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '4294967296\n4294967297\n4294967298\n4294967299\n4294967300\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 3: sh: syntax error: ;
+</pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="for-expr.test.html#L155">Condition that's greater than 32 bits</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '4294967296\n4294967297\n4294967298\n4294967299\n4294967300\n'
+Got      ''
+</span><br/>
+<span class="assertion">[brush status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: unterminated here document sequence; tag(s) [32] found at: [line 1 col 18] (detected near line 9 column 1)
+</pre></td></tr></table></body></html>

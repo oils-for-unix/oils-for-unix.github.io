@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>redirect-multi: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for redirect-multi.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>11</td><td>4</td><td>3</td><td>8</td><td>9</td><td>9</td><td>13</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>1</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>10</td><td>5</td><td>4</td><td>4</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>13</td><td>13</td><td>13</td><td>13</td><td>13</td><td>13</td><td>13</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-multi.test.html#L3">File redirects with glob args (bash and zsh only)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-multi.test.html#L23">File redirect without matching any file</a></td></tr>
+<tr><td>  2</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-multi.test.html#L39">ysh behavior when glob doesn't match</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-2-bash">details</a></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-multi.test.html#L58">File redirect without matching any file, with failglob</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-multi.test.html#L82">Redirect to $empty (in function body)</a></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-multi.test.html#L94">Redirect to ''</a></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-multi.test.html#L103">File redirect to $var with glob char</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-multi.test.html#L132">File redirect that globs to more than one file (bash and zsh only)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-multi.test.html#L165">File redirect with extended glob</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-multi.test.html#L193">Extended glob that doesn't match anything</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-multi.test.html#L230">Non-file redirects don't respect glob args (we differe from bash)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-10-bash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-multi.test.html#L258">Redirect with brace expansion isn't allowed</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-mksh">details</a></td><td class="details-row"><a href="#details-11-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-multi.test.html#L289">File redirects have word splitting too!</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>57 passed, 2 OK, 7 not implemented, 2 BUG, 23 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="redirect-multi.test.html#L3">File redirects with glob args (bash and zsh only)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>escaped
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="redirect-multi.test.html#L3">File redirects with glob args (bash and zsh only)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'hi\nescaped\n', got 'escaped\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>escaped
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-bash"></a><b>bash</b></td><td>2 <a href="redirect-multi.test.html#L39">ysh behavior when glob doesn't match</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+qq-*-zz
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: shopt: ysh:upgrade: invalid shell option name
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="redirect-multi.test.html#L39">ysh behavior when glob doesn't match</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+qq-*-zz
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="redirect-multi.test.html#L39">ysh behavior when glob doesn't match</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '', got 'status=0\nqq-*-zz\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+qq-*-zz
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="redirect-multi.test.html#L39">ysh behavior when glob doesn't match</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '', got 'status=0\nqq-*-zz\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+qq-*-zz
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="redirect-multi.test.html#L39">ysh behavior when glob doesn't match</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '', got 'status=0\nqq-*-zz\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+qq-*-zz
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: shopt: ysh:upgrade: not supported yet
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="redirect-multi.test.html#L39">ysh behavior when glob doesn't match</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '', got 'status=0\nqq-*-zz\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+qq-*-zz
+</pre><i>stderr:</i> <br/>
+<pre>shopt: ysh:upgrade: invalid shell option name
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="redirect-multi.test.html#L58">File redirect without matching any file, with failglob</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+zz-*-xx
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="redirect-multi.test.html#L58">File redirect without matching any file, with failglob</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=1\nstatus=1\n', got 'status=0\nzz-*-xx\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+zz-*-xx
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="redirect-multi.test.html#L58">File redirect without matching any file, with failglob</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=1\nstatus=1\n', got 'status=0\nzz-*-xx\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+zz-*-xx
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="redirect-multi.test.html#L58">File redirect without matching any file, with failglob</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=1\nstatus=1\n', got 'status=0\nzz-*-xx\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+zz-*-xx
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: shopt: failglob: not supported yet
+</pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="redirect-multi.test.html#L58">File redirect without matching any file, with failglob</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=1\nstatus=1\n', got 'status=0\nzz-*-xx\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+zz-*-xx
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="redirect-multi.test.html#L103">File redirect to $var with glob char</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+==&gt; two-bar &lt;==
+
+==&gt; two-* &lt;==
+hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="redirect-multi.test.html#L103">File redirect to $var with glob char</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=0\n==&gt; two-bar &lt;==\nhi\n', got 'status=0\n==&gt; two-bar &lt;==\n\n==&gt; two-* &lt;==\nhi\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+==&gt; two-bar &lt;==
+
+==&gt; two-* &lt;==
+hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="redirect-multi.test.html#L103">File redirect to $var with glob char</a><br/><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+==&gt; two-bar &lt;==
+hi
+</pre><i>stderr:</i> <br/>
+<pre>head: cannot open 'two-*' for reading: No such file or directory
+</pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="redirect-multi.test.html#L132">File redirect that globs to more than one file (bash and zsh only)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+==&gt; foo-bar &lt;==
+
+==&gt; foo-spam &lt;==
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="redirect-multi.test.html#L132">File redirect that globs to more than one file (bash and zsh only)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=1\n==&gt; foo-bar &lt;==\n\n==&gt; foo-spam &lt;==\n'
+Got      'status=0\n==&gt; foo-bar &lt;==\n\n==&gt; foo-spam &lt;==\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+==&gt; foo-bar &lt;==
+
+==&gt; foo-spam &lt;==
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-mksh"></a><b>mksh</b></td><td>8 <a href="redirect-multi.test.html#L165">File redirect with extended glob</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-8-ksh"></a><b>ksh</b></td><td>8 <a href="redirect-multi.test.html#L165">File redirect with extended glob</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=0\nhi\n', got 'status=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="redirect-multi.test.html#L165">File redirect with extended glob</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=0\nhi\n', got 'status=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-9-mksh"></a><b>mksh</b></td><td>9 <a href="redirect-multi.test.html#L193">Extended glob that doesn't match anything</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+bad_@(*.cc|*.h)
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+rm: cannot remove 'bad_*': No such file or directory
+mksh: &lt;stdin&gt;[9]: shopt: not found
+</pre></td></tr><tr><td><a name="details-9-ksh"></a><b>ksh</b></td><td>9 <a href="redirect-multi.test.html#L193">Extended glob that doesn't match anything</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=0\nbad_@(*.cc|*.h)\nstatus=1\n', got 'status=0\nbad_@(*.cc|*.h)\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+bad_@(*.cc|*.h)
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+rm: cannot remove 'bad_*': No such file or directory
+E: ksh: &lt;stdin&gt;[9]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="redirect-multi.test.html#L193">Extended glob that doesn't match anything</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=0\nbad_@(*.cc|*.h)\nstatus=1\n', got 'status=0\nbad_@(*.cc|*.h)\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+bad_@(*.cc|*.h)
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+rm: cannot remove 'bad_*': No such file or directory
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="redirect-multi.test.html#L193">Extended glob that doesn't match anything</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=0\nbad_@(*.cc|*.h)\nstatus=1\n', got 'status=0\nbad_@(*.cc|*.h)\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+bad_@(*.cc|*.h)
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>rm: cannot remove 'bad_*': No such file or directory
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: shopt: failglob: not supported yet
+</pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="redirect-multi.test.html#L193">Extended glob that doesn't match anything</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=0\nbad_@(*.cc|*.h)\nstatus=1\n', got 'status=0\nbad_@(*.cc|*.h)\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+bad_@(*.cc|*.h)
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>rm: cannot remove 'bad_*': No such file or directory
+</pre></td></tr><tr><td><a name="details-10-bash"></a><b>bash</b></td><td>10 <a href="redirect-multi.test.html#L230">Non-file redirects don't respect glob args (we differe from bash)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>should-not-be-on-stdout
+stdout
+</pre><i>stderr:</i> <br/>
+<pre>stderr
+</pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="redirect-multi.test.html#L230">Non-file redirects don't respect glob args (we differe from bash)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'stdout\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: 10: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="redirect-multi.test.html#L230">Non-file redirects don't respect glob args (we differe from bash)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'stdout\n', got 'should-not-be-on-stdout\nstdout\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>should-not-be-on-stdout
+stdout
+</pre><i>stderr:</i> <br/>
+<pre>stderr
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="redirect-multi.test.html#L230">Non-file redirects don't respect glob args (we differe from bash)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'stdout\n', got 'should-not-be-on-stdout\nstdout\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>should-not-be-on-stdout
+stdout
+</pre><i>stderr:</i> <br/>
+<pre>stderr
+</pre></td></tr><tr><td><a name="details-11-mksh"></a><b>mksh</b></td><td>11 <a href="redirect-multi.test.html#L258">Redirect with brace expansion isn't allowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+hi
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-ksh"></a><b>ksh</b></td><td>11 <a href="redirect-multi.test.html#L258">Redirect with brace expansion isn't allowed</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=1\nstatus=1\n', got 'status=0\nhi\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+hi
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="redirect-multi.test.html#L289">File redirects have word splitting too!</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+hi
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="redirect-multi.test.html#L289">File redirects have word splitting too!</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=1\nstatus=1\n', got 'status=0\nhi\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+hi
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>
