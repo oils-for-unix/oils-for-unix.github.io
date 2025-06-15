@@ -263,7 +263,7 @@ status=0
 <pre>set: bad -o errexit
 
 real	0.000
-user	0.837
+user	0.650
 sys	0.000
 </pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="errexit.test.html#L111">errexit and time { }</a><br/><br/>
 <span class="assertion">[sush status] Expected 1, got 0</span><br/>
@@ -274,7 +274,7 @@ sys	0.000
 <pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
 
 real	0m0.000007s
-user	0m0.000009s
+user	0m0.000008s
 sys 	0m0.000000s
 </pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="errexit.test.html#L111">errexit and time { }</a><br/><br/>
 <span class="assertion">[brush status] Expected 1, got 0</span><br/>
@@ -543,7 +543,7 @@ two
 two
 </pre><i>stderr:</i> <br/>
 <pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
-3583087
+3699515
 </pre></td></tr><tr><td><a name="details-25-brush"></a><b>brush</b></td><td>25 <a href="errexit.test.html#L282">background processes respect errexit</a><br/><br/>
 <span class="assertion">[brush stdout] Expected 'one\n', got 'one\ntwo\n'</span><br/>
 <span class="assertion">[brush status] Expected 1, got 0</span><br/>
@@ -718,7 +718,7 @@ should not get here
 <pre>status=0
 should not get here
 </pre><i>stderr:</i> <br/>
-<pre>[31mERROR[0m error: failed to redirect to /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/errexit.test.sh.3578238/30-brush/not_exist.txt: No such file or directory (os error 2)
+<pre>[31mERROR[0m error: failed to redirect to /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/errexit.test.sh.3694610/30-brush/not_exist.txt: No such file or directory (os error 2)
 </pre></td></tr><tr><td><a name="details-31-toysh"></a><b>toysh</b></td><td>31 <a href="errexit.test.html#L435">while loop - redirect failure checked</a><br/><br/>
 <span class="assertion">[toysh stdout] Expected '', got 'status=1\nshould not get here\n'</span><br/>
 <span class="assertion">[toysh status] Expected 1, got 0</span><br/>
@@ -747,7 +747,7 @@ should not get here
 <pre>status=0
 should not get here
 </pre><i>stderr:</i> <br/>
-<pre>[31mERROR[0m error: failed to redirect to /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/errexit.test.sh.3578238/31-brush/not_exist.txt: No such file or directory (os error 2)
+<pre>[31mERROR[0m error: failed to redirect to /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/errexit.test.sh.3694610/31-brush/not_exist.txt: No such file or directory (os error 2)
 </pre></td></tr><tr><td><a name="details-32-sush"></a><b>sush</b></td><td>32 <a href="errexit.test.html#L468">set -e enabled in function (regression)</a><br/><br/>
 <span class="assertion">[sush stdout] Expected 'should be executed\nshould be executed\n', got ''</span><br/>
 <span class="assertion">[sush status] Expected 0, got 1</span><br/>

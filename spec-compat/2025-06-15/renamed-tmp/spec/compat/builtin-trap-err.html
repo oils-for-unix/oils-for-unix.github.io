@@ -206,7 +206,7 @@ line=1
 <i>stdout:</i> <br/>
 <pre></pre><i>stderr:</i> <br/>
 <pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: trap: ERR: invalid signal specification
-Pid: Pid(3560108), Signal: SIGPIPE
+Pid: Pid(3676591), Signal: SIGPIPE
 </pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="builtin-trap-err.test.html#L101">trap ERR and pipeline</a><br/><br/>
 <span class="assertion">[brush stdout] Expected 'line=3\nline=5\n', got ''</span><br/>
 <br/>
@@ -343,8 +343,8 @@ async
 ok
 </pre><i>stderr:</i> <br/>
 <pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: trap: ERR: invalid signal specification
-3561122
-3561132
+3677640
+3677644
 </pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="builtin-trap-err.test.html#L223">trap ERR doesn't run in subprograms - subshell, command sub, async</a><br/><br/>
 <span class="assertion">[brush stdout] Expected 'subshell\nasync\nline=11\nok\n', got 'subshell\nasync\nok\n'</span><br/>
 <br/>
@@ -411,8 +411,8 @@ ok
 </pre><i>stderr:</i> <br/>
 <pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: set: errtrace: invalid option name
 /home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: trap: ERR: invalid signal specification
-3561877
-3561881
+3678380
+3678391
 </pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="builtin-trap-err.test.html#L288">set -o errtrace: trap ERR with &amp;</a><br/><br/>
 <span class="assertion">[brush stdout] Expected 'line=8\nasync\n', got 'async\n'</span><br/>
 <br/>
