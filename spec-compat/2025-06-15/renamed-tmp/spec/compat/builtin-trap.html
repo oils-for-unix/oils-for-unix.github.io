@@ -66,10 +66,10 @@
 <tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
 <tr><td> 16</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L225">eval in the exit trap (regression for issue #293)</a></td></tr>
 <tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-16-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
-<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L232">exit codes for traps are isolated</a></td></tr>
-<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"><a href="#details-17-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
-<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L249">traps are cleared in subshell (started with &amp;)</a></td></tr>
-<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-18-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L232">exit codes for traps are isolated</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-17-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L249">traps are cleared in subshell (started with &amp;)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"><a href="#details-18-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
 <tr><td> 19</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L282">trap USR1, sleep, SIGINT: non-interactively</a></td></tr>
 <tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-19-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
 <tr><td> 20</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-trap.test.html#L291">trap INT, sleep, SIGINT: non-interactively</a></td></tr>
@@ -430,14 +430,7 @@ sh: trap: No such file or directory
 <pre>before=127
 </pre><i>stderr:</i> <br/>
 <pre>sh: trap: No such file or directory
-</pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="builtin-trap.test.html#L232">exit codes for traps are isolated</a><br/><br/>
-<span class="assertion">[sush stdout] Expected 'before=0\nUSR1 trap status=0\nafter=0\n', got 'before=0\nafter=0\n'</span><br/>
-<br/>
-<i>stdout:</i> <br/>
-<pre>before=0
-after=0
-</pre><i>stderr:</i> <br/>
-<pre></pre></td></tr><tr><td><a name="details-17-brush"></a><b>brush</b></td><td>17 <a href="builtin-trap.test.html#L232">exit codes for traps are isolated</a><br/><br/>
+</pre></td></tr><tr><td><a name="details-17-brush"></a><b>brush</b></td><td>17 <a href="builtin-trap.test.html#L232">exit codes for traps are isolated</a><br/><br/>
 <span class="assertion">[brush stdout] Expected 'before=0\nUSR1 trap status=0\nafter=0\n', got 'before=0\n'</span><br/>
 <span class="assertion">[brush status] Expected 0, got -10</span><br/>
 <br/>
@@ -458,6 +451,20 @@ wait status 0
 </pre><i>stderr:</i> <br/>
 <pre>sh: trap: No such file or directory
 kill: missing argument (see "kill --help")
+</pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="builtin-trap.test.html#L249">traps are cleared in subshell (started with &amp;)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'SIGURG\nbegin child\nend child\nwait status 0\n'
+Got      'begin child\nSIGURG\nend child\nwait status 0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>begin child
+SIGURG
+end child
+wait status 0
+</pre><i>stderr:</i> <br/>
+<pre>3568106
 </pre></td></tr><tr><td><a name="details-18-brush"></a><b>brush</b></td><td>18 <a href="builtin-trap.test.html#L249">traps are cleared in subshell (started with &amp;)</a><br/><br/>
 <span class="assertion">
 [brush stdout]

@@ -196,7 +196,7 @@ For more information, try '--help'.
 <pre>time: exec {: No such file or directory
 
 real	0.000
-user	0.448
+user	0.575
 sys	0.000
 main: line 7: sh: syntax error: }
 </pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="builtin-process.test.html#L110">get umask</a><br/><br/>
@@ -429,15 +429,15 @@ status=0
 <span class="assertion">
 [ksh stdout]
 Expected '  8 short.txt\n  8 long.txt\n 16 total\nstatus=0\n'
-Got      ' 15 short.txt\n  0 long.txt\n 15 total\n--- short.txt\t2025-06-15 12:42:55.935884342 -0400\n+++ long.txt\t2025-06-15 12:42:55.935884342 -0400\n@@ -1,15 +0,0 @@\n--t: time(cpu-seconds)     unlimited\n--f: file(blocks)          unlimited\n--c: coredump(blocks)      0\n--d: data(KiB)             unlimited\n--s: stack(KiB)            8192\n--l: lockedmem(KiB)        2001828\n--n: nofiles(descriptors)  1024\n--p: processes             62293\n--i: sigpending            62293\n--q: msgqueue(bytes)       819200\n--e: maxnice               0\n--R: rttime(ms)            unlimited\n--r: maxrtprio             0\n--v: address-space(KiB)    unlimited\n--x: filelocks             unlimited\nstatus=1\n'
+Got      ' 15 short.txt\n  0 long.txt\n 15 total\n--- short.txt\t2025-06-15 13:17:58.959837924 -0400\n+++ long.txt\t2025-06-15 13:17:58.959837924 -0400\n@@ -1,15 +0,0 @@\n--t: time(cpu-seconds)     unlimited\n--f: file(blocks)          unlimited\n--c: coredump(blocks)      0\n--d: data(KiB)             unlimited\n--s: stack(KiB)            8192\n--l: lockedmem(KiB)        2001828\n--n: nofiles(descriptors)  1024\n--p: processes             62293\n--i: sigpending            62293\n--q: msgqueue(bytes)       819200\n--e: maxnice               0\n--R: rttime(ms)            unlimited\n--r: maxrtprio             0\n--v: address-space(KiB)    unlimited\n--x: filelocks             unlimited\nstatus=1\n'
 </span><br/>
 <br/>
 <i>stdout:</i> <br/>
 <pre> 15 short.txt
   0 long.txt
  15 total
---- short.txt	2025-06-15 12:42:55.935884342 -0400
-+++ long.txt	2025-06-15 12:42:55.935884342 -0400
+--- short.txt	2025-06-15 13:17:58.959837924 -0400
++++ long.txt	2025-06-15 13:17:58.959837924 -0400
 @@ -1,15 +0,0 @@
 --t: time(cpu-seconds)     unlimited
 --f: file(blocks)          unlimited
@@ -488,15 +488,15 @@ status=0
 <span class="assertion">
 [brush stdout]
 Expected '  8 short.txt\n  8 long.txt\n 16 total\nstatus=0\n'
-Got      ' 17 short.txt\n  0 long.txt\n 17 total\n--- short.txt\t2025-06-15 12:42:55.979885012 -0400\n+++ long.txt\t2025-06-15 12:42:55.979885012 -0400\n@@ -1,17 +0,0 @@\n-core file size                 (block, -c) 0\n-data seg size                 (kbytes, -d) unlimited\n-file size                      (block, -f) unlimited\n-pending signals                       (-i) 62293\n-max locked memory             (kbytes, -l) 2001828\n-max memory size               (kbytes, -m) unlimited\n-file locks                            (-x) unlimited\n-open files                            (-n) 1024\n-pipe size                  (512 bytes, -p) 5\n-scheduling priority                   (-e) 0\n-POSIX message queues           (bytes, -q) 819200\n-real-time priority                    (-r) 0\n-real-time non-blocking time(microseconds, -R) unlimited\n-stack size                    (kbytes, -s) 8192\n-cpu time                     (seconds, -t) unlimited\n-max user processes                    (-u) 62293\n-virtual memory                (kbytes, -v) unlimited\nstatus=1\n'
+Got      ' 17 short.txt\n  0 long.txt\n 17 total\n--- short.txt\t2025-06-15 13:17:58.999838308 -0400\n+++ long.txt\t2025-06-15 13:17:58.999838308 -0400\n@@ -1,17 +0,0 @@\n-core file size                 (block, -c) 0\n-data seg size                 (kbytes, -d) unlimited\n-file size                      (block, -f) unlimited\n-pending signals                       (-i) 62293\n-max locked memory             (kbytes, -l) 2001828\n-max memory size               (kbytes, -m) unlimited\n-file locks                            (-x) unlimited\n-open files                            (-n) 1024\n-pipe size                  (512 bytes, -p) 5\n-scheduling priority                   (-e) 0\n-POSIX message queues           (bytes, -q) 819200\n-real-time priority                    (-r) 0\n-real-time non-blocking time(microseconds, -R) unlimited\n-stack size                    (kbytes, -s) 8192\n-cpu time                     (seconds, -t) unlimited\n-max user processes                    (-u) 62293\n-virtual memory                (kbytes, -v) unlimited\nstatus=1\n'
 </span><br/>
 <br/>
 <i>stdout:</i> <br/>
 <pre> 17 short.txt
   0 long.txt
  17 total
---- short.txt	2025-06-15 12:42:55.979885012 -0400
-+++ long.txt	2025-06-15 12:42:55.979885012 -0400
+--- short.txt	2025-06-15 13:17:58.999838308 -0400
++++ long.txt	2025-06-15 13:17:58.999838308 -0400
 @@ -1,17 +0,0 @@
 -core file size                 (block, -c) 0
 -data seg size                 (kbytes, -d) unlimited
@@ -901,8 +901,8 @@ status=1
                        ^
 [ -c flag ]:1: Can't open 'out': Too many open files
 [ -c flag ]:1: I/O error applying redirect: Too many open files
-==3445016==Can't open /proc/3444981/task for reading.
-==3444981==LeakSanitizer has encountered a fatal error.
-==3444981==HINT: For debugging, try setting environment variable LSAN_OPTIONS=verbosity=1:log_threads=1
-==3444981==HINT: LeakSanitizer does not work under ptrace (strace, gdb, etc)
+==3567477==Can't open /proc/3567452/task for reading.
+==3567452==LeakSanitizer has encountered a fatal error.
+==3567452==HINT: For debugging, try setting environment variable LSAN_OPTIONS=verbosity=1:log_threads=1
+==3567452==HINT: LeakSanitizer does not work under ptrace (strace, gdb, etc)
 </pre></td></tr></table></body></html>
