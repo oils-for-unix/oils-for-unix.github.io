@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-bracket: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-bracket.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>49</td><td>42</td><td>44</td><td>37</td><td>45</td><td>48</td><td>40</td><td>44</td><td>42</td><td>52</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>2</td><td>4</td><td>0</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>5</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>1</td><td>1</td><td>0</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>8</td><td>15</td><td>0</td><td>4</td><td>12</td><td>8</td><td>10</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>52</td><td>52</td><td>52</td><td>52</td><td>52</td><td>52</td><td>52</td><td>52</td><td>52</td><td>52</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L4">zero args: [ ]</a></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L8">one arg: [ x ] where x is one of '=' '!' '(' ']'</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L24">one arg: empty string is false.  Equivalent to -n.</a></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L32">-a as unary operator (alias of -e)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L47">two args: -z with = ! ( ]</a></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L63">three args</a></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L82">four args</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L92">test with extra args is syntax error</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L102">] syntax errors</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L121">-n</a></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L129">! -a</a></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L134">-o</a></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L139">( )</a></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L144">( ) ! -a -o with system version of [</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L149">== is alias for =</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-14-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L161">== and = does not do glob</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-15-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L175">[ with op variable</a></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L186">[ with unquoted empty var</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L191">[ compare with literal -f</a></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L201">[ '(' foo ] is runtime syntax error</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L206">-z '&gt;' implies two token lookahead</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L216">operator/operand ambiguity with ]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-dash">details</a></td><td class="details-row"><a href="#details-21-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-21-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L225">operator/operand ambiguity with -a</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-dash">details</a></td><td class="details-row"><a href="#details-22-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-22-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L234">-d</a></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L244">-x</a></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L257">-r</a></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L268">-w</a></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L280">-k for sticky bit</a></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L294">-h and -L test for symlink</a></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L319">-t 1 for stdout</a></td></tr>
+<tr><td> 30</td><td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L325">[ -t invalid ]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-30-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 31</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L331">-ot and -nt</a></td></tr>
+<tr><td> 32</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L345">[ a -eq b ]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-32-mksh">details</a></td><td class="details-row"><a href="#details-32-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-32-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 33</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L355">test -s</a></td></tr>
+<tr><td> 34</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L370">test -b -c -S (block, character, socket)</a></td></tr>
+<tr><td> 35</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L404">test -p named pipe</a></td></tr>
+<tr><td> 36</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L417">-G and -O for effective user ID and group ID</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-36-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 37</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L438">-u for setuid, -g too</a></td></tr>
+<tr><td> 38</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L464">-v to test variable (bash)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-38-dash">details</a></td><td class="details-row"><a href="#details-38-ash">details</a></td><td class="details-row"><a href="#details-38-zsh">details</a></td><td class="details-row"><a href="#details-38-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-38-toysh">details</a></td><td class="details-row"><a href="#details-38-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 39</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L503">test -o for options</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-39-dash">details</a></td><td class="details-row"><a href="#details-39-ash">details</a></td><td class="details-row"><a href="#details-39-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-39-toysh">details</a></td><td class="details-row"><a href="#details-39-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 40</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L526">-nt -ot</a></td></tr>
+<tr><td> 41</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L531">-ef</a></td></tr>
+<tr><td> 42</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L551">Overflow error</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-42-bash">details</a></td><td class="details-row"><a href="#details-42-dash">details</a></td><td class="details-row"><a href="#details-42-ash">details</a></td><td class="details-row"><a href="#details-42-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-42-toysh">details</a></td><td class="details-row"><a href="#details-42-sush">details</a></td><td class="details-row"><a href="#details-42-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 43</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L561">Bug regression</a></td></tr>
+<tr><td> 44</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L569">test -c</a></td></tr>
+<tr><td> 45</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L576">test -S</a></td></tr>
+<tr><td> 46</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L583">bug from pnut: negative number $((-1))</a></td></tr>
+<tr><td> 47</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L620">negative octal numbers, etc.</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-47-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-47-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 48</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L645">More negative numbers</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-48-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-48-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 49</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L662">No octal, hex, base N conversion - leading 0 is a regular decimal</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-49-zsh">details</a></td><td class="details-row"><a href="#details-49-mksh">details</a></td><td class="details-row"><a href="#details-49-ksh">details</a></td><td class="details-row"><a href="#details-49-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-49-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 50</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L706">Looks like octal, but digit is too big</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-50-bash">details</a></td><td class="details-row"><a href="#details-50-dash">details</a></td><td class="details-row"><a href="#details-50-ash">details</a></td><td class="details-row"><a href="#details-50-zsh">details</a></td><td class="details-row"><a href="#details-50-mksh">details</a></td><td class="details-row"><a href="#details-50-ksh">details</a></td><td class="details-row"><a href="#details-50-toysh">details</a></td><td class="details-row"><a href="#details-50-sush">details</a></td><td class="details-row"><a href="#details-50-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 51</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-bracket.test.html#L750">no recursive arith [ 1+2 -eq 3 ]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-51-mksh">details</a></td><td class="details-row"><a href="#details-51-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-51-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>443 passed, 9 OK, 6 not implemented, 5 BUG, 57 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-bracket.test.html#L8">one arg: [ x ] where x is one of '=' '!' '(' ']'</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=0\nstatus=0\nstatus=0\nstatus=0\n', got 'status=0\nstatus=0\nstatus=2\nstatus=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+status=2
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>[: need arg @1
+[: need arg @1
+</pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="builtin-bracket.test.html#L32">-a as unary operator (alias of -e)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: [: -a: unexpected operator
+dash: 3: [: -a: unexpected operator
+</pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="builtin-bracket.test.html#L32">-a as unary operator (alias of -e)</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'status=0\nstatus=1\n', got 'status=2\nstatus=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>ash: /: unknown operand
+ash: /nonexistent: unknown operand
+</pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="builtin-bracket.test.html#L32">-a as unary operator (alias of -e)</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'status=0\nstatus=1\n', got 'status=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>[: too many arguments
+[: too many arguments
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="builtin-bracket.test.html#L32">-a as unary operator (alias of -e)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=0\nstatus=1\n', got 'status=2\nstatus=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>[: ‘-a’: unary operator expected
+[: ‘-a’: unary operator expected
+</pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="builtin-bracket.test.html#L82">four args</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'status=1\nstatus=1\n', got 'status=1\nstatus=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>ash: closing paren expected
+</pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="builtin-bracket.test.html#L92">test with extra args is syntax error</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'status=2\nstatus=2\n', got 'status=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>test: too many arguments
+test: too many arguments
+</pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="builtin-bracket.test.html#L92">test with extra args is syntax error</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=2\nstatus=2\n', got 'status=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="builtin-bracket.test.html#L102">] syntax errors</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=2\nstatus=1\nstatus=2\nstatus=2\nstatus=2\n'
+Got      'status=1\nstatus=1\nstatus=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>[: ']' expected
+[: ']' expected
+[: ']' expected
+[: ']' expected
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="builtin-bracket.test.html#L102">] syntax errors</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=2\nstatus=1\nstatus=2\nstatus=2\nstatus=2\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -11</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="builtin-bracket.test.html#L144">( ) ! -a -o with system version of [</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'true\n', got '[ (GNU coreutils) 9.1\nCopyright (C) 2022 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later &lt;https://gnu.org/licenses/gpl.html&gt;.\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nWritten by Kevin Braunsdorf and Matthew Bradburn.\ntrue\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[ (GNU coreutils) 9.1
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later &lt;https://gnu.org/licenses/gpl.html&gt;.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Kevin Braunsdorf and Matthew Bradburn.
+true
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="builtin-bracket.test.html#L149">== is alias for =</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>true
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: [: a: unexpected operator
+</pre></td></tr><tr><td><a name="details-14-zsh"></a><b>zsh</b></td><td>14 <a href="builtin-bracket.test.html#L149">== is alias for =</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'true\ntrue\n', got 'true\n'</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>true
+</pre><i>stderr:</i> <br/>
+<pre>zsh: = not found
+</pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="builtin-bracket.test.html#L161">== and = does not do glob</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: [: abc: unexpected operator
+</pre></td></tr><tr><td><a name="details-15-zsh"></a><b>zsh</b></td><td>15 <a href="builtin-bracket.test.html#L161">== and = does not do glob</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'status=1\nstatus=1\n', got 'status=1\n'</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>zsh: = not found
+</pre></td></tr><tr><td><a name="details-17-zsh"></a><b>zsh</b></td><td>17 <a href="builtin-bracket.test.html#L186">[ with unquoted empty var</a><br/><br/>
+<span class="assertion">[zsh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: parse error: condition expected: =
+</pre></td></tr><tr><td><a name="details-17-brush"></a><b>brush</b></td><td>17 <a href="builtin-bracket.test.html#L186">[ with unquoted empty var</a><br/><br/>
+<span class="assertion">[brush status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-zsh"></a><b>zsh</b></td><td>19 <a href="builtin-bracket.test.html#L201">[ '(' foo ] is runtime syntax error</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'status=2\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>[: argument expected
+</pre></td></tr><tr><td><a name="details-19-brush"></a><b>brush</b></td><td>19 <a href="builtin-bracket.test.html#L201">[ '(' foo ] is runtime syntax error</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=2\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-zsh"></a><b>zsh</b></td><td>20 <a href="builtin-bracket.test.html#L206">-z '&gt;' implies two token lookahead</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'true\nfalse\ntrue\n', got 'true\nfalse\n'</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>true
+false
+</pre><i>stderr:</i> <br/>
+<pre>[: too many arguments
+</pre></td></tr><tr><td><a name="details-20-sush"></a><b>sush</b></td><td>20 <a href="builtin-bracket.test.html#L206">-z '&gt;' implies two token lookahead</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'true\nfalse\ntrue\n', got 'true\nfalse\n'</span><br/>
+<span class="assertion">[sush status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>true
+false
+</pre><i>stderr:</i> <br/>
+<pre>[: ‘&gt;’: binary operator expected
+</pre></td></tr><tr><td><a name="details-21-dash"></a><b>dash</b></td><td>21 <a href="builtin-bracket.test.html#L216">operator/operand ambiguity with ]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: [: -a: unexpected operator
+</pre></td></tr><tr><td><a name="details-21-ash"></a><b>ash</b></td><td>21 <a href="builtin-bracket.test.html#L216">operator/operand ambiguity with ]</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'status=0\n', got 'status=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>ash: ]: unknown operand
+</pre></td></tr><tr><td><a name="details-21-mksh"></a><b>mksh</b></td><td>21 <a href="builtin-bracket.test.html#L216">operator/operand ambiguity with ]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: [: ]: unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="builtin-bracket.test.html#L216">operator/operand ambiguity with ]</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=0\n', got 'status=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>[: too many arguments
+</pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="builtin-bracket.test.html#L216">operator/operand ambiguity with ]</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=0\n', got 'status=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>[: extra argument ‘]’
+</pre></td></tr><tr><td><a name="details-22-dash"></a><b>dash</b></td><td>22 <a href="builtin-bracket.test.html#L225">operator/operand ambiguity with -a</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-ash"></a><b>ash</b></td><td>22 <a href="builtin-bracket.test.html#L225">operator/operand ambiguity with -a</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'status=0\n', got 'status=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>ash: argument expected
+</pre></td></tr><tr><td><a name="details-22-mksh"></a><b>mksh</b></td><td>22 <a href="builtin-bracket.test.html#L225">operator/operand ambiguity with -a</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: [: expression expected
+</pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="builtin-bracket.test.html#L225">operator/operand ambiguity with -a</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=0\n', got 'status=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>[: need arg @3
+</pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="builtin-bracket.test.html#L225">operator/operand ambiguity with -a</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=0\n', got 'status=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>[: missing argument after ‘-a’
+</pre></td></tr><tr><td><a name="details-30-bash"></a><b>bash</b></td><td>30 <a href="builtin-bracket.test.html#L325">[ -t invalid ]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-zsh"></a><b>zsh</b></td><td>30 <a href="builtin-bracket.test.html#L325">[ -t invalid ]</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'status=2\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-brush"></a><b>brush</b></td><td>30 <a href="builtin-bracket.test.html#L325">[ -t invalid ]</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=2\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-mksh"></a><b>mksh</b></td><td>32 <a href="builtin-bracket.test.html#L345">[ a -eq b ]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-ksh"></a><b>ksh</b></td><td>32 <a href="builtin-bracket.test.html#L345">[ a -eq b ]</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=2\n', got 'status=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-brush"></a><b>brush</b></td><td>32 <a href="builtin-bracket.test.html#L345">[ a -eq b ]</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=2\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-toysh"></a><b>toysh</b></td><td>36 <a href="builtin-bracket.test.html#L417">-G and -O for effective user ID and group ID</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=0\nstatus=1\nstatus=0\nstatus=1\n', got 'status=2\nstatus=2\nstatus=2\nstatus=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=2
+status=2
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>test: too many arguments
+test: too many arguments
+test: too many arguments
+test: too many arguments
+</pre></td></tr><tr><td><a name="details-38-dash"></a><b>dash</b></td><td>38 <a href="builtin-bracket.test.html#L464">-v to test variable (bash)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>global=2
+global=2
+dynamic=2
+dynamic=2
+dynamic=2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: test: -v: unexpected operator
+dash: 5: test: -v: unexpected operator
+dash: 14: test: -v: unexpected operator
+dash: 16: test: -v: unexpected operator
+dash: 18: test: -v: unexpected operator
+</pre></td></tr><tr><td><a name="details-38-ash"></a><b>ash</b></td><td>38 <a href="builtin-bracket.test.html#L464">-v to test variable (bash)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'global=1\nglobal=0\ndynamic=0\ndynamic=0\ndynamic=1\n'
+Got      'global=2\nglobal=2\ndynamic=2\ndynamic=2\ndynamic=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>global=2
+global=2
+dynamic=2
+dynamic=2
+dynamic=2
+</pre><i>stderr:</i> <br/>
+<pre>ash: nonexistent: unknown operand
+ash: g: unknown operand
+ash: f_var: unknown operand
+ash: g: unknown operand
+ash: nonexistent: unknown operand
+</pre></td></tr><tr><td><a name="details-38-zsh"></a><b>zsh</b></td><td>38 <a href="builtin-bracket.test.html#L464">-v to test variable (bash)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'global=1\nglobal=0\ndynamic=0\ndynamic=0\ndynamic=1\n'
+Got      'global=2\nglobal=2\ndynamic=2\ndynamic=2\ndynamic=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>global=2
+global=2
+dynamic=2
+dynamic=2
+dynamic=2
+</pre><i>stderr:</i> <br/>
+<pre>test: unknown condition: -v
+test: unknown condition: -v
+g:test:1: unknown condition: -v
+g:test:3: unknown condition: -v
+g:test:5: unknown condition: -v
+</pre></td></tr><tr><td><a name="details-38-mksh"></a><b>mksh</b></td><td>38 <a href="builtin-bracket.test.html#L464">-v to test variable (bash)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>global=2
+global=2
+dynamic=2
+dynamic=2
+dynamic=2
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: test: nonexistent: unexpected operator/operand
+mksh: &lt;stdin&gt;[5]: test: g: unexpected operator/operand
+mksh: &lt;stdin&gt;[21]: test: f_var: unexpected operator/operand
+mksh: &lt;stdin&gt;[21]: test: g: unexpected operator/operand
+mksh: &lt;stdin&gt;[21]: test: nonexistent: unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-38-toysh"></a><b>toysh</b></td><td>38 <a href="builtin-bracket.test.html#L464">-v to test variable (bash)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'global=1\nglobal=0\ndynamic=0\ndynamic=0\ndynamic=1\n'
+Got      'global=2\nglobal=2\ndynamic=2\ndynamic=2\ndynamic=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>global=2
+global=2
+dynamic=2
+dynamic=2
+dynamic=2
+</pre><i>stderr:</i> <br/>
+<pre>test: too many arguments
+test: too many arguments
+test: too many arguments
+test: too many arguments
+test: too many arguments
+</pre></td></tr><tr><td><a name="details-38-sush"></a><b>sush</b></td><td>38 <a href="builtin-bracket.test.html#L464">-v to test variable (bash)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'global=1\nglobal=0\ndynamic=0\ndynamic=0\ndynamic=1\n'
+Got      'global=2\nglobal=2\ndynamic=2\ndynamic=2\ndynamic=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>global=2
+global=2
+dynamic=2
+dynamic=2
+dynamic=2
+</pre><i>stderr:</i> <br/>
+<pre>test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+</pre></td></tr><tr><td><a name="details-39-dash"></a><b>dash</b></td><td>39 <a href="builtin-bracket.test.html#L503">test -o for options</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=2
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: test: -o: unexpected operator
+dash: 5: test: -o: unexpected operator
+dash: 8: test: -o: unexpected operator
+</pre></td></tr><tr><td><a name="details-39-ash"></a><b>ash</b></td><td>39 <a href="builtin-bracket.test.html#L503">test -o for options</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'status=1\nstatus=0\nstatus=1\n', got 'status=2\nstatus=2\nstatus=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=2
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>ash: nounset: unknown operand
+ash: nounset: unknown operand
+ash: _bad_name_: unknown operand
+</pre></td></tr><tr><td><a name="details-39-zsh"></a><b>zsh</b></td><td>39 <a href="builtin-bracket.test.html#L503">test -o for options</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'status=1\nstatus=0\nstatus=1\n', got 'status=1\nstatus=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>test: too many arguments
+test: too many arguments
+test: too many arguments
+</pre></td></tr><tr><td><a name="details-39-toysh"></a><b>toysh</b></td><td>39 <a href="builtin-bracket.test.html#L503">test -o for options</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=1\nstatus=0\nstatus=1\n', got 'status=2\nstatus=2\nstatus=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=2
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>test: too many arguments
+set: bad -o nounset
+test: too many arguments
+test: too many arguments
+</pre></td></tr><tr><td><a name="details-39-sush"></a><b>sush</b></td><td>39 <a href="builtin-bracket.test.html#L503">test -o for options</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=1\nstatus=0\nstatus=1\n', got 'status=2\nstatus=2\nstatus=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=2
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>test: ‘-o’: unary operator expected
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: set: nounset: invalid option name
+test: ‘-o’: unary operator expected
+test: ‘-o’: unary operator expected
+</pre></td></tr><tr><td><a name="details-42-bash"></a><b>bash</b></td><td>42 <a href="builtin-bracket.test.html#L551">Overflow error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-dash"></a><b>dash</b></td><td>42 <a href="builtin-bracket.test.html#L551">Overflow error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-ash"></a><b>ash</b></td><td>42 <a href="builtin-bracket.test.html#L551">Overflow error</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'status=2\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-zsh"></a><b>zsh</b></td><td>42 <a href="builtin-bracket.test.html#L551">Overflow error</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'status=2\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-toysh"></a><b>toysh</b></td><td>42 <a href="builtin-bracket.test.html#L551">Overflow error</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=2\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-sush"></a><b>sush</b></td><td>42 <a href="builtin-bracket.test.html#L551">Overflow error</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=2\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-brush"></a><b>brush</b></td><td>42 <a href="builtin-bracket.test.html#L551">Overflow error</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=2\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-47-toysh"></a><b>toysh</b></td><td>47 <a href="builtin-bracket.test.html#L620">negative octal numbers, etc.</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'zero=0\noctal=1\nhex=2\nbaseN=2\n', got 'zero=0\noctal=0\nhex=0\nbaseN=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zero=0
+octal=0
+hex=0
+baseN=2
+</pre><i>stderr:</i> <br/>
+<pre>[: not integer: -64#a
+</pre></td></tr><tr><td><a name="details-47-brush"></a><b>brush</b></td><td>47 <a href="builtin-bracket.test.html#L620">negative octal numbers, etc.</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'zero=0\noctal=1\nhex=2\nbaseN=2\n', got 'zero=0\noctal=1\nhex=1\nbaseN=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zero=0
+octal=1
+hex=1
+baseN=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-48-dash"></a><b>dash</b></td><td>48 <a href="builtin-bracket.test.html#L645">More negative numbers</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-48-toysh"></a><b>toysh</b></td><td>48 <a href="builtin-bracket.test.html#L645">More negative numbers</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=0\nstatus=0\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-49-zsh"></a><b>zsh</b></td><td>49 <a href="builtin-bracket.test.html#L662">No octal, hex, base N conversion - leading 0 is a regular decimal</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '59\n-59\n\nstatus=0\nstatus=0\n\nhex=2\nbaseN=2\n'
+Got      '73\n-73\n\nstatus=0\nstatus=0\n\nhex=2\nbaseN=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>73
+-73
+
+status=0
+status=0
+
+hex=2
+baseN=2
+</pre><i>stderr:</i> <br/>
+<pre>[: integer expression expected: 0xff
+[: integer expression expected: 64#a
+</pre></td></tr><tr><td><a name="details-49-mksh"></a><b>mksh</b></td><td>49 <a href="builtin-bracket.test.html#L662">No octal, hex, base N conversion - leading 0 is a regular decimal</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>73
+-73
+
+status=0
+status=0
+
+hex=2
+baseN=2
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[14]: 0xff: bad number '0xff'
+mksh: &lt;stdin&gt;[16]: 64#a: bad number '64#a'
+</pre></td></tr><tr><td><a name="details-49-ksh"></a><b>ksh</b></td><td>49 <a href="builtin-bracket.test.html#L662">No octal, hex, base N conversion - leading 0 is a regular decimal</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '59\n-59\n\nstatus=0\nstatus=0\n\nhex=2\nbaseN=2\n'
+Got      '73\n-73\n\nstatus=0\nstatus=0\n\nhex=2\nbaseN=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>73
+-73
+
+status=0
+status=0
+
+hex=2
+baseN=2
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[14]: 0xff: bad number: Invalid argument
+W: ksh: &lt;stdin&gt;[16]: 64#a: bad number: Invalid argument
+</pre></td></tr><tr><td><a name="details-49-toysh"></a><b>toysh</b></td><td>49 <a href="builtin-bracket.test.html#L662">No octal, hex, base N conversion - leading 0 is a regular decimal</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '59\n-59\n\nstatus=0\nstatus=0\n\nhex=2\nbaseN=2\n'
+Got      '59\n-59\n\nstatus=1\nstatus=1\n\nhex=0\nbaseN=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>59
+-59
+
+status=1
+status=1
+
+hex=0
+baseN=2
+</pre><i>stderr:</i> <br/>
+<pre>[: not integer: 64#a
+</pre></td></tr><tr><td><a name="details-49-brush"></a><b>brush</b></td><td>49 <a href="builtin-bracket.test.html#L662">No octal, hex, base N conversion - leading 0 is a regular decimal</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '59\n-59\n\nstatus=0\nstatus=0\n\nhex=2\nbaseN=2\n'
+Got      '59\n-59\n\nstatus=0\nstatus=0\n\nhex=1\nbaseN=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>59
+-59
+
+status=0
+status=0
+
+hex=1
+baseN=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-50-bash"></a><b>bash</b></td><td>50 <a href="builtin-bracket.test.html#L706">Looks like octal, but digit is too big</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: 083: value too great for base (error token is "083")
+bash: line 4: -083: value too great for base (error token is "083")
+</pre></td></tr><tr><td><a name="details-50-dash"></a><b>dash</b></td><td>50 <a href="builtin-bracket.test.html#L706">Looks like octal, but digit is too big</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: arithmetic expression: expecting EOF: " 083 "
+</pre></td></tr><tr><td><a name="details-50-ash"></a><b>ash</b></td><td>50 <a href="builtin-bracket.test.html#L706">Looks like octal, but digit is too big</a><br/><br/>
+<span class="assertion">[ash status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: arithmetic syntax error
+</pre></td></tr><tr><td><a name="details-50-zsh"></a><b>zsh</b></td><td>50 <a href="builtin-bracket.test.html#L706">Looks like octal, but digit is too big</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '', got '83\nstatus=0\n-83\nstatus=0\n\nstatus=0\nstatus=0\n'</span><br/>
+<span class="assertion">[zsh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>83
+status=0
+-83
+status=0
+
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-50-mksh"></a><b>mksh</b></td><td>50 <a href="builtin-bracket.test.html#L706">Looks like octal, but digit is too big</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>83
+status=0
+-83
+status=0
+
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-50-ksh"></a><b>ksh</b></td><td>50 <a href="builtin-bracket.test.html#L706">Looks like octal, but digit is too big</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '', got '83\nstatus=0\n-83\nstatus=0\n\nstatus=0\nstatus=0\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>83
+status=0
+-83
+status=0
+
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-50-toysh"></a><b>toysh</b></td><td>50 <a href="builtin-bracket.test.html#L706">Looks like octal, but digit is too big</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '', got 'status=1\nstatus=1\n\nstatus=2\nstatus=2\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+
+status=2
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: bad math:  083  @ 3
+main: line 4: sh: bad math:  -083  @ 4
+[: not integer: 083
+[: not integer: -083
+</pre></td></tr><tr><td><a name="details-50-sush"></a><b>sush</b></td><td>50 <a href="builtin-bracket.test.html#L706">Looks like octal, but digit is too big</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '', got 'status=1\nstatus=1\n\nstatus=0\nstatus=0\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: 083: value too great for base (error token is "083")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: 083: value too great for base (error token is "083")
+</pre></td></tr><tr><td><a name="details-50-brush"></a><b>brush</b></td><td>50 <a href="builtin-bracket.test.html#L706">Looks like octal, but digit is too big</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '', got 'status=1\nstatus=1\n\nstatus=0\nstatus=0\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: arithmetic evaluation error: failed to parse expression: ' 083 '
+[31mERROR[0m error: arithmetic evaluation error: failed to parse expression: ' -083 '
+</pre></td></tr><tr><td><a name="details-51-mksh"></a><b>mksh</b></td><td>51 <a href="builtin-bracket.test.html#L750">no recursive arith [ 1+2 -eq 3 ]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-51-ksh"></a><b>ksh</b></td><td>51 <a href="builtin-bracket.test.html#L750">no recursive arith [ 1+2 -eq 3 ]</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=2\nstatus=2\n', got 'status=0\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-51-brush"></a><b>brush</b></td><td>51 <a href="builtin-bracket.test.html#L750">no recursive arith [ 1+2 -eq 3 ]</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=2\nstatus=2\n', got 'status=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

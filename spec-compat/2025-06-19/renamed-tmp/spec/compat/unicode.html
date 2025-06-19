@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>unicode: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for unicode.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>7</td><td>0</td><td>1</td><td>5</td><td>3</td><td>3</td><td>0</td><td>0</td><td>2</td><td>7</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>2</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>0</td><td>0</td><td>1</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>5</td><td>4</td><td>0</td><td>0</td><td>4</td><td>7</td><td>7</td><td>5</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="unicode.test.html#L4">OSH source code doesn't have to be valid Unicode (like other shells)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"><a href="#details-0-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="unicode.test.html#L41">Unicode escapes \u03bc \U000003bc in $'', echo -e, printf</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="unicode.test.html#L60">Max code point U+10ffff can escaped with $''  printf  echo -e</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="unicode.test.html#L89">$'' does NOT check that 0x110000 is too big at parse time</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="unicode.test.html#L105">$'' does not check for surrogate range at parse time</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="unicode.test.html#L125">printf / echo -e do NOT check max code point at runtime</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="unicode.test.html#L150">printf / echo -e do NOT check surrogates at runtime</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>28 passed, 1 OK, 4 not implemented, 5 BUG, 32 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="unicode.test.html#L4">OSH source code doesn't have to be valid Unicode (like other shells)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '\xce\xbc \xce\xbc \xce\xbc \xce\xbc\n--\n bc 20 bc 20 bc 20 bc 0a\n'
+Got      '\xce\xbc \xce\xbc \xce\xbc $\xce\xbc\n--\n bc 20 bc 20 bc 20 24 bc 0a\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>μ μ μ $μ
+--
+ bc 20 bc 20 bc 20 24 bc 0a
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="unicode.test.html#L4">OSH source code doesn't have to be valid Unicode (like other shells)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '\xce\xbc \xce\xbc \xce\xbc \xce\xbc\n--\n bc 20 bc 20 bc 20 bc 0a\n'
+Got      '\xce\xbc \xce\xbc \xce\xbc \xc3\x8e\xc2\xbc\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>μ μ μ Î¼
+
+</pre><i>stderr:</i> <br/>
+<pre>not-unicode.sh: line 1: sh: 'not-unicode.sh' is binary
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="unicode.test.html#L4">OSH source code doesn't have to be valid Unicode (like other shells)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '\xce\xbc \xce\xbc \xce\xbc \xce\xbc\n--\n bc 20 bc 20 bc 20 bc 0a\n'
+Got      '\xce\xbc \xce\xbc \xce\xbc \xce\xbc\n--\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>μ μ μ μ
+--
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-brush"></a><b>brush</b></td><td>0 <a href="unicode.test.html#L4">OSH source code doesn't have to be valid Unicode (like other shells)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '\xce\xbc \xce\xbc \xce\xbc \xce\xbc\n--\n bc 20 bc 20 bc 20 bc 0a\n'
+Got      '\xce\xbc \xce\xbc \xce\xbc \xce\xbc\n--\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>μ μ μ μ
+--
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m not-unicode.sh: failed to decode UTF-8 characters (detected near line 1 column 6)
+</pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="unicode.test.html#L41">Unicode escapes \u03bc \U000003bc in $'', echo -e, printf</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="unicode.test.html#L41">Unicode escapes \u03bc \U000003bc in $'', echo -e, printf</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="unicode.test.html#L41">Unicode escapes \u03bc \U000003bc in $'', echo -e, printf</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '\xce\xbc \xce\xbc\n\xce\xbc \xce\xbc\n\xce\xbc \xce\xbc\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="unicode.test.html#L41">Unicode escapes \u03bc \U000003bc in $'', echo -e, printf</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '\xce\xbc \xce\xbc\n\xce\xbc \xce\xbc\n\xce\xbc \xce\xbc\n', got '\xce\xbc \xce\xbc\n\\u03bc \\U000003bc\n\\u03bc \\U000003bc\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>μ μ
+\u03bc \U000003bc
+\u03bc \U000003bc
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="unicode.test.html#L60">Max code point U+10ffff can escaped with $''  printf  echo -e</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="unicode.test.html#L60">Max code point U+10ffff can escaped with $''  printf  echo -e</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="unicode.test.html#L60">Max code point U+10ffff can escaped with $''  printf  echo -e</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>'\xef\xbf\xbd'
+'\xef\xbf\xbd'
+'\xf4\x8f\xbf\xbf'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="unicode.test.html#L60">Max code point U+10ffff can escaped with $''  printf  echo -e</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "'\\xf4\\x8f\\xbf\\xbf'\n'\\xf4\\x8f\\xbf\\xbf'\n'\\xf4\\x8f\\xbf\\xbf'\n"
+Got      "'\\xef\\xbf\\xbd'\n'\\xef\\xbf\\xbd'\n'\\xf4\\x8f\\xbf\\xbf'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>'\xef\xbf\xbd'
+'\xef\xbf\xbd'
+'\xf4\x8f\xbf\xbf'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="unicode.test.html#L60">Max code point U+10ffff can escaped with $''  printf  echo -e</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "'\\xf4\\x8f\\xbf\\xbf'\n'\\xf4\\x8f\\xbf\\xbf'\n'\\xf4\\x8f\\xbf\\xbf'\n"
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="unicode.test.html#L60">Max code point U+10ffff can escaped with $''  printf  echo -e</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "'\\xf4\\x8f\\xbf\\xbf'\n'\\xf4\\x8f\\xbf\\xbf'\n'\\xf4\\x8f\\xbf\\xbf'\n"
+Got      ''
+</span><br/>
+<span class="assertion">[sush status] Expected 0, got 127</span><br/>
+<span class="assertion">[sush stderr] Found 'Traceback (most recent'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: Unexpected token: ()
+Traceback (most recent call last):
+  File "&lt;string&gt;", line 1, in &lt;module&gt;
+IndexError: list index out of range
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: Unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: py-repr: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: py-repr: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: py-repr: command not found
+</pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="unicode.test.html#L89">$'' does NOT check that 0x110000 is too big at parse time</a><br/><br/>
+<span class="assertion">[dash stdout] Expected "'\\xf4\\x90\\x80\\x80'\n", got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: Bad function name
+</pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="unicode.test.html#L89">$'' does NOT check that 0x110000 is too big at parse time</a><br/><br/>
+<span class="assertion">[ash stdout] Expected "'\\xf4\\x90\\x80\\x80'\n", got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad function name
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="unicode.test.html#L89">$'' does NOT check that 0x110000 is too big at parse time</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>'\xef\xbf\xbd'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="unicode.test.html#L89">$'' does NOT check that 0x110000 is too big at parse time</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "'\\xf4\\x90\\x80\\x80'\n", got "'\\xef\\xbf\\xbd'\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>'\xef\xbf\xbd'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="unicode.test.html#L89">$'' does NOT check that 0x110000 is too big at parse time</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "'\\xf4\\x90\\x80\\x80'\n", got "'\\xe1\\x84\\x8000'\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>'\xe1\x84\x8000'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="unicode.test.html#L89">$'' does NOT check that 0x110000 is too big at parse time</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "'\\xf4\\x90\\x80\\x80'\n", got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 127</span><br/>
+<span class="assertion">[sush stderr] Found 'Traceback (most recent'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: Unexpected token: ()
+Traceback (most recent call last):
+  File "&lt;string&gt;", line 1, in &lt;module&gt;
+IndexError: list index out of range
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: Unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: py-repr: command not found
+</pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="unicode.test.html#L89">$'' does NOT check that 0x110000 is too big at parse time</a><br/><br/>
+<span class="assertion">[brush stdout] Expected "'\\xf4\\x90\\x80\\x80'\n", got "'\\\\\\\\'\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>'\\\\'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="unicode.test.html#L105">$'' does not check for surrogate range at parse time</a><br/><br/>
+<span class="assertion">[dash stdout] Expected "'\\xed\\xb0\\x80'\n'\\xed\\xb0\\x80'\n", got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: Bad function name
+</pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="unicode.test.html#L105">$'' does not check for surrogate range at parse time</a><br/><br/>
+<span class="assertion">[ash stdout] Expected "'\\xed\\xb0\\x80'\n'\\xed\\xb0\\x80'\n", got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad function name
+</pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="unicode.test.html#L105">$'' does not check for surrogate range at parse time</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: character not in range
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="unicode.test.html#L105">$'' does not check for surrogate range at parse time</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "'\\xed\\xb0\\x80'\n'\\xed\\xb0\\x80'\n", got "''\n'\\xc3\\x9c00'\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>''
+'\xc3\x9c00'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="unicode.test.html#L105">$'' does not check for surrogate range at parse time</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "'\\xed\\xb0\\x80'\n'\\xed\\xb0\\x80'\n", got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 127</span><br/>
+<span class="assertion">[sush stderr] Found 'Traceback (most recent'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: Unexpected token: ()
+Traceback (most recent call last):
+  File "&lt;string&gt;", line 1, in &lt;module&gt;
+IndexError: list index out of range
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: Unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: py-repr: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: py-repr: command not found
+</pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="unicode.test.html#L105">$'' does not check for surrogate range at parse time</a><br/><br/>
+<span class="assertion">[brush stdout] Expected "'\\xed\\xb0\\x80'\n'\\xed\\xb0\\x80'\n", got "'\\\\\\\\'\n'\\\\\\\\'\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>'\\\\'
+'\\\\'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="unicode.test.html#L125">printf / echo -e do NOT check max code point at runtime</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "status=0\n'\\xf4\\x90\\x80\\x80'\nstatus=0\n'\\xf4\\x90\\x80\\x80'\n"
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Syntax error: Bad function name
+</pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="unicode.test.html#L125">printf / echo -e do NOT check max code point at runtime</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "status=0\n'\\xf4\\x90\\x80\\x80'\nstatus=0\n'\\xf4\\x90\\x80\\x80'\n"
+Got      ''
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad function name
+</pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="unicode.test.html#L125">printf / echo -e do NOT check max code point at runtime</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="unicode.test.html#L125">printf / echo -e do NOT check max code point at runtime</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "status=0\n'\\xf4\\x90\\x80\\x80'\nstatus=0\n'\\xf4\\x90\\x80\\x80'\n"
+Got      "status=0\n'\\xef\\xbf\\xbd'\nstatus=0\n'\\\\U00110000'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+'\xef\xbf\xbd'
+status=0
+'\\U00110000'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="unicode.test.html#L125">printf / echo -e do NOT check max code point at runtime</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "status=0\n'\\xf4\\x90\\x80\\x80'\nstatus=0\n'\\xf4\\x90\\x80\\x80'\n"
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="unicode.test.html#L125">printf / echo -e do NOT check max code point at runtime</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "status=0\n'\\xf4\\x90\\x80\\x80'\nstatus=0\n'\\xf4\\x90\\x80\\x80'\n"
+Got      'status=0\nstatus=0\n'
+</span><br/>
+<span class="assertion">[sush status] Expected 0, got 127</span><br/>
+<span class="assertion">[sush stderr] Found 'Traceback (most recent'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: Unexpected token: ()
+Traceback (most recent call last):
+  File "&lt;string&gt;", line 1, in &lt;module&gt;
+IndexError: list index out of range
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: Unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: py-repr: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: py-repr: command not found
+</pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="unicode.test.html#L125">printf / echo -e do NOT check max code point at runtime</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "status=0\n'\\xf4\\x90\\x80\\x80'\nstatus=0\n'\\xf4\\x90\\x80\\x80'\n"
+Got      "status=0\n'\\\\\\\\'\nstatus=1\n''\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+'\\\\'
+status=1
+''
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m printf: printf parsing error: invalid universal character name \U00110000
+</pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="unicode.test.html#L150">printf / echo -e do NOT check surrogates at runtime</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "status=0\n'\\xed\\xb0\\x80'\nstatus=0\n'\\xed\\xb0\\x80'\nstatus=0\n'\\xed\\xb0\\x80'\nstatus=0\n'\\xed\\xb0\\x80'\n"
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Syntax error: Bad function name
+</pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="unicode.test.html#L150">printf / echo -e do NOT check surrogates at runtime</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "status=0\n'\\xed\\xb0\\x80'\nstatus=0\n'\\xed\\xb0\\x80'\nstatus=0\n'\\xed\\xb0\\x80'\nstatus=0\n'\\xed\\xb0\\x80'\n"
+Got      ''
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad function name
+</pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="unicode.test.html#L150">printf / echo -e do NOT check surrogates at runtime</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+''
+status=0
+''
+status=0
+''
+status=0
+''
+</pre><i>stderr:</i> <br/>
+<pre>zsh: character not in range
+zsh: character not in range
+zsh: character not in range
+zsh: character not in range
+</pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="unicode.test.html#L150">printf / echo -e do NOT check surrogates at runtime</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="unicode.test.html#L150">printf / echo -e do NOT check surrogates at runtime</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "status=0\n'\\xed\\xb0\\x80'\nstatus=0\n'\\xed\\xb0\\x80'\nstatus=0\n'\\xed\\xb0\\x80'\nstatus=0\n'\\xed\\xb0\\x80'\n"
+Got      "status=0\n'\\xed\\xb0\\x80'\nstatus=0\n'\\xed\\xb0\\x80'\nstatus=1\n''\nstatus=1\n''\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+'\xed\xb0\x80'
+status=0
+'\xed\xb0\x80'
+status=1
+''
+status=1
+''
+</pre><i>stderr:</i> <br/>
+<pre>printf: invalid universal character name \udc00
+printf: invalid universal character name \U0000dc00
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="unicode.test.html#L150">printf / echo -e do NOT check surrogates at runtime</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "status=0\n'\\xed\\xb0\\x80'\nstatus=0\n'\\xed\\xb0\\x80'\nstatus=0\n'\\xed\\xb0\\x80'\nstatus=0\n'\\xed\\xb0\\x80'\n"
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="unicode.test.html#L150">printf / echo -e do NOT check surrogates at runtime</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "status=0\n'\\xed\\xb0\\x80'\nstatus=0\n'\\xed\\xb0\\x80'\nstatus=0\n'\\xed\\xb0\\x80'\nstatus=0\n'\\xed\\xb0\\x80'\n"
+Got      'status=0\nstatus=0\nstatus=0\nstatus=0\n'
+</span><br/>
+<span class="assertion">[sush status] Expected 0, got 127</span><br/>
+<span class="assertion">[sush stderr] Found 'Traceback (most recent'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: Unexpected token: ()
+Traceback (most recent call last):
+  File "&lt;string&gt;", line 1, in &lt;module&gt;
+IndexError: list index out of range
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: Unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: py-repr: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: py-repr: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 17: py-repr: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 21: py-repr: command not found
+</pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="unicode.test.html#L150">printf / echo -e do NOT check surrogates at runtime</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "status=0\n'\\xed\\xb0\\x80'\nstatus=0\n'\\xed\\xb0\\x80'\nstatus=0\n'\\xed\\xb0\\x80'\nstatus=0\n'\\xed\\xb0\\x80'\n"
+Got      "status=0\n'\\\\\\\\'\nstatus=0\n'\\\\\\\\'\nstatus=1\n''\nstatus=1\n''\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+'\\\\'
+status=0
+'\\\\'
+status=1
+''
+status=1
+''
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m printf: printf parsing error: invalid universal character name \udc00
+[31mERROR[0m printf: printf parsing error: invalid universal character name \U0000dc00
+</pre></td></tr></table></body></html>

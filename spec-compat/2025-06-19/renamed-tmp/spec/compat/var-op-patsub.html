@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>var-op-patsub: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for var-op-patsub.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>27</td><td>0</td><td>14</td><td>21</td><td>19</td><td>20</td><td>12</td><td>15</td><td>20</td><td>26</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>1</td><td>0</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>0</td><td>6</td><td>6</td><td>7</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>28</td><td>6</td><td>0</td><td>0</td><td>8</td><td>16</td><td>13</td><td>8</td><td>2</td><td></td></tr>
+<tr><td>total</td><td>28</td><td>28</td><td>28</td><td>28</td><td>28</td><td>28</td><td>28</td><td>28</td><td>28</td><td>28</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L7">Pattern replacement</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L12">Pattern replacement on unset variable</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L29">Global Pattern replacement with /</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L34">Left Anchored Pattern replacement with #</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L39">Right Anchored Pattern replacement with %</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L49">Replace fixed strings</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L59">Replace is longest match</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L65">Replace char class</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L71">Replace hard glob</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L76">${v/} is empty search and replacement</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L90">${v//} is empty search and replacement</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L104">Confusing unquoted slash matches bash (and ash)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-dash">details</a></td><td class="details-row"><a href="#details-11-ash">details</a></td><td class="details-row"><a href="#details-11-zsh">details</a></td><td class="details-row"><a href="#details-11-mksh">details</a></td><td class="details-row"><a href="#details-11-ksh">details</a></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L127">Synthesized ${x///} bug (similar to above)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-dash">details</a></td><td class="details-row"><a href="#details-12-ash">details</a></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L156">${v/a} is the same as ${v/a/}  -- no replacement string</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L165">Replacement with special chars (bug fix)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L170">Replace backslash</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-15-zsh">details</a></td><td class="details-row"><a href="#details-15-mksh">details</a></td><td class="details-row"><a href="#details-15-ksh">details</a></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L195">Replace right ]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L205">Substitute glob characters in pattern, quoted and unquoted</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-dash">details</a></td><td class="details-row"><a href="#details-17-ash">details</a></td><td class="details-row"><a href="#details-17-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L223">Substitute one unicode character (UTF-8)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-dash">details</a></td><td class="details-row"><a href="#details-18-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-18-mksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L245">When LC_ALL=C, pattern ? doesn't match multibyte character</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-dash">details</a></td><td class="details-row"><a href="#details-19-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"><a href="#details-19-sush">details</a></td><td class="details-row"><a href="#details-19-brush">details</a></td><td class="details-row"><a href="#details-19-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L273">${x/^} regression</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L301">\(\) in pattern (regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L317">patsub with single quotes and hyphen in character class (regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-mksh">details</a></td><td class="details-row"><a href="#details-22-ksh">details</a></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"><a href="#details-22-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L331">patsub with [^]]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-dash">details</a></td><td class="details-row"><a href="#details-23-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L343">[a-z] Invalid range end is syntax error</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-24-bash">details</a></td><td class="details-row"><a href="#details-24-dash">details</a></td><td class="details-row"><a href="#details-24-ash">details</a></td><td class="details-row"><a href="#details-24-zsh">details</a></td><td class="details-row"><a href="#details-24-mksh">details</a></td><td class="details-row"><a href="#details-24-ksh">details</a></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"><a href="#details-24-sush">details</a></td><td class="details-row"><a href="#details-24-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L358">Pattern is empty $foo$bar -- regression for infinite loop</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-dash">details</a></td><td class="details-row"><a href="#details-25-ash">details</a></td><td class="details-row"><a href="#details-25-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-sush">details</a></td><td class="details-row"><a href="#details-25-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L373">Chromium from http://www.oilshell.org/blog/2016/11/07.html</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-dash">details</a></td><td class="details-row"><a href="#details-26-ash">details</a></td><td class="details-row"><a href="#details-26-zsh">details</a></td><td class="details-row"><a href="#details-26-mksh">details</a></td><td class="details-row"><a href="#details-26-ksh">details</a></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"><a href="#details-26-sush">details</a></td><td class="details-row"><a href="#details-26-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-patsub.test.html#L397">${x//~homedir/}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>174 passed, 5 OK, 1 not implemented, 19 BUG, 81 failed, 0 timeouts, 0 cases skipped
+2 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="var-op-patsub.test.html#L7">Pattern replacement</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'abXX\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="var-op-patsub.test.html#L12">Pattern replacement on unset variable</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '--\nstatus=0\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Bad substitution
+</pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="var-op-patsub.test.html#L12">Pattern replacement on unset variable</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>--
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>ash: v: parameter not set
+</pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="var-op-patsub.test.html#L12">Pattern replacement on unset variable</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>--
+status=0
+--
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="var-op-patsub.test.html#L12">Pattern replacement on unset variable</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '--\nstatus=0\n', got '--\nstatus=0\n--\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+status=0
+--
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="var-op-patsub.test.html#L12">Pattern replacement on unset variable</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '--\nstatus=0\n', got '\nstatus=0\n\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+status=0
+
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o nounset
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="var-op-patsub.test.html#L12">Pattern replacement on unset variable</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '--\nstatus=0\n', got '--\nstatus=0\n--\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+status=0
+--
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: set: nounset: invalid option name
+</pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="var-op-patsub.test.html#L12">Pattern replacement on unset variable</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '--\nstatus=0\n', got '--\nstatus=0\n--\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+status=0
+--
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="var-op-patsub.test.html#L29">Global Pattern replacement with /</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'yy_xx_xx yy_yy_xx\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="var-op-patsub.test.html#L29">Global Pattern replacement with /</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'yy_xx_xx yy_yy_xx\n', got 'yy_xx_xx yy_yy_yy_L\xfeM\x10\x7f\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>'yy_xx_xx yy_yy_yy_L\xfeM\x10\x7f\n'</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="var-op-patsub.test.html#L34">Left Anchored Pattern replacement with #</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'xx_yy_xx xx_xx_xx\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="var-op-patsub.test.html#L39">Right Anchored Pattern replacement with %</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'xx_yy_xx xx_xx_yy\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="var-op-patsub.test.html#L39">Right Anchored Pattern replacement with %</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>xx_yy_xx xx_xx_xx
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="var-op-patsub.test.html#L49">Replace fixed strings</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'yy_xx yy_yy yy_xx xx_yy\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="var-op-patsub.test.html#L49">Replace fixed strings</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>yy_xx yy_yy xx_xx xx_xx
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="var-op-patsub.test.html#L59">Replace is longest match</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'begin [] end\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="var-op-patsub.test.html#L65">Replace char class</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'yy_yy_yy xx-xx-xx\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="var-op-patsub.test.html#L65">Replace char class</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>xx_xx_xx xx_xx_xx
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="var-op-patsub.test.html#L65">Replace char class</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'yy_yy_yy xx-xx-xx\n', got 'yy_yy_yy --_--_--\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>yy_yy_yy --_--_--
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="var-op-patsub.test.html#L65">Replace char class</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'yy_yy_yy xx-xx-xx\n', got 'xx_xx_xx xx_xx_xx\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>xx_xx_xx xx_xx_xx
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="var-op-patsub.test.html#L71">Replace hard glob</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'aa__cc\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="var-op-patsub.test.html#L71">Replace hard glob</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'aa__cc\n', got 'aa__\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>aa__
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="var-op-patsub.test.html#L71">Replace hard glob</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'aa__cc\n', got '__cc\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>__cc
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="var-op-patsub.test.html#L76">${v/} is empty search and replacement</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-abcde-\nstatus=0\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-9-ash"></a><b>ash</b></td><td>9 <a href="var-op-patsub.test.html#L76">${v/} is empty search and replacement</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-abcde -
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="var-op-patsub.test.html#L90">${v//} is empty search and replacement</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-a/b/c-\nstatus=0\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="var-op-patsub.test.html#L90">${v//} is empty search and replacement</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-a/b/c -
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-dash"></a><b>dash</b></td><td>11 <a href="var-op-patsub.test.html#L104">Confusing unquoted slash matches bash (and ash)</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'c_c\nc_c\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-11-ash"></a><b>ash</b></td><td>11 <a href="var-op-patsub.test.html#L104">Confusing unquoted slash matches bash (and ash)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>c_c
+/_/ /c
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-zsh"></a><b>zsh</b></td><td>11 <a href="var-op-patsub.test.html#L104">Confusing unquoted slash matches bash (and ash)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>/c//c_/c/
+/_/
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-mksh"></a><b>mksh</b></td><td>11 <a href="var-op-patsub.test.html#L104">Confusing unquoted slash matches bash (and ash)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>/_/
+c_c
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-ksh"></a><b>ksh</b></td><td>11 <a href="var-op-patsub.test.html#L104">Confusing unquoted slash matches bash (and ash)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'c_c\nc_c\n', got '/_/\nc_c\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/_/
+c_c
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="var-op-patsub.test.html#L104">Confusing unquoted slash matches bash (and ash)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'c_c\nc_c\n', got '/_/\n/_/\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/_/
+/_/
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="var-op-patsub.test.html#L104">Confusing unquoted slash matches bash (and ash)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'c_c\nc_c\n', got '/_/\nc_c\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/_/
+c_c
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="var-op-patsub.test.html#L104">Confusing unquoted slash matches bash (and ash)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'c_c\nc_c\n', got '/c//c_/c//c\nc_c\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/c//c_/c//c
+c_c
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-dash"></a><b>dash</b></td><td>12 <a href="var-op-patsub.test.html#L127">Synthesized ${x///} bug (similar to above)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'ambiguous: slash brace } hi\nquoted:    slash brace } hi\n'
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-12-ash"></a><b>ash</b></td><td>12 <a href="var-op-patsub.test.html#L127">Synthesized ${x///} bug (similar to above)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ambiguous: slash brace } hi
+quoted:    slash / brace } hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="var-op-patsub.test.html#L127">Synthesized ${x///} bug (similar to above)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ambiguous: slash / brace } hi
+quoted:    slash / brace } hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="var-op-patsub.test.html#L127">Synthesized ${x///} bug (similar to above)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ambiguous: slash / brace } hi
+quoted:    slash brace } hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="var-op-patsub.test.html#L127">Synthesized ${x///} bug (similar to above)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'ambiguous: slash brace } hi\nquoted:    slash brace } hi\n'
+Got      'ambiguous: slash / brace } hi\nquoted:    slash brace } hi\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ambiguous: slash / brace } hi
+quoted:    slash brace } hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="var-op-patsub.test.html#L127">Synthesized ${x///} bug (similar to above)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'ambiguous: slash brace } hi\nquoted:    slash brace } hi\n'
+Got      'ambiguous: slash / brace } hi\nquoted:    slash / brace } hi\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ambiguous: slash / brace } hi
+quoted:    slash / brace } hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="var-op-patsub.test.html#L127">Synthesized ${x///} bug (similar to above)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'ambiguous: slash brace } hi\nquoted:    slash brace } hi\n'
+Got      'ambiguous: slash / brace } hi\nquoted:    slash brace } hi\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ambiguous: slash / brace } hi
+quoted:    slash brace } hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="var-op-patsub.test.html#L127">Synthesized ${x///} bug (similar to above)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'ambiguous: slash brace } hi\nquoted:    slash brace } hi\n'
+Got      'ambiguous: slash / brace } hi\nquoted:    slash brace } hi\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ambiguous: slash / brace } hi
+quoted:    slash brace } hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="var-op-patsub.test.html#L156">${v/a} is the same as ${v/a/}  -- no replacement string</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'abb\nstatus=0\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="var-op-patsub.test.html#L165">Replacement with special chars (bug fix)</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '?x\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="var-op-patsub.test.html#L165">Replacement with special chars (bug fix)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '?x\n', got '"?"x\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>"?"x
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="var-op-patsub.test.html#L170">Replace backslash</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '[_]\n[\\_]\n[\\_]\n[_]\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-15-zsh"></a><b>zsh</b></td><td>15 <a href="var-op-patsub.test.html#L170">Replace backslash</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[_]
+[_]
+[\_]
+[_]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-mksh"></a><b>mksh</b></td><td>15 <a href="var-op-patsub.test.html#L170">Replace backslash</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[_]
+[_]
+[\_]
+[_]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-ksh"></a><b>ksh</b></td><td>15 <a href="var-op-patsub.test.html#L170">Replace backslash</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '[_]\n[\\_]\n[\\_]\n[_]\n', got '[_]\n[_]\n[\\_]\n[_]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[_]
+[_]
+[\_]
+[_]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="var-op-patsub.test.html#L170">Replace backslash</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[_]\n[\\_]\n[\\_]\n[_]\n', got '[\\f]\n[\\f]\n[\\]\n[_]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[\f]
+[\f]
+[\]
+[_]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="var-op-patsub.test.html#L170">Replace backslash</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[_]\n[\\_]\n[\\_]\n[_]\n', got '[\\_]\n[\\_]\n[\\_]\n[\\_]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[\_]
+[\_]
+[\_]
+[\_]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-dash"></a><b>dash</b></td><td>16 <a href="var-op-patsub.test.html#L195">Replace right ]</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '--_--\n--_--\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="var-op-patsub.test.html#L195">Replace right ]</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '--_--\n--_--\n', got '--]--\n--]--\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--]--
+--]--
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-dash"></a><b>dash</b></td><td>17 <a href="var-op-patsub.test.html#L205">Substitute glob characters in pattern, quoted and unquoted</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'a-b\n-\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 5: Bad substitution
+</pre></td></tr><tr><td><a name="details-17-ash"></a><b>ash</b></td><td>17 <a href="var-op-patsub.test.html#L205">Substitute glob characters in pattern, quoted and unquoted</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'a-b\n-\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-zsh"></a><b>zsh</b></td><td>17 <a href="var-op-patsub.test.html#L205">Substitute glob characters in pattern, quoted and unquoted</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a-b
+a-b
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="var-op-patsub.test.html#L205">Substitute glob characters in pattern, quoted and unquoted</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'a-b\n-\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="var-op-patsub.test.html#L205">Substitute glob characters in pattern, quoted and unquoted</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'a-b\n-\n', got '-\n-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-
+-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-dash"></a><b>dash</b></td><td>18 <a href="var-op-patsub.test.html#L223">Substitute one unicode character (UTF-8)</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'foo and foo\nfoo and _\xce\xbc_\n_\xce\xbc_ and foo\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 6: Bad substitution
+</pre></td></tr><tr><td><a name="details-18-ash"></a><b>ash</b></td><td>18 <a href="var-op-patsub.test.html#L223">Substitute one unicode character (UTF-8)</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'foo and foo\nfoo and _\xce\xbc_\n_\xce\xbc_ and foo\n', got '_\xce\xbc_ and _\xce\xbc_\n_\xce\xbc_ and _\xce\xbc_\n_\xce\xbc_ and _\xce\xbc_\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_μ_ and _μ_
+_μ_ and _μ_
+_μ_ and _μ_
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-mksh"></a><b>mksh</b></td><td>18 <a href="var-op-patsub.test.html#L223">Substitute one unicode character (UTF-8)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>_μ_ and _μ_
+_μ_ and _μ_
+_μ_ and _μ_
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-dash"></a><b>dash</b></td><td>19 <a href="var-op-patsub.test.html#L245">When LC_ALL=C, pattern ? doesn't match multibyte character</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '_\xce\xbc_ and _\xce\xbc_\n_\xce\xbc_ and _\xce\xbc_\n_\xce\xbc_ and _\xce\xbc_\n\nfoo and foo\nfoo and _y_\n_x_ and foo\n'
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 6: Bad substitution
+</pre></td></tr><tr><td><a name="details-19-ash"></a><b>ash</b></td><td>19 <a href="var-op-patsub.test.html#L245">When LC_ALL=C, pattern ? doesn't match multibyte character</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '_\xce\xbc_ and _\xce\xbc_\n_\xce\xbc_ and _\xce\xbc_\n_\xce\xbc_ and _\xce\xbc_\n\nfoo and foo\nfoo and _y_\n_x_ and foo\n'
+Got      '_\xce\xbc_ and _\xce\xbc_\n_\xce\xbc_ and _\xce\xbc_\n_\xce\xbc_ and _\xce\xbc_\n\nfoo and foo\n_x_ and _y_\n_x_ and _y_\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_μ_ and _μ_
+_μ_ and _μ_
+_μ_ and _μ_
+
+foo and foo
+_x_ and _y_
+_x_ and _y_
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="var-op-patsub.test.html#L245">When LC_ALL=C, pattern ? doesn't match multibyte character</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '_\xce\xbc_ and _\xce\xbc_\n_\xce\xbc_ and _\xce\xbc_\n_\xce\xbc_ and _\xce\xbc_\n\nfoo and foo\nfoo and _y_\n_x_ and foo\n'
+Got      'foo and foo\nfoo and _\xce\xbc_\n_\xce\xbc_ and foo\n\nfoo and foo\nfoo and _y_\n_x_ and foo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo and foo
+foo and _μ_
+_μ_ and foo
+
+foo and foo
+foo and _y_
+_x_ and foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-sush"></a><b>sush</b></td><td>19 <a href="var-op-patsub.test.html#L245">When LC_ALL=C, pattern ? doesn't match multibyte character</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '_\xce\xbc_ and _\xce\xbc_\n_\xce\xbc_ and _\xce\xbc_\n_\xce\xbc_ and _\xce\xbc_\n\nfoo and foo\nfoo and _y_\n_x_ and foo\n'
+Got      'foo and foo\nfoo and _\xce\xbc_\n_\xce\xbc_ and foo\n\nfoo and foo\nfoo and _y_\n_x_ and foo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo and foo
+foo and _μ_
+_μ_ and foo
+
+foo and foo
+foo and _y_
+_x_ and foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-brush"></a><b>brush</b></td><td>19 <a href="var-op-patsub.test.html#L245">When LC_ALL=C, pattern ? doesn't match multibyte character</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '_\xce\xbc_ and _\xce\xbc_\n_\xce\xbc_ and _\xce\xbc_\n_\xce\xbc_ and _\xce\xbc_\n\nfoo and foo\nfoo and _y_\n_x_ and foo\n'
+Got      'foo and foo\nfoo and _\xce\xbc_\n_\xce\xbc_ and foo\n\nfoo and foo\nfoo and _y_\n_x_ and foo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo and foo
+foo and _μ_
+_μ_ and foo
+
+foo and foo
+foo and _y_
+_x_ and foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-osh"></a><b>osh</b></td><td>19 <a href="var-op-patsub.test.html#L245">When LC_ALL=C, pattern ? doesn't match multibyte character</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected '_\xce\xbc_ and _\xce\xbc_\n_\xce\xbc_ and _\xce\xbc_\n_\xce\xbc_ and _\xce\xbc_\n\nfoo and foo\nfoo and _y_\n_x_ and foo\n'
+Got      'foo and foo\nfoo and _\xce\xbc_\n_\xce\xbc_ and foo\n\nfoo and foo\nfoo and _y_\n_x_ and foo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo and foo
+foo and _μ_
+_μ_ and foo
+
+foo and foo
+foo and _y_
+_x_ and foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-dash"></a><b>dash</b></td><td>20 <a href="var-op-patsub.test.html#L273">${x/^} regression</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'abc\nabc\n^^\n^^^\n!!!\n!!\nb!c\na^c\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="var-op-patsub.test.html#L273">${x/^} regression</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'abc\nabc\n^^\n^^^\n!!!\n!!\nb!c\na^c\n', got 'abc\nabc\n^^\n^^^\n!!!\n!!!\nb!c\na^!c\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>abc
+abc
+^^
+^^^
+!!!
+!!!
+b!c
+a^!c
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-dash"></a><b>dash</b></td><td>21 <a href="var-op-patsub.test.html#L301">\(\) in pattern (regression)</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '1 z\n2 z\n3 fooz\n4 z\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="var-op-patsub.test.html#L301">\(\) in pattern (regression)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1 z\n2 z\n3 fooz\n4 z\n', got '1 z\n2 z\n3 foo\n4 z\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1 z
+2 z
+3 foo
+4 z
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="var-op-patsub.test.html#L301">\(\) in pattern (regression)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '1 z\n2 z\n3 fooz\n4 z\n', got '1 foo()\n2 foo()\n3 fooz\n4 foo()\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1 foo()
+2 foo()
+3 fooz
+4 foo()
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-dash"></a><b>dash</b></td><td>22 <a href="var-op-patsub.test.html#L317">patsub with single quotes and hyphen in character class (regression)</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '++--.,&lt;&gt;[]\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-22-mksh"></a><b>mksh</b></td><td>22 <a href="var-op-patsub.test.html#L317">patsub with single quotes and hyphen in character class (regression)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>helloworld
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-ksh"></a><b>ksh</b></td><td>22 <a href="var-op-patsub.test.html#L317">patsub with single quotes and hyphen in character class (regression)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '++--.,&lt;&gt;[]\n', got 'helloworld\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>helloworld
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="var-op-patsub.test.html#L317">patsub with single quotes and hyphen in character class (regression)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '++--.,&lt;&gt;[]\n', got '^++--hello.,world&lt;&gt;[]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>^++--hello.,world&lt;&gt;[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="var-op-patsub.test.html#L317">patsub with single quotes and hyphen in character class (regression)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '++--.,&lt;&gt;[]\n', got '^++--hello.,world&lt;&gt;[]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>^++--hello.,world&lt;&gt;[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-brush"></a><b>brush</b></td><td>22 <a href="var-op-patsub.test.html#L317">patsub with single quotes and hyphen in character class (regression)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '++--.,&lt;&gt;[]\n', got '^++--hello.,world&lt;&gt;[]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>^++--hello.,world&lt;&gt;[]
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: invalid regex: Parsing error at position 27: Invalid character class; expression: '(?ms)[^\&gt;\&lt;\+\-\.\,\\\[\]\]'
+</pre></td></tr><tr><td><a name="details-23-dash"></a><b>dash</b></td><td>23 <a href="var-op-patsub.test.html#L331">patsub with [^]]</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'ab^cd^\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-23-ash"></a><b>ash</b></td><td>23 <a href="var-op-patsub.test.html#L331">patsub with [^]]</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'ab^cd^\n', got 'zzzzzz\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zzzzzz
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-osh"></a><b>osh</b></td><td>23 <a href="var-op-patsub.test.html#L331">patsub with [^]]</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'ab^cd^\n', got 'zzzzzz\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zzzzzz
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-bash"></a><b>bash</b></td><td>24 <a href="var-op-patsub.test.html#L343">[a-z] Invalid range end is syntax error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>fooz
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-dash"></a><b>dash</b></td><td>24 <a href="var-op-patsub.test.html#L343">[a-z] Invalid range end is syntax error</a><br/><br/>
+<span class="assertion">[dash status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-24-ash"></a><b>ash</b></td><td>24 <a href="var-op-patsub.test.html#L343">[a-z] Invalid range end is syntax error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>fooz
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-zsh"></a><b>zsh</b></td><td>24 <a href="var-op-patsub.test.html#L343">[a-z] Invalid range end is syntax error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>fooz
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-mksh"></a><b>mksh</b></td><td>24 <a href="var-op-patsub.test.html#L343">[a-z] Invalid range end is syntax error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>fooz
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-ksh"></a><b>ksh</b></td><td>24 <a href="var-op-patsub.test.html#L343">[a-z] Invalid range end is syntax error</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected u'', got 'fooz\nstatus=0\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fooz
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="var-op-patsub.test.html#L343">[a-z] Invalid range end is syntax error</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected u'', got 'fooz\nstatus=0\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fooz
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-sush"></a><b>sush</b></td><td>24 <a href="var-op-patsub.test.html#L343">[a-z] Invalid range end is syntax error</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got 'fooz\nstatus=0\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fooz
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-brush"></a><b>brush</b></td><td>24 <a href="var-op-patsub.test.html#L343">[a-z] Invalid range end is syntax error</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'status=1\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: invalid regex: Error compiling regex: Regex error: error parsing pattern 0; expression: '(?ms)[z-a]'
+</pre></td></tr><tr><td><a name="details-25-dash"></a><b>dash</b></td><td>25 <a href="var-op-patsub.test.html#L358">Pattern is empty $foo$bar -- regression for infinite loop</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-foo-\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-25-ash"></a><b>ash</b></td><td>25 <a href="var-op-patsub.test.html#L358">Pattern is empty $foo$bar -- regression for infinite loop</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '-foo-\n', got '-foo- bar\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-foo- bar
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-zsh"></a><b>zsh</b></td><td>25 <a href="var-op-patsub.test.html#L358">Pattern is empty $foo$bar -- regression for infinite loop</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>bar-barfbarobarobar-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-sush"></a><b>sush</b></td><td>25 <a href="var-op-patsub.test.html#L358">Pattern is empty $foo$bar -- regression for infinite loop</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '-foo-\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: parse error
+</pre></td></tr><tr><td><a name="details-25-brush"></a><b>brush</b></td><td>25 <a href="var-op-patsub.test.html#L358">Pattern is empty $foo$bar -- regression for infinite loop</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '-foo-\n', got 'bar-barfbarobarobar-bar\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>bar-barfbarobarobar-bar
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-dash"></a><b>dash</b></td><td>26 <a href="var-op-patsub.test.html#L373">Chromium from http://www.oilshell.org/blog/2016/11/07.html</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '\\/foo\\/bar\\/baz\n\\/foo\\/bar\\/baz\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 4: Bad substitution
+</pre></td></tr><tr><td><a name="details-26-ash"></a><b>ash</b></td><td>26 <a href="var-op-patsub.test.html#L373">Chromium from http://www.oilshell.org/blog/2016/11/07.html</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '\\/foo\\/bar\\/baz\n\\/foo\\/bar\\/baz\n', got '\\/foo\\/bar\\/baz\n/foo/bar/baz /\\/\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>\/foo\/bar\/baz
+/foo/bar/baz /\/
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-zsh"></a><b>zsh</b></td><td>26 <a href="var-op-patsub.test.html#L373">Chromium from http://www.oilshell.org/blog/2016/11/07.html</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-mksh"></a><b>mksh</b></td><td>26 <a href="var-op-patsub.test.html#L373">Chromium from http://www.oilshell.org/blog/2016/11/07.html</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>/foo/bar/baz
+\/foo\/bar\/baz
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-ksh"></a><b>ksh</b></td><td>26 <a href="var-op-patsub.test.html#L373">Chromium from http://www.oilshell.org/blog/2016/11/07.html</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '\\/foo\\/bar\\/baz\n\\/foo\\/bar\\/baz\n', got '/foo/bar/baz\n\\/foo\\/bar\\/baz\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/foo/bar/baz
+\/foo\/bar\/baz
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="var-op-patsub.test.html#L373">Chromium from http://www.oilshell.org/blog/2016/11/07.html</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '\\/foo\\/bar\\/baz\n\\/foo\\/bar\\/baz\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-26-sush"></a><b>sush</b></td><td>26 <a href="var-op-patsub.test.html#L373">Chromium from http://www.oilshell.org/blog/2016/11/07.html</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '\\/foo\\/bar\\/baz\n\\/foo\\/bar\\/baz\n', got '/foo/bar/baz\n\\/foo\\/bar\\/baz\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/foo/bar/baz
+\/foo\/bar\/baz
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-brush"></a><b>brush</b></td><td>26 <a href="var-op-patsub.test.html#L373">Chromium from http://www.oilshell.org/blog/2016/11/07.html</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '\\/foo\\/bar\\/baz\n\\/foo\\/bar\\/baz\n', got '/\\///\\/f/\\/o/\\/o/\\///\\/b/\\/a/\\/r/\\///\\/b/\\/a/\\/z/\\/\n\\/foo\\/bar\\/baz\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/\///\/f/\/o/\/o/\///\/b/\/a/\/r/\///\/b/\/a/\/z/\/
+\/foo\/bar\/baz
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-dash"></a><b>dash</b></td><td>27 <a href="var-op-patsub.test.html#L397">${x//~homedir/}</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'z/git/oilshell\nz/git/oilshell\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 4: Bad substitution
+</pre></td></tr><tr><td><a name="details-27-sush"></a><b>sush</b></td><td>27 <a href="var-op-patsub.test.html#L397">${x//~homedir/}</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'z/git/oilshell\nz/git/oilshell\n', got 'zzgitzoilshell\nz/git/oilshell\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zzgitzoilshell
+z/git/oilshell
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

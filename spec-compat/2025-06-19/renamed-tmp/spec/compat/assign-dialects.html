@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>assign-dialects: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for assign-dialects.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>4</td><td>0</td><td>0</td><td>0</td><td>1</td><td>3</td><td>0</td><td>1</td><td>2</td><td>1</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>4</td><td>4</td><td>4</td><td>0</td><td>0</td><td>4</td><td>3</td><td>2</td><td>3</td><td></td></tr>
+<tr><td>total</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="assign-dialects.test.html#L6">K and V are variables in (( array[K] = V ))</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"><a href="#details-0-ash">details</a></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="assign-dialects.test.html#L21">test -v with strings</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-1-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="assign-dialects.test.html#L39">test -v with arrays</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"><a href="#details-2-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="assign-dialects.test.html#L89">test -v with assoc arrays</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"><a href="#details-3-osh">details</a></td><td class="details-row"></td></tr>
+</table>
+<pre>12 passed, 0 OK, 1 not implemented, 3 BUG, 24 failed, 0 timeouts, 0 cases skipped
+3 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="assign-dialects.test.html#L6">K and V are variables in (( array[K] = V ))</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'array[5]=42\nkeys = 5\nvalues = 42\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: typeset: not found
+dash: 4: array[K]: not found
+dash: 6: Bad substitution
+</pre></td></tr><tr><td><a name="details-0-ash"></a><b>ash</b></td><td>0 <a href="assign-dialects.test.html#L6">K and V are variables in (( array[K] = V ))</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'array[5]=42\nkeys = 5\nvalues = 42\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: typeset: not found
+ash: array[K]: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="assign-dialects.test.html#L6">K and V are variables in (( array[K] = V ))</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'array[5]=42\nkeys = 5\nvalues = 42\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: array[5]=42
+</pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="assign-dialects.test.html#L6">K and V are variables in (( array[K] = V ))</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'array[5]=42\nkeys = 5\nvalues = 42\n', got 'array[5]=\nkeys =\nvalues =\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>array[5]=
+keys =
+values =
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+main: line 4: sh: bad math:  array[K] = V  @ 6
+</pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="assign-dialects.test.html#L21">test -v with strings</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'str=1\nstr=0\n', got 'str=2\nstr=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>str=2
+str=2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: test: -v: unexpected operator
+dash: 6: test: -v: unexpected operator
+</pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="assign-dialects.test.html#L21">test -v with strings</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'str=1\nstr=0\n', got 'str=2\nstr=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>str=2
+str=2
+</pre><i>stderr:</i> <br/>
+<pre>ash: str: unknown operand
+ash: str: unknown operand
+</pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="assign-dialects.test.html#L21">test -v with strings</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'str=1\nstr=0\n', got 'str=2\nstr=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>str=2
+str=2
+</pre><i>stderr:</i> <br/>
+<pre>test: unknown condition: -v
+test: unknown condition: -v
+</pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="assign-dialects.test.html#L21">test -v with strings</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>str=2
+str=2
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: test: str: unexpected operator/operand
+mksh: &lt;stdin&gt;[6]: test: str: unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="assign-dialects.test.html#L21">test -v with strings</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'str=1\nstr=0\n', got 'str=2\nstr=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>str=2
+str=2
+</pre><i>stderr:</i> <br/>
+<pre>test: too many arguments
+test: too many arguments
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="assign-dialects.test.html#L21">test -v with strings</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'str=1\nstr=0\n', got 'str=2\nstr=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>str=2
+str=2
+</pre><i>stderr:</i> <br/>
+<pre>test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+</pre></td></tr><tr><td><a name="details-1-osh"></a><b>osh</b></td><td>1 <a href="assign-dialects.test.html#L21">test -v with strings</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'str=1\nstr=0\n', got 'str=0\nstr=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>str=0
+str=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="assign-dialects.test.html#L39">test -v with arrays</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'a=1\na[0]=1\n\na=0\na[0]=0\n\na[1]=1\na[x]=0\n\n', got 'a=2\na[0]=2\n\na=2\na[0]=2\n\na[1]=2\na[x]=2\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a=2
+a[0]=2
+
+a=2
+a[0]=2
+
+a[1]=2
+a[x]=2
+
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: typeset: not found
+dash: 3: test: -v: unexpected operator
+dash: 5: test: -v: unexpected operator
+dash: 9: a[0]=1: not found
+dash: 11: test: -v: unexpected operator
+dash: 13: test: -v: unexpected operator
+dash: 17: test: -v: unexpected operator
+dash: 20: test: -v: unexpected operator
+</pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="assign-dialects.test.html#L39">test -v with arrays</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'a=1\na[0]=1\n\na=0\na[0]=0\n\na[1]=1\na[x]=0\n\n', got 'a=2\na[0]=2\n\na=2\na[0]=2\n\na[1]=2\na[x]=2\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a=2
+a[0]=2
+
+a=2
+a[0]=2
+
+a[1]=2
+a[x]=2
+
+</pre><i>stderr:</i> <br/>
+<pre>ash: typeset: not found
+ash: a: unknown operand
+ash: a[0]: unknown operand
+ash: a[0]=1: not found
+ash: a: unknown operand
+ash: a[0]: unknown operand
+ash: a[1]: unknown operand
+ash: a[x]: unknown operand
+</pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="assign-dialects.test.html#L39">test -v with arrays</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'a=1\na[0]=1\n\na=0\na[0]=0\n\na[1]=1\na[x]=0\n\n', got 'a=2\na[0]=2\n\n'</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a=2
+a[0]=2
+
+</pre><i>stderr:</i> <br/>
+<pre>test: unknown condition: -v
+test: unknown condition: -v
+zsh: a: assignment to invalid subscript range
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="assign-dialects.test.html#L39">test -v with arrays</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a=2
+a[0]=2
+
+a=2
+a[0]=2
+
+a[1]=2
+a[x]=2
+
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: test: a: unexpected operator/operand
+mksh: &lt;stdin&gt;[5]: test: a[0]: unexpected operator/operand
+mksh: &lt;stdin&gt;[11]: test: a: unexpected operator/operand
+mksh: &lt;stdin&gt;[13]: test: a[0]: unexpected operator/operand
+mksh: &lt;stdin&gt;[17]: test: a[1]: unexpected operator/operand
+mksh: &lt;stdin&gt;[20]: test: a[x]: unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="assign-dialects.test.html#L39">test -v with arrays</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'a=1\na[0]=1\n\na=0\na[0]=0\n\na[1]=1\na[x]=0\n\n', got 'a=2\na[0]=2\n\na=2\na[0]=2\n\na[1]=2\na[x]=2\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a=2
+a[0]=2
+
+a=2
+a[0]=2
+
+a[1]=2
+a[x]=2
+
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+test: too many arguments
+test: too many arguments
+sh: a[0]=1: No such file or directory
+test: too many arguments
+test: too many arguments
+test: too many arguments
+test: too many arguments
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="assign-dialects.test.html#L39">test -v with arrays</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'a=1\na[0]=1\n\na=0\na[0]=0\n\na[1]=1\na[x]=0\n\n', got 'a=2\na[0]=2\n\na=2\na[0]=2\n\na[1]=2\na[x]=2\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a=2
+a[0]=2
+
+a=2
+a[0]=2
+
+a[1]=2
+a[x]=2
+
+</pre><i>stderr:</i> <br/>
+<pre>test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="assign-dialects.test.html#L39">test -v with arrays</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'a=1\na[0]=1\n\na=0\na[0]=0\n\na[1]=1\na[x]=0\n\n', got 'a=1\na[0]=1\n\na=0\na[0]=1\n\na[1]=1\na[x]=1\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a=1
+a[0]=1
+
+a=0
+a[0]=1
+
+a[1]=1
+a[x]=1
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-osh"></a><b>osh</b></td><td>2 <a href="assign-dialects.test.html#L39">test -v with arrays</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'a=1\na[0]=1\n\na=0\na[0]=0\n\na[1]=1\na[x]=0\n\n', got 'a=0\na[0]=1\n\na=0\na[0]=0\n\na[1]=1\na[x]=1\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a=0
+a[0]=1
+
+a=0
+a[0]=0
+
+a[1]=1
+a[x]=1
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="assign-dialects.test.html#L89">test -v with assoc arrays</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'A=1\nA[0]=1\n\nA=0\nA[0]=0\n\nA[1]=1\nA[x]=1\n\n', got 'A=2\nA[0]=2\n\nA=2\nA[0]=2\n\nA[1]=2\nA[x]=2\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>A=2
+A[0]=2
+
+A=2
+A[0]=2
+
+A[1]=2
+A[x]=2
+
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: typeset: not found
+dash: 3: test: -v: unexpected operator
+dash: 5: test: -v: unexpected operator
+dash: 9: A[0]=x: not found
+dash: 11: test: -v: unexpected operator
+dash: 13: test: -v: unexpected operator
+dash: 17: test: -v: unexpected operator
+dash: 20: test: -v: unexpected operator
+</pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="assign-dialects.test.html#L89">test -v with assoc arrays</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'A=1\nA[0]=1\n\nA=0\nA[0]=0\n\nA[1]=1\nA[x]=1\n\n', got 'A=2\nA[0]=2\n\nA=2\nA[0]=2\n\nA[1]=2\nA[x]=2\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>A=2
+A[0]=2
+
+A=2
+A[0]=2
+
+A[1]=2
+A[x]=2
+
+</pre><i>stderr:</i> <br/>
+<pre>ash: typeset: not found
+ash: A: unknown operand
+ash: A[0]: unknown operand
+ash: A[0]=x: not found
+ash: A: unknown operand
+ash: A[0]: unknown operand
+ash: A[1]: unknown operand
+ash: A[x]: unknown operand
+</pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="assign-dialects.test.html#L89">test -v with assoc arrays</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'A=1\nA[0]=1\n\nA=0\nA[0]=0\n\nA[1]=1\nA[x]=1\n\n', got 'A=2\nA[0]=2\n\nA=2\nA[0]=2\n\nA[1]=2\nA[x]=2\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>A=2
+A[0]=2
+
+A=2
+A[0]=2
+
+A[1]=2
+A[x]=2
+
+</pre><i>stderr:</i> <br/>
+<pre>test: unknown condition: -v
+test: unknown condition: -v
+test: unknown condition: -v
+test: unknown condition: -v
+test: unknown condition: -v
+test: unknown condition: -v
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="assign-dialects.test.html#L89">test -v with assoc arrays</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>A=2
+A[0]=2
+
+A=2
+A[0]=2
+
+A[1]=2
+A[x]=2
+
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: typeset: -A: unknown option
+mksh: &lt;stdin&gt;[3]: test: A: unexpected operator/operand
+mksh: &lt;stdin&gt;[5]: test: A[0]: unexpected operator/operand
+mksh: &lt;stdin&gt;[11]: test: A: unexpected operator/operand
+mksh: &lt;stdin&gt;[13]: test: A[0]: unexpected operator/operand
+mksh: &lt;stdin&gt;[17]: test: A[1]: unexpected operator/operand
+mksh: &lt;stdin&gt;[20]: test: A[x]: unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="assign-dialects.test.html#L89">test -v with assoc arrays</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>A=1
+A[0]=1
+
+A=1
+A[0]=1
+
+A[1]=1
+A[x]=1
+
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: typeset: -A: unknown option
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="assign-dialects.test.html#L89">test -v with assoc arrays</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'A=1\nA[0]=1\n\nA=0\nA[0]=0\n\nA[1]=1\nA[x]=1\n\n', got 'A=2\nA[0]=2\n\nA=2\nA[0]=2\n\nA[1]=2\nA[x]=2\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>A=2
+A[0]=2
+
+A=2
+A[0]=2
+
+A[1]=2
+A[x]=2
+
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+test: too many arguments
+test: too many arguments
+sh: A[0]=x: No such file or directory
+test: too many arguments
+test: too many arguments
+test: too many arguments
+test: too many arguments
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="assign-dialects.test.html#L89">test -v with assoc arrays</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'A=1\nA[0]=1\n\nA=0\nA[0]=0\n\nA[1]=1\nA[x]=1\n\n', got 'A=2\nA[0]=2\n\nA=2\nA[0]=2\n\nA[1]=2\nA[x]=2\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>A=2
+A[0]=2
+
+A=2
+A[0]=2
+
+A[1]=2
+A[x]=2
+
+</pre><i>stderr:</i> <br/>
+<pre>test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: '0': syntax error: operand expected (error token is "'0'")
+test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+</pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="assign-dialects.test.html#L89">test -v with assoc arrays</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'A=1\nA[0]=1\n\nA=0\nA[0]=0\n\nA[1]=1\nA[x]=1\n\n', got 'A=1\nA[0]=1\n\nA=0\nA[0]=1\n\nA[1]=1\nA[x]=1\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>A=1
+A[0]=1
+
+A=0
+A[0]=1
+
+A[1]=1
+A[x]=1
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-osh"></a><b>osh</b></td><td>3 <a href="assign-dialects.test.html#L89">test -v with assoc arrays</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'A=1\nA[0]=1\n\nA=0\nA[0]=0\n\nA[1]=1\nA[x]=1\n\n', got 'A=0\nA[0]=1\n\nA=0\nA[0]=0\n\nA[1]=1\nA[x]=1\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>A=0
+A[0]=1
+
+A=0
+A[0]=0
+
+A[1]=1
+A[x]=1
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

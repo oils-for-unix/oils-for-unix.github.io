@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>redirect-command: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for redirect-command.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>21</td><td>19</td><td>20</td><td>17</td><td>20</td><td>20</td><td>19</td><td>17</td><td>19</td><td>22</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>3</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>1</td><td>5</td><td>0</td><td>2</td><td>3</td><td>5</td><td>3</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>22</td><td>22</td><td>22</td><td>22</td><td>22</td><td>22</td><td>22</td><td>22</td><td>22</td><td>22</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L8">&gt;$file touches a file</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L25">$(&lt; $file) yields the contents of the file</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L39">$(&lt; file) with more statements</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L77">&lt; file in pipeline and subshell doesn't work</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L89">Leading redirect in a simple command</a></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L94">Redirect in the middle of a simple command</a></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L108">Redirect in command sub</a></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L114">Redirect in the middle of two assignments</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L122">Redirect in assignment</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-8-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L143">Redirect in function body</a></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L152">Redirect in function body is evaluated multiple times</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L172">Redirect in function body AND function call</a></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L181">redirect bash extensions:   [[  ((  for ((</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-dash">details</a></td><td class="details-row"><a href="#details-12-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L207">redirect if</a></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L218">redirect case</a></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L231">redirect while</a></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L243">redirect for loop</a></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L255">redirect subshell</a></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L260">Prefix redirect for loop -- not allowed</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-zsh">details</a></td><td class="details-row"><a href="#details-18-mksh">details</a></td><td class="details-row"><a href="#details-18-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"><a href="#details-18-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L269">Brace group redirect</a></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L276">Redirect function stdout</a></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect-command.test.html#L285">Nested function stdout redirect</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>194 passed, 1 OK, 5 not implemented, 1 BUG, 19 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="redirect-command.test.html#L8">&gt;$file touches a file</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'status=1\nstatus=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="redirect-command.test.html#L8">&gt;$file touches a file</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=1\nstatus=0\n', got 'status=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="redirect-command.test.html#L25">$(&lt; $file) yields the contents of the file</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="redirect-command.test.html#L25">$(&lt; $file) yields the contents of the file</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="redirect-command.test.html#L25">$(&lt; $file) yields the contents of the file</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'FOO\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="redirect-command.test.html#L39">$(&lt; file) with more statements</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'begin\nFOO\n---\nFOO\nend\n---\nFOO\nFOO\n---\n', got 'begin\n---\nend\n---\n\n---\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>begin
+---
+end
+---
+
+---
+</pre><i>stderr:</i> <br/>
+<pre>zsh: no such file or directory: myfile
+zsh: no such file or directory: myfile
+zsh: no such file or directory: myfile
+zsh: no such file or directory: myfile
+</pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="redirect-command.test.html#L77">&lt; file in pipeline and subshell doesn't work</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'end\n', got 'foo\nFOO\nend\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+FOO
+end
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="redirect-command.test.html#L77">&lt; file in pipeline and subshell doesn't work</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'end\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 101</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>
+thread 'main' panicked at src/elements/pipeline.rs:47:32:
+called `Option::unwrap()` on a `None` value
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+</pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="redirect-command.test.html#L114">Redirect in the middle of two assignments</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'bar\nfoo\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="redirect-command.test.html#L114">Redirect in the middle of two assignments</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'bar\nfoo\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: BAR=bar: No such file or directory
+</pre></td></tr><tr><td><a name="details-8-bash"></a><b>bash</b></td><td>8 <a href="redirect-command.test.html#L122">Redirect in assignment</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>FILE=
+FOO=
+</pre><i>stderr:</i> <br/>
+<pre>foo
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="redirect-command.test.html#L122">Redirect in assignment</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'FILE=\nfoo\nFOO=\n', got 'FILE=\nFOO=\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FILE=
+FOO=
+</pre><i>stderr:</i> <br/>
+<pre>foo
+cat: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/redirect-command.test.sh.4049768/08-sush/no-command.txt: No such file or directory
+</pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="redirect-command.test.html#L152">Redirect in function body is evaluated multiple times</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: arithmetic expression: expecting primary: "i++"
+</pre></td></tr><tr><td><a name="details-12-dash"></a><b>dash</b></td><td>12 <a href="redirect-command.test.html#L181">redirect bash extensions:   [[  ((  for ((</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-ash"></a><b>ash</b></td><td>12 <a href="redirect-command.test.html#L181">redirect bash extensions:   [[  ((  for ((</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '0 dbracket\n0 dparen\n1 for-expr\n1 total\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: 42: not found
+ash: syntax error: bad for loop variable
+</pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="redirect-command.test.html#L181">redirect bash extensions:   [[  ((  for ((</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="redirect-command.test.html#L181">redirect bash extensions:   [[  ((  for ((</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '0 dbracket\n0 dparen\n1 for-expr\n1 total\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[9]: syntax error: unexpected '(('
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="redirect-command.test.html#L181">redirect bash extensions:   [[  ((  for ((</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '0 dbracket\n0 dparen\n1 for-expr\n1 total\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="redirect-command.test.html#L181">redirect bash extensions:   [[  ((  for ((</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '0 dbracket\n0 dparen\n1 for-expr\n1 total\n', got '0 dbracket\n1 for-expr\n1 total\n'</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0 dbracket
+1 for-expr
+1 total
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: Unexpected token: &gt;
+wc: dparen: No such file or directory
+</pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="redirect-command.test.html#L181">redirect bash extensions:   [[  ((  for ((</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '0 dbracket\n0 dparen\n1 for-expr\n1 total\n', got '0 dparen\n1 for-expr\n1 total\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0 dparen
+1 for-expr
+1 total
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error near token `&gt;' (line 1 col 13)
+wc: dbracket: No such file or directory
+</pre></td></tr><tr><td><a name="details-18-zsh"></a><b>zsh</b></td><td>18 <a href="redirect-command.test.html#L260">Prefix redirect for loop -- not allowed</a><br/><br/>
+<span class="assertion">[zsh status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-mksh"></a><b>mksh</b></td><td>18 <a href="redirect-command.test.html#L260">Prefix redirect for loop -- not allowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: for: not found
+mksh: &lt;stdin&gt;[2]: syntax error: 'do' unexpected
+</pre></td></tr><tr><td><a name="details-18-ksh"></a><b>ksh</b></td><td>18 <a href="redirect-command.test.html#L260">Prefix redirect for loop -- not allowed</a><br/><br/>
+<span class="assertion">[ksh status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: for: inaccessible or not found
+E: ksh: &lt;stdin&gt;[2]: syntax error: unexpected 'do'
+</pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="redirect-command.test.html#L260">Prefix redirect for loop -- not allowed</a><br/><br/>
+<span class="assertion">[sush status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: Unexpected token: i
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: Unexpected token: do
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: Unexpected token: done
+
+cat: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/redirect-command.test.sh.4049768/18-sush/redirect2.txt: No such file or directory
+</pre></td></tr><tr><td><a name="details-18-brush"></a><b>brush</b></td><td>18 <a href="redirect-command.test.html#L260">Prefix redirect for loop -- not allowed</a><br/><br/>
+<span class="assertion">[brush status] Expected 2, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error near token `i' (line 1 col 25)
+[31mERROR[0m main: syntax error near token `
+' (line 1 col 3)
+[31mERROR[0m main: syntax error near token `
+' (line 1 col 5)
+cat: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/redirect-command.test.sh.4049768/18-brush/redirect2.txt: No such file or directory
+</pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="redirect-command.test.html#L285">Nested function stdout redirect</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'i1\ni2\n--\no1\no2\n', got 'i1\ni2\n\no1\no2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>i1
+i2
+
+o1
+o2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

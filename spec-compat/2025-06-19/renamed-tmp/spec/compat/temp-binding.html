@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>temp-binding: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for temp-binding.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>2</td><td>2</td><td>2</td><td>2</td><td>1</td><td>2</td><td>1</td><td>1</td><td>2</td><td>3</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>2</td><td>1</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td>3</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="temp-binding.test.html#L7">More eval 'local v='</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="temp-binding.test.html#L40">Temp bindings with local</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-1-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="temp-binding.test.html#L84">Temp bindings with unset</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>18 passed, 0 OK, 1 not implemented, 5 BUG, 6 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="temp-binding.test.html#L7">More eval 'local v='</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="temp-binding.test.html#L7">More eval 'local v='</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'x=x\ny=y\nz=z\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="temp-binding.test.html#L7">More eval 'local v='</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'x=x\ny=y\nz=z\n', got 'x=x\n'</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=x
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-bash"></a><b>bash</b></td><td>1 <a href="temp-binding.test.html#L40">Temp bindings with local</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>x=x
+tx=tx
+y=y
+ty=ty
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="temp-binding.test.html#L40">Temp bindings with local</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>x=x
+tx=tx
+y=y
+ty=ty
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="temp-binding.test.html#L40">Temp bindings with local</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'x=\ntx=\ny=\nty=\n', got 'x=x\ntx=tx\ny=y\nty=ty\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=x
+tx=tx
+y=y
+ty=ty
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="temp-binding.test.html#L84">Temp bindings with unset</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>x=
+---
+x=
+x=
+---
+x=
+x=
+---
+x=
+x=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="temp-binding.test.html#L84">Temp bindings with unset</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>x=
+---
+x=
+x=
+---
+x=
+x=
+---
+x=
+x=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="temp-binding.test.html#L84">Temp bindings with unset</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>x=
+---
+x=
+x=
+---
+x=
+x=
+---
+x=
+x=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="temp-binding.test.html#L84">Temp bindings with unset</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'x=\n---\nx=\nx=\n---\nx=42\nx=42\n---\nx=42\nx=42\n'
+Got      'x=\n---\nx=\nx=\n---\nx=\nx=\n---\nx=\nx=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=
+---
+x=
+x=
+---
+x=
+x=
+---
+x=
+x=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="temp-binding.test.html#L84">Temp bindings with unset</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'x=\n---\nx=\nx=\n---\nx=42\nx=42\n---\nx=42\nx=42\n'
+Got      'x=\n---\nx=\nx=\n---\nx=\nx=\n---\n'
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=
+---
+x=
+x=
+---
+x=
+x=
+---
+</pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="temp-binding.test.html#L84">Temp bindings with unset</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'x=\n---\nx=\nx=\n---\nx=42\nx=42\n---\nx=42\nx=42\n'
+Got      'x=\n---\nx=\nx=\n---\nx=\nx=\n---\nx=\nx=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=
+---
+x=
+x=
+---
+x=
+x=
+---
+x=
+x=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-read: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-read.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>41</td><td>15</td><td>37</td><td>17</td><td>28</td><td>29</td><td>0</td><td>19</td><td>31</td><td>44</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>3</td><td>2</td><td>0</td><td>1</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>25</td><td>8</td><td>16</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>2</td><td>3</td><td>1</td><td>8</td><td>9</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>17</td><td>46</td><td>27</td><td>15</td><td>2</td><td></td></tr>
+<tr><td class="timeout">TIME</td> <td>0</td><td>0</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>46</td><td>46</td><td>46</td><td>46</td><td>46</td><td>46</td><td>46</td><td>46</td><td>46</td><td>46</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L4">read line from here doc</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L15">read from empty file</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L34">read /dev/null</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L42">read with zero args</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L52">read builtin with no newline returns status 1</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L65">read builtin splits value across multiple vars</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L75">read builtin with too few variables</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L85">read -n (with $REPLY)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L93">IFS= read -n (OSH regression: value saved in tempenv)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L100">read -n doesn't strip whitespace (bug fix)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-9-zsh">details</a></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L154">read -d -n - respects delimiter and splits</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L213">read -n with invalid arg</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-11-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L220">read -n from pipe</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-dash">details</a></td><td class="details-row"><a href="#details-12-ash">details</a></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L231">read without args uses $REPLY, no splitting occurs (without -n)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"><a href="#details-13-ksh">details</a></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L274">read -n vs. -N</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"><a href="#details-14-ash">details</a></td><td class="details-row"><a href="#details-14-zsh">details</a></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"><a href="#details-14-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L311">read -N ignores delimiters</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"><a href="#details-15-ash">details</a></td><td class="details-row"><a href="#details-15-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L324">read will unset extranous vars</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-16-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"><a href="#details-16-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L349">read -r ignores backslashes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-17-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L356">read -r with other backslash escapes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-zsh">details</a></td><td class="details-row"><a href="#details-18-mksh">details</a></td><td class="details-row"><a href="#details-18-ksh">details</a></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"><a href="#details-18-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L365">read with line continuation reads multiple physical lines</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-19-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L375">read multiple vars spanning many lines</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-20-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L385">read -r with \n</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-21-zsh">details</a></td><td class="details-row"><a href="#details-21-mksh">details</a></td><td class="details-row"><a href="#details-21-ksh">details</a></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-21-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L395">read -s from pipe, not a terminal</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-22-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L415">read with IFS=$'\n'</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"><a href="#details-23-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L426">read multiple lines with IFS=:</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"><a href="#details-24-sush">details</a></td><td class="details-row"><a href="#details-24-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L441">read with IFS=''</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"><a href="#details-25-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L449">read does not respect C backslash escapes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-dash">details</a></td><td class="details-row"><a href="#details-26-ash">details</a></td><td class="details-row"><a href="#details-26-zsh">details</a></td><td class="details-row"><a href="#details-26-mksh">details</a></td><td class="details-row"><a href="#details-26-ksh">details</a></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"><a href="#details-26-sush">details</a></td><td class="details-row"><a href="#details-26-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L465">dynamic scope used to set vars</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L477">read -a reads into array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-dash">details</a></td><td class="details-row"><a href="#details-28-ash">details</a></td><td class="details-row"><a href="#details-28-zsh">details</a></td><td class="details-row"><a href="#details-28-mksh">details</a></td><td class="details-row"><a href="#details-28-ksh">details</a></td><td class="details-row"><a href="#details-28-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-28-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="timeout">TIME</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L509">read -d : (colon-separated records)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-29-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 30</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="timeout">TIME</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L530">read -d '' (null-separated records)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-30-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-toysh">details</a></td><td class="details-row"><a href="#details-30-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 31</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="timeout">TIME</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L551">read -rd</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-31-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-toysh">details</a></td><td class="details-row"><a href="#details-31-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 32</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="timeout">TIME</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L565">read -d when there's no delimiter</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-32-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-32-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-32-toysh">details</a></td><td class="details-row"><a href="#details-32-sush">details</a></td><td class="details-row"><a href="#details-32-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 33</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L582">read -t 0 tests if input is available</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-33-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-33-zsh">details</a></td><td class="details-row"><a href="#details-33-mksh">details</a></td><td class="details-row"><a href="#details-33-ksh">details</a></td><td class="details-row"><a href="#details-33-toysh">details</a></td><td class="details-row"><a href="#details-33-sush">details</a></td><td class="details-row"><a href="#details-33-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 34</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-read.test.html#L605">read -t 0.5</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-34-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-34-zsh">details</a></td><td class="details-row"><a href="#details-34-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-34-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-34-brush">details</a></td><td class="details-row"><a href="#details-34-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 35</td><td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L619">read -t -0.5 is invalid</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-35-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-35-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-35-toysh">details</a></td><td class="details-row"><a href="#details-35-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 36</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-read.test.html#L634">read -u</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-36-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-36-mksh">details</a></td><td class="details-row"><a href="#details-36-ksh">details</a></td><td class="details-row"><a href="#details-36-toysh">details</a></td><td class="details-row"><a href="#details-36-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-36-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 37</td><td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L647">read -u syntax error</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-37-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-37-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-37-toysh">details</a></td><td class="details-row"><a href="#details-37-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 38</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L657">read -N doesn't respect delimiter, while read -n does</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-38-dash">details</a></td><td class="details-row"><a href="#details-38-ash">details</a></td><td class="details-row"><a href="#details-38-zsh">details</a></td><td class="details-row"><a href="#details-38-mksh">details</a></td><td class="details-row"><a href="#details-38-ksh">details</a></td><td class="details-row"><a href="#details-38-toysh">details</a></td><td class="details-row"><a href="#details-38-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 39</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L672">read -p (not fully tested)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-39-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-39-zsh">details</a></td><td class="details-row"><a href="#details-39-mksh">details</a></td><td class="details-row"><a href="#details-39-ksh">details</a></td><td class="details-row"><a href="#details-39-toysh">details</a></td><td class="details-row"><a href="#details-39-sush">details</a></td><td class="details-row"><a href="#details-39-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 40</td><td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L688">read usage</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-40-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-40-zsh">details</a></td><td class="details-row"><a href="#details-40-mksh">details</a></td><td class="details-row"><a href="#details-40-ksh">details</a></td><td class="details-row"><a href="#details-40-toysh">details</a></td><td class="details-row"><a href="#details-40-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 41</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L700">read with smooshed args</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-41-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-41-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-41-toysh">details</a></td><td class="details-row"><a href="#details-41-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 42</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L709">read -r -d '' for NUL strings, e.g. find -print0</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-42-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-42-zsh">details</a></td><td class="details-row"><a href="#details-42-mksh">details</a></td><td class="details-row"><a href="#details-42-ksh">details</a></td><td class="details-row"><a href="#details-42-toysh">details</a></td><td class="details-row"><a href="#details-42-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 43</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L729">read from redirected directory is non-fatal error</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-43-mksh">details</a></td><td class="details-row"><a href="#details-43-ksh">details</a></td><td class="details-row"><a href="#details-43-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 44</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L746">read -n from directory</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-44-dash">details</a></td><td class="details-row"><a href="#details-44-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-44-mksh">details</a></td><td class="details-row"><a href="#details-44-ksh">details</a></td><td class="details-row"><a href="#details-44-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 45</td><td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-read.test.html#L762">mapfile from directory (bash doesn't handle errors)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-45-bash">details</a></td><td class="details-row"><a href="#details-45-dash">details</a></td><td class="details-row"><a href="#details-45-ash">details</a></td><td class="details-row"><a href="#details-45-zsh">details</a></td><td class="details-row"><a href="#details-45-mksh">details</a></td><td class="details-row"><a href="#details-45-ksh">details</a></td><td class="details-row"><a href="#details-45-toysh">details</a></td><td class="details-row"><a href="#details-45-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>261 passed, 9 OK, 55 not implemented, 23 BUG, 108 failed, 4 timeouts, 0 cases skipped
+2 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="builtin-read.test.html#L4">read line from here doc</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[A\t\tB C D E]\n', got '[]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="builtin-read.test.html#L15">read from empty file</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['status=1', '']
+['status=2', '']
+</pre><i>stderr:</i> <br/>
+<pre>dash: 5: read: arg count
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-read.test.html#L15">read from empty file</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['status=1', '']\n['status=1', '']\n", got "['status=127', '']\n['status=127', '']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['status=127', '']
+['status=127', '']
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="builtin-read.test.html#L34">read /dev/null</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: read: Illegal option -n
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="builtin-read.test.html#L34">read /dev/null</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1\n', got '127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>127
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="builtin-read.test.html#L42">read with zero args</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: read: arg count
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="builtin-read.test.html#L42">read with zero args</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=0\n', got 'status=127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="builtin-read.test.html#L52">read builtin with no newline returns status 1</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=1\nZZZ\n', got 'status=127\n\n'</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+sh: ZZZ: No such file or directory
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="builtin-read.test.html#L52">read builtin with no newline returns status 1</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=1\nZZZ\n', got 'status=0\nZZZ\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+ZZZ
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="builtin-read.test.html#L52">read builtin with no newline returns status 1</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=1\nZZZ\n', got 'status=0\nZZZ\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+ZZZ
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="builtin-read.test.html#L65">read builtin splits value across multiple vars</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[A/B/C D E]\n', got '[//]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[//]
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="builtin-read.test.html#L75">read builtin with too few variables</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '/A/B//\n', got '////\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>////
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+set: bad -o nounset
+sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="builtin-read.test.html#L85">read -n (with $REPLY)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: read: Illegal option -n
+dash: 3: read: Illegal option -n
+</pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="builtin-read.test.html#L85">read -n (with $REPLY)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="builtin-read.test.html#L85">read -n (with $REPLY)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['1234', '12']\n", got '[]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="builtin-read.test.html#L93">IFS= read -n (OSH regression: value saved in tempenv)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: read: Illegal option -n
+</pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="builtin-read.test.html#L93">IFS= read -n (OSH regression: value saved in tempenv)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="builtin-read.test.html#L93">IFS= read -n (OSH regression: value saved in tempenv)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['X']\n", got "['']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="builtin-read.test.html#L100">read -n doesn't strip whitespace (bug fix)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-zsh"></a><b>zsh</b></td><td>9 <a href="builtin-read.test.html#L100">read -n doesn't strip whitespace (bug fix)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-mksh"></a><b>mksh</b></td><td>9 <a href="builtin-read.test.html#L100">read -n doesn't strip whitespace (bug fix)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[a]
+[a b]
+[a b]
+
+one var strips whitespace
+[a]
+[a b]
+[a b]
+
+three vars
+[a] [] []
+[a] [b] []
+[a] [b] []
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-ksh"></a><b>ksh</b></td><td>9 <a href="builtin-read.test.html#L100">read -n doesn't strip whitespace (bug fix)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '[  a ]\n[  a b]\n[  a b ]\n\none var strips whitespace\n[a]\n[a b]\n[a b]\n\nthree vars\n[a] [] []\n[a] [b] []\n[a] [b] []\n'
+Got      '[a]\n[a b]\n[a b]\n\none var strips whitespace\n[a]\n[a b]\n[a b]\n\nthree vars\n[a] [] []\n[a] [b] []\n[a] [b] []\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[a]
+[a b]
+[a b]
+
+one var strips whitespace
+[a]
+[a b]
+[a b]
+
+three vars
+[a] [] []
+[a] [b] []
+[a] [b] []
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="builtin-read.test.html#L100">read -n doesn't strip whitespace (bug fix)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '[  a ]\n[  a b]\n[  a b ]\n\none var strips whitespace\n[a]\n[a b]\n[a b]\n\nthree vars\n[a] [] []\n[a] [b] []\n[a] [b] []\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="builtin-read.test.html#L100">read -n doesn't strip whitespace (bug fix)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[  a ]\n[  a b]\n[  a b ]\n\none var strips whitespace\n[a]\n[a b]\n[a b]\n\nthree vars\n[a] [] []\n[a] [b] []\n[a] [b] []\n'
+Got      '[a b]\n[a b]\n[a b]\n\none var strips whitespace\n[a b]\n[a b]\n[a b]\n\nthree vars\n[a] [] []\n[a] [b] []\n[a] [b] []\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[a b]
+[a b]
+[a b]
+
+one var strips whitespace
+[a b]
+[a b]
+[a b]
+
+three vars
+[a] [] []
+[a] [b] []
+[a] [b] []
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="builtin-read.test.html#L154">read -d -n - respects delimiter and splits</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="builtin-read.test.html#L154">read -d -n - respects delimiter and splits</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-zsh"></a><b>zsh</b></td><td>10 <a href="builtin-read.test.html#L154">read -d -n - respects delimiter and splits</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="builtin-read.test.html#L154">read -d -n - respects delimiter and splits</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>delim c
+[a]
+[a]
+[a b]
+
+one var
+[a]
+[a]
+[a b]
+
+three vars
+[a] [] []
+[a] [] []
+[a] [b] []
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="builtin-read.test.html#L154">read -d -n - respects delimiter and splits</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'delim c\n[  a]\n[  a ]\n[  a b]\n\none var\n[a]\n[a]\n[a b]\n\nthree vars\n[a] [] []\n[a] [] []\n[a] [b] []\n'
+Got      'delim c\n[a]\n[a]\n[a b]\n\none var\n[a]\n[a]\n[a b]\n\nthree vars\n[a] [] []\n[a] [] []\n[a] [b] []\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>delim c
+[a]
+[a]
+[a b]
+
+one var
+[a]
+[a]
+[a b]
+
+three vars
+[a] [] []
+[a] [] []
+[a] [b] []
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="builtin-read.test.html#L154">read -d -n - respects delimiter and splits</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'delim c\n[  a]\n[  a ]\n[  a b]\n\none var\n[a]\n[a]\n[a b]\n\nthree vars\n[a] [] []\n[a] [] []\n[a] [b] []\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="builtin-read.test.html#L154">read -d -n - respects delimiter and splits</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'delim c\n[  a]\n[  a ]\n[  a b]\n\none var\n[a]\n[a]\n[a b]\n\nthree vars\n[a] [] []\n[a] [] []\n[a] [b] []\n'
+Got      'delim c\n[a]\n[a b]\n[a b]\n\none var\n[a]\n[a b]\n[a b]\n\nthree vars\n[a] [] []\n[a] [] []\n[a] [b] []\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>delim c
+[a]
+[a b]
+[a b]
+
+one var
+[a]
+[a b]
+[a b]
+
+three vars
+[a] [] []
+[a] [] []
+[a] [b] []
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-bash"></a><b>bash</b></td><td>11 <a href="builtin-read.test.html#L213">read -n with invalid arg</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: read: not_a_number: invalid number
+</pre></td></tr><tr><td><a name="details-11-zsh"></a><b>zsh</b></td><td>11 <a href="builtin-read.test.html#L213">read -n with invalid arg</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="builtin-read.test.html#L213">read -n with invalid arg</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=2\n', got 'status=127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="builtin-read.test.html#L213">read -n with invalid arg</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=2\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: read: not_a_number: invalid number
+</pre></td></tr><tr><td><a name="details-12-dash"></a><b>dash</b></td><td>12 <a href="builtin-read.test.html#L220">read -n from pipe</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-ash"></a><b>ash</b></td><td>12 <a href="builtin-read.test.html#L220">read -n from pipe</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="builtin-read.test.html#L220">read -n from pipe</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="builtin-read.test.html#L220">read -n from pipe</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'reply=abc\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="builtin-read.test.html#L231">read without args uses $REPLY, no splitting occurs (without -n)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '[]\n[a b  ]\n[]\n[a b    line2]\n[]\n[a b  \\]\n'
+Got      '[]\n[a b]\n[]\n[a b    line2]\n[]\n[a b  \\]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[a b]
+[]
+[a b    line2]
+[]
+[a b  \]
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: read: arg count
+dash: 5: read: arg count
+dash: 10: read: arg count
+</pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="builtin-read.test.html#L231">read without args uses $REPLY, no splitting occurs (without -n)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[a b]
+[a b]
+[a b    line2]
+[a b    line2]
+[a b  \]
+[a b  \]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="builtin-read.test.html#L231">read without args uses $REPLY, no splitting occurs (without -n)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[a b]
+[a b]
+[a b    line2]
+[a b    line2]
+[a b  \]
+[a b  \]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-ksh"></a><b>ksh</b></td><td>13 <a href="builtin-read.test.html#L231">read without args uses $REPLY, no splitting occurs (without -n)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '[  a b  ]\n[a b]\n[  a b    line2]\n[a b    line2]\n[  a b  \\]\n[a b  \\]\n'
+Got      '[a b]\n[a b]\n[a b    line2]\n[a b    line2]\n[a b  \\]\n[a b  \\]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[a b]
+[a b]
+[a b    line2]
+[a b    line2]
+[a b  \]
+[a b  \]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="builtin-read.test.html#L231">read without args uses $REPLY, no splitting occurs (without -n)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '[  a b  ]\n[a b]\n[  a b    line2]\n[a b    line2]\n[  a b  \\]\n[a b  \\]\n'
+Got      '[]\n[]\n[]\n[]\n[]\n[]\n'
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[]
+[]
+[]
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+sh: read: No such file or directory
+sh: read: No such file or directory
+sh: read: No such file or directory
+sh: read: No such file or directory
+sh: read: No such file or directory
+sh: a: No such file or directory
+</pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="builtin-read.test.html#L231">read without args uses $REPLY, no splitting occurs (without -n)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[  a b  ]\n[a b]\n[  a b    line2]\n[a b    line2]\n[  a b  \\]\n[a b  \\]\n'
+Got      '[a b]\n[a b]\n[a b  \\]\n[a b  \\]\n[a b  \\]\n[a b  \\]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[a b]
+[a b]
+[a b  \]
+[a b  \]
+[a b  \]
+[a b  \]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="builtin-read.test.html#L231">read without args uses $REPLY, no splitting occurs (without -n)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '[  a b  ]\n[a b]\n[  a b    line2]\n[a b    line2]\n[  a b  \\]\n[a b  \\]\n'
+Got      '[  a b  ]\n[a b]\n[  a b  \\]\n[a b  \\]\n[  a b  \\]\n[a b  \\]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[  a b  ]
+[a b]
+[  a b  \]
+[a b  \]
+[  a b  \]
+[a b  \]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="builtin-read.test.html#L274">read -n vs. -N</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-ash"></a><b>ash</b></td><td>14 <a href="builtin-read.test.html#L274">read -n vs. -N</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-zsh"></a><b>zsh</b></td><td>14 <a href="builtin-read.test.html#L274">read -n vs. -N</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="builtin-read.test.html#L274">read -n vs. -N</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>read -n
+'a' 'b' 'c'
+'a' 'b' ''
+
+read -N
+'a' 'b' 'c'
+'a' 'b' ''
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="builtin-read.test.html#L274">read -n vs. -N</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "read -n\n'a' 'b' 'c'\n'a' 'b' ''\n\nread -N\n'a b c' '' ''\n'a b ' '' ''\n"
+Got      "read -n\n'a' 'b' 'c'\n'a' 'b' ''\n\nread -N\n'a' 'b' 'c'\n'a' 'b' ''\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>read -n
+'a' 'b' 'c'
+'a' 'b' ''
+
+read -N
+'a' 'b' 'c'
+'a' 'b' ''
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="builtin-read.test.html#L274">read -n vs. -N</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "read -n\n'a' 'b' 'c'\n'a' 'b' ''\n\nread -N\n'a b c' '' ''\n'a b ' '' ''\n"
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="builtin-read.test.html#L274">read -n vs. -N</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "read -n\n'a' 'b' 'c'\n'a' 'b' ''\n\nread -N\n'a b c' '' ''\n'a b ' '' ''\n"
+Got      "read -n\n'a' 'b' 'c'\n'a' 'b' 'c'\n\nread -N\n'a' 'b' 'c'\n'a' 'b' 'c'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>read -n
+'a' 'b' 'c'
+'a' 'b' 'c'
+
+read -N
+'a' 'b' 'c'
+'a' 'b' 'c'
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 12: `-N': invalid name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: `-N': invalid name
+</pre></td></tr><tr><td><a name="details-14-brush"></a><b>brush</b></td><td>14 <a href="builtin-read.test.html#L274">read -n vs. -N</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "read -n\n'a' 'b' 'c'\n'a' 'b' ''\n\nread -N\n'a b c' '' ''\n'a b ' '' ''\n"
+Got      "read -n\n'a' 'b' 'c'\n'a' 'b' ''\n\nread -N\n'a' 'b' 'c'\n'a' 'b' ''\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>read -n
+'a' 'b' 'c'
+'a' 'b' ''
+
+read -N
+'a' 'b' 'c'
+'a' 'b' ''
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="builtin-read.test.html#L311">read -N ignores delimiters</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-ash"></a><b>ash</b></td><td>15 <a href="builtin-read.test.html#L311">read -N ignores delimiters</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-zsh"></a><b>zsh</b></td><td>15 <a href="builtin-read.test.html#L311">read -N ignores delimiters</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="builtin-read.test.html#L311">read -N ignores delimiters</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'a\nb\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="builtin-read.test.html#L311">read -N ignores delimiters</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'a\nb\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: `-N': invalid name
+</pre></td></tr><tr><td><a name="details-16-dash"></a><b>dash</b></td><td>16 <a href="builtin-read.test.html#L324">read will unset extranous vars</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>'a' 'b' ''
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-zsh"></a><b>zsh</b></td><td>16 <a href="builtin-read.test.html#L324">read will unset extranous vars</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>'a' 'b' ''
+'b' '' ''
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="builtin-read.test.html#L324">read will unset extranous vars</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "'a' 'b' ''\n'a' 'b' ''\n", got "'' '' 'some value'\n"</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>'' '' 'some value'
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+main: line 7: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-16-sush"></a><b>sush</b></td><td>16 <a href="builtin-read.test.html#L324">read will unset extranous vars</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "'a' 'b' ''\n'a' 'b' ''\n", got "'a' 'b' 'some value'\n'a' 'b' 'some value'\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>'a' 'b' 'some value'
+'a' 'b' 'some value'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="builtin-read.test.html#L349">read -r ignores backslashes</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['one two', 'one\\\\ two']\n", got "['', '']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['', '']
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-17-brush"></a><b>brush</b></td><td>17 <a href="builtin-read.test.html#L349">read -r ignores backslashes</a><br/><br/>
+<span class="assertion">[brush stdout] Expected "['one two', 'one\\\\ two']\n", got "['one\\\\ two', 'one\\\\ two']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['one\\ two', 'one\\ two']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-zsh"></a><b>zsh</b></td><td>18 <a href="builtin-read.test.html#L356">read -r with other backslash escapes</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['one twoethree', 'one\\ twoethree']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-mksh"></a><b>mksh</b></td><td>18 <a href="builtin-read.test.html#L356">read -r with other backslash escapes</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['one twoethree', 'one\\ twoethree']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-ksh"></a><b>ksh</b></td><td>18 <a href="builtin-read.test.html#L356">read -r with other backslash escapes</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['one twox65three', 'one\\\\ two\\\\x65three']\n"
+Got      "['one twoethree', 'one\\\\ twoethree']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['one twoethree', 'one\\ twoethree']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="builtin-read.test.html#L356">read -r with other backslash escapes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['one twox65three', 'one\\\\ two\\\\x65three']\n"
+Got      "['', '']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['', '']
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="builtin-read.test.html#L356">read -r with other backslash escapes</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['one twox65three', 'one\\\\ two\\\\x65three']\n"
+Got      "['one two\\\\65three', 'one\\\\ two\\\\x65three']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['one two\\65three', 'one\\ two\\x65three']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-brush"></a><b>brush</b></td><td>18 <a href="builtin-read.test.html#L356">read -r with other backslash escapes</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['one twox65three', 'one\\\\ two\\\\x65three']\n"
+Got      "['one\\\\ two\\\\x65three', 'one\\\\ two\\\\x65three']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['one\\ two\\x65three', 'one\\ two\\x65three']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-dash"></a><b>dash</b></td><td>19 <a href="builtin-read.test.html#L365">read with line continuation reads multiple physical lines</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['-e onetwo', '-e one\\']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="builtin-read.test.html#L365">read with line continuation reads multiple physical lines</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['onetwo', 'one\\\\']\n", got "['', '']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['', '']
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-19-brush"></a><b>brush</b></td><td>19 <a href="builtin-read.test.html#L365">read with line continuation reads multiple physical lines</a><br/><br/>
+<span class="assertion">[brush stdout] Expected "['onetwo', 'one\\\\']\n", got "['one\\\\', 'one\\\\']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['one\\', 'one\\']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="builtin-read.test.html#L375">read multiple vars spanning many lines</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['one-two', 'three-four five-six', '']\n", got "['', '', '']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['', '', '']
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-20-brush"></a><b>brush</b></td><td>20 <a href="builtin-read.test.html#L375">read multiple vars spanning many lines</a><br/><br/>
+<span class="assertion">[brush stdout] Expected "['one-two', 'three-four five-six', '']\n", got "['one-\\\\', '', '']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['one-\\', '', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-dash"></a><b>dash</b></td><td>21 <a href="builtin-read.test.html#L385">read -r with \n</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-zsh"></a><b>zsh</b></td><td>21 <a href="builtin-read.test.html#L385">read -r with \n</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-mksh"></a><b>mksh</b></td><td>21 <a href="builtin-read.test.html#L385">read -r with \n</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-ksh"></a><b>ksh</b></td><td>21 <a href="builtin-read.test.html#L385">read -r with \n</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['nline', '\\\\nline']\n", got "['', '']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="builtin-read.test.html#L385">read -r with \n</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['nline', '\\\\nline']\n", got "['', '']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['', '']
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-21-brush"></a><b>brush</b></td><td>21 <a href="builtin-read.test.html#L385">read -r with \n</a><br/><br/>
+<span class="assertion">[brush stdout] Expected "['nline', '\\\\nline']\n", got "['\\\\nline', '\\\\nline']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['\\nline', '\\nline']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-dash"></a><b>dash</b></td><td>22 <a href="builtin-read.test.html#L395">read -s from pipe, not a terminal</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-zsh"></a><b>zsh</b></td><td>22 <a href="builtin-read.test.html#L395">read -s from pipe, not a terminal</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="builtin-read.test.html#L395">read -s from pipe, not a terminal</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'foo\nba\n0\nb\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="builtin-read.test.html#L395">read -s from pipe, not a terminal</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'foo\nba\n0\nb\n', got '\n\n1\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+1
+
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: `-s': invalid name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: `-s': invalid name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: `-s': invalid name
+</pre></td></tr><tr><td><a name="details-23-dash"></a><b>dash</b></td><td>23 <a href="builtin-read.test.html#L415">read with IFS=$'\n'</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[a b c]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="builtin-read.test.html#L415">read with IFS=$'\n'</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[  a b c]\n', got '[]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-23-sush"></a><b>sush</b></td><td>23 <a href="builtin-read.test.html#L415">read with IFS=$'\n'</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[  a b c]\n', got '[a b c]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[a b c]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="builtin-read.test.html#L426">read multiple lines with IFS=:</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[  \\a |b: c|d  e|]\n', got '[|||]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[|||]
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-24-sush"></a><b>sush</b></td><td>24 <a href="builtin-read.test.html#L426">read multiple lines with IFS=:</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[  \\a |b: c|d  e|]\n', got '[\\a |b: c|d  e|]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[\a |b: c|d  e|]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-brush"></a><b>brush</b></td><td>24 <a href="builtin-read.test.html#L426">read multiple lines with IFS=:</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '[  \\a |b: c|d  e|]\n', got '[  \\\\a |b\\| c|d\\]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[  \\a |b\| c|d\]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="builtin-read.test.html#L441">read with IFS=''</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[  a b c d|]\n', got '[|]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[|]
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-25-sush"></a><b>sush</b></td><td>25 <a href="builtin-read.test.html#L441">read with IFS=''</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[  a b c d|]\n', got '[a b c d|]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[a b c d|]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-dash"></a><b>dash</b></td><td>26 <a href="builtin-read.test.html#L449">read does not respect C backslash escapes</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre> 
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-ash"></a><b>ash</b></td><td>26 <a href="builtin-read.test.html#L449">read does not respect C backslash escapes</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>abcdefghx65 145 i
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-zsh"></a><b>zsh</b></td><td>26 <a href="builtin-read.test.html#L449">read does not respect C backslash escapes</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre> 
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-mksh"></a><b>mksh</b></td><td>26 <a href="builtin-read.test.html#L449">read does not respect C backslash escapes</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>  d   g h e 145 i
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-ksh"></a><b>ksh</b></td><td>26 <a href="builtin-read.test.html#L449">read does not respect C backslash escapes</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'a b c d e f g h x65 145 i\n', got '\x07 \x08 d \x1b \x0c g h e 145 i\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  d   g h e 145 i
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="builtin-read.test.html#L449">read does not respect C backslash escapes</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'a b c d e f g h x65 145 i\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-26-sush"></a><b>sush</b></td><td>26 <a href="builtin-read.test.html#L449">read does not respect C backslash escapes</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'a b c d e f g h x65 145 i\n', got 'a \\b \\c \\d \\e \\f \\g \\h \\x65 \\145 \\i\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a \b \c \d \e \f \g \h \x65 \145 \i
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-brush"></a><b>brush</b></td><td>26 <a href="builtin-read.test.html#L449">read does not respect C backslash escapes</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'a b c d e f g h x65 145 i\n', got '\\a \\b \\c \\d \\e \\f \\g \\h \\x65 \\145 \\i\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>\a \b \c \d \e \f \g \h \x65 \145 \i
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-toysh"></a><b>toysh</b></td><td>27 <a href="builtin-read.test.html#L465">dynamic scope used to set vars</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'ref: refs/heads/dev/andy\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-28-dash"></a><b>dash</b></td><td>28 <a href="builtin-read.test.html#L477">read -a reads into array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-ash"></a><b>ash</b></td><td>28 <a href="builtin-read.test.html#L477">read -a reads into array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: read: line 7: illegal option -a
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-28-zsh"></a><b>zsh</b></td><td>28 <a href="builtin-read.test.html#L477">read -a reads into array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-mksh"></a><b>mksh</b></td><td>28 <a href="builtin-read.test.html#L477">read -a reads into array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-ksh"></a><b>ksh</b></td><td>28 <a href="builtin-read.test.html#L477">read -a reads into array</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['a', 'b', 'c d']\n['a', 'b', 'c\\\\', 'd']\n[]\n[]\n"
+Got      "['97', '32', '98', '32', '99', '92', '32', '100']\n[]\n[]\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['97', '32', '98', '32', '99', '92', '32', '100']
+[]
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[14]: read: too many arguments
+</pre></td></tr><tr><td><a name="details-28-toysh"></a><b>toysh</b></td><td>28 <a href="builtin-read.test.html#L477">read -a reads into array</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['a', 'b', 'c d']\n['a', 'b', 'c\\\\', 'd']\n[]\n[]\n"
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-28-brush"></a><b>brush</b></td><td>28 <a href="builtin-read.test.html#L477">read -a reads into array</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['a', 'b', 'c d']\n['a', 'b', 'c\\\\', 'd']\n[]\n[]\n"
+Got      "['a', 'b', 'c\\\\', 'd']\n['a', 'b', 'c\\\\', 'd']\n[]\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a', 'b', 'c\\', 'd']
+['a', 'b', 'c\\', 'd']
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-dash"></a><b>dash</b></td><td>29 <a href="builtin-read.test.html#L509">read -d : (colon-separated records)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>v1=
+v1= v2=
+v1= v2= v3=
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: read: Illegal option -d
+dash: 5: read: Illegal option -d
+dash: 7: read: Illegal option -d
+</pre></td></tr><tr><td><a name="details-29-toysh"></a><b>toysh</b></td><td>29 <a href="builtin-read.test.html#L509">read -d : (colon-separated records)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'v1=a,b,c\nv1=d v2=e,f\nv1=g v2=h v3=i\n', got 'v1=\nv1= v2=\nv1= v2= v3=\n'</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>v1=
+v1= v2=
+v1= v2= v3=
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+sh: read: No such file or directory
+sh: read: No such file or directory
+sh: a,b,c:d,e,f:g,h,i: No such file or directory
+</pre></td></tr><tr><td><a name="details-30-dash"></a><b>dash</b></td><td>30 <a href="builtin-read.test.html#L530">read -d '' (null-separated records)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>v1=
+v1= v2=
+v1= v2= v3=
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: read: Illegal option -d
+dash: 5: read: Illegal option -d
+dash: 7: read: Illegal option -d
+</pre></td></tr><tr><td><a name="details-30-toysh"></a><b>toysh</b></td><td>30 <a href="builtin-read.test.html#L530">read -d '' (null-separated records)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'v1=a,b,c\nv1=d v2=e,f\nv1=g v2=h v3=i\n', got 'v1=\nv1= v2=\nv1= v2= v3=\n'</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>v1=
+v1= v2=
+v1= v2= v3=
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+sh: read: No such file or directory
+sh: read: No such file or directory
+sh: a,b,cd,e,fg,h,i: No such file or directory
+</pre></td></tr><tr><td><a name="details-30-sush"></a><b>sush</b></td><td>30 <a href="builtin-read.test.html#L530">read -d '' (null-separated records)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'v1=a,b,c\nv1=d v2=e,f\nv1=g v2=h v3=i\n', got 'v1=a,b,c\\0d,e,f\\0g,h,i\nv1=a,b,c\\0d,e,f\\0g,h,i v2=\nv1=a,b,c\\0d,e,f\\0g,h,i v2= v3=\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>v1=a,b,c\0d,e,f\0g,h,i
+v1=a,b,c\0d,e,f\0g,h,i v2=
+v1=a,b,c\0d,e,f\0g,h,i v2= v3=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-dash"></a><b>dash</b></td><td>31 <a href="builtin-read.test.html#L551">read -rd</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: read: Illegal option -d
+</pre></td></tr><tr><td><a name="details-31-toysh"></a><b>toysh</b></td><td>31 <a href="builtin-read.test.html#L551">read -rd</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'foo\nbar\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-31-sush"></a><b>sush</b></td><td>31 <a href="builtin-read.test.html#L551">read -rd</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'foo\nbar\n', got 'foo\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-dash"></a><b>dash</b></td><td>32 <a href="builtin-read.test.html#L565">read -d when there's no delimiter</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>2
+2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: read: Illegal option -d
+dash: 3: read: Illegal option -d
+</pre></td></tr><tr><td><a name="details-32-toysh"></a><b>toysh</b></td><td>32 <a href="builtin-read.test.html#L565">read -d when there's no delimiter</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'foo 0\nbar 1\n', got '127\n127\n'</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>127
+127
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+sh: read: No such file or directory
+sh: foo:bar: No such file or directory
+</pre></td></tr><tr><td><a name="details-32-sush"></a><b>sush</b></td><td>32 <a href="builtin-read.test.html#L565">read -d when there's no delimiter</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'foo 0\nbar 1\n', got 'foo 0\nbar 0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo 0
+bar 0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-brush"></a><b>brush</b></td><td>32 <a href="builtin-read.test.html#L565">read -d when there's no delimiter</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'foo 0\nbar 1\n', got 'foo 0\nbar 0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo 0
+bar 0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-dash"></a><b>dash</b></td><td>33 <a href="builtin-read.test.html#L582">read -t 0 tests if input is available</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-zsh"></a><b>zsh</b></td><td>33 <a href="builtin-read.test.html#L582">read -t 0 tests if input is available</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-mksh"></a><b>mksh</b></td><td>33 <a href="builtin-read.test.html#L582">read -t 0 tests if input is available</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-ksh"></a><b>ksh</b></td><td>33 <a href="builtin-read.test.html#L582">read -t 0 tests if input is available</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '0\n0\nreply=\n0\n', got '1\n1\nreply=\n0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+1
+reply=
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-toysh"></a><b>toysh</b></td><td>33 <a href="builtin-read.test.html#L582">read -t 0 tests if input is available</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '0\n0\nreply=\n0\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-33-sush"></a><b>sush</b></td><td>33 <a href="builtin-read.test.html#L582">read -t 0 tests if input is available</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '0\n0\nreply=\n0\n', got '1\n1\nreply=\n0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+1
+reply=
+0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: `-t': invalid name
+</pre></td></tr><tr><td><a name="details-33-brush"></a><b>brush</b></td><td>33 <a href="builtin-read.test.html#L582">read -t 0 tests if input is available</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '0\n0\nreply=\n0\n', got '1\n2\nreply=\n0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+reply=
+0
+</pre><i>stderr:</i> <br/>
+<pre>[33m WARN[0m not yet implemented: read -t; see https://github.com/reubeno/brush/issues/227
+error: invalid value '0.0' for '-t &lt;SECONDS&gt;': invalid digit found in string
+
+For more information, try '--help'.
+
+[33m WARN[0m not yet implemented: read -t; see https://github.com/reubeno/brush/issues/227
+</pre></td></tr><tr><td><a name="details-34-dash"></a><b>dash</b></td><td>34 <a href="builtin-read.test.html#L605">read -t 0.5</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-zsh"></a><b>zsh</b></td><td>34 <a href="builtin-read.test.html#L605">read -t 0.5</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-mksh"></a><b>mksh</b></td><td>34 <a href="builtin-read.test.html#L605">read -t 0.5</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-toysh"></a><b>toysh</b></td><td>34 <a href="builtin-read.test.html#L605">read -t 0.5</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-34-brush"></a><b>brush</b></td><td>34 <a href="builtin-read.test.html#L605">read -t 0.5</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '1\n', got '2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>2
+</pre><i>stderr:</i> <br/>
+<pre>error: invalid value '0.5' for '-t &lt;SECONDS&gt;': invalid digit found in string
+
+For more information, try '--help'.
+
+</pre></td></tr><tr><td><a name="details-34-osh"></a><b>osh</b></td><td>34 <a href="builtin-read.test.html#L605">read -t 0.5</a><br/><br/>
+<span class="assertion">[osh stdout] Expected '1\n', got ''</span><br/>
+<span class="assertion">[osh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  read -t 0.5 &lt; /dev/null
+  ^~~~
+[ stdin ]:3: fatal: read -t isn't implemented (except t=0)
+</pre></td></tr><tr><td><a name="details-35-bash"></a><b>bash</b></td><td>35 <a href="builtin-read.test.html#L619">read -t -0.5 is invalid</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-zsh"></a><b>zsh</b></td><td>35 <a href="builtin-read.test.html#L619">read -t -0.5 is invalid</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: not an identifier: -0.5
+</pre></td></tr><tr><td><a name="details-35-toysh"></a><b>toysh</b></td><td>35 <a href="builtin-read.test.html#L619">read -t -0.5 is invalid</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '2\n', got '127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>127
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-35-sush"></a><b>sush</b></td><td>35 <a href="builtin-read.test.html#L619">read -t -0.5 is invalid</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '2\n', got '1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-dash"></a><b>dash</b></td><td>36 <a href="builtin-read.test.html#L634">read -u</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-mksh"></a><b>mksh</b></td><td>36 <a href="builtin-read.test.html#L634">read -u</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-ksh"></a><b>ksh</b></td><td>36 <a href="builtin-read.test.html#L634">read -u</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'reply=hi\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: read: read-only: 3
+</pre></td></tr><tr><td><a name="details-36-toysh"></a><b>toysh</b></td><td>36 <a href="builtin-read.test.html#L634">read -u</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'reply=hi\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-36-sush"></a><b>sush</b></td><td>36 <a href="builtin-read.test.html#L634">read -u</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'reply=hi\n', got 'reply=\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>reply=
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: `-u': invalid name
+</pre></td></tr><tr><td><a name="details-36-osh"></a><b>osh</b></td><td>36 <a href="builtin-read.test.html#L634">read -u</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'reply=hi\n', got 'reply=\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>reply=
+</pre><i>stderr:</i> <br/>
+<pre>  read -u 3 3&lt;&lt;EOF
+  ^~~~
+[ stdin ]:3: 'read' -u flag not implemented
+</pre></td></tr><tr><td><a name="details-37-bash"></a><b>bash</b></td><td>37 <a href="builtin-read.test.html#L647">read -u syntax error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: read: -3: invalid file descriptor specification
+</pre></td></tr><tr><td><a name="details-37-zsh"></a><b>zsh</b></td><td>37 <a href="builtin-read.test.html#L647">read -u syntax error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-37-toysh"></a><b>toysh</b></td><td>37 <a href="builtin-read.test.html#L647">read -u syntax error</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=2\n', got 'status=127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-37-sush"></a><b>sush</b></td><td>37 <a href="builtin-read.test.html#L647">read -u syntax error</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=2\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: `-u': invalid name
+</pre></td></tr><tr><td><a name="details-38-dash"></a><b>dash</b></td><td>38 <a href="builtin-read.test.html#L657">read -N doesn't respect delimiter, while read -n does</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-ash"></a><b>ash</b></td><td>38 <a href="builtin-read.test.html#L657">read -N doesn't respect delimiter, while read -n does</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-zsh"></a><b>zsh</b></td><td>38 <a href="builtin-read.test.html#L657">read -N doesn't respect delimiter, while read -n does</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-mksh"></a><b>mksh</b></td><td>38 <a href="builtin-read.test.html#L657">read -N doesn't respect delimiter, while read -n does</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>fooba
+fooba
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-ksh"></a><b>ksh</b></td><td>38 <a href="builtin-read.test.html#L657">read -N doesn't respect delimiter, while read -n does</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'foo\nfooba\n', got 'fooba\nfooba\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fooba
+fooba
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-toysh"></a><b>toysh</b></td><td>38 <a href="builtin-read.test.html#L657">read -N doesn't respect delimiter, while read -n does</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'foo\nfooba\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-38-sush"></a><b>sush</b></td><td>38 <a href="builtin-read.test.html#L657">read -N doesn't respect delimiter, while read -n does</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'foo\nfooba\n', got 'foo\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: `-N': invalid name
+</pre></td></tr><tr><td><a name="details-39-dash"></a><b>dash</b></td><td>39 <a href="builtin-read.test.html#L672">read -p (not fully tested)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-zsh"></a><b>zsh</b></td><td>39 <a href="builtin-read.test.html#L672">read -p (not fully tested)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-mksh"></a><b>mksh</b></td><td>39 <a href="builtin-read.test.html#L672">read -p (not fully tested)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-ksh"></a><b>ksh</b></td><td>39 <a href="builtin-read.test.html#L672">read -p (not fully tested)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'hi\nh\n', got '\n\n'</span><br/>
+<span class="assertion">[ksh stderr] Expected u'', got 'E: ksh: &lt;stdin&gt;[3]: read: -p: no coprocess\nE: ksh: &lt;stdin&gt;[4]: read: -p: no coprocess\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: read: -p: no coprocess
+E: ksh: &lt;stdin&gt;[4]: read: -p: no coprocess
+</pre></td></tr><tr><td><a name="details-39-toysh"></a><b>toysh</b></td><td>39 <a href="builtin-read.test.html#L672">read -p (not fully tested)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'hi\nh\n', got ''</span><br/>
+<span class="assertion">[toysh stderr] Expected u'', got 'main: line 1: sh: syntax error: (\n'</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-39-sush"></a><b>sush</b></td><td>39 <a href="builtin-read.test.html#L672">read -p (not fully tested)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'hi\nh\n', got '\n\n'</span><br/>
+<span class="assertion">[sush stderr] Expected u'', got "/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: `-p': invalid name\n/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: `-p': invalid name\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: `-p': invalid name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: `-p': invalid name
+</pre></td></tr><tr><td><a name="details-39-brush"></a><b>brush</b></td><td>39 <a href="builtin-read.test.html#L672">read -p (not fully tested)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'hi\nh\n', got 'Phi\nPh\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>Phi
+Ph
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-bash"></a><b>bash</b></td><td>40 <a href="builtin-read.test.html#L688">read usage</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: read: -1: invalid number
+</pre></td></tr><tr><td><a name="details-40-zsh"></a><b>zsh</b></td><td>40 <a href="builtin-read.test.html#L688">read usage</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: not an identifier: -1
+</pre></td></tr><tr><td><a name="details-40-mksh"></a><b>mksh</b></td><td>40 <a href="builtin-read.test.html#L688">read usage</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-ksh"></a><b>ksh</b></td><td>40 <a href="builtin-read.test.html#L688">read usage</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=2\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-toysh"></a><b>toysh</b></td><td>40 <a href="builtin-read.test.html#L688">read usage</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=2\n', got 'status=127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-40-sush"></a><b>sush</b></td><td>40 <a href="builtin-read.test.html#L688">read usage</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=2\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: read: -1: invalid number
+</pre></td></tr><tr><td><a name="details-41-dash"></a><b>dash</b></td><td>41 <a href="builtin-read.test.html#L700">read with smooshed args</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>var=
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: read: Illegal option -n
+</pre></td></tr><tr><td><a name="details-41-zsh"></a><b>zsh</b></td><td>41 <a href="builtin-read.test.html#L700">read with smooshed args</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>var=
+</pre><i>stderr:</i> <br/>
+<pre>zsh: bad option: -1
+</pre></td></tr><tr><td><a name="details-41-toysh"></a><b>toysh</b></td><td>41 <a href="builtin-read.test.html#L700">read with smooshed args</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'var=h\n', got 'var=\n'</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>var=
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+sh: hi: No such file or directory
+</pre></td></tr><tr><td><a name="details-41-sush"></a><b>sush</b></td><td>41 <a href="builtin-read.test.html#L700">read with smooshed args</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'var=h\n', got 'var=\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>var=
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: read: -1: invalid number
+</pre></td></tr><tr><td><a name="details-42-dash"></a><b>dash</b></td><td>42 <a href="builtin-read.test.html#L709">read -r -d '' for NUL strings, e.g. find -print0</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-zsh"></a><b>zsh</b></td><td>42 <a href="builtin-read.test.html#L709">read -r -d '' for NUL strings, e.g. find -print0</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-mksh"></a><b>mksh</b></td><td>42 <a href="builtin-read.test.html#L709">read -r -d '' for NUL strings, e.g. find -print0</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-ksh"></a><b>ksh</b></td><td>42 <a href="builtin-read.test.html#L709">read -r -d '' for NUL strings, e.g. find -print0</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '[./a\\b\\c\\d]\n', got '[./a\x08\\d]'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[./a\d]</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-toysh"></a><b>toysh</b></td><td>42 <a href="builtin-read.test.html#L709">read -r -d '' for NUL strings, e.g. find -print0</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[./a\\b\\c\\d]\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-42-sush"></a><b>sush</b></td><td>42 <a href="builtin-read.test.html#L709">read -r -d '' for NUL strings, e.g. find -print0</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[./a\\b\\c\\d]\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 101</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>
+thread 'main' panicked at src/proc_ctrl.rs:181:46:
+called `Result::unwrap()` on an `Err` value: NulError(10, [91, 46, 47, 97, 92, 98, 92, 99, 92, 100, 0, 93])
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+</pre></td></tr><tr><td><a name="details-43-mksh"></a><b>mksh</b></td><td>43 <a href="builtin-read.test.html#L729">read from redirected directory is non-fatal error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-43-ksh"></a><b>ksh</b></td><td>43 <a href="builtin-read.test.html#L729">read from redirected directory is non-fatal error</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=1\n', got 'status=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: read: Is a directory
+</pre></td></tr><tr><td><a name="details-43-toysh"></a><b>toysh</b></td><td>43 <a href="builtin-read.test.html#L729">read from redirected directory is non-fatal error</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=1\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-44-dash"></a><b>dash</b></td><td>44 <a href="builtin-read.test.html#L746">read -n from directory</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-44-ash"></a><b>ash</b></td><td>44 <a href="builtin-read.test.html#L746">read -n from directory</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-44-mksh"></a><b>mksh</b></td><td>44 <a href="builtin-read.test.html#L746">read -n from directory</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-44-ksh"></a><b>ksh</b></td><td>44 <a href="builtin-read.test.html#L746">read -n from directory</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=1\n', got 'status=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[6]: read: Is a directory
+</pre></td></tr><tr><td><a name="details-44-toysh"></a><b>toysh</b></td><td>44 <a href="builtin-read.test.html#L746">read -n from directory</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=1\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-45-bash"></a><b>bash</b></td><td>45 <a href="builtin-read.test.html#L762">mapfile from directory (bash doesn't handle errors)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-45-dash"></a><b>dash</b></td><td>45 <a href="builtin-read.test.html#L762">mapfile from directory (bash doesn't handle errors)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-45-ash"></a><b>ash</b></td><td>45 <a href="builtin-read.test.html#L762">mapfile from directory (bash doesn't handle errors)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-45-zsh"></a><b>zsh</b></td><td>45 <a href="builtin-read.test.html#L762">mapfile from directory (bash doesn't handle errors)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-45-mksh"></a><b>mksh</b></td><td>45 <a href="builtin-read.test.html#L762">mapfile from directory (bash doesn't handle errors)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-45-ksh"></a><b>ksh</b></td><td>45 <a href="builtin-read.test.html#L762">mapfile from directory (bash doesn't handle errors)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=1\n', got 'status=127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[4]: mapfile: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-45-toysh"></a><b>toysh</b></td><td>45 <a href="builtin-read.test.html#L762">mapfile from directory (bash doesn't handle errors)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=1\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-45-sush"></a><b>sush</b></td><td>45 <a href="builtin-read.test.html#L762">mapfile from directory (bash doesn't handle errors)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=1\n', got 'status=127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: mapfile: command not found
+</pre></td></tr></table></body></html>

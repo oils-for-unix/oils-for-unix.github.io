@@ -1,0 +1,88 @@
+/* base.css: Style common to all pages on oilshell.org.
+ */
+
+@media screen and (max-width: 800px) {
+  /* mobile: distance from left/right edge */
+  body {
+    padding: 0 1em;
+  }
+  /* mobile: horizontal scrollbar for code, so the long lines don't make the page small */
+  pre {
+    overflow: auto;
+  }
+}
+
+/* wide screens: Center and limit width for readability */
+@media screen and (min-width: 801px) {
+  body {
+    margin: 0 auto;
+    line-height: 1.4;  /* http://bettermotherfuckingwebsite.com/ */
+    font-size: large;  /* 2024-01 - all pages deserve this */
+  }
+
+  .skinny { width: 30em; }  /* Most blog posts */
+  .wider { width: 45em; }   /* A few posts with tables */
+
+  /* We don't want too many distinct widths, so pre-declare them here. */
+  .width40 { width: 40em; }  /* the default for doc/*.md */
+  .width50 { width: 50em; }  /* releases.html uses this */
+  .width60 { width: 60em; }  /* test/wild, benchmarks */
+
+  .width35 { width: 35em; }  /* May 2022 update.  Make more room for code. */
+}
+
+body {
+  color: #444;
+}
+
+pre {
+  background-color: #EEE;
+  padding: 1em;
+}
+
+/* Remove left indent of bullet.  0em puts the bullet to the LEFT of
+ * surrounding text. */
+ul { padding-left: 1.2em; }
+ol { padding-left: 1.2em; }
+
+#home-link {
+  text-align: right;
+}
+
+#version-in-header {
+  color: darkgreen;
+  font-weight: bold;
+}
+
+#why-sponsor a:link { text-decoration: none }
+#why-sponsor a:hover { text-decoration: underline }
+#why-sponsor a { color: darkgreen; }
+
+#build-timestamp {
+  margin-top: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 2em;
+  border-top: solid 1px #BBB;
+}
+
+.in-progress {
+  color: darkred;
+}
+
+
+/* 
+ * Usage: <table class="col3-right col5-right">
+ *
+ * colgroup/col doesn't work for right-justifying columns
+ */
+
+.col1-right td:nth-child(1),
+.col2-right td:nth-child(2),
+.col3-right td:nth-child(3),
+.col4-right td:nth-child(4),
+.col5-right td:nth-child(5),
+.col6-right td:nth-child(6),
+.col6-right td:nth-child(7),
+.col6-right td:nth-child(8) {
+  text-align: right
+}

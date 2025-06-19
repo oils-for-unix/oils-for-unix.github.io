@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-special: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-special.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>6</td><td>7</td><td>5</td><td>7</td><td>9</td><td>10</td><td>4</td><td>3</td><td>7</td><td>10</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>1</td><td>3</td><td>3</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>2</td><td>2</td><td>4</td><td>2</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>3</td><td>0</td><td>0</td><td>3</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>8</td><td>9</td><td>5</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>12</td><td>12</td><td>12</td><td>12</td><td>12</td><td>12</td><td>12</td><td>12</td><td>12</td><td>12</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-special.test.html#L4">true is not special; prefix assignments don't persist, it can be redefined</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-special.test.html#L30">Prefix assignments persist after special builtins, like : (set -o posix)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-special.test.html#L52">Prefix assignments persist after readonly, but NOT exported (set -o posix)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-2-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-special.test.html#L80">Prefix binding for exec is a special case (versus e.g. readonly)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-special.test.html#L92">exec without args is a special case of the special case in some shells</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="bug">BUG</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-special.test.html#L106">Which shells allow special builtins to be redefined?</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-5-bash">details</a></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-special.test.html#L130">Special builtins can't be redefined as shell functions (set -o posix)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-6-bash">details</a></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-special.test.html#L160">Non-special builtins CAN be redefined as functions</a></td></tr>
+<tr><td>  8</td><td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="builtin-special.test.html#L172">Shift is special and fails whole script</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-8-bash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"><a href="#details-8-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="builtin-special.test.html#L203">set is special and fails whole script, even if using || true</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-9-bash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"><a href="#details-9-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-special.test.html#L229">bash 'type' gets confused - says 'function', but runs builtin</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-10-bash">details</a></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-special.test.html#L286">command, builtin - both can be redefined, not special (regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-dash">details</a></td><td class="details-row"><a href="#details-11-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>68 passed, 8 OK, 13 not implemented, 7 BUG, 24 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="builtin-special.test.html#L4">true is not special; prefix assignments don't persist, it can be redefined</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo=
+true func
+foo=bar
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="builtin-special.test.html#L30">Prefix assignments persist after special builtins, like : (set -o posix)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo=
+z=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-special.test.html#L30">Prefix assignments persist after special builtins, like : (set -o posix)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'foo=bar\nz=\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="builtin-special.test.html#L30">Prefix assignments persist after special builtins, like : (set -o posix)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'foo=bar\nz=\n', got 'foo=\nz=\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo=
+z=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="builtin-special.test.html#L30">Prefix assignments persist after special builtins, like : (set -o posix)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'foo=bar\nz=\n', got 'foo=\nz=\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo=
+z=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-bash"></a><b>bash</b></td><td>2 <a href="builtin-special.test.html#L52">Prefix assignments persist after readonly, but NOT exported (set -o posix)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo=bar
+spam=eggs
+bar
+None
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="builtin-special.test.html#L52">Prefix assignments persist after readonly, but NOT exported (set -o posix)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'foo=bar\nspam=eggs\nNone\nNone\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="builtin-special.test.html#L52">Prefix assignments persist after readonly, but NOT exported (set -o posix)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'foo=bar\nspam=eggs\nNone\nNone\n', got 'foo=\nspam=eggs\nNone\nNone\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo=
+spam=eggs
+None
+None
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="builtin-special.test.html#L52">Prefix assignments persist after readonly, but NOT exported (set -o posix)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'foo=bar\nspam=eggs\nNone\nNone\n', got 'foo=\nspam=eggs\nNone\nNone\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo=
+spam=eggs
+None
+None
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="builtin-special.test.html#L80">Prefix binding for exec is a special case (versus e.g. readonly)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'pre1= x= pre2=pre2\n', got 'pre1= x= pre2=\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pre1= x= pre2=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="builtin-special.test.html#L92">exec without args is a special case of the special case in some shells</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>FOO=bar
+</pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="builtin-special.test.html#L92">exec without args is a special case of the special case in some shells</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>FOO=bar
+</pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="builtin-special.test.html#L92">exec without args is a special case of the special case in some shells</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>FOO=bar
+</pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="builtin-special.test.html#L92">exec without args is a special case of the special case in some shells</a><br/><br/>
+<span class="assertion">[ksh stderr] Expected 'FOO=\n', got 'FOO=bar\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>FOO=bar
+</pre></td></tr><tr><td><a name="details-5-bash"></a><b>bash</b></td><td>5 <a href="builtin-special.test.html#L106">Which shells allow special builtins to be redefined?</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>eval func echo hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="builtin-special.test.html#L106">Which shells allow special builtins to be redefined?</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: Bad function name
+</pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="builtin-special.test.html#L106">Which shells allow special builtins to be redefined?</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad function name
+</pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="builtin-special.test.html#L106">Which shells allow special builtins to be redefined?</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>eval func echo hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="builtin-special.test.html#L106">Which shells allow special builtins to be redefined?</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'hi\n', got 'eval func echo hi\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>eval func echo hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="builtin-special.test.html#L106">Which shells allow special builtins to be redefined?</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'hi\n', got 'eval func echo hi\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>eval func echo hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-bash"></a><b>bash</b></td><td>6 <a href="builtin-special.test.html#L130">Special builtins can't be redefined as shell functions (set -o posix)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 9: `eval': is a special builtin
+</pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="builtin-special.test.html#L130">Special builtins can't be redefined as shell functions (set -o posix)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>dash: 7: Syntax error: Bad function name
+</pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="builtin-special.test.html#L130">Special builtins can't be redefined as shell functions (set -o posix)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad function name
+</pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="builtin-special.test.html#L130">Special builtins can't be redefined as shell functions (set -o posix)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hi
+sh func echo hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="builtin-special.test.html#L130">Special builtins can't be redefined as shell functions (set -o posix)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'hi\nhi\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="builtin-special.test.html#L130">Special builtins can't be redefined as shell functions (set -o posix)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'hi\nhi\n', got 'hi\nsh func echo hi\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+sh func echo hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-bash"></a><b>bash</b></td><td>8 <a href="builtin-special.test.html#L172">Shift is special and fails whole script</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 6: shift: 3: shift count out of range
+</pre></td></tr><tr><td><a name="details-8-ash"></a><b>ash</b></td><td>8 <a href="builtin-special.test.html#L172">Shift is special and fails whole script</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="builtin-special.test.html#L172">Shift is special and fails whole script</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>zsh:shift:6: shift count must be &lt;= $#
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="builtin-special.test.html#L172">Shift is special and fails whole script</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'non-zero status\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="builtin-special.test.html#L172">Shift is special and fails whole script</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'non-zero status\n', got 'status=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="builtin-special.test.html#L172">Shift is special and fails whole script</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'non-zero status\n', got 'status=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-osh"></a><b>osh</b></td><td>8 <a href="builtin-special.test.html#L172">Shift is special and fails whole script</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-bash"></a><b>bash</b></td><td>9 <a href="builtin-special.test.html#L203">set is special and fails whole script, even if using || true</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ok
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 6: shopt: invalid_: invalid shell option name
+bash: line 8: set: invalid_: invalid option name
+</pre></td></tr><tr><td><a name="details-9-ash"></a><b>ash</b></td><td>9 <a href="builtin-special.test.html#L203">set is special and fails whole script, even if using || true</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ok
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: set: line 7: illegal option -o invalid_
+</pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="builtin-special.test.html#L203">set is special and fails whole script, even if using || true</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'ok\nnon-zero status\n', got 'ok\nshould not get here\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+set: bad -o invalid_
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="builtin-special.test.html#L203">set is special and fails whole script, even if using || true</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'ok\nnon-zero status\n', got 'ok\nshould not get here\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: shopt: invalid_: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: set: invalid_: invalid option name
+</pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="builtin-special.test.html#L203">set is special and fails whole script, even if using || true</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'ok\nnon-zero status\n', got 'ok\nshould not get here\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>shopt: invalid_: invalid shell option name
+</pre></td></tr><tr><td><a name="details-9-osh"></a><b>osh</b></td><td>9 <a href="builtin-special.test.html#L203">set is special and fails whole script, even if using || true</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ok
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>  shopt -s invalid_ || true
+  ^~~~~
+[ -c flag ]:6: 'shopt' got invalid option 'invalid_'
+  set -o invalid_ || true
+  ^~~
+[ -c flag ]:8: 'set' got invalid option 'invalid_'
+</pre></td></tr><tr><td><a name="details-10-bash"></a><b>bash</b></td><td>10 <a href="builtin-special.test.html#L229">bash 'type' gets confused - says 'function', but runs builtin</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+builtin
+function
+---
+EVAL
+builtin
+shell function: echo before posix
+after posix
+function
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="builtin-special.test.html#L229">bash 'type' gets confused - says 'function', but runs builtin</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="builtin-special.test.html#L229">bash 'type' gets confused - says 'function', but runs builtin</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-zsh"></a><b>zsh</b></td><td>10 <a href="builtin-special.test.html#L229">bash 'type' gets confused - says 'function', but runs builtin</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="builtin-special.test.html#L229">bash 'type' gets confused - says 'function', but runs builtin</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="builtin-special.test.html#L229">bash 'type' gets confused - says 'function', but runs builtin</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'TRUE\nbuiltin\nfunction\n---\nEVAL\nbuiltin\nbefore posix\nafter posix\nbuiltin\n'
+Got      'TRUE\n---\nEVAL\nbefore posix\nafter posix\n'
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+---
+EVAL
+before posix
+after posix
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[4]: whence: -t: unknown option
+E: ksh: &lt;stdin&gt;[6]: whence: -t: unknown option
+E: ksh: &lt;stdin&gt;[11]: whence: -t: unknown option
+E: ksh: &lt;stdin&gt;[20]: whence: -t: unknown option
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="builtin-special.test.html#L229">bash 'type' gets confused - says 'function', but runs builtin</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'TRUE\nbuiltin\nfunction\n---\nEVAL\nbuiltin\nbefore posix\nafter posix\nbuiltin\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="builtin-special.test.html#L229">bash 'type' gets confused - says 'function', but runs builtin</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'TRUE\nbuiltin\nfunction\n---\nEVAL\nbuiltin\nbefore posix\nafter posix\nbuiltin\n'
+Got      'TRUE\nbuiltin\nfunction\n---\nEVAL\nbuiltin\nshell function: echo before posix\nshell function: echo after posix\nfunction\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+builtin
+function
+---
+EVAL
+builtin
+shell function: echo before posix
+shell function: echo after posix
+function
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="builtin-special.test.html#L229">bash 'type' gets confused - says 'function', but runs builtin</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'TRUE\nbuiltin\nfunction\n---\nEVAL\nbuiltin\nbefore posix\nafter posix\nbuiltin\n'
+Got      'TRUE\nbuiltin\nfunction\n---\nEVAL\nbuiltin\nbefore posix\nafter posix\nfunction\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+builtin
+function
+---
+EVAL
+builtin
+before posix
+after posix
+function
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-dash"></a><b>dash</b></td><td>11 <a href="builtin-special.test.html#L286">command, builtin - both can be redefined, not special (regression)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-ash"></a><b>ash</b></td><td>11 <a href="builtin-special.test.html#L286">command, builtin - both can be redefined, not special (regression)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="builtin-special.test.html#L286">command, builtin - both can be redefined, not special (regression)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'b\nc\nbuiltin-redef echo b\ncommand-redef echo c\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="builtin-special.test.html#L286">command, builtin - both can be redefined, not special (regression)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'b\nc\nbuiltin-redef echo b\ncommand-redef echo c\n'
+Got      'c\nbuiltin-redef echo b\ncommand-redef echo c\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>c
+builtin-redef echo b
+command-redef echo c
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: builtin: echo: not a shell builtin
+</pre></td></tr></table></body></html>

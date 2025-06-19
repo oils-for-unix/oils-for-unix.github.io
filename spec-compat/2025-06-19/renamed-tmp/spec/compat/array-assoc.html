@@ -1,0 +1,2921 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>array-assoc: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for array-assoc.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>34</td><td>0</td><td>0</td><td>10</td><td>7</td><td>7</td><td>0</td><td>11</td><td>27</td><td>38</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>6</td><td>42</td><td>42</td><td>32</td><td>35</td><td>35</td><td>42</td><td>31</td><td>15</td><td>2</td><td></td></tr>
+<tr><td>total</td><td>42</td><td>42</td><td>42</td><td>42</td><td>42</td><td>42</td><td>42</td><td>42</td><td>42</td><td>42</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L19">Literal syntax ([x]=y)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"><a href="#details-0-ash">details</a></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L31">set associative array to indexed array literal (very surprising bash behavior)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-1-bash">details</a></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L50">Can initialize assoc array with the "(key value ...)" sequence</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-2-bash">details</a></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L65">create empty assoc array, put, then get</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L77">Empty value (doesn't use EmptyWord?)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L84">retrieve keys with !</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L99">retrieve values with ${A[@]}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L114">coerce to string with ${A[*]}, etc.</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L130">${A[@]/b/B}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L145">${A[@]#prefix}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L159">${assoc} is like ${assoc[0]}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L177">length ${#a[@]}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-dash">details</a></td><td class="details-row"><a href="#details-11-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-11-mksh">details</a></td><td class="details-row"><a href="#details-11-ksh">details</a></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L185">lookup with ${a[0]} -- "0" is a string</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-dash">details</a></td><td class="details-row"><a href="#details-12-ash">details</a></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L195">lookup with double quoted strings "mykey"</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"><a href="#details-13-ksh">details</a></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L205">lookup with single quoted string</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"><a href="#details-14-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L213">lookup with unquoted $key and quoted "$i$i"</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"><a href="#details-15-ash">details</a></td><td class="details-row"><a href="#details-15-zsh">details</a></td><td class="details-row"><a href="#details-15-mksh">details</a></td><td class="details-row"><a href="#details-15-ksh">details</a></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L227">lookup by unquoted string doesn't work in OSH because it's a variable</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-16-bash">details</a></td><td class="details-row"><a href="#details-16-dash">details</a></td><td class="details-row"><a href="#details-16-ash">details</a></td><td class="details-row"><a href="#details-16-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"><a href="#details-16-sush">details</a></td><td class="details-row"><a href="#details-16-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L238">bash bug: "i+1" and i+1 are the same key</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-17-bash">details</a></td><td class="details-row"><a href="#details-17-dash">details</a></td><td class="details-row"><a href="#details-17-ash">details</a></td><td class="details-row"><a href="#details-17-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"><a href="#details-17-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L274">Array stored in associative array gets converted to string (without strict_array)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-dash">details</a></td><td class="details-row"><a href="#details-18-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-18-mksh">details</a></td><td class="details-row"><a href="#details-18-ksh">details</a></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L282">Indexed array as key of associative array coerces to string (without shopt -s strict_array)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-dash">details</a></td><td class="details-row"><a href="#details-19-ash">details</a></td><td class="details-row"><a href="#details-19-zsh">details</a></td><td class="details-row"><a href="#details-19-mksh">details</a></td><td class="details-row"><a href="#details-19-ksh">details</a></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"><a href="#details-19-sush">details</a></td><td class="details-row"><a href="#details-19-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L300">Append to associative array value A['x']+='suffix'</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-dash">details</a></td><td class="details-row"><a href="#details-20-ash">details</a></td><td class="details-row"><a href="#details-20-zsh">details</a></td><td class="details-row"><a href="#details-20-mksh">details</a></td><td class="details-row"><a href="#details-20-ksh">details</a></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"><a href="#details-20-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L310">Slice of associative array doesn't make sense in bash</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-21-bash">details</a></td><td class="details-row"><a href="#details-21-dash">details</a></td><td class="details-row"><a href="#details-21-ash">details</a></td><td class="details-row"><a href="#details-21-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"><a href="#details-21-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="array-assoc.test.html#L336">bash variable can have an associative array part and a string part</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-dash">details</a></td><td class="details-row"><a href="#details-22-ash">details</a></td><td class="details-row"><a href="#details-22-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-22-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L358">Associative array expressions inside (( )) with keys that look like numbers</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-dash">details</a></td><td class="details-row"><a href="#details-23-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L370">(( A[5] += 42 ))</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-dash">details</a></td><td class="details-row"><a href="#details-24-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L379">(( A[5] += 42 )) with empty cell</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-dash">details</a></td><td class="details-row"><a href="#details-25-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L388">setting key to itself (from bash-bug mailing list)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-26-bash">details</a></td><td class="details-row"><a href="#details-26-dash">details</a></td><td class="details-row"><a href="#details-26-ash">details</a></td><td class="details-row"><a href="#details-26-zsh">details</a></td><td class="details-row"><a href="#details-26-mksh">details</a></td><td class="details-row"><a href="#details-26-ksh">details</a></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="array-assoc.test.html#L403">readonly associative array can't be modified</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-dash">details</a></td><td class="details-row"><a href="#details-27-ash">details</a></td><td class="details-row"><a href="#details-27-zsh">details</a></td><td class="details-row"><a href="#details-27-mksh">details</a></td><td class="details-row"><a href="#details-27-ksh">details</a></td><td class="details-row"><a href="#details-27-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L413">associative array and brace expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-dash">details</a></td><td class="details-row"><a href="#details-28-ash">details</a></td><td class="details-row"><a href="#details-28-zsh">details</a></td><td class="details-row"><a href="#details-28-mksh">details</a></td><td class="details-row"><a href="#details-28-ksh">details</a></td><td class="details-row"><a href="#details-28-toysh">details</a></td><td class="details-row"><a href="#details-28-sush">details</a></td><td class="details-row"><a href="#details-28-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L422">declare -A A=() allowed</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-dash">details</a></td><td class="details-row"><a href="#details-29-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-29-mksh">details</a></td><td class="details-row"><a href="#details-29-ksh">details</a></td><td class="details-row"><a href="#details-29-toysh">details</a></td><td class="details-row"><a href="#details-29-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 30</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L444">unset -v and assoc array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-dash">details</a></td><td class="details-row"><a href="#details-30-ash">details</a></td><td class="details-row"><a href="#details-30-zsh">details</a></td><td class="details-row"><a href="#details-30-mksh">details</a></td><td class="details-row"><a href="#details-30-ksh">details</a></td><td class="details-row"><a href="#details-30-toysh">details</a></td><td class="details-row"><a href="#details-30-sush">details</a></td><td class="details-row"><a href="#details-30-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 31</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="array-assoc.test.html#L484">nameref and assoc array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-dash">details</a></td><td class="details-row"><a href="#details-31-ash">details</a></td><td class="details-row"><a href="#details-31-zsh">details</a></td><td class="details-row"><a href="#details-31-mksh">details</a></td><td class="details-row"><a href="#details-31-ksh">details</a></td><td class="details-row"><a href="#details-31-toysh">details</a></td><td class="details-row"><a href="#details-31-sush">details</a></td><td class="details-row"><a href="#details-31-brush">details</a></td><td class="details-row"><a href="#details-31-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 32</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L518">${!ref} and assoc array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-32-dash">details</a></td><td class="details-row"><a href="#details-32-ash">details</a></td><td class="details-row"><a href="#details-32-zsh">details</a></td><td class="details-row"><a href="#details-32-mksh">details</a></td><td class="details-row"><a href="#details-32-ksh">details</a></td><td class="details-row"><a href="#details-32-toysh">details</a></td><td class="details-row"><a href="#details-32-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 33</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L540">printf -v and assoc array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-33-dash">details</a></td><td class="details-row"><a href="#details-33-ash">details</a></td><td class="details-row"><a href="#details-33-zsh">details</a></td><td class="details-row"><a href="#details-33-mksh">details</a></td><td class="details-row"><a href="#details-33-ksh">details</a></td><td class="details-row"><a href="#details-33-toysh">details</a></td><td class="details-row"><a href="#details-33-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 34</td><td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L567">bash bug: (( A["$key"] = 1 )) doesn't work</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-34-bash">details</a></td><td class="details-row"><a href="#details-34-dash">details</a></td><td class="details-row"><a href="#details-34-ash">details</a></td><td class="details-row"><a href="#details-34-zsh">details</a></td><td class="details-row"><a href="#details-34-mksh">details</a></td><td class="details-row"><a href="#details-34-ksh">details</a></td><td class="details-row"><a href="#details-34-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-34-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 35</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L592">Implicit increment of keys</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-35-dash">details</a></td><td class="details-row"><a href="#details-35-ash">details</a></td><td class="details-row"><a href="#details-35-zsh">details</a></td><td class="details-row"><a href="#details-35-mksh">details</a></td><td class="details-row"><a href="#details-35-ksh">details</a></td><td class="details-row"><a href="#details-35-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 36</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L602">test -v assoc[key]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-36-dash">details</a></td><td class="details-row"><a href="#details-36-ash">details</a></td><td class="details-row"><a href="#details-36-zsh">details</a></td><td class="details-row"><a href="#details-36-mksh">details</a></td><td class="details-row"><a href="#details-36-ksh">details</a></td><td class="details-row"><a href="#details-36-toysh">details</a></td><td class="details-row"><a href="#details-36-sush">details</a></td><td class="details-row"><a href="#details-36-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 37</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="array-assoc.test.html#L644">test -v with dynamic parsing</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-37-dash">details</a></td><td class="details-row"><a href="#details-37-ash">details</a></td><td class="details-row"><a href="#details-37-zsh">details</a></td><td class="details-row"><a href="#details-37-mksh">details</a></td><td class="details-row"><a href="#details-37-ksh">details</a></td><td class="details-row"><a href="#details-37-toysh">details</a></td><td class="details-row"><a href="#details-37-sush">details</a></td><td class="details-row"><a href="#details-37-brush">details</a></td><td class="details-row"><a href="#details-37-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 38</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L667">[[ -v assoc[key] ]]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-38-dash">details</a></td><td class="details-row"><a href="#details-38-ash">details</a></td><td class="details-row"><a href="#details-38-zsh">details</a></td><td class="details-row"><a href="#details-38-mksh">details</a></td><td class="details-row"><a href="#details-38-ksh">details</a></td><td class="details-row"><a href="#details-38-toysh">details</a></td><td class="details-row"><a href="#details-38-sush">details</a></td><td class="details-row"><a href="#details-38-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 39</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L734">[[ -v assoc[key] ]] syntax errors</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-39-dash">details</a></td><td class="details-row"><a href="#details-39-ash">details</a></td><td class="details-row"><a href="#details-39-zsh">details</a></td><td class="details-row"><a href="#details-39-mksh">details</a></td><td class="details-row"><a href="#details-39-ksh">details</a></td><td class="details-row"><a href="#details-39-toysh">details</a></td><td class="details-row"><a href="#details-39-sush">details</a></td><td class="details-row"><a href="#details-39-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 40</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L755">BashAssoc a+=()</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-40-dash">details</a></td><td class="details-row"><a href="#details-40-ash">details</a></td><td class="details-row"><a href="#details-40-zsh">details</a></td><td class="details-row"><a href="#details-40-mksh">details</a></td><td class="details-row"><a href="#details-40-ksh">details</a></td><td class="details-row"><a href="#details-40-toysh">details</a></td><td class="details-row"><a href="#details-40-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 41</td><td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assoc.test.html#L772">BashAssoc ${a[@]@Q}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-41-bash">details</a></td><td class="details-row"><a href="#details-41-dash">details</a></td><td class="details-row"><a href="#details-41-ash">details</a></td><td class="details-row"><a href="#details-41-zsh">details</a></td><td class="details-row"><a href="#details-41-mksh">details</a></td><td class="details-row"><a href="#details-41-ksh">details</a></td><td class="details-row"><a href="#details-41-toysh">details</a></td><td class="details-row"><a href="#details-41-sush">details</a></td><td class="details-row"><a href="#details-41-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>134 passed, 1 OK, 1 not implemented, 2 BUG, 282 failed, 0 timeouts, 0 cases skipped
+2 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="array-assoc.test.html#L19">Literal syntax ([x]=y)</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'b\nbar\nc\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-0-ash"></a><b>ash</b></td><td>0 <a href="array-assoc.test.html#L19">Literal syntax ([x]=y)</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'b\nbar\nc\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="array-assoc.test.html#L19">Literal syntax ([x]=y)</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'b\nbar\nc\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [aa]=b
+</pre></td></tr><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="array-assoc.test.html#L19">Literal syntax ([x]=y)</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'b\nbar\nc\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[3]: "aa": unexpected '"'
+</pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="array-assoc.test.html#L19">Literal syntax ([x]=y)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'b\nbar\nc\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+W: ksh: &lt;stdin&gt;[3]: "aa": unexpected '"'
+</pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="array-assoc.test.html#L19">Literal syntax ([x]=y)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'b\nbar\nc\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: [aa]=b
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="array-assoc.test.html#L19">Literal syntax ([x]=y)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'b\nbar\nc\n', got 'b\nbar\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>b
+bar
+
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: 'a+1': syntax error: operand expected (error token is "'a+1'")
+</pre></td></tr><tr><td><a name="details-1-bash"></a><b>bash</b></td><td>1 <a href="array-assoc.test.html#L31">set associative array to indexed array literal (very surprising bash behavior)</a><br/><br/>
+<span class="assertion">
+[bash stdout]
+Expected 'declare -A assoc=([k1]="foo" [k2]="spam eggs" )\ndeclare -A assoc=()\n'
+Got      'declare -A assoc=([k1]="foo" [k2]="spam eggs" )\ndeclare -A assoc=([foo]="spam eggs" )\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>declare -A assoc=([k1]="foo" [k2]="spam eggs" )
+declare -A assoc=([foo]="spam eggs" )
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="array-assoc.test.html#L31">set associative array to indexed array literal (very surprising bash behavior)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "declare -A assoc=(['k1']=foo ['k2']='spam eggs')\ndeclare -A assoc=(['foo']='spam eggs')\n"
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="array-assoc.test.html#L31">set associative array to indexed array literal (very surprising bash behavior)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "declare -A assoc=(['k1']=foo ['k2']='spam eggs')\ndeclare -A assoc=(['foo']='spam eggs')\n"
+Got      ''
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="array-assoc.test.html#L31">set associative array to indexed array literal (very surprising bash behavior)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "declare -A assoc=(['k1']=foo ['k2']='spam eggs')\ndeclare -A assoc=(['foo']='spam eggs')\n"
+Got      "typeset -a assoc\nassoc=( foo 'spam eggs' )\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>typeset -a assoc
+assoc=( foo 'spam eggs' )
+</pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [k1]=foo
+declare: no such variable: assoc
+</pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="array-assoc.test.html#L31">set associative array to indexed array literal (very surprising bash behavior)</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "declare -A assoc=(['k1']=foo ['k2']='spam eggs')\ndeclare -A assoc=(['foo']='spam eggs')\n"
+Got      ''
+</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="array-assoc.test.html#L31">set associative array to indexed array literal (very surprising bash behavior)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "declare -A assoc=(['k1']=foo ['k2']='spam eggs')\ndeclare -A assoc=(['foo']='spam eggs')\n"
+Got      ''
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="array-assoc.test.html#L31">set associative array to indexed array literal (very surprising bash behavior)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "declare -A assoc=(['k1']=foo ['k2']='spam eggs')\ndeclare -A assoc=(['foo']='spam eggs')\n"
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="array-assoc.test.html#L31">set associative array to indexed array literal (very surprising bash behavior)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "declare -A assoc=(['k1']=foo ['k2']='spam eggs')\ndeclare -A assoc=(['foo']='spam eggs')\n"
+Got      'declare -a assoc=([0]="spam eggs")\ndeclare -a assoc=([0]="foo" [1]="spam eggs")\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>declare -a assoc=([0]="spam eggs")
+declare -a assoc=([0]="foo" [1]="spam eggs")
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="array-assoc.test.html#L31">set associative array to indexed array literal (very surprising bash behavior)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "declare -A assoc=(['k1']=foo ['k2']='spam eggs')\ndeclare -A assoc=(['foo']='spam eggs')\n"
+Got      'declare -A assoc=([k1]="foo" [k2]="spam eggs" )\ndeclare -A assoc=([foo]="spam eggs" )\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>declare -A assoc=([k1]="foo" [k2]="spam eggs" )
+declare -A assoc=([foo]="spam eggs" )
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-bash"></a><b>bash</b></td><td>2 <a href="array-assoc.test.html#L50">Can initialize assoc array with the "(key value ...)" sequence</a><br/><br/>
+<span class="assertion">[bash stdout] Expected 'status=0\ndeclare -A A=()\n', got 'status=0\ndeclare -A A=([3]="" [1]="2" )\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+declare -A A=([3]="" [1]="2" )
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="array-assoc.test.html#L50">Can initialize assoc array with the "(key value ...)" sequence</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "status=0\ndeclare -A A=(['1']=2 ['3']='')\n"
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="array-assoc.test.html#L50">Can initialize assoc array with the "(key value ...)" sequence</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "status=0\ndeclare -A A=(['1']=2 ['3']='')\n"
+Got      ''
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="array-assoc.test.html#L50">Can initialize assoc array with the "(key value ...)" sequence</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "status=0\ndeclare -A A=(['1']=2 ['3']='')\n"
+Got      ''
+</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad set of key/value pairs for associative array
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="array-assoc.test.html#L50">Can initialize assoc array with the "(key value ...)" sequence</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "status=0\ndeclare -A A=(['1']=2 ['3']='')\n"
+Got      ''
+</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="array-assoc.test.html#L50">Can initialize assoc array with the "(key value ...)" sequence</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "status=0\ndeclare -A A=(['1']=2 ['3']='')\n"
+Got      ''
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="array-assoc.test.html#L50">Can initialize assoc array with the "(key value ...)" sequence</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "status=0\ndeclare -A A=(['1']=2 ['3']='')\n"
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="array-assoc.test.html#L50">Can initialize assoc array with the "(key value ...)" sequence</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "status=0\ndeclare -A A=(['1']=2 ['3']='')\n"
+Got      'status=0\ndeclare -a A=([0]="1" [1]="2" [2]="3")\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+declare -a A=([0]="1" [1]="2" [2]="3")
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="array-assoc.test.html#L50">Can initialize assoc array with the "(key value ...)" sequence</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "status=0\ndeclare -A A=(['1']=2 ['3']='')\n"
+Got      'status=0\ndeclare -A A=([1]="2" [3]="" )\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+declare -A A=([1]="2" [3]="" )
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="array-assoc.test.html#L65">create empty assoc array, put, then get</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '[]\n[]\nbar\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="array-assoc.test.html#L65">create empty assoc array, put, then get</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '[]\n[]\nbar\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="array-assoc.test.html#L65">create empty assoc array, put, then get</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '[]\n[]\nbar\n', got '[]\n'</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="array-assoc.test.html#L65">create empty assoc array, put, then get</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '[]\n[]\nbar\n', got '[]\n[]\n'</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[4]: 'foo': multi-character character constant
+</pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="array-assoc.test.html#L65">create empty assoc array, put, then get</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '[]\n[]\nbar\n', got '[]\n[]\n'</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+W: ksh: &lt;stdin&gt;[4]: 'foo': multi-character character constant
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="array-assoc.test.html#L65">create empty assoc array, put, then get</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[]\n[]\nbar\n', got "['']\n['']\n\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['']
+
+</pre><i>stderr:</i> <br/>
+<pre>sh: A[foo]=bar: No such file or directory
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="array-assoc.test.html#L65">create empty assoc array, put, then get</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[]\n[]\nbar\n', got '[]\n[]\n'</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: 'foo': syntax error: operand expected (error token is "'foo'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: 'foo': syntax error: operand expected (error token is "'foo'")
+</pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="array-assoc.test.html#L77">Empty value (doesn't use EmptyWord?)</a><br/><br/>
+<span class="assertion">[dash stdout] Expected "['']\n", got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="array-assoc.test.html#L77">Empty value (doesn't use EmptyWord?)</a><br/><br/>
+<span class="assertion">[ash stdout] Expected "['']\n", got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="array-assoc.test.html#L77">Empty value (doesn't use EmptyWord?)</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected "['']\n", got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [k]=
+zsh: bad math expression: operand expected at `"k"'
+</pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="array-assoc.test.html#L77">Empty value (doesn't use EmptyWord?)</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected "['']\n", got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="array-assoc.test.html#L77">Empty value (doesn't use EmptyWord?)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['']\n", got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="array-assoc.test.html#L77">Empty value (doesn't use EmptyWord?)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="array-assoc.test.html#L84">retrieve keys with !</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'a+1\nfoo\nx\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 3: a[x]=b: not found
+dash: 4: a[foo]=bar: not found
+dash: 5: a[a+1]=c: not found
+dash: 6: Bad substitution
+</pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="array-assoc.test.html#L84">retrieve keys with !</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'a+1\nfoo\nx\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: a[x]=b: not found
+ash: a[foo]=bar: not found
+ash: a[a+1]=c: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="array-assoc.test.html#L84">retrieve keys with !</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'a+1\nfoo\nx\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="array-assoc.test.html#L84">retrieve keys with !</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'a+1\nfoo\nx\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[3]: "x": unexpected '"'
+</pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="array-assoc.test.html#L84">retrieve keys with !</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'a+1\nfoo\nx\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+W: ksh: &lt;stdin&gt;[3]: "x": unexpected '"'
+</pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="array-assoc.test.html#L84">retrieve keys with !</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'a+1\nfoo\nx\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: a[x]=b: No such file or directory
+sh: a[foo]=bar: No such file or directory
+sh: a[a+1]=c: No such file or directory
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="array-assoc.test.html#L84">retrieve keys with !</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'a+1\nfoo\nx\n', got 'x\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: 'foo': syntax error: operand expected (error token is "'foo'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: 'a+1': syntax error: operand expected (error token is "'a+1'")
+</pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="array-assoc.test.html#L99">retrieve values with ${A[@]}</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'b\nbar\nc\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 3: A[x]=b: not found
+dash: 4: A[foo]=bar: not found
+dash: 5: A[a+1]=c: not found
+dash: 6: Bad substitution
+</pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="array-assoc.test.html#L99">retrieve values with ${A[@]}</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'b\nbar\nc\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: A[x]=b: not found
+ash: A[foo]=bar: not found
+ash: A[a+1]=c: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="array-assoc.test.html#L99">retrieve values with ${A[@]}</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'b\nbar\nc\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[3]: "x": unexpected '"'
+</pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="array-assoc.test.html#L99">retrieve values with ${A[@]}</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'b\nbar\nc\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+W: ksh: &lt;stdin&gt;[3]: "x": unexpected '"'
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="array-assoc.test.html#L99">retrieve values with ${A[@]}</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'b\nbar\nc\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: A[x]=b: No such file or directory
+sh: A[foo]=bar: No such file or directory
+sh: A[a+1]=c: No such file or directory
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="array-assoc.test.html#L99">retrieve values with ${A[@]}</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'b\nbar\nc\n', got 'b\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>b
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: 'foo': syntax error: operand expected (error token is "'foo'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: 'a+1': syntax error: operand expected (error token is "'a+1'")
+</pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="array-assoc.test.html#L114">coerce to string with ${A[*]}, etc.</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['xx yy']\n['X X Y Y']\n['xx', 'yy']\n['X', 'X', 'Y', 'Y']\n"
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: A[X X]=xx: not found
+dash: 3: A[Y Y]=yy: not found
+dash: 4: Bad substitution
+</pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="array-assoc.test.html#L114">coerce to string with ${A[*]}, etc.</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['xx yy']\n['X X Y Y']\n['xx', 'yy']\n['X', 'X', 'Y', 'Y']\n"
+Got      ''
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: A[X X]=xx: not found
+ash: A[Y Y]=yy: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="array-assoc.test.html#L114">coerce to string with ${A[*]}, etc.</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['xx yy']\n['X X Y Y']\n['xx', 'yy']\n['X', 'X', 'Y', 'Y']\n"
+Got      "['yy xx']\n"
+</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['yy xx']
+</pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="array-assoc.test.html#L114">coerce to string with ${A[*]}, etc.</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "['xx yy']\n['X X Y Y']\n['xx', 'yy']\n['X', 'X', 'Y', 'Y']\n"
+Got      ''
+</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[2]: 'X X': multi-character character constant
+</pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="array-assoc.test.html#L114">coerce to string with ${A[*]}, etc.</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['xx yy']\n['X X Y Y']\n['xx', 'yy']\n['X', 'X', 'Y', 'Y']\n"
+Got      ''
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+W: ksh: &lt;stdin&gt;[2]: 'X X': multi-character character constant
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="array-assoc.test.html#L114">coerce to string with ${A[*]}, etc.</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['xx yy']\n['X X Y Y']\n['xx', 'yy']\n['X', 'X', 'Y', 'Y']\n"
+Got      "['']\n['']\n[]\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['']
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre>sh: A[X X]=xx: No such file or directory
+sh: A[Y Y]=yy: No such file or directory
+</pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="array-assoc.test.html#L114">coerce to string with ${A[*]}, etc.</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['xx yy']\n['X X Y Y']\n['xx', 'yy']\n['X', 'X', 'Y', 'Y']\n"
+Got      "['']\n['']\n[]\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['']
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: 'X X': syntax error: operand expected (error token is "'X X'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: 'Y Y': syntax error: operand expected (error token is "'Y Y'")
+</pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="array-assoc.test.html#L130">${A[@]/b/B}</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'BBB\nccc\nddd\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: A[aa]=bbb: not found
+dash: 3: A[bb]=ccc: not found
+dash: 4: A[cc]=ddd: not found
+dash: 5: Bad substitution
+</pre></td></tr><tr><td><a name="details-8-ash"></a><b>ash</b></td><td>8 <a href="array-assoc.test.html#L130">${A[@]/b/B}</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'BBB\nccc\nddd\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: A[aa]=bbb: not found
+ash: A[bb]=ccc: not found
+ash: A[cc]=ddd: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-8-mksh"></a><b>mksh</b></td><td>8 <a href="array-assoc.test.html#L130">${A[@]/b/B}</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'BBB\nccc\nddd\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[2]: 'aa': multi-character character constant
+</pre></td></tr><tr><td><a name="details-8-ksh"></a><b>ksh</b></td><td>8 <a href="array-assoc.test.html#L130">${A[@]/b/B}</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'BBB\nccc\nddd\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+W: ksh: &lt;stdin&gt;[2]: 'aa': multi-character character constant
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="array-assoc.test.html#L130">${A[@]/b/B}</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'BBB\nccc\nddd\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: A[aa]=bbb: No such file or directory
+sh: A[bb]=ccc: No such file or directory
+sh: A[cc]=ddd: No such file or directory
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="array-assoc.test.html#L130">${A[@]/b/B}</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'BBB\nccc\nddd\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: 'aa': syntax error: operand expected (error token is "'aa'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: 'bb': syntax error: operand expected (error token is "'bb'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: 'cc': syntax error: operand expected (error token is "'cc'")
+</pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="array-assoc.test.html#L145">${A[@]#prefix}</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'hree\none\nwo\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: A[aa]=one: not found
+dash: 3: A[bb]=two: not found
+dash: 4: A[cc]=three: not found
+dash: 5: Bad substitution
+</pre></td></tr><tr><td><a name="details-9-ash"></a><b>ash</b></td><td>9 <a href="array-assoc.test.html#L145">${A[@]#prefix}</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'hree\none\nwo\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: A[aa]=one: not found
+ash: A[bb]=two: not found
+ash: A[cc]=three: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-9-mksh"></a><b>mksh</b></td><td>9 <a href="array-assoc.test.html#L145">${A[@]#prefix}</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'hree\none\nwo\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[2]: 'aa': multi-character character constant
+</pre></td></tr><tr><td><a name="details-9-ksh"></a><b>ksh</b></td><td>9 <a href="array-assoc.test.html#L145">${A[@]#prefix}</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'hree\none\nwo\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+W: ksh: &lt;stdin&gt;[2]: 'aa': multi-character character constant
+</pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="array-assoc.test.html#L145">${A[@]#prefix}</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'hree\none\nwo\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: A[aa]=one: No such file or directory
+sh: A[bb]=two: No such file or directory
+sh: A[cc]=three: No such file or directory
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="array-assoc.test.html#L145">${A[@]#prefix}</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'hree\none\nwo\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: 'aa': syntax error: operand expected (error token is "'aa'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: 'bb': syntax error: operand expected (error token is "'bb'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: 'cc': syntax error: operand expected (error token is "'cc'")
+</pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="array-assoc.test.html#L159">${assoc} is like ${assoc[0]}</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'a=\na=zzz\na=yyy\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 3: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="array-assoc.test.html#L159">${assoc} is like ${assoc[0]}</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'a=\na=zzz\na=yyy\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-10-zsh"></a><b>zsh</b></td><td>10 <a href="array-assoc.test.html#L159">${assoc} is like ${assoc[0]}</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'a=\na=zzz\na=yyy\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [aa]=b
+</pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="array-assoc.test.html#L159">${assoc} is like ${assoc[0]}</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'a=\na=zzz\na=yyy\n', got 'a=[aa]=b\na=[0]=zzz\na=[0]=yyy\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a=[aa]=b
+a=[0]=zzz
+a=[0]=yyy
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+</pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="array-assoc.test.html#L159">${assoc} is like ${assoc[0]}</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'a=\na=zzz\na=yyy\n', got 'a=[aa]=b\na=[0]=zzz\na=[0]=yyy\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a=[aa]=b
+a=[0]=zzz
+a=[0]=yyy
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="array-assoc.test.html#L159">${assoc} is like ${assoc[0]}</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'a=\na=zzz\na=yyy\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 3: sh: syntax error: [aa]=b
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="array-assoc.test.html#L159">${assoc} is like ${assoc[0]}</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'a=\na=zzz\na=yyy\n', got 'a=bar\na=zzz\na=\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a=bar
+a=zzz
+a=
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: 'a+1': syntax error: operand expected (error token is "'a+1'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: '0': syntax error: operand expected (error token is "'0'")
+</pre></td></tr><tr><td><a name="details-11-dash"></a><b>dash</b></td><td>11 <a href="array-assoc.test.html#L177">length ${#a[@]}</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '3\n', got '0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: a[x]=1: not found
+dash: 3: a[y]=2: not found
+dash: 4: a[z]=3: not found
+</pre></td></tr><tr><td><a name="details-11-ash"></a><b>ash</b></td><td>11 <a href="array-assoc.test.html#L177">length ${#a[@]}</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '3\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: a[x]=1: not found
+ash: a[y]=2: not found
+ash: a[z]=3: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-11-mksh"></a><b>mksh</b></td><td>11 <a href="array-assoc.test.html#L177">length ${#a[@]}</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '3\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[2]: "x": unexpected '"'
+</pre></td></tr><tr><td><a name="details-11-ksh"></a><b>ksh</b></td><td>11 <a href="array-assoc.test.html#L177">length ${#a[@]}</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '3\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+W: ksh: &lt;stdin&gt;[2]: "x": unexpected '"'
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="array-assoc.test.html#L177">length ${#a[@]}</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '3\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: a[x]=1: No such file or directory
+sh: a[y]=2: No such file or directory
+sh: a[z]=3: No such file or directory
+main: line 5: sh: a: [@]}"
+</pre></td></tr><tr><td><a name="details-12-dash"></a><b>dash</b></td><td>12 <a href="array-assoc.test.html#L185">lookup with ${a[0]} -- "0" is a string</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '0 a 1 b 2 c\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: a[0]=a: not found
+dash: 3: a[1]=b: not found
+dash: 4: a[2]=c: not found
+dash: 5: Bad substitution
+</pre></td></tr><tr><td><a name="details-12-ash"></a><b>ash</b></td><td>12 <a href="array-assoc.test.html#L185">lookup with ${a[0]} -- "0" is a string</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '0 a 1 b 2 c\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: a[0]=a: not found
+ash: a[1]=b: not found
+ash: a[2]=c: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="array-assoc.test.html#L185">lookup with ${a[0]} -- "0" is a string</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '0 a 1 b 2 c\n', got '0  1  2 \n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0  1  2 
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="array-assoc.test.html#L185">lookup with ${a[0]} -- "0" is a string</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '0 a 1 b 2 c\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[2]: "0": unexpected '"'
+</pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="array-assoc.test.html#L185">lookup with ${a[0]} -- "0" is a string</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '0 a 1 b 2 c\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+W: ksh: &lt;stdin&gt;[2]: "0": unexpected '"'
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="array-assoc.test.html#L185">lookup with ${a[0]} -- "0" is a string</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '0 a 1 b 2 c\n', got '0  1  2 \n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0  1  2 
+</pre><i>stderr:</i> <br/>
+<pre>sh: a[0]=a: No such file or directory
+sh: a[1]=b: No such file or directory
+sh: a[2]=c: No such file or directory
+</pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="array-assoc.test.html#L195">lookup with double quoted strings "mykey"</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'b bar c\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: a[aa]=b: not found
+dash: 3: a[foo]=bar: not found
+dash: 4: a[a+1]=c: not found
+dash: 5: Bad substitution
+</pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="array-assoc.test.html#L195">lookup with double quoted strings "mykey"</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'b bar c\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: a[aa]=b: not found
+ash: a[foo]=bar: not found
+ash: a[a+1]=c: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="array-assoc.test.html#L195">lookup with double quoted strings "mykey"</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'b bar c\n', got 'b bar \n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>b bar 
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="array-assoc.test.html#L195">lookup with double quoted strings "mykey"</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'b bar c\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[2]: "aa": unexpected '"'
+</pre></td></tr><tr><td><a name="details-13-ksh"></a><b>ksh</b></td><td>13 <a href="array-assoc.test.html#L195">lookup with double quoted strings "mykey"</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'b bar c\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+W: ksh: &lt;stdin&gt;[2]: "aa": unexpected '"'
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="array-assoc.test.html#L195">lookup with double quoted strings "mykey"</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'b bar c\n', got '  \n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  
+</pre><i>stderr:</i> <br/>
+<pre>sh: a[aa]=b: No such file or directory
+sh: a[foo]=bar: No such file or directory
+sh: a[a+1]=c: No such file or directory
+</pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="array-assoc.test.html#L195">lookup with double quoted strings "mykey"</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'b bar c\n', got 'b bar \n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>b bar 
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: 'a+1': syntax error: operand expected (error token is "'a+1'")
+</pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="array-assoc.test.html#L205">lookup with single quoted string</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'c\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: a[aa]=b: not found
+dash: 3: a[foo]=bar: not found
+dash: 4: a[a+1]=c: not found
+dash: 5: Bad substitution
+</pre></td></tr><tr><td><a name="details-14-ash"></a><b>ash</b></td><td>14 <a href="array-assoc.test.html#L205">lookup with single quoted string</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'c\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: a[aa]=b: not found
+ash: a[foo]=bar: not found
+ash: a[a+1]=c: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="array-assoc.test.html#L205">lookup with single quoted string</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'c\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[2]: "aa": unexpected '"'
+</pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="array-assoc.test.html#L205">lookup with single quoted string</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'c\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+W: ksh: &lt;stdin&gt;[2]: "aa": unexpected '"'
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="array-assoc.test.html#L205">lookup with single quoted string</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'c\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>sh: a[aa]=b: No such file or directory
+sh: a[foo]=bar: No such file or directory
+sh: a[a+1]=c: No such file or directory
+</pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="array-assoc.test.html#L205">lookup with single quoted string</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'c\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: 'a+1': syntax error: operand expected (error token is "'a+1'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: 'a+1': syntax error: operand expected (error token is "'a+1'")
+</pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="array-assoc.test.html#L213">lookup with unquoted $key and quoted "$i$i"</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'bar\nb\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: A[aa]=b: not found
+dash: 3: A[foo]=bar: not found
+dash: 6: Bad substitution
+</pre></td></tr><tr><td><a name="details-15-ash"></a><b>ash</b></td><td>15 <a href="array-assoc.test.html#L213">lookup with unquoted $key and quoted "$i$i"</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'bar\nb\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: A[aa]=b: not found
+ash: A[foo]=bar: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-15-zsh"></a><b>zsh</b></td><td>15 <a href="array-assoc.test.html#L213">lookup with unquoted $key and quoted "$i$i"</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'bar\nb\n', got '\nb\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+b
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-mksh"></a><b>mksh</b></td><td>15 <a href="array-assoc.test.html#L213">lookup with unquoted $key and quoted "$i$i"</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'bar\nb\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[2]: "aa": unexpected '"'
+</pre></td></tr><tr><td><a name="details-15-ksh"></a><b>ksh</b></td><td>15 <a href="array-assoc.test.html#L213">lookup with unquoted $key and quoted "$i$i"</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'bar\nb\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+W: ksh: &lt;stdin&gt;[2]: "aa": unexpected '"'
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="array-assoc.test.html#L213">lookup with unquoted $key and quoted "$i$i"</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'bar\nb\n', got '\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+</pre><i>stderr:</i> <br/>
+<pre>sh: A[aa]=b: No such file or directory
+sh: A[foo]=bar: No such file or directory
+</pre></td></tr><tr><td><a name="details-16-bash"></a><b>bash</b></td><td>16 <a href="array-assoc.test.html#L227">lookup by unquoted string doesn't work in OSH because it's a variable</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>c
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-dash"></a><b>dash</b></td><td>16 <a href="array-assoc.test.html#L227">lookup by unquoted string doesn't work in OSH because it's a variable</a><br/><br/>
+<span class="assertion">[dash status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: a[aa]=b: not found
+dash: 3: a[foo]=bar: not found
+dash: 4: a[a+1]=c: not found
+dash: 5: Bad substitution
+</pre></td></tr><tr><td><a name="details-16-ash"></a><b>ash</b></td><td>16 <a href="array-assoc.test.html#L227">lookup by unquoted string doesn't work in OSH because it's a variable</a><br/><br/>
+<span class="assertion">[ash status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: a[aa]=b: not found
+ash: a[foo]=bar: not found
+ash: a[a+1]=c: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-16-zsh"></a><b>zsh</b></td><td>16 <a href="array-assoc.test.html#L227">lookup by unquoted string doesn't work in OSH because it's a variable</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected u'', got '\n'</span><br/>
+<span class="assertion">[zsh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="array-assoc.test.html#L227">lookup by unquoted string doesn't work in OSH because it's a variable</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected u'', got '\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>sh: a[aa]=b: No such file or directory
+sh: a[foo]=bar: No such file or directory
+sh: a[a+1]=c: No such file or directory
+</pre></td></tr><tr><td><a name="details-16-sush"></a><b>sush</b></td><td>16 <a href="array-assoc.test.html#L227">lookup by unquoted string doesn't work in OSH because it's a variable</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got '\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: 'a+1': syntax error: operand expected (error token is "'a+1'")
+</pre></td></tr><tr><td><a name="details-16-brush"></a><b>brush</b></td><td>16 <a href="array-assoc.test.html#L227">lookup by unquoted string doesn't work in OSH because it's a variable</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'c\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>c
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-bash"></a><b>bash</b></td><td>17 <a href="array-assoc.test.html#L238">bash bug: "i+1" and i+1 are the same key</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>array[i]=6
+array[i+1]=7
+assoc[i]=string
+assoc[i+1]=string+1
+assoc[i]=string
+assoc[i+1]=string+1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-dash"></a><b>dash</b></td><td>17 <a href="array-assoc.test.html#L238">bash bug: "i+1" and i+1 are the same key</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'array[i]=6\narray[i+1]=7\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-17-ash"></a><b>ash</b></td><td>17 <a href="array-assoc.test.html#L238">bash bug: "i+1" and i+1 are the same key</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'array[i]=6\narray[i+1]=7\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-17-zsh"></a><b>zsh</b></td><td>17 <a href="array-assoc.test.html#L238">bash bug: "i+1" and i+1 are the same key</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'array[i]=6\narray[i+1]=7\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: array[i]=5
+</pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="array-assoc.test.html#L238">bash bug: "i+1" and i+1 are the same key</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'array[i]=6\narray[i+1]=7\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: 5
+</pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="array-assoc.test.html#L238">bash bug: "i+1" and i+1 are the same key</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'array[i]=6\narray[i+1]=7\n', got 'array[i]=6\narray[i+1]=7\nassoc[i]=string\nassoc[i+1]=string+1\nassoc[i]=string\nassoc[i+1]=string+1\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>array[i]=6
+array[i+1]=7
+assoc[i]=string
+assoc[i+1]=string+1
+assoc[i]=string
+assoc[i+1]=string+1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-brush"></a><b>brush</b></td><td>17 <a href="array-assoc.test.html#L238">bash bug: "i+1" and i+1 are the same key</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'array[i]=6\narray[i+1]=7\n', got 'array[i]=6\narray[i+1]=7\nassoc[i]=string\nassoc[i+1]=string+1\nassoc[i]=string\nassoc[i+1]=string+1\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>array[i]=6
+array[i+1]=7
+assoc[i]=string
+assoc[i+1]=string+1
+assoc[i]=string
+assoc[i+1]=string+1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-dash"></a><b>dash</b></td><td>18 <a href="array-assoc.test.html#L274">Array stored in associative array gets converted to string (without strict_array)</a><br/><br/>
+<span class="assertion">[dash stdout] Expected "['1 2 3']\n", got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-18-ash"></a><b>ash</b></td><td>18 <a href="array-assoc.test.html#L274">Array stored in associative array gets converted to string (without strict_array)</a><br/><br/>
+<span class="assertion">[ash stdout] Expected "['1 2 3']\n", got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-18-mksh"></a><b>mksh</b></td><td>18 <a href="array-assoc.test.html#L274">Array stored in associative array gets converted to string (without strict_array)</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected "['1 2 3']\n", got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: declare: not found
+mksh: &lt;stdin&gt;[3]: 'key': multi-character character constant
+</pre></td></tr><tr><td><a name="details-18-ksh"></a><b>ksh</b></td><td>18 <a href="array-assoc.test.html#L274">Array stored in associative array gets converted to string (without strict_array)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['1 2 3']\n", got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: declare: inaccessible or not found
+W: ksh: &lt;stdin&gt;[3]: 'key': multi-character character constant
+</pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="array-assoc.test.html#L274">Array stored in associative array gets converted to string (without strict_array)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['1 2 3']\n", got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: '1 2'
+</pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="array-assoc.test.html#L274">Array stored in associative array gets converted to string (without strict_array)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "['1 2 3']\n", got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: 'key': syntax error: operand expected (error token is "'key'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: 'key': syntax error: operand expected (error token is "'key'")
+</pre></td></tr><tr><td><a name="details-19-dash"></a><b>dash</b></td><td>19 <a href="array-assoc.test.html#L282">Indexed array as key of associative array coerces to string (without shopt -s strict_array)</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'foo\n1 2 3\n42\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-19-ash"></a><b>ash</b></td><td>19 <a href="array-assoc.test.html#L282">Indexed array as key of associative array coerces to string (without shopt -s strict_array)</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'foo\n1 2 3\n42\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-19-zsh"></a><b>zsh</b></td><td>19 <a href="array-assoc.test.html#L282">Indexed array as key of associative array coerces to string (without shopt -s strict_array)</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'foo\n1 2 3\n42\n', got 'foo\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+</pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-19-mksh"></a><b>mksh</b></td><td>19 <a href="array-assoc.test.html#L282">Indexed array as key of associative array coerces to string (without shopt -s strict_array)</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'foo\n1 2 3\n42\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-19-ksh"></a><b>ksh</b></td><td>19 <a href="array-assoc.test.html#L282">Indexed array as key of associative array coerces to string (without shopt -s strict_array)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'foo\n1 2 3\n42\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="array-assoc.test.html#L282">Indexed array as key of associative array coerces to string (without shopt -s strict_array)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'foo\n1 2 3\n42\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-19-sush"></a><b>sush</b></td><td>19 <a href="array-assoc.test.html#L282">Indexed array as key of associative array coerces to string (without shopt -s strict_array)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'foo\n1 2 3\n42\n', got '\n123\n42\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+123
+42
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-brush"></a><b>brush</b></td><td>19 <a href="array-assoc.test.html#L282">Indexed array as key of associative array coerces to string (without shopt -s strict_array)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'foo\n1 2 3\n42\n', got '\n42\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+42
+</pre><i>stderr:</i> <br/>
+<pre>assoc[1: command not found
+</pre></td></tr><tr><td><a name="details-20-dash"></a><b>dash</b></td><td>20 <a href="array-assoc.test.html#L300">Append to associative array value A['x']+='suffix'</a><br/><br/>
+<span class="assertion">[dash stdout] Expected "['foobarbar']\n", got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: A[x]=foo: not found
+dash: 3: A[x]+=bar: not found
+dash: 4: A[x]+=bar: not found
+dash: 5: Bad substitution
+</pre></td></tr><tr><td><a name="details-20-ash"></a><b>ash</b></td><td>20 <a href="array-assoc.test.html#L300">Append to associative array value A['x']+='suffix'</a><br/><br/>
+<span class="assertion">[ash stdout] Expected "['foobarbar']\n", got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: A[x]=foo: not found
+ash: A[x]+=bar: not found
+ash: A[x]+=bar: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-20-zsh"></a><b>zsh</b></td><td>20 <a href="array-assoc.test.html#L300">Append to associative array value A['x']+='suffix'</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected "['foobarbar']\n", got "['']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-mksh"></a><b>mksh</b></td><td>20 <a href="array-assoc.test.html#L300">Append to associative array value A['x']+='suffix'</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected "['foobarbar']\n", got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[5]: "x": unexpected '"'
+</pre></td></tr><tr><td><a name="details-20-ksh"></a><b>ksh</b></td><td>20 <a href="array-assoc.test.html#L300">Append to associative array value A['x']+='suffix'</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['foobarbar']\n", got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+W: ksh: &lt;stdin&gt;[5]: "x": unexpected '"'
+</pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="array-assoc.test.html#L300">Append to associative array value A['x']+='suffix'</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['foobarbar']\n", got "['']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre>sh: A[x]=foo: No such file or directory
+sh: A[x]+=bar: No such file or directory
+sh: A[x]+=bar: No such file or directory
+</pre></td></tr><tr><td><a name="details-20-sush"></a><b>sush</b></td><td>20 <a href="array-assoc.test.html#L300">Append to associative array value A['x']+='suffix'</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "['foobarbar']\n", got "['']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: 'x': syntax error: operand expected (error token is "'x'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: 'x': syntax error: operand expected (error token is "'x'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: 'x': syntax error: operand expected (error token is "'x'")
+</pre></td></tr><tr><td><a name="details-21-bash"></a><b>bash</b></td><td>21 <a href="array-assoc.test.html#L310">Slice of associative array doesn't make sense in bash</a><br/><br/>
+<span class="assertion">
+[bash stdout]
+Expected "['2', '1', '5']\n['2', '1', '5']\n['1', '5', '4']\n['5', '4', '3']\n['4', '3']\n['3']\n"
+Got      "['4', '1', '3']\n['4', '1', '3']\n['1', '3', '5']\n['3', '5', '2']\n['5', '2']\n['2']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['4', '1', '3']
+['4', '1', '3']
+['1', '3', '5']
+['3', '5', '2']
+['5', '2']
+['2']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-dash"></a><b>dash</b></td><td>21 <a href="array-assoc.test.html#L310">Slice of associative array doesn't make sense in bash</a><br/><br/>
+<span class="assertion">[dash status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: a[xx]=1: not found
+dash: 3: a[yy]=2: not found
+dash: 4: a[zz]=3: not found
+dash: 5: a[aa]=4: not found
+dash: 6: a[bb]=5: not found
+dash: 7: Bad substitution
+</pre></td></tr><tr><td><a name="details-21-ash"></a><b>ash</b></td><td>21 <a href="array-assoc.test.html#L310">Slice of associative array doesn't make sense in bash</a><br/><br/>
+<span class="assertion">[ash status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: a[xx]=1: not found
+ash: a[yy]=2: not found
+ash: a[zz]=3: not found
+ash: a[aa]=4: not found
+ash: a[bb]=5: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-21-zsh"></a><b>zsh</b></td><td>21 <a href="array-assoc.test.html#L310">Slice of associative array doesn't make sense in bash</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected u'', got "['5', '4', '3']\n['4', '3', '2']\n['3', '2', '1']\n['2', '1']\n['1']\n[]\n"</span><br/>
+<span class="assertion">[zsh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['5', '4', '3']
+['4', '3', '2']
+['3', '2', '1']
+['2', '1']
+['1']
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="array-assoc.test.html#L310">Slice of associative array doesn't make sense in bash</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected u'', got '[]\n[]\n[]\n[]\n[]\n[]\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[]
+[]
+[]
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre>sh: a[xx]=1: No such file or directory
+sh: a[yy]=2: No such file or directory
+sh: a[zz]=3: No such file or directory
+sh: a[aa]=4: No such file or directory
+sh: a[bb]=5: No such file or directory
+</pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="array-assoc.test.html#L310">Slice of associative array doesn't make sense in bash</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got "['4', '5', '1']\n['4', '5', '1']\n['4', '5', '1']\n['4', '5', '1']\n['4', '5', '1']\n['4', '5', '1']\n"</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['4', '5', '1']
+['4', '5', '1']
+['4', '5', '1']
+['4', '5', '1']
+['4', '5', '1']
+['4', '5', '1']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-brush"></a><b>brush</b></td><td>21 <a href="array-assoc.test.html#L310">Slice of associative array doesn't make sense in bash</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got "['4', '5', '1']\n['5', '1', '2']\n['1', '2', '3']\n['2', '3']\n['3']\n[]\n"</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['4', '5', '1']
+['5', '1', '2']
+['1', '2', '3']
+['2', '3']
+['3']
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-dash"></a><b>dash</b></td><td>22 <a href="array-assoc.test.html#L336">bash variable can have an associative array part and a string part</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '1 2\n1 2 zero\n1 2 string\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: assoc[1]=1: not found
+dash: 3: assoc[2]=2: not found
+dash: 4: Bad substitution
+</pre></td></tr><tr><td><a name="details-22-ash"></a><b>ash</b></td><td>22 <a href="array-assoc.test.html#L336">bash variable can have an associative array part and a string part</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '1 2\n1 2 zero\n1 2 string\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: assoc[1]=1: not found
+ash: assoc[2]=2: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-22-zsh"></a><b>zsh</b></td><td>22 <a href="array-assoc.test.html#L336">bash variable can have an associative array part and a string part</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '1 2\n1 2 zero\n1 2 string\n', got '1 2 1 2\n1 2 zero 1 2\ns t string\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1 2 1 2
+1 2 zero 1 2
+s t string
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="array-assoc.test.html#L336">bash variable can have an associative array part and a string part</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1 2\n1 2 zero\n1 2 string\n', got '\n\n'</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+</pre><i>stderr:</i> <br/>
+<pre>sh: assoc[1]=1: No such file or directory
+sh: assoc[2]=2: No such file or directory
+sh: assoc[0]=zero: No such file or directory
+main: line 8: sh: assoc: [1]}
+</pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="array-assoc.test.html#L336">bash variable can have an associative array part and a string part</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '1 2\n1 2 zero\n1 2 string\n', got '1 2 2\n1 2 zero\n1 2 zero\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1 2 2
+1 2 zero
+1 2 zero
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: Undefined call set_as_single
+</pre></td></tr><tr><td><a name="details-22-osh"></a><b>osh</b></td><td>22 <a href="array-assoc.test.html#L336">bash variable can have an associative array part and a string part</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1 2
+1 2 zero
+</pre><i>stderr:</i> <br/>
+<pre>  echo ${assoc[1]} ${assoc[2]} ${assoc}
+         ^~~~~
+[ stdin ]:8: fatal: Can't index string 'assoc' with integer
+</pre></td></tr><tr><td><a name="details-23-dash"></a><b>dash</b></td><td>23 <a href="array-assoc.test.html#L358">Associative array expressions inside (( )) with keys that look like numbers</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '42\n42\n', got '\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: assoc[0]=42: not found
+dash: 3: Bad substitution
+dash: 5: var: not found
+</pre></td></tr><tr><td><a name="details-23-ash"></a><b>ash</b></td><td>23 <a href="array-assoc.test.html#L358">Associative array expressions inside (( )) with keys that look like numbers</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '42\n42\n', got '\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+</pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: assoc[0]=42: not found
+ash: syntax error: bad substitution
+ash: var: not found
+</pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="array-assoc.test.html#L358">Associative array expressions inside (( )) with keys that look like numbers</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '42\n42\n', got '\n\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+</pre><i>stderr:</i> <br/>
+<pre>sh: assoc[0]=42: No such file or directory
+main: line 3: sh: bad math:  var =   @ 8
+main: line 5: sh: =0
+main: line 5: sh: bad math:  var = assoc[0]  @ 12
+</pre></td></tr><tr><td><a name="details-24-dash"></a><b>dash</b></td><td>24 <a href="array-assoc.test.html#L370">(( A[5] += 42 ))</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '16\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: A[5]: not found
+dash: 3: A[5]: not found
+dash: 4: Bad substitution
+</pre></td></tr><tr><td><a name="details-24-ash"></a><b>ash</b></td><td>24 <a href="array-assoc.test.html#L370">(( A[5] += 42 ))</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '16\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: A[5]: not found
+ash: A[5]: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="array-assoc.test.html#L370">(( A[5] += 42 ))</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '16\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: bad math:  A[5] = 10  @ 2
+main: line 3: sh: bad math:  A[5] += 6  @ 2
+</pre></td></tr><tr><td><a name="details-25-dash"></a><b>dash</b></td><td>25 <a href="array-assoc.test.html#L379">(( A[5] += 42 )) with empty cell</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '6\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 2: declare: not found
+dash: 3: A[5]: not found
+dash: 4: Bad substitution
+</pre></td></tr><tr><td><a name="details-25-ash"></a><b>ash</b></td><td>25 <a href="array-assoc.test.html#L379">(( A[5] += 42 )) with empty cell</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '6\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: declare: not found
+ash: A[5]: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="array-assoc.test.html#L379">(( A[5] += 42 )) with empty cell</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '6\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+main: line 3: sh: bad math:  A[5] += 6  @ 2
+</pre></td></tr><tr><td><a name="details-26-bash"></a><b>bash</b></td><td>26 <a href="array-assoc.test.html#L388">setting key to itself (from bash-bug mailing list)</a><br/><br/>
+<span class="assertion">[bash stdout] Expected 'value1\nvalue2\n', got 'value1\nvalue1 value2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>value1
+value1 value2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-dash"></a><b>dash</b></td><td>26 <a href="array-assoc.test.html#L388">setting key to itself (from bash-bug mailing list)</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'value1\nvalue1 value2\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-26-ash"></a><b>ash</b></td><td>26 <a href="array-assoc.test.html#L388">setting key to itself (from bash-bug mailing list)</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'value1\nvalue1 value2\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-26-zsh"></a><b>zsh</b></td><td>26 <a href="array-assoc.test.html#L388">setting key to itself (from bash-bug mailing list)</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'value1\nvalue1 value2\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [key]=value1
+</pre></td></tr><tr><td><a name="details-26-mksh"></a><b>mksh</b></td><td>26 <a href="array-assoc.test.html#L388">setting key to itself (from bash-bug mailing list)</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'value1\nvalue1 value2\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[3]: "key": unexpected '"'
+</pre></td></tr><tr><td><a name="details-26-ksh"></a><b>ksh</b></td><td>26 <a href="array-assoc.test.html#L388">setting key to itself (from bash-bug mailing list)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'value1\nvalue1 value2\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+W: ksh: &lt;stdin&gt;[3]: "key": unexpected '"'
+</pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="array-assoc.test.html#L388">setting key to itself (from bash-bug mailing list)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'value1\nvalue1 value2\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: ["key"]="value1"
+</pre></td></tr><tr><td><a name="details-27-dash"></a><b>dash</b></td><td>27 <a href="array-assoc.test.html#L403">readonly associative array can't be modified</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'status=1\n', got 'status=127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: A[x]=1: not found
+</pre></td></tr><tr><td><a name="details-27-ash"></a><b>ash</b></td><td>27 <a href="array-assoc.test.html#L403">readonly associative array can't be modified</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'status=1\n', got 'status=127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: A[x]=1: not found
+</pre></td></tr><tr><td><a name="details-27-zsh"></a><b>zsh</b></td><td>27 <a href="array-assoc.test.html#L403">readonly associative array can't be modified</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'status=1\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: read-only variable: A
+</pre></td></tr><tr><td><a name="details-27-mksh"></a><b>mksh</b></td><td>27 <a href="array-assoc.test.html#L403">readonly associative array can't be modified</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'status=1\n', got 'status=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+</pre></td></tr><tr><td><a name="details-27-ksh"></a><b>ksh</b></td><td>27 <a href="array-assoc.test.html#L403">readonly associative array can't be modified</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=1\n', got 'status=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-27-toysh"></a><b>toysh</b></td><td>27 <a href="array-assoc.test.html#L403">readonly associative array can't be modified</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=1\n', got 'status=127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: A[x]=1: No such file or directory
+</pre></td></tr><tr><td><a name="details-27-osh"></a><b>osh</b></td><td>27 <a href="array-assoc.test.html#L403">readonly associative array can't be modified</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  A['x']=1
+  ^~
+[ stdin ]:2: fatal: Can't assign to readonly associative array
+</pre></td></tr><tr><td><a name="details-28-dash"></a><b>dash</b></td><td>28 <a href="array-assoc.test.html#L413">associative array and brace expansion</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'v\n-{a,b}-\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-28-ash"></a><b>ash</b></td><td>28 <a href="array-assoc.test.html#L413">associative array and brace expansion</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'v\n-{a,b}-\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-28-zsh"></a><b>zsh</b></td><td>28 <a href="array-assoc.test.html#L413">associative array and brace expansion</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'v\n-{a,b}-\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [k1]=v
+zsh: bad math expression: operand expected at `"k1"'
+</pre></td></tr><tr><td><a name="details-28-mksh"></a><b>mksh</b></td><td>28 <a href="array-assoc.test.html#L413">associative array and brace expansion</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'v\n-{a,b}-\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-28-ksh"></a><b>ksh</b></td><td>28 <a href="array-assoc.test.html#L413">associative array and brace expansion</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'v\n-{a,b}-\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-28-toysh"></a><b>toysh</b></td><td>28 <a href="array-assoc.test.html#L413">associative array and brace expansion</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'v\n-{a,b}-\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-28-sush"></a><b>sush</b></td><td>28 <a href="array-assoc.test.html#L413">associative array and brace expansion</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'v\n-{a,b}-\n', got '-b-\n-b-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-b-
+-b-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-brush"></a><b>brush</b></td><td>28 <a href="array-assoc.test.html#L413">associative array and brace expansion</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'v\n-{a,b}-\n', got 'v\n-a- -b-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>v
+-a- -b-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-dash"></a><b>dash</b></td><td>29 <a href="array-assoc.test.html#L422">declare -A A=() allowed</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'len=0\nlen=1\nunset len=0\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: shopt: not found
+dash: 4: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-29-ash"></a><b>ash</b></td><td>29 <a href="array-assoc.test.html#L422">declare -A A=() allowed</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'len=0\nlen=1\nunset len=0\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-29-mksh"></a><b>mksh</b></td><td>29 <a href="array-assoc.test.html#L422">declare -A A=() allowed</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'len=0\nlen=1\nunset len=0\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: shopt: not found
+mksh: &lt;stdin&gt;[4]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-29-ksh"></a><b>ksh</b></td><td>29 <a href="array-assoc.test.html#L422">declare -A A=() allowed</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'len=0\nlen=1\nunset len=0\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[4]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-29-toysh"></a><b>toysh</b></td><td>29 <a href="array-assoc.test.html#L422">declare -A A=() allowed</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'len=0\nlen=1\nunset len=0\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>set: bad -o nounset
+sh: shopt: No such file or directory
+main: line 4: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-29-sush"></a><b>sush</b></td><td>29 <a href="array-assoc.test.html#L422">declare -A A=() allowed</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'len=0\nlen=1\nunset len=0\n', got 'len=0\nlen=0\nunset len=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=0
+len=0
+unset len=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: nounset: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: shopt: strict_arith: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: 'k': syntax error: operand expected (error token is "'k'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 10: set: nounset: invalid option name
+</pre></td></tr><tr><td><a name="details-30-dash"></a><b>dash</b></td><td>30 <a href="array-assoc.test.html#L444">unset -v and assoc array</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'len=1\nlen=0\nlen=1\nlen=0\nlen=1\nlen=0\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 3: Syntax error: Bad function name
+</pre></td></tr><tr><td><a name="details-30-ash"></a><b>ash</b></td><td>30 <a href="array-assoc.test.html#L444">unset -v and assoc array</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'len=1\nlen=0\nlen=1\nlen=0\nlen=1\nlen=0\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: bad function name
+</pre></td></tr><tr><td><a name="details-30-zsh"></a><b>zsh</b></td><td>30 <a href="array-assoc.test.html#L444">unset -v and assoc array</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'len=1\nlen=0\nlen=1\nlen=0\nlen=1\nlen=0\n', got 'len=0\nlen=0\nlen=0\nlen=0\nlen=0\nlen=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=0
+len=0
+len=0
+len=0
+len=0
+len=0
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: no matches found: [K]=val
+zsh: no matches found: [K]=val
+zsh: no matches found: [K]=val
+</pre></td></tr><tr><td><a name="details-30-mksh"></a><b>mksh</b></td><td>30 <a href="array-assoc.test.html#L444">unset -v and assoc array</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'len=1\nlen=0\nlen=1\nlen=0\nlen=1\nlen=0\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+mksh: &lt;stdin&gt;[7]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-30-ksh"></a><b>ksh</b></td><td>30 <a href="array-assoc.test.html#L444">unset -v and assoc array</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'len=1\nlen=0\nlen=1\nlen=0\nlen=1\nlen=0\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[7]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-30-toysh"></a><b>toysh</b></td><td>30 <a href="array-assoc.test.html#L444">unset -v and assoc array</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'len=1\nlen=0\nlen=1\nlen=0\nlen=1\nlen=0\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+main: line 7: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-30-sush"></a><b>sush</b></td><td>30 <a href="array-assoc.test.html#L444">unset -v and assoc array</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'len=1\nlen=0\nlen=1\nlen=0\nlen=1\nlen=0\n', got 'len=0\n'</span><br/>
+<span class="assertion">[sush status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: shopt: eval_unsafe_arith: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: Unexpected token: ()
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: Unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: 'K': syntax error: operand expected (error token is "'K'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: show-len: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: show-len: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: 'K': syntax error: operand expected (error token is "'K'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 14: show-len: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 17: show-len: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 19: 'K': syntax error: operand expected (error token is "'K'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 20: show-len: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 22: show-len: command not found
+</pre></td></tr><tr><td><a name="details-30-brush"></a><b>brush</b></td><td>30 <a href="array-assoc.test.html#L444">unset -v and assoc array</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'len=1\nlen=0\nlen=1\nlen=0\nlen=1\nlen=0\n', got 'len=1\nlen=1\nlen=1\nlen=1\nlen=1\nlen=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=1
+len=1
+len=1
+len=1
+len=1
+len=1
+</pre><i>stderr:</i> <br/>
+<pre>shopt: eval_unsafe_arith: invalid shell option name
+[31mERROR[0m failed to parse arithmetic expression
+[31mERROR[0m failed to parse arithmetic expression
+[31mERROR[0m failed to parse arithmetic expression
+</pre></td></tr><tr><td><a name="details-31-dash"></a><b>dash</b></td><td>31 <a href="array-assoc.test.html#L484">nameref and assoc array</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'values: val\nbefore val\nafter val2\nvalues: val2\n---\nbefore val2\nafter val3\nvalues: val3\n'
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: Bad function name
+</pre></td></tr><tr><td><a name="details-31-ash"></a><b>ash</b></td><td>31 <a href="array-assoc.test.html#L484">nameref and assoc array</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'values: val\nbefore val\nafter val2\nvalues: val2\n---\nbefore val2\nafter val3\nvalues: val3\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad function name
+</pre></td></tr><tr><td><a name="details-31-zsh"></a><b>zsh</b></td><td>31 <a href="array-assoc.test.html#L484">nameref and assoc array</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'values: val\nbefore val\nafter val2\nvalues: val2\n---\nbefore val2\nafter val3\nvalues: val3\n'
+Got      'values:\nbefore\nafter val2\nvalues:\n---\nbefore val2\nafter val3\nvalues:\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>values:
+before
+after val2
+values:
+---
+before val2
+after val3
+values:
+</pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [K]=val
+zsh: bad option: -n
+zsh: bad option: -n
+</pre></td></tr><tr><td><a name="details-31-mksh"></a><b>mksh</b></td><td>31 <a href="array-assoc.test.html#L484">nameref and assoc array</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'values: val\nbefore val\nafter val2\nvalues: val2\n---\nbefore val2\nafter val3\nvalues: val3\n'
+Got      ''
+</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-31-ksh"></a><b>ksh</b></td><td>31 <a href="array-assoc.test.html#L484">nameref and assoc array</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'values: val\nbefore val\nafter val2\nvalues: val2\n---\nbefore val2\nafter val3\nvalues: val3\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-31-toysh"></a><b>toysh</b></td><td>31 <a href="array-assoc.test.html#L484">nameref and assoc array</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'values: val\nbefore val\nafter val2\nvalues: val2\n---\nbefore val2\nafter val3\nvalues: val3\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 5: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-31-sush"></a><b>sush</b></td><td>31 <a href="array-assoc.test.html#L484">nameref and assoc array</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'values: val\nbefore val\nafter val2\nvalues: val2\n---\nbefore val2\nafter val3\nvalues: val3\n'
+Got      'values:\nbefore A[K]\nafter val2\n---\nbefore A[K]\nafter val3\n'
+</span><br/>
+<span class="assertion">[sush status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>values:
+before A[K]
+after val2
+---
+before A[K]
+after val3
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: Unexpected token: ()
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: Unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: 'K': syntax error: operand expected (error token is "'K'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: show-values: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 12: show-values: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 21: show-values: command not found
+</pre></td></tr><tr><td><a name="details-31-brush"></a><b>brush</b></td><td>31 <a href="array-assoc.test.html#L484">nameref and assoc array</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'values: val\nbefore val\nafter val2\nvalues: val2\n---\nbefore val2\nafter val3\nvalues: val3\n'
+Got      'values: val\nbefore A["K"]\nafter val2\nvalues: val\n---\nbefore A[$key]\nafter val3\nvalues: val\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>values: val
+before A["K"]
+after val2
+values: val
+---
+before A[$key]
+after val3
+values: val
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-osh"></a><b>osh</b></td><td>31 <a href="array-assoc.test.html#L484">nameref and assoc array</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'values: val\nbefore val\nafter val2\nvalues: val2\n---\nbefore val2\nafter val3\nvalues: val3\n'
+Got      'values: val\nbefore A["K"]\nafter val2\nvalues: val\n---\nbefore A[$key]\nafter val3\nvalues: val\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>values: val
+before A["K"]
+after val2
+values: val
+---
+before A[$key]
+after val3
+values: val
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-dash"></a><b>dash</b></td><td>32 <a href="array-assoc.test.html#L518">${!ref} and assoc array</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'values: val\nref val\nref val\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: Bad function name
+</pre></td></tr><tr><td><a name="details-32-ash"></a><b>ash</b></td><td>32 <a href="array-assoc.test.html#L518">${!ref} and assoc array</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'values: val\nref val\nref val\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad function name
+</pre></td></tr><tr><td><a name="details-32-zsh"></a><b>zsh</b></td><td>32 <a href="array-assoc.test.html#L518">${!ref} and assoc array</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'values: val\nref val\nref val\n', got 'values:\n'</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>values:
+</pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [K]=val
+zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-32-mksh"></a><b>mksh</b></td><td>32 <a href="array-assoc.test.html#L518">${!ref} and assoc array</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'values: val\nref val\nref val\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-32-ksh"></a><b>ksh</b></td><td>32 <a href="array-assoc.test.html#L518">${!ref} and assoc array</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'values: val\nref val\nref val\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-32-toysh"></a><b>toysh</b></td><td>32 <a href="array-assoc.test.html#L518">${!ref} and assoc array</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'values: val\nref val\nref val\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 5: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-32-sush"></a><b>sush</b></td><td>32 <a href="array-assoc.test.html#L518">${!ref} and assoc array</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'values: val\nref val\nref val\n', got 'values:\nref\nref\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>values:
+ref
+ref
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: Unexpected token: ()
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: Unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: 'K': syntax error: operand expected (error token is "'K'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: show-values: command not found
+</pre></td></tr><tr><td><a name="details-33-dash"></a><b>dash</b></td><td>33 <a href="array-assoc.test.html#L540">printf -v and assoc array</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'values: val\nvalues: /val2/\nvalues: /val3/\n'
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: Bad function name
+</pre></td></tr><tr><td><a name="details-33-ash"></a><b>ash</b></td><td>33 <a href="array-assoc.test.html#L540">printf -v and assoc array</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'values: val\nvalues: /val2/\nvalues: /val3/\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad function name
+</pre></td></tr><tr><td><a name="details-33-zsh"></a><b>zsh</b></td><td>33 <a href="array-assoc.test.html#L540">printf -v and assoc array</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'values: val\nvalues: /val2/\nvalues: /val3/\n'
+Got      'values:\n-vvalues:\n-vvalues:\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>values:
+-vvalues:
+-vvalues:
+</pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [K]=val
+</pre></td></tr><tr><td><a name="details-33-mksh"></a><b>mksh</b></td><td>33 <a href="array-assoc.test.html#L540">printf -v and assoc array</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'values: val\nvalues: /val2/\nvalues: /val3/\n'
+Got      ''
+</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-33-ksh"></a><b>ksh</b></td><td>33 <a href="array-assoc.test.html#L540">printf -v and assoc array</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'values: val\nvalues: /val2/\nvalues: /val3/\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-33-toysh"></a><b>toysh</b></td><td>33 <a href="array-assoc.test.html#L540">printf -v and assoc array</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'values: val\nvalues: /val2/\nvalues: /val3/\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 5: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-33-sush"></a><b>sush</b></td><td>33 <a href="array-assoc.test.html#L540">printf -v and assoc array</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'values: val\nvalues: /val2/\nvalues: /val3/\n'
+Got      'values:\n'
+</span><br/>
+<span class="assertion">[sush status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>values:
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: Unexpected token: ()
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: Unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: 'K': syntax error: operand expected (error token is "'K'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: show-values: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: show-values: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: show-values: command not found
+</pre></td></tr><tr><td><a name="details-34-bash"></a><b>bash</b></td><td>34 <a href="array-assoc.test.html#L567">bash bug: (( A["$key"] = 1 )) doesn't work</a><br/><br/>
+<span class="assertion">[bash stdout] Expected '[]\n[]\n', got "['\\\\']\n['42']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['\\']
+['42']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-dash"></a><b>dash</b></td><td>34 <a href="array-assoc.test.html#L567">bash bug: (( A["$key"] = 1 )) doesn't work</a><br/><br/>
+<span class="assertion">[dash stdout] Expected "['\\\\']\n['42']\n", got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: declare: not found
+dash: 6: A[\]: not found
+dash: 8: Bad substitution
+</pre></td></tr><tr><td><a name="details-34-ash"></a><b>ash</b></td><td>34 <a href="array-assoc.test.html#L567">bash bug: (( A["$key"] = 1 )) doesn't work</a><br/><br/>
+<span class="assertion">[ash stdout] Expected "['\\\\']\n['42']\n", got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: A[\]: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-34-zsh"></a><b>zsh</b></td><td>34 <a href="array-assoc.test.html#L567">bash bug: (( A["$key"] = 1 )) doesn't work</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected "['\\\\']\n['42']\n", got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-34-mksh"></a><b>mksh</b></td><td>34 <a href="array-assoc.test.html#L567">bash bug: (( A["$key"] = 1 )) doesn't work</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected "['\\\\']\n['42']\n", got "['0']\n['42']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['0']
+['42']
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: declare: not found
+</pre></td></tr><tr><td><a name="details-34-ksh"></a><b>ksh</b></td><td>34 <a href="array-assoc.test.html#L567">bash bug: (( A["$key"] = 1 )) doesn't work</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['\\\\']\n['42']\n", got "['0']\n['42']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['0']
+['42']
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: declare: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-34-toysh"></a><b>toysh</b></td><td>34 <a href="array-assoc.test.html#L567">bash bug: (( A["$key"] = 1 )) doesn't work</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['\\\\']\n['42']\n", got "['']\n['']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['']
+</pre><i>stderr:</i> <br/>
+<pre>main: line 6: sh: bad math:  A[\] = 42  @ 2
+</pre></td></tr><tr><td><a name="details-34-brush"></a><b>brush</b></td><td>34 <a href="array-assoc.test.html#L567">bash bug: (( A["$key"] = 1 )) doesn't work</a><br/><br/>
+<span class="assertion">[brush stdout] Expected "['\\\\']\n['42']\n", got '[]\n[]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: arithmetic evaluation error: failed to parse expression: 'A[\] = 42'
+</pre></td></tr><tr><td><a name="details-35-dash"></a><b>dash</b></td><td>35 <a href="array-assoc.test.html#L592">Implicit increment of keys</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['30', '31', '40', '41']\n['a', 'b', 'x', 'y']\n"
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-35-ash"></a><b>ash</b></td><td>35 <a href="array-assoc.test.html#L592">Implicit increment of keys</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['30', '31', '40', '41']\n['a', 'b', 'x', 'y']\n"
+Got      ''
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-35-zsh"></a><b>zsh</b></td><td>35 <a href="array-assoc.test.html#L592">Implicit increment of keys</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['30', '31', '40', '41']\n['a', 'b', 'x', 'y']\n"
+Got      ''
+</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [30]=a
+zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-35-mksh"></a><b>mksh</b></td><td>35 <a href="array-assoc.test.html#L592">Implicit increment of keys</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "['30', '31', '40', '41']\n['a', 'b', 'x', 'y']\n"
+Got      ''
+</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-35-ksh"></a><b>ksh</b></td><td>35 <a href="array-assoc.test.html#L592">Implicit increment of keys</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['30', '31', '40', '41']\n['a', 'b', 'x', 'y']\n"
+Got      ''
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-35-toysh"></a><b>toysh</b></td><td>35 <a href="array-assoc.test.html#L592">Implicit increment of keys</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['30', '31', '40', '41']\n['a', 'b', 'x', 'y']\n"
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-36-dash"></a><b>dash</b></td><td>36 <a href="array-assoc.test.html#L602">test -v assoc[key]</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'no quotes\nempty=0\nk=0\nnonexistent=1\n\nquotes\nempty=0\nk=0\nnonexistent=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: typeset: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-36-ash"></a><b>ash</b></td><td>36 <a href="array-assoc.test.html#L602">test -v assoc[key]</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'no quotes\nempty=0\nk=0\nnonexistent=1\n\nquotes\nempty=0\nk=0\nnonexistent=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: typeset: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-36-zsh"></a><b>zsh</b></td><td>36 <a href="array-assoc.test.html#L602">test -v assoc[key]</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'no quotes\nempty=0\nk=0\nnonexistent=1\n\nquotes\nempty=0\nk=0\nnonexistent=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [empty]=
+</pre></td></tr><tr><td><a name="details-36-mksh"></a><b>mksh</b></td><td>36 <a href="array-assoc.test.html#L602">test -v assoc[key]</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'no quotes\nempty=0\nk=0\nnonexistent=1\n\nquotes\nempty=0\nk=0\nnonexistent=1\n'
+Got      'no quotes\nempty=2\nk=2\nnonexistent=2\n\nquotes\nempty=2\nk=2\nnonexistent=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>no quotes
+empty=2
+k=2
+nonexistent=2
+
+quotes
+empty=2
+k=2
+nonexistent=2
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: typeset: -A: unknown option
+mksh: &lt;stdin&gt;[6]: test: assoc[empty]: unexpected operator/operand
+mksh: &lt;stdin&gt;[9]: test: assoc[k]: unexpected operator/operand
+mksh: &lt;stdin&gt;[12]: test: assoc[nonexistent]: unexpected operator/operand
+mksh: &lt;stdin&gt;[19]: test: assoc[empty]: unexpected operator/operand
+mksh: &lt;stdin&gt;[22]: test: assoc[k]: unexpected operator/operand
+mksh: &lt;stdin&gt;[25]: test: assoc[nonexistent]: unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-36-ksh"></a><b>ksh</b></td><td>36 <a href="array-assoc.test.html#L602">test -v assoc[key]</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'no quotes\nempty=0\nk=0\nnonexistent=1\n\nquotes\nempty=0\nk=0\nnonexistent=1\n'
+Got      'no quotes\nempty=0\nk=0\nnonexistent=0\n\nquotes\nempty=0\nk=0\nnonexistent=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>no quotes
+empty=0
+k=0
+nonexistent=0
+
+quotes
+empty=0
+k=0
+nonexistent=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: typeset: -A: unknown option
+</pre></td></tr><tr><td><a name="details-36-toysh"></a><b>toysh</b></td><td>36 <a href="array-assoc.test.html#L602">test -v assoc[key]</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'no quotes\nempty=0\nk=0\nnonexistent=1\n\nquotes\nempty=0\nk=0\nnonexistent=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+main: line 2: sh: syntax error: [empty]=''
+</pre></td></tr><tr><td><a name="details-36-sush"></a><b>sush</b></td><td>36 <a href="array-assoc.test.html#L602">test -v assoc[key]</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'no quotes\nempty=0\nk=0\nnonexistent=1\n\nquotes\nempty=0\nk=0\nnonexistent=1\n'
+Got      'no quotes\nempty=2\nk=2\nnonexistent=2\n\nquotes\nempty=2\nk=2\nnonexistent=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>no quotes
+empty=2
+k=2
+nonexistent=2
+
+quotes
+empty=2
+k=2
+nonexistent=2
+</pre><i>stderr:</i> <br/>
+<pre>test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+</pre></td></tr><tr><td><a name="details-36-brush"></a><b>brush</b></td><td>36 <a href="array-assoc.test.html#L602">test -v assoc[key]</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'no quotes\nempty=0\nk=0\nnonexistent=1\n\nquotes\nempty=0\nk=0\nnonexistent=1\n'
+Got      'no quotes\nempty=1\nk=1\nnonexistent=1\n\nquotes\nempty=1\nk=1\nnonexistent=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>no quotes
+empty=1
+k=1
+nonexistent=1
+
+quotes
+empty=1
+k=1
+nonexistent=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-37-dash"></a><b>dash</b></td><td>37 <a href="array-assoc.test.html#L644">test -v with dynamic parsing</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'empty=0\nk=0\nnonexistent=1\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: typeset: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-37-ash"></a><b>ash</b></td><td>37 <a href="array-assoc.test.html#L644">test -v with dynamic parsing</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'empty=0\nk=0\nnonexistent=1\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: typeset: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-37-zsh"></a><b>zsh</b></td><td>37 <a href="array-assoc.test.html#L644">test -v with dynamic parsing</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'empty=0\nk=0\nnonexistent=1\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [empty]=
+</pre></td></tr><tr><td><a name="details-37-mksh"></a><b>mksh</b></td><td>37 <a href="array-assoc.test.html#L644">test -v with dynamic parsing</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'empty=0\nk=0\nnonexistent=1\n', got 'empty=2\nk=2\nnonexistent=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>empty=2
+k=2
+nonexistent=2
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: typeset: -A: unknown option
+mksh: &lt;stdin&gt;[5]: test: assoc[$key]: unexpected operator/operand
+mksh: &lt;stdin&gt;[9]: test: assoc[$key]: unexpected operator/operand
+mksh: &lt;stdin&gt;[13]: test: assoc[$key]: unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-37-ksh"></a><b>ksh</b></td><td>37 <a href="array-assoc.test.html#L644">test -v with dynamic parsing</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'empty=0\nk=0\nnonexistent=1\n', got 'empty=0\nk=0\nnonexistent=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>empty=0
+k=0
+nonexistent=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: typeset: -A: unknown option
+</pre></td></tr><tr><td><a name="details-37-toysh"></a><b>toysh</b></td><td>37 <a href="array-assoc.test.html#L644">test -v with dynamic parsing</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'empty=0\nk=0\nnonexistent=1\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+main: line 2: sh: syntax error: [empty]=''
+</pre></td></tr><tr><td><a name="details-37-sush"></a><b>sush</b></td><td>37 <a href="array-assoc.test.html#L644">test -v with dynamic parsing</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'empty=0\nk=0\nnonexistent=1\n', got 'empty=2\nk=2\nnonexistent=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>empty=2
+k=2
+nonexistent=2
+</pre><i>stderr:</i> <br/>
+<pre>test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+test: ‘-v’: unary operator expected
+</pre></td></tr><tr><td><a name="details-37-brush"></a><b>brush</b></td><td>37 <a href="array-assoc.test.html#L644">test -v with dynamic parsing</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'empty=0\nk=0\nnonexistent=1\n', got 'empty=1\nk=1\nnonexistent=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>empty=1
+k=1
+nonexistent=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-37-osh"></a><b>osh</b></td><td>37 <a href="array-assoc.test.html#L644">test -v with dynamic parsing</a><br/><br/>
+<span class="assertion">[osh stdout] Expected 'empty=0\nk=0\nnonexistent=1\n', got 'empty=1\nk=1\nnonexistent=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>empty=1
+k=1
+nonexistent=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-dash"></a><b>dash</b></td><td>38 <a href="array-assoc.test.html#L667">[[ -v assoc[key] ]]</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'no quotes\nempty=0\nk=0\nnonexistent=1\n\nquotes\nempty=0\nk=0\nnonexistent=1\n\nvars\nempty=0\nk=0\nnonexistent=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: typeset: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-38-ash"></a><b>ash</b></td><td>38 <a href="array-assoc.test.html#L667">[[ -v assoc[key] ]]</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'no quotes\nempty=0\nk=0\nnonexistent=1\n\nquotes\nempty=0\nk=0\nnonexistent=1\n\nvars\nempty=0\nk=0\nnonexistent=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: typeset: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-38-zsh"></a><b>zsh</b></td><td>38 <a href="array-assoc.test.html#L667">[[ -v assoc[key] ]]</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'no quotes\nempty=0\nk=0\nnonexistent=1\n\nquotes\nempty=0\nk=0\nnonexistent=1\n\nvars\nempty=0\nk=0\nnonexistent=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [empty]=
+</pre></td></tr><tr><td><a name="details-38-mksh"></a><b>mksh</b></td><td>38 <a href="array-assoc.test.html#L667">[[ -v assoc[key] ]]</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '', got 'no quotes\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>no quotes
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: typeset: -A: unknown option
+mksh: &lt;stdin&gt;[6]: syntax error: 'assoc[empty]' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-38-ksh"></a><b>ksh</b></td><td>38 <a href="array-assoc.test.html#L667">[[ -v assoc[key] ]]</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'no quotes\nempty=0\nk=0\nnonexistent=1\n\nquotes\nempty=0\nk=0\nnonexistent=1\n\nvars\nempty=0\nk=0\nnonexistent=1\n'
+Got      'no quotes\nempty=0\nk=0\nnonexistent=0\n\nquotes\n'
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>no quotes
+empty=0
+k=0
+nonexistent=0
+
+quotes
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: typeset: -A: unknown option
+W: ksh: &lt;stdin&gt;[19]: "empty": unexpected '"'
+</pre></td></tr><tr><td><a name="details-38-toysh"></a><b>toysh</b></td><td>38 <a href="array-assoc.test.html#L667">[[ -v assoc[key] ]]</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'no quotes\nempty=0\nk=0\nnonexistent=1\n\nquotes\nempty=0\nk=0\nnonexistent=1\n\nvars\nempty=0\nk=0\nnonexistent=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+main: line 2: sh: syntax error: [empty]=''
+</pre></td></tr><tr><td><a name="details-38-sush"></a><b>sush</b></td><td>38 <a href="array-assoc.test.html#L667">[[ -v assoc[key] ]]</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'no quotes\nempty=0\nk=0\nnonexistent=1\n\nquotes\nempty=0\nk=0\nnonexistent=1\n\nvars\nempty=0\nk=0\nnonexistent=1\n'
+Got      'no quotes\nempty=1\nk=1\nnonexistent=1\n\nquotes\nempty=1\nk=1\nnonexistent=1\n\nvars\nempty=1\nk=1\nnonexistent=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>no quotes
+empty=1
+k=1
+nonexistent=1
+
+quotes
+empty=1
+k=1
+nonexistent=1
+
+vars
+empty=1
+k=1
+nonexistent=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-brush"></a><b>brush</b></td><td>38 <a href="array-assoc.test.html#L667">[[ -v assoc[key] ]]</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'no quotes\nempty=0\nk=0\nnonexistent=1\n\nquotes\nempty=0\nk=0\nnonexistent=1\n\nvars\nempty=0\nk=0\nnonexistent=1\n'
+Got      'no quotes\nempty=1\nk=1\nnonexistent=1\n\nquotes\nempty=1\nk=1\nnonexistent=1\n\nvars\nempty=1\nk=1\nnonexistent=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>no quotes
+empty=1
+k=1
+nonexistent=1
+
+quotes
+empty=1
+k=1
+nonexistent=1
+
+vars
+empty=1
+k=1
+nonexistent=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-dash"></a><b>dash</b></td><td>39 <a href="array-assoc.test.html#L734">[[ -v assoc[key] ]] syntax errors</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'empty=0\nk=0\ntypo=1\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: typeset: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-39-ash"></a><b>ash</b></td><td>39 <a href="array-assoc.test.html#L734">[[ -v assoc[key] ]] syntax errors</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'empty=0\nk=0\ntypo=1\n', got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: typeset: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-39-zsh"></a><b>zsh</b></td><td>39 <a href="array-assoc.test.html#L734">[[ -v assoc[key] ]] syntax errors</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'empty=0\nk=0\ntypo=1\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [empty]=
+</pre></td></tr><tr><td><a name="details-39-mksh"></a><b>mksh</b></td><td>39 <a href="array-assoc.test.html#L734">[[ -v assoc[key] ]] syntax errors</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected 'empty=0\nk=0\ntypo=1\n', got ''</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: typeset: -A: unknown option
+mksh: &lt;stdin&gt;[4]: syntax error: 'assoc[empty]' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-39-ksh"></a><b>ksh</b></td><td>39 <a href="array-assoc.test.html#L734">[[ -v assoc[key] ]] syntax errors</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'empty=0\nk=0\ntypo=1\n', got 'empty=0\nk=0\ntypo=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>empty=0
+k=0
+typo=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: typeset: -A: unknown option
+</pre></td></tr><tr><td><a name="details-39-toysh"></a><b>toysh</b></td><td>39 <a href="array-assoc.test.html#L734">[[ -v assoc[key] ]] syntax errors</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'empty=0\nk=0\ntypo=1\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+main: line 2: sh: syntax error: [empty]=''
+</pre></td></tr><tr><td><a name="details-39-sush"></a><b>sush</b></td><td>39 <a href="array-assoc.test.html#L734">[[ -v assoc[key] ]] syntax errors</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'empty=0\nk=0\ntypo=1\n', got 'empty=1\nk=1\ntypo=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>empty=1
+k=1
+typo=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-brush"></a><b>brush</b></td><td>39 <a href="array-assoc.test.html#L734">[[ -v assoc[key] ]] syntax errors</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'empty=0\nk=0\ntypo=1\n', got 'empty=1\nk=1\ntypo=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>empty=1
+k=1
+typo=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-dash"></a><b>dash</b></td><td>40 <a href="array-assoc.test.html#L755">BashAssoc a+=()</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'apple is red\norange is orange\nlemon is yellow\nbanana is yellow\n'
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-40-ash"></a><b>ash</b></td><td>40 <a href="array-assoc.test.html#L755">BashAssoc a+=()</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'apple is red\norange is orange\nlemon is yellow\nbanana is yellow\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-40-zsh"></a><b>zsh</b></td><td>40 <a href="array-assoc.test.html#L755">BashAssoc a+=()</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'apple is red\norange is orange\nlemon is yellow\nbanana is yellow\n'
+Got      ''
+</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [apple]=red
+zsh: no matches found: [lemon]=yellow
+</pre></td></tr><tr><td><a name="details-40-mksh"></a><b>mksh</b></td><td>40 <a href="array-assoc.test.html#L755">BashAssoc a+=()</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'apple is red\norange is orange\nlemon is yellow\nbanana is yellow\n'
+Got      ''
+</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-40-ksh"></a><b>ksh</b></td><td>40 <a href="array-assoc.test.html#L755">BashAssoc a+=()</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'apple is red\norange is orange\nlemon is yellow\nbanana is yellow\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-40-toysh"></a><b>toysh</b></td><td>40 <a href="array-assoc.test.html#L755">BashAssoc a+=()</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'apple is red\norange is orange\nlemon is yellow\nbanana is yellow\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-40-sush"></a><b>sush</b></td><td>40 <a href="array-assoc.test.html#L755">BashAssoc a+=()</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'apple is red\norange is orange\nlemon is yellow\nbanana is yellow\n'
+Got      ''
+</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: 'apple': syntax error: operand expected (error token is "'apple'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: 'orange': syntax error: operand expected (error token is "'orange'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: 'lemon': syntax error: operand expected (error token is "'lemon'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: 'banana': syntax error: operand expected (error token is "'banana'")
+</pre></td></tr><tr><td><a name="details-41-bash"></a><b>bash</b></td><td>41 <a href="array-assoc.test.html#L772">BashAssoc ${a[@]@Q}</a><br/><br/>
+<span class="assertion">
+[bash stdout]
+Expected '[\'[]*?\' \'\'\\\'\'\'\\\'\'\' \'"\' \'()&lt;&gt;&amp;|\']\n[\'[]*?\' \'\'\\\'\'\'\\\'\'\' \'"\' \'()&lt;&gt;&amp;|\']\n'
+Got      '[\'[]*?\' \'()&lt;&gt;&amp;|\' \'"\' \'\'\\\'\'\'\\\'\'\']\n[\'[]*?\' \'()&lt;&gt;&amp;|\' \'"\' \'\'\\\'\'\'\\\'\'\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['[]*?' '()&lt;&gt;&amp;|' '"' ''\'''\''']
+['[]*?' '()&lt;&gt;&amp;|' '"' ''\'''\''']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-41-dash"></a><b>dash</b></td><td>41 <a href="array-assoc.test.html#L772">BashAssoc ${a[@]@Q}</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '[$\'\\\'\\\'\' \'"\' \'()&lt;&gt;&amp;|\' \'[]*?\']\n[$\'\\\'\\\'\' \'"\' \'()&lt;&gt;&amp;|\' \'[]*?\']\n'
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-41-ash"></a><b>ash</b></td><td>41 <a href="array-assoc.test.html#L772">BashAssoc ${a[@]@Q}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '[$\'\\\'\\\'\' \'"\' \'()&lt;&gt;&amp;|\' \'[]*?\']\n[$\'\\\'\\\'\' \'"\' \'()&lt;&gt;&amp;|\' \'[]*?\']\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-41-zsh"></a><b>zsh</b></td><td>41 <a href="array-assoc.test.html#L772">BashAssoc ${a[@]@Q}</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '[$\'\\\'\\\'\' \'"\' \'()&lt;&gt;&amp;|\' \'[]*?\']\n[$\'\\\'\\\'\' \'"\' \'()&lt;&gt;&amp;|\' \'[]*?\']\n'
+Got      ''
+</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-41-mksh"></a><b>mksh</b></td><td>41 <a href="array-assoc.test.html#L772">BashAssoc ${a[@]@Q}</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '[$\'\\\'\\\'\' \'"\' \'()&lt;&gt;&amp;|\' \'[]*?\']\n[$\'\\\'\\\'\' \'"\' \'()&lt;&gt;&amp;|\' \'[]*?\']\n'
+Got      ''
+</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-41-ksh"></a><b>ksh</b></td><td>41 <a href="array-assoc.test.html#L772">BashAssoc ${a[@]@Q}</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '[$\'\\\'\\\'\' \'"\' \'()&lt;&gt;&amp;|\' \'[]*?\']\n[$\'\\\'\\\'\' \'"\' \'()&lt;&gt;&amp;|\' \'[]*?\']\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-41-toysh"></a><b>toysh</b></td><td>41 <a href="array-assoc.test.html#L772">BashAssoc ${a[@]@Q}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '[$\'\\\'\\\'\' \'"\' \'()&lt;&gt;&amp;|\' \'[]*?\']\n[$\'\\\'\\\'\' \'"\' \'()&lt;&gt;&amp;|\' \'[]*?\']\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-41-sush"></a><b>sush</b></td><td>41 <a href="array-assoc.test.html#L772">BashAssoc ${a[@]@Q}</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[$\'\\\'\\\'\' \'"\' \'()&lt;&gt;&amp;|\' \'[]*?\']\n[$\'\\\'\\\'\' \'"\' \'()&lt;&gt;&amp;|\' \'[]*?\']\n'
+Got      ''
+</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: 'symbol1': syntax error: operand expected (error token is "'symbol1'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: 'symbol2': syntax error: operand expected (error token is "'symbol2'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: 'symbol3': syntax error: operand expected (error token is "'symbol3'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: 'symbol4': syntax error: operand expected (error token is "'symbol4'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: `${a[@]@Q}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: `${a[*]@Q}': bad substitution
+</pre></td></tr><tr><td><a name="details-41-brush"></a><b>brush</b></td><td>41 <a href="array-assoc.test.html#L772">BashAssoc ${a[@]@Q}</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '[$\'\\\'\\\'\' \'"\' \'()&lt;&gt;&amp;|\' \'[]*?\']\n[$\'\\\'\\\'\' \'"\' \'()&lt;&gt;&amp;|\' \'[]*?\']\n'
+Got      '[\\\'\\\' \'"\' \'()&lt;&gt;&amp;|\' \'[]*?\']\n[\\\'\\\' \'"\' \'()&lt;&gt;&amp;|\' \'[]*?\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[\'\' '"' '()&lt;&gt;&amp;|' '[]*?']
+[\'\' '"' '()&lt;&gt;&amp;|' '[]*?']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>
