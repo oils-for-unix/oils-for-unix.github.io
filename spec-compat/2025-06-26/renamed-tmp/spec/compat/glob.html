@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>glob: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for glob.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>31</td><td>24</td><td>27</td><td>20</td><td>26</td><td>28</td><td>16</td><td>24</td><td>27</td><td>29</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>5</td><td>3</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>1</td><td>3</td><td>2</td><td>0</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>0</td><td>12</td><td>0</td><td>4</td><td>16</td><td>8</td><td>5</td><td>3</td><td></td></tr>
+<tr><td>total</td><td>32</td><td>32</td><td>32</td><td>32</td><td>32</td><td>32</td><td>32</td><td>32</td><td>32</td><td>32</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L5">glob double quote escape</a></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L9">glob single quote escape</a></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L13">glob backslash escape</a></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L17">1 char glob</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L22">0 char glob -- does NOT work</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L28">looks like glob at the start, but isn't</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L32">looks like glob plus negation at the start, but isn't</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L36">glob can expand to command and arg</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L41">glob after var expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L48">quoted var expansion with glob meta characters</a></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L54">glob after "$@" expansion</a></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L61">glob after $@ expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L69">no glob after ~ expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L74">store literal globs in array then expand</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L82">glob inside array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"><a href="#details-14-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L90">glob with escaped - in char class</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L96">glob with char class expression</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L103">glob double quotes</a></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L109">glob escaped</a></td></tr>
+<tr><td> 19</td><td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L116">: escaped</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-19-bash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-19-ash">details</a></td><td class="details-row"><a href="#details-19-zsh">details</a></td><td class="details-row"><a href="#details-19-mksh">details</a></td><td class="details-row"><a href="#details-19-ksh">details</a></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"><a href="#details-19-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L133">Glob after var manipulation</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L139">Glob after part joining</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L145">Glob flags on file system</a></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L151">set -o noglob</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L162">set -o noglob (bug #698)</a></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L170">Splitting/Globbing doesn't happen on local assignment</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L184">Glob of unescaped [[] and []]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"><a href="#details-26-sush">details</a></td><td class="details-row"><a href="#details-26-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L194">Glob of negated unescaped [[] and []]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-mksh">details</a></td><td class="details-row"><a href="#details-27-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-27-sush">details</a></td><td class="details-row"><a href="#details-27-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="glob.test.html#L209">PatSub of unescaped [[] and []]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-toysh">details</a></td><td class="details-row"><a href="#details-28-sush">details</a></td><td class="details-row"><a href="#details-28-brush">details</a></td><td class="details-row"><a href="#details-28-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="glob.test.html#L224">PatSub of negated unescaped [[] and []]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-mksh">details</a></td><td class="details-row"><a href="#details-29-ksh">details</a></td><td class="details-row"><a href="#details-29-toysh">details</a></td><td class="details-row"><a href="#details-29-sush">details</a></td><td class="details-row"><a href="#details-29-brush">details</a></td><td class="details-row"><a href="#details-29-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 30</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob.test.html#L244">Glob unicode char</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-dash">details</a></td><td class="details-row"><a href="#details-30-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-30-mksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 31</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="glob.test.html#L260">Glob ordering respects LC_COLLATE (zsh respects this too)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-dash">details</a></td><td class="details-row"><a href="#details-31-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-31-mksh">details</a></td><td class="details-row"><a href="#details-31-ksh">details</a></td><td class="details-row"><a href="#details-31-toysh">details</a></td><td class="details-row"><a href="#details-31-sush">details</a></td><td class="details-row"><a href="#details-31-brush">details</a></td><td class="details-row"><a href="#details-31-osh">details</a></td><td class="details-row"></td></tr>
+</table>
+<pre>252 passed, 0 OK, 9 not implemented, 11 BUG, 48 failed, 0 timeouts, 0 cases skipped
+3 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="glob.test.html#L17">1 char glob</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'bin\n', got '[b]in\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[b]in
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="glob.test.html#L22">0 char glob -- does NOT work</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '[]bin\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: []bin
+</pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="glob.test.html#L28">looks like glob at the start, but isn't</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '[bin\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad pattern: [bin
+</pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="glob.test.html#L32">looks like glob plus negation at the start, but isn't</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '[!bin\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad pattern: [!bin
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="glob.test.html#L36">glob can expand to command and arg</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'spec/testdata/echo.sz\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: spec/testdata/echo.sz: Permission denied
+</pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="glob.test.html#L41">glob after var expansion</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '_tmp/a.A _tmp/aa.A _tmp/b.B\n', got '_tmp/*.A _tmp/*.B\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/*.A _tmp/*.B
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="glob.test.html#L41">glob after var expansion</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '_tmp/a.A _tmp/aa.A _tmp/b.B\n', got '_tmp/aa.A _tmp/a.A _tmp/b.B\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/aa.A _tmp/a.A _tmp/b.B
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-zsh"></a><b>zsh</b></td><td>11 <a href="glob.test.html#L61">glob after $@ expansion</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '_tmp/b.B\n', got '_tmp/*.B\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/*.B
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="glob.test.html#L69">no glob after ~ expansion</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '*/*.py\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: */*.py
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="glob.test.html#L69">no glob after ~ expansion</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '*/*.py\n', got '_tmp/*.py\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/*.py
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="glob.test.html#L74">store literal globs in array then expand</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="glob.test.html#L74">store literal globs in array then expand</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="glob.test.html#L74">store literal globs in array then expand</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '_tmp/a.A _tmp/aa.A _tmp/b.B\n', got '_tmp/*.A _tmp/*.B\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/*.A _tmp/*.B
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="glob.test.html#L74">store literal globs in array then expand</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '_tmp/a.A _tmp/aa.A _tmp/b.B\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: "_tmp/*.A"
+</pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="glob.test.html#L82">glob inside array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-14-ash"></a><b>ash</b></td><td>14 <a href="glob.test.html#L82">glob inside array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="glob.test.html#L82">glob inside array</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '_tmp/a.A _tmp/aa.A _tmp/b.B\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: _tmp/*.A
+</pre></td></tr><tr><td><a name="details-15-zsh"></a><b>zsh</b></td><td>15 <a href="glob.test.html#L90">glob with escaped - in char class</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '_tmp/c.C _tmp/c.C _tmp/foo.-\n', got '_tmp/c.C _tmp/c.C\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/c.C _tmp/c.C
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="glob.test.html#L90">glob with escaped - in char class</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '_tmp/c.C _tmp/c.C _tmp/foo.-\n', got '_tmp/c.C _tmp/c.C\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/c.C _tmp/c.C
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="glob.test.html#L90">glob with escaped - in char class</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '_tmp/c.C _tmp/c.C _tmp/foo.-\n', got '_tmp/c.C _tmp/c.C\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/c.C _tmp/c.C
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-mksh"></a><b>mksh</b></td><td>16 <a href="glob.test.html#L96">glob with char class expression</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/*.[[:punct:]E]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="glob.test.html#L96">glob with char class expression</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '_tmp/e.E _tmp/foo.-\n', got '_tmp/*.[[:punct:]E]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/*.[[:punct:]E]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-bash"></a><b>bash</b></td><td>19 <a href="glob.test.html#L116">: escaped</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/foo.- _tmp/foo.-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-ash"></a><b>ash</b></td><td>19 <a href="glob.test.html#L116">: escaped</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/foo.- _tmp/foo.-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-zsh"></a><b>zsh</b></td><td>19 <a href="glob.test.html#L116">: escaped</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '_tmp/foo.- _tmp/*.[[:punct:]]\n', got '_tmp/foo.- _tmp/foo.-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/foo.- _tmp/foo.-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-mksh"></a><b>mksh</b></td><td>19 <a href="glob.test.html#L116">: escaped</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/*.[[:punct:]] _tmp/*.[[:punct:]]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-ksh"></a><b>ksh</b></td><td>19 <a href="glob.test.html#L116">: escaped</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '_tmp/foo.- _tmp/*.[[:punct:]]\n', got '_tmp/foo.- _tmp/foo.-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/foo.- _tmp/foo.-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="glob.test.html#L116">: escaped</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '_tmp/foo.- _tmp/*.[[:punct:]]\n', got '_tmp/*.[[:punct:]] _tmp/*.[[:punct:]]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/*.[[:punct:]] _tmp/*.[[:punct:]]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-sush"></a><b>sush</b></td><td>19 <a href="glob.test.html#L116">: escaped</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '_tmp/foo.- _tmp/*.[[:punct:]]\n', got '_tmp/foo.- _tmp/foo.-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/foo.- _tmp/foo.-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-zsh"></a><b>zsh</b></td><td>20 <a href="glob.test.html#L133">Glob after var manipulation</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '_tmp/*.zzzZ _tmp/bar.zzz _tmp/foo.zzz\n', got '_tmp/*.zzzZ _tmp/*.zzz\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/*.zzzZ _tmp/*.zzz
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="glob.test.html#L133">Glob after var manipulation</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '_tmp/*.zzzZ _tmp/bar.zzz _tmp/foo.zzz\n', got '_tmp/*.zzzZ _tmp/foo.zzz _tmp/bar.zzz\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/*.zzzZ _tmp/foo.zzz _tmp/bar.zzz
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-zsh"></a><b>zsh</b></td><td>21 <a href="glob.test.html#L139">Glob after part joining</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '_tmp/*.yy _tmp/bar.yyy _tmp/foo.yyy\n', got '_tmp/*.yy _tmp/*.yyy\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/*.yy _tmp/*.yyy
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="glob.test.html#L139">Glob after part joining</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '_tmp/*.yy _tmp/bar.yyy _tmp/foo.yyy\n', got '_tmp/*.yy _tmp/foo.yyy _tmp/bar.yyy\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/*.yy _tmp/foo.yyy _tmp/bar.yyy
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="glob.test.html#L151">set -o noglob</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '_tmp/spec-tmp/a.zz _tmp/spec-tmp/b.zz\n_tmp/spec-tmp/*.zz\n'
+Got      '_tmp/spec-tmp/b.zz _tmp/spec-tmp/a.zz\n_tmp/spec-tmp/b.zz _tmp/spec-tmp/a.zz\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/spec-tmp/b.zz _tmp/spec-tmp/a.zz
+_tmp/spec-tmp/b.zz _tmp/spec-tmp/a.zz
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o noglob
+</pre></td></tr><tr><td><a name="details-25-dash"></a><b>dash</b></td><td>25 <a href="glob.test.html#L170">Splitting/Globbing doesn't happen on local assignment</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 4: local: INSTALL-old.txt: bad variable name
+</pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="glob.test.html#L170">Splitting/Globbing doesn't happen on local assignment</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'void *\n', got 'void\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>void
+</pre><i>stderr:</i> <br/>
+<pre>local: bad fastlex.so
+local: bad line_input.so
+local: bad fanos.so
+local: bad fastfunc.so
+local: bad NOTES-jshape.txt
+local: bad libc.so
+local: bad Python-2.7.13
+local: bad shell.nix
+local: bad INSTALL-old.txt
+local: bad LICENSE.txt
+local: bad NOTES.txt
+local: bad oils-version.txt
+local: bad README-index.md
+local: bad local.sh
+local: bad configure-test.sh
+local: bad INSTALL.txt
+local: bad README.md
+local: bad Z.txt
+local: bad _soil-jobs
+local: bad Rplots.pdf
+local: bad posix_.so
+local: bad TODO.txt
+local: bad build.ninja
+local: bad README-native.txt
+local: bad NINJA-config.sh
+</pre></td></tr><tr><td><a name="details-26-zsh"></a><b>zsh</b></td><td>26 <a href="glob.test.html#L184">Glob of unescaped [[] and []]</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '[ ]\n[ ]\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad pattern: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/glob.test.sh/26-zsh/[
+zsh: no matches found: [[z]
+</pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="glob.test.html#L184">Glob of unescaped [[] and []]</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[ ]\n[ ]\n', got '[[z] []z]\n[[z] []z]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[[z] []z]
+[[z] []z]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-sush"></a><b>sush</b></td><td>26 <a href="glob.test.html#L184">Glob of unescaped [[] and []]</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[ ]\n[ ]\n', got '[ ]\n[ []z]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[ ]
+[ []z]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-brush"></a><b>brush</b></td><td>26 <a href="glob.test.html#L184">Glob of unescaped [[] and []]</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '[ ]\n[ ]\n', got '[ []z]\n[ []z]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[ []z]
+[ []z]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-dash"></a><b>dash</b></td><td>27 <a href="glob.test.html#L194">Glob of negated unescaped [[] and []]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>_[^[z] _[^]z]
+_[^[z] _[^]z]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-mksh"></a><b>mksh</b></td><td>27 <a href="glob.test.html#L194">Glob of negated unescaped [[] and []]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>_[^[z] _[^]z]
+_[^[z] _[^]z]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-ksh"></a><b>ksh</b></td><td>27 <a href="glob.test.html#L194">Glob of negated unescaped [[] and []]</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '_G _G\n_G _G\n', got '_[^[z] _[^]z]\n_[^[z] _[^]z]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_[^[z] _[^]z]
+_[^[z] _[^]z]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-sush"></a><b>sush</b></td><td>27 <a href="glob.test.html#L194">Glob of negated unescaped [[] and []]</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '_G _G\n_G _G\n', got '_G _G\n_G _[^]z]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_G _G
+_G _[^]z]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-brush"></a><b>brush</b></td><td>27 <a href="glob.test.html#L194">Glob of negated unescaped [[] and []]</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '_G _G\n_G _G\n', got '_G _[^]z]\n_G _[^]z]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_G _[^]z]
+_G _[^]z]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-dash"></a><b>dash</b></td><td>28 <a href="glob.test.html#L209">PatSub of unescaped [[] and []]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-28-toysh"></a><b>toysh</b></td><td>28 <a href="glob.test.html#L209">PatSub of unescaped [[] and []]</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '&lt;foo]\n[foo&gt;\n&lt;foo]\n[foo&gt;\n', got '[foo]\n[foo]\n[foo]\n[foo]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[foo]
+[foo]
+[foo]
+[foo]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-sush"></a><b>sush</b></td><td>28 <a href="glob.test.html#L209">PatSub of unescaped [[] and []]</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '&lt;foo]\n[foo&gt;\n&lt;foo]\n[foo&gt;\n', got '&lt;foo]\n[foo]\n&lt;foo]\n[foo]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>&lt;foo]
+[foo]
+&lt;foo]
+[foo]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-brush"></a><b>brush</b></td><td>28 <a href="glob.test.html#L209">PatSub of unescaped [[] and []]</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '&lt;foo]\n[foo&gt;\n&lt;foo]\n[foo&gt;\n', got '&lt;foo]\n&lt;foo]\n[foo]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>&lt;foo]
+&lt;foo]
+[foo]
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: invalid regex: Parsing error at position 11: Invalid character class; expression: '(?ms)[\]z\]'
+</pre></td></tr><tr><td><a name="details-28-osh"></a><b>osh</b></td><td>28 <a href="glob.test.html#L209">PatSub of unescaped [[] and []]</a><br/><br/>
+<span class="assertion">[osh stdout] Expected '&lt;foo]\n[foo&gt;\n&lt;foo]\n[foo&gt;\n', got '&lt;foo]\n[foo&gt;\n[foo]\n[foo&gt;\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>&lt;foo]
+[foo&gt;
+[foo]
+[foo&gt;
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-dash"></a><b>dash</b></td><td>29 <a href="glob.test.html#L224">PatSub of negated unescaped [[] and []]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-29-mksh"></a><b>mksh</b></td><td>29 <a href="glob.test.html#L224">PatSub of negated unescaped [[] and []]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>&lt;foo]
+[foo&gt;
+&lt;foo]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-ksh"></a><b>ksh</b></td><td>29 <a href="glob.test.html#L224">PatSub of negated unescaped [[] and []]</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '[&lt;&lt;&lt;&lt;\n&gt;&gt;&gt;&gt;]\n[&lt;&lt;&lt;&lt;\n', got '&lt;foo]\n[foo&gt;\n&lt;foo]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>&lt;foo]
+[foo&gt;
+&lt;foo]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-toysh"></a><b>toysh</b></td><td>29 <a href="glob.test.html#L224">PatSub of negated unescaped [[] and []]</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '[&lt;&lt;&lt;&lt;\n&gt;&gt;&gt;&gt;]\n[&lt;&lt;&lt;&lt;\n', got '[foo]\n[foo]\n[foo]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[foo]
+[foo]
+[foo]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-sush"></a><b>sush</b></td><td>29 <a href="glob.test.html#L224">PatSub of negated unescaped [[] and []]</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '[&lt;&lt;&lt;&lt;\n&gt;&gt;&gt;&gt;]\n[&lt;&lt;&lt;&lt;\n', got '[&lt;&lt;&lt;&lt;\n[foo]\n[&lt;&lt;&lt;&lt;\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[&lt;&lt;&lt;&lt;
+[foo]
+[&lt;&lt;&lt;&lt;
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-brush"></a><b>brush</b></td><td>29 <a href="glob.test.html#L224">PatSub of negated unescaped [[] and []]</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '[&lt;&lt;&lt;&lt;\n&gt;&gt;&gt;&gt;]\n[&lt;&lt;&lt;&lt;\n', got '[&lt;&lt;&lt;&lt;\n[&lt;&lt;&lt;&lt;\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[&lt;&lt;&lt;&lt;
+[&lt;&lt;&lt;&lt;
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: invalid regex: Parsing error at position 12: Invalid character class; expression: '(?ms)[^\]z\]'
+</pre></td></tr><tr><td><a name="details-29-osh"></a><b>osh</b></td><td>29 <a href="glob.test.html#L224">PatSub of negated unescaped [[] and []]</a><br/><br/>
+<span class="assertion">[osh stdout] Expected '[&lt;&lt;&lt;&lt;\n&gt;&gt;&gt;&gt;]\n[&lt;&lt;&lt;&lt;\n', got '[&lt;&lt;&lt;&lt;\n&gt;&gt;&gt;&gt;]\n[foo]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[&lt;&lt;&lt;&lt;
+&gt;&gt;&gt;&gt;]
+[foo]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-dash"></a><b>dash</b></td><td>30 <a href="glob.test.html#L244">Glob unicode char</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>__a__
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-ash"></a><b>ash</b></td><td>30 <a href="glob.test.html#L244">Glob unicode char</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>__a__
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-mksh"></a><b>mksh</b></td><td>30 <a href="glob.test.html#L244">Glob unicode char</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>__a__
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-dash"></a><b>dash</b></td><td>31 <a href="glob.test.html#L260">Glob ordering respects LC_COLLATE (zsh respects this too)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hello hello-test.sh hello.py hello_preamble.sh
+hello hello-test.sh hello.py hello_preamble.sh
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-ash"></a><b>ash</b></td><td>31 <a href="glob.test.html#L260">Glob ordering respects LC_COLLATE (zsh respects this too)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hello hello-test.sh hello.py hello_preamble.sh
+hello hello-test.sh hello.py hello_preamble.sh
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-mksh"></a><b>mksh</b></td><td>31 <a href="glob.test.html#L260">Glob ordering respects LC_COLLATE (zsh respects this too)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hello hello-test.sh hello.py hello_preamble.sh
+hello hello-test.sh hello.py hello_preamble.sh
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-ksh"></a><b>ksh</b></td><td>31 <a href="glob.test.html#L260">Glob ordering respects LC_COLLATE (zsh respects this too)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'hello hello-test.sh hello.py hello_preamble.sh\nhello hello_preamble.sh hello.py hello-test.sh\n'
+Got      'hello hello-test.sh hello.py hello_preamble.sh\nhello hello-test.sh hello.py hello_preamble.sh\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hello hello-test.sh hello.py hello_preamble.sh
+hello hello-test.sh hello.py hello_preamble.sh
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-toysh"></a><b>toysh</b></td><td>31 <a href="glob.test.html#L260">Glob ordering respects LC_COLLATE (zsh respects this too)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'hello hello-test.sh hello.py hello_preamble.sh\nhello hello_preamble.sh hello.py hello-test.sh\n'
+Got      'hello_preamble.sh hello-test.sh hello.py hello\nhello_preamble.sh hello-test.sh hello.py hello\n'
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hello_preamble.sh hello-test.sh hello.py hello
+hello_preamble.sh hello-test.sh hello.py hello
+</pre><i>stderr:</i> <br/>
+<pre>free(): double free detected in tcache 2
+</pre></td></tr><tr><td><a name="details-31-sush"></a><b>sush</b></td><td>31 <a href="glob.test.html#L260">Glob ordering respects LC_COLLATE (zsh respects this too)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'hello hello-test.sh hello.py hello_preamble.sh\nhello hello_preamble.sh hello.py hello-test.sh\n'
+Got      'hello hello-test.sh hello.py hello_preamble.sh\nhello hello-test.sh hello.py hello_preamble.sh\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hello hello-test.sh hello.py hello_preamble.sh
+hello hello-test.sh hello.py hello_preamble.sh
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-brush"></a><b>brush</b></td><td>31 <a href="glob.test.html#L260">Glob ordering respects LC_COLLATE (zsh respects this too)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'hello hello-test.sh hello.py hello_preamble.sh\nhello hello_preamble.sh hello.py hello-test.sh\n'
+Got      'hello hello-test.sh hello.py hello_preamble.sh\nhello hello-test.sh hello.py hello_preamble.sh\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hello hello-test.sh hello.py hello_preamble.sh
+hello hello-test.sh hello.py hello_preamble.sh
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-osh"></a><b>osh</b></td><td>31 <a href="glob.test.html#L260">Glob ordering respects LC_COLLATE (zsh respects this too)</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'hello hello-test.sh hello.py hello_preamble.sh\nhello hello_preamble.sh hello.py hello-test.sh\n'
+Got      'hello hello-test.sh hello.py hello_preamble.sh\nhello hello-test.sh hello.py hello_preamble.sh\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hello hello-test.sh hello.py hello_preamble.sh
+hello hello-test.sh hello.py hello_preamble.sh
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

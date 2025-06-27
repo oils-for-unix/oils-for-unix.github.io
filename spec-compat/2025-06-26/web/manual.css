@@ -1,0 +1,105 @@
+/* Style for manual in doc/*.md */
+
+/* Indent relative to headings if the screen is wide enough */
+@media screen and (min-width: 801px) {
+  body {
+    font-size: large;
+  }
+  /* Indent most text.  Bug fixes: only indent at top level.  */
+  body > p, body > pre, body > ol, body > ul {
+    margin-left: 2em;
+  }
+}
+
+/* h1 is the title
+ * h2 is the first level shown in TOC
+ * h3 is the second and last level shown in TOC
+ * h4 is occasionally used
+ */
+h1 {
+  font-size: 1.5em;  /* reduce to what browsers apparently use for h2 */
+}
+
+h2 {
+  font-size: 1.2em;  /* reduce to what browsers apparently use for h3 */
+
+  padding-top: 2em;  /* separate sections */
+}
+
+h3 {
+  color: darkblue;  /* different than blog */
+  font-size: large;
+  margin-left: 2em;
+
+  padding-top: 1em;  /* separate sections */
+}
+
+h4 {
+  /* color: #0000A0; slightly different shade than h3 */ 
+  color: darkblue;
+  font-size: medium;   /* smaller font than h3 */
+  margin-left: 3em;    /* indented slightly more */
+
+  padding-top: 1em;  /* separate sections */
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #BBB;
+
+  /* align with surrounding text, add space */
+  margin-left: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/* inline code 
+ *
+ * BUG FIX: Selector is 'p code' and not 'code' because markdown generates
+ * <pre><code> pairs from indented blocks for some reason, and they would
+ * interfere only in Chrome.
+ */
+p code, li code, h2 code, h3 code, div code {
+  background-color: #eee;
+  padding: 4px;
+}
+
+/* like web/toc.css */
+.doc-ref-header {
+  background-color: oldlace;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1px;
+  padding-bottom: 1px;
+
+  font-size: 1.2em;
+}
+
+/* remove underline for the header only */
+.doc-ref-header a:link {
+  text-decoration: none;
+}
+.doc-ref-header a:hover {
+  text-decoration: underline;
+}
+
+/* Obsolete: we should make something that doesn't require markdown
+
+.osh-topic {
+  border-left: solid;
+  border-color: brown;
+}
+
+.osh-ysh-topic {
+  border-left: solid;
+  border-right: solid;
+  border-color: darkgreen;
+}
+
+.ysh-topic {
+  border-right: solid;
+  border-color: darkcyan;
+}
+
+*/

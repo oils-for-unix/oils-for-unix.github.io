@@ -1,0 +1,1639 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>brace-expansion: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for brace-expansion.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>46</td><td>8</td><td>8</td><td>38</td><td>32</td><td>32</td><td>38</td><td>42</td><td>31</td><td>50</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>0</td><td>0</td><td>5</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>0</td><td>0</td><td>3</td><td>17</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>9</td><td>0</td><td>0</td><td>9</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>47</td><td>47</td><td>0</td><td>0</td><td>23</td><td>17</td><td>13</td><td>24</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>55</td><td>55</td><td>55</td><td>55</td><td>55</td><td>55</td><td>55</td><td>55</td><td>55</td><td>55</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L4">no expansion</a></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="brace-expansion.test.html#L8">incomplete trailing expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="brace-expansion.test.html#L13">partial leading expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="brace-expansion.test.html#L18">partial leading expansion 2</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="brace-expansion.test.html#L23">} in expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L33">single expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L37">double expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L41">triple expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L45">double expansion with single and double quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L49">expansion with mixed quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L53">expansion with simple var</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L58">double expansion with simple var -- bash bug</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-11-bash">details</a></td><td class="details-row"><a href="#details-11-dash">details</a></td><td class="details-row"><a href="#details-11-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L65">double expansion with braced variable</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-dash">details</a></td><td class="details-row"><a href="#details-12-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L71">double expansion with literal and simple var</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-13-bash">details</a></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L77">expansion with command sub</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"><a href="#details-14-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L82">expansion with arith sub</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"><a href="#details-15-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L87">double expansion with escaped literals</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-dash">details</a></td><td class="details-row"><a href="#details-16-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L92">{ in expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-17-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"><a href="#details-17-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L100">quoted { in expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-dash">details</a></td><td class="details-row"><a href="#details-18-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L104">Empty expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-dash">details</a></td><td class="details-row"><a href="#details-19-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L108">Empty alternative</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-dash">details</a></td><td class="details-row"><a href="#details-20-ash">details</a></td><td class="details-row"><a href="#details-20-zsh">details</a></td><td class="details-row"><a href="#details-20-mksh">details</a></td><td class="details-row"><a href="#details-20-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L116">Empty alternative with empty string suffix</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-dash">details</a></td><td class="details-row"><a href="#details-21-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L123">nested brace expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-dash">details</a></td><td class="details-row"><a href="#details-22-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L127">triple nested brace expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-dash">details</a></td><td class="details-row"><a href="#details-23-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L131">nested and double brace expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-dash">details</a></td><td class="details-row"><a href="#details-24-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L135">expansion on RHS of assignment</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-mksh">details</a></td><td class="details-row"><a href="#details-25-ksh">details</a></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-25-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L142">no expansion with RHS assignment</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L148">Tilde expansion</a></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L158">Tilde expansion with brace expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-dash">details</a></td><td class="details-row"><a href="#details-28-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-28-mksh">details</a></td><td class="details-row"><a href="#details-28-ksh">details</a></td><td class="details-row"><a href="#details-28-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-28-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L200">Two kinds of tilde expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-dash">details</a></td><td class="details-row"><a href="#details-29-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-29-mksh">details</a></td><td class="details-row"><a href="#details-29-ksh">details</a></td><td class="details-row"><a href="#details-29-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-29-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 30</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L237">Tilde expansion come before var expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 31</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L250">Number range expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-dash">details</a></td><td class="details-row"><a href="#details-31-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-31-mksh">details</a></td><td class="details-row"><a href="#details-31-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 32</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L261">Ascending number range expansion with negative step is invalid</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-32-bash">details</a></td><td class="details-row"><a href="#details-32-dash">details</a></td><td class="details-row"><a href="#details-32-ash">details</a></td><td class="details-row"><a href="#details-32-zsh">details</a></td><td class="details-row"><a href="#details-32-mksh">details</a></td><td class="details-row"><a href="#details-32-ksh">details</a></td><td class="details-row"><a href="#details-32-toysh">details</a></td><td class="details-row"><a href="#details-32-sush">details</a></td><td class="details-row"><a href="#details-32-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 33</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L271">regression: -1 step disallowed</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-33-bash">details</a></td><td class="details-row"><a href="#details-33-dash">details</a></td><td class="details-row"><a href="#details-33-ash">details</a></td><td class="details-row"><a href="#details-33-zsh">details</a></td><td class="details-row"><a href="#details-33-mksh">details</a></td><td class="details-row"><a href="#details-33-ksh">details</a></td><td class="details-row"><a href="#details-33-toysh">details</a></td><td class="details-row"><a href="#details-33-sush">details</a></td><td class="details-row"><a href="#details-33-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 34</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L281">regression: 0 step disallowed</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-34-bash">details</a></td><td class="details-row"><a href="#details-34-dash">details</a></td><td class="details-row"><a href="#details-34-ash">details</a></td><td class="details-row"><a href="#details-34-zsh">details</a></td><td class="details-row"><a href="#details-34-mksh">details</a></td><td class="details-row"><a href="#details-34-ksh">details</a></td><td class="details-row"><a href="#details-34-toysh">details</a></td><td class="details-row"><a href="#details-34-sush">details</a></td><td class="details-row"><a href="#details-34-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 35</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L291">Descending number range expansion with positive step is invalid</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-35-bash">details</a></td><td class="details-row"><a href="#details-35-dash">details</a></td><td class="details-row"><a href="#details-35-ash">details</a></td><td class="details-row"><a href="#details-35-zsh">details</a></td><td class="details-row"><a href="#details-35-mksh">details</a></td><td class="details-row"><a href="#details-35-ksh">details</a></td><td class="details-row"><a href="#details-35-toysh">details</a></td><td class="details-row"><a href="#details-35-sush">details</a></td><td class="details-row"><a href="#details-35-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 36</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L300">Descending number range expansion with negative step</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-36-dash">details</a></td><td class="details-row"><a href="#details-36-ash">details</a></td><td class="details-row"><a href="#details-36-zsh">details</a></td><td class="details-row"><a href="#details-36-mksh">details</a></td><td class="details-row"><a href="#details-36-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-36-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 37</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L307">Singleton ranges</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-37-dash">details</a></td><td class="details-row"><a href="#details-37-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-37-mksh">details</a></td><td class="details-row"><a href="#details-37-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 38</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L328">Singleton char ranges with steps</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-38-dash">details</a></td><td class="details-row"><a href="#details-38-ash">details</a></td><td class="details-row"><a href="#details-38-zsh">details</a></td><td class="details-row"><a href="#details-38-mksh">details</a></td><td class="details-row"><a href="#details-38-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 39</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L345">Char range expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-39-dash">details</a></td><td class="details-row"><a href="#details-39-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-39-mksh">details</a></td><td class="details-row"><a href="#details-39-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 40</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L350">Char range expansion with step</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-40-dash">details</a></td><td class="details-row"><a href="#details-40-ash">details</a></td><td class="details-row"><a href="#details-40-zsh">details</a></td><td class="details-row"><a href="#details-40-mksh">details</a></td><td class="details-row"><a href="#details-40-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 41</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L355">Char ranges with steps of the wrong sign</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-41-bash">details</a></td><td class="details-row"><a href="#details-41-dash">details</a></td><td class="details-row"><a href="#details-41-ash">details</a></td><td class="details-row"><a href="#details-41-zsh">details</a></td><td class="details-row"><a href="#details-41-mksh">details</a></td><td class="details-row"><a href="#details-41-ksh">details</a></td><td class="details-row"><a href="#details-41-toysh">details</a></td><td class="details-row"><a href="#details-41-sush">details</a></td><td class="details-row"><a href="#details-41-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 42</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L371">Mixed case char expansion is invalid</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-42-bash">details</a></td><td class="details-row"><a href="#details-42-dash">details</a></td><td class="details-row"><a href="#details-42-ash">details</a></td><td class="details-row"><a href="#details-42-zsh">details</a></td><td class="details-row"><a href="#details-42-mksh">details</a></td><td class="details-row"><a href="#details-42-ksh">details</a></td><td class="details-row"><a href="#details-42-toysh">details</a></td><td class="details-row"><a href="#details-42-sush">details</a></td><td class="details-row"><a href="#details-42-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 43</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L388">Descending char range expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-43-dash">details</a></td><td class="details-row"><a href="#details-43-ash">details</a></td><td class="details-row"><a href="#details-43-zsh">details</a></td><td class="details-row"><a href="#details-43-mksh">details</a></td><td class="details-row"><a href="#details-43-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 44</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L393">Fixed width number range expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-44-dash">details</a></td><td class="details-row"><a href="#details-44-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-44-mksh">details</a></td><td class="details-row"><a href="#details-44-ksh">details</a></td><td class="details-row"><a href="#details-44-toysh">details</a></td><td class="details-row"><a href="#details-44-sush">details</a></td><td class="details-row"><a href="#details-44-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 45</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L408">Inconsistent fixed width number range expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-45-dash">details</a></td><td class="details-row"><a href="#details-45-ash">details</a></td><td class="details-row"><a href="#details-45-zsh">details</a></td><td class="details-row"><a href="#details-45-mksh">details</a></td><td class="details-row"><a href="#details-45-ksh">details</a></td><td class="details-row"><a href="#details-45-toysh">details</a></td><td class="details-row"><a href="#details-45-sush">details</a></td><td class="details-row"><a href="#details-45-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 46</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L415">Inconsistent fixed width number range expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-46-dash">details</a></td><td class="details-row"><a href="#details-46-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-46-mksh">details</a></td><td class="details-row"><a href="#details-46-ksh">details</a></td><td class="details-row"><a href="#details-46-toysh">details</a></td><td class="details-row"><a href="#details-46-sush">details</a></td><td class="details-row"><a href="#details-46-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 47</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L421">Adjacent comma and range works</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-47-dash">details</a></td><td class="details-row"><a href="#details-47-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-47-mksh">details</a></td><td class="details-row"><a href="#details-47-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 48</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L430">Range inside comma works</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-48-dash">details</a></td><td class="details-row"><a href="#details-48-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-48-mksh">details</a></td><td class="details-row"><a href="#details-48-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-48-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 49</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L439">Mixed comma and range doesn't work</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-49-dash">details</a></td><td class="details-row"><a href="#details-49-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 50</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="brace-expansion.test.html#L445">comma and invalid range (adjacent and nested)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-50-dash">details</a></td><td class="details-row"><a href="#details-50-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-50-brush">details</a></td><td class="details-row"><a href="#details-50-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 51</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L462">OSH provides an alternative to invalid syntax</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-51-dash">details</a></td><td class="details-row"><a href="#details-51-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-51-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 52</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L472">Side effect in expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-52-dash">details</a></td><td class="details-row"><a href="#details-52-ash">details</a></td><td class="details-row"><a href="#details-52-zsh">details</a></td><td class="details-row"><a href="#details-52-mksh">details</a></td><td class="details-row"><a href="#details-52-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 53</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L480">Invalid brace expansions don't expand</a></td></tr>
+<tr><td> 54</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="brace-expansion.test.html#L490">Invalid brace expansions mixing characters and numbers</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-54-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-54-toysh">details</a></td><td class="details-row"><a href="#details-54-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>325 passed, 13 OK, 20 not implemented, 21 BUG, 171 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="brace-expansion.test.html#L8">incomplete trailing expansion</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'a_{ b_{\n', got '{a,b}_{\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{a,b}_{
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="brace-expansion.test.html#L8">incomplete trailing expansion</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'a_{ b_{\n', got '{a,b}_{\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{a,b}_{
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-osh"></a><b>osh</b></td><td>1 <a href="brace-expansion.test.html#L8">incomplete trailing expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>{a,b}_{
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="brace-expansion.test.html#L13">partial leading expansion</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '}_a }_b\n', got '}_{a,b}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>}_{a,b}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="brace-expansion.test.html#L13">partial leading expansion</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '}_a }_b\n', got '}_{a,b}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>}_{a,b}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-osh"></a><b>osh</b></td><td>2 <a href="brace-expansion.test.html#L13">partial leading expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>}_{a,b}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="brace-expansion.test.html#L18">partial leading expansion 2</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '{x}_a {x}_b\n', got '{x}_{a,b}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{x}_{a,b}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="brace-expansion.test.html#L18">partial leading expansion 2</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '{x}_a {x}_b\n', got '{x}_{a,b}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{x}_{a,b}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-osh"></a><b>osh</b></td><td>3 <a href="brace-expansion.test.html#L18">partial leading expansion 2</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>{x}_{a,b}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="brace-expansion.test.html#L23">} in expansion</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'a} b}\n', got '{a,b}}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{a,b}}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="brace-expansion.test.html#L23">} in expansion</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'a} b}\n', got '{a,b}}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{a,b}}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="brace-expansion.test.html#L23">} in expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: parse error near `}'
+</pre></td></tr><tr><td><a name="details-4-osh"></a><b>osh</b></td><td>4 <a href="brace-expansion.test.html#L23">} in expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>{a,b}}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="brace-expansion.test.html#L33">single expansion</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'foo bar\n', got '{foo,bar}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{foo,bar}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="brace-expansion.test.html#L33">single expansion</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'foo bar\n', got '{foo,bar}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{foo,bar}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="brace-expansion.test.html#L37">double expansion</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'a_c a_d b_c b_d\n', got '{a,b}_{c,d}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{a,b}_{c,d}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="brace-expansion.test.html#L37">double expansion</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'a_c a_d b_c b_d\n', got '{a,b}_{c,d}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{a,b}_{c,d}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="brace-expansion.test.html#L41">triple expansion</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '000 001 010 011 100 101 110 111\n', got '{0,1}{0,1}{0,1}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{0,1}{0,1}{0,1}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="brace-expansion.test.html#L41">triple expansion</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '000 001 010 011 100 101 110 111\n', got '{0,1}{0,1}{0,1}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{0,1}{0,1}{0,1}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="brace-expansion.test.html#L45">double expansion with single and double quotes</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'a_c a_d b_c b_d\n', got '{a,b}_{c,d}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{a,b}_{c,d}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-ash"></a><b>ash</b></td><td>8 <a href="brace-expansion.test.html#L45">double expansion with single and double quotes</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'a_c a_d b_c b_d\n', got '{a,b}_{c,d}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{a,b}_{c,d}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="brace-expansion.test.html#L49">expansion with mixed quotes</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-Xb- -cd-\n', got '-{Xb,cd}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{Xb,cd}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-ash"></a><b>ash</b></td><td>9 <a href="brace-expansion.test.html#L49">expansion with mixed quotes</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '-Xb- -cd-\n', got '-{Xb,cd}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{Xb,cd}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="brace-expansion.test.html#L49">expansion with mixed quotes</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '-Xb- -cd-\n', got '-{Xb,cd}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{Xb,cd}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="brace-expansion.test.html#L53">expansion with simple var</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-A- -b-\n', got '-{A,b}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{A,b}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="brace-expansion.test.html#L53">expansion with simple var</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '-A- -b-\n', got '-{A,b}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{A,b}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-bash"></a><b>bash</b></td><td>11 <a href="brace-expansion.test.html#L58">double expansion with simple var -- bash bug</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>b_c b_d
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-dash"></a><b>dash</b></td><td>11 <a href="brace-expansion.test.html#L58">double expansion with simple var -- bash bug</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'A_c A_d b_c b_d\n', got '{A,b}_{c,d}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{A,b}_{c,d}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-ash"></a><b>ash</b></td><td>11 <a href="brace-expansion.test.html#L58">double expansion with simple var -- bash bug</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'A_c A_d b_c b_d\n', got '{A,b}_{c,d}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{A,b}_{c,d}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="brace-expansion.test.html#L58">double expansion with simple var -- bash bug</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'A_c A_d b_c b_d\n', got 'b_c b_d\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>b_c b_d
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="brace-expansion.test.html#L58">double expansion with simple var -- bash bug</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'A_c A_d b_c b_d\n', got 'b_c b_d\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>b_c b_d
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="brace-expansion.test.html#L58">double expansion with simple var -- bash bug</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'A_c A_d b_c b_d\n', got 'b_c b_d\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>b_c b_d
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-dash"></a><b>dash</b></td><td>12 <a href="brace-expansion.test.html#L65">double expansion with braced variable</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'A_c A_d b_c b_d\n', got '{A,b}_{c,d}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{A,b}_{c,d}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-ash"></a><b>ash</b></td><td>12 <a href="brace-expansion.test.html#L65">double expansion with braced variable</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'A_c A_d b_c b_d\n', got '{A,b}_{c,d}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{A,b}_{c,d}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-bash"></a><b>bash</b></td><td>13 <a href="brace-expansion.test.html#L71">double expansion with literal and simple var</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>_ _ b_c b_d
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="brace-expansion.test.html#L71">double expansion with literal and simple var</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '_A_c _A_d b_c b_d\n', got '{_A,b}_{c,d}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{_A,b}_{c,d}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="brace-expansion.test.html#L71">double expansion with literal and simple var</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '_A_c _A_d b_c b_d\n', got '{_A,b}_{c,d}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{_A,b}_{c,d}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="brace-expansion.test.html#L71">double expansion with literal and simple var</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '_A_c _A_d b_c b_d\n', got '_ _ b_c b_d\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_ _ b_c b_d
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="brace-expansion.test.html#L71">double expansion with literal and simple var</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '_A_c _A_d b_c b_d\n', got '_ _ b_c b_d\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_ _ b_c b_d
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="brace-expansion.test.html#L71">double expansion with literal and simple var</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '_A_c _A_d b_c b_d\n', got '{_A,b}_c {_A,b}_d\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{_A,b}_c {_A,b}_d
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="brace-expansion.test.html#L77">expansion with command sub</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-a- -b-\n', got '-{a,b}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a,b}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-ash"></a><b>ash</b></td><td>14 <a href="brace-expansion.test.html#L77">expansion with command sub</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '-a- -b-\n', got '-{a,b}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a,b}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="brace-expansion.test.html#L82">expansion with arith sub</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-3- -b-\n', got '-{3,b}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{3,b}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-ash"></a><b>ash</b></td><td>15 <a href="brace-expansion.test.html#L82">expansion with arith sub</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '-3- -b-\n', got '-{3,b}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{3,b}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-dash"></a><b>dash</b></td><td>16 <a href="brace-expansion.test.html#L87">double expansion with escaped literals</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-$- -[- -]-\n', got '-{$,[,]}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{$,[,]}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-ash"></a><b>ash</b></td><td>16 <a href="brace-expansion.test.html#L87">double expansion with escaped literals</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '-$- -[- -]-\n', got '-{$,[,]}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{$,[,]}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-bash"></a><b>bash</b></td><td>17 <a href="brace-expansion.test.html#L92">{ in expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>{a {b
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-zsh"></a><b>zsh</b></td><td>17 <a href="brace-expansion.test.html#L92">{ in expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>{a {b
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="brace-expansion.test.html#L92">{ in expansion</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '{{a,b}\n', got '{a {b\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{a {b
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="brace-expansion.test.html#L92">{ in expansion</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '{{a,b}\n', got '{a {b\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{a {b
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-brush"></a><b>brush</b></td><td>17 <a href="brace-expansion.test.html#L92">{ in expansion</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '{{a,b}\n', got '{a {b\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{a {b
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-dash"></a><b>dash</b></td><td>18 <a href="brace-expansion.test.html#L100">quoted { in expansion</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '{a {b\n', got '{{a,b}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{{a,b}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-ash"></a><b>ash</b></td><td>18 <a href="brace-expansion.test.html#L100">quoted { in expansion</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '{a {b\n', got '{{a,b}\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{{a,b}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-dash"></a><b>dash</b></td><td>19 <a href="brace-expansion.test.html#L104">Empty expansion</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'aXb ab aYb\n', got 'a{X,,Y}b\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a{X,,Y}b
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-ash"></a><b>ash</b></td><td>19 <a href="brace-expansion.test.html#L104">Empty expansion</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'aXb ab aYb\n', got 'a{X,,Y}b\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a{X,,Y}b
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-dash"></a><b>dash</b></td><td>20 <a href="brace-expansion.test.html#L108">Empty alternative</a><br/><br/>
+<span class="assertion">[dash stdout] Expected "['X', 'Y']\n", got "['{X,,Y,}']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['{X,,Y,}']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-ash"></a><b>ash</b></td><td>20 <a href="brace-expansion.test.html#L108">Empty alternative</a><br/><br/>
+<span class="assertion">[ash stdout] Expected "['X', 'Y']\n", got "['{X,,Y,}']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['{X,,Y,}']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-zsh"></a><b>zsh</b></td><td>20 <a href="brace-expansion.test.html#L108">Empty alternative</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['X', '', 'Y', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-mksh"></a><b>mksh</b></td><td>20 <a href="brace-expansion.test.html#L108">Empty alternative</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['X', '', 'Y', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-ksh"></a><b>ksh</b></td><td>20 <a href="brace-expansion.test.html#L108">Empty alternative</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['X', 'Y']\n", got "['X', '', 'Y', '']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['X', '', 'Y', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-brush"></a><b>brush</b></td><td>20 <a href="brace-expansion.test.html#L108">Empty alternative</a><br/><br/>
+<span class="assertion">[brush stdout] Expected "['X', 'Y']\n", got "['X', '', 'Y', '']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['X', '', 'Y', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-dash"></a><b>dash</b></td><td>21 <a href="brace-expansion.test.html#L116">Empty alternative with empty string suffix</a><br/><br/>
+<span class="assertion">[dash stdout] Expected "['X', '', 'Y', '']\n", got "['{X,,Y,}']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['{X,,Y,}']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-ash"></a><b>ash</b></td><td>21 <a href="brace-expansion.test.html#L116">Empty alternative with empty string suffix</a><br/><br/>
+<span class="assertion">[ash stdout] Expected "['X', '', 'Y', '']\n", got "['{X,,Y,}']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['{X,,Y,}']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-dash"></a><b>dash</b></td><td>22 <a href="brace-expansion.test.html#L123">nested brace expansion</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-A- -=a=- -=b=- -B-\n', got '-{A,={a,b}=,B}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{A,={a,b}=,B}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-ash"></a><b>ash</b></td><td>22 <a href="brace-expansion.test.html#L123">nested brace expansion</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '-A- -=a=- -=b=- -B-\n', got '-{A,={a,b}=,B}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{A,={a,b}=,B}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-brush"></a><b>brush</b></td><td>22 <a href="brace-expansion.test.html#L123">nested brace expansion</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '-A- -=a=- -=b=- -B-\n', got '-A=,B}- -={a=,B}- -b=,B}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-A=,B}- -={a=,B}- -b=,B}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-dash"></a><b>dash</b></td><td>23 <a href="brace-expansion.test.html#L127">triple nested brace expansion</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-A- -=a=- -=.x.=- -=.y.=- -=b=- -B-\n', got '-{A,={a,.{x,y}.,b}=,B}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{A,={a,.{x,y}.,b}=,B}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-ash"></a><b>ash</b></td><td>23 <a href="brace-expansion.test.html#L127">triple nested brace expansion</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '-A- -=a=- -=.x.=- -=.y.=- -=b=- -B-\n', got '-{A,={a,.{x,y}.,b}=,B}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{A,={a,.{x,y}.,b}=,B}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-brush"></a><b>brush</b></td><td>23 <a href="brace-expansion.test.html#L127">triple nested brace expansion</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '-A- -=a=- -=.x.=- -=.y.=- -=b=- -B-\n', got '-A.,b}=,B}- -={a.,b}=,B}- -.{x.,b}=,B}- -y.,b}=,B}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-A.,b}=,B}- -={a.,b}=,B}- -.{x.,b}=,B}- -y.,b}=,B}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-dash"></a><b>dash</b></td><td>24 <a href="brace-expansion.test.html#L131">nested and double brace expansion</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-A- -=ac=- -=ad=- -=bc=- -=bd=- -B-\n', got '-{A,={a,b}{c,d}=,B}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{A,={a,b}{c,d}=,B}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-ash"></a><b>ash</b></td><td>24 <a href="brace-expansion.test.html#L131">nested and double brace expansion</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '-A- -=ac=- -=ad=- -=bc=- -=bd=- -B-\n', got '-{A,={a,b}{c,d}=,B}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{A,={a,b}{c,d}=,B}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-brush"></a><b>brush</b></td><td>24 <a href="brace-expansion.test.html#L131">nested and double brace expansion</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '-A- -=ac=- -=ad=- -=bc=- -=bd=- -B-\n', got '-Ac=,B}- -Ad=,B}- -={ac=,B}- -={ad=,B}- -bc=,B}- -bd=,B}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-Ac=,B}- -Ad=,B}- -={ac=,B}- -={ad=,B}- -bc=,B}- -bd=,B}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-mksh"></a><b>mksh</b></td><td>25 <a href="brace-expansion.test.html#L135">expansion on RHS of assignment</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>X Y
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-ksh"></a><b>ksh</b></td><td>25 <a href="brace-expansion.test.html#L135">expansion on RHS of assignment</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '{X,Y}\n', got 'X Y\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>X Y
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="brace-expansion.test.html#L135">expansion on RHS of assignment</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '{X,Y}\n', got 'X\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>X
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-brush"></a><b>brush</b></td><td>25 <a href="brace-expansion.test.html#L135">expansion on RHS of assignment</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '{X,Y}\n', got 'X Y\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>X Y
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-zsh"></a><b>zsh</b></td><td>26 <a href="brace-expansion.test.html#L142">no expansion with RHS assignment</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: parse error near `\n'
+</pre></td></tr><tr><td><a name="details-28-dash"></a><b>dash</b></td><td>28 <a href="brace-expansion.test.html#L158">Tilde expansion with brace expansion</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'foo~/bar /home/bob/bar\n-- foo~/bar\n-- /home/bob/bar\n== foo~/bar\n== /home/bob/bar\n'
+Got      '{foo~,~}/bar\n-- {foo~,~}/bar\n'
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{foo~,~}/bar
+-- {foo~,~}/bar
+</pre><i>stderr:</i> <br/>
+<pre>dash: 12: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-28-ash"></a><b>ash</b></td><td>28 <a href="brace-expansion.test.html#L158">Tilde expansion with brace expansion</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'foo~/bar /home/bob/bar\n-- foo~/bar\n-- /home/bob/bar\n== foo~/bar\n== /home/bob/bar\n'
+Got      '{foo~,~}/bar\n-- {foo~,~}/bar\n'
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{foo~,~}/bar
+-- {foo~,~}/bar
+</pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-28-mksh"></a><b>mksh</b></td><td>28 <a href="brace-expansion.test.html#L158">Tilde expansion with brace expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo~/bar ~/bar
+-- foo~/bar
+-- ~/bar
+== foo~/bar
+== ~/bar
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-ksh"></a><b>ksh</b></td><td>28 <a href="brace-expansion.test.html#L158">Tilde expansion with brace expansion</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'foo~/bar /home/bob/bar\n-- foo~/bar\n-- /home/bob/bar\n== foo~/bar\n== /home/bob/bar\n'
+Got      'foo~/bar ~/bar\n-- foo~/bar\n-- ~/bar\n== foo~/bar\n== ~/bar\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo~/bar ~/bar
+-- foo~/bar
+-- ~/bar
+== foo~/bar
+== ~/bar
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-toysh"></a><b>toysh</b></td><td>28 <a href="brace-expansion.test.html#L158">Tilde expansion with brace expansion</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'foo~/bar /home/bob/bar\n-- foo~/bar\n-- /home/bob/bar\n== foo~/bar\n== /home/bob/bar\n'
+Got      'foo~/bar /home/bob/bar\nfoo~/bar\n/home/bob/bar\n'
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo~/bar /home/bob/bar
+foo~/bar
+/home/bob/bar
+</pre><i>stderr:</i> <br/>
+<pre>main: line 12: sh: syntax error: {foo~,~}/bar
+</pre></td></tr><tr><td><a name="details-28-brush"></a><b>brush</b></td><td>28 <a href="brace-expansion.test.html#L158">Tilde expansion with brace expansion</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'foo~/bar /home/bob/bar\n-- foo~/bar\n-- /home/bob/bar\n== foo~/bar\n== /home/bob/bar\n'
+Got      'foo~/bar ~/bar\n-- foo~/bar\n-- ~/bar\n== foo~/bar\n== ~/bar\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo~/bar ~/bar
+-- foo~/bar
+-- ~/bar
+== foo~/bar
+== ~/bar
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-dash"></a><b>dash</b></td><td>29 <a href="brace-expansion.test.html#L200">Two kinds of tilde expansion</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '/home/bob/src /root\n-- /home/bob/src\n-- /root\n== /home/bob/src\n== /root\n'
+Got      '~{/src,root}\n-- ~{/src,root}\n'
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>~{/src,root}
+-- ~{/src,root}
+</pre><i>stderr:</i> <br/>
+<pre>dash: 11: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-29-ash"></a><b>ash</b></td><td>29 <a href="brace-expansion.test.html#L200">Two kinds of tilde expansion</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '/home/bob/src /root\n-- /home/bob/src\n-- /root\n== /home/bob/src\n== /root\n'
+Got      '~{\n-- ~{\n'
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>~{
+-- ~{
+</pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-29-mksh"></a><b>mksh</b></td><td>29 <a href="brace-expansion.test.html#L200">Two kinds of tilde expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>~/src ~root
+-- ~/src
+-- ~root
+== ~/src
+== ~root
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-ksh"></a><b>ksh</b></td><td>29 <a href="brace-expansion.test.html#L200">Two kinds of tilde expansion</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '/home/bob/src /root\n-- /home/bob/src\n-- /root\n== /home/bob/src\n== /root\n'
+Got      '~/src ~root\n-- ~/src\n-- ~root\n== ~/src\n== ~root\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>~/src ~root
+-- ~/src
+-- ~root
+== ~/src
+== ~root
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-toysh"></a><b>toysh</b></td><td>29 <a href="brace-expansion.test.html#L200">Two kinds of tilde expansion</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '/home/bob/src /root\n-- /home/bob/src\n-- /root\n== /home/bob/src\n== /root\n'
+Got      '/home/bob/src /root\n/home/bob/src\n/root\n'
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/home/bob/src /root
+/home/bob/src
+/root
+</pre><i>stderr:</i> <br/>
+<pre>main: line 11: sh: syntax error: ~{/src,root}
+</pre></td></tr><tr><td><a name="details-29-brush"></a><b>brush</b></td><td>29 <a href="brace-expansion.test.html#L200">Two kinds of tilde expansion</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '/home/bob/src /root\n-- /home/bob/src\n-- /root\n== /home/bob/src\n== /root\n'
+Got      '/home/bob/src ~root\n-- /home/bob/src\n-- ~root\n== /home/bob/src\n== ~root\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/home/bob/src ~root
+-- /home/bob/src
+-- ~root
+== /home/bob/src
+== ~root
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-toysh"></a><b>toysh</b></td><td>30 <a href="brace-expansion.test.html#L237">Tilde expansion come before var expansion</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '/home/bob\n~\n', got '~\n~\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>~
+~
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-dash"></a><b>dash</b></td><td>31 <a href="brace-expansion.test.html#L250">Number range expansion</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-1- -4- -7-\n-1- -4- -7- -10-\n', got '-{1..8..3}-\n-{1..10..3}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{1..8..3}-
+-{1..10..3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-ash"></a><b>ash</b></td><td>31 <a href="brace-expansion.test.html#L250">Number range expansion</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '-1- -4- -7-\n-1- -4- -7- -10-\n', got '-{1..8..3}-\n-{1..10..3}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{1..8..3}-
+-{1..10..3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-mksh"></a><b>mksh</b></td><td>31 <a href="brace-expansion.test.html#L250">Number range expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-{1..8..3}-
+-{1..10..3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-ksh"></a><b>ksh</b></td><td>31 <a href="brace-expansion.test.html#L250">Number range expansion</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '-1- -4- -7-\n-1- -4- -7- -10-\n', got '-{1..8..3}-\n-{1..10..3}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{1..8..3}-
+-{1..10..3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-bash"></a><b>bash</b></td><td>32 <a href="brace-expansion.test.html#L261">Ascending number range expansion with negative step is invalid</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-1- -4- -7-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-dash"></a><b>dash</b></td><td>32 <a href="brace-expansion.test.html#L261">Ascending number range expansion with negative step is invalid</a><br/><br/>
+<span class="assertion">[dash stdout] Expected u'', got '-{1..8..-3}-\n'</span><br/>
+<span class="assertion">[dash status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{1..8..-3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-ash"></a><b>ash</b></td><td>32 <a href="brace-expansion.test.html#L261">Ascending number range expansion with negative step is invalid</a><br/><br/>
+<span class="assertion">[ash stdout] Expected u'', got '-{1..8..-3}-\n'</span><br/>
+<span class="assertion">[ash status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{1..8..-3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-zsh"></a><b>zsh</b></td><td>32 <a href="brace-expansion.test.html#L261">Ascending number range expansion with negative step is invalid</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-7- -4- -1-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-mksh"></a><b>mksh</b></td><td>32 <a href="brace-expansion.test.html#L261">Ascending number range expansion with negative step is invalid</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-{1..8..-3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-ksh"></a><b>ksh</b></td><td>32 <a href="brace-expansion.test.html#L261">Ascending number range expansion with negative step is invalid</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected u'', got '-{1..8..-3}-\n'</span><br/>
+<span class="assertion">[ksh status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{1..8..-3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-toysh"></a><b>toysh</b></td><td>32 <a href="brace-expansion.test.html#L261">Ascending number range expansion with negative step is invalid</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected u'', got '-1- -4- -7-\n'</span><br/>
+<span class="assertion">[toysh status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-1- -4- -7-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-sush"></a><b>sush</b></td><td>32 <a href="brace-expansion.test.html#L261">Ascending number range expansion with negative step is invalid</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got '-1- -4- -7-\n'</span><br/>
+<span class="assertion">[sush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-1- -4- -7-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-brush"></a><b>brush</b></td><td>32 <a href="brace-expansion.test.html#L261">Ascending number range expansion with negative step is invalid</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got '-1- -4- -7-\n'</span><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-1- -4- -7-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-bash"></a><b>bash</b></td><td>33 <a href="brace-expansion.test.html#L271">regression: -1 step disallowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-1- -2- -3- -4-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-dash"></a><b>dash</b></td><td>33 <a href="brace-expansion.test.html#L271">regression: -1 step disallowed</a><br/><br/>
+<span class="assertion">[dash stdout] Expected u'', got '-{1..4..-1}-\n'</span><br/>
+<span class="assertion">[dash status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{1..4..-1}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-ash"></a><b>ash</b></td><td>33 <a href="brace-expansion.test.html#L271">regression: -1 step disallowed</a><br/><br/>
+<span class="assertion">[ash stdout] Expected u'', got '-{1..4..-1}-\n'</span><br/>
+<span class="assertion">[ash status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{1..4..-1}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-zsh"></a><b>zsh</b></td><td>33 <a href="brace-expansion.test.html#L271">regression: -1 step disallowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-4- -3- -2- -1-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-mksh"></a><b>mksh</b></td><td>33 <a href="brace-expansion.test.html#L271">regression: -1 step disallowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-{1..4..-1}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-ksh"></a><b>ksh</b></td><td>33 <a href="brace-expansion.test.html#L271">regression: -1 step disallowed</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected u'', got '-{1..4..-1}-\n'</span><br/>
+<span class="assertion">[ksh status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{1..4..-1}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-toysh"></a><b>toysh</b></td><td>33 <a href="brace-expansion.test.html#L271">regression: -1 step disallowed</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected u'', got '-1- -2- -3- -4-\n'</span><br/>
+<span class="assertion">[toysh status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-1- -2- -3- -4-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-sush"></a><b>sush</b></td><td>33 <a href="brace-expansion.test.html#L271">regression: -1 step disallowed</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got '-1- -2- -3- -4-\n'</span><br/>
+<span class="assertion">[sush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-1- -2- -3- -4-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-brush"></a><b>brush</b></td><td>33 <a href="brace-expansion.test.html#L271">regression: -1 step disallowed</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got '-1- -2- -3- -4-\n'</span><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-1- -2- -3- -4-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-bash"></a><b>bash</b></td><td>34 <a href="brace-expansion.test.html#L281">regression: 0 step disallowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-1- -2- -3- -4-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-dash"></a><b>dash</b></td><td>34 <a href="brace-expansion.test.html#L281">regression: 0 step disallowed</a><br/><br/>
+<span class="assertion">[dash stdout] Expected u'', got '-{1..4..0}-\n'</span><br/>
+<span class="assertion">[dash status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{1..4..0}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-ash"></a><b>ash</b></td><td>34 <a href="brace-expansion.test.html#L281">regression: 0 step disallowed</a><br/><br/>
+<span class="assertion">[ash stdout] Expected u'', got '-{1..4..0}-\n'</span><br/>
+<span class="assertion">[ash status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{1..4..0}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-zsh"></a><b>zsh</b></td><td>34 <a href="brace-expansion.test.html#L281">regression: 0 step disallowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-1..4..0-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-mksh"></a><b>mksh</b></td><td>34 <a href="brace-expansion.test.html#L281">regression: 0 step disallowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-{1..4..0}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-ksh"></a><b>ksh</b></td><td>34 <a href="brace-expansion.test.html#L281">regression: 0 step disallowed</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected u'', got '-{1..4..0}-\n'</span><br/>
+<span class="assertion">[ksh status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{1..4..0}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-toysh"></a><b>toysh</b></td><td>34 <a href="brace-expansion.test.html#L281">regression: 0 step disallowed</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected u'', got '-1- -2- -3- -4-\n'</span><br/>
+<span class="assertion">[toysh status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-1- -2- -3- -4-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-sush"></a><b>sush</b></td><td>34 <a href="brace-expansion.test.html#L281">regression: 0 step disallowed</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got '-1- -2- -3- -4-\n'</span><br/>
+<span class="assertion">[sush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-1- -2- -3- -4-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-brush"></a><b>brush</b></td><td>34 <a href="brace-expansion.test.html#L281">regression: 0 step disallowed</a><br/><br/>
+<span class="assertion">[brush status] Expected 2, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>Well, this is embarrassing.
+
+brush had a problem and crashed. To help us diagnose the problem you can send us a crash report.
+
+We have generated a report file at "/tmp/report-adde1172-a926-4be8-b282-50b3be34354e.toml". Submit an issue or email with the subject of "brush Crash Report" and include the report as an attachment.
+
+
+To submit the crash report:
+
+please post a GitHub issue at https://github.com/reubeno/brush/issues/new
+
+We take privacy seriously, and do not perform any automated error collection. In order to improve the software, we rely on people to submit reports.
+
+Thank you kindly!
+</pre></td></tr><tr><td><a name="details-35-bash"></a><b>bash</b></td><td>35 <a href="brace-expansion.test.html#L291">Descending number range expansion with positive step is invalid</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-8- -5- -2-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-dash"></a><b>dash</b></td><td>35 <a href="brace-expansion.test.html#L291">Descending number range expansion with positive step is invalid</a><br/><br/>
+<span class="assertion">[dash stdout] Expected u'', got '-{8..1..3}-\n'</span><br/>
+<span class="assertion">[dash status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{8..1..3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-ash"></a><b>ash</b></td><td>35 <a href="brace-expansion.test.html#L291">Descending number range expansion with positive step is invalid</a><br/><br/>
+<span class="assertion">[ash stdout] Expected u'', got '-{8..1..3}-\n'</span><br/>
+<span class="assertion">[ash status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{8..1..3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-zsh"></a><b>zsh</b></td><td>35 <a href="brace-expansion.test.html#L291">Descending number range expansion with positive step is invalid</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-8- -5- -2-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-mksh"></a><b>mksh</b></td><td>35 <a href="brace-expansion.test.html#L291">Descending number range expansion with positive step is invalid</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-{8..1..3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-ksh"></a><b>ksh</b></td><td>35 <a href="brace-expansion.test.html#L291">Descending number range expansion with positive step is invalid</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected u'', got '-{8..1..3}-\n'</span><br/>
+<span class="assertion">[ksh status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{8..1..3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-toysh"></a><b>toysh</b></td><td>35 <a href="brace-expansion.test.html#L291">Descending number range expansion with positive step is invalid</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected u'', got '-8- -5- -2-\n'</span><br/>
+<span class="assertion">[toysh status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-8- -5- -2-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-sush"></a><b>sush</b></td><td>35 <a href="brace-expansion.test.html#L291">Descending number range expansion with positive step is invalid</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got '-8- -5- -2-\n'</span><br/>
+<span class="assertion">[sush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-8- -5- -2-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-brush"></a><b>brush</b></td><td>35 <a href="brace-expansion.test.html#L291">Descending number range expansion with positive step is invalid</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got '-7- -4- -1-\n'</span><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-7- -4- -1-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-dash"></a><b>dash</b></td><td>36 <a href="brace-expansion.test.html#L300">Descending number range expansion with negative step</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-8- -5- -2-\n', got '-{8..1..-3}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{8..1..-3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-ash"></a><b>ash</b></td><td>36 <a href="brace-expansion.test.html#L300">Descending number range expansion with negative step</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '-8- -5- -2-\n', got '-{8..1..-3}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{8..1..-3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-zsh"></a><b>zsh</b></td><td>36 <a href="brace-expansion.test.html#L300">Descending number range expansion with negative step</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-2- -5- -8-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-mksh"></a><b>mksh</b></td><td>36 <a href="brace-expansion.test.html#L300">Descending number range expansion with negative step</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-{8..1..-3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-ksh"></a><b>ksh</b></td><td>36 <a href="brace-expansion.test.html#L300">Descending number range expansion with negative step</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '-8- -5- -2-\n', got '-{8..1..-3}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{8..1..-3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-brush"></a><b>brush</b></td><td>36 <a href="brace-expansion.test.html#L300">Descending number range expansion with negative step</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '-8- -5- -2-\n', got '-7- -4- -1-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-7- -4- -1-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-37-dash"></a><b>dash</b></td><td>37 <a href="brace-expansion.test.html#L307">Singleton ranges</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '1-\n-9-\n-9-\n-9-\na-\n', got '{1..1}-\n{-9..-9}-\n{-9..-9..3}-\n{-9..-9..-3}-\n{a..a}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{1..1}-
+{-9..-9}-
+{-9..-9..3}-
+{-9..-9..-3}-
+{a..a}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-37-ash"></a><b>ash</b></td><td>37 <a href="brace-expansion.test.html#L307">Singleton ranges</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '1-\n-9-\n-9-\n-9-\na-\n', got '{1..1}-\n{-9..-9}-\n{-9..-9..3}-\n{-9..-9..-3}-\n{a..a}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{1..1}-
+{-9..-9}-
+{-9..-9..3}-
+{-9..-9..-3}-
+{a..a}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-37-mksh"></a><b>mksh</b></td><td>37 <a href="brace-expansion.test.html#L307">Singleton ranges</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>{1..1}-
+{-9..-9}-
+{-9..-9..3}-
+{-9..-9..-3}-
+{a..a}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-37-ksh"></a><b>ksh</b></td><td>37 <a href="brace-expansion.test.html#L307">Singleton ranges</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '1-\n-9-\n-9-\n-9-\na-\n', got '{1..1}-\n{-9..-9}-\n{-9..-9..3}-\n{-9..-9..-3}-\n{a..a}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{1..1}-
+{-9..-9}-
+{-9..-9..3}-
+{-9..-9..-3}-
+{a..a}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-dash"></a><b>dash</b></td><td>38 <a href="brace-expansion.test.html#L328">Singleton char ranges with steps</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'a-\na-\n', got '{a..a..2}-\n{a..a..-2}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{a..a..2}-
+{a..a..-2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-ash"></a><b>ash</b></td><td>38 <a href="brace-expansion.test.html#L328">Singleton char ranges with steps</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'a-\na-\n', got '{a..a..2}-\n{a..a..-2}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{a..a..2}-
+{a..a..-2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-zsh"></a><b>zsh</b></td><td>38 <a href="brace-expansion.test.html#L328">Singleton char ranges with steps</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>{a..a..2}-
+{a..a..-2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-mksh"></a><b>mksh</b></td><td>38 <a href="brace-expansion.test.html#L328">Singleton char ranges with steps</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>{a..a..2}-
+{a..a..-2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-ksh"></a><b>ksh</b></td><td>38 <a href="brace-expansion.test.html#L328">Singleton char ranges with steps</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'a-\na-\n', got '{a..a..2}-\n{a..a..-2}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{a..a..2}-
+{a..a..-2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-dash"></a><b>dash</b></td><td>39 <a href="brace-expansion.test.html#L345">Char range expansion</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-a- -b- -c- -d- -e-\n', got '-{a..e}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a..e}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-ash"></a><b>ash</b></td><td>39 <a href="brace-expansion.test.html#L345">Char range expansion</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '-a- -b- -c- -d- -e-\n', got '-{a..e}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a..e}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-mksh"></a><b>mksh</b></td><td>39 <a href="brace-expansion.test.html#L345">Char range expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-{a..e}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-ksh"></a><b>ksh</b></td><td>39 <a href="brace-expansion.test.html#L345">Char range expansion</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '-a- -b- -c- -d- -e-\n', got '-{a..e}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a..e}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-dash"></a><b>dash</b></td><td>40 <a href="brace-expansion.test.html#L350">Char range expansion with step</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-a- -c- -e-\n', got '-{a..e..2}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a..e..2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-ash"></a><b>ash</b></td><td>40 <a href="brace-expansion.test.html#L350">Char range expansion with step</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '-a- -c- -e-\n', got '-{a..e..2}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a..e..2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-zsh"></a><b>zsh</b></td><td>40 <a href="brace-expansion.test.html#L350">Char range expansion with step</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-{a..e..2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-mksh"></a><b>mksh</b></td><td>40 <a href="brace-expansion.test.html#L350">Char range expansion with step</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-{a..e..2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-ksh"></a><b>ksh</b></td><td>40 <a href="brace-expansion.test.html#L350">Char range expansion with step</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '-a- -c- -e-\n', got '-{a..e..2}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a..e..2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-41-bash"></a><b>bash</b></td><td>41 <a href="brace-expansion.test.html#L355">Char ranges with steps of the wrong sign</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-a- -c- -e-
+-e- -c- -a-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-41-dash"></a><b>dash</b></td><td>41 <a href="brace-expansion.test.html#L355">Char ranges with steps of the wrong sign</a><br/><br/>
+<span class="assertion">[dash stdout] Expected u'', got '-{a..e..-2}-\n-{e..a..2}-\n'</span><br/>
+<span class="assertion">[dash status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a..e..-2}-
+-{e..a..2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-41-ash"></a><b>ash</b></td><td>41 <a href="brace-expansion.test.html#L355">Char ranges with steps of the wrong sign</a><br/><br/>
+<span class="assertion">[ash stdout] Expected u'', got '-{a..e..-2}-\n-{e..a..2}-\n'</span><br/>
+<span class="assertion">[ash status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a..e..-2}-
+-{e..a..2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-41-zsh"></a><b>zsh</b></td><td>41 <a href="brace-expansion.test.html#L355">Char ranges with steps of the wrong sign</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-{a..e..-2}-
+-{e..a..2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-41-mksh"></a><b>mksh</b></td><td>41 <a href="brace-expansion.test.html#L355">Char ranges with steps of the wrong sign</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-{a..e..-2}-
+-{e..a..2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-41-ksh"></a><b>ksh</b></td><td>41 <a href="brace-expansion.test.html#L355">Char ranges with steps of the wrong sign</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected u'', got '-{a..e..-2}-\n-{e..a..2}-\n'</span><br/>
+<span class="assertion">[ksh status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a..e..-2}-
+-{e..a..2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-41-toysh"></a><b>toysh</b></td><td>41 <a href="brace-expansion.test.html#L355">Char ranges with steps of the wrong sign</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected u'', got '-a- -c- -e-\n-e- -c- -a-\n'</span><br/>
+<span class="assertion">[toysh status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-a- -c- -e-
+-e- -c- -a-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-41-sush"></a><b>sush</b></td><td>41 <a href="brace-expansion.test.html#L355">Char ranges with steps of the wrong sign</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got '-a- -c- -e-\n-e- -c- -a-\n'</span><br/>
+<span class="assertion">[sush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-a- -c- -e-
+-e- -c- -a-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-41-brush"></a><b>brush</b></td><td>41 <a href="brace-expansion.test.html#L355">Char ranges with steps of the wrong sign</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got '-a- -c- -e-\n-e- -c- -a-\n'</span><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-a- -c- -e-
+-e- -c- -a-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-bash"></a><b>bash</b></td><td>42 <a href="brace-expansion.test.html#L371">Mixed case char expansion is invalid</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>bash: line 2: bad substitution: no closing "`" in `-
+bash: line 3: bad substitution: no closing "`" in `-
+</pre></td></tr><tr><td><a name="details-42-dash"></a><b>dash</b></td><td>42 <a href="brace-expansion.test.html#L371">Mixed case char expansion is invalid</a><br/><br/>
+<span class="assertion">[dash stdout] Expected u'', got '-{z..A}-\n-{z..A..2}-\n'</span><br/>
+<span class="assertion">[dash status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{z..A}-
+-{z..A..2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-ash"></a><b>ash</b></td><td>42 <a href="brace-expansion.test.html#L371">Mixed case char expansion is invalid</a><br/><br/>
+<span class="assertion">[ash stdout] Expected u'', got '-{z..A}-\n-{z..A..2}-\n'</span><br/>
+<span class="assertion">[ash status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{z..A}-
+-{z..A..2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-zsh"></a><b>zsh</b></td><td>42 <a href="brace-expansion.test.html#L371">Mixed case char expansion is invalid</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>BUG
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-mksh"></a><b>mksh</b></td><td>42 <a href="brace-expansion.test.html#L371">Mixed case char expansion is invalid</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-{z..A}-
+-{z..A..2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-ksh"></a><b>ksh</b></td><td>42 <a href="brace-expansion.test.html#L371">Mixed case char expansion is invalid</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected u'', got '-{z..A}-\n-{z..A..2}-\n'</span><br/>
+<span class="assertion">[ksh status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{z..A}-
+-{z..A..2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-toysh"></a><b>toysh</b></td><td>42 <a href="brace-expansion.test.html#L371">Mixed case char expansion is invalid</a><br/><br/>
+<span class="assertion">[toysh status] Expected 2, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-42-sush"></a><b>sush</b></td><td>42 <a href="brace-expansion.test.html#L371">Mixed case char expansion is invalid</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got '-z- -y- -x- -w- -v- -u- -t- -s- -r- -q- -p- -o- -n- -m- -l- -k- -j- -i- -h- -g- -f- -e- -d- -c- -b- -a- -`- -_- -^- -]- -\\- -[- -Z- -Y- -X- -W- -V- -U- -T- -S- -R- -Q- -P- -O- -N- -M- -L- -K- -J- -I- -H- -G- -F- -E- -D- -C- -B- -A-\n-z- -x- -v- -t- -r- -p- -n- -l- -j- -h- -f- -d- -b- -`- -^- -\\- -Z- -X- -V- -T- -R- -P- -N- -L- -J- -H- -F- -D- -B-\n'</span><br/>
+<span class="assertion">[sush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-z- -y- -x- -w- -v- -u- -t- -s- -r- -q- -p- -o- -n- -m- -l- -k- -j- -i- -h- -g- -f- -e- -d- -c- -b- -a- -`- -_- -^- -]- -\- -[- -Z- -Y- -X- -W- -V- -U- -T- -S- -R- -Q- -P- -O- -N- -M- -L- -K- -J- -I- -H- -G- -F- -E- -D- -C- -B- -A-
+-z- -x- -v- -t- -r- -p- -n- -l- -j- -h- -f- -d- -b- -`- -^- -\- -Z- -X- -V- -T- -R- -P- -N- -L- -J- -H- -F- -D- -B-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-42-brush"></a><b>brush</b></td><td>42 <a href="brace-expansion.test.html#L371">Mixed case char expansion is invalid</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got '-y- -w- -u- -s- -q- -o- -m- -k- -i- -g- -e- -c- -a- -_- -]- -[- -Y- -W- -U- -S- -Q- -O- -M- -K- -I- -G- -E- -C- -A-\n'</span><br/>
+<span class="assertion">[brush status] Expected 2, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-y- -w- -u- -s- -q- -o- -m- -k- -i- -g- -e- -c- -a- -_- -]- -[- -Y- -W- -U- -S- -Q- -O- -M- -K- -I- -G- -E- -C- -A-
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: failed to parse word '-z- -y- -x- -w- -v- -u- -t- -s- -r- -q- -p- -o- -n- -m- -l- -k- -j- -i- -h- -g- -f- -e- -d- -c- -b- -a- -`- -_- -^- -]- -\- -[- -Z- -Y- -X- -W- -V- -U- -T- -S- -R- -Q- -P- -O- -N- -M- -L- -K- -J- -I- -H- -G- -F- -E- -D- -C- -B- -A-'
+</pre></td></tr><tr><td><a name="details-43-dash"></a><b>dash</b></td><td>43 <a href="brace-expansion.test.html#L388">Descending char range expansion</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-e- -c- -a-\n', got '-{e..a..-2}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{e..a..-2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-43-ash"></a><b>ash</b></td><td>43 <a href="brace-expansion.test.html#L388">Descending char range expansion</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '-e- -c- -a-\n', got '-{e..a..-2}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{e..a..-2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-43-zsh"></a><b>zsh</b></td><td>43 <a href="brace-expansion.test.html#L388">Descending char range expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-{e..a..-2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-43-mksh"></a><b>mksh</b></td><td>43 <a href="brace-expansion.test.html#L388">Descending char range expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-{e..a..-2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-43-ksh"></a><b>ksh</b></td><td>43 <a href="brace-expansion.test.html#L388">Descending char range expansion</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '-e- -c- -a-\n', got '-{e..a..-2}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{e..a..-2}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-44-dash"></a><b>dash</b></td><td>44 <a href="brace-expansion.test.html#L393">Fixed width number range expansion</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '-01- -02- -03-\n-09- -10- -11- -12-\n-12- -11- -10- -09- -08- -07-\n'
+Got      '-{01..03}-\n-{09..12}-\n-{12..07}-\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{01..03}-
+-{09..12}-
+-{12..07}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-44-ash"></a><b>ash</b></td><td>44 <a href="brace-expansion.test.html#L393">Fixed width number range expansion</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '-01- -02- -03-\n-09- -10- -11- -12-\n-12- -11- -10- -09- -08- -07-\n'
+Got      '-{01..03}-\n-{09..12}-\n-{12..07}-\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{01..03}-
+-{09..12}-
+-{12..07}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-44-mksh"></a><b>mksh</b></td><td>44 <a href="brace-expansion.test.html#L393">Fixed width number range expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-{01..03}-
+-{09..12}-
+-{12..07}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-44-ksh"></a><b>ksh</b></td><td>44 <a href="brace-expansion.test.html#L393">Fixed width number range expansion</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '-01- -02- -03-\n-09- -10- -11- -12-\n-12- -11- -10- -09- -08- -07-\n'
+Got      '-{01..03}-\n-{09..12}-\n-{12..07}-\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{01..03}-
+-{09..12}-
+-{12..07}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-44-toysh"></a><b>toysh</b></td><td>44 <a href="brace-expansion.test.html#L393">Fixed width number range expansion</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '-01- -02- -03-\n-09- -10- -11- -12-\n-12- -11- -10- -09- -08- -07-\n'
+Got      '-1- -2- -3-\n-9- -10- -11- -12-\n-12- -11- -10- -9- -8- -7-\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-1- -2- -3-
+-9- -10- -11- -12-
+-12- -11- -10- -9- -8- -7-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-44-sush"></a><b>sush</b></td><td>44 <a href="brace-expansion.test.html#L393">Fixed width number range expansion</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '-01- -02- -03-\n-09- -10- -11- -12-\n-12- -11- -10- -09- -08- -07-\n'
+Got      '-1- -2- -3-\n-9- -10- -11- -12-\n-12- -11- -10- -9- -8- -7-\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-1- -2- -3-
+-9- -10- -11- -12-
+-12- -11- -10- -9- -8- -7-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-44-brush"></a><b>brush</b></td><td>44 <a href="brace-expansion.test.html#L393">Fixed width number range expansion</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '-01- -02- -03-\n-09- -10- -11- -12-\n-12- -11- -10- -09- -08- -07-\n'
+Got      '-1- -2- -3-\n-9- -10- -11- -12-\n-12- -11- -10- -9- -8- -7-\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-1- -2- -3-
+-9- -10- -11- -12-
+-12- -11- -10- -9- -8- -7-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-45-dash"></a><b>dash</b></td><td>45 <a href="brace-expansion.test.html#L408">Inconsistent fixed width number range expansion</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-001- -002- -003-\n', got '-{01..003}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{01..003}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-45-ash"></a><b>ash</b></td><td>45 <a href="brace-expansion.test.html#L408">Inconsistent fixed width number range expansion</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '-001- -002- -003-\n', got '-{01..003}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{01..003}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-45-zsh"></a><b>zsh</b></td><td>45 <a href="brace-expansion.test.html#L408">Inconsistent fixed width number range expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-01- -02- -03-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-45-mksh"></a><b>mksh</b></td><td>45 <a href="brace-expansion.test.html#L408">Inconsistent fixed width number range expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-{01..003}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-45-ksh"></a><b>ksh</b></td><td>45 <a href="brace-expansion.test.html#L408">Inconsistent fixed width number range expansion</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '-001- -002- -003-\n', got '-{01..003}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{01..003}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-45-toysh"></a><b>toysh</b></td><td>45 <a href="brace-expansion.test.html#L408">Inconsistent fixed width number range expansion</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '-001- -002- -003-\n', got '-1- -2- -3-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-1- -2- -3-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-45-sush"></a><b>sush</b></td><td>45 <a href="brace-expansion.test.html#L408">Inconsistent fixed width number range expansion</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '-001- -002- -003-\n', got '-1- -2- -3-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-1- -2- -3-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-45-brush"></a><b>brush</b></td><td>45 <a href="brace-expansion.test.html#L408">Inconsistent fixed width number range expansion</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '-001- -002- -003-\n', got '-1- -2- -3-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-1- -2- -3-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-46-dash"></a><b>dash</b></td><td>46 <a href="brace-expansion.test.html#L415">Inconsistent fixed width number range expansion</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-01- -02- -03-\n', got '-{01..3}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{01..3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-46-ash"></a><b>ash</b></td><td>46 <a href="brace-expansion.test.html#L415">Inconsistent fixed width number range expansion</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '-01- -02- -03-\n', got '-{01..3}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{01..3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-46-mksh"></a><b>mksh</b></td><td>46 <a href="brace-expansion.test.html#L415">Inconsistent fixed width number range expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-{01..3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-46-ksh"></a><b>ksh</b></td><td>46 <a href="brace-expansion.test.html#L415">Inconsistent fixed width number range expansion</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '-01- -02- -03-\n', got '-{01..3}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{01..3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-46-toysh"></a><b>toysh</b></td><td>46 <a href="brace-expansion.test.html#L415">Inconsistent fixed width number range expansion</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '-01- -02- -03-\n', got '-1- -2- -3-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-1- -2- -3-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-46-sush"></a><b>sush</b></td><td>46 <a href="brace-expansion.test.html#L415">Inconsistent fixed width number range expansion</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '-01- -02- -03-\n', got '-1- -2- -3-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-1- -2- -3-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-46-brush"></a><b>brush</b></td><td>46 <a href="brace-expansion.test.html#L415">Inconsistent fixed width number range expansion</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '-01- -02- -03-\n', got '-1- -2- -3-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-1- -2- -3-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-47-dash"></a><b>dash</b></td><td>47 <a href="brace-expansion.test.html#L421">Adjacent comma and range works</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-a1- -a2- -a3- -b1- -b2- -b3-\n', got '-{a,b}{1..3}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a,b}{1..3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-47-ash"></a><b>ash</b></td><td>47 <a href="brace-expansion.test.html#L421">Adjacent comma and range works</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '-a1- -a2- -a3- -b1- -b2- -b3-\n', got '-{a,b}{1..3}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a,b}{1..3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-47-mksh"></a><b>mksh</b></td><td>47 <a href="brace-expansion.test.html#L421">Adjacent comma and range works</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-a{1..3}- -b{1..3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-47-ksh"></a><b>ksh</b></td><td>47 <a href="brace-expansion.test.html#L421">Adjacent comma and range works</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '-a1- -a2- -a3- -b1- -b2- -b3-\n', got '-a{1..3}- -b{1..3}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-a{1..3}- -b{1..3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-48-dash"></a><b>dash</b></td><td>48 <a href="brace-expansion.test.html#L430">Range inside comma works</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-a- -_1_- -_2_- -_3_- -b-\n', got '-{a,_{1..3}_,b}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a,_{1..3}_,b}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-48-ash"></a><b>ash</b></td><td>48 <a href="brace-expansion.test.html#L430">Range inside comma works</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '-a- -_1_- -_2_- -_3_- -b-\n', got '-{a,_{1..3}_,b}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a,_{1..3}_,b}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-48-mksh"></a><b>mksh</b></td><td>48 <a href="brace-expansion.test.html#L430">Range inside comma works</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-a- -_{1..3}_- -b-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-48-ksh"></a><b>ksh</b></td><td>48 <a href="brace-expansion.test.html#L430">Range inside comma works</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '-a- -_1_- -_2_- -_3_- -b-\n', got '-a- -_{1..3}_- -b-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-a- -_{1..3}_- -b-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-48-brush"></a><b>brush</b></td><td>48 <a href="brace-expansion.test.html#L430">Range inside comma works</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '-a- -_1_- -_2_- -_3_- -b-\n', got '-a_,b}- -_{1..3_,b}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-a_,b}- -_{1..3_,b}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-49-dash"></a><b>dash</b></td><td>49 <a href="brace-expansion.test.html#L439">Mixed comma and range doesn't work</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '-a- -b- -1..3-\n', got '-{a,b,1..3}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a,b,1..3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-49-ash"></a><b>ash</b></td><td>49 <a href="brace-expansion.test.html#L439">Mixed comma and range doesn't work</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '-a- -b- -1..3-\n', got '-{a,b,1..3}-\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a,b,1..3}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-50-dash"></a><b>dash</b></td><td>50 <a href="brace-expansion.test.html#L445">comma and invalid range (adjacent and nested)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '-a{1...3}- -b{1...3}-\n-a- -{1...3}-\na{} b{}\n'
+Got      '-{a,b}{1...3}-\n-{a,{1...3}}-\n{a,b}{}\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a,b}{1...3}-
+-{a,{1...3}}-
+{a,b}{}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-50-ash"></a><b>ash</b></td><td>50 <a href="brace-expansion.test.html#L445">comma and invalid range (adjacent and nested)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '-a{1...3}- -b{1...3}-\n-a- -{1...3}-\na{} b{}\n'
+Got      '-{a,b}{1...3}-\n-{a,{1...3}}-\n{a,b}{}\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a,b}{1...3}-
+-{a,{1...3}}-
+{a,b}{}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-50-brush"></a><b>brush</b></td><td>50 <a href="brace-expansion.test.html#L445">comma and invalid range (adjacent and nested)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '-a{1...3}- -b{1...3}-\n-a- -{1...3}-\na{} b{}\n'
+Got      '-a{1...3}- -b{1...3}-\n-a}- -{1...3}-\na{} b{}\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-a{1...3}- -b{1...3}-
+-a}- -{1...3}-
+a{} b{}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-50-osh"></a><b>osh</b></td><td>50 <a href="brace-expansion.test.html#L445">comma and invalid range (adjacent and nested)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-{a,b}{1...3}-
+-{a,{1...3}}-
+{a,b}{}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-51-dash"></a><b>dash</b></td><td>51 <a href="brace-expansion.test.html#L462">OSH provides an alternative to invalid syntax</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '-a{1...3}- -b{1...3}-\n-a- -{1...3}-\na{} b{}\n'
+Got      '-{a,b}{1...3}-\n-{a,{1...3}}-\n{a,b}{}\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a,b}{1...3}-
+-{a,{1...3}}-
+{a,b}{}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-51-ash"></a><b>ash</b></td><td>51 <a href="brace-expansion.test.html#L462">OSH provides an alternative to invalid syntax</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '-a{1...3}- -b{1...3}-\n-a- -{1...3}-\na{} b{}\n'
+Got      '-{a,b}{1...3}-\n-{a,{1...3}}-\n{a,b}{}\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a,b}{1...3}-
+-{a,{1...3}}-
+{a,b}{}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-51-brush"></a><b>brush</b></td><td>51 <a href="brace-expansion.test.html#L462">OSH provides an alternative to invalid syntax</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '-a{1...3}- -b{1...3}-\n-a- -{1...3}-\na{} b{}\n'
+Got      '-a{1...3}- -b{1...3}-\n-{a,{1...3}}-\na{} b{}\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-a{1...3}- -b{1...3}-
+-{a,{1...3}}-
+a{} b{}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-52-dash"></a><b>dash</b></td><td>52 <a href="brace-expansion.test.html#L472">Side effect in expansion</a><br/><br/>
+<span class="assertion">[dash stdout] Expected 'a-0 b-1 c-2\n', got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: arithmetic expression: expecting primary: "i++"
+</pre></td></tr><tr><td><a name="details-52-ash"></a><b>ash</b></td><td>52 <a href="brace-expansion.test.html#L472">Side effect in expansion</a><br/><br/>
+<span class="assertion">[ash stdout] Expected 'a-0 b-1 c-2\n', got '{a,b,c}-0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>{a,b,c}-0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-52-zsh"></a><b>zsh</b></td><td>52 <a href="brace-expansion.test.html#L472">Side effect in expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a-0 b-0 c-0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-52-mksh"></a><b>mksh</b></td><td>52 <a href="brace-expansion.test.html#L472">Side effect in expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a-0 b-0 c-0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-52-ksh"></a><b>ksh</b></td><td>52 <a href="brace-expansion.test.html#L472">Side effect in expansion</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'a-0 b-1 c-2\n', got 'a-0 b-0 c-0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a-0 b-0 c-0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-54-zsh"></a><b>zsh</b></td><td>54 <a href="brace-expansion.test.html#L490">Invalid brace expansions mixing characters and numbers</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>BUG
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-54-toysh"></a><b>toysh</b></td><td>54 <a href="brace-expansion.test.html#L490">Invalid brace expansions mixing characters and numbers</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '{1..a}\n{z..3}\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-54-sush"></a><b>sush</b></td><td>54 <a href="brace-expansion.test.html#L490">Invalid brace expansions mixing characters and numbers</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '{1..a}\n{z..3}\n', got '1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \\ ] ^ _ ` a\nz y x w v u t s r q p o n m l k j i h g f e d c b a ` _ ^ ] \\ [ Z Y X W V U T S R Q P O N M L K J I H G F E D C B A @ ? &gt; = &lt; ; : 9 8 7 6 5 4 3\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ? @ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [ \ ] ^ _ ` a
+z y x w v u t s r q p o n m l k j i h g f e d c b a ` _ ^ ] \ [ Z Y X W V U T S R Q P O N M L K J I H G F E D C B A @ ? &gt; = &lt; ; : 9 8 7 6 5 4 3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

@@ -1,0 +1,2099 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>errexit-osh: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for errexit-osh.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>15</td><td>9</td><td>14</td><td>10</td><td>10</td><td>11</td><td>11</td><td>13</td><td>13</td><td>35</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>1</td><td>4</td><td>1</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>19</td><td>22</td><td>20</td><td>0</td><td>21</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>0</td><td>25</td><td>0</td><td>24</td><td>23</td><td>22</td><td>22</td><td>0</td><td></td></tr>
+<tr><td class="timeout">TIME</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>35</td><td>35</td><td>35</td><td>35</td><td>35</td><td>35</td><td>35</td><td>35</td><td>35</td><td>35</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L15">command sub: errexit is NOT inherited and outer shell keeps going</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L37">command sub with inherit_errexit only</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L54">strict_errexit and assignment builtins (local, export, readonly ...)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-2-bash">details</a></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L76">strict_errexit and command sub in export / readonly</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-3-bash">details</a></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L98">strict_errexit disallows pipeline</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-4-bash">details</a></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L113">strict_errexit allows singleton pipeline</a></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L125">strict_errexit with &amp;&amp; || !</a></td></tr>
+<tr><td>  7</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L147">strict_errexit detects proc in &amp;&amp; || !</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-7-bash">details</a></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L181">strict_errexit without errexit proc</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-8-bash">details</a></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L201">strict_errexit without errexit proc / command sub</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-9-bash">details</a></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"><a href="#details-9-zsh">details</a></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L231">strict_errexit and errexit disabled</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-10-bash">details</a></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L258">command sub with command_sub_errexit only</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-11-zsh">details</a></td><td class="details-row"><a href="#details-11-mksh">details</a></td><td class="details-row"><a href="#details-11-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L275">command_sub_errexit stops at first error</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-12-bash">details</a></td><td class="details-row"><a href="#details-12-dash">details</a></td><td class="details-row"><a href="#details-12-ash">details</a></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L296">command sub with inherit_errexit and command_sub_errexit</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-13-bash">details</a></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"><a href="#details-13-ksh">details</a></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L322">command sub: last command fails but keeps going and exit code is 0</a></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L331">global assignment with command sub: middle command fails</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-15-zsh">details</a></td><td class="details-row"><a href="#details-15-mksh">details</a></td><td class="details-row"><a href="#details-15-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L344">global assignment with command sub: last command fails and it aborts</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"><a href="#details-16-sush">details</a></td><td class="details-row"><a href="#details-16-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L351">local: middle command fails and keeps going</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-17-zsh">details</a></td><td class="details-row"><a href="#details-17-mksh">details</a></td><td class="details-row"><a href="#details-17-ksh">details</a></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L372">local: last command fails and also keeps going</a></td></tr>
+<tr><td> 19</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L387">local and inherit_errexit / command_sub_errexit</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-19-bash">details</a></td><td class="details-row"><a href="#details-19-dash">details</a></td><td class="details-row"><a href="#details-19-ash">details</a></td><td class="details-row"><a href="#details-19-zsh">details</a></td><td class="details-row"><a href="#details-19-mksh">details</a></td><td class="details-row"><a href="#details-19-ksh">details</a></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"><a href="#details-19-sush">details</a></td><td class="details-row"><a href="#details-19-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L416">global assignment when last status is failure</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L427">strict_errexit prevents errexit from being disabled in function</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-21-bash">details</a></td><td class="details-row"><a href="#details-21-dash">details</a></td><td class="details-row"><a href="#details-21-ash">details</a></td><td class="details-row"><a href="#details-21-zsh">details</a></td><td class="details-row"><a href="#details-21-mksh">details</a></td><td class="details-row"><a href="#details-21-ksh">details</a></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"><a href="#details-21-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L454">strict_errexit prevents errexit from being disabled in brace group</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-22-bash">details</a></td><td class="details-row"><a href="#details-22-dash">details</a></td><td class="details-row"><a href="#details-22-ash">details</a></td><td class="details-row"><a href="#details-22-zsh">details</a></td><td class="details-row"><a href="#details-22-mksh">details</a></td><td class="details-row"><a href="#details-22-ksh">details</a></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"><a href="#details-22-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L475">strict_errexit prevents errexit from being disabled in subshell</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-23-bash">details</a></td><td class="details-row"><a href="#details-23-dash">details</a></td><td class="details-row"><a href="#details-23-ash">details</a></td><td class="details-row"><a href="#details-23-zsh">details</a></td><td class="details-row"><a href="#details-23-mksh">details</a></td><td class="details-row"><a href="#details-23-ksh">details</a></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"><a href="#details-23-sush">details</a></td><td class="details-row"><a href="#details-23-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L498">strict_errexit and ! &amp;&amp; || if while until</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-24-bash">details</a></td><td class="details-row"><a href="#details-24-dash">details</a></td><td class="details-row"><a href="#details-24-ash">details</a></td><td class="details-row"><a href="#details-24-zsh">details</a></td><td class="details-row"><a href="#details-24-mksh">details</a></td><td class="details-row"><a href="#details-24-ksh">details</a></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"><a href="#details-24-sush">details</a></td><td class="details-row"><a href="#details-24-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L565">if pipeline doesn't fail fatally</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-25-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L588">errexit is silent (verbose_errexit for Oil)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L595">command sub errexit preserves exit code</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-27-bash">details</a></td><td class="details-row"><a href="#details-27-dash">details</a></td><td class="details-row"><a href="#details-27-ash">details</a></td><td class="details-row"><a href="#details-27-zsh">details</a></td><td class="details-row"><a href="#details-27-mksh">details</a></td><td class="details-row"><a href="#details-27-ksh">details</a></td><td class="details-row"><a href="#details-27-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-27-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L612">What's in strict:all?</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-28-bash">details</a></td><td class="details-row"><a href="#details-28-dash">details</a></td><td class="details-row"><a href="#details-28-ash">details</a></td><td class="details-row"><a href="#details-28-zsh">details</a></td><td class="details-row"><a href="#details-28-mksh">details</a></td><td class="details-row"><a href="#details-28-ksh">details</a></td><td class="details-row"><a href="#details-28-toysh">details</a></td><td class="details-row"><a href="#details-28-sush">details</a></td><td class="details-row"><a href="#details-28-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 29</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L651">command_sub_errexit causes local d=$(date %x) to fail</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-29-bash">details</a></td><td class="details-row"><a href="#details-29-dash">details</a></td><td class="details-row"><a href="#details-29-ash">details</a></td><td class="details-row"><a href="#details-29-zsh">details</a></td><td class="details-row"><a href="#details-29-mksh">details</a></td><td class="details-row"><a href="#details-29-ksh">details</a></td><td class="details-row"><a href="#details-29-toysh">details</a></td><td class="details-row"><a href="#details-29-sush">details</a></td><td class="details-row"><a href="#details-29-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 30</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L675">command_sub_errexit and command sub in array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-30-bash">details</a></td><td class="details-row"><a href="#details-30-dash">details</a></td><td class="details-row"><a href="#details-30-ash">details</a></td><td class="details-row"><a href="#details-30-zsh">details</a></td><td class="details-row"><a href="#details-30-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-30-toysh">details</a></td><td class="details-row"><a href="#details-30-sush">details</a></td><td class="details-row"><a href="#details-30-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 31</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L697">OLD: command sub in conditional, with inherit_errexit</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-mksh">details</a></td><td class="details-row"><a href="#details-31-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 32</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L716">OLD: command sub in redirect in conditional</a></td></tr>
+<tr><td> 33</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L728">Regression</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-33-bash">details</a></td><td class="details-row"><a href="#details-33-dash">details</a></td><td class="details-row"><a href="#details-33-ash">details</a></td><td class="details-row"><a href="#details-33-zsh">details</a></td><td class="details-row"><a href="#details-33-mksh">details</a></td><td class="details-row"><a href="#details-33-ksh">details</a></td><td class="details-row"><a href="#details-33-toysh">details</a></td><td class="details-row"><a href="#details-33-sush">details</a></td><td class="details-row"><a href="#details-33-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 34</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit-osh.test.html#L750">ShAssignment used as conditional</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-34-bash">details</a></td><td class="details-row"><a href="#details-34-dash">details</a></td><td class="details-row"><a href="#details-34-ash">details</a></td><td class="details-row"><a href="#details-34-zsh">details</a></td><td class="details-row"><a href="#details-34-mksh">details</a></td><td class="details-row"><a href="#details-34-ksh">details</a></td><td class="details-row"><a href="#details-34-toysh">details</a></td><td class="details-row"><a href="#details-34-sush">details</a></td><td class="details-row"><a href="#details-34-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>141 passed, 10 OK, 82 not implemented, 0 BUG, 116 failed, 1 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="errexit-osh.test.html#L15">command sub: errexit is NOT inherited and outer shell keeps going</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="errexit-osh.test.html#L15">command sub: errexit is NOT inherited and outer shell keeps going</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'one two\nparent status=0\n', got 'one\nparent status=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="errexit-osh.test.html#L15">command sub: errexit is NOT inherited and outer shell keeps going</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="errexit-osh.test.html#L15">command sub: errexit is NOT inherited and outer shell keeps going</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'one two\nparent status=0\n', got 'one\nparent status=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="errexit-osh.test.html#L37">command sub with inherit_errexit only</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>zero
+one two
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="errexit-osh.test.html#L37">command sub with inherit_errexit only</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'zero\none\nparent status=0\n', got 'zero\none two\nparent status=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zero
+one two
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="errexit-osh.test.html#L37">command sub with inherit_errexit only</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'zero\none\nparent status=0\n', got 'zero\none two\nparent status=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zero
+one two
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: shopt: inherit_errexit: not supported yet
+</pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="errexit-osh.test.html#L37">command sub with inherit_errexit only</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'zero\none\nparent status=0\n', got 'zero\none two\nparent status=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zero
+one two
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-bash"></a><b>bash</b></td><td>2 <a href="errexit-osh.test.html#L54">strict_errexit and assignment builtins (local, export, readonly ...)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>x=hi
+---
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 2: shopt: strict_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="errexit-osh.test.html#L54">strict_errexit and assignment builtins (local, export, readonly ...)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>x=hi
+---
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: shopt: not found
+</pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="errexit-osh.test.html#L54">strict_errexit and assignment builtins (local, export, readonly ...)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>x=hi
+---
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="errexit-osh.test.html#L54">strict_errexit and assignment builtins (local, export, readonly ...)</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '', got 'x=hi\n---\n'</span><br/>
+<span class="assertion">[zsh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=hi
+---
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="errexit-osh.test.html#L54">strict_errexit and assignment builtins (local, export, readonly ...)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>x=hi
+---
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: shopt: not found
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="errexit-osh.test.html#L54">strict_errexit and assignment builtins (local, export, readonly ...)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '', got 'x=hi\n---\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=hi
+---
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="errexit-osh.test.html#L54">strict_errexit and assignment builtins (local, export, readonly ...)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '', got 'x=hi\n---\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=hi
+---
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="errexit-osh.test.html#L54">strict_errexit and assignment builtins (local, export, readonly ...)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '', got 'x=hi\n---\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=hi
+---
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: shopt: strict_errexit: not supported yet
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="errexit-osh.test.html#L54">strict_errexit and assignment builtins (local, export, readonly ...)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '', got 'x=hi\n---\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=hi
+---
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-3-bash"></a><b>bash</b></td><td>3 <a href="errexit-osh.test.html#L76">strict_errexit and command sub in export / readonly</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="errexit-osh.test.html#L76">strict_errexit and command sub in export / readonly</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="errexit-osh.test.html#L76">strict_errexit and command sub in export / readonly</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="errexit-osh.test.html#L76">strict_errexit and command sub in export / readonly</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'a\nstatus=1\na\nstatus=1\na\nb\nstatus=0\n', got 'status=127\nstatus=127\nstatus=127\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>zsh: can't open input file: strict_errexit
+zsh: can't open input file: strict_errexit
+zsh: can't open input file: strict_errexit
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="errexit-osh.test.html#L76">strict_errexit and command sub in export / readonly</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="errexit-osh.test.html#L76">strict_errexit and command sub in export / readonly</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'a\nstatus=1\na\nstatus=1\na\nb\nstatus=0\n', got 'status=1\nstatus=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: -O: unknown option
+E: ksh: -O: unknown option
+E: ksh: -O: unknown option
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="errexit-osh.test.html#L76">strict_errexit and command sub in export / readonly</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'a\nstatus=1\na\nstatus=1\na\nb\nstatus=0\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="errexit-osh.test.html#L76">strict_errexit and command sub in export / readonly</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'a\nstatus=1\na\nstatus=1\na\nb\nstatus=0\n', got 'status=2\nstatus=2\nstatus=2\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=2
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>: line : errexit: invalid option name
+: line : errexit: invalid option name
+: line : errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="errexit-osh.test.html#L76">strict_errexit and command sub in export / readonly</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'a\nstatus=1\na\nstatus=1\na\nb\nstatus=0\n', got 'status=1\nstatus=1\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: failed to source file: -o; i/o error: No such file or directory (os error 2)
+[31mERROR[0m error: failed to source file: -o; i/o error: No such file or directory (os error 2)
+[31mERROR[0m error: failed to source file: -o; i/o error: No such file or directory (os error 2)
+</pre></td></tr><tr><td><a name="details-4-bash"></a><b>bash</b></td><td>4 <a href="errexit-osh.test.html#L98">strict_errexit disallows pipeline</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+one
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 2: shopt: strict_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="errexit-osh.test.html#L98">strict_errexit disallows pipeline</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+one
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: shopt: not found
+</pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="errexit-osh.test.html#L98">strict_errexit disallows pipeline</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+one
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="errexit-osh.test.html#L98">strict_errexit disallows pipeline</a><br/><br/>
+<span class="assertion">[zsh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+one
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="errexit-osh.test.html#L98">strict_errexit disallows pipeline</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+one
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: shopt: not found
+</pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="errexit-osh.test.html#L98">strict_errexit disallows pipeline</a><br/><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+one
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="errexit-osh.test.html#L98">strict_errexit disallows pipeline</a><br/><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+one
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="errexit-osh.test.html#L98">strict_errexit disallows pipeline</a><br/><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+one
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: shopt: strict_errexit: not supported yet
+</pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="errexit-osh.test.html#L98">strict_errexit disallows pipeline</a><br/><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+one
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-7-bash"></a><b>bash</b></td><td>7 <a href="errexit-osh.test.html#L147">strict_errexit detects proc in &amp;&amp; || !</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>failing
+should not get here
+failing
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 2: shopt: strict_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="errexit-osh.test.html#L147">strict_errexit detects proc in &amp;&amp; || !</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>failing
+should not get here
+failing
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: shopt: not found
+</pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="errexit-osh.test.html#L147">strict_errexit detects proc in &amp;&amp; || !</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>failing
+should not get here
+failing
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="errexit-osh.test.html#L147">strict_errexit detects proc in &amp;&amp; || !</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '', got 'failing\nshould not get here\nfailing\nshould not get here\n'</span><br/>
+<span class="assertion">[zsh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>failing
+should not get here
+failing
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="errexit-osh.test.html#L147">strict_errexit detects proc in &amp;&amp; || !</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>failing
+should not get here
+failing
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: shopt: not found
+</pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="errexit-osh.test.html#L147">strict_errexit detects proc in &amp;&amp; || !</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '', got 'failing\nshould not get here\nfailing\nshould not get here\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>failing
+should not get here
+failing
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="errexit-osh.test.html#L147">strict_errexit detects proc in &amp;&amp; || !</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '', got 'B\nA\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>B
+A
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: shopt: No such file or directory
+sh: myfunc: No such file or directory
+sh: myfunc: No such file or directory
+</pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="errexit-osh.test.html#L147">strict_errexit detects proc in &amp;&amp; || !</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '', got 'failing\nshould not get here\nfailing\nshould not get here\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>failing
+should not get here
+failing
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: shopt: strict_errexit: not supported yet
+</pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="errexit-osh.test.html#L147">strict_errexit detects proc in &amp;&amp; || !</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '', got 'failing\nshould not get here\nfailing\nshould not get here\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>failing
+should not get here
+failing
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-8-bash"></a><b>bash</b></td><td>8 <a href="errexit-osh.test.html#L181">strict_errexit without errexit proc</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>myproc
+myproc
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 6: shopt: strict_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="errexit-osh.test.html#L181">strict_errexit without errexit proc</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>myproc
+myproc
+</pre><i>stderr:</i> <br/>
+<pre>dash: 6: shopt: not found
+</pre></td></tr><tr><td><a name="details-8-ash"></a><b>ash</b></td><td>8 <a href="errexit-osh.test.html#L181">strict_errexit without errexit proc</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>myproc
+myproc
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="errexit-osh.test.html#L181">strict_errexit without errexit proc</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'myproc\n', got 'myproc\nmyproc\n'</span><br/>
+<span class="assertion">[zsh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>myproc
+myproc
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-8-mksh"></a><b>mksh</b></td><td>8 <a href="errexit-osh.test.html#L181">strict_errexit without errexit proc</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>myproc
+myproc
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[6]: shopt: not found
+</pre></td></tr><tr><td><a name="details-8-ksh"></a><b>ksh</b></td><td>8 <a href="errexit-osh.test.html#L181">strict_errexit without errexit proc</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'myproc\n', got 'myproc\nmyproc\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>myproc
+myproc
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[6]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="errexit-osh.test.html#L181">strict_errexit without errexit proc</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'myproc\n', got 'myproc\nmyproc\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>myproc
+myproc
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="errexit-osh.test.html#L181">strict_errexit without errexit proc</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'myproc\n', got 'myproc\nmyproc\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>myproc
+myproc
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: shopt: strict_errexit: not supported yet
+</pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="errexit-osh.test.html#L181">strict_errexit without errexit proc</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'myproc\n', got 'myproc\nmyproc\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>myproc
+myproc
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-9-bash"></a><b>bash</b></td><td>9 <a href="errexit-osh.test.html#L201">strict_errexit without errexit proc / command sub</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>before
+x=
+ok
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: shopt: strict_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="errexit-osh.test.html#L201">strict_errexit without errexit proc / command sub</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>before
+x=
+ok
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+</pre></td></tr><tr><td><a name="details-9-ash"></a><b>ash</b></td><td>9 <a href="errexit-osh.test.html#L201">strict_errexit without errexit proc / command sub</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>before
+x=
+ok
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-9-zsh"></a><b>zsh</b></td><td>9 <a href="errexit-osh.test.html#L201">strict_errexit without errexit proc / command sub</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '', got 'before\nx=\nok\n'</span><br/>
+<span class="assertion">[zsh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before
+x=
+ok
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-9-mksh"></a><b>mksh</b></td><td>9 <a href="errexit-osh.test.html#L201">strict_errexit without errexit proc / command sub</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>before
+x=
+ok
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-9-ksh"></a><b>ksh</b></td><td>9 <a href="errexit-osh.test.html#L201">strict_errexit without errexit proc / command sub</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '', got 'before\nx=\nok\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before
+x=
+ok
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="errexit-osh.test.html#L201">strict_errexit without errexit proc / command sub</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '', got 'before\nx=\nok\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before
+x=
+ok
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="errexit-osh.test.html#L201">strict_errexit without errexit proc / command sub</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '', got 'before\nx=\nok\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before
+x=
+ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: shopt: strict_errexit: not supported yet
+</pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="errexit-osh.test.html#L201">strict_errexit without errexit proc / command sub</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '', got 'before\nx=\nok\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before
+x=
+ok
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-10-bash"></a><b>bash</b></td><td>10 <a href="errexit-osh.test.html#L231">strict_errexit and errexit disabled</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="errexit-osh.test.html#L231">strict_errexit and errexit disabled</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="errexit-osh.test.html#L231">strict_errexit and errexit disabled</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-zsh"></a><b>zsh</b></td><td>10 <a href="errexit-osh.test.html#L231">strict_errexit and errexit disabled</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'before\nx=\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="errexit-osh.test.html#L231">strict_errexit and errexit disabled</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="errexit-osh.test.html#L231">strict_errexit and errexit disabled</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'before\nx=\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[13]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="errexit-osh.test.html#L231">strict_errexit and errexit disabled</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'before\nx=\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="errexit-osh.test.html#L231">strict_errexit and errexit disabled</a><br/><br/>
+<span class="assertion">[sush status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before
+x=
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: shopt: parse_brace: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 12: set: errexit: invalid option name
+sush: shopt: --: invalid shell option name
+shopt: usage: shopt [-su] [optname ...]
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 16: Unexpected token: }
+
+</pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="errexit-osh.test.html#L231">strict_errexit and errexit disabled</a><br/><br/>
+<span class="assertion">[brush status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before
+x=
+</pre><i>stderr:</i> <br/>
+<pre>shopt: parse_brace: invalid shell option name
+shopt: strict_errexit: invalid shell option name
+error: unexpected argument '--unset' found
+
+  tip: to pass '--unset' as a value, use '-- --unset'
+
+Usage: shopt [OPTIONS] [OPTIONS]...
+
+For more information, try '--help'.
+
+[31mERROR[0m main: syntax error near token `
+' (line 1 col 2)
+</pre></td></tr><tr><td><a name="details-11-dash"></a><b>dash</b></td><td>11 <a href="errexit-osh.test.html#L258">command sub with command_sub_errexit only</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>zero
+one
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: shopt: not found
+</pre></td></tr><tr><td><a name="details-11-zsh"></a><b>zsh</b></td><td>11 <a href="errexit-osh.test.html#L258">command sub with command_sub_errexit only</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'zero\none two\nparent status=0\n', got 'zero\none\nparent status=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zero
+one
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-11-mksh"></a><b>mksh</b></td><td>11 <a href="errexit-osh.test.html#L258">command sub with command_sub_errexit only</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>zero
+one
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: shopt: not found
+</pre></td></tr><tr><td><a name="details-11-ksh"></a><b>ksh</b></td><td>11 <a href="errexit-osh.test.html#L258">command sub with command_sub_errexit only</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'zero\none two\nparent status=0\n', got 'zero\none\nparent status=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zero
+one
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-12-bash"></a><b>bash</b></td><td>12 <a href="errexit-osh.test.html#L275">command_sub_errexit stops at first error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-dash"></a><b>dash</b></td><td>12 <a href="errexit-osh.test.html#L275">command_sub_errexit stops at first error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-ash"></a><b>ash</b></td><td>12 <a href="errexit-osh.test.html#L275">command_sub_errexit stops at first error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="errexit-osh.test.html#L275">command_sub_errexit stops at first error</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'OK\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: command not found: try
+</pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="errexit-osh.test.html#L275">command_sub_errexit stops at first error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="errexit-osh.test.html#L275">command_sub_errexit stops at first error</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'OK\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[4]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[8]: try: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="errexit-osh.test.html#L275">command_sub_errexit stops at first error</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'OK\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="errexit-osh.test.html#L275">command_sub_errexit stops at first error</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'OK\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: set: errexit: invalid option name
+sush: shopt: --: invalid shell option name
+shopt: usage: shopt [-su] [optname ...]
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: try: command not found
+date: invalid date ‘%d’
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: Unexpected token: }
+
+</pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="errexit-osh.test.html#L275">command_sub_errexit stops at first error</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'OK\n', got '\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>error: unexpected argument '--set' found
+
+  tip: to pass '--set' as a value, use '-- --set'
+
+Usage: shopt [OPTIONS] [OPTIONS]...
+
+For more information, try '--help'.
+
+try: command not found
+date: invalid date ‘%d’
+[31mERROR[0m main: syntax error near token `
+' (line 1 col 2)
+</pre></td></tr><tr><td><a name="details-13-bash"></a><b>bash</b></td><td>13 <a href="errexit-osh.test.html#L296">command sub with inherit_errexit and command_sub_errexit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>zero
+one
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 4: shopt: command_sub_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="errexit-osh.test.html#L296">command sub with inherit_errexit and command_sub_errexit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>zero
+one
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: shopt: not found
+dash: 4: shopt: not found
+</pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="errexit-osh.test.html#L296">command sub with inherit_errexit and command_sub_errexit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>zero
+one two
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="errexit-osh.test.html#L296">command sub with inherit_errexit and command_sub_errexit</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'zero\n', got 'zero\none\nparent status=0\n'</span><br/>
+<span class="assertion">[zsh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zero
+one
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="errexit-osh.test.html#L296">command sub with inherit_errexit and command_sub_errexit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>zero
+one
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: shopt: not found
+mksh: &lt;stdin&gt;[4]: shopt: not found
+</pre></td></tr><tr><td><a name="details-13-ksh"></a><b>ksh</b></td><td>13 <a href="errexit-osh.test.html#L296">command sub with inherit_errexit and command_sub_errexit</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'zero\n', got 'zero\none\nparent status=0\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zero
+one
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[4]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="errexit-osh.test.html#L296">command sub with inherit_errexit and command_sub_errexit</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'zero\n', got 'zero\none two\nparent status=0\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zero
+one two
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="errexit-osh.test.html#L296">command sub with inherit_errexit and command_sub_errexit</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'zero\n', got 'zero\none two\nparent status=0\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zero
+one two
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: shopt: inherit_errexit: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: shopt: command_sub_errexit: not supported yet
+</pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="errexit-osh.test.html#L296">command sub with inherit_errexit and command_sub_errexit</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'zero\n', got 'zero\none two\nparent status=0\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zero
+one two
+parent status=0
+</pre><i>stderr:</i> <br/>
+<pre>shopt: command_sub_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="errexit-osh.test.html#L331">global assignment with command sub: middle command fails</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-zsh"></a><b>zsh</b></td><td>15 <a href="errexit-osh.test.html#L331">global assignment with command sub: middle command fails</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'one\ntwo\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-mksh"></a><b>mksh</b></td><td>15 <a href="errexit-osh.test.html#L331">global assignment with command sub: middle command fails</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-ksh"></a><b>ksh</b></td><td>15 <a href="errexit-osh.test.html#L331">global assignment with command sub: middle command fails</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'one\ntwo\n', got ''</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="errexit-osh.test.html#L344">global assignment with command sub: last command fails and it aborts</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected u'', got 'status=0\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+</pre></td></tr><tr><td><a name="details-16-sush"></a><b>sush</b></td><td>16 <a href="errexit-osh.test.html#L344">global assignment with command sub: last command fails and it aborts</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got 'status=1\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-16-brush"></a><b>brush</b></td><td>16 <a href="errexit-osh.test.html#L344">global assignment with command sub: last command fails and it aborts</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'status=1\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-dash"></a><b>dash</b></td><td>17 <a href="errexit-osh.test.html#L351">local: middle command fails and keeps going</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>good
+status=0
+one
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-zsh"></a><b>zsh</b></td><td>17 <a href="errexit-osh.test.html#L351">local: middle command fails and keeps going</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'good\nstatus=0\none two\n', got 'good\nstatus=0\none\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>good
+status=0
+one
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-mksh"></a><b>mksh</b></td><td>17 <a href="errexit-osh.test.html#L351">local: middle command fails and keeps going</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>good
+status=0
+one
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-ksh"></a><b>ksh</b></td><td>17 <a href="errexit-osh.test.html#L351">local: middle command fails and keeps going</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'good\nstatus=0\none two\n', got 'good\nstatus=0\none\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>good
+status=0
+one
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="errexit-osh.test.html#L351">local: middle command fails and keeps going</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'good\nstatus=0\none two\n', got 'good\nstatus=0\none\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>good
+status=0
+one
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+</pre></td></tr><tr><td><a name="details-19-bash"></a><b>bash</b></td><td>19 <a href="errexit-osh.test.html#L387">local and inherit_errexit / command_sub_errexit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>good
+status=0
+one
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 3: shopt: command_sub_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-19-dash"></a><b>dash</b></td><td>19 <a href="errexit-osh.test.html#L387">local and inherit_errexit / command_sub_errexit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>good
+status=0
+one
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: shopt: not found
+dash: 3: shopt: not found
+</pre></td></tr><tr><td><a name="details-19-ash"></a><b>ash</b></td><td>19 <a href="errexit-osh.test.html#L387">local and inherit_errexit / command_sub_errexit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>good
+status=0
+one two
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-19-zsh"></a><b>zsh</b></td><td>19 <a href="errexit-osh.test.html#L387">local and inherit_errexit / command_sub_errexit</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'good\n', got 'good\nstatus=0\none\n'</span><br/>
+<span class="assertion">[zsh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>good
+status=0
+one
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-19-mksh"></a><b>mksh</b></td><td>19 <a href="errexit-osh.test.html#L387">local and inherit_errexit / command_sub_errexit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>good
+status=0
+one
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: shopt: not found
+mksh: &lt;stdin&gt;[3]: shopt: not found
+</pre></td></tr><tr><td><a name="details-19-ksh"></a><b>ksh</b></td><td>19 <a href="errexit-osh.test.html#L387">local and inherit_errexit / command_sub_errexit</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'good\n', got 'good\nstatus=0\none\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>good
+status=0
+one
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="errexit-osh.test.html#L387">local and inherit_errexit / command_sub_errexit</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'good\n', got 'good\nstatus=0\none\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>good
+status=0
+one
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-19-sush"></a><b>sush</b></td><td>19 <a href="errexit-osh.test.html#L387">local and inherit_errexit / command_sub_errexit</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'good\n', got 'good\nstatus=0\none two\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>good
+status=0
+one two
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: shopt: inherit_errexit: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: shopt: command_sub_errexit: not supported yet
+</pre></td></tr><tr><td><a name="details-19-brush"></a><b>brush</b></td><td>19 <a href="errexit-osh.test.html#L387">local and inherit_errexit / command_sub_errexit</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'good\n', got 'good\nstatus=0\none two\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>good
+status=0
+one two
+</pre><i>stderr:</i> <br/>
+<pre>shopt: command_sub_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-20-sush"></a><b>sush</b></td><td>20 <a href="errexit-osh.test.html#L416">global assignment when last status is failure</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=0\n', got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-21-bash"></a><b>bash</b></td><td>21 <a href="errexit-osh.test.html#L427">strict_errexit prevents errexit from being disabled in function</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>fun
+builtin ok
+external ok
+fun
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 6: shopt: strict_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-21-dash"></a><b>dash</b></td><td>21 <a href="errexit-osh.test.html#L427">strict_errexit prevents errexit from being disabled in function</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>fun
+builtin ok
+external ok
+fun
+</pre><i>stderr:</i> <br/>
+<pre>dash: 6: shopt: not found
+</pre></td></tr><tr><td><a name="details-21-ash"></a><b>ash</b></td><td>21 <a href="errexit-osh.test.html#L427">strict_errexit prevents errexit from being disabled in function</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>fun
+builtin ok
+external ok
+fun
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-21-zsh"></a><b>zsh</b></td><td>21 <a href="errexit-osh.test.html#L427">strict_errexit prevents errexit from being disabled in function</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'fun\nbuiltin ok\nexternal ok\n', got 'fun\nbuiltin ok\nexternal ok\nfun\n'</span><br/>
+<span class="assertion">[zsh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fun
+builtin ok
+external ok
+fun
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-21-mksh"></a><b>mksh</b></td><td>21 <a href="errexit-osh.test.html#L427">strict_errexit prevents errexit from being disabled in function</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>fun
+builtin ok
+external ok
+fun
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[6]: shopt: not found
+</pre></td></tr><tr><td><a name="details-21-ksh"></a><b>ksh</b></td><td>21 <a href="errexit-osh.test.html#L427">strict_errexit prevents errexit from being disabled in function</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'fun\nbuiltin ok\nexternal ok\n', got 'fun\nbuiltin ok\nexternal ok\nfun\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fun
+builtin ok
+external ok
+fun
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[6]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="errexit-osh.test.html#L427">strict_errexit prevents errexit from being disabled in function</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'fun\nbuiltin ok\nexternal ok\n', got 'fun\nbuiltin ok\nexternal ok\nfun\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fun
+builtin ok
+external ok
+fun
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="errexit-osh.test.html#L427">strict_errexit prevents errexit from being disabled in function</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'fun\nbuiltin ok\nexternal ok\n', got 'fun\nbuiltin ok\nexternal ok\nfun\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fun
+builtin ok
+external ok
+fun
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: shopt: strict_errexit: not supported yet
+</pre></td></tr><tr><td><a name="details-21-brush"></a><b>brush</b></td><td>21 <a href="errexit-osh.test.html#L427">strict_errexit prevents errexit from being disabled in function</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'fun\nbuiltin ok\nexternal ok\n', got 'fun\nbuiltin ok\nexternal ok\nfun\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fun
+builtin ok
+external ok
+fun
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-22-bash"></a><b>bash</b></td><td>22 <a href="errexit-osh.test.html#L454">strict_errexit prevents errexit from being disabled in brace group</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo
+bar
+foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 4: shopt: strict_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-22-dash"></a><b>dash</b></td><td>22 <a href="errexit-osh.test.html#L454">strict_errexit prevents errexit from being disabled in brace group</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo
+bar
+foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre>dash: 4: shopt: not found
+</pre></td></tr><tr><td><a name="details-22-ash"></a><b>ash</b></td><td>22 <a href="errexit-osh.test.html#L454">strict_errexit prevents errexit from being disabled in brace group</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo
+bar
+foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-22-zsh"></a><b>zsh</b></td><td>22 <a href="errexit-osh.test.html#L454">strict_errexit prevents errexit from being disabled in brace group</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'foo\nbar\n', got 'foo\nbar\nfoo\nbar\n'</span><br/>
+<span class="assertion">[zsh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+bar
+foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-22-mksh"></a><b>mksh</b></td><td>22 <a href="errexit-osh.test.html#L454">strict_errexit prevents errexit from being disabled in brace group</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo
+bar
+foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[4]: shopt: not found
+</pre></td></tr><tr><td><a name="details-22-ksh"></a><b>ksh</b></td><td>22 <a href="errexit-osh.test.html#L454">strict_errexit prevents errexit from being disabled in brace group</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'foo\nbar\n', got 'foo\nbar\nfoo\nbar\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+bar
+foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[4]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="errexit-osh.test.html#L454">strict_errexit prevents errexit from being disabled in brace group</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'foo\nbar\n', got 'foo\nbar\nfoo\nbar\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+bar
+foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="errexit-osh.test.html#L454">strict_errexit prevents errexit from being disabled in brace group</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'foo\nbar\n', got 'foo\nbar\nfoo\nbar\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+bar
+foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: shopt: strict_errexit: not supported yet
+</pre></td></tr><tr><td><a name="details-22-brush"></a><b>brush</b></td><td>22 <a href="errexit-osh.test.html#L454">strict_errexit prevents errexit from being disabled in brace group</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'foo\nbar\n', got 'foo\nbar\nfoo\nbar\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+bar
+foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-23-bash"></a><b>bash</b></td><td>23 <a href="errexit-osh.test.html#L475">strict_errexit prevents errexit from being disabled in subshell</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo
+bar
+foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 6: shopt: strict_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-23-dash"></a><b>dash</b></td><td>23 <a href="errexit-osh.test.html#L475">strict_errexit prevents errexit from being disabled in subshell</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo
+bar
+foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: shopt: not found
+dash: 6: shopt: not found
+</pre></td></tr><tr><td><a name="details-23-ash"></a><b>ash</b></td><td>23 <a href="errexit-osh.test.html#L475">strict_errexit prevents errexit from being disabled in subshell</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo
+bar
+foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-23-zsh"></a><b>zsh</b></td><td>23 <a href="errexit-osh.test.html#L475">strict_errexit prevents errexit from being disabled in subshell</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'foo\nbar\n', got 'foo\nbar\nfoo\nbar\n'</span><br/>
+<span class="assertion">[zsh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+bar
+foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-23-mksh"></a><b>mksh</b></td><td>23 <a href="errexit-osh.test.html#L475">strict_errexit prevents errexit from being disabled in subshell</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo
+bar
+foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: shopt: not found
+mksh: &lt;stdin&gt;[6]: shopt: not found
+</pre></td></tr><tr><td><a name="details-23-ksh"></a><b>ksh</b></td><td>23 <a href="errexit-osh.test.html#L475">strict_errexit prevents errexit from being disabled in subshell</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'foo\nbar\n', got 'foo\nbar\nfoo\nbar\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+bar
+foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[6]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="errexit-osh.test.html#L475">strict_errexit prevents errexit from being disabled in subshell</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'foo\nbar\n', got 'foo\nbar\nfoo\nbar\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+bar
+foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-23-sush"></a><b>sush</b></td><td>23 <a href="errexit-osh.test.html#L475">strict_errexit prevents errexit from being disabled in subshell</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'foo\nbar\n', got 'foo\nbar\nfoo\nbar\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+bar
+foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: shopt: inherit_errexit: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: shopt: strict_errexit: not supported yet
+</pre></td></tr><tr><td><a name="details-23-brush"></a><b>brush</b></td><td>23 <a href="errexit-osh.test.html#L475">strict_errexit prevents errexit from being disabled in subshell</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'foo\nbar\n', got 'foo\nbar\nfoo\nbar\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+bar
+foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-24-bash"></a><b>bash</b></td><td>24 <a href="errexit-osh.test.html#L498">strict_errexit and ! &amp;&amp; || if while until</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>fun
+should not get here
+bang=0
+--
+fun
+or=0
+--
+fun
+and=0
+--
+fun
+if=0
+--
+fun
+while
+while=0
+--
+fun
+until=0
+--
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 2: shopt: strict_errexit: invalid shell option name
+bash: line 2: shopt: strict_errexit: invalid shell option name
+bash: line 2: shopt: strict_errexit: invalid shell option name
+bash: line 2: shopt: strict_errexit: invalid shell option name
+bash: line 2: shopt: strict_errexit: invalid shell option name
+bash: line 2: shopt: strict_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-24-dash"></a><b>dash</b></td><td>24 <a href="errexit-osh.test.html#L498">strict_errexit and ! &amp;&amp; || if while until</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>fun
+should not get here
+bang=0
+--
+fun
+or=0
+--
+fun
+and=0
+--
+fun
+if=0
+--
+fun
+while
+while=0
+--
+fun
+until=0
+--
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: shopt: not found
+dash: 2: shopt: not found
+dash: 2: shopt: not found
+dash: 2: shopt: not found
+dash: 2: shopt: not found
+dash: 2: shopt: not found
+</pre></td></tr><tr><td><a name="details-24-ash"></a><b>ash</b></td><td>24 <a href="errexit-osh.test.html#L498">strict_errexit and ! &amp;&amp; || if while until</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>fun
+should not get here
+bang=0
+--
+fun
+or=0
+--
+fun
+and=0
+--
+fun
+if=0
+--
+fun
+while
+while=0
+--
+fun
+until=0
+--
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-24-zsh"></a><b>zsh</b></td><td>24 <a href="errexit-osh.test.html#L498">strict_errexit and ! &amp;&amp; || if while until</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'bang=1\n--\nor=1\n--\nand=1\n--\nif=1\n--\nwhile=1\n--\nuntil=1\n--\n'
+Got      'fun\nbang=1\n--\nfun\nor=0\n--\nfun\nand=0\n--\nfun\nif=0\n--\nfun\nwhile\nwhile=0\n--\nfun\nuntil=0\n--\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fun
+bang=1
+--
+fun
+or=0
+--
+fun
+and=0
+--
+fun
+if=0
+--
+fun
+while
+while=0
+--
+fun
+until=0
+--
+</pre><i>stderr:</i> <br/>
+<pre>zsh:2: command not found: shopt
+zsh:2: command not found: shopt
+zsh:2: command not found: shopt
+zsh:2: command not found: shopt
+zsh:2: command not found: shopt
+zsh:2: command not found: shopt
+</pre></td></tr><tr><td><a name="details-24-mksh"></a><b>mksh</b></td><td>24 <a href="errexit-osh.test.html#L498">strict_errexit and ! &amp;&amp; || if while until</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>fun
+should not get here
+bang=0
+--
+fun
+or=0
+--
+fun
+and=0
+--
+fun
+if=0
+--
+fun
+while
+while=0
+--
+fun
+until=0
+--
+</pre><i>stderr:</i> <br/>
+<pre>mksh: shopt: not found
+mksh: shopt: not found
+mksh: shopt: not found
+mksh: shopt: not found
+mksh: shopt: not found
+mksh: shopt: not found
+</pre></td></tr><tr><td><a name="details-24-ksh"></a><b>ksh</b></td><td>24 <a href="errexit-osh.test.html#L498">strict_errexit and ! &amp;&amp; || if while until</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'bang=1\n--\nor=1\n--\nand=1\n--\nif=1\n--\nwhile=1\n--\nuntil=1\n--\n'
+Got      'fun\nshould not get here\nbang=0\n--\nfun\nor=0\n--\nfun\nand=0\n--\nfun\nif=0\n--\nfun\nwhile\nwhile=0\n--\nfun\nuntil=0\n--\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fun
+should not get here
+bang=0
+--
+fun
+or=0
+--
+fun
+and=0
+--
+fun
+if=0
+--
+fun
+while
+while=0
+--
+fun
+until=0
+--
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: shopt: inaccessible or not found
+E: ksh: shopt: inaccessible or not found
+E: ksh: shopt: inaccessible or not found
+E: ksh: shopt: inaccessible or not found
+E: ksh: shopt: inaccessible or not found
+E: ksh: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="errexit-osh.test.html#L498">strict_errexit and ! &amp;&amp; || if while until</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'bang=1\n--\nor=1\n--\nand=1\n--\nif=1\n--\nwhile=1\n--\nuntil=1\n--\n'
+Got      'should not get here\nbang=0\n\nfun\nor=0\n\nfun\nand=0\n\nfun\nif=0\n\nfun\nwhile\nwhile=0\n\nfun\nuntil=0\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>should not get here
+bang=0
+
+fun
+or=0
+
+fun
+and=0
+
+fun
+if=0
+
+fun
+while
+while=0
+
+fun
+until=0
+
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: shopt: No such file or directory
+sh: fun: No such file or directory
+set: bad -o errexit
+sh: shopt: No such file or directory
+set: bad -o errexit
+sh: shopt: No such file or directory
+set: bad -o errexit
+sh: shopt: No such file or directory
+set: bad -o errexit
+sh: shopt: No such file or directory
+set: bad -o errexit
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-24-sush"></a><b>sush</b></td><td>24 <a href="errexit-osh.test.html#L498">strict_errexit and ! &amp;&amp; || if while until</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'bang=1\n--\nor=1\n--\nand=1\n--\nif=1\n--\nwhile=1\n--\nuntil=1\n--\n'
+Got      'fun\nshould not get here\nbang=0\n--\nfun\nor=0\n--\nfun\nand=0\n--\nfun\nif=0\n--\nfun\nwhile\nwhile=0\n--\nuntil=2\n--\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fun
+should not get here
+bang=0
+--
+fun
+or=0
+--
+fun
+and=0
+--
+fun
+if=0
+--
+fun
+while
+while=0
+--
+until=2
+--
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: shopt: strict_errexit: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: shopt: strict_errexit: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: shopt: strict_errexit: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: shopt: strict_errexit: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: shopt: strict_errexit: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: shopt: strict_errexit: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: Unexpected token: do
+</pre></td></tr><tr><td><a name="details-24-brush"></a><b>brush</b></td><td>24 <a href="errexit-osh.test.html#L498">strict_errexit and ! &amp;&amp; || if while until</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'bang=1\n--\nor=1\n--\nand=1\n--\nif=1\n--\nwhile=1\n--\nuntil=1\n--\n'
+Got      'fun\nshould not get here\nbang=0\n--\nfun\nor=0\n--\nfun\nand=0\n--\nfun\nif=0\n--\nfun\nwhile\nwhile=0\n--\nfun\nuntil=0\n--\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fun
+should not get here
+bang=0
+--
+fun
+or=0
+--
+fun
+and=0
+--
+fun
+if=0
+--
+fun
+while
+while=0
+--
+fun
+until=0
+--
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_errexit: invalid shell option name
+shopt: strict_errexit: invalid shell option name
+shopt: strict_errexit: invalid shell option name
+shopt: strict_errexit: invalid shell option name
+shopt: strict_errexit: invalid shell option name
+shopt: strict_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-25-dash"></a><b>dash</b></td><td>25 <a href="errexit-osh.test.html#L565">if pipeline doesn't fail fatally</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: set: Illegal option -o pipefail
+</pre></td></tr><tr><td><a name="details-25-zsh"></a><b>zsh</b></td><td>25 <a href="errexit-osh.test.html#L565">if pipeline doesn't fail fatally</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'done\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>rmdir: failed to remove '/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/errexit-osh.test.sh/25-zsh/_tmp': No such file or directory
+zsh: no matches found: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/errexit-osh.test.sh/25-zsh/*
+</pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="errexit-osh.test.html#L588">errexit is silent (verbose_errexit for Oil)</a><br/><br/>
+<span class="assertion">[toysh stderr] Expected u'', got 'set: bad -e\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>set: bad -e
+</pre></td></tr><tr><td><a name="details-27-bash"></a><b>bash</b></td><td>27 <a href="errexit-osh.test.html#L595">command sub errexit preserves exit code</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>before
+
+after
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 2: shopt: command_sub_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-27-dash"></a><b>dash</b></td><td>27 <a href="errexit-osh.test.html#L595">command sub errexit preserves exit code</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>before
+
+after
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: shopt: not found
+</pre></td></tr><tr><td><a name="details-27-ash"></a><b>ash</b></td><td>27 <a href="errexit-osh.test.html#L595">command sub errexit preserves exit code</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>before
+
+after
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-27-zsh"></a><b>zsh</b></td><td>27 <a href="errexit-osh.test.html#L595">command sub errexit preserves exit code</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'before\n', got 'before\n\nafter\n'</span><br/>
+<span class="assertion">[zsh status] Expected 42, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before
+
+after
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-27-mksh"></a><b>mksh</b></td><td>27 <a href="errexit-osh.test.html#L595">command sub errexit preserves exit code</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>before
+
+after
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: shopt: not found
+</pre></td></tr><tr><td><a name="details-27-ksh"></a><b>ksh</b></td><td>27 <a href="errexit-osh.test.html#L595">command sub errexit preserves exit code</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'before\n', got 'before\n\nafter\n'</span><br/>
+<span class="assertion">[ksh status] Expected 42, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before
+
+after
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-27-toysh"></a><b>toysh</b></td><td>27 <a href="errexit-osh.test.html#L595">command sub errexit preserves exit code</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'before\n', got 'before\n\nafter\n'</span><br/>
+<span class="assertion">[toysh status] Expected 42, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before
+
+after
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -e
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-27-brush"></a><b>brush</b></td><td>27 <a href="errexit-osh.test.html#L595">command sub errexit preserves exit code</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'before\n', got 'before\n\nafter\n'</span><br/>
+<span class="assertion">[brush status] Expected 42, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before
+
+after
+</pre><i>stderr:</i> <br/>
+<pre>shopt: command_sub_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-28-bash"></a><b>bash</b></td><td>28 <a href="errexit-osh.test.html#L612">What's in strict:all?</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 2: shopt: strict:all: invalid shell option name
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-28-dash"></a><b>dash</b></td><td>28 <a href="errexit-osh.test.html#L612">What's in strict:all?</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: shopt: not found
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-28-ash"></a><b>ash</b></td><td>28 <a href="errexit-osh.test.html#L612">What's in strict:all?</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-28-zsh"></a><b>zsh</b></td><td>28 <a href="errexit-osh.test.html#L612">What's in strict:all?</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '', got 'one\ntwo\nshould not get here\n'</span><br/>
+<span class="assertion">[zsh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-28-mksh"></a><b>mksh</b></td><td>28 <a href="errexit-osh.test.html#L612">What's in strict:all?</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: shopt: not found
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-28-ksh"></a><b>ksh</b></td><td>28 <a href="errexit-osh.test.html#L612">What's in strict:all?</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '', got 'one\ntwo\nshould not get here\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: shopt: inaccessible or not found
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-28-toysh"></a><b>toysh</b></td><td>28 <a href="errexit-osh.test.html#L612">What's in strict:all?</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '', got 'failed\nshould not get here\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>failed
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: shopt: No such file or directory
+date: invalid date ‘%x’
+sh: deploy_func: No such file or directory
+</pre></td></tr><tr><td><a name="details-28-sush"></a><b>sush</b></td><td>28 <a href="errexit-osh.test.html#L612">What's in strict:all?</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '', got 'one\ntwo\nshould not get here\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: shopt: strict:all: not supported yet
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-28-brush"></a><b>brush</b></td><td>28 <a href="errexit-osh.test.html#L612">What's in strict:all?</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '', got 'one\ntwo\nshould not get here\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict:all: invalid shell option name
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-29-bash"></a><b>bash</b></td><td>29 <a href="errexit-osh.test.html#L651">command_sub_errexit causes local d=$(date %x) to fail</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 3: shopt: command_sub_errexit: invalid shell option name
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-29-dash"></a><b>dash</b></td><td>29 <a href="errexit-osh.test.html#L651">command_sub_errexit causes local d=$(date %x) to fail</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: shopt: not found
+dash: 3: shopt: not found
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-29-ash"></a><b>ash</b></td><td>29 <a href="errexit-osh.test.html#L651">command_sub_errexit causes local d=$(date %x) to fail</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: shopt: not found
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-29-zsh"></a><b>zsh</b></td><td>29 <a href="errexit-osh.test.html#L651">command_sub_errexit causes local d=$(date %x) to fail</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '', got 'hi\n'</span><br/>
+<span class="assertion">[zsh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: command not found: shopt
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-29-mksh"></a><b>mksh</b></td><td>29 <a href="errexit-osh.test.html#L651">command_sub_errexit causes local d=$(date %x) to fail</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: shopt: not found
+mksh: &lt;stdin&gt;[3]: shopt: not found
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-29-ksh"></a><b>ksh</b></td><td>29 <a href="errexit-osh.test.html#L651">command_sub_errexit causes local d=$(date %x) to fail</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '', got 'hi\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-29-toysh"></a><b>toysh</b></td><td>29 <a href="errexit-osh.test.html#L651">command_sub_errexit causes local d=$(date %x) to fail</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '', got 'hi\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-29-sush"></a><b>sush</b></td><td>29 <a href="errexit-osh.test.html#L651">command_sub_errexit causes local d=$(date %x) to fail</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '', got 'hi\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: shopt: inherit_errexit: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: shopt: command_sub_errexit: not supported yet
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-29-brush"></a><b>brush</b></td><td>29 <a href="errexit-osh.test.html#L651">command_sub_errexit causes local d=$(date %x) to fail</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '', got 'hi\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>shopt: command_sub_errexit: invalid shell option name
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-30-bash"></a><b>bash</b></td><td>30 <a href="errexit-osh.test.html#L675">command_sub_errexit and command sub in array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['one', '', 'two']
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 5: shopt: command_sub_errexit: invalid shell option name
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-30-dash"></a><b>dash</b></td><td>30 <a href="errexit-osh.test.html#L675">command_sub_errexit and command sub in array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-ash"></a><b>ash</b></td><td>30 <a href="errexit-osh.test.html#L675">command_sub_errexit and command sub in array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-zsh"></a><b>zsh</b></td><td>30 <a href="errexit-osh.test.html#L675">command_sub_errexit and command sub in array</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '', got "['one', '', 'two']\n"</span><br/>
+<span class="assertion">[zsh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['one', '', 'two']
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: command not found: shopt
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-30-mksh"></a><b>mksh</b></td><td>30 <a href="errexit-osh.test.html#L675">command_sub_errexit and command sub in array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-toysh"></a><b>toysh</b></td><td>30 <a href="errexit-osh.test.html#L675">command_sub_errexit and command sub in array</a><br/><br/>
+<span class="assertion">[toysh status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-30-sush"></a><b>sush</b></td><td>30 <a href="errexit-osh.test.html#L675">command_sub_errexit and command sub in array</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '', got "['one', '', 'two']\n"</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['one', '', 'two']
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: shopt: inherit_errexit: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: shopt: command_sub_errexit: not supported yet
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-30-brush"></a><b>brush</b></td><td>30 <a href="errexit-osh.test.html#L675">command_sub_errexit and command sub in array</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '', got "['one', '', 'two']\n"</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['one', '', 'two']
+</pre><i>stderr:</i> <br/>
+<pre>shopt: command_sub_errexit: invalid shell option name
+date: invalid date ‘%x’
+</pre></td></tr><tr><td><a name="details-31-dash"></a><b>dash</b></td><td>31 <a href="errexit-osh.test.html#L697">OLD: command sub in conditional, with inherit_errexit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+A
+done
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: shopt: not found
+</pre></td></tr><tr><td><a name="details-31-mksh"></a><b>mksh</b></td><td>31 <a href="errexit-osh.test.html#L697">OLD: command sub in conditional, with inherit_errexit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+A
+done
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: shopt: not found
+</pre></td></tr><tr><td><a name="details-31-ksh"></a><b>ksh</b></td><td>31 <a href="errexit-osh.test.html#L697">OLD: command sub in conditional, with inherit_errexit</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '1 2\nA\ndone\n', got '1\nA\ndone\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+A
+done
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-33-bash"></a><b>bash</b></td><td>33 <a href="errexit-osh.test.html#L728">Regression</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-dash"></a><b>dash</b></td><td>33 <a href="errexit-osh.test.html#L728">Regression</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-ash"></a><b>ash</b></td><td>33 <a href="errexit-osh.test.html#L728">Regression</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-zsh"></a><b>zsh</b></td><td>33 <a href="errexit-osh.test.html#L728">Regression</a><br/><br/>
+<span class="assertion">[zsh status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+p
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: parse error near `}'
+zsh: command not found: proc
+zsh: parse error near `}'
+zsh: command not found: shopt
+zsh: command not found: p
+zsh: parse error near `}'
+</pre></td></tr><tr><td><a name="details-33-mksh"></a><b>mksh</b></td><td>33 <a href="errexit-osh.test.html#L728">Regression</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-ksh"></a><b>ksh</b></td><td>33 <a href="errexit-osh.test.html#L728">Regression</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'hi\np\n', got 'hi\n'</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[5]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[7]: syntax error: unexpected '}'
+</pre></td></tr><tr><td><a name="details-33-toysh"></a><b>toysh</b></td><td>33 <a href="errexit-osh.test.html#L728">Regression</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'hi\np\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-33-sush"></a><b>sush</b></td><td>33 <a href="errexit-osh.test.html#L728">Regression</a><br/><br/>
+<span class="assertion">[sush status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+p
+</pre><i>stderr:</i> <br/>
+<pre>sush: shopt: --: invalid shell option name
+shopt: usage: shopt [-su] [optname ...]
+sush: shopt: --: invalid shell option name
+shopt: usage: shopt [-su] [optname ...]
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: Unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: proc: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 12: Unexpected token: }
+
+sush: shopt: --: invalid shell option name
+shopt: usage: shopt [-su] [optname ...]
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 14: p: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 16: Unexpected token: }
+
+</pre></td></tr><tr><td><a name="details-33-brush"></a><b>brush</b></td><td>33 <a href="errexit-osh.test.html#L728">Regression</a><br/><br/>
+<span class="assertion">[brush status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+p
+</pre><i>stderr:</i> <br/>
+<pre>error: unexpected argument '--set' found
+
+  tip: to pass '--set' as a value, use '-- --set'
+
+Usage: shopt [OPTIONS] [OPTIONS]...
+
+For more information, try '--help'.
+
+error: unexpected argument '--unset' found
+
+  tip: to pass '--unset' as a value, use '-- --unset'
+
+Usage: shopt [OPTIONS] [OPTIONS]...
+
+For more information, try '--help'.
+
+[31mERROR[0m main: syntax error near token `
+' (line 1 col 2)
+proc: command not found
+[31mERROR[0m main: syntax error near token `
+' (line 1 col 2)
+error: unexpected argument '--unset' found
+
+  tip: to pass '--unset' as a value, use '-- --unset'
+
+Usage: shopt [OPTIONS] [OPTIONS]...
+
+For more information, try '--help'.
+
+p: command not found
+[31mERROR[0m main: syntax error near token `
+' (line 1 col 2)
+</pre></td></tr><tr><td><a name="details-34-bash"></a><b>bash</b></td><td>34 <a href="errexit-osh.test.html#L750">ShAssignment used as conditional</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>yes
+yes
+yes
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 33: shopt: strict_errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-34-dash"></a><b>dash</b></td><td>34 <a href="errexit-osh.test.html#L750">ShAssignment used as conditional</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>yes
+yes
+yes
+</pre><i>stderr:</i> <br/>
+<pre>dash: 33: shopt: not found
+</pre></td></tr><tr><td><a name="details-34-ash"></a><b>ash</b></td><td>34 <a href="errexit-osh.test.html#L750">ShAssignment used as conditional</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>yes
+yes
+yes
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-34-zsh"></a><b>zsh</b></td><td>34 <a href="errexit-osh.test.html#L750">ShAssignment used as conditional</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'yes\nyes\n', got 'yes\nyes\nyes\n'</span><br/>
+<span class="assertion">[zsh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>yes
+yes
+yes
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-34-mksh"></a><b>mksh</b></td><td>34 <a href="errexit-osh.test.html#L750">ShAssignment used as conditional</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>yes
+yes
+yes
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[33]: shopt: not found
+</pre></td></tr><tr><td><a name="details-34-ksh"></a><b>ksh</b></td><td>34 <a href="errexit-osh.test.html#L750">ShAssignment used as conditional</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'yes\nyes\n', got 'yes\nyes\nyes\n'</span><br/>
+<span class="assertion">[ksh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>yes
+yes
+yes
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[33]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-34-sush"></a><b>sush</b></td><td>34 <a href="errexit-osh.test.html#L750">ShAssignment used as conditional</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'yes\nyes\n', got 'yes\nyes\nyes\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>yes
+yes
+yes
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 16: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 33: shopt: strict_errexit: not supported yet
+</pre></td></tr><tr><td><a name="details-34-brush"></a><b>brush</b></td><td>34 <a href="errexit-osh.test.html#L750">ShAssignment used as conditional</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'yes\nyes\n', got 'yes\nyes\nyes\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>yes
+yes
+yes
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_errexit: invalid shell option name
+</pre></td></tr></table></body></html>

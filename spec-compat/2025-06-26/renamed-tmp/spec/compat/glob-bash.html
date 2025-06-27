@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>glob-bash: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for glob-bash.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>8</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>2</td><td>7</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>8</td><td>8</td><td>0</td><td>8</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>0</td><td>8</td><td>0</td><td>8</td><td>8</td><td>3</td><td>6</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>8</td><td>8</td><td>8</td><td>8</td><td>8</td><td>8</td><td>8</td><td>8</td><td>8</td><td>8</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob-bash.test.html#L3">shopt -s nullglob</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"><a href="#details-0-ash">details</a></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob-bash.test.html#L16">shopt -s failglob in command context</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob-bash.test.html#L31">shopt -s failglob in loop context</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob-bash.test.html#L49">shopt -s failglob in array literal context</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob-bash.test.html#L66">shopt -s failglob exits properly in command context with set -e</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob-bash.test.html#L81">shopt -s failglob exits properly in loop context with set -e</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="glob-bash.test.html#L102">shopt -s failglob behavior on single line with semicolon</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"><a href="#details-6-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="glob-bash.test.html#L128">dotglob (bash option that dashglob is roughly consistent with)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>22 passed, 1 OK, 24 not implemented, 0 BUG, 33 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="glob-bash.test.html#L3">shopt -s nullglob</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['_tmp/spec-tmp/*.nonexistent']
+['_tmp/spec-tmp/*.nonexistent']
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: shopt: not found
+</pre></td></tr><tr><td><a name="details-0-ash"></a><b>ash</b></td><td>0 <a href="glob-bash.test.html#L3">shopt -s nullglob</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['_tmp/spec-tmp/*.nonexistent']
+['_tmp/spec-tmp/*.nonexistent']
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="glob-bash.test.html#L3">shopt -s nullglob</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected "['_tmp/spec-tmp/*.nonexistent']\n[]\n", got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: _tmp/spec-tmp/*.nonexistent
+zsh: command not found: shopt
+zsh: no matches found: _tmp/spec-tmp/*.nonexistent
+</pre></td></tr><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="glob-bash.test.html#L3">shopt -s nullglob</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['_tmp/spec-tmp/*.nonexistent']
+['_tmp/spec-tmp/*.nonexistent']
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: shopt: not found
+</pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="glob-bash.test.html#L3">shopt -s nullglob</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['_tmp/spec-tmp/*.nonexistent']\n[]\n", got "['_tmp/spec-tmp/*.nonexistent']\n['_tmp/spec-tmp/*.nonexistent']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['_tmp/spec-tmp/*.nonexistent']
+['_tmp/spec-tmp/*.nonexistent']
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="glob-bash.test.html#L3">shopt -s nullglob</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['_tmp/spec-tmp/*.nonexistent']\n[]\n", got "['_tmp/spec-tmp/*.nonexistent']\n['_tmp/spec-tmp/*.nonexistent']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['_tmp/spec-tmp/*.nonexistent']
+['_tmp/spec-tmp/*.nonexistent']
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="glob-bash.test.html#L16">shopt -s failglob in command context</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['*.ZZ']
+['*.ZZ']
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: shopt: not found
+</pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="glob-bash.test.html#L16">shopt -s failglob in command context</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['*.ZZ']
+['*.ZZ']
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="glob-bash.test.html#L16">shopt -s failglob in command context</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected "['*.ZZ']\nstatus=1\n", got 'status=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: *.ZZ
+zsh: command not found: shopt
+zsh: no matches found: *.ZZ
+</pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="glob-bash.test.html#L16">shopt -s failglob in command context</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['*.ZZ']
+['*.ZZ']
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: shopt: not found
+</pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="glob-bash.test.html#L16">shopt -s failglob in command context</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['*.ZZ']\nstatus=1\n", got "['*.ZZ']\n['*.ZZ']\nstatus=0\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['*.ZZ']
+['*.ZZ']
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="glob-bash.test.html#L16">shopt -s failglob in command context</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['*.ZZ']\nstatus=1\n", got "['*.ZZ']\n['*.ZZ']\nstatus=0\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['*.ZZ']
+['*.ZZ']
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="glob-bash.test.html#L16">shopt -s failglob in command context</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "['*.ZZ']\nstatus=1\n", got "['*.ZZ']\n['*.ZZ']\nstatus=0\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['*.ZZ']
+['*.ZZ']
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: shopt: failglob: not supported yet
+</pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="glob-bash.test.html#L16">shopt -s failglob in command context</a><br/><br/>
+<span class="assertion">[brush stdout] Expected "['*.ZZ']\nstatus=1\n", got "['*.ZZ']\n['*.ZZ']\nstatus=0\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['*.ZZ']
+['*.ZZ']
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="glob-bash.test.html#L31">shopt -s failglob in loop context</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: shopt: not found
+</pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="glob-bash.test.html#L31">shopt -s failglob in loop context</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="glob-bash.test.html#L31">shopt -s failglob in loop context</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '*.ZZ\nstatus=0\nstatus=1\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: *.ZZ
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="glob-bash.test.html#L31">shopt -s failglob in loop context</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: shopt: not found
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="glob-bash.test.html#L31">shopt -s failglob in loop context</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '*.ZZ\nstatus=0\nstatus=1\n', got '*.ZZ\nstatus=0\n*.ZZ\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="glob-bash.test.html#L31">shopt -s failglob in loop context</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '*.ZZ\nstatus=0\nstatus=1\n', got '*.ZZ\nstatus=0\n*.ZZ\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="glob-bash.test.html#L31">shopt -s failglob in loop context</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '*.ZZ\nstatus=0\nstatus=1\n', got '*.ZZ\nstatus=0\n*.ZZ\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: shopt: failglob: not supported yet
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="glob-bash.test.html#L31">shopt -s failglob in loop context</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '*.ZZ\nstatus=0\nstatus=1\n', got '*.ZZ\nstatus=0\n*.ZZ\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="glob-bash.test.html#L49">shopt -s failglob in array literal context</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="glob-bash.test.html#L49">shopt -s failglob in array literal context</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="glob-bash.test.html#L49">shopt -s failglob in array literal context</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '*.ZZ\nstatus=1\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: *.ZZ
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="glob-bash.test.html#L49">shopt -s failglob in array literal context</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: shopt: not found
+</pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="glob-bash.test.html#L49">shopt -s failglob in array literal context</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '*.ZZ\nstatus=1\n', got '*.ZZ\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="glob-bash.test.html#L49">shopt -s failglob in array literal context</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '*.ZZ\nstatus=1\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: *.ZZ
+</pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="glob-bash.test.html#L49">shopt -s failglob in array literal context</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '*.ZZ\nstatus=1\n', got '*.ZZ\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="glob-bash.test.html#L66">shopt -s failglob exits properly in command context with set -e</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['*.ZZ']
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: shopt: not found
+</pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="glob-bash.test.html#L66">shopt -s failglob exits properly in command context with set -e</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['*.ZZ']
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="glob-bash.test.html#L66">shopt -s failglob exits properly in command context with set -e</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected "['*.ZZ']\n", got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: *.ZZ
+</pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="glob-bash.test.html#L66">shopt -s failglob exits properly in command context with set -e</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['*.ZZ']
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: shopt: not found
+</pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="glob-bash.test.html#L66">shopt -s failglob exits properly in command context with set -e</a><br/><br/>
+<span class="assertion">[ksh status] Expected 1, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['*.ZZ']
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="glob-bash.test.html#L66">shopt -s failglob exits properly in command context with set -e</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['*.ZZ']\n", got "['*.ZZ']\n['*.ZZ']\nstatus=0\n"</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['*.ZZ']
+['*.ZZ']
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -e
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="glob-bash.test.html#L66">shopt -s failglob exits properly in command context with set -e</a><br/><br/>
+<span class="assertion">[brush stdout] Expected "['*.ZZ']\n", got "['*.ZZ']\n['*.ZZ']\nstatus=0\n"</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['*.ZZ']
+['*.ZZ']
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="glob-bash.test.html#L81">shopt -s failglob exits properly in loop context with set -e</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 5: shopt: not found
+</pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="glob-bash.test.html#L81">shopt -s failglob exits properly in loop context with set -e</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="glob-bash.test.html#L81">shopt -s failglob exits properly in loop context with set -e</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '*.ZZ\nstatus=0\n', got ''</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: *.ZZ
+</pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="glob-bash.test.html#L81">shopt -s failglob exits properly in loop context with set -e</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: shopt: not found
+</pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="glob-bash.test.html#L81">shopt -s failglob exits properly in loop context with set -e</a><br/><br/>
+<span class="assertion">[ksh status] Expected 1, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="glob-bash.test.html#L81">shopt -s failglob exits properly in loop context with set -e</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '*.ZZ\nstatus=0\n', got '*.ZZ\nstatus=0\n*.ZZ\nstatus=0\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -e
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="glob-bash.test.html#L81">shopt -s failglob exits properly in loop context with set -e</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '*.ZZ\nstatus=0\n', got '*.ZZ\nstatus=0\n*.ZZ\nstatus=0\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="glob-bash.test.html#L102">shopt -s failglob behavior on single line with semicolon</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+</pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="glob-bash.test.html#L102">shopt -s failglob behavior on single line with semicolon</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="glob-bash.test.html#L102">shopt -s failglob behavior on single line with semicolon</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'status=1\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: no matches found: *.ZZ
+</pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="glob-bash.test.html#L102">shopt -s failglob behavior on single line with semicolon</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="glob-bash.test.html#L102">shopt -s failglob behavior on single line with semicolon</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'status=1\n', got '*.ZZ\nstatus=0\n*.ZZ\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="glob-bash.test.html#L102">shopt -s failglob behavior on single line with semicolon</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=1\n', got '*.ZZ\nstatus=0\n*.ZZ\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="glob-bash.test.html#L102">shopt -s failglob behavior on single line with semicolon</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=1\n', got '*.ZZ\nstatus=0\n*.ZZ\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: shopt: failglob: not supported yet
+</pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="glob-bash.test.html#L102">shopt -s failglob behavior on single line with semicolon</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=1\n', got '*.ZZ\nstatus=0\n*.ZZ\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>*.ZZ
+status=0
+*.ZZ
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-osh"></a><b>osh</b></td><td>6 <a href="glob-bash.test.html#L102">shopt -s failglob behavior on single line with semicolon</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>  echo *.ZZ; echo status=$? # bash doesn't execute the second part!
+  ^~~~
+[ stdin ]:2: failglob: Pattern '*.ZZ' matched no files
+  echo *.ZZ
+  ^~~~
+[ stdin ]:3: failglob: Pattern '*.ZZ' matched no files
+</pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="glob-bash.test.html#L128">dotglob (bash option that dashglob is roughly consistent with)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>other
+other
+</pre><i>stderr:</i> <br/>
+<pre>dash: 6: shopt: not found
+</pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="glob-bash.test.html#L128">dotglob (bash option that dashglob is roughly consistent with)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>other
+other
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="glob-bash.test.html#L128">dotglob (bash option that dashglob is roughly consistent with)</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'other\n.foorc other\n', got 'other\nother\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>other
+other
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="glob-bash.test.html#L128">dotglob (bash option that dashglob is roughly consistent with)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>other
+other
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[6]: shopt: not found
+</pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="glob-bash.test.html#L128">dotglob (bash option that dashglob is roughly consistent with)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected 'other\n.foorc other\n', got 'other\nother\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>other
+other
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[6]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="glob-bash.test.html#L128">dotglob (bash option that dashglob is roughly consistent with)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'other\n.foorc other\n', got 'other\nother\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>other
+other
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr></table></body></html>

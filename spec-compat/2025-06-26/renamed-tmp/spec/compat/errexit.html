@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>errexit: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for errexit.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>34</td><td>29</td><td>30</td><td>32</td><td>35</td><td>35</td><td>13</td><td>12</td><td>14</td><td>35</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>2</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>1</td><td>3</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>0</td><td>3</td><td>0</td><td>0</td><td>22</td><td>23</td><td>21</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>35</td><td>35</td><td>35</td><td>35</td><td>35</td><td>35</td><td>35</td><td>35</td><td>35</td><td>35</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L6">errexit aborts early</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"><a href="#details-0-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L13">errexit for nonexistent command</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L20">errexit aborts early on pipeline</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L27">errexit with { }</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L34">errexit with if and { }</a></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L48">errexit with ||</a></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L54">errexit with &amp;&amp;</a></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L60">errexit test &amp;&amp; -- from gen-module-init</a></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L66">errexit test &amp;&amp; and fail</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L73">More &amp;&amp; ||</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L97">errexit and loop</a></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L105">errexit and brace group { }</a></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L111">errexit and time { }</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L117">errexit with !</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L130">errexit with ! and ;</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L139">errexit with while/until</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L151">errexit with (( ))</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-dash">details</a></td><td class="details-row"><a href="#details-16-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"><a href="#details-16-sush">details</a></td><td class="details-row"><a href="#details-16-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L164">errexit with subshell</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"><a href="#details-17-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L173">set -o errexit while it's being ignored (moot with strict_errexit)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"><a href="#details-18-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L192">set +o errexit while it's being ignored (moot with strict_errexit)</a></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L210">set +o errexit with 2 levels of ignored</a></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L227">setting errexit in a subshell works but doesn't affect parent shell</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"><a href="#details-21-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L240">set errexit while it's ignored in a subshell (moot with strict_errexit)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"><a href="#details-22-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L258">shopt -s strict:all || true while errexit is on</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"><a href="#details-23-sush">details</a></td><td class="details-row"><a href="#details-23-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L269">errexit double guard</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"><a href="#details-24-sush">details</a></td><td class="details-row"><a href="#details-24-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L282">background processes respect errexit</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"><a href="#details-25-sush">details</a></td><td class="details-row"><a href="#details-25-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L291">pipeline process respects errexit</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"><a href="#details-26-sush">details</a></td><td class="details-row"><a href="#details-26-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L308">simple command / assign - redir failure DOES respect errexit</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-toysh">details</a></td><td class="details-row"><a href="#details-27-sush">details</a></td><td class="details-row"><a href="#details-27-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L342">simple command that's an alias - redir failure checked</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-dash">details</a></td><td class="details-row"><a href="#details-28-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-toysh">details</a></td><td class="details-row"><a href="#details-28-sush">details</a></td><td class="details-row"><a href="#details-28-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L370">bash atoms [[ (( - redir failure checked</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-dash">details</a></td><td class="details-row"><a href="#details-29-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-toysh">details</a></td><td class="details-row"><a href="#details-29-sush">details</a></td><td class="details-row"><a href="#details-29-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 30</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L404">brace group - redir failure checked</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-dash">details</a></td><td class="details-row"><a href="#details-30-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-toysh">details</a></td><td class="details-row"><a href="#details-30-sush">details</a></td><td class="details-row"><a href="#details-30-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 31</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L435">while loop - redirect failure checked</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-dash">details</a></td><td class="details-row"><a href="#details-31-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-toysh">details</a></td><td class="details-row"><a href="#details-31-sush">details</a></td><td class="details-row"><a href="#details-31-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 32</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L468">set -e enabled in function (regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-32-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 33</td><td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L487">set -e in function #2</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-33-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-33-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-33-toysh">details</a></td><td class="details-row"><a href="#details-33-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 34</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="errexit.test.html#L504">Command sub exit code is lost</a></td></tr>
+</table>
+<pre>269 passed, 2 OK, 3 not implemented, 7 BUG, 69 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="errexit.test.html#L6">errexit aborts early</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected u'', got 'done\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>done
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="errexit.test.html#L6">errexit aborts early</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got 'done\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>done
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-0-brush"></a><b>brush</b></td><td>0 <a href="errexit.test.html#L6">errexit aborts early</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'done\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>done
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="errexit.test.html#L13">errexit for nonexistent command</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected u'', got 'done\n'</span><br/>
+<span class="assertion">[toysh status] Expected 127, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>done
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: nonexistent__ZZ: No such file or directory
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="errexit.test.html#L13">errexit for nonexistent command</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got 'done\n'</span><br/>
+<span class="assertion">[sush status] Expected 127, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>done
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: nonexistent__ZZ: command not found
+</pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="errexit.test.html#L13">errexit for nonexistent command</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'done\n'</span><br/>
+<span class="assertion">[brush status] Expected 127, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>done
+</pre><i>stderr:</i> <br/>
+<pre>nonexistent__ZZ: command not found
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="errexit.test.html#L20">errexit aborts early on pipeline</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected u'', got 'two\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>two
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="errexit.test.html#L20">errexit aborts early on pipeline</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got 'two\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>two
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="errexit.test.html#L20">errexit aborts early on pipeline</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'two\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>two
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="errexit.test.html#L27">errexit with { }</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'one\n', got 'one\ntwo\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="errexit.test.html#L27">errexit with { }</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'one\n', got 'one\ntwo\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="errexit.test.html#L27">errexit with { }</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'one\n', got 'one\ntwo\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="errexit.test.html#L66">errexit test &amp;&amp; and fail</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected u'', got 'status=1\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="errexit.test.html#L66">errexit test &amp;&amp; and fail</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got 'status=1\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="errexit.test.html#L66">errexit test &amp;&amp; and fail</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'status=1\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="errexit.test.html#L73">More &amp;&amp; ||</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'group\nstatus=1\n\nsubshell\nstatus=42\n\nstatus=1\n'
+Got      'group\nbad\nstatus=0\n\nsubshell\nbad\nstatus=0\n\nbad\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>group
+bad
+status=0
+
+subshell
+bad
+status=0
+
+bad
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -e
+set: bad -e
+set: bad -e
+</pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="errexit.test.html#L73">More &amp;&amp; ||</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'group\nstatus=1\n\nsubshell\nstatus=42\n\nstatus=1\n'
+Got      'group\nbad\nstatus=0\n\nsubshell\nbad\nstatus=0\n\nbad\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>group
+bad
+status=0
+
+subshell
+bad
+status=0
+
+bad
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="errexit.test.html#L111">errexit and time { }</a><br/><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+
+real	0.001
+user	0.1002
+sys	0.000
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="errexit.test.html#L111">errexit and time { }</a><br/><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+
+real	0m0.000006s
+user	0m0.000008s
+sys 	0m0.000000s
+</pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="errexit.test.html#L111">errexit and time { }</a><br/><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>
+real	0m0.000s
+user	0m0.000s
+sys	0m0.000s
+</pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="errexit.test.html#L117">errexit with !</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'one\ntwo\nthree\n', got 'one\n'</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-zsh"></a><b>zsh</b></td><td>14 <a href="errexit.test.html#L130">errexit with ! and ;</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'one\ntwo\nthree\n', got 'one\n'</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="errexit.test.html#L139">errexit with while/until</a><br/><br/>
+<span class="assertion">[sush status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: Unexpected token: do
+
+sush: break: only meaningful in a `for', `while', or `until' loop
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: Unexpected token: done
+
+</pre></td></tr><tr><td><a name="details-16-dash"></a><b>dash</b></td><td>16 <a href="errexit.test.html#L151">errexit with (( ))</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: i++: not found
+</pre></td></tr><tr><td><a name="details-16-ash"></a><b>ash</b></td><td>16 <a href="errexit.test.html#L151">errexit with (( ))</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: i++: not found
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="errexit.test.html#L151">errexit with (( ))</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected u'', got 'done\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>done
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+</pre></td></tr><tr><td><a name="details-16-sush"></a><b>sush</b></td><td>16 <a href="errexit.test.html#L151">errexit with (( ))</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got 'done\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>done
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-16-brush"></a><b>brush</b></td><td>16 <a href="errexit.test.html#L151">errexit with (( ))</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got 'done\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>done
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="errexit.test.html#L164">errexit with subshell</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'one\n', got 'one\ntwo\nthree\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+three
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+</pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="errexit.test.html#L164">errexit with subshell</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'one\n', got 'one\ntwo\nthree\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+three
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-17-brush"></a><b>brush</b></td><td>17 <a href="errexit.test.html#L164">errexit with subshell</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'one\n', got 'one\ntwo\nthree\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+three
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="errexit.test.html#L173">set -o errexit while it's being ignored (moot with strict_errexit)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1\n2\n3\n4\n5\n6\n', got '1\n2\n3\n4\n5\n6\n7\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+5
+6
+7
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+set: bad -o errexit
+</pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="errexit.test.html#L173">set -o errexit while it's being ignored (moot with strict_errexit)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '1\n2\n3\n4\n5\n6\n', got '1\n2\n3\n4\n5\n6\n7\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+5
+6
+7
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-18-brush"></a><b>brush</b></td><td>18 <a href="errexit.test.html#L173">set -o errexit while it's being ignored (moot with strict_errexit)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '1\n2\n3\n4\n5\n6\n', got '1\n2\n3\n4\n5\n6\n7\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+5
+6
+7
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="errexit.test.html#L227">setting errexit in a subshell works but doesn't affect parent shell</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1\n2\n3\n5\n6\n', got '1\n2\n3\n4\n5\n6\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+5
+6
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+</pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="errexit.test.html#L227">setting errexit in a subshell works but doesn't affect parent shell</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '1\n2\n3\n5\n6\n', got '1\n2\n3\n4\n5\n6\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+5
+6
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-21-brush"></a><b>brush</b></td><td>21 <a href="errexit.test.html#L227">setting errexit in a subshell works but doesn't affect parent shell</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '1\n2\n3\n5\n6\n', got '1\n2\n3\n4\n5\n6\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+5
+6
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="errexit.test.html#L240">set errexit while it's ignored in a subshell (moot with strict_errexit)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '1\n2\n3\n4\n5\n6\n', got '1\n2\n3\n4\n5\n6\n7\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+5
+6
+7
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+set: bad -o errexit
+</pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="errexit.test.html#L240">set errexit while it's ignored in a subshell (moot with strict_errexit)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '1\n2\n3\n4\n5\n6\n', got '1\n2\n3\n4\n5\n6\n7\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+5
+6
+7
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-22-brush"></a><b>brush</b></td><td>22 <a href="errexit.test.html#L240">set errexit while it's ignored in a subshell (moot with strict_errexit)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '1\n2\n3\n4\n5\n6\n', got '1\n2\n3\n4\n5\n6\n7\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+5
+6
+7
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="errexit.test.html#L258">shopt -s strict:all || true while errexit is on</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'one\n', got 'one\ntwo\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-23-sush"></a><b>sush</b></td><td>23 <a href="errexit.test.html#L258">shopt -s strict:all || true while errexit is on</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'one\n', got 'one\ntwo\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: shopt: strict:all: not supported yet
+</pre></td></tr><tr><td><a name="details-23-brush"></a><b>brush</b></td><td>23 <a href="errexit.test.html#L258">shopt -s strict:all || true while errexit is on</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'one\n', got 'one\ntwo\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict:all: invalid shell option name
+</pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="errexit.test.html#L269">errexit double guard</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'true\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+main: line 2: sh: syntax error: fi
+</pre></td></tr><tr><td><a name="details-24-sush"></a><b>sush</b></td><td>24 <a href="errexit.test.html#L269">errexit double guard</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'true\n', got 'true\ndone\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>true
+done
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-24-brush"></a><b>brush</b></td><td>24 <a href="errexit.test.html#L269">errexit double guard</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'true\n', got 'true\ndone\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>true
+done
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="errexit.test.html#L282">background processes respect errexit</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'one\n', got 'one\ntwo\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+</pre></td></tr><tr><td><a name="details-25-sush"></a><b>sush</b></td><td>25 <a href="errexit.test.html#L282">background processes respect errexit</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'one\n', got 'one\ntwo\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 42</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+3375862
+</pre></td></tr><tr><td><a name="details-25-brush"></a><b>brush</b></td><td>25 <a href="errexit.test.html#L282">background processes respect errexit</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'one\n', got 'one\ntwo\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="errexit.test.html#L291">pipeline process respects errexit</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'one\n[three]\n', got 'one\ntwo\nfour\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+four
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-26-sush"></a><b>sush</b></td><td>26 <a href="errexit.test.html#L291">pipeline process respects errexit</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'one\n[three]\n', got 'one\ntwo\n[three]\n[four]\nfour\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+[three]
+[four]
+four
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-26-brush"></a><b>brush</b></td><td>26 <a href="errexit.test.html#L291">pipeline process respects errexit</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'one\n[three]\n', got 'one\ntwo\n[three]\n[four]\nfour\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+[three]
+[four]
+four
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-dash"></a><b>dash</b></td><td>27 <a href="errexit.test.html#L308">simple command / assign - redir failure DOES respect errexit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=2
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: cannot create /: Is a directory
+dash: 3: cannot create /: Is a directory
+dash: 3: cannot create /: Is a directory
+</pre></td></tr><tr><td><a name="details-27-toysh"></a><b>toysh</b></td><td>27 <a href="errexit.test.html#L308">simple command / assign - redir failure DOES respect errexit</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=1\nstatus=1\nstatus=1\n', got 'builtin status=1\nstatus=0\nextern status=1\nstatus=0\nassign status=1\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>builtin status=1
+status=0
+extern status=1
+status=0
+assign status=1
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: /: Is a directory
+set: bad -o errexit
+sh: /: Is a directory
+set: bad -o errexit
+sh: /: Is a directory
+</pre></td></tr><tr><td><a name="details-27-sush"></a><b>sush</b></td><td>27 <a href="errexit.test.html#L308">simple command / assign - redir failure DOES respect errexit</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=1\nstatus=1\nstatus=1\n', got 'builtin status=1\nstatus=0\nextern status=1\nstatus=0\nassign status=2\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>builtin status=1
+status=0
+extern status=1
+status=0
+assign status=2
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: /: is a directory
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: /: is a directory
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-27-brush"></a><b>brush</b></td><td>27 <a href="errexit.test.html#L308">simple command / assign - redir failure DOES respect errexit</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=1\nstatus=1\nstatus=1\n', got 'builtin status=1\nstatus=0\nextern status=1\nstatus=0\nassign status=1\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>builtin status=1
+status=0
+extern status=1
+status=0
+assign status=1
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>error: failed to redirect to /: Is a directory (os error 21)
+error: failed to redirect to /: Is a directory (os error 21)
+error: failed to redirect to /: Is a directory (os error 21)
+</pre></td></tr><tr><td><a name="details-28-dash"></a><b>dash</b></td><td>28 <a href="errexit.test.html#L342">simple command that's an alias - redir failure checked</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>alias status=2
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: shopt: not found
+dash: 6: cannot create /: Is a directory
+</pre></td></tr><tr><td><a name="details-28-ash"></a><b>ash</b></td><td>28 <a href="errexit.test.html#L342">simple command that's an alias - redir failure checked</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>alias status=1
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: can't create /: Is a directory
+</pre></td></tr><tr><td><a name="details-28-toysh"></a><b>toysh</b></td><td>28 <a href="errexit.test.html#L342">simple command that's an alias - redir failure checked</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=1\n', got 'alias status=1\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>alias status=1
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+set: bad -o errexit
+sh: alias: No such file or directory
+sh: /: Is a directory
+</pre></td></tr><tr><td><a name="details-28-sush"></a><b>sush</b></td><td>28 <a href="errexit.test.html#L342">simple command that's an alias - redir failure checked</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=1\n', got 'alias status=2\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>alias status=2
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: Unexpected token: }
+</pre></td></tr><tr><td><a name="details-28-brush"></a><b>brush</b></td><td>28 <a href="errexit.test.html#L342">simple command that's an alias - redir failure checked</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=1\n', got 'alias status=1\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>alias status=1
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>error: failed to redirect to /: Is a directory (os error 21)
+</pre></td></tr><tr><td><a name="details-29-dash"></a><b>dash</b></td><td>29 <a href="errexit.test.html#L370">bash atoms [[ (( - redir failure checked</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-ash"></a><b>ash</b></td><td>29 <a href="errexit.test.html#L370">bash atoms [[ (( - redir failure checked</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>ash: can't create /: Is a directory
+ash: can't create /: Is a directory
+</pre></td></tr><tr><td><a name="details-29-toysh"></a><b>toysh</b></td><td>29 <a href="errexit.test.html#L370">bash atoms [[ (( - redir failure checked</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'status=1\nstatus=1\n', got ''</span><br/>
+<span class="assertion">[toysh status] Expected 0, got -6</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-29-sush"></a><b>sush</b></td><td>29 <a href="errexit.test.html#L370">bash atoms [[ (( - redir failure checked</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'status=1\nstatus=1\n', got 'dbracket status=1\nstatus=0\ndparen status=2\nstatus=0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>dbracket status=1
+status=0
+dparen status=2
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: /: is a directory
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: Unexpected token: &gt;
+</pre></td></tr><tr><td><a name="details-29-brush"></a><b>brush</b></td><td>29 <a href="errexit.test.html#L370">bash atoms [[ (( - redir failure checked</a><br/><br/>
+<span class="assertion">[brush stdout] Expected 'status=1\nstatus=1\n', got 'status=2\nstatus=1\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error near token `&gt;' (line 3 col 13)
+[31mERROR[0m error: failed to redirect to /: Is a directory (os error 21)
+</pre></td></tr><tr><td><a name="details-30-dash"></a><b>dash</b></td><td>30 <a href="errexit.test.html#L404">brace group - redir failure checked</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: cannot open not_exist.txt: No such file
+</pre></td></tr><tr><td><a name="details-30-ash"></a><b>ash</b></td><td>30 <a href="errexit.test.html#L404">brace group - redir failure checked</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>ash: can't open not_exist.txt: no such file
+</pre></td></tr><tr><td><a name="details-30-toysh"></a><b>toysh</b></td><td>30 <a href="errexit.test.html#L404">brace group - redir failure checked</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '', got 'status=1\nshould not get here\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: not_exist.txt: No such file or directory
+</pre></td></tr><tr><td><a name="details-30-sush"></a><b>sush</b></td><td>30 <a href="errexit.test.html#L404">brace group - redir failure checked</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '', got 'status=1\nshould not get here\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: not_exist.txt: entity not found
+</pre></td></tr><tr><td><a name="details-30-brush"></a><b>brush</b></td><td>30 <a href="errexit.test.html#L404">brace group - redir failure checked</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '', got 'status=0\nshould not get here\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: failed to redirect to /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/errexit.test.sh/30-brush/not_exist.txt: No such file or directory (os error 2)
+</pre></td></tr><tr><td><a name="details-31-dash"></a><b>dash</b></td><td>31 <a href="errexit.test.html#L435">while loop - redirect failure checked</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: cannot open not_exist.txt: No such file
+</pre></td></tr><tr><td><a name="details-31-ash"></a><b>ash</b></td><td>31 <a href="errexit.test.html#L435">while loop - redirect failure checked</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>ash: can't open not_exist.txt: no such file
+</pre></td></tr><tr><td><a name="details-31-toysh"></a><b>toysh</b></td><td>31 <a href="errexit.test.html#L435">while loop - redirect failure checked</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '', got 'status=1\nshould not get here\n'</span><br/>
+<span class="assertion">[toysh status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: not_exist.txt: No such file or directory
+</pre></td></tr><tr><td><a name="details-31-sush"></a><b>sush</b></td><td>31 <a href="errexit.test.html#L435">while loop - redirect failure checked</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '', got 'status=1\nshould not get here\n'</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: not_exist.txt: entity not found
+</pre></td></tr><tr><td><a name="details-31-brush"></a><b>brush</b></td><td>31 <a href="errexit.test.html#L435">while loop - redirect failure checked</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '', got 'status=0\nshould not get here\n'</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+should not get here
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: failed to redirect to /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/errexit.test.sh/31-brush/not_exist.txt: No such file or directory (os error 2)
+</pre></td></tr><tr><td><a name="details-32-sush"></a><b>sush</b></td><td>32 <a href="errexit.test.html#L468">set -e enabled in function (regression)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'should be executed\nshould be executed\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-bash"></a><b>bash</b></td><td>33 <a href="errexit.test.html#L487">set -e in function #2</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-zsh"></a><b>zsh</b></td><td>33 <a href="errexit.test.html#L487">set -e in function #2</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected 'should be executed\nshould be executed\n', got ''</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-toysh"></a><b>toysh</b></td><td>33 <a href="errexit.test.html#L487">set -e in function #2</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected 'should be executed\nshould be executed\n', got 'should be executed\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>should be executed
+</pre><i>stderr:</i> <br/>
+<pre>sh: foo: No such file or directory
+</pre></td></tr><tr><td><a name="details-33-sush"></a><b>sush</b></td><td>33 <a href="errexit.test.html#L487">set -e in function #2</a><br/><br/>
+<span class="assertion">[sush stdout] Expected 'should be executed\nshould be executed\n', got ''</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

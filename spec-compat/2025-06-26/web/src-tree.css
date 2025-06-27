@@ -1,0 +1,113 @@
+/* For doctools/{src_tree,micro_syntax} */
+
+body {
+  /* Arial seems thinner than the default sans-serif font */
+  font-family: Arial, sans-serif;
+  color: #444;  /* same as base.css */
+
+  /* We've designed with mobile in mind, so disable iPhone's special inflation
+   * algorithm - https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust
+   */
+  text-size-adjust: none;
+  /* 2023-09: essential for my phone! */
+  -webkit-text-size-adjust: none;
+}
+
+/* Arbitrary threshold of 1000 pixels */
+
+@media screen and (max-width: 1000px) {
+  body {
+    padding: 0 1em;  /* save space on small screen */
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  body {
+    font-size: large;
+    padding: 0 3em;
+  }
+}
+
+/* "Files" and "Dirs" are same size, just bold */
+h1 {
+  font-size: 1.2em;
+}
+
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* For highlighting specific lines.  Don't need an anchor! */
+:target {
+   background-color: palegoldenrod;
+}
+
+/* horizontal scrollbar for code, so the long lines don't make the page small */
+pre {
+  overflow: auto;
+}
+
+#home-link {
+  float: right;  /* to the right of the breadcrumb */
+}
+
+#file-counts {
+  text-align: right;
+  font-size: medium;
+}
+
+table {
+  border-collapse: collapse;  /* shared borders */
+  font-family: monospace;
+}
+
+td {
+  /* For the line number */
+  padding-right: 1em;
+}
+
+.listing {
+  /* Long filenames like those in spec/ can wrap, but that seems OK */
+  column-width: 12em;
+  /* column-count: 3; */
+}
+
+.num {
+  color: #666;
+  text-align: right;
+  /* Users can copy the code without copying line numbers */
+  user-select: none;
+}
+
+.line {
+  /* like <pre> tag */
+  white-space: pre;
+  color: #141414;  /* almost black */
+}
+
+.spec-comment {
+  font-weight: bold;
+  color: #0047ab;  /* cobalt */
+}
+
+.comm {
+  /* Note blog uses language.css, which is 'green' */
+  color: #0047ab;  /* cobalt */
+  /* font-style: italic; */
+}
+
+.str {
+  color: brown;
+}
+
+.re2c {
+  color: purple;
+}
+
+.preproc {
+  color: darkgreen;
+}
+

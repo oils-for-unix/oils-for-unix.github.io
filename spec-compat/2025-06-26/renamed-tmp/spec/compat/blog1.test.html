@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>spec/blog1.test.sh</title>
+<link rel="stylesheet" type="text/css" href="../../../web/src-tree.css" />
+  </head>
+
+      <body class="">
+        <div id="home-link">
+          <a href="https://github.com/oilshell/oil/blob/master/spec/blog1.test.sh">View on Github</a>
+          |
+          <a href="/">oils.pub</a>
+        </div>
+        <table>
+      <tr>
+  <td class=num>1</td>
+  <td id=L1>
+    <span class="line comm">## compare_shells: dash bash mksh zsh</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>2</td>
+  <td id=L2>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>3</td>
+  <td id=L3>
+    <span class="line comm"># Tests for the blog.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>4</td>
+  <td id=L4>
+    <span class="line comm">#</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>5</td>
+  <td id=L5>
+    <span class="line comm"># Fun game: try to come up with an expression that behaves differently on ALL</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>6</td>
+  <td id=L6>
+    <span class="line comm"># FOUR shells.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>7</td>
+  <td id=L7>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>8</td>
+  <td id=L8>
+    <span class="line spec-comment">#### ${##}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>9</td>
+  <td id=L9>
+    <span class="line ">set -- $(seq 25)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>10</td>
+  <td id=L10>
+    <span class="line ">echo ${##}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>11</td>
+  <td id=L11>
+    <span class="line comm">## stdout: 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>12</td>
+  <td id=L12>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>13</td>
+  <td id=L13>
+    <span class="line spec-comment">#### ${###}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>14</td>
+  <td id=L14>
+    <span class="line ">set -- $(seq 25)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>15</td>
+  <td id=L15>
+    <span class="line ">echo ${###}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>16</td>
+  <td id=L16>
+    <span class="line comm">## stdout: 25</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>17</td>
+  <td id=L17>
+    <span class="line comm">## N-I osh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>18</td>
+  <td id=L18>
+    <span class="line comm">## N-I osh status: 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>19</td>
+  <td id=L19>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>20</td>
+  <td id=L20>
+    <span class="line spec-comment">#### ${####}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>21</td>
+  <td id=L21>
+    <span class="line ">set -- $(seq 25)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>22</td>
+  <td id=L22>
+    <span class="line ">echo ${####}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>23</td>
+  <td id=L23>
+    <span class="line comm">## stdout: 25</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>24</td>
+  <td id=L24>
+    <span class="line comm">## N-I osh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>25</td>
+  <td id=L25>
+    <span class="line comm">## N-I osh status: 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>26</td>
+  <td id=L26>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>27</td>
+  <td id=L27>
+    <span class="line spec-comment">#### ${##2}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>28</td>
+  <td id=L28>
+    <span class="line ">set -- $(seq 25)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>29</td>
+  <td id=L29>
+    <span class="line ">echo ${##2}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>30</td>
+  <td id=L30>
+    <span class="line comm">## stdout: 5</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>31</td>
+  <td id=L31>
+    <span class="line comm">## N-I osh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>32</td>
+  <td id=L32>
+    <span class="line comm">## N-I osh status: 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>33</td>
+  <td id=L33>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>34</td>
+  <td id=L34>
+    <span class="line spec-comment">#### ${###2}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>35</td>
+  <td id=L35>
+    <span class="line ">set -- $(seq 25)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>36</td>
+  <td id=L36>
+    <span class="line ">echo ${###2}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>37</td>
+  <td id=L37>
+    <span class="line comm">## stdout: 5</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>38</td>
+  <td id=L38>
+    <span class="line comm">## BUG mksh stdout: 25</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>39</td>
+  <td id=L39>
+    <span class="line comm">## N-I osh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>40</td>
+  <td id=L40>
+    <span class="line comm">## N-I osh status: 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>41</td>
+  <td id=L41>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>42</td>
+  <td id=L42>
+    <span class="line spec-comment">#### ${1####}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>43</td>
+  <td id=L43>
+    <span class="line ">set -- '####'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>44</td>
+  <td id=L44>
+    <span class="line ">echo ${1####}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>45</td>
+  <td id=L45>
+    <span class="line comm">## stdout: ##</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>46</td>
+  <td id=L46>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>47</td>
+  <td id=L47>
+    <span class="line spec-comment">#### ${1#'###'}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>48</td>
+  <td id=L48>
+    <span class="line ">set -- '####'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>49</td>
+  <td id=L49>
+    <span class="line ">echo ${1#'###'}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>50</td>
+  <td id=L50>
+    <span class="line comm">## stdout: #</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>51</td>
+  <td id=L51>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>52</td>
+  <td id=L52>
+    <span class="line spec-comment">#### ${#1#'###'}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>53</td>
+  <td id=L53>
+    <span class="line ">set -- '####'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>54</td>
+  <td id=L54>
+    <span class="line ">echo ${#1#'###'}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>55</td>
+  <td id=L55>
+    <span class="line comm"># dash and zsh accept; mksh/bash/osh don't.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>56</td>
+  <td id=L56>
+    <span class="line comm">## status: 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>57</td>
+  <td id=L57>
+    <span class="line comm">## stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>58</td>
+  <td id=L58>
+    <span class="line comm">## OK dash/zsh status: 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>59</td>
+  <td id=L59>
+    <span class="line comm">## OK dash stdout: 4</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>60</td>
+  <td id=L60>
+    <span class="line comm">## OK zsh stdout: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>61</td>
+  <td id=L61>
+    <span class="line comm">## N-I bash/mksh status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>62</td>
+  <td id=L62>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>63</td>
+  <td id=L63>
+    <span class="line spec-comment">#### Julia example from spec/oil-user-feedback</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>64</td>
+  <td id=L64>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>65</td>
+  <td id=L65>
+    <span class="line ">case $SH in (dash|mksh|zsh) exit ;; esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>66</td>
+  <td id=L66>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>67</td>
+  <td id=L67>
+    <span class="line ">git-branch-merged() {</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>68</td>
+  <td id=L68>
+    <span class="line ">  cat &lt;&lt;EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>69</td>
+  <td id=L69>
+    <span class="line ">  foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>70</td>
+  <td id=L70>
+    <span class="line ">* bar</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>71</td>
+  <td id=L71>
+    <span class="line ">  baz</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>72</td>
+  <td id=L72>
+    <span class="line ">  master</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>73</td>
+  <td id=L73>
+    <span class="line ">EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>74</td>
+  <td id=L74>
+    <span class="line ">}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>75</td>
+  <td id=L75>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>76</td>
+  <td id=L76>
+    <span class="line ">shopt -s lastpipe  # required for bash, not OSH</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>77</td>
+  <td id=L77>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>78</td>
+  <td id=L78>
+    <span class="line ">branches=()  # dangerous when set -e is on</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>79</td>
+  <td id=L79>
+    <span class="line ">git-branch-merged | while read -r line; do</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>80</td>
+  <td id=L80>
+    <span class="line ">  line=${line# *}  # strip leading spaces</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>81</td>
+  <td id=L81>
+    <span class="line ">  if [[ $line != 'master' &amp;&amp; ! ${line:0:1} == '*' ]]; then</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>82</td>
+  <td id=L82>
+    <span class="line ">    branches+=("$line")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>83</td>
+  <td id=L83>
+    <span class="line ">  fi</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>84</td>
+  <td id=L84>
+    <span class="line ">done</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>85</td>
+  <td id=L85>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>86</td>
+  <td id=L86>
+    <span class="line ">if [[ ${#branches[@]} -eq 0 ]]; then</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>87</td>
+  <td id=L87>
+    <span class="line ">  echo "No merged branches"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>88</td>
+  <td id=L88>
+    <span class="line ">else</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>89</td>
+  <td id=L89>
+    <span class="line ">  echo git branch -D "${branches[@]}"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>90</td>
+  <td id=L90>
+    <span class="line ">fi</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>91</td>
+  <td id=L91>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>92</td>
+  <td id=L92>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>93</td>
+  <td id=L93>
+    <span class="line ">git branch -D foo baz</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>94</td>
+  <td id=L94>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>95</td>
+  <td id=L95>
+    <span class="line comm">## N-I dash/mksh/zsh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>96</td>
+  <td id=L96>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+
+        </table>
+      </body>
+    </html>

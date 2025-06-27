@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>introspect: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for introspect.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>12</td><td>0</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td><td>4</td><td>13</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>13</td><td>11</td><td>12</td><td>12</td><td>12</td><td>12</td><td>11</td><td>9</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>13</td><td>13</td><td>13</td><td>13</td><td>13</td><td>13</td><td>13</td><td>13</td><td>13</td><td>13</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="introspect.test.html#L28">${FUNCNAME[@]} array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"><a href="#details-0-ash">details</a></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="introspect.test.html#L44">FUNCNAME with source (scalar or array)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-1-bash">details</a></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="introspect.test.html#L110">BASH_SOURCE and BASH_LINENO scalar or array (e.g. for virtualenv)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="introspect.test.html#L145">${FUNCNAME} with prefix/suffix operators</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="introspect.test.html#L159">operators on FUNCNAME</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="introspect.test.html#L175">${FUNCNAME} and "set -u" (OSH regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="introspect.test.html#L181">$((BASH_LINENO)) (scalar form in arith)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="introspect.test.html#L188">${BASH_SOURCE[@]} with source and function name</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="introspect.test.html#L200">${BASH_SOURCE[@]} with line numbers</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="introspect.test.html#L216">${BASH_LINENO[@]} is a stack of line numbers for function calls</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"><a href="#details-9-zsh">details</a></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="introspect.test.html#L235">Locations with temp frame</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="introspect.test.html#L249">Locations when sourcing</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-dash">details</a></td><td class="details-row"><a href="#details-11-ash">details</a></td><td class="details-row"><a href="#details-11-zsh">details</a></td><td class="details-row"><a href="#details-11-mksh">details</a></td><td class="details-row"><a href="#details-11-ksh">details</a></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="introspect.test.html#L271">Sourcing inside function grows the debug stack</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-dash">details</a></td><td class="details-row"><a href="#details-12-ash">details</a></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>37 passed, 0 OK, 0 not implemented, 1 BUG, 92 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="introspect.test.html#L28">${FUNCNAME[@]} array</a><br/><br/>
+<span class="assertion">[dash stdout] Expected "['f']\n['g', 'f']\n['f']\n", got ''</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 5: Bad substitution
+</pre></td></tr><tr><td><a name="details-0-ash"></a><b>ash</b></td><td>0 <a href="introspect.test.html#L28">${FUNCNAME[@]} array</a><br/><br/>
+<span class="assertion">[ash stdout] Expected "['f']\n['g', 'f']\n['f']\n", got ''</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="introspect.test.html#L28">${FUNCNAME[@]} array</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected "['f']\n['g', 'f']\n['f']\n", got "['']\n['']\n['']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['']
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="introspect.test.html#L28">${FUNCNAME[@]} array</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected "['f']\n['g', 'f']\n['f']\n", got '[]\n[]\n[]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="introspect.test.html#L28">${FUNCNAME[@]} array</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['f']\n['g', 'f']\n['f']\n", got '[]\n[]\n[]\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="introspect.test.html#L28">${FUNCNAME[@]} array</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['f']\n['g', 'f']\n['f']\n", got "['']\n['']\n['']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['']
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-bash"></a><b>bash</b></td><td>1 <a href="introspect.test.html#L44">FUNCNAME with source (scalar or array)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['  @', 'source', 'f', 'g']
+['  0', 'source']
+['${}', 'source']
+['  $', 'source']
+-----
+['  @']
+['  0', '']
+['${}', '']
+['  $', '']
+-----
+[]
+-----
+['  @', 'A']
+['  0', 'A']
+['${}', 'A']
+['  $', 'A']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="introspect.test.html#L44">FUNCNAME with source (scalar or array)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['  @', 'source', 'f', 'g']\n['  0', 'source']\n['${}', 'source']\n['  $', 'source']\n-----\n['  @', 'source']\n['  0', 'source']\n['${}', 'source']\n['  $', 'source']\n-----\n[]\n"
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: spec/testdata/echo-funcname.sh: Bad substitution
+</pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="introspect.test.html#L44">FUNCNAME with source (scalar or array)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['  @', 'source', 'f', 'g']\n['  0', 'source']\n['${}', 'source']\n['  $', 'source']\n-----\n['  @', 'source']\n['  0', 'source']\n['${}', 'source']\n['  $', 'source']\n-----\n[]\n"
+Got      ''
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: spec/testdata/echo-funcname.sh: line 3: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="introspect.test.html#L44">FUNCNAME with source (scalar or array)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['  @', 'source', 'f', 'g']\n['  0', 'source']\n['${}', 'source']\n['  $', 'source']\n-----\n['  @', 'source']\n['  0', 'source']\n['${}', 'source']\n['  $', 'source']\n-----\n[]\n"
+Got      "['  @', '']\n['  0', '']\n['${}', '']\n['  $', '']\n-----\n['  @', '']\n['  0', '']\n['${}', '']\n['  $', '']\n-----\n['']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['  @', '']
+['  0', '']
+['${}', '']
+['  $', '']
+-----
+['  @', '']
+['  0', '']
+['${}', '']
+['  $', '']
+-----
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="introspect.test.html#L44">FUNCNAME with source (scalar or array)</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "['  @', 'source', 'f', 'g']\n['  0', 'source']\n['${}', 'source']\n['  $', 'source']\n-----\n['  @', 'source']\n['  0', 'source']\n['${}', 'source']\n['  $', 'source']\n-----\n[]\n"
+Got      "['  @']\n['  0', '']\n['${}', '']\n['  $', '']\n-----\n['  @']\n['  0', '']\n['${}', '']\n['  $', '']\n-----\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['  @']
+['  0', '']
+['${}', '']
+['  $', '']
+-----
+['  @']
+['  0', '']
+['${}', '']
+['  $', '']
+-----
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="introspect.test.html#L44">FUNCNAME with source (scalar or array)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['  @', 'source', 'f', 'g']\n['  0', 'source']\n['${}', 'source']\n['  $', 'source']\n-----\n['  @', 'source']\n['  0', 'source']\n['${}', 'source']\n['  $', 'source']\n-----\n[]\n"
+Got      "['  @']\n['  0', '']\n['${}', '']\n['  $', '']\n-----\n['  @']\n['  0', '']\n['${}', '']\n['  $', '']\n-----\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['  @']
+['  0', '']
+['${}', '']
+['  $', '']
+-----
+['  @']
+['  0', '']
+['${}', '']
+['  $', '']
+-----
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="introspect.test.html#L44">FUNCNAME with source (scalar or array)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['  @', 'source', 'f', 'g']\n['  0', 'source']\n['${}', 'source']\n['  $', 'source']\n-----\n['  @', 'source']\n['  0', 'source']\n['${}', 'source']\n['  $', 'source']\n-----\n[]\n"
+Got      "['  @', '']\n['  0', '']\n['${}', '']\n['  $', '']\n-----\n['  @', '']\n['  0', '']\n['${}', '']\n['  $', '']\n-----\n['']\n"
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['  @', '']
+['  0', '']
+['${}', '']
+['  $', '']
+-----
+['  @', '']
+['  0', '']
+['${}', '']
+['  $', '']
+-----
+['']
+</pre><i>stderr:</i> <br/>
+<pre>main: line 19: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="introspect.test.html#L44">FUNCNAME with source (scalar or array)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['  @', 'source', 'f', 'g']\n['  0', 'source']\n['${}', 'source']\n['  $', 'source']\n-----\n['  @', 'source']\n['  0', 'source']\n['${}', 'source']\n['  $', 'source']\n-----\n[]\n"
+Got      "['  @', 'f', 'g']\n['  0', 'f']\n['${}', 'f']\n['  $', 'f']\n-----\n['  @']\n['  0', '']\n['${}', '']\n['  $', '']\n-----\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['  @', 'f', 'g']
+['  0', 'f']
+['${}', 'f']
+['  $', 'f']
+-----
+['  @']
+['  0', '']
+['${}', '']
+['  $', '']
+-----
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="introspect.test.html#L44">FUNCNAME with source (scalar or array)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['  @', 'source', 'f', 'g']\n['  0', 'source']\n['${}', 'source']\n['  $', 'source']\n-----\n['  @', 'source']\n['  0', 'source']\n['${}', 'source']\n['  $', 'source']\n-----\n[]\n"
+Got      "['  @', 'f', 'g']\n['  0', 'f']\n['${}', 'f']\n['  $', 'f']\n-----\n['  @']\n['  0', '']\n['${}', '']\n['  $', '']\n-----\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['  @', 'f', 'g']
+['  0', 'f']
+['${}', 'f']
+['  $', 'f']
+-----
+['  @']
+['  0', '']
+['${}', '']
+['  $', '']
+-----
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="introspect.test.html#L110">BASH_SOURCE and BASH_LINENO scalar or array (e.g. for virtualenv)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['']\n['']\n['']\n['']\n['']\n['']\n__\n['spec/testdata/bash-source-string.sh']\n['spec/testdata/bash-source-string.sh']\n['11']\n['11']\n____\n['spec/testdata/bash-source-string2.sh']\n['spec/testdata/bash-source-string2.sh']\n['11']\n['11']\n"
+Got      "['']\n['']\n['']\n['']\n['']\n['']\n__\n"
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['']
+['']
+['']
+['']
+['']
+__
+</pre><i>stderr:</i> <br/>
+<pre>dash: 11: source: not found
+</pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="introspect.test.html#L110">BASH_SOURCE and BASH_LINENO scalar or array (e.g. for virtualenv)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['']\n['']\n['']\n['']\n['']\n['']\n__\n['spec/testdata/bash-source-string.sh']\n['spec/testdata/bash-source-string.sh']\n['11']\n['11']\n____\n['spec/testdata/bash-source-string2.sh']\n['spec/testdata/bash-source-string2.sh']\n['11']\n['11']\n"
+Got      "['']\n['']\n['']\n['']\n['']\n['']\n__\n[]\n[]\n[]\n[]\n____\n[]\n[]\n[]\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['']
+['']
+['']
+['']
+['']
+__
+[]
+[]
+[]
+[]
+____
+[]
+[]
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="introspect.test.html#L110">BASH_SOURCE and BASH_LINENO scalar or array (e.g. for virtualenv)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['']\n['']\n['']\n['']\n['']\n['']\n__\n['spec/testdata/bash-source-string.sh']\n['spec/testdata/bash-source-string.sh']\n['11']\n['11']\n____\n['spec/testdata/bash-source-string2.sh']\n['spec/testdata/bash-source-string2.sh']\n['11']\n['11']\n"
+Got      "['']\n['']\n['']\n['']\n['']\n['']\n__\n[]\n[]\n[]\n[]\n____\n[]\n[]\n[]\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['']
+['']
+['']
+['']
+['']
+__
+[]
+[]
+[]
+[]
+____
+[]
+[]
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="introspect.test.html#L110">BASH_SOURCE and BASH_LINENO scalar or array (e.g. for virtualenv)</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "['']\n['']\n['']\n['']\n['']\n['']\n__\n['spec/testdata/bash-source-string.sh']\n['spec/testdata/bash-source-string.sh']\n['11']\n['11']\n____\n['spec/testdata/bash-source-string2.sh']\n['spec/testdata/bash-source-string2.sh']\n['11']\n['11']\n"
+Got      "['']\n['']\n['']\n['']\n['']\n['']\n__\n[]\n[]\n[]\n[]\n____\n[]\n[]\n[]\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['']
+['']
+['']
+['']
+['']
+__
+[]
+[]
+[]
+[]
+____
+[]
+[]
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="introspect.test.html#L110">BASH_SOURCE and BASH_LINENO scalar or array (e.g. for virtualenv)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['']\n['']\n['']\n['']\n['']\n['']\n__\n['spec/testdata/bash-source-string.sh']\n['spec/testdata/bash-source-string.sh']\n['11']\n['11']\n____\n['spec/testdata/bash-source-string2.sh']\n['spec/testdata/bash-source-string2.sh']\n['11']\n['11']\n"
+Got      "['']\n['']\n['']\n['']\n['']\n['']\n__\n[]\n[]\n[]\n[]\n____\n[]\n[]\n[]\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['']
+['']
+['']
+['']
+['']
+__
+[]
+[]
+[]
+[]
+____
+[]
+[]
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="introspect.test.html#L110">BASH_SOURCE and BASH_LINENO scalar or array (e.g. for virtualenv)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['']\n['']\n['']\n['']\n['']\n['']\n__\n['spec/testdata/bash-source-string.sh']\n['spec/testdata/bash-source-string.sh']\n['11']\n['11']\n____\n['spec/testdata/bash-source-string2.sh']\n['spec/testdata/bash-source-string2.sh']\n['11']\n['11']\n"
+Got      "['']\n['']\n['']\n['']\n['']\n['']\n__\n[]\n[]\n[]\n[]\n____\n[]\n[]\n[]\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['']
+['']
+['']
+['']
+['']
+__
+[]
+[]
+[]
+[]
+____
+[]
+[]
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="introspect.test.html#L110">BASH_SOURCE and BASH_LINENO scalar or array (e.g. for virtualenv)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['']\n['']\n['']\n['']\n['']\n['']\n__\n['spec/testdata/bash-source-string.sh']\n['spec/testdata/bash-source-string.sh']\n['11']\n['11']\n____\n['spec/testdata/bash-source-string2.sh']\n['spec/testdata/bash-source-string2.sh']\n['11']\n['11']\n"
+Got      "['']\n['']\n['']\n['']\n['']\n['']\n__\n['spec/testdata/bash-source-string.sh']\n['spec/testdata/bash-source-string.sh']\n[]\n[]\n____\n['spec/testdata/bash-source-string2.sh']\n['spec/testdata/bash-source-string2.sh']\n[]\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['']
+['']
+['']
+['']
+['']
+__
+['spec/testdata/bash-source-string.sh']
+['spec/testdata/bash-source-string.sh']
+[]
+[]
+____
+['spec/testdata/bash-source-string2.sh']
+['spec/testdata/bash-source-string2.sh']
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="introspect.test.html#L110">BASH_SOURCE and BASH_LINENO scalar or array (e.g. for virtualenv)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['']\n['']\n['']\n['']\n['']\n['']\n__\n['spec/testdata/bash-source-string.sh']\n['spec/testdata/bash-source-string.sh']\n['11']\n['11']\n____\n['spec/testdata/bash-source-string2.sh']\n['spec/testdata/bash-source-string2.sh']\n['11']\n['11']\n"
+Got      "['']\n['']\n['']\n['']\n['']\n['']\n__\n['spec/testdata/bash-source-string.sh']\n['spec/testdata/bash-source-string.sh']\n[]\n[]\n____\n['spec/testdata/bash-source-string2.sh']\n['spec/testdata/bash-source-string2.sh']\n[]\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['']
+['']
+['']
+['']
+['']
+__
+['spec/testdata/bash-source-string.sh']
+['spec/testdata/bash-source-string.sh']
+[]
+[]
+____
+['spec/testdata/bash-source-string2.sh']
+['spec/testdata/bash-source-string2.sh']
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="introspect.test.html#L145">${FUNCNAME} with prefix/suffix operators</a><br/><br/>
+<span class="assertion">[dash stdout] Expected "['5']\n['c']\n['heck']\n", got "['0']\n"</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['0']
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="introspect.test.html#L145">${FUNCNAME} with prefix/suffix operators</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected "['5']\n['c']\n['heck']\n", got "['0']\n"</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['0']
+</pre><i>stderr:</i> <br/>
+<pre>check:2: closing brace expected
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="introspect.test.html#L145">${FUNCNAME} with prefix/suffix operators</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected "['5']\n['c']\n['heck']\n", got "['0']\n['']\n['']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['0']
+['']
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="introspect.test.html#L145">${FUNCNAME} with prefix/suffix operators</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['5']\n['c']\n['heck']\n", got "['0']\n['']\n['']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['0']
+['']
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="introspect.test.html#L145">${FUNCNAME} with prefix/suffix operators</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['5']\n['c']\n['heck']\n", got "['0']\n['']\n['']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['0']
+['']
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="introspect.test.html#L145">${FUNCNAME} with prefix/suffix operators</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "['5']\n['c']\n['heck']\n", got "['5']\n"</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['5']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="introspect.test.html#L159">operators on FUNCNAME</a><br/><br/>
+<span class="assertion">[dash stdout] Expected "['check']\n['5']\n['c']\n['heck']\n", got "['']\n['0']\n"</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['0']
+</pre><i>stderr:</i> <br/>
+<pre>dash: 4: Bad substitution
+</pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="introspect.test.html#L159">operators on FUNCNAME</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected "['check']\n['5']\n['c']\n['heck']\n", got "['']\n['0']\n"</span><br/>
+<span class="assertion">[zsh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['0']
+</pre><i>stderr:</i> <br/>
+<pre>check:3: closing brace expected
+</pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="introspect.test.html#L159">operators on FUNCNAME</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected "['check']\n['5']\n['c']\n['heck']\n", got "['']\n['0']\n['']\n['']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['0']
+['']
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="introspect.test.html#L159">operators on FUNCNAME</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected "['check']\n['5']\n['c']\n['heck']\n", got "['']\n['0']\n['']\n['']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['0']
+['']
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="introspect.test.html#L159">operators on FUNCNAME</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected "['check']\n['5']\n['c']\n['heck']\n", got "['']\n['0']\n['']\n['']\n"</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['0']
+['']
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="introspect.test.html#L159">operators on FUNCNAME</a><br/><br/>
+<span class="assertion">[sush stdout] Expected "['check']\n['5']\n['c']\n['heck']\n", got "['check']\n['5']\n"</span><br/>
+<span class="assertion">[sush status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['check']
+['5']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="introspect.test.html#L175">${FUNCNAME} and "set -u" (OSH regression)</a><br/><br/>
+<span class="assertion">[dash status] Expected 1, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: FUNCNAME: parameter not set
+</pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="introspect.test.html#L175">${FUNCNAME} and "set -u" (OSH regression)</a><br/><br/>
+<span class="assertion">[ash stdout] Expected u'', got "['']\n"</span><br/>
+<span class="assertion">[ash status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="introspect.test.html#L175">${FUNCNAME} and "set -u" (OSH regression)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected u'', got "['']\n"</span><br/>
+<span class="assertion">[sush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="introspect.test.html#L175">${FUNCNAME} and "set -u" (OSH regression)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected u'', got "['']\n"</span><br/>
+<span class="assertion">[brush status] Expected 1, got 0</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="introspect.test.html#L181">$((BASH_LINENO)) (scalar form in arith)</a><br/><br/>
+<span class="assertion">[dash stdout] Expected '4\n', got '0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="introspect.test.html#L181">$((BASH_LINENO)) (scalar form in arith)</a><br/><br/>
+<span class="assertion">[ash stdout] Expected '4\n', got '0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="introspect.test.html#L181">$((BASH_LINENO)) (scalar form in arith)</a><br/><br/>
+<span class="assertion">[zsh stdout] Expected '4\n', got '0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="introspect.test.html#L181">$((BASH_LINENO)) (scalar form in arith)</a><br/><br/>
+<span class="assertion">[mksh stdout] Expected '4\n', got '0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="introspect.test.html#L181">$((BASH_LINENO)) (scalar form in arith)</a><br/><br/>
+<span class="assertion">[ksh stdout] Expected '4\n', got '0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="introspect.test.html#L181">$((BASH_LINENO)) (scalar form in arith)</a><br/><br/>
+<span class="assertion">[toysh stdout] Expected '4\n', got '0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="introspect.test.html#L181">$((BASH_LINENO)) (scalar form in arith)</a><br/><br/>
+<span class="assertion">[sush stdout] Expected '4\n', got '0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="introspect.test.html#L181">$((BASH_LINENO)) (scalar form in arith)</a><br/><br/>
+<span class="assertion">[brush stdout] Expected '4\n', got '0\n'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="introspect.test.html#L188">${BASH_SOURCE[@]} with source and function name</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "[]\n['spec/testdata/bash-source-simple.sh']\n['spec/testdata/bash-source-simple.sh']\n"
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="introspect.test.html#L188">${BASH_SOURCE[@]} with source and function name</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "[]\n['spec/testdata/bash-source-simple.sh']\n['spec/testdata/bash-source-simple.sh']\n"
+Got      ''
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="introspect.test.html#L188">${BASH_SOURCE[@]} with source and function name</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "[]\n['spec/testdata/bash-source-simple.sh']\n['spec/testdata/bash-source-simple.sh']\n"
+Got      "['']\n['']\n['']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['']
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="introspect.test.html#L188">${BASH_SOURCE[@]} with source and function name</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "[]\n['spec/testdata/bash-source-simple.sh']\n['spec/testdata/bash-source-simple.sh']\n"
+Got      '[]\n[]\n[]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="introspect.test.html#L188">${BASH_SOURCE[@]} with source and function name</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "[]\n['spec/testdata/bash-source-simple.sh']\n['spec/testdata/bash-source-simple.sh']\n"
+Got      '[]\n[]\n[]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="introspect.test.html#L188">${BASH_SOURCE[@]} with source and function name</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "[]\n['spec/testdata/bash-source-simple.sh']\n['spec/testdata/bash-source-simple.sh']\n"
+Got      "['']\n['']\n['']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['']
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="introspect.test.html#L200">${BASH_SOURCE[@]} with line numbers</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['begin F funcs', 'f', 'main']\n['begin F files', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['begin F lines', '21', '0']\n['G funcs', 'g', 'f', 'main']\n['G files', 'spec/testdata/bash-source-2.sh', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['G lines', '15', '21', '0']\n['end F funcs', 'f', 'main']\n['end F', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['end F lines', '21', '0']\n"
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>spec/testdata/bash-source.sh: 5: spec/testdata/bash-source.sh: source: not found
+spec/testdata/bash-source.sh: 12: spec/testdata/bash-source.sh: Bad substitution
+</pre></td></tr><tr><td><a name="details-8-ash"></a><b>ash</b></td><td>8 <a href="introspect.test.html#L200">${BASH_SOURCE[@]} with line numbers</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['begin F funcs', 'f', 'main']\n['begin F files', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['begin F lines', '21', '0']\n['G funcs', 'g', 'f', 'main']\n['G files', 'spec/testdata/bash-source-2.sh', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['G lines', '15', '21', '0']\n['end F funcs', 'f', 'main']\n['end F', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['end F lines', '21', '0']\n"
+Got      ''
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>spec/testdata/bash-source.sh: line 22: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="introspect.test.html#L200">${BASH_SOURCE[@]} with line numbers</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['begin F funcs', 'f', 'main']\n['begin F files', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['begin F lines', '21', '0']\n['G funcs', 'g', 'f', 'main']\n['G files', 'spec/testdata/bash-source-2.sh', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['G lines', '15', '21', '0']\n['end F funcs', 'f', 'main']\n['end F', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['end F lines', '21', '0']\n"
+Got      "['begin F funcs', '']\n['begin F files', '']\n['begin F lines', '']\n['G funcs', '']\n['G files', '']\n['G lines', '']\n['end F funcs', '']\n['end F', '']\n['end F lines', '']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['begin F funcs', '']
+['begin F files', '']
+['begin F lines', '']
+['G funcs', '']
+['G files', '']
+['G lines', '']
+['end F funcs', '']
+['end F', '']
+['end F lines', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-mksh"></a><b>mksh</b></td><td>8 <a href="introspect.test.html#L200">${BASH_SOURCE[@]} with line numbers</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "['begin F funcs', 'f', 'main']\n['begin F files', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['begin F lines', '21', '0']\n['G funcs', 'g', 'f', 'main']\n['G files', 'spec/testdata/bash-source-2.sh', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['G lines', '15', '21', '0']\n['end F funcs', 'f', 'main']\n['end F', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['end F lines', '21', '0']\n"
+Got      "['begin F funcs']\n['begin F files']\n['begin F lines']\n['G funcs']\n['G files']\n['G lines']\n['end F funcs']\n['end F']\n['end F lines']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['begin F funcs']
+['begin F files']
+['begin F lines']
+['G funcs']
+['G files']
+['G lines']
+['end F funcs']
+['end F']
+['end F lines']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-ksh"></a><b>ksh</b></td><td>8 <a href="introspect.test.html#L200">${BASH_SOURCE[@]} with line numbers</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['begin F funcs', 'f', 'main']\n['begin F files', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['begin F lines', '21', '0']\n['G funcs', 'g', 'f', 'main']\n['G files', 'spec/testdata/bash-source-2.sh', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['G lines', '15', '21', '0']\n['end F funcs', 'f', 'main']\n['end F', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['end F lines', '21', '0']\n"
+Got      "['begin F funcs']\n['begin F files']\n['begin F lines']\n['G funcs']\n['G files']\n['G lines']\n['end F funcs']\n['end F']\n['end F lines']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['begin F funcs']
+['begin F files']
+['begin F lines']
+['G funcs']
+['G files']
+['G lines']
+['end F funcs']
+['end F']
+['end F lines']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="introspect.test.html#L200">${BASH_SOURCE[@]} with line numbers</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['begin F funcs', 'f', 'main']\n['begin F files', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['begin F lines', '21', '0']\n['G funcs', 'g', 'f', 'main']\n['G files', 'spec/testdata/bash-source-2.sh', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['G lines', '15', '21', '0']\n['end F funcs', 'f', 'main']\n['end F', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['end F lines', '21', '0']\n"
+Got      "['begin F funcs', '']\n['begin F files', '']\n['begin F lines', '']\n['G funcs', '']\n['G files', '']\n['G lines', '']\n['end F funcs', '']\n['end F', '']\n['end F lines', '']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['begin F funcs', '']
+['begin F files', '']
+['begin F lines', '']
+['G funcs', '']
+['G files', '']
+['G lines', '']
+['end F funcs', '']
+['end F', '']
+['end F lines', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="introspect.test.html#L200">${BASH_SOURCE[@]} with line numbers</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['begin F funcs', 'f', 'main']\n['begin F files', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['begin F lines', '21', '0']\n['G funcs', 'g', 'f', 'main']\n['G files', 'spec/testdata/bash-source-2.sh', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['G lines', '15', '21', '0']\n['end F funcs', 'f', 'main']\n['end F', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['end F lines', '21', '0']\n"
+Got      "['begin F funcs', 'f']\n['begin F files']\n['begin F lines']\n['G funcs', 'g', 'f']\n['G files', 'spec/testdata/bash-source-2.sh', '']\n['G lines']\n['end F funcs', 'f']\n['end F']\n['end F lines']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['begin F funcs', 'f']
+['begin F files']
+['begin F lines']
+['G funcs', 'g', 'f']
+['G files', 'spec/testdata/bash-source-2.sh', '']
+['G lines']
+['end F funcs', 'f']
+['end F']
+['end F lines']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="introspect.test.html#L200">${BASH_SOURCE[@]} with line numbers</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['begin F funcs', 'f', 'main']\n['begin F files', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['begin F lines', '21', '0']\n['G funcs', 'g', 'f', 'main']\n['G files', 'spec/testdata/bash-source-2.sh', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['G lines', '15', '21', '0']\n['end F funcs', 'f', 'main']\n['end F', 'spec/testdata/bash-source.sh', 'spec/testdata/bash-source.sh']\n['end F lines', '21', '0']\n"
+Got      "['begin F funcs', 'f']\n['begin F files', 'spec/testdata/bash-source.sh']\n['begin F lines']\n['G funcs', 'g', 'f']\n['G files', 'spec/testdata/bash-source-2.sh', 'spec/testdata/bash-source.sh']\n['G lines']\n['end F funcs', 'f']\n['end F', 'spec/testdata/bash-source.sh']\n['end F lines']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['begin F funcs', 'f']
+['begin F files', 'spec/testdata/bash-source.sh']
+['begin F lines']
+['G funcs', 'g', 'f']
+['G files', 'spec/testdata/bash-source-2.sh', 'spec/testdata/bash-source.sh']
+['G lines']
+['end F funcs', 'f']
+['end F', 'spec/testdata/bash-source.sh']
+['end F lines']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="introspect.test.html#L216">${BASH_LINENO[@]} is a stack of line numbers for function calls</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "[]\n['begin F', '10']\n['G', '6', '10']\n['end F', '10']\n"
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 9: Bad substitution
+</pre></td></tr><tr><td><a name="details-9-ash"></a><b>ash</b></td><td>9 <a href="introspect.test.html#L216">${BASH_LINENO[@]} is a stack of line numbers for function calls</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "[]\n['begin F', '10']\n['G', '6', '10']\n['end F', '10']\n"
+Got      ''
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-9-zsh"></a><b>zsh</b></td><td>9 <a href="introspect.test.html#L216">${BASH_LINENO[@]} is a stack of line numbers for function calls</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "[]\n['begin F', '10']\n['G', '6', '10']\n['end F', '10']\n"
+Got      "[]\n['begin F', '']\n['G', '']\n['end F', '']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+['begin F', '']
+['G', '']
+['end F', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-mksh"></a><b>mksh</b></td><td>9 <a href="introspect.test.html#L216">${BASH_LINENO[@]} is a stack of line numbers for function calls</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "[]\n['begin F', '10']\n['G', '6', '10']\n['end F', '10']\n"
+Got      "[]\n['begin F']\n['G']\n['end F']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+['begin F']
+['G']
+['end F']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-ksh"></a><b>ksh</b></td><td>9 <a href="introspect.test.html#L216">${BASH_LINENO[@]} is a stack of line numbers for function calls</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "[]\n['begin F', '10']\n['G', '6', '10']\n['end F', '10']\n"
+Got      "[]\n['begin F']\n['G']\n['end F']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+['begin F']
+['G']
+['end F']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="introspect.test.html#L216">${BASH_LINENO[@]} is a stack of line numbers for function calls</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "[]\n['begin F', '10']\n['G', '6', '10']\n['end F', '10']\n"
+Got      "[]\n['begin F', '']\n['G', '']\n['end F', '']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+['begin F', '']
+['G', '']
+['end F', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="introspect.test.html#L216">${BASH_LINENO[@]} is a stack of line numbers for function calls</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "[]\n['begin F', '10']\n['G', '6', '10']\n['end F', '10']\n"
+Got      "[]\n['begin F']\n['G']\n['end F']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+['begin F']
+['G']
+['end F']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="introspect.test.html#L216">${BASH_LINENO[@]} is a stack of line numbers for function calls</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "[]\n['begin F', '10']\n['G', '6', '10']\n['end F', '10']\n"
+Got      "[]\n['begin F']\n['G']\n['end F']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+['begin F']
+['G']
+['end F']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="introspect.test.html#L235">Locations with temp frame</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:main:0\n'
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>spec/testdata/bash-source-pushtemp.sh: 11: spec/testdata/bash-source-pushtemp.sh: Syntax error: Bad for loop variable
+</pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="introspect.test.html#L235">Locations with temp frame</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:main:0\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>spec/testdata/bash-source-pushtemp.sh: line 11: syntax error: bad for loop variable
+</pre></td></tr><tr><td><a name="details-10-zsh"></a><b>zsh</b></td><td>10 <a href="introspect.test.html#L235">Locations with temp frame</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:main:0\n'
+Got      'F\nG\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>F
+G
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="introspect.test.html#L235">Locations with temp frame</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:main:0\n'
+Got      ''
+</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>spec/testdata/bash-source-pushtemp.sh[11]: syntax error: '((' unexpected
+</pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="introspect.test.html#L235">Locations with temp frame</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:main:0\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: spec/testdata/bash-source-pushtemp.sh[11]: syntax error: unexpected '(('
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="introspect.test.html#L235">Locations with temp frame</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:main:0\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>spec/testdata/bash-source-pushtemp.sh: line 7: sh: syntax error: ;
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="introspect.test.html#L235">Locations with temp frame</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:main:0\n'
+Got      'F\nG\nSTACK::g:\nSTACK::f:\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>F
+G
+STACK::g:
+STACK::f:
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="introspect.test.html#L235">Locations with temp frame</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:main:0\n'
+Got      'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>F
+G
+STACK:spec/testdata/bash-source-pushtemp.sh:g:
+STACK:spec/testdata/bash-source-pushtemp.sh:f:
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-dash"></a><b>dash</b></td><td>11 <a href="introspect.test.html#L249">Locations when sourcing</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:source:2\n'
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: source: not found
+</pre></td></tr><tr><td><a name="details-11-ash"></a><b>ash</b></td><td>11 <a href="introspect.test.html#L249">Locations when sourcing</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:source:2\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: spec/testdata/bash-source-pushtemp.sh: line 11: syntax error: bad for loop variable
+</pre></td></tr><tr><td><a name="details-11-zsh"></a><b>zsh</b></td><td>11 <a href="introspect.test.html#L249">Locations when sourcing</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:source:2\n'
+Got      'F\nG\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>F
+G
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-mksh"></a><b>mksh</b></td><td>11 <a href="introspect.test.html#L249">Locations when sourcing</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:source:2\n'
+Got      ''
+</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: spec/testdata/bash-source-pushtemp.sh[11]: syntax error: '((' unexpected
+</pre></td></tr><tr><td><a name="details-11-ksh"></a><b>ksh</b></td><td>11 <a href="introspect.test.html#L249">Locations when sourcing</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:source:2\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: spec/testdata/bash-source-pushtemp.sh[11]: syntax error: unexpected '(('
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="introspect.test.html#L249">Locations when sourcing</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:source:2\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>spec/testdata/bash-source-pushtemp.sh: line 7: sh: syntax error: ;
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="introspect.test.html#L249">Locations when sourcing</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:source:2\n'
+Got      'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:\nSTACK:spec/testdata/bash-source-pushtemp.sh::\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>F
+G
+STACK:spec/testdata/bash-source-pushtemp.sh:g:
+STACK:spec/testdata/bash-source-pushtemp.sh:f:
+STACK:spec/testdata/bash-source-pushtemp.sh::
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="introspect.test.html#L249">Locations when sourcing</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:source:2\n'
+Got      'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>F
+G
+STACK:spec/testdata/bash-source-pushtemp.sh:g:
+STACK:spec/testdata/bash-source-pushtemp.sh:f:
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-dash"></a><b>dash</b></td><td>12 <a href="introspect.test.html#L271">Sourcing inside function grows the debug stack</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:source:2\nSTACK:spec/testdata/bash-source-source.sh:mainfunc:6\nSTACK:spec/testdata/bash-source-source.sh:main2:10\nSTACK:spec/testdata/bash-source-source.sh:main1:13\nSTACK:spec/testdata/bash-source-source.sh:main:0\n'
+Got      ''
+</span><br/>
+<span class="assertion">[dash status] Expected 0, got 127</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>spec/testdata/bash-source-source.sh: 2: spec/testdata/bash-source-source.sh: source: not found
+</pre></td></tr><tr><td><a name="details-12-ash"></a><b>ash</b></td><td>12 <a href="introspect.test.html#L271">Sourcing inside function grows the debug stack</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:source:2\nSTACK:spec/testdata/bash-source-source.sh:mainfunc:6\nSTACK:spec/testdata/bash-source-source.sh:main2:10\nSTACK:spec/testdata/bash-source-source.sh:main1:13\nSTACK:spec/testdata/bash-source-source.sh:main:0\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ash status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>spec/testdata/bash-source-source.sh: spec/testdata/bash-source-pushtemp.sh: line 11: syntax error: bad for loop variable
+</pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="introspect.test.html#L271">Sourcing inside function grows the debug stack</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:source:2\nSTACK:spec/testdata/bash-source-source.sh:mainfunc:6\nSTACK:spec/testdata/bash-source-source.sh:main2:10\nSTACK:spec/testdata/bash-source-source.sh:main1:13\nSTACK:spec/testdata/bash-source-source.sh:main:0\n'
+Got      'F\nG\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>F
+G
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="introspect.test.html#L271">Sourcing inside function grows the debug stack</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:source:2\nSTACK:spec/testdata/bash-source-source.sh:mainfunc:6\nSTACK:spec/testdata/bash-source-source.sh:main2:10\nSTACK:spec/testdata/bash-source-source.sh:main1:13\nSTACK:spec/testdata/bash-source-source.sh:main:0\n'
+Got      ''
+</span><br/>
+<span class="assertion">[mksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>spec/testdata/bash-source-source.sh: spec/testdata/bash-source-pushtemp.sh[11]: syntax error: '((' unexpected
+</pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="introspect.test.html#L271">Sourcing inside function grows the debug stack</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:source:2\nSTACK:spec/testdata/bash-source-source.sh:mainfunc:6\nSTACK:spec/testdata/bash-source-source.sh:main2:10\nSTACK:spec/testdata/bash-source-source.sh:main1:13\nSTACK:spec/testdata/bash-source-source.sh:main:0\n'
+Got      ''
+</span><br/>
+<span class="assertion">[ksh status] Expected 0, got 1</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: spec/testdata/bash-source-source.sh: spec/testdata/bash-source-pushtemp.sh[11]: syntax error: unexpected '(('
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="introspect.test.html#L271">Sourcing inside function grows the debug stack</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:source:2\nSTACK:spec/testdata/bash-source-source.sh:mainfunc:6\nSTACK:spec/testdata/bash-source-source.sh:main2:10\nSTACK:spec/testdata/bash-source-source.sh:main1:13\nSTACK:spec/testdata/bash-source-source.sh:main:0\n'
+Got      ''
+</span><br/>
+<span class="assertion">[toysh status] Expected 0, got 2</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>spec/testdata/bash-source-pushtemp.sh: line 7: sh: syntax error: ;
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="introspect.test.html#L271">Sourcing inside function grows the debug stack</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:source:2\nSTACK:spec/testdata/bash-source-source.sh:mainfunc:6\nSTACK:spec/testdata/bash-source-source.sh:main2:10\nSTACK:spec/testdata/bash-source-source.sh:main1:13\nSTACK:spec/testdata/bash-source-source.sh:main:0\n'
+Got      'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:\nSTACK:spec/testdata/bash-source-pushtemp.sh:mainfunc:\nSTACK:spec/testdata/bash-source-pushtemp.sh:main2:\nSTACK:spec/testdata/bash-source-pushtemp.sh:main1:\nSTACK:spec/testdata/bash-source-pushtemp.sh::\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>F
+G
+STACK:spec/testdata/bash-source-pushtemp.sh:g:
+STACK:spec/testdata/bash-source-pushtemp.sh:f:
+STACK:spec/testdata/bash-source-pushtemp.sh:mainfunc:
+STACK:spec/testdata/bash-source-pushtemp.sh:main2:
+STACK:spec/testdata/bash-source-pushtemp.sh:main1:
+STACK:spec/testdata/bash-source-pushtemp.sh::
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="introspect.test.html#L271">Sourcing inside function grows the debug stack</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:3\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:19\nSTACK:spec/testdata/bash-source-pushtemp.sh:source:2\nSTACK:spec/testdata/bash-source-source.sh:mainfunc:6\nSTACK:spec/testdata/bash-source-source.sh:main2:10\nSTACK:spec/testdata/bash-source-source.sh:main1:13\nSTACK:spec/testdata/bash-source-source.sh:main:0\n'
+Got      'F\nG\nSTACK:spec/testdata/bash-source-pushtemp.sh:g:\nSTACK:spec/testdata/bash-source-pushtemp.sh:f:\nSTACK:spec/testdata/bash-source-source.sh:mainfunc:\nSTACK:spec/testdata/bash-source-source.sh:main2:\nSTACK:spec/testdata/bash-source-source.sh:main1:\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>F
+G
+STACK:spec/testdata/bash-source-pushtemp.sh:g:
+STACK:spec/testdata/bash-source-pushtemp.sh:f:
+STACK:spec/testdata/bash-source-source.sh:mainfunc:
+STACK:spec/testdata/bash-source-source.sh:main2:
+STACK:spec/testdata/bash-source-source.sh:main1:
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>
