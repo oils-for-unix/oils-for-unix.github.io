@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>var-op-strip: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for var-op-strip.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>29</td><td>21</td><td>22</td><td>23</td><td>20</td><td>25</td><td>12</td><td>21</td><td>24</td><td>29</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>0</td><td>0</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>6</td><td>5</td><td>1</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug-2">BUG-2</td> <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>2</td><td>2</td><td>3</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>17</td><td>8</td><td>5</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L3">Remove const suffix</a></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L8">Remove const prefix</a></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L13">Remove const suffix is vectorized on user array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L22">Remove const suffix is vectorized on $@ array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L32">Remove const suffix from undefined</a></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L36">Remove shortest glob suffix</a></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L41">Remove longest glob suffix</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L46">Remove shortest glob prefix</a></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L51">Remove longest glob prefix</a></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L56">Strip char class</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="bug-2">BUG-2</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L62">Strip unicode prefix</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L118">Bug fix: Test that you can remove everything with glob</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L125">Test that you can remove everything with const</a></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L135">Prepend using replacement of #</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"><a href="#details-13-ksh">details</a></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L147">Append using replacement of %</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"><a href="#details-14-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L158">strip unquoted and quoted [</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-zsh">details</a></td><td class="details-row"><a href="#details-15-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L180">strip unquoted and quoted []</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-zsh">details</a></td><td class="details-row"><a href="#details-16-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"><a href="#details-16-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L201">strip unquoted and quoted ?</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L214">strip unquoted and quoted [a]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L227">Nested % and # operators (bug reported by Crestwave)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-19-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L253">strip * (bug regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"><a href="#details-20-sush">details</a></td><td class="details-row"><a href="#details-20-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L272">strip ?</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L285">strip all</a></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L298">strip none</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L311">strip all unicode</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-dash">details</a></td><td class="details-row"><a href="#details-24-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-24-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-24-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L329">strip none unicode</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-sush">details</a></td><td class="details-row"><a href="#details-25-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L342">Strip Right Brace (#702)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"><a href="#details-26-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L369">\(\) in pattern (regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-strip.test.html#L382">extglob in pattern</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-dash">details</a></td><td class="details-row"><a href="#details-28-ash">details</a></td><td class="details-row"><a href="#details-28-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>226 passed, 3 OK, 17 not implemented, 10 BUG, 34 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="var-op-strip.test.html#L13">Remove const suffix is vectorized on user array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="var-op-strip.test.html#L13">Remove const suffix is vectorized on user array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="var-op-strip.test.html#L13">Remove const suffix is vectorized on user array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: ${a[@]%a}: bad substitution
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="var-op-strip.test.html#L13">Remove const suffix is vectorized on user array</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['1', '2', '3']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${a[@]%a}: bad substitution
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="var-op-strip.test.html#L13">Remove const suffix is vectorized on user array</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['1', '2', '3']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1a
+</pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="var-op-strip.test.html#L22">Remove const suffix is vectorized on $@ array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['1a', '2a', '3']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="var-op-strip.test.html#L22">Remove const suffix is vectorized on $@ array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['1a', '2a', '3']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="var-op-strip.test.html#L22">Remove const suffix is vectorized on $@ array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: ${@%a}: bad substitution
+</pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="var-op-strip.test.html#L22">Remove const suffix is vectorized on $@ array</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['1', '2', '3']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${@%a}: bad substitution
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="var-op-strip.test.html#L22">Remove const suffix is vectorized on $@ array</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['1', '2', '3']\n"
+Got      '[]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="var-op-strip.test.html#L41">Remove longest glob suffix</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'aabb\n'
+Got      'aabbccdd\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>aabbccdd
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-mksh"></a><b>mksh</b></td><td>9 <a href="var-op-strip.test.html#L56">Strip char class</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>abc
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="var-op-strip.test.html#L56">Strip char class</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'ab\n'
+Got      'abc\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>abc
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="var-op-strip.test.html#L62">Strip unicode prefix</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre> 274   -  \n
+  bc  2d  0a
+
+ 274   -  \n
+  bc  2d  0a
+
+   - 316  \n
+  2d  ce  0a
+
+   - 316  \n
+  2d  ce  0a
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="var-op-strip.test.html#L62">Strip unicode prefix</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre> 274   -  \n
+  bc  2d  0a
+
+ 274   -  \n
+  bc  2d  0a
+
+   - 316  \n
+  2d  ce  0a
+
+   - 316  \n
+  2d  ce  0a
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-zsh"></a><b>zsh</b></td><td>10 <a href="var-op-strip.test.html#L62">Strip unicode prefix</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>  \n
+  0a
+
+  \n
+  0a
+
+  \n
+  0a
+
+  \n
+  0a
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="var-op-strip.test.html#L62">Strip unicode prefix</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre> 274   -  \n
+  bc  2d  0a
+
+ 274   -  \n
+  bc  2d  0a
+
+   - 316  \n
+  2d  ce  0a
+
+   - 316  \n
+  2d  ce  0a
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="var-op-strip.test.html#L62">Strip unicode prefix</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '   -  \\n\n  2d  0a\n\n   -  \\n\n  2d  0a\n\n   -  \\n\n  2d  0a\n\n   -  \\n\n  2d  0a\n'
+Got      '   -  \\n\n  2d  0a\n\n   -  \\n\n  2d  0a\n\n   - 316  \\n\n  2d  ce  0a\n\n   -  \\n\n  2d  0a\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>   -  \n
+  2d  0a
+
+   -  \n
+  2d  0a
+
+   - 316  \n
+  2d  ce  0a
+
+   -  \n
+  2d  0a
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="var-op-strip.test.html#L62">Strip unicode prefix</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '   -  \\n\n  2d  0a\n\n   -  \\n\n  2d  0a\n\n   -  \\n\n  2d  0a\n\n   -  \\n\n  2d  0a\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>Well, this is embarrassing.
+
+brush had a problem and crashed. To help us diagnose the problem you can send us a crash report.
+
+We have generated a report file at "/tmp/report-72674c0a-102a-431d-aed6-1a385ce29863.toml". Submit an issue or email with the subject of "brush Crash Report" and include the report as an attachment.
+
+
+To submit the crash report:
+
+please post a GitHub issue at https://github.com/reubeno/brush/issues/new
+
+We take privacy seriously, and do not perform any automated error collection. In order to improve the software, we rely on people to submit reports.
+
+Thank you kindly!
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="var-op-strip.test.html#L118">Bug fix: Test that you can remove everything with glob</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['', '--x-', '-x--', '']\n"
+Got      "['--x-', '--x-', '-x--', '']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['--x-', '--x-', '-x--', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="var-op-strip.test.html#L135">Prepend using replacement of #</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="var-op-strip.test.html#L135">Prepend using replacement of #</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="var-op-strip.test.html#L135">Prepend using replacement of #</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: ${array[@]/#/prefix-}: bad substitution
+</pre></td></tr><tr><td><a name="details-13-ksh"></a><b>ksh</b></td><td>13 <a href="var-op-strip.test.html#L135">Prepend using replacement of #</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['prefix-aa', 'prefix-bb', 'prefix-']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${array[@]/#/prefix-}: bad substitution
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="var-op-strip.test.html#L135">Prepend using replacement of #</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['prefix-aa', 'prefix-bb', 'prefix-']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: aa
+</pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="var-op-strip.test.html#L147">Append using replacement of %</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-14-ash"></a><b>ash</b></td><td>14 <a href="var-op-strip.test.html#L147">Append using replacement of %</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="var-op-strip.test.html#L147">Append using replacement of %</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: ${array[@]/%/-suffix}: bad substitution
+</pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="var-op-strip.test.html#L147">Append using replacement of %</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['aa-suffix', 'bb-suffix', '-suffix']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${array[@]/%/-suffix}: bad substitution
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="var-op-strip.test.html#L147">Append using replacement of %</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['aa-suffix', 'bb-suffix', '-suffix']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: aa
+</pre></td></tr><tr><td><a name="details-15-zsh"></a><b>zsh</b></td><td>15 <a href="var-op-strip.test.html#L158">strip unquoted and quoted [</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad pattern: [
+</pre></td></tr><tr><td><a name="details-15-mksh"></a><b>mksh</b></td><td>15 <a href="var-op-strip.test.html#L158">strip unquoted and quoted [</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[foo]
+foo]
+[foo]
+foo]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="var-op-strip.test.html#L158">strip unquoted and quoted [</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'foo]\nfoo]\nfoo]\nfoo]\n'
+Got      'foo]\n[foo]\nfoo]\n[foo]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo]
+[foo]
+foo]
+[foo]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-zsh"></a><b>zsh</b></td><td>16 <a href="var-op-strip.test.html#L180">strip unquoted and quoted []</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[]foo[]
+foo[]
+[]foo[]
+foo[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-mksh"></a><b>mksh</b></td><td>16 <a href="var-op-strip.test.html#L180">strip unquoted and quoted []</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[]foo[]
+foo[]
+[]foo[]
+foo[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="var-op-strip.test.html#L180">strip unquoted and quoted []</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'foo[]\nfoo[]\nfoo[]\nfoo[]\n'
+Got      'foo[]\n[]foo[]\nfoo[]\n[]foo[]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo[]
+[]foo[]
+foo[]
+[]foo[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-sush"></a><b>sush</b></td><td>16 <a href="var-op-strip.test.html#L180">strip unquoted and quoted []</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'foo[]\nfoo[]\nfoo[]\nfoo[]\n'
+Got      '[]foo[]\n[]foo[]\n[]foo[]\n[]foo[]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]foo[]
+[]foo[]
+[]foo[]
+[]foo[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="var-op-strip.test.html#L201">strip unquoted and quoted ?</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'foo]\n[foo]\nfoo]\n[foo]\n'
+Got      'foo]\nfoo]\nfoo]\nfoo]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo]
+foo]
+foo]
+foo]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="var-op-strip.test.html#L214">strip unquoted and quoted [a]</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '[a]foo[]\nfoo[]\n[a]foo[]\nfoo[]\n'
+Got      'foo[]\n[a]foo[]\nfoo[]\n[a]foo[]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo[]
+[a]foo[]
+foo[]
+[a]foo[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="var-op-strip.test.html#L214">strip unquoted and quoted [a]</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[a]foo[]\nfoo[]\n[a]foo[]\nfoo[]\n'
+Got      '[a]foo[]\n[a]foo[]\n[a]foo[]\n[a]foo[]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[a]foo[]
+[a]foo[]
+[a]foo[]
+[a]foo[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-dash"></a><b>dash</b></td><td>19 <a href="var-op-strip.test.html#L227">Nested % and # operators (bug reported by Crestwave)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['\\n']
+['$\\n']
+['$']
+['']
+['a']
+['a']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="var-op-strip.test.html#L227">Nested % and # operators (bug reported by Crestwave)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['']\n['\\n']\n['\\n']\n['']\n['a']\n['a']\n"
+Got      "['']\n['\\n']\n['\\n}']\n['']\n['a']\n['a}']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['\n']
+['\n}']
+['']
+['a']
+['a}']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-brush"></a><b>brush</b></td><td>19 <a href="var-op-strip.test.html#L227">Nested % and # operators (bug reported by Crestwave)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['']\n['\\n']\n['\\n']\n['']\n['a']\n['a']\n"
+Got      "['']\n['']\n['']\n['']\n['a']\n['a']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['']
+['']
+['']
+['a']
+['a']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-zsh"></a><b>zsh</b></td><td>20 <a href="var-op-strip.test.html#L253">strip * (bug regression)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['abc']
+['']
+['ab']
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="var-op-strip.test.html#L253">strip * (bug regression)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['abc']\n['']\n['abc']\n['']\n"
+Got      "['abc']\n['']\n['ab']\n['abc']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['abc']
+['']
+['ab']
+['abc']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-sush"></a><b>sush</b></td><td>20 <a href="var-op-strip.test.html#L253">strip * (bug regression)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['abc']\n['']\n['abc']\n['']\n"
+Got      "['abc']\n['']\n['ab']\n['']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['abc']
+['']
+['ab']
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-brush"></a><b>brush</b></td><td>20 <a href="var-op-strip.test.html#L253">strip * (bug regression)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['abc']\n['']\n['abc']\n['']\n"
+Got      "['bc']\n['']\n['ab']\n['']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['bc']
+['']
+['ab']
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="var-op-strip.test.html#L272">strip ?</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['bc']\n['bc']\n['ab']\n['ab']\n"
+Got      "['bc']\n['bc']\n['abc']\n['ab']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['bc']
+['bc']
+['abc']
+['ab']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-sush"></a><b>sush</b></td><td>23 <a href="var-op-strip.test.html#L298">strip none</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['abc']\n['abc']\n['abc']\n['abc']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: evaluation error
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: evaluation error
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: evaluation error
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: evaluation error
+</pre></td></tr><tr><td><a name="details-24-dash"></a><b>dash</b></td><td>24 <a href="var-op-strip.test.html#L311">strip all unicode</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>μabcμ
+μabcμ
+μabcμ
+μabcμ
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-ash"></a><b>ash</b></td><td>24 <a href="var-op-strip.test.html#L311">strip all unicode</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>μabcμ
+μabcμ
+μabcμ
+μabcμ
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-mksh"></a><b>mksh</b></td><td>24 <a href="var-op-strip.test.html#L311">strip all unicode</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>μabcμ
+μabcμ
+μabcμ
+μabcμ
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="var-op-strip.test.html#L311">strip all unicode</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '\n\n\n\n'
+Got      '\n\n\xce\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>'\n\n\xce\n\n'</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-brush"></a><b>brush</b></td><td>24 <a href="var-op-strip.test.html#L311">strip all unicode</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '\n\n\n\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>Well, this is embarrassing.
+
+brush had a problem and crashed. To help us diagnose the problem you can send us a crash report.
+
+We have generated a report file at "/tmp/report-0ff32c6b-89c4-4afa-b995-b7f6c1f9972a.toml". Submit an issue or email with the subject of "brush Crash Report" and include the report as an attachment.
+
+
+To submit the crash report:
+
+please post a GitHub issue at https://github.com/reubeno/brush/issues/new
+
+We take privacy seriously, and do not perform any automated error collection. In order to improve the software, we rely on people to submit reports.
+
+Thank you kindly!
+</pre></td></tr><tr><td><a name="details-25-sush"></a><b>sush</b></td><td>25 <a href="var-op-strip.test.html#L329">strip none unicode</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['\\xce\\xbcabc\\xce\\xbc']\n['\\xce\\xbcabc\\xce\\xbc']\n['\\xce\\xbcabc\\xce\\xbc']\n['\\xce\\xbcabc\\xce\\xbc']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: evaluation error
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: evaluation error
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: evaluation error
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: evaluation error
+</pre></td></tr><tr><td><a name="details-25-brush"></a><b>brush</b></td><td>25 <a href="var-op-strip.test.html#L329">strip none unicode</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['\\xce\\xbcabc\\xce\\xbc']\n['\\xce\\xbcabc\\xce\\xbc']\n['\\xce\\xbcabc\\xce\\xbc']\n['\\xce\\xbcabc\\xce\\xbc']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>Well, this is embarrassing.
+
+brush had a problem and crashed. To help us diagnose the problem you can send us a crash report.
+
+We have generated a report file at "/tmp/report-ea48b568-95e0-4335-a625-a2752dbfbed4.toml". Submit an issue or email with the subject of "brush Crash Report" and include the report as an attachment.
+
+
+To submit the crash report:
+
+please post a GitHub issue at https://github.com/reubeno/brush/issues/new
+
+We take privacy seriously, and do not perform any automated error collection. In order to improve the software, we rely on people to submit reports.
+
+Thank you kindly!
+</pre></td></tr><tr><td><a name="details-26-zsh"></a><b>zsh</b></td><td>26 <a href="var-op-strip.test.html#L342">Strip Right Brace (#702)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1 $foo
+2 
+10 }}
+11 
+12 }'}
+13 
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="var-op-strip.test.html#L342">Strip Right Brace (#702)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1 $foo\n2 \n10 }}\n11 \n12 \n13 \n'
+Got      "1 \n2 \n10 }}\n11 \n12 }'}\n13 }}\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1 
+2 
+10 }}
+11 
+12 }'}
+13 }}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-sush"></a><b>sush</b></td><td>26 <a href="var-op-strip.test.html#L342">Strip Right Brace (#702)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '1 $foo\n2 \n10 }}\n11 \n12 \n13 \n'
+Got      '2 \n11 \n12 \n13 \n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>2 
+11 
+12 
+13 
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: evaluation error
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: evaluation error
+</pre></td></tr><tr><td><a name="details-27-sush"></a><b>sush</b></td><td>27 <a href="var-op-strip.test.html#L369">\(\) in pattern (regression)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '1 foo\n2\n3\n4\n'
+Got      '1 foo()\n2 foo()\n3 foo()\n4 foo()\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1 foo()
+2 foo()
+3 foo()
+4 foo()
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-dash"></a><b>dash</b></td><td>28 <a href="var-op-strip.test.html#L382">extglob in pattern</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-ash"></a><b>ash</b></td><td>28 <a href="var-op-strip.test.html#L382">extglob in pattern</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-zsh"></a><b>zsh</b></td><td>28 <a href="var-op-strip.test.html#L382">extglob in pattern</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-toysh"></a><b>toysh</b></td><td>28 <a href="var-op-strip.test.html#L382">extglob in pattern</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1 foo\n2\n3\n4\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr></table></body></html>

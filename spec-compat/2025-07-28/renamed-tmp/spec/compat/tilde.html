@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tilde: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for tilde.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>12</td><td>9</td><td>12</td><td>11</td><td>12</td><td>12</td><td>3</td><td>9</td><td>5</td><td>13</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>1</td><td>3</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>1</td><td>2</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>2</td><td>10</td><td>5</td><td>9</td><td>0</td><td></td></tr>
+<tr><td class="timeout">TIME</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>14</td><td>14</td><td>14</td><td>14</td><td>14</td><td>14</td><td>14</td><td>14</td><td>14</td><td>14</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="tilde.test.html#L3">~ expansion in assignment</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="tilde.test.html#L9">~ expansion in readonly assignment</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="tilde.test.html#L18">No ~ expansion in dynamic assignment</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="tilde.test.html#L25">No tilde expansion in word that looks like assignment but isn't</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-3-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="tilde.test.html#L34">tilde expansion of word after redirect</a></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="tilde.test.html#L41">other user</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="tilde.test.html#L48">${undef:-~}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="timeout">TIME</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="tilde.test.html#L61">${x//~/~root}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="tilde.test.html#L80">x=foo:~ has tilde expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="tilde.test.html#L105">a[x]=foo:~ has tilde expansion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"><a href="#details-9-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="tilde.test.html#L123">tilde expansion an assignment keyword</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="tilde.test.html#L137">x=${undef-~:~}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"><a href="#details-11-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="tilde.test.html#L153">strict tilde</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-12-bash">details</a></td><td class="details-row"><a href="#details-12-dash">details</a></td><td class="details-row"><a href="#details-12-ash">details</a></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="tilde.test.html#L172">temp assignment x=~ env</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>98 passed, 3 OK, 6 not implemented, 4 BUG, 28 failed, 1 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="tilde.test.html#L3">~ expansion in assignment</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '/home/bob/src\n'
+Got      '~/src\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>~/src
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="tilde.test.html#L9">~ expansion in readonly assignment</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>~/src
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="tilde.test.html#L9">~ expansion in readonly assignment</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '/home/bob/src\n'
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>sh: readonly: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="tilde.test.html#L18">No ~ expansion in dynamic assignment</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '~/src\n'
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>sh: readonly: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="tilde.test.html#L18">No ~ expansion in dynamic assignment</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '~/src\n'
+Got      '/home/bob/src\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/home/bob/src
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="tilde.test.html#L18">No ~ expansion in dynamic assignment</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '~/src\n'
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-bash"></a><b>bash</b></td><td>3 <a href="tilde.test.html#L25">No tilde expansion in word that looks like assignment but isn't</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>x=/home/bob
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="tilde.test.html#L25">No tilde expansion in word that looks like assignment but isn't</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>x=/home/bob
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="tilde.test.html#L25">No tilde expansion in word that looks like assignment but isn't</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'x=~\n'
+Got      'x=/home/bob\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=/home/bob
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="tilde.test.html#L25">No tilde expansion in word that looks like assignment but isn't</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'x=~\n'
+Got      'x=/home/bob\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=/home/bob
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="tilde.test.html#L41">other user</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no such user or named directory: nonexistent
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="tilde.test.html#L48">${undef:-~}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '/home/bar\n/home/bar/z\n~\n~\n'
+Got      '~\n~/z\n~\n"~"\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>~
+~/z
+~
+"~"
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="tilde.test.html#L48">${undef:-~}</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '/home/bar\n/home/bar/z\n~\n~\n'
+Got      '/home/bar\n/home/bar/z\n/home/bar\n~\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/home/bar
+/home/bar/z
+/home/bar
+~
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="tilde.test.html#L48">${undef:-~}</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '/home/bar\n/home/bar/z\n~\n~\n'
+Got      '${undef:-~}\n/home/bar/z\n${undef:-~}\n~\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>${undef:-~}
+/home/bar/z
+${undef:-~}
+~
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="tilde.test.html#L61">${x//~/~root}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="tilde.test.html#L61">${x//~/~root}</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '/root\n/root\n[/root]\n'
+Got      '${x//~/~root}\n${HOME//~/~root}\n${x//~/~root}\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>${x//~/~root}
+${HOME//~/~root}
+${x//~/~root}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="tilde.test.html#L80">x=foo:~ has tilde expansion</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'foo:/home/bar\nfoo:/home/bar\nfoo:~\nfoo:~,\n/home/bar:foo\nfoo:~\n'
+Got      'foo:~\nfoo:~\nfoo:~\nfoo:~,\n~:foo\nfoo:~\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo:~
+foo:~
+foo:~
+foo:~,
+~:foo
+foo:~
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="tilde.test.html#L80">x=foo:~ has tilde expansion</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'foo:/home/bar\nfoo:/home/bar\nfoo:~\nfoo:~,\n/home/bar:foo\nfoo:~\n'
+Got      'foo:~\nfoo:~\nfoo:~\nfoo:~,\n/home/bar:foo\nfoo:~\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo:~
+foo:~
+foo:~
+foo:~,
+/home/bar:foo
+foo:~
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="tilde.test.html#L105">a[x]=foo:~ has tilde expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-ash"></a><b>ash</b></td><td>9 <a href="tilde.test.html#L105">a[x]=foo:~ has tilde expansion</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'foo:/home/bar\nfoo:/home/bar\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: a[0]=foo:~: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-9-zsh"></a><b>zsh</b></td><td>9 <a href="tilde.test.html#L105">a[x]=foo:~ has tilde expansion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="tilde.test.html#L105">a[x]=foo:~ has tilde expansion</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'foo:/home/bar\nfoo:/home/bar\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="tilde.test.html#L105">a[x]=foo:~ has tilde expansion</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'foo:/home/bar\nfoo:/home/bar\n'
+Got      'foo:~\nfoo:~\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo:~
+foo:~
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="tilde.test.html#L123">tilde expansion an assignment keyword</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo:~
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="tilde.test.html#L123">tilde expansion an assignment keyword</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'foo:/home/bar\n'
+Got      'foo:~\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo:~
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="tilde.test.html#L123">tilde expansion an assignment keyword</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'foo:/home/bar\n'
+Got      'foo:~\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo:~
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="tilde.test.html#L137">x=${undef-~:~}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '/home/bar:/home/bar:/home/bar\n'
+Got      '~:~:~\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>~:~:~
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="tilde.test.html#L137">x=${undef-~:~}</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '/home/bar:/home/bar:/home/bar\n'
+Got      '/home/bar:~:~\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/home/bar:~:~
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="tilde.test.html#L137">x=${undef-~:~}</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '/home/bar:/home/bar:/home/bar\n'
+Got      '/home/bar:/home/bar:~\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/home/bar:/home/bar:~
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-osh"></a><b>osh</b></td><td>11 <a href="tilde.test.html#L137">x=${undef-~:~}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>/home/bar:~:~
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-bash"></a><b>bash</b></td><td>12 <a href="tilde.test.html#L153">strict tilde</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>~nonexistent
+~nonexistent
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 3: shopt: strict_tilde: invalid shell option name
+</pre></td></tr><tr><td><a name="details-12-dash"></a><b>dash</b></td><td>12 <a href="tilde.test.html#L153">strict tilde</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>~nonexistent
+~nonexistent
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: shopt: not found
+</pre></td></tr><tr><td><a name="details-12-ash"></a><b>ash</b></td><td>12 <a href="tilde.test.html#L153">strict tilde</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '~nonexistent\n'
+Got      '~nonexistent\n~nonexistent\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>~nonexistent
+~nonexistent
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="tilde.test.html#L153">strict tilde</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no such user or named directory: nonexistent
+</pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="tilde.test.html#L153">strict tilde</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>~nonexistent
+~nonexistent
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: shopt: not found
+</pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="tilde.test.html#L153">strict tilde</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '~nonexistent\n'
+Got      '~nonexistent\n~nonexistent\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>~nonexistent
+~nonexistent
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="tilde.test.html#L153">strict tilde</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '~nonexistent\n'
+Got      '~nonexistent\n~nonexistent\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>~nonexistent
+~nonexistent
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="tilde.test.html#L153">strict tilde</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '~nonexistent\n'
+Got      '~nonexistent\n~nonexistent\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>~nonexistent
+~nonexistent
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: shopt: strict_tilde: not supported yet
+</pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="tilde.test.html#L153">strict tilde</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '~nonexistent\n'
+Got      '~nonexistent\n~nonexistent\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>~nonexistent
+~nonexistent
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_tilde: invalid shell option name
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="tilde.test.html#L172">temp assignment x=~ env</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'xx=/home/bar\nxx=/root:/home/bar:/home/bar\n'
+Got      'xx=~\nxx=~root:~:~\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>xx=~
+xx=~root:~:~
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="tilde.test.html#L172">temp assignment x=~ env</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'xx=/home/bar\nxx=/root:/home/bar:/home/bar\n'
+Got      'xx=/home/bar\nxx=/root:~:~\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>xx=/home/bar
+xx=/root:~:~
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>word-split: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for word-split.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>50</td><td>49</td><td>49</td><td>18</td><td>48</td><td>49</td><td>30</td><td>46</td><td>34</td><td>48</td><td></td></tr>
+<tr><td class="ok-3">ok-3</td> <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="ok-2">ok-2</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>3</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>4</td><td>4</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>2</td><td>2</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>0</td><td>35</td><td>0</td><td>6</td><td>25</td><td>9</td><td>21</td><td>7</td><td></td></tr>
+<tr><td>total</td><td>55</td><td>55</td><td>55</td><td>55</td><td>55</td><td>55</td><td>55</td><td>55</td><td>55</td><td>55</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L7">IFS is scoped</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L18">Tilde sub is not split, but var sub is</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L27">Word splitting</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L35">Word splitting 2</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L48">$*</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L53">"$*"</a></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L58">$@</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L64">"$@"</a></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L69">empty argv</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L73">$* with empty IFS</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L85">Word elision with space</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L90">Word elision with non-whitespace IFS</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L110">Leading/trailing word elision with non-whitespace IFS</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L117">Leading ' ' vs leading ' _ '</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L129">Multiple non-whitespace IFS chars.</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L135">IFS with whitespace and non-whitepace.</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L142">empty $@ and $* is elided</a></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L147">unquoted empty arg is elided</a></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L152">unquoted whitespace arg is elided</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L157">empty literals are not elided</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L162">no splitting when IFS is empty</a></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L168">default value can yield multiple words</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-21-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L172">default value can yield multiple words with part joining</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-22-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L176">default value with unquoted IFS char</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"><a href="#details-23-sush">details</a></td><td class="details-row"><a href="#details-23-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L181">IFS empty doesn't do splitting</a></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L189">IFS unset behaves like $' \t\n'</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="word-split.test.html#L197">IFS='\'</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-26-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="word-split.test.html#L206">IFS='\ '</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-sush">details</a></td><td class="details-row"><a href="#details-27-brush">details</a></td><td class="details-row"><a href="#details-27-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L216">IFS characters are glob metacharacters</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L234">Trailing space</a></td></tr>
+<tr><td> 30</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L244">Empty IFS (regression for bug)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 31</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L254">Unset IFS (regression for bug)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 32</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L262">IFS=o (regression for bug)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-32-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 33</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L269">IFS and joining arrays</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-33-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 34</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="word-split.test.html#L283">IFS and joining arrays by assignments</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-34-dash">details</a></td><td class="details-row"><a href="#details-34-ash">details</a></td><td class="details-row"><a href="#details-34-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-34-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-34-brush">details</a></td><td class="details-row"><a href="#details-34-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 35</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L329">TODO</a></td></tr>
+<tr><td> 36</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L337">IFS='' with $@ and $* (bug #627)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-36-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 37</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L349">IFS='' with $@ and $* and printf (bug #627)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-37-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 38</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L361">IFS='' with ${a[@]} and ${a[*]} (bug #627)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-38-dash">details</a></td><td class="details-row"><a href="#details-38-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-38-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 39</td><td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L375">IFS='' with ${!prefix@} and ${!prefix*} (bug #627)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-39-bash">details</a></td><td class="details-row"><a href="#details-39-dash">details</a></td><td class="details-row"><a href="#details-39-ash">details</a></td><td class="details-row"><a href="#details-39-zsh">details</a></td><td class="details-row"><a href="#details-39-mksh">details</a></td><td class="details-row"><a href="#details-39-ksh">details</a></td><td class="details-row"><a href="#details-39-toysh">details</a></td><td class="details-row"><a href="#details-39-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 40</td><td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L394">IFS='' with ${!a[@]} and ${!a[*]} (bug #627)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-40-bash">details</a></td><td class="details-row"><a href="#details-40-dash">details</a></td><td class="details-row"><a href="#details-40-ash">details</a></td><td class="details-row"><a href="#details-40-zsh">details</a></td><td class="details-row"><a href="#details-40-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-40-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 41</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="word-split.test.html#L412">Bug #628 split on : with : in literal word</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-41-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-41-brush">details</a></td><td class="details-row"><a href="#details-41-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 42</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L442">Bug #698, similar crash</a></td></tr>
+<tr><td> 43</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="word-split.test.html#L450">Bug #1664, \\ with noglob</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-43-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-43-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 44</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L482">Empty IFS bug #2141 (from pnut)</a></td></tr>
+<tr><td> 45</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="word-split.test.html#L519">Unicode in IFS</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-45-dash">details</a></td><td class="details-row"><a href="#details-45-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-45-mksh">details</a></td><td class="details-row"><a href="#details-45-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-45-brush">details</a></td><td class="details-row"><a href="#details-45-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 46</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L540">4 x 3 table: (default IFS, IFS='', IFS=zx) x ( $* "$*" $@ "$@" )</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-46-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-46-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-46-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 47</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L621">4 x 3 table - with for loop</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-47-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-47-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-47-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 48</td><td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L668">IFS=x and '' and $@ - same bug as spec/toysh-posix case #12</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-48-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-48-zsh">details</a></td><td class="details-row"><a href="#details-48-mksh">details</a></td><td class="details-row"><a href="#details-48-ksh">details</a></td><td class="details-row"><a href="#details-48-toysh">details</a></td><td class="details-row"><a href="#details-48-sush">details</a></td><td class="details-row"><a href="#details-48-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 49</td><td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L712">IFS=x and '' and $@ (#2)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-49-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-49-zsh">details</a></td><td class="details-row"><a href="#details-49-mksh">details</a></td><td class="details-row"><a href="#details-49-ksh">details</a></td><td class="details-row"><a href="#details-49-toysh">details</a></td><td class="details-row"><a href="#details-49-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 50</td><td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok-3">ok-3</td>	<td class="ok-2">ok-2</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L765">IFS=x and '' and $@ (#3)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-50-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-50-zsh">details</a></td><td class="details-row"><a href="#details-50-mksh">details</a></td><td class="details-row"><a href="#details-50-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-50-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 51</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="word-split.test.html#L813">""$A"" - empty string on both sides - derived from spec/toysh-posix #15</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-51-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-51-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-51-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 52</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L866">Regression: "${!v*}"x should not be split</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-52-dash">details</a></td><td class="details-row"><a href="#details-52-ash">details</a></td><td class="details-row"><a href="#details-52-zsh">details</a></td><td class="details-row"><a href="#details-52-mksh">details</a></td><td class="details-row"><a href="#details-52-ksh">details</a></td><td class="details-row"><a href="#details-52-toysh">details</a></td><td class="details-row"><a href="#details-52-sush">details</a></td><td class="details-row"><a href="#details-52-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 53</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L881">Regression: ${!v} should be split</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-53-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 54</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="word-split.test.html#L892">Regression: "${v:-AxBxC}"x should not be split</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-54-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-54-toysh">details</a></td><td class="details-row"><a href="#details-54-sush">details</a></td><td class="details-row"><a href="#details-54-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>421 passed, 7 OK, 11 not implemented, 8 BUG, 103 failed, 0 timeouts, 0 cases skipped
+7 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="word-split.test.html#L7">IFS is scoped</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['ab', 'd']\n['a', 'cd']\n"
+Got      "['abcd']\n['abcd']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['abcd']
+['abcd']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="word-split.test.html#L7">IFS is scoped</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['ab', 'd']\n['a', 'cd']\n"
+Got      "['a', 'cd']\n['a', 'cd']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a', 'cd']
+['a', 'cd']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="word-split.test.html#L18">Tilde sub is not split, but var sub is</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['foo bar']\n['foo', 'bar']\n"
+Got      "['foo bar']\n['foo bar']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['foo bar']
+['foo bar']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="word-split.test.html#L27">Word splitting</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['1', '23 4']\n"
+Got      "['1 23 4']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1 23 4']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="word-split.test.html#L35">Word splitting 2</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['1', '23 45', '67 8']\n"
+Got      "['1 23 45 67 8']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1 23 45 67 8']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="word-split.test.html#L48">$*</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['-a', '1', 'b', '2', 'c', '3-']\n"
+Got      "['-a 1', 'b 2', 'c 3-']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['-a 1', 'b 2', 'c 3-']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="word-split.test.html#L58">$@</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['-a', '1', 'b', '2', 'c', '3-']\n"
+Got      "['-a 1', 'b 2', 'c 3-']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['-a 1', 'b 2', 'c 3-']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="word-split.test.html#L69">empty argv</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['1', '2', '3', '', '4', '5']\n"
+Got      "['1', '', '2', '3', '', '4', '5']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1', '', '2', '3', '', '4', '5']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="word-split.test.html#L73">$* with empty IFS</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['1 2', '3  4']\n['1 23  4']\n"
+Got      "[]\n['']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+['']
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="word-split.test.html#L73">$* with empty IFS</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['1 2', '3  4']\n['1 23  4']\n"
+Got      "['1 2', '3  4']\n['1 2 3  4']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1 2', '3  4']
+['1 2 3  4']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-zsh"></a><b>zsh</b></td><td>10 <a href="word-split.test.html#L85">Word elision with space</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '[]\n'
+Got      "[' ']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[' ']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="word-split.test.html#L85">Word elision with space</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '[]\n'
+Got      "['']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-zsh"></a><b>zsh</b></td><td>11 <a href="word-split.test.html#L90">Word elision with non-whitespace IFS</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['']\n[' ']\n[]\n"
+Got      "['_']\n[' ']\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['_']
+[' ']
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="word-split.test.html#L90">Word elision with non-whitespace IFS</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['']\n[' ']\n[]\n"
+Got      "[]\n[' ']\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[' ']
+[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="word-split.test.html#L110">Leading/trailing word elision with non-whitespace IFS</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['', 'a', 'b']\n"
+Got      "['_a_b_']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['_a_b_']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="word-split.test.html#L110">Leading/trailing word elision with non-whitespace IFS</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['', 'a', 'b']\n"
+Got      "['a', 'b']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a', 'b']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="word-split.test.html#L117">Leading ' ' vs leading ' _ '</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['', 'a', 'b']\n['a', 'b']\n"
+Got      "['_ a  b _ ']\n['  a  b _ ']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['_ a  b _ ']
+['  a  b _ ']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="word-split.test.html#L117">Leading ' ' vs leading ' _ '</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['', 'a', 'b']\n['a', 'b']\n"
+Got      "['', 'a', 'b']\n['', 'a', 'b']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['', 'a', 'b']
+['', 'a', 'b']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="word-split.test.html#L117">Leading ' ' vs leading ' _ '</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['', 'a', 'b']\n['a', 'b']\n"
+Got      "['a', 'b']\n['a', 'b']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a', 'b']
+['a', 'b']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-zsh"></a><b>zsh</b></td><td>14 <a href="word-split.test.html#L129">Multiple non-whitespace IFS chars.</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['a', '', 'b', '', '', 'c', 'd']\n"
+Got      "['a__b---c_d']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a__b---c_d']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-brush"></a><b>brush</b></td><td>14 <a href="word-split.test.html#L129">Multiple non-whitespace IFS chars.</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['a', '', 'b', '', '', 'c', 'd']\n"
+Got      "['a', 'b', 'c', 'd']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a', 'b', 'c', 'd']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-zsh"></a><b>zsh</b></td><td>15 <a href="word-split.test.html#L135">IFS with whitespace and non-whitepace.</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['a', 'b', '', '', 'c', 'd', 'e']\n"
+Got      "['a_b _ _ _ c  _d e']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a_b _ _ _ c  _d e']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-brush"></a><b>brush</b></td><td>15 <a href="word-split.test.html#L135">IFS with whitespace and non-whitepace.</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['a', 'b', '', '', 'c', 'd', 'e']\n"
+Got      "['a', 'b', 'c', 'd', 'e']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a', 'b', 'c', 'd', 'e']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-zsh"></a><b>zsh</b></td><td>18 <a href="word-split.test.html#L152">unquoted whitespace arg is elided</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['1', '2']\n"
+Got      "['1', ' ', '2']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1', ' ', '2']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="word-split.test.html#L152">unquoted whitespace arg is elided</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['1', '2']\n"
+Got      "['1', '', '2']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1', '', '2']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-zsh"></a><b>zsh</b></td><td>19 <a href="word-split.test.html#L157">empty literals are not elided</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['1', '', '2']\n"
+Got      "['1', ' ', '2']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1', ' ', '2']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="word-split.test.html#L157">empty literals are not elided</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['1', '', '2']\n"
+Got      "['1', '', '', '2']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1', '', '', '2']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-zsh"></a><b>zsh</b></td><td>21 <a href="word-split.test.html#L168">default value can yield multiple words</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['1', '2 3', '4 5', '6']\n"
+Got      "['1', '2 3 4 5', '6']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1', '2 3 4 5', '6']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="word-split.test.html#L168">default value can yield multiple words</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['1', '2 3', '4 5', '6']\n"
+Got      '[\'1\', \'"2\', \'3"\', \'"4\', \'5"\', \'6\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1', '"2', '3"', '"4', '5"', '6']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-brush"></a><b>brush</b></td><td>21 <a href="word-split.test.html#L168">default value can yield multiple words</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['1', '2 3', '4 5', '6']\n"
+Got      "['1', '2', '3', '4', '5', '6']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1', '2', '3', '4', '5', '6']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-zsh"></a><b>zsh</b></td><td>22 <a href="word-split.test.html#L172">default value can yield multiple words with part joining</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['12 3', '4 56']\n"
+Got      "['12 3 4 56']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['12 3 4 56']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="word-split.test.html#L172">default value can yield multiple words with part joining</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['12 3', '4 56']\n"
+Got      '[\'1"2\', \'3"\', \'"4\', \'5"6\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1"2', '3"', '"4', '5"6']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-brush"></a><b>brush</b></td><td>22 <a href="word-split.test.html#L172">default value can yield multiple words with part joining</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['12 3', '4 56']\n"
+Got      "['12', '3', '4', '56']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['12', '3', '4', '56']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-zsh"></a><b>zsh</b></td><td>23 <a href="word-split.test.html#L176">default value with unquoted IFS char</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['12_3x', 'x4_56']\n"
+Got      "['12_3x_x4_56']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['12_3x_x4_56']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="word-split.test.html#L176">default value with unquoted IFS char</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['12_3x', 'x4_56']\n"
+Got      '[\'1"2\', \'3"x\', \'x"4\', \'5"6\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1"2', '3"x', 'x"4', '5"6']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-sush"></a><b>sush</b></td><td>23 <a href="word-split.test.html#L176">default value with unquoted IFS char</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['12_3x', 'x4_56']\n"
+Got      "['12_3x_x4_56']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['12_3x_x4_56']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-brush"></a><b>brush</b></td><td>23 <a href="word-split.test.html#L176">default value with unquoted IFS char</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['12_3x', 'x4_56']\n"
+Got      "['12', '3x', 'x4', '56']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['12', '3x', 'x4', '56']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-zsh"></a><b>zsh</b></td><td>25 <a href="word-split.test.html#L189">IFS unset behaves like $' \t\n'</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['a', 'b', 'c']\n"
+Got      "[' a b\\tc']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[' a b\tc']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="word-split.test.html#L189">IFS unset behaves like $' \t\n'</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['a', 'b', 'c']\n"
+Got      "['', 'a', 'b', 'c']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['', 'a', 'b', 'c']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-zsh"></a><b>zsh</b></td><td>26 <a href="word-split.test.html#L197">IFS='\'</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['a', 'b']\n"
+Got      "['a\\\\b']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a\\b']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-sush"></a><b>sush</b></td><td>26 <a href="word-split.test.html#L197">IFS='\'</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['a', 'b']\n"
+Got      "['a\\\\b']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a\\b']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-osh"></a><b>osh</b></td><td>26 <a href="word-split.test.html#L197">IFS='\'</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected "['a', 'b']\n"
+Got      "['a', '', '', '', 'b']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a', '', '', '', 'b']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-zsh"></a><b>zsh</b></td><td>27 <a href="word-split.test.html#L206">IFS='\ '</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['a', 'b', '', 'c', 'd']\n"
+Got      "['a\\\\b \\\\\\\\ c d\\\\']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a\\b \\\\ c d\\']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-sush"></a><b>sush</b></td><td>27 <a href="word-split.test.html#L206">IFS='\ '</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['a', 'b', '', 'c', 'd']\n"
+Got      "['a\\\\b', 'c', 'd\\\\']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a\\b', 'c', 'd\\']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-brush"></a><b>brush</b></td><td>27 <a href="word-split.test.html#L206">IFS='\ '</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['a', 'b', '', 'c', 'd']\n"
+Got      "['a', 'b', 'c', 'd']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a', 'b', 'c', 'd']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-osh"></a><b>osh</b></td><td>27 <a href="word-split.test.html#L206">IFS='\ '</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected "['a', 'b', '', 'c', 'd']\n"
+Got      "['a', '', '', '', 'b', '', '', '', '', '', '', '', 'c', 'd', '', '', '']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a', '', '', '', 'b', '', '', '', '', '', '', '', 'c', 'd', '', '', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-zsh"></a><b>zsh</b></td><td>28 <a href="word-split.test.html#L216">IFS characters are glob metacharacters</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['a', 'b', 'c']\n['', 'x', 'y', 'z']\n['', 'x', 'y', 'z']\n"
+Got      "['a*b c']\n['?x?y?z?']\n['[x[y[z[']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a*b c']
+['?x?y?z?']
+['[x[y[z[']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-brush"></a><b>brush</b></td><td>28 <a href="word-split.test.html#L216">IFS characters are glob metacharacters</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['a', 'b', 'c']\n['', 'x', 'y', 'z']\n['', 'x', 'y', 'z']\n"
+Got      "['a', 'b', 'c']\n['x', 'y', 'z']\n['x', 'y', 'z']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a', 'b', 'c']
+['x', 'y', 'z']
+['x', 'y', 'z']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-zsh"></a><b>zsh</b></td><td>30 <a href="word-split.test.html#L244">Empty IFS (regression for bug)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '[]\n[abc]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: []
+</pre></td></tr><tr><td><a name="details-30-brush"></a><b>brush</b></td><td>30 <a href="word-split.test.html#L244">Empty IFS (regression for bug)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '[]\n[abc]\n'
+Got      '[]\n[a b c]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[a b c]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-zsh"></a><b>zsh</b></td><td>31 <a href="word-split.test.html#L254">Unset IFS (regression for bug)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '[a b c]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [a b c]
+</pre></td></tr><tr><td><a name="details-32-brush"></a><b>brush</b></td><td>32 <a href="word-split.test.html#L262">IFS=o (regression for bug)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'hi\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ech: command not found
+</pre></td></tr><tr><td><a name="details-33-toysh"></a><b>toysh</b></td><td>33 <a href="word-split.test.html#L269">IFS and joining arrays</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['x', 'y z']\n['x', 'y z']\n['x:y z']\n['x', 'y z']\n"
+Got      "['']\n[]\n['']\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+[]
+['']
+[]
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-34-dash"></a><b>dash</b></td><td>34 <a href="word-split.test.html#L283">IFS and joining arrays by assignments</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['x:y z']
+['x:y z']
+['x:y z']
+['x:y z']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-ash"></a><b>ash</b></td><td>34 <a href="word-split.test.html#L283">IFS and joining arrays by assignments</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['x:y z']
+['x:y z']
+['x:y z']
+['x:y z']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-zsh"></a><b>zsh</b></td><td>34 <a href="word-split.test.html#L283">IFS and joining arrays by assignments</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['x y z']\n['x y z']\n['x:y z']\n['x:y z']\n"
+Got      "['x:y z']\n['x:y z']\n['x:y z']\n['x:y z']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['x:y z']
+['x:y z']
+['x:y z']
+['x:y z']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-toysh"></a><b>toysh</b></td><td>34 <a href="word-split.test.html#L283">IFS and joining arrays by assignments</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['x y z']\n['x y z']\n['x:y z']\n['x:y z']\n"
+Got      "['']\n['']\n['']\n['']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['']
+['']
+['']
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-34-brush"></a><b>brush</b></td><td>34 <a href="word-split.test.html#L283">IFS and joining arrays by assignments</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['x y z']\n['x y z']\n['x:y z']\n['x:y z']\n"
+Got      "['x y z']\n['x y z']\n['x:y z']\n['x y z']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['x y z']
+['x y z']
+['x:y z']
+['x y z']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-osh"></a><b>osh</b></td><td>34 <a href="word-split.test.html#L283">IFS and joining arrays by assignments</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected "['x y z']\n['x y z']\n['x:y z']\n['x:y z']\n"
+Got      "['x y z']\n['x y z']\n['x:y z']\n['x y z']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['x y z']
+['x y z']
+['x:y z']
+['x y z']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-toysh"></a><b>toysh</b></td><td>36 <a href="word-split.test.html#L337">IFS='' with $@ and $* (bug #627)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['at', 'a', 'b c']\n['star', 'a', 'b c']\n"
+Got      "['at']\n['star']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['at']
+['star']
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-37-toysh"></a><b>toysh</b></td><td>37 <a href="word-split.test.html#L349">IFS='' with $@ and $* and printf (bug #627)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '[a]\n[b c]\n[a]\n[b c]\n'
+Got      '[]\n[]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-38-dash"></a><b>dash</b></td><td>38 <a href="word-split.test.html#L361">IFS='' with ${a[@]} and ${a[*]} (bug #627)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-ash"></a><b>ash</b></td><td>38 <a href="word-split.test.html#L361">IFS='' with ${a[@]} and ${a[*]} (bug #627)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-toysh"></a><b>toysh</b></td><td>38 <a href="word-split.test.html#L361">IFS='' with ${a[@]} and ${a[*]} (bug #627)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['at', 'a', 'b c']\n['star', 'a', 'b c']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-39-bash"></a><b>bash</b></td><td>39 <a href="word-split.test.html#L375">IFS='' with ${!prefix@} and ${!prefix*} (bug #627)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['at', 'gLwbmGzS_var1', 'gLwbmGzS_var2']
+['star', 'gLwbmGzS_var1gLwbmGzS_var2']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-dash"></a><b>dash</b></td><td>39 <a href="word-split.test.html#L375">IFS='' with ${!prefix@} and ${!prefix*} (bug #627)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-ash"></a><b>ash</b></td><td>39 <a href="word-split.test.html#L375">IFS='' with ${!prefix@} and ${!prefix*} (bug #627)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-zsh"></a><b>zsh</b></td><td>39 <a href="word-split.test.html#L375">IFS='' with ${!prefix@} and ${!prefix*} (bug #627)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['at', 'gLwbmGzS_var1', 'gLwbmGzS_var2']\n['star', 'gLwbmGzS_var1', 'gLwbmGzS_var2']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-39-mksh"></a><b>mksh</b></td><td>39 <a href="word-split.test.html#L375">IFS='' with ${!prefix@} and ${!prefix*} (bug #627)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-ksh"></a><b>ksh</b></td><td>39 <a href="word-split.test.html#L375">IFS='' with ${!prefix@} and ${!prefix*} (bug #627)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['at', 'gLwbmGzS_var1', 'gLwbmGzS_var2']\n['star', 'gLwbmGzS_var1', 'gLwbmGzS_var2']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[6]: ${!gLwbmGzS_@}: bad substitution
+</pre></td></tr><tr><td><a name="details-39-toysh"></a><b>toysh</b></td><td>39 <a href="word-split.test.html#L375">IFS='' with ${!prefix@} and ${!prefix*} (bug #627)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['at', 'gLwbmGzS_var1', 'gLwbmGzS_var2']\n['star', 'gLwbmGzS_var1', 'gLwbmGzS_var2']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-39-sush"></a><b>sush</b></td><td>39 <a href="word-split.test.html#L375">IFS='' with ${!prefix@} and ${!prefix*} (bug #627)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['at', 'gLwbmGzS_var1', 'gLwbmGzS_var2']\n['star', 'gLwbmGzS_var1', 'gLwbmGzS_var2']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: `${!gLwbmGzS_@}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: `${!gLwbmGzS_*}': bad substitution
+</pre></td></tr><tr><td><a name="details-40-bash"></a><b>bash</b></td><td>40 <a href="word-split.test.html#L394">IFS='' with ${!a[@]} and ${!a[*]} (bug #627)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['at', '0', '1', '2']
+['star', '0 1 2']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-dash"></a><b>dash</b></td><td>40 <a href="word-split.test.html#L394">IFS='' with ${!a[@]} and ${!a[*]} (bug #627)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-ash"></a><b>ash</b></td><td>40 <a href="word-split.test.html#L394">IFS='' with ${!a[@]} and ${!a[*]} (bug #627)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-zsh"></a><b>zsh</b></td><td>40 <a href="word-split.test.html#L394">IFS='' with ${!a[@]} and ${!a[*]} (bug #627)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['at', '0', '1', '2']\n['star', '0', '1', '2']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-40-mksh"></a><b>mksh</b></td><td>40 <a href="word-split.test.html#L394">IFS='' with ${!a[@]} and ${!a[*]} (bug #627)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-toysh"></a><b>toysh</b></td><td>40 <a href="word-split.test.html#L394">IFS='' with ${!a[@]} and ${!a[*]} (bug #627)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['at', '0', '1', '2']\n['star', '0', '1', '2']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-41-zsh"></a><b>zsh</b></td><td>41 <a href="word-split.test.html#L412">Bug #628 split on : with : in literal word</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['a', ':b']\n['a', ':']\n---\n['a', 'zb']\n['a', 'z']\n"
+Got      "['a::b']\n['a::']\n---\n['azzb']\n['azz']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a::b']
+['a::']
+---
+['azzb']
+['azz']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-41-brush"></a><b>brush</b></td><td>41 <a href="word-split.test.html#L412">Bug #628 split on : with : in literal word</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['a', ':b']\n['a', ':']\n---\n['a', 'zb']\n['a', 'z']\n"
+Got      "['a', 'b']\n['a']\n---\n['a', 'b']\n['a']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a', 'b']
+['a']
+---
+['a', 'b']
+['a']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-41-osh"></a><b>osh</b></td><td>41 <a href="word-split.test.html#L412">Bug #628 split on : with : in literal word</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected "['a', ':b']\n['a', ':']\n---\n['a', 'zb']\n['a', 'z']\n"
+Got      "['a', '\\\\', 'b']\n['a', '\\\\']\n---\n['a', '\\\\', 'b']\n['a', '\\\\']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a', '\\', 'b']
+['a', '\\']
+---
+['a', '\\', 'b']
+['a', '\\']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-43-zsh"></a><b>zsh</b></td><td>43 <a href="word-split.test.html#L450">Bug #1664, \\ with noglob</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['[\\\\]_']\n['[\\\\]_']\nnoglob\n['[\\\\]_']\n['[\\\\]_']\n"
+Got      "['[\\\\]_']\nnoglob\n['[\\\\]_']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['[\\]_']
+noglob
+['[\\]_']
+</pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [\]_
+zsh: no matches found: [\]_
+</pre></td></tr><tr><td><a name="details-43-osh"></a><b>osh</b></td><td>43 <a href="word-split.test.html#L450">Bug #1664, \\ with noglob</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected "['[\\\\]_']\n['[\\\\]_']\nnoglob\n['[\\\\]_']\n['[\\\\]_']\n"
+Got      "['[\\\\]_']\n['[\\\\]_']\nnoglob\n['[\\\\\\\\]_']\n['[\\\\]_']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['[\\]_']
+['[\\]_']
+noglob
+['[\\\\]_']
+['[\\]_']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-45-dash"></a><b>dash</b></td><td>45 <a href="word-split.test.html#L519">Unicode in IFS</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>&lt;&gt;
+&lt;&gt;
+&lt;x&gt;
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: setopt: not found
+</pre></td></tr><tr><td><a name="details-45-ash"></a><b>ash</b></td><td>45 <a href="word-split.test.html#L519">Unicode in IFS</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>&lt;&gt;
+&lt;&gt;
+&lt;x&gt;
+</pre><i>stderr:</i> <br/>
+<pre>ash: setopt: not found
+</pre></td></tr><tr><td><a name="details-45-mksh"></a><b>mksh</b></td><td>45 <a href="word-split.test.html#L519">Unicode in IFS</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>&lt;&gt;
+&lt;&gt;
+&lt;x&gt;
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: setopt: not found
+</pre></td></tr><tr><td><a name="details-45-ksh"></a><b>ksh</b></td><td>45 <a href="word-split.test.html#L519">Unicode in IFS</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '&lt;&gt;\n&lt;x&gt;\n'
+Got      '&lt;&gt;\n&lt;&gt;\n&lt;x&gt;\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>&lt;&gt;
+&lt;&gt;
+&lt;x&gt;
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: setopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-45-brush"></a><b>brush</b></td><td>45 <a href="word-split.test.html#L519">Unicode in IFS</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '&lt;&gt;\n&lt;x&gt;\n'
+Got      '&lt;x&gt;\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>&lt;x&gt;
+</pre><i>stderr:</i> <br/>
+<pre>setopt: command not found
+</pre></td></tr><tr><td><a name="details-45-osh"></a><b>osh</b></td><td>45 <a href="word-split.test.html#L519">Unicode in IFS</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected '&lt;&gt;\n&lt;x&gt;\n'
+Got      '&lt;&gt;\n&lt;&gt;\n&lt;x&gt;\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>&lt;&gt;
+&lt;&gt;
+&lt;x&gt;
+</pre><i>stderr:</i> <br/>
+<pre>  setopt SH_WORD_SPLIT
+  ^~~~~~
+[ stdin ]:1: Command 'setopt' not found (OILS-ERR-100)
+</pre></td></tr><tr><td><a name="details-46-zsh"></a><b>zsh</b></td><td>46 <a href="word-split.test.html#L540">4 x 3 table: (default IFS, IFS='', IFS=zx) x ( $* "$*" $@ "$@" )</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['  $*  ', 'a', 'b', 'c']
+[' "$*" ', 'a b c ']
+['  $@  ', 'a b', 'c']
+[' "$@" ', 'a b', 'c', '']
+
+['  $*  ', 'a b', 'c']
+[' "$*" ', 'a bc']
+['  $@  ', 'a b', 'c']
+[' "$@" ', 'a b', 'c', '']
+
+['  $*  ', 'a b', 'c', '']
+[' "$*" ', 'a bzcz']
+['  $@  ', 'a b', 'c']
+[' "$@" ', 'a b', 'c', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-46-toysh"></a><b>toysh</b></td><td>46 <a href="word-split.test.html#L540">4 x 3 table: (default IFS, IFS='', IFS=zx) x ( $* "$*" $@ "$@" )</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '[\'  $*  \', \'a\', \'b\', \'c\']\n[\' "$*" \', \'a b c \']\n[\'  $@  \', \'a\', \'b\', \'c\']\n[\' "$@" \', \'a b\', \'c\', \'\']\n\n[\'  $*  \', \'a b\', \'c\']\n[\' "$*" \', \'a bc\']\n[\'  $@  \', \'a b\', \'c\']\n[\' "$@" \', \'a b\', \'c\', \'\']\n\n[\'  $*  \', \'a b\', \'c\']\n[\' "$*" \', \'a bzcz\']\n[\'  $@  \', \'a b\', \'c\']\n[\' "$@" \', \'a b\', \'c\', \'\']\n'
+Got      '[\'  $*  \']\n[\' "$*" \', \'\']\n[\'  $@  \']\n[\' "$@" \', \'\']\n\n[\'  $*  \']\n[\' "$*" \', \'\']\n[\'  $@  \']\n[\' "$@" \', \'\']\n\n[\'  $*  \']\n[\' "$*" \', \'\']\n[\'  $@  \']\n[\' "$@" \', \'\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['  $*  ']
+[' "$*" ', '']
+['  $@  ']
+[' "$@" ', '']
+
+['  $*  ']
+[' "$*" ', '']
+['  $@  ']
+[' "$@" ', '']
+
+['  $*  ']
+[' "$*" ', '']
+['  $@  ']
+[' "$@" ', '']
+</pre><i>stderr:</i> <br/>
+<pre>sh: setopt: No such file or directory
+set: bad --
+</pre></td></tr><tr><td><a name="details-46-brush"></a><b>brush</b></td><td>46 <a href="word-split.test.html#L540">4 x 3 table: (default IFS, IFS='', IFS=zx) x ( $* "$*" $@ "$@" )</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '[\'  $*  \', \'a\', \'b\', \'c\']\n[\' "$*" \', \'a b c \']\n[\'  $@  \', \'a\', \'b\', \'c\']\n[\' "$@" \', \'a b\', \'c\', \'\']\n\n[\'  $*  \', \'a b\', \'c\']\n[\' "$*" \', \'a bc\']\n[\'  $@  \', \'a b\', \'c\']\n[\' "$@" \', \'a b\', \'c\', \'\']\n\n[\'  $*  \', \'a b\', \'c\']\n[\' "$*" \', \'a bzcz\']\n[\'  $@  \', \'a b\', \'c\']\n[\' "$@" \', \'a b\', \'c\', \'\']\n'
+Got      '[\'  $*  \', \'a\', \'b\', \'c\']\n[\' "$*" \', \'a b c \']\n[\'  $@  \', \'a\', \'b\', \'c\']\n[\' "$@" \', \'a b\', \'c\', \'\']\n\n[\'  $*  \', \'a b\', \'c\']\n[\' "$*" \', \'a b c \']\n[\'  $@  \', \'a b\', \'c\']\n[\' "$@" \', \'a b\', \'c\', \'\']\n\n[\'  $*  \', \'a b\', \'c\']\n[\' "$*" \', \'a bzcz\']\n[\'  $@  \', \'a b\', \'c\']\n[\' "$@" \', \'a b\', \'c\', \'\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['  $*  ', 'a', 'b', 'c']
+[' "$*" ', 'a b c ']
+['  $@  ', 'a', 'b', 'c']
+[' "$@" ', 'a b', 'c', '']
+
+['  $*  ', 'a b', 'c']
+[' "$*" ', 'a b c ']
+['  $@  ', 'a b', 'c']
+[' "$@" ', 'a b', 'c', '']
+
+['  $*  ', 'a b', 'c']
+[' "$*" ', 'a bzcz']
+['  $@  ', 'a b', 'c']
+[' "$@" ', 'a b', 'c', '']
+</pre><i>stderr:</i> <br/>
+<pre>setopt: command not found
+</pre></td></tr><tr><td><a name="details-47-zsh"></a><b>zsh</b></td><td>47 <a href="word-split.test.html#L621">4 x 3 table - with for loop</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '  $*   -a- -b- -c-\n "$*"  -a b c -\n  $@   -a- -b- -c-\n "$@"  -a b- -c- --\n\n  $*   -a b- -c-\n "$*"  -a bc-\n  $@   -a b- -c-\n "$@"  -a b- -c- --\n\n  $*   -a b- -c-\n "$*"  -a b c -\n  $@   -a b- -c-\n "$@"  -a b- -c- --\n'
+Got      '  $*   -a- -b- -c-\n "$*"  -a b c -\n  $@   -a b- -c-\n "$@"  -a b- -c- --\n\n  $*   -a b- -c-\n "$*"  -a bc-\n  $@   -a b- -c-\n "$@"  -a b- -c- --\n\n  $*   -a b- -c- --\n "$*"  -a b c -\n  $@   -a b- -c-\n "$@"  -a b- -c- --\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  $*   -a- -b- -c-
+ "$*"  -a b c -
+  $@   -a b- -c-
+ "$@"  -a b- -c- --
+
+  $*   -a b- -c-
+ "$*"  -a bc-
+  $@   -a b- -c-
+ "$@"  -a b- -c- --
+
+  $*   -a b- -c- --
+ "$*"  -a b c -
+  $@   -a b- -c-
+ "$@"  -a b- -c- --
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-47-toysh"></a><b>toysh</b></td><td>47 <a href="word-split.test.html#L621">4 x 3 table - with for loop</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '  $*   -a- -b- -c-\n "$*"  -a b c -\n  $@   -a- -b- -c-\n "$@"  -a b- -c- --\n\n  $*   -a b- -c-\n "$*"  -a bc-\n  $@   -a b- -c-\n "$@"  -a b- -c- --\n\n  $*   -a b- -c-\n "$*"  -a b c -\n  $@   -a b- -c-\n "$@"  -a b- -c- --\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-47-brush"></a><b>brush</b></td><td>47 <a href="word-split.test.html#L621">4 x 3 table - with for loop</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '  $*   -a- -b- -c-\n "$*"  -a b c -\n  $@   -a- -b- -c-\n "$@"  -a b- -c- --\n\n  $*   -a b- -c-\n "$*"  -a bc-\n  $@   -a b- -c-\n "$@"  -a b- -c- --\n\n  $*   -a b- -c-\n "$*"  -a b c -\n  $@   -a b- -c-\n "$@"  -a b- -c- --\n'
+Got      '  $*   -a- -b- -c-\n "$*"  -a b c -\n  $@   -a- -b- -c-\n "$@"  -a b- -c- --\n\n  $*   -a b- -c-\n "$*"  -a b c -\n  $@   -a b- -c-\n "$@"  -a b- -c- --\n\n  $*   -a b- -c-\n "$*"  -a b c -\n  $@   -a b- -c-\n "$@"  -a b- -c- --\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  $*   -a- -b- -c-
+ "$*"  -a b c -
+  $@   -a- -b- -c-
+ "$@"  -a b- -c- --
+
+  $*   -a b- -c-
+ "$*"  -a b c -
+  $@   -a b- -c-
+ "$@"  -a b- -c- --
+
+  $*   -a b- -c-
+ "$*"  -a b c -
+  $@   -a b- -c-
+ "$@"  -a b- -c- --
+</pre><i>stderr:</i> <br/>
+<pre>setopt: command not found
+</pre></td></tr><tr><td><a name="details-48-bash"></a><b>bash</b></td><td>48 <a href="word-split.test.html#L668">IFS=x and '' and $@ - same bug as spec/toysh-posix case #12</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>  $*   -one- -- -two-
+ "$*"  -one  two-
+  $@   -one- -- -two-
+ "$@"  -one- -- -two-
+['  $*  ', 'one', '', 'two']
+[' "$*" ', 'onezztwo']
+['  $@  ', 'one', '', 'two']
+[' "$@" ', 'one', '', 'two']
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 3: setopt: command not found
+</pre></td></tr><tr><td><a name="details-48-zsh"></a><b>zsh</b></td><td>48 <a href="word-split.test.html#L668">IFS=x and '' and $@ - same bug as spec/toysh-posix case #12</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '  $*   -one- -two-\n "$*"  -one  two-\n  $@   -one- -two-\n "$@"  -one- -- -two-\n[\'  $*  \', \'one\', \'two\']\n[\' "$*" \', \'onezztwo\']\n[\'  $@  \', \'one\', \'two\']\n[\' "$@" \', \'one\', \'\', \'two\']\n'
+Got      '  $*   -one- -- -two-\n "$*"  -one  two-\n  $@   -one- -two-\n "$@"  -one- -- -two-\n[\'  $*  \', \'one\', \'\', \'two\']\n[\' "$*" \', \'onezztwo\']\n[\'  $@  \', \'one\', \'two\']\n[\' "$@" \', \'one\', \'\', \'two\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  $*   -one- -- -two-
+ "$*"  -one  two-
+  $@   -one- -two-
+ "$@"  -one- -- -two-
+['  $*  ', 'one', '', 'two']
+[' "$*" ', 'onezztwo']
+['  $@  ', 'one', 'two']
+[' "$@" ', 'one', '', 'two']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-48-mksh"></a><b>mksh</b></td><td>48 <a href="word-split.test.html#L668">IFS=x and '' and $@ - same bug as spec/toysh-posix case #12</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>  $*   -one- -- -two-
+ "$*"  -one  two-
+  $@   -one- -- -two-
+ "$@"  -one- -- -two-
+['  $*  ', 'one', '', 'two']
+[' "$*" ', 'onezztwo']
+['  $@  ', 'one', '', 'two']
+[' "$@" ', 'one', '', 'two']
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: setopt: not found
+</pre></td></tr><tr><td><a name="details-48-ksh"></a><b>ksh</b></td><td>48 <a href="word-split.test.html#L668">IFS=x and '' and $@ - same bug as spec/toysh-posix case #12</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '  $*   -one- -two-\n "$*"  -one  two-\n  $@   -one- -two-\n "$@"  -one- -- -two-\n[\'  $*  \', \'one\', \'two\']\n[\' "$*" \', \'onezztwo\']\n[\'  $@  \', \'one\', \'two\']\n[\' "$@" \', \'one\', \'\', \'two\']\n'
+Got      '  $*   -one- -- -two-\n "$*"  -one  two-\n  $@   -one- -- -two-\n "$@"  -one- -- -two-\n[\'  $*  \', \'one\', \'\', \'two\']\n[\' "$*" \', \'onezztwo\']\n[\'  $@  \', \'one\', \'\', \'two\']\n[\' "$@" \', \'one\', \'\', \'two\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  $*   -one- -- -two-
+ "$*"  -one  two-
+  $@   -one- -- -two-
+ "$@"  -one- -- -two-
+['  $*  ', 'one', '', 'two']
+[' "$*" ', 'onezztwo']
+['  $@  ', 'one', '', 'two']
+[' "$@" ', 'one', '', 'two']
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: setopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-48-toysh"></a><b>toysh</b></td><td>48 <a href="word-split.test.html#L668">IFS=x and '' and $@ - same bug as spec/toysh-posix case #12</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '  $*   -one- -two-\n "$*"  -one  two-\n  $@   -one- -two-\n "$@"  -one- -- -two-\n[\'  $*  \', \'one\', \'two\']\n[\' "$*" \', \'onezztwo\']\n[\'  $@  \', \'one\', \'two\']\n[\' "$@" \', \'one\', \'\', \'two\']\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-48-sush"></a><b>sush</b></td><td>48 <a href="word-split.test.html#L668">IFS=x and '' and $@ - same bug as spec/toysh-posix case #12</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '  $*   -one- -two-\n "$*"  -one  two-\n  $@   -one- -two-\n "$@"  -one- -- -two-\n[\'  $*  \', \'one\', \'two\']\n[\' "$*" \', \'onezztwo\']\n[\'  $@  \', \'one\', \'two\']\n[\' "$@" \', \'one\', \'\', \'two\']\n'
+Got      '  $*   -one- -- -two-\n "$*"  -one  two-\n  $@   -one- -- -two-\n "$@"  -one- -- -two-\n[\'  $*  \', \'one\', \'\', \'two\']\n[\' "$*" \', \'onezztwo\']\n[\'  $@  \', \'one\', \'\', \'two\']\n[\' "$@" \', \'one\', \'\', \'two\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  $*   -one- -- -two-
+ "$*"  -one  two-
+  $@   -one- -- -two-
+ "$@"  -one- -- -two-
+['  $*  ', 'one', '', 'two']
+[' "$*" ', 'onezztwo']
+['  $@  ', 'one', '', 'two']
+[' "$@" ', 'one', '', 'two']
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: setopt: command not found
+</pre></td></tr><tr><td><a name="details-48-brush"></a><b>brush</b></td><td>48 <a href="word-split.test.html#L668">IFS=x and '' and $@ - same bug as spec/toysh-posix case #12</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '  $*   -one- -two-\n "$*"  -one  two-\n  $@   -one- -two-\n "$@"  -one- -- -two-\n[\'  $*  \', \'one\', \'two\']\n[\' "$*" \', \'onezztwo\']\n[\'  $@  \', \'one\', \'two\']\n[\' "$@" \', \'one\', \'\', \'two\']\n'
+Got      '  $*   -one- -two-\n "$*"  -one two-\n  $@   -one- -two-\n "$@"  -one- -- -two-\n[\'  $*  \', \'one\', \'two\']\n[\' "$*" \', \'onezztwo\']\n[\'  $@  \', \'one\', \'two\']\n[\' "$@" \', \'one\', \'\', \'two\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  $*   -one- -two-
+ "$*"  -one two-
+  $@   -one- -two-
+ "$@"  -one- -- -two-
+['  $*  ', 'one', 'two']
+[' "$*" ', 'onezztwo']
+['  $@  ', 'one', 'two']
+[' "$@" ', 'one', '', 'two']
+</pre><i>stderr:</i> <br/>
+<pre>setopt: command not found
+</pre></td></tr><tr><td><a name="details-49-bash"></a><b>bash</b></td><td>49 <a href="word-split.test.html#L712">IFS=x and '' and $@ (#2)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['=', '=']
+['=', '=']
+
+['=', '=']
+['=', '=']
+
+['=', '', '', '', '=']
+['=', '', '', '', '=']
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: setopt: command not found
+</pre></td></tr><tr><td><a name="details-49-zsh"></a><b>zsh</b></td><td>49 <a href="word-split.test.html#L712">IFS=x and '' and $@ (#2)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['=', '=']\n['=', '=']\n\n['=', '=']\n['=', '=']\n\n['=', '=']\n['=', '=']\n"
+Got      "['=', '=']\n['=', '=']\n\n['=', '=']\n['=', '=']\n\n['=', '=']\n['=', '', '', '', '=']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['=', '=']
+['=', '=']
+
+['=', '=']
+['=', '=']
+
+['=', '=']
+['=', '', '', '', '=']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-49-mksh"></a><b>mksh</b></td><td>49 <a href="word-split.test.html#L712">IFS=x and '' and $@ (#2)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['=', '=']
+['=', '=']
+
+['=', '=']
+['=', '=']
+
+['=', '', '', '', '=']
+['=', '', '', '', '=']
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: setopt: not found
+</pre></td></tr><tr><td><a name="details-49-ksh"></a><b>ksh</b></td><td>49 <a href="word-split.test.html#L712">IFS=x and '' and $@ (#2)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['=', '=']\n['=', '=']\n\n['=', '=']\n['=', '=']\n\n['=', '=']\n['=', '=']\n"
+Got      "['=', '=']\n['=', '=']\n\n['=', '=']\n['=', '=']\n\n['=', '', '', '', '=']\n['=', '', '', '', '=']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['=', '=']
+['=', '=']
+
+['=', '=']
+['=', '=']
+
+['=', '', '', '', '=']
+['=', '', '', '', '=']
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: setopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-49-toysh"></a><b>toysh</b></td><td>49 <a href="word-split.test.html#L712">IFS=x and '' and $@ (#2)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['=', '=']\n['=', '=']\n\n['=', '=']\n['=', '=']\n\n['=', '=']\n['=', '=']\n"
+Got      "['==']\n['==']\n\n['==']\n['==']\n\n['==']\n['==']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['==']
+['==']
+
+['==']
+['==']
+
+['==']
+['==']
+</pre><i>stderr:</i> <br/>
+<pre>sh: setopt: No such file or directory
+set: bad --
+</pre></td></tr><tr><td><a name="details-49-sush"></a><b>sush</b></td><td>49 <a href="word-split.test.html#L712">IFS=x and '' and $@ (#2)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['=', '=']\n['=', '=']\n\n['=', '=']\n['=', '=']\n\n['=', '=']\n['=', '=']\n"
+Got      "['=', '=']\n['=', '=']\n\n['=', '', '', '', '=']\n['==']\n\n['=', '', '', '', '=']\n['=', '', '', '', '=']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['=', '=']
+['=', '=']
+
+['=', '', '', '', '=']
+['==']
+
+['=', '', '', '', '=']
+['=', '', '', '', '=']
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: setopt: command not found
+</pre></td></tr><tr><td><a name="details-50-bash"></a><b>bash</b></td><td>50 <a href="word-split.test.html#L765">IFS=x and '' and $@ (#3)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['', '', '', '']
+['', '', '']
+['', '']
+['']
+[]
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: setopt: command not found
+</pre></td></tr><tr><td><a name="details-50-zsh"></a><b>zsh</b></td><td>50 <a href="word-split.test.html#L765">IFS=x and '' and $@ (#3)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['', '', '', '', '']
+['', '', '', '', '']
+['', '', '', '', '']
+['', '', '', '', '']
+['', '', '', '', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-50-mksh"></a><b>mksh</b></td><td>50 <a href="word-split.test.html#L765">IFS=x and '' and $@ (#3)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['', '', '']
+['']
+[]
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: setopt: not found
+</pre></td></tr><tr><td><a name="details-50-ksh"></a><b>ksh</b></td><td>50 <a href="word-split.test.html#L765">IFS=x and '' and $@ (#3)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '[]\n[]\n[]\n[]\n[]\n'
+Got      "['', '', '']\n['']\n[]\n[]\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['', '', '']
+['']
+[]
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: setopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-50-sush"></a><b>sush</b></td><td>50 <a href="word-split.test.html#L765">IFS=x and '' and $@ (#3)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[]\n[]\n[]\n[]\n[]\n'
+Got      "['', '', '', '']\n['', '', '']\n['', '']\n['']\n[]\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['', '', '', '']
+['', '', '']
+['', '']
+['']
+[]
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: setopt: command not found
+</pre></td></tr><tr><td><a name="details-51-zsh"></a><b>zsh</b></td><td>51 <a href="word-split.test.html#L813">""$A"" - empty string on both sides - derived from spec/toysh-posix #15</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['abc', 'def']\n['', 'abc', 'def', '']\n['abc', 'def']\n['', 'abc', 'def', '']\n\n=abc=\n=def=\n\n==\n=abc=\n=def=\n==\n\n=abc=\n=def=\n\n==\n=abc=\n=def=\n==\n"
+Got      "['   abc   def   ']\n['   abc   def   ']\n['   abc   def   ']\n['   abc   def   ']\n\n"
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['   abc   def   ']
+['   abc   def   ']
+['   abc   def   ']
+['   abc   def   ']
+
+</pre><i>stderr:</i> <br/>
+<pre>zsh:    abc   def   = not found
+</pre></td></tr><tr><td><a name="details-51-toysh"></a><b>toysh</b></td><td>51 <a href="word-split.test.html#L813">""$A"" - empty string on both sides - derived from spec/toysh-posix #15</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['abc', 'def']\n['', 'abc', 'def', '']\n['abc', 'def']\n['', 'abc', 'def', '']\n\n=abc=\n=def=\n\n==\n=abc=\n=def=\n==\n\n=abc=\n=def=\n\n==\n=abc=\n=def=\n==\n"
+Got      "['', 'abc', 'def']\n['', 'abc', 'def', '']\n['', 'abc', 'def']\n['', 'abc', 'def', '']\n\n==\n=abc=\n=def=\n\n==\n=abc=\n=def=\n==\n\n==\n=abc=\n=def=\n\n==\n=abc=\n=def=\n==\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['', 'abc', 'def']
+['', 'abc', 'def', '']
+['', 'abc', 'def']
+['', 'abc', 'def', '']
+
+==
+=abc=
+=def=
+
+==
+=abc=
+=def=
+==
+
+==
+=abc=
+=def=
+
+==
+=abc=
+=def=
+==
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-51-osh"></a><b>osh</b></td><td>51 <a href="word-split.test.html#L813">""$A"" - empty string on both sides - derived from spec/toysh-posix #15</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected "['abc', 'def']\n['', 'abc', 'def', '']\n['abc', 'def']\n['', 'abc', 'def', '']\n\n=abc=\n=def=\n\n==\n=abc=\n=def=\n==\n\n=abc=\n=def=\n\n==\n=abc=\n=def=\n==\n"
+Got      "['abc', 'def']\n['abc', 'def']\n['abc', 'def']\n['abc', 'def']\n\n=abc=\n=def=\n\n=abc=\n=def=\n\n=abc=\n=def=\n\n=abc=\n=def=\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['abc', 'def']
+['abc', 'def']
+['abc', 'def']
+['abc', 'def']
+
+=abc=
+=def=
+
+=abc=
+=def=
+
+=abc=
+=def=
+
+=abc=
+=def=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-52-dash"></a><b>dash</b></td><td>52 <a href="word-split.test.html#L866">Regression: "${!v*}"x should not be split</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-52-ash"></a><b>ash</b></td><td>52 <a href="word-split.test.html#L866">Regression: "${!v*}"x should not be split</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-52-zsh"></a><b>zsh</b></td><td>52 <a href="word-split.test.html#L866">Regression: "${!v*}"x should not be split</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'axb\naxbx\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-52-mksh"></a><b>mksh</b></td><td>52 <a href="word-split.test.html#L866">Regression: "${!v*}"x should not be split</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-52-ksh"></a><b>ksh</b></td><td>52 <a href="word-split.test.html#L866">Regression: "${!v*}"x should not be split</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'axb\naxbx\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[4]: ${!axb*}: bad substitution
+</pre></td></tr><tr><td><a name="details-52-toysh"></a><b>toysh</b></td><td>52 <a href="word-split.test.html#L866">Regression: "${!v*}"x should not be split</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'axb\naxbx\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-52-sush"></a><b>sush</b></td><td>52 <a href="word-split.test.html#L866">Regression: "${!v*}"x should not be split</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'axb\naxbx\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: `${!axb*}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: `${!axb*}': bad substitution
+</pre></td></tr><tr><td><a name="details-52-brush"></a><b>brush</b></td><td>52 <a href="word-split.test.html#L866">Regression: "${!v*}"x should not be split</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'axb\naxbx\n'
+Got      'axb\naxb\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>axb
+axb
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-53-zsh"></a><b>zsh</b></td><td>53 <a href="word-split.test.html#L881">Regression: ${!v} should be split</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '\n5\n'
+Got      '5\n5\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>5
+5
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-54-zsh"></a><b>zsh</b></td><td>54 <a href="word-split.test.html#L892">Regression: "${v:-AxBxC}"x should not be split</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'AxBxC\nAxBxCx\nA B C\nA B Cx\nAxBxC\nAxBxCx\nAxBxC\nAxBxCx\n'
+Got      'AxBxC\nAxBxCx\nAxBxC\nAxBxCx\nAxBxC\nAxBxCx\nAxBxC\nAxBxCx\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>AxBxC
+AxBxCx
+AxBxC
+AxBxCx
+AxBxC
+AxBxCx
+AxBxC
+AxBxCx
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-54-toysh"></a><b>toysh</b></td><td>54 <a href="word-split.test.html#L892">Regression: "${v:-AxBxC}"x should not be split</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'AxBxC\nAxBxCx\nA B C\nA B Cx\nAxBxC\nAxBxCx\nAxBxC\nAxBxCx\n'
+Got      'AxBxC\nAxBxCx\nA B C\nA B Cx\n"A B C"\n"A B C"x\n"AxBxC"\n"AxBxC"x\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>AxBxC
+AxBxCx
+A B C
+A B Cx
+"A B C"
+"A B C"x
+"AxBxC"
+"AxBxC"x
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-54-sush"></a><b>sush</b></td><td>54 <a href="word-split.test.html#L892">Regression: "${v:-AxBxC}"x should not be split</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'AxBxC\nAxBxCx\nA B C\nA B Cx\nAxBxC\nAxBxCx\nAxBxC\nAxBxCx\n'
+Got      'AxBxC\nAxBxCx\nAxBxC\nAxBxCx\nAxBxC\nAxBxCx\nAxBxC\nAxBxCx\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>AxBxC
+AxBxCx
+AxBxC
+AxBxCx
+AxBxC
+AxBxCx
+AxBxC
+AxBxCx
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-54-brush"></a><b>brush</b></td><td>54 <a href="word-split.test.html#L892">Regression: "${v:-AxBxC}"x should not be split</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'AxBxC\nAxBxCx\nA B C\nA B Cx\nAxBxC\nAxBxCx\nAxBxC\nAxBxCx\n'
+Got      'AxBxC\nAxBxC\nA B C\nA B C\nA B C\nA B C\nAxBxC\nAxBxC\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>AxBxC
+AxBxC
+A B C
+A B C
+A B C
+A B C
+AxBxC
+AxBxC
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

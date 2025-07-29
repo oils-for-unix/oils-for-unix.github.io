@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sh-usage: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for sh-usage.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>12</td><td>10</td><td>11</td><td>12</td><td>9</td><td>9</td><td>7</td><td>8</td><td>9</td><td>14</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>1</td><td>3</td><td>0</td><td>2</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>3</td><td>0</td><td>0</td><td>5</td><td>7</td><td>6</td><td>5</td><td>0</td><td></td></tr>
+<tr><td class="timeout">TIME</td> <td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>14</td><td>14</td><td>14</td><td>14</td><td>14</td><td>14</td><td>14</td><td>14</td><td>14</td><td>14</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-usage.test.html#L4">sh -c</a></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-usage.test.html#L9">empty -c input</a></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-usage.test.html#L15">sh +c is accepted</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-usage.test.html#L22">empty stdin</a></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-usage.test.html#L28">shell obeys --help (regression for OSH)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-usage.test.html#L38">args are passed</a></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-usage.test.html#L42">args that look like flags are passed after script</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-usage.test.html#L49">args that look like flags are passed after -c</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-usage.test.html#L53">exit with explicit arg</a></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-usage.test.html#L57">exit with no args</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="timeout">TIME</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-usage.test.html#L62">--rcfile in non-interactive shell prints warnings</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-10-bash">details</a></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-usage.test.html#L84">accepts -l flag</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-usage.test.html#L89">accepts --login flag (dash and mksh don't accept long flags)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-usage.test.html#L96">osh --eval</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-13-bash">details</a></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"><a href="#details-13-ksh">details</a></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>101 passed, 2 OK, 10 not implemented, 0 BUG, 26 failed, 1 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="sh-usage.test.html#L15">sh +c is accepted</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: echo hi: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="sh-usage.test.html#L15">sh +c is accepted</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'hi\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: echo hi: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="sh-usage.test.html#L15">sh +c is accepted</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'hi\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: +c: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="sh-usage.test.html#L15">sh +c is accepted</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'hi\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: echo hi: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="sh-usage.test.html#L15">sh +c is accepted</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'hi\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: failed to source file: +c; i/o error: No such file or directory (os error 2)
+</pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="sh-usage.test.html#L28">shell obeys --help (regression for OSH)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 0: Illegal option --
+</pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="sh-usage.test.html#L28">shell obeys --help (regression for OSH)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'yes\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>BusyBox v1.35.0 (2024-01-25 12:41:21 EST) multi-call binary.
+
+Usage: ash [-il] [-|+Cabefmnuvx] [-|+o OPT]... [-c 'SCRIPT' [ARG0 ARGS] | FILE ARGS | -s ARGS]
+
+Unix shell interpreter
+</pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="sh-usage.test.html#L28">shell obeys --help (regression for OSH)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: mksh: --: unknown option
+</pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="sh-usage.test.html#L28">shell obeys --help (regression for OSH)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'yes\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: --: unknown option
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="sh-usage.test.html#L28">shell obeys --help (regression for OSH)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'yes\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>: line : set: --: invalid option
+</pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="sh-usage.test.html#L42">args that look like flags are passed after script</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['--help', '--help', '-h']\n"
+Got      'brush is a Rust-implemented, POSIX-style shell that aims to be compatible with bash.\n\nbrush is a work in progress. If you encounter any issues or discrepancies in behavior from bash,\nplease report them at https://github.com/reubeno/brush.\n\nUsage: brush [OPTIONS] [SCRIPT_PATH] [SCRIPT_ARGS]...\n\nArguments:\n  [SCRIPT_PATH]\n          Path to script to execute\n\n  [SCRIPT_ARGS]...\n          Arguments for script\n\nOptions:\n      --help\n          Display usage information\n\n      --version\n          Display shell version\n\n  -C\n          Enable noclobber shell option\n\n  -c &lt;COMMAND&gt;\n          Execute the provided command and then exit\n\n  -i\n          Run in interactive mode\n\n  -l, --login\n          Make shell act as if it had been invoked as a login shell\n\n  -n\n          Do not execute commands\n\n      --noediting\n          Don\'t use readline for input\n\n      --noprofile\n          Don\'t process any profile/login files (`/etc/profile`, `~/.bash_profile`, `~/.bash_login`,\n          `~/.profile`)\n\n      --norc\n          Don\'t process "rc" files if the shell is interactive (e.g., `~/.bashrc`, `~/.brushrc`)\n\n      --noenv\n          Don\'t inherit environment variables from the calling process\n\n  -o &lt;OPTION&gt;\n          Enable option (set -o option)\n\n  -O &lt;SHOPT_OPTION&gt;\n          Enable shopt option\n\n      --posix\n          Disable non-POSIX extensions\n\n      --rcfile &lt;FILE&gt;\n          Path to the rc file to load in interactive shells (instead of bash.bashrc and ~/.bashrc)\n\n  -s\n          Read commands from standard input\n\n      --sh\n          Run in sh compatibility mode\n\n  -t\n          Run only one command\n\n  -v, --verbose\n          Print input when it\'s processed\n\n  -x\n          Print commands as they execute\n\n      --disable-bracketed-paste\n          Disable bracketed paste\n\n      --disable-color\n          Disable colorized output\n\n      --enable-highlighting\n          Enable syntax highlighting (experimental)\n\n      --input-backend &lt;INPUT_BACKEND&gt;\n          Input backend\n\n          Possible values:\n          - reedline: Richest input backend, based on reedline\n          - basic:    Basic input backend that provides minimal completion support for testing\n          - minimal:  Most minimal input backend\n\n      --debug &lt;EVENT&gt;\n          Enable debug logging for classes of tracing events\n\n          Possible values:\n          - arithmetic:    Traces parsing and evaluation of arithmetic expressions\n          - commands:      Traces command execution\n          - complete:      Traces command completion generation\n          - expand:        Traces word expansion\n          - functions:     Traces functions\n          - input:         Traces input controls\n          - jobs:          Traces job management\n          - parse:         Traces the process of parsing tokens into an abstract syntax tree\n          - pattern:       Traces pattern matching\n          - tokenize:      Traces the process of tokenizing input text\n          - unimplemented: Traces usage of unimplemented functionality\n\n      --disable-event &lt;EVENT&gt;\n          Disable logging for classes of tracing events (takes same event types as --debug)\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>brush is a Rust-implemented, POSIX-style shell that aims to be compatible with bash.
+
+brush is a work in progress. If you encounter any issues or discrepancies in behavior from bash,
+please report them at https://github.com/reubeno/brush.
+
+Usage: brush [OPTIONS] [SCRIPT_PATH] [SCRIPT_ARGS]...
+
+Arguments:
+  [SCRIPT_PATH]
+          Path to script to execute
+
+  [SCRIPT_ARGS]...
+          Arguments for script
+
+Options:
+      --help
+          Display usage information
+
+      --version
+          Display shell version
+
+  -C
+          Enable noclobber shell option
+
+  -c &lt;COMMAND&gt;
+          Execute the provided command and then exit
+
+  -i
+          Run in interactive mode
+
+  -l, --login
+          Make shell act as if it had been invoked as a login shell
+
+  -n
+          Do not execute commands
+
+      --noediting
+          Don't use readline for input
+
+      --noprofile
+          Don't process any profile/login files (`/etc/profile`, `~/.bash_profile`, `~/.bash_login`,
+          `~/.profile`)
+
+      --norc
+          Don't process "rc" files if the shell is interactive (e.g., `~/.bashrc`, `~/.brushrc`)
+
+      --noenv
+          Don't inherit environment variables from the calling process
+
+  -o &lt;OPTION&gt;
+          Enable option (set -o option)
+
+  -O &lt;SHOPT_OPTION&gt;
+          Enable shopt option
+
+      --posix
+          Disable non-POSIX extensions
+
+      --rcfile &lt;FILE&gt;
+          Path to the rc file to load in interactive shells (instead of bash.bashrc and ~/.bashrc)
+
+  -s
+          Read commands from standard input
+
+      --sh
+          Run in sh compatibility mode
+
+  -t
+          Run only one command
+
+  -v, --verbose
+          Print input when it's processed
+
+  -x
+          Print commands as they execute
+
+      --disable-bracketed-paste
+          Disable bracketed paste
+
+      --disable-color
+          Disable colorized output
+
+      --enable-highlighting
+          Enable syntax highlighting (experimental)
+
+      --input-backend &lt;INPUT_BACKEND&gt;
+          Input backend
+
+          Possible values:
+          - reedline: Richest input backend, based on reedline
+          - basic:    Basic input backend that provides minimal completion support for testing
+          - minimal:  Most minimal input backend
+
+      --debug &lt;EVENT&gt;
+          Enable debug logging for classes of tracing events
+
+          Possible values:
+          - arithmetic:    Traces parsing and evaluation of arithmetic expressions
+          - commands:      Traces command execution
+          - complete:      Traces command completion generation
+          - expand:        Traces word expansion
+          - functions:     Traces functions
+          - input:         Traces input controls
+          - jobs:          Traces job management
+          - parse:         Traces the process of parsing tokens into an abstract syntax tree
+          - pattern:       Traces pattern matching
+          - tokenize:      Traces the process of tokenizing input text
+          - unimplemented: Traces usage of unimplemented functionality
+
+      --disable-event &lt;EVENT&gt;
+          Disable logging for classes of tracing events (takes same event types as --debug)
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="sh-usage.test.html#L49">args that look like flags are passed after -c</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['--help', '-h']\n"
+Got      'Toybox 0.8.12 multicall binary (see toybox --help)\n\nusage: sh [-c command] [script]\n\nCommand shell.  Runs a shell script, or reads input interactively\nand responds to it. Roughly compatible with "bash". Run "help" for\nlist of built-in commands.\n\n-c\tcommand line to execute\n-i\tinteractive mode (default when STDIN is a tty)\n-s\tdon\'t run script (args set $* parameters but read commands from stdin)\n\nCommand shells parse each line of input (prompting when interactive), perform\nvariable expansion and redirection, execute commands (spawning child processes\nand background jobs), and perform flow control based on the return code.\n\nParsing:\n  syntax errors\n\nInteractive prompts:\n  line continuation\n\nVariable expansion:\n  Note: can cause syntax errors at runtime\n\nRedirection:\n  HERE documents (parsing)\n  Pipelines (flow control and job control)\n\nRunning commands:\n  process state\n  builtins\n    cd [[ ]] (( ))\n    ! : [ # TODO: help for these?\n    true false help echo kill printf pwd test\n  child processes\n\nJob control:\n  &amp;    Background process\n  Ctrl-C kill process\n  Ctrl-Z suspend process\n  bg fg jobs kill\n\nFlow control:\n;    End statement (same as newline)\n&amp;    Background process (returns true unless syntax error)\n&amp;&amp;   If this fails, next command fails without running\n||   If this succeeds, next command succeeds without running\n|    Pipelines! (Can of worms...)\nfor {name [in...]}|((;;)) do; BODY; done\nif TEST; then BODY; fi\nwhile TEST; do BODY; done\ncase a in X);; esac\n[[ TEST ]]\n((MATH))\n\nJob control:\n&amp;    Background process\nCtrl-C kill process\nCtrl-Z suspend process\nbg fg jobs kill\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>Toybox 0.8.12 multicall binary (see toybox --help)
+
+usage: sh [-c command] [script]
+
+Command shell.  Runs a shell script, or reads input interactively
+and responds to it. Roughly compatible with "bash". Run "help" for
+list of built-in commands.
+
+-c	command line to execute
+-i	interactive mode (default when STDIN is a tty)
+-s	don't run script (args set $* parameters but read commands from stdin)
+
+Command shells parse each line of input (prompting when interactive), perform
+variable expansion and redirection, execute commands (spawning child processes
+and background jobs), and perform flow control based on the return code.
+
+Parsing:
+  syntax errors
+
+Interactive prompts:
+  line continuation
+
+Variable expansion:
+  Note: can cause syntax errors at runtime
+
+Redirection:
+  HERE documents (parsing)
+  Pipelines (flow control and job control)
+
+Running commands:
+  process state
+  builtins
+    cd [[ ]] (( ))
+    ! : [ # TODO: help for these?
+    true false help echo kill printf pwd test
+  child processes
+
+Job control:
+  &amp;    Background process
+  Ctrl-C kill process
+  Ctrl-Z suspend process
+  bg fg jobs kill
+
+Flow control:
+;    End statement (same as newline)
+&amp;    Background process (returns true unless syntax error)
+&amp;&amp;   If this fails, next command fails without running
+||   If this succeeds, next command succeeds without running
+|    Pipelines! (Can of worms...)
+for {name [in...]}|((;;)) do; BODY; done
+if TEST; then BODY; fi
+while TEST; do BODY; done
+case a in X);; esac
+[[ TEST ]]
+((MATH))
+
+Job control:
+&amp;    Background process
+Ctrl-C kill process
+Ctrl-Z suspend process
+bg fg jobs kill
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="sh-usage.test.html#L49">args that look like flags are passed after -c</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['--help', '-h']\n"
+Got      'brush is a Rust-implemented, POSIX-style shell that aims to be compatible with bash.\n\nbrush is a work in progress. If you encounter any issues or discrepancies in behavior from bash,\nplease report them at https://github.com/reubeno/brush.\n\nUsage: brush [OPTIONS] [SCRIPT_PATH] [SCRIPT_ARGS]...\n\nArguments:\n  [SCRIPT_PATH]\n          Path to script to execute\n\n  [SCRIPT_ARGS]...\n          Arguments for script\n\nOptions:\n      --help\n          Display usage information\n\n      --version\n          Display shell version\n\n  -C\n          Enable noclobber shell option\n\n  -c &lt;COMMAND&gt;\n          Execute the provided command and then exit\n\n  -i\n          Run in interactive mode\n\n  -l, --login\n          Make shell act as if it had been invoked as a login shell\n\n  -n\n          Do not execute commands\n\n      --noediting\n          Don\'t use readline for input\n\n      --noprofile\n          Don\'t process any profile/login files (`/etc/profile`, `~/.bash_profile`, `~/.bash_login`,\n          `~/.profile`)\n\n      --norc\n          Don\'t process "rc" files if the shell is interactive (e.g., `~/.bashrc`, `~/.brushrc`)\n\n      --noenv\n          Don\'t inherit environment variables from the calling process\n\n  -o &lt;OPTION&gt;\n          Enable option (set -o option)\n\n  -O &lt;SHOPT_OPTION&gt;\n          Enable shopt option\n\n      --posix\n          Disable non-POSIX extensions\n\n      --rcfile &lt;FILE&gt;\n          Path to the rc file to load in interactive shells (instead of bash.bashrc and ~/.bashrc)\n\n  -s\n          Read commands from standard input\n\n      --sh\n          Run in sh compatibility mode\n\n  -t\n          Run only one command\n\n  -v, --verbose\n          Print input when it\'s processed\n\n  -x\n          Print commands as they execute\n\n      --disable-bracketed-paste\n          Disable bracketed paste\n\n      --disable-color\n          Disable colorized output\n\n      --enable-highlighting\n          Enable syntax highlighting (experimental)\n\n      --input-backend &lt;INPUT_BACKEND&gt;\n          Input backend\n\n          Possible values:\n          - reedline: Richest input backend, based on reedline\n          - basic:    Basic input backend that provides minimal completion support for testing\n          - minimal:  Most minimal input backend\n\n      --debug &lt;EVENT&gt;\n          Enable debug logging for classes of tracing events\n\n          Possible values:\n          - arithmetic:    Traces parsing and evaluation of arithmetic expressions\n          - commands:      Traces command execution\n          - complete:      Traces command completion generation\n          - expand:        Traces word expansion\n          - functions:     Traces functions\n          - input:         Traces input controls\n          - jobs:          Traces job management\n          - parse:         Traces the process of parsing tokens into an abstract syntax tree\n          - pattern:       Traces pattern matching\n          - tokenize:      Traces the process of tokenizing input text\n          - unimplemented: Traces usage of unimplemented functionality\n\n      --disable-event &lt;EVENT&gt;\n          Disable logging for classes of tracing events (takes same event types as --debug)\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>brush is a Rust-implemented, POSIX-style shell that aims to be compatible with bash.
+
+brush is a work in progress. If you encounter any issues or discrepancies in behavior from bash,
+please report them at https://github.com/reubeno/brush.
+
+Usage: brush [OPTIONS] [SCRIPT_PATH] [SCRIPT_ARGS]...
+
+Arguments:
+  [SCRIPT_PATH]
+          Path to script to execute
+
+  [SCRIPT_ARGS]...
+          Arguments for script
+
+Options:
+      --help
+          Display usage information
+
+      --version
+          Display shell version
+
+  -C
+          Enable noclobber shell option
+
+  -c &lt;COMMAND&gt;
+          Execute the provided command and then exit
+
+  -i
+          Run in interactive mode
+
+  -l, --login
+          Make shell act as if it had been invoked as a login shell
+
+  -n
+          Do not execute commands
+
+      --noediting
+          Don't use readline for input
+
+      --noprofile
+          Don't process any profile/login files (`/etc/profile`, `~/.bash_profile`, `~/.bash_login`,
+          `~/.profile`)
+
+      --norc
+          Don't process "rc" files if the shell is interactive (e.g., `~/.bashrc`, `~/.brushrc`)
+
+      --noenv
+          Don't inherit environment variables from the calling process
+
+  -o &lt;OPTION&gt;
+          Enable option (set -o option)
+
+  -O &lt;SHOPT_OPTION&gt;
+          Enable shopt option
+
+      --posix
+          Disable non-POSIX extensions
+
+      --rcfile &lt;FILE&gt;
+          Path to the rc file to load in interactive shells (instead of bash.bashrc and ~/.bashrc)
+
+  -s
+          Read commands from standard input
+
+      --sh
+          Run in sh compatibility mode
+
+  -t
+          Run only one command
+
+  -v, --verbose
+          Print input when it's processed
+
+  -x
+          Print commands as they execute
+
+      --disable-bracketed-paste
+          Disable bracketed paste
+
+      --disable-color
+          Disable colorized output
+
+      --enable-highlighting
+          Enable syntax highlighting (experimental)
+
+      --input-backend &lt;INPUT_BACKEND&gt;
+          Input backend
+
+          Possible values:
+          - reedline: Richest input backend, based on reedline
+          - basic:    Basic input backend that provides minimal completion support for testing
+          - minimal:  Most minimal input backend
+
+      --debug &lt;EVENT&gt;
+          Enable debug logging for classes of tracing events
+
+          Possible values:
+          - arithmetic:    Traces parsing and evaluation of arithmetic expressions
+          - commands:      Traces command execution
+          - complete:      Traces command completion generation
+          - expand:        Traces word expansion
+          - functions:     Traces functions
+          - input:         Traces input controls
+          - jobs:          Traces job management
+          - parse:         Traces the process of parsing tokens into an abstract syntax tree
+          - pattern:       Traces pattern matching
+          - tokenize:      Traces the process of tokenizing input text
+          - unimplemented: Traces usage of unimplemented functionality
+
+      --disable-event &lt;EVENT&gt;
+          Disable logging for classes of tracing events (takes same event types as --debug)
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="sh-usage.test.html#L57">exit with no args</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="sh-usage.test.html#L62">--rcfile in non-interactive shell prints warnings</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>==&gt; interactive.txt &lt;==
+dash: 0: Illegal option --
+
+==&gt; non-interactive.txt &lt;==
+dash: 0: Illegal option --
+</pre><i>stderr:</i> <br/>
+<pre>warned=1
+warned=1
+</pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="sh-usage.test.html#L62">--rcfile in non-interactive shell prints warnings</a><br/><br/>
+<span class="assertion">
+[ash stderr]
+Expected 'warned=1\nwarned=0\n'
+Got      'warned=1\nwarned=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>rc
+rc
+==&gt; interactive.txt &lt;==
+
+==&gt; non-interactive.txt &lt;==
+</pre><i>stderr:</i> <br/>
+<pre>warned=1
+warned=1
+</pre></td></tr><tr><td><a name="details-10-zsh"></a><b>zsh</b></td><td>10 <a href="sh-usage.test.html#L62">--rcfile in non-interactive shell prints warnings</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>==&gt; interactive.txt &lt;==
+zsh: no such option: rcfile
+
+==&gt; non-interactive.txt &lt;==
+zsh: no such option: rcfile
+</pre><i>stderr:</i> <br/>
+<pre>warned=1
+warned=1
+</pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="sh-usage.test.html#L62">--rcfile in non-interactive shell prints warnings</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>==&gt; interactive.txt &lt;==
+mksh: mksh: --: unknown option
+
+==&gt; non-interactive.txt &lt;==
+mksh: mksh: --: unknown option
+</pre><i>stderr:</i> <br/>
+<pre>warned=1
+warned=1
+</pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="sh-usage.test.html#L62">--rcfile in non-interactive shell prints warnings</a><br/><br/>
+<span class="assertion">
+[ksh stderr]
+Expected 'warned=1\nwarned=0\n'
+Got      'warned=1\nwarned=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>==&gt; interactive.txt &lt;==
+E: ksh: --: unknown option
+
+==&gt; non-interactive.txt &lt;==
+E: ksh: --: unknown option
+</pre><i>stderr:</i> <br/>
+<pre>warned=1
+warned=1
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="sh-usage.test.html#L62">--rcfile in non-interactive shell prints warnings</a><br/><br/>
+<span class="assertion">
+[toysh stderr]
+Expected 'warned=1\nwarned=0\n'
+Got      'warned=1\nwarned=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>==&gt; interactive.txt &lt;==
+sh: Unknown option 'rcfile' (see "sh --help")
+
+==&gt; non-interactive.txt &lt;==
+sh: Unknown option 'rcfile' (see "sh --help")
+</pre><i>stderr:</i> <br/>
+<pre>warned=1
+warned=1
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="sh-usage.test.html#L62">--rcfile in non-interactive shell prints warnings</a><br/><br/>
+<span class="assertion">
+[sush stderr]
+Expected 'warned=1\nwarned=0\n'
+Got      'warned=1\nwarned=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>==&gt; interactive.txt &lt;==
+: line : set: --: invalid option
+
+==&gt; non-interactive.txt &lt;==
+: line : set: --: invalid option
+</pre><i>stderr:</i> <br/>
+<pre>warned=1
+warned=1
+</pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="sh-usage.test.html#L62">--rcfile in non-interactive shell prints warnings</a><br/><br/>
+<span class="assertion">
+[brush stderr]
+Expected 'warned=1\nwarned=0\n'
+Got      'warned=1\nwarned=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>rc
+==&gt; interactive.txt &lt;==
+exit
+
+==&gt; non-interactive.txt &lt;==
+</pre><i>stderr:</i> <br/>
+<pre>warned=1
+warned=1
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="sh-usage.test.html#L84">accepts -l flag</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: Unknown option 'l' (see "sh --help")
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="sh-usage.test.html#L84">accepts -l flag</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>: line : set: -l: invalid option
+</pre></td></tr><tr><td><a name="details-12-dash"></a><b>dash</b></td><td>12 <a href="sh-usage.test.html#L89">accepts --login flag (dash and mksh don't accept long flags)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 0: Illegal option --
+</pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="sh-usage.test.html#L89">accepts --login flag (dash and mksh don't accept long flags)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: mksh: --: unknown option
+</pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="sh-usage.test.html#L89">accepts --login flag (dash and mksh don't accept long flags)</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: --: unknown option
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="sh-usage.test.html#L89">accepts --login flag (dash and mksh don't accept long flags)</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: Unknown option 'login' (see "sh --help")
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="sh-usage.test.html#L89">accepts --login flag (dash and mksh don't accept long flags)</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>: line : -g: invalid option name
+</pre></td></tr><tr><td><a name="details-13-bash"></a><b>bash</b></td><td>13 <a href="sh-usage.test.html#L96">osh --eval</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="sh-usage.test.html#L96">osh --eval</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="sh-usage.test.html#L96">osh --eval</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'one x y z\nstatus=0 flag -c x y z\n\none x y z\nfail x y z\nstatus=42 flag -c x y z\nstatus=0\n'
+Got      'one -c echo status=$? flag -c "$@" dummy x y z\n\none --eval fail.sh -c echo status=$? flag -c "$@" dummy x y z\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one -c echo status=$? flag -c "$@" dummy x y z
+
+one --eval fail.sh -c echo status=$? flag -c "$@" dummy x y z
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="sh-usage.test.html#L96">osh --eval</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="sh-usage.test.html#L96">osh --eval</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-ksh"></a><b>ksh</b></td><td>13 <a href="sh-usage.test.html#L96">osh --eval</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'one x y z\nstatus=0 flag -c x y z\n\none x y z\nfail x y z\nstatus=42 flag -c x y z\nstatus=0\n'
+Got      '\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: --: unknown option
+E: ksh: --: unknown option
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="sh-usage.test.html#L96">osh --eval</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'one x y z\nstatus=0 flag -c x y z\n\none x y z\nfail x y z\nstatus=42 flag -c x y z\nstatus=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="sh-usage.test.html#L96">osh --eval</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'one x y z\nstatus=0 flag -c x y z\n\none x y z\nfail x y z\nstatus=42 flag -c x y z\nstatus=0\n'
+Got      '\nstatus=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>: line : set: --: invalid option
+: line : set: --: invalid option
+</pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="sh-usage.test.html#L96">osh --eval</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'one x y z\nstatus=0 flag -c x y z\n\none x y z\nfail x y z\nstatus=42 flag -c x y z\nstatus=0\n'
+Got      '\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: failed to source file: --eval; i/o error: No such file or directory (os error 2)
+-c: command not found
+[31mERROR[0m error: failed to source file: --eval; i/o error: No such file or directory (os error 2)
+-c: command not found
+</pre></td></tr></table></body></html>

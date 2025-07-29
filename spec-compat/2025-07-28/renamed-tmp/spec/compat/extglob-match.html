@@ -1,0 +1,1922 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>extglob-match: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for extglob-match.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>29</td><td>0</td><td>0</td><td>2</td><td>22</td><td>26</td><td>1</td><td>23</td><td>28</td><td>25</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>2</td><td>0</td><td>0</td><td>0</td><td>1</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>29</td><td>29</td><td>27</td><td>0</td><td>0</td><td>28</td><td>6</td><td>1</td><td>3</td><td></td></tr>
+<tr><td>total</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L8">@ matches exactly one</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"><a href="#details-0-ash">details</a></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L17">@() with variable arms</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="extglob-match.test.html#L28">extglob in variable</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L55">Matching literal '@(cc)'</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L77">nested @()</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L94">nested @() with quotes and vars</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L103">? matches 0 or 1</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L112">+ matches 1 or more</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L121">* matches 0 or more</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L130">simple repetition with *(foo) and +(Foo)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"><a href="#details-9-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L139">! matches none</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L148">match is anchored</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-dash">details</a></td><td class="details-row"><a href="#details-11-ash">details</a></td><td class="details-row"><a href="#details-11-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L159">repeated match is anchored</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-dash">details</a></td><td class="details-row"><a href="#details-12-ash">details</a></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L170">repetition with glob</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L181">No brace expansion in ==</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"><a href="#details-14-ash">details</a></td><td class="details-row"><a href="#details-14-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L191">adjacent extglob</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"><a href="#details-15-ash">details</a></td><td class="details-row"><a href="#details-15-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L201">nested extglob</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-dash">details</a></td><td class="details-row"><a href="#details-16-ash">details</a></td><td class="details-row"><a href="#details-16-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L215">extglob empty string</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-dash">details</a></td><td class="details-row"><a href="#details-17-ash">details</a></td><td class="details-row"><a href="#details-17-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L224">extglob empty pattern</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-dash">details</a></td><td class="details-row"><a href="#details-18-ash">details</a></td><td class="details-row"><a href="#details-18-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L237">case with extglob</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-dash">details</a></td><td class="details-row"><a href="#details-19-ash">details</a></td><td class="details-row"><a href="#details-19-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"><a href="#details-19-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L272">[[ $x == !($str) ]]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-dash">details</a></td><td class="details-row"><a href="#details-20-ash">details</a></td><td class="details-row"><a href="#details-20-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"><a href="#details-20-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="extglob-match.test.html#L283">Turning extglob on changes the meaning of [[ !(str) ]] in bash</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-dash">details</a></td><td class="details-row"><a href="#details-21-ash">details</a></td><td class="details-row"><a href="#details-21-zsh">details</a></td><td class="details-row"><a href="#details-21-mksh">details</a></td><td class="details-row"><a href="#details-21-ksh">details</a></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"><a href="#details-21-brush">details</a></td><td class="details-row"><a href="#details-21-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L303">With extglob on, !($str) on the left or right of == has different meanings</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-dash">details</a></td><td class="details-row"><a href="#details-22-ash">details</a></td><td class="details-row"><a href="#details-22-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="extglob-match.test.html#L312">extglob inside arg word</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-dash">details</a></td><td class="details-row"><a href="#details-23-ash">details</a></td><td class="details-row"><a href="#details-23-zsh">details</a></td><td class="details-row"><a href="#details-23-mksh">details</a></td><td class="details-row"><a href="#details-23-ksh">details</a></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L327">extglob is not detected in regex!</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-dash">details</a></td><td class="details-row"><a href="#details-24-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-24-mksh">details</a></td><td class="details-row"><a href="#details-24-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L336">regular glob of single unicode char</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-dash">details</a></td><td class="details-row"><a href="#details-25-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-25-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L351">extended glob of single unicode char</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-dash">details</a></td><td class="details-row"><a href="#details-26-ash">details</a></td><td class="details-row"><a href="#details-26-zsh">details</a></td><td class="details-row"><a href="#details-26-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="extglob-match.test.html#L366">Extended glob in ${x//pat/replace}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-dash">details</a></td><td class="details-row"><a href="#details-27-ash">details</a></td><td class="details-row"><a href="#details-27-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="extglob-match.test.html#L378">Extended glob in ${x%PATTERN}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-dash">details</a></td><td class="details-row"><a href="#details-28-ash">details</a></td><td class="details-row"><a href="#details-28-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>156 passed, 0 OK, 6 not implemented, 5 BUG, 123 failed, 0 timeouts, 0 cases skipped
+3 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="extglob-match.test.html#L8">@ matches exactly one</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'TRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-0-ash"></a><b>ash</b></td><td>0 <a href="extglob-match.test.html#L8">@ matches exactly one</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'TRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="extglob-match.test.html#L8">@ matches exactly one</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'TRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="extglob-match.test.html#L8">@ matches exactly one</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'TRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="extglob-match.test.html#L17">@() with variable arms</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'TRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 4: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="extglob-match.test.html#L17">@() with variable arms</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'TRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="extglob-match.test.html#L17">@() with variable arms</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'TRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="extglob-match.test.html#L17">@() with variable arms</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'TRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="extglob-match.test.html#L28">extglob in variable</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'TRUE\nTRUE\nFALSE\nFALSE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 3: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="extglob-match.test.html#L28">extglob in variable</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'TRUE\nTRUE\nFALSE\nFALSE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="extglob-match.test.html#L28">extglob in variable</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'TRUE\nTRUE\nFALSE\nFALSE\nFALSE\n'
+Got      'FALSE\nFALSE\nFALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+FALSE
+FALSE
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="extglob-match.test.html#L28">extglob in variable</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+FALSE
+FALSE
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="extglob-match.test.html#L28">extglob in variable</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'TRUE\nTRUE\nFALSE\nFALSE\nFALSE\n'
+Got      'FALSE\nFALSE\nFALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+FALSE
+FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+[[: too many arguments
+[[: too many arguments
+</pre></td></tr><tr><td><a name="details-2-osh"></a><b>osh</b></td><td>2 <a href="extglob-match.test.html#L28">extglob in variable</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'TRUE\nTRUE\nFALSE\nFALSE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[osh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  g=--@(help|verbose)
+    ^~
+[ stdin ]:3: fatal: extended glob not allowed in this word
+</pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="extglob-match.test.html#L55">Matching literal '@(cc)'</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'status=0\nstatus=1\nstatus=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="extglob-match.test.html#L55">Matching literal '@(cc)'</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=0\nstatus=1\nstatus=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="extglob-match.test.html#L55">Matching literal '@(cc)'</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=0\nstatus=1\nstatus=0\nstatus=1\n'
+Got      'status=1\nstatus=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="extglob-match.test.html#L55">Matching literal '@(cc)'</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nstatus=1\nstatus=0\nstatus=1\n'
+Got      'status=1\nstatus=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="extglob-match.test.html#L55">Matching literal '@(cc)'</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\nstatus=1\nstatus=0\nstatus=1\n'
+Got      'status=0\nstatus=0\nstatus=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="extglob-match.test.html#L77">nested @()</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'TRUE\nTRUE\nTRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 3: [[: not found
+dash: 4: [[: not found
+dash: 5: [[: not found
+dash: 6: [[: not found
+</pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="extglob-match.test.html#L77">nested @()</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'TRUE\nTRUE\nTRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="extglob-match.test.html#L77">nested @()</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'TRUE\nTRUE\nTRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="extglob-match.test.html#L77">nested @()</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="extglob-match.test.html#L77">nested @()</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'TRUE\nTRUE\nTRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="extglob-match.test.html#L94">nested @() with quotes and vars</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'TRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 3: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="extglob-match.test.html#L94">nested @() with quotes and vars</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'TRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="extglob-match.test.html#L94">nested @() with quotes and vars</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'TRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="extglob-match.test.html#L94">nested @() with quotes and vars</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'TRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="extglob-match.test.html#L94">nested @() with quotes and vars</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'TRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="extglob-match.test.html#L103">? matches 0 or 1</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'TRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="extglob-match.test.html#L103">? matches 0 or 1</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'TRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="extglob-match.test.html#L103">? matches 0 or 1</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'TRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="extglob-match.test.html#L103">? matches 0 or 1</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'TRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="extglob-match.test.html#L112">+ matches 1 or more</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'TRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="extglob-match.test.html#L112">+ matches 1 or more</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'TRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="extglob-match.test.html#L112">+ matches 1 or more</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'TRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="extglob-match.test.html#L112">+ matches 1 or more</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'TRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="extglob-match.test.html#L121">* matches 0 or more</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'TRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-8-ash"></a><b>ash</b></td><td>8 <a href="extglob-match.test.html#L121">* matches 0 or more</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'TRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="extglob-match.test.html#L121">* matches 0 or more</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'TRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="extglob-match.test.html#L121">* matches 0 or more</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'TRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="extglob-match.test.html#L130">simple repetition with *(foo) and +(Foo)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'TRUE\nTRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-9-ash"></a><b>ash</b></td><td>9 <a href="extglob-match.test.html#L130">simple repetition with *(foo) and +(Foo)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'TRUE\nTRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-9-zsh"></a><b>zsh</b></td><td>9 <a href="extglob-match.test.html#L130">simple repetition with *(foo) and +(Foo)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'TRUE\nTRUE\n'
+Got      'TRUE\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="extglob-match.test.html#L130">simple repetition with *(foo) and +(Foo)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'TRUE\nTRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="extglob-match.test.html#L139">! matches none</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'TRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="extglob-match.test.html#L139">! matches none</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'TRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-10-zsh"></a><b>zsh</b></td><td>10 <a href="extglob-match.test.html#L139">! matches none</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'TRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="extglob-match.test.html#L139">! matches none</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'TRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-11-dash"></a><b>dash</b></td><td>11 <a href="extglob-match.test.html#L148">match is anchored</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'FALSE\nFALSE\nTRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-11-ash"></a><b>ash</b></td><td>11 <a href="extglob-match.test.html#L148">match is anchored</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'FALSE\nFALSE\nTRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-11-zsh"></a><b>zsh</b></td><td>11 <a href="extglob-match.test.html#L148">match is anchored</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'FALSE\nFALSE\nTRUE\n'
+Got      'FALSE\nFALSE\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+FALSE
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="extglob-match.test.html#L148">match is anchored</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'FALSE\nFALSE\nTRUE\n'
+Got      'FALSE\nFALSE\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-12-dash"></a><b>dash</b></td><td>12 <a href="extglob-match.test.html#L159">repeated match is anchored</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'FALSE\nFALSE\nTRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-12-ash"></a><b>ash</b></td><td>12 <a href="extglob-match.test.html#L159">repeated match is anchored</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'FALSE\nFALSE\nTRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="extglob-match.test.html#L159">repeated match is anchored</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'FALSE\nFALSE\nTRUE\n'
+Got      'FALSE\nFALSE\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+FALSE
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="extglob-match.test.html#L159">repeated match is anchored</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'FALSE\nFALSE\nTRUE\n'
+Got      'FALSE\nFALSE\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="extglob-match.test.html#L170">repetition with glob</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'TRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 3: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="extglob-match.test.html#L170">repetition with glob</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'TRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="extglob-match.test.html#L170">repetition with glob</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'TRUE\nFALSE\n'
+Got      'TRUE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="extglob-match.test.html#L170">repetition with glob</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'TRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="extglob-match.test.html#L181">No brace expansion in ==</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'TRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 3: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-14-ash"></a><b>ash</b></td><td>14 <a href="extglob-match.test.html#L181">No brace expansion in ==</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'TRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-14-zsh"></a><b>zsh</b></td><td>14 <a href="extglob-match.test.html#L181">No brace expansion in ==</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'TRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="extglob-match.test.html#L181">No brace expansion in ==</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'TRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+[[: too many arguments
+</pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="extglob-match.test.html#L191">adjacent extglob</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'TRUE\nTRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 3: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-15-ash"></a><b>ash</b></td><td>15 <a href="extglob-match.test.html#L191">adjacent extglob</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'TRUE\nTRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-15-zsh"></a><b>zsh</b></td><td>15 <a href="extglob-match.test.html#L191">adjacent extglob</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'TRUE\nTRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="extglob-match.test.html#L191">adjacent extglob</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'TRUE\nTRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-16-dash"></a><b>dash</b></td><td>16 <a href="extglob-match.test.html#L201">nested extglob</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'TRUE\nTRUE\nTRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 3: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-16-ash"></a><b>ash</b></td><td>16 <a href="extglob-match.test.html#L201">nested extglob</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'TRUE\nTRUE\nTRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-16-zsh"></a><b>zsh</b></td><td>16 <a href="extglob-match.test.html#L201">nested extglob</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'TRUE\nTRUE\nTRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="extglob-match.test.html#L201">nested extglob</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'TRUE\nTRUE\nTRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-17-dash"></a><b>dash</b></td><td>17 <a href="extglob-match.test.html#L215">extglob empty string</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'FALSE\nTRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-17-ash"></a><b>ash</b></td><td>17 <a href="extglob-match.test.html#L215">extglob empty string</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'FALSE\nTRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-17-zsh"></a><b>zsh</b></td><td>17 <a href="extglob-match.test.html#L215">extglob empty string</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'FALSE\nTRUE\n'
+Got      'FALSE\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="extglob-match.test.html#L215">extglob empty string</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'FALSE\nTRUE\n'
+Got      'FALSE\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-18-dash"></a><b>dash</b></td><td>18 <a href="extglob-match.test.html#L224">extglob empty pattern</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'TRUE\nTRUE\nFALSE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-18-ash"></a><b>ash</b></td><td>18 <a href="extglob-match.test.html#L224">extglob empty pattern</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'TRUE\nTRUE\nFALSE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-18-zsh"></a><b>zsh</b></td><td>18 <a href="extglob-match.test.html#L224">extglob empty pattern</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'TRUE\nTRUE\nFALSE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: parse error near `()'
+zsh: parse error near `()'
+</pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="extglob-match.test.html#L224">extglob empty pattern</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'TRUE\nTRUE\nFALSE\nFALSE\n'
+Got      'FALSE\nFALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-19-dash"></a><b>dash</b></td><td>19 <a href="extglob-match.test.html#L237">case with extglob</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'A\nA\nU\nB\nC\nD\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 4: Syntax error: "(" unexpected (expecting ")")
+</pre></td></tr><tr><td><a name="details-19-ash"></a><b>ash</b></td><td>19 <a href="extglob-match.test.html#L237">case with extglob</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'A\nA\nU\nB\nC\nD\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "(" (expecting ")")
+</pre></td></tr><tr><td><a name="details-19-zsh"></a><b>zsh</b></td><td>19 <a href="extglob-match.test.html#L237">case with extglob</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'A\nA\nU\nB\nC\nD\n'
+Got      'U\nU\nU\nU\nD\nU\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>U
+U
+U
+U
+D
+U
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="extglob-match.test.html#L237">case with extglob</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'A\nA\nU\nB\nC\nD\n'
+Got      'U\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>U
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+free(): invalid pointer
+</pre></td></tr><tr><td><a name="details-19-sush"></a><b>sush</b></td><td>19 <a href="extglob-match.test.html#L237">case with extglob</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'A\nA\nU\nB\nC\nD\n'
+Got      'A\nU\nC\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>A
+U
+C
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-dash"></a><b>dash</b></td><td>20 <a href="extglob-match.test.html#L272">[[ $x == !($str) ]]</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'TRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 4: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-20-ash"></a><b>ash</b></td><td>20 <a href="extglob-match.test.html#L272">[[ $x == !($str) ]]</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'TRUE\nFALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-20-zsh"></a><b>zsh</b></td><td>20 <a href="extglob-match.test.html#L272">[[ $x == !($str) ]]</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'TRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="extglob-match.test.html#L272">[[ $x == !($str) ]]</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'TRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+[[: too many arguments
+</pre></td></tr><tr><td><a name="details-20-sush"></a><b>sush</b></td><td>20 <a href="extglob-match.test.html#L272">[[ $x == !($str) ]]</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'TRUE\nFALSE\n'
+Got      'FALSE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-dash"></a><b>dash</b></td><td>21 <a href="extglob-match.test.html#L283">Turning extglob on changes the meaning of [[ !(str) ]] in bash</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'TRUE\nFALSE\nTRUE\nTRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-21-ash"></a><b>ash</b></td><td>21 <a href="extglob-match.test.html#L283">Turning extglob on changes the meaning of [[ !(str) ]] in bash</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'TRUE\nFALSE\nTRUE\nTRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-21-zsh"></a><b>zsh</b></td><td>21 <a href="extglob-match.test.html#L283">Turning extglob on changes the meaning of [[ !(str) ]] in bash</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'TRUE\nFALSE\nTRUE\nTRUE\n'
+Got      'TRUE\nTRUE\nTRUE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+TRUE
+TRUE
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-21-mksh"></a><b>mksh</b></td><td>21 <a href="extglob-match.test.html#L283">Turning extglob on changes the meaning of [[ !(str) ]] in bash</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+TRUE
+TRUE
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: shopt: not found
+</pre></td></tr><tr><td><a name="details-21-ksh"></a><b>ksh</b></td><td>21 <a href="extglob-match.test.html#L283">Turning extglob on changes the meaning of [[ !(str) ]] in bash</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+TRUE
+TRUE
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="extglob-match.test.html#L283">Turning extglob on changes the meaning of [[ !(str) ]] in bash</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'TRUE\nFALSE\nTRUE\nTRUE\n'
+Got      'TRUE\nTRUE\nTRUE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+TRUE
+TRUE
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="extglob-match.test.html#L283">Turning extglob on changes the meaning of [[ !(str) ]] in bash</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'TRUE\nFALSE\nTRUE\nTRUE\n'
+Got      'TRUE\nFALSE\nTRUE\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+FALSE
+TRUE
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-brush"></a><b>brush</b></td><td>21 <a href="extglob-match.test.html#L283">Turning extglob on changes the meaning of [[ !(str) ]] in bash</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'TRUE\nFALSE\nTRUE\nTRUE\n'
+Got      'TRUE\nTRUE\nTRUE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>TRUE
+TRUE
+TRUE
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-osh"></a><b>osh</b></td><td>21 <a href="extglob-match.test.html#L283">Turning extglob on changes the meaning of [[ !(str) ]] in bash</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'TRUE\nFALSE\nTRUE\nTRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[osh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  [[ !($empty) ]]  &amp;&amp; echo TRUE   # test if $empty is empty
+     ^~
+[ stdin ]:3: fatal: extended glob not allowed in this word
+</pre></td></tr><tr><td><a name="details-22-dash"></a><b>dash</b></td><td>22 <a href="extglob-match.test.html#L303">With extglob on, !($str) on the left or right of == has different meanings</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'TRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 3: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-22-ash"></a><b>ash</b></td><td>22 <a href="extglob-match.test.html#L303">With extglob on, !($str) on the left or right of == has different meanings</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'TRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-22-zsh"></a><b>zsh</b></td><td>22 <a href="extglob-match.test.html#L303">With extglob on, !($str) on the left or right of == has different meanings</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'TRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="extglob-match.test.html#L303">With extglob on, !($str) on the left or right of == has different meanings</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'TRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="extglob-match.test.html#L303">With extglob on, !($str) on the left or right of == has different meanings</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'TRUE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-dash"></a><b>dash</b></td><td>23 <a href="extglob-match.test.html#L312">extglob inside arg word</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'rhs\nrhs arg\nnope\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-23-ash"></a><b>ash</b></td><td>23 <a href="extglob-match.test.html#L312">extglob inside arg word</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'rhs\nrhs arg\nnope\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-23-zsh"></a><b>zsh</b></td><td>23 <a href="extglob-match.test.html#L312">extglob inside arg word</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'rhs\nrhs arg\nnope\n'
+Got      'nope\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>nope
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-23-mksh"></a><b>mksh</b></td><td>23 <a href="extglob-match.test.html#L312">extglob inside arg word</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>rhs
+nope
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-23-ksh"></a><b>ksh</b></td><td>23 <a href="extglob-match.test.html#L312">extglob inside arg word</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>rhs
+nope
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="extglob-match.test.html#L312">extglob inside arg word</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'rhs\nrhs arg\nnope\n'
+Got      'nope\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>nope
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-23-osh"></a><b>osh</b></td><td>23 <a href="extglob-match.test.html#L312">extglob inside arg word</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'rhs\nrhs arg\nnope\n'
+Got      'rhs\n'
+</span><br/>
+<span class="assertion">
+[osh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>rhs
+</pre><i>stderr:</i> <br/>
+<pre>  [[ foo == ${unset:-@(foo|bar)} ]] &amp;&amp; echo 'rhs arg'
+                     ^~
+[ stdin ]:3: fatal: Extended glob not allowed in this word
+</pre></td></tr><tr><td><a name="details-24-dash"></a><b>dash</b></td><td>24 <a href="extglob-match.test.html#L327">extglob is not detected in regex!</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'FALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-24-ash"></a><b>ash</b></td><td>24 <a href="extglob-match.test.html#L327">extglob is not detected in regex!</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'FALSE\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-24-mksh"></a><b>mksh</b></td><td>24 <a href="extglob-match.test.html#L327">extglob is not detected in regex!</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+mksh: &lt;stdin&gt;[2]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-24-ksh"></a><b>ksh</b></td><td>24 <a href="extglob-match.test.html#L327">extglob is not detected in regex!</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[2]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-25-dash"></a><b>dash</b></td><td>25 <a href="extglob-match.test.html#L336">regular glob of single unicode char</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '0\n0\n'
+Got      '127\n127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>127
+127
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 2: [[: not found
+dash: 4: [[: not found
+</pre></td></tr><tr><td><a name="details-25-ash"></a><b>ash</b></td><td>25 <a href="extglob-match.test.html#L336">regular glob of single unicode char</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '0\n0\n'
+Got      '0\n1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+1
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-25-mksh"></a><b>mksh</b></td><td>25 <a href="extglob-match.test.html#L336">regular glob of single unicode char</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>0
+1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="extglob-match.test.html#L336">regular glob of single unicode char</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '0\n0\n'
+Got      '1\n1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+1
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-26-dash"></a><b>dash</b></td><td>26 <a href="extglob-match.test.html#L351">extended glob of single unicode char</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '0\n0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-26-ash"></a><b>ash</b></td><td>26 <a href="extglob-match.test.html#L351">extended glob of single unicode char</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '0\n0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-26-zsh"></a><b>zsh</b></td><td>26 <a href="extglob-match.test.html#L351">extended glob of single unicode char</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '0\n0\n'
+Got      '1\n1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+1
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-26-mksh"></a><b>mksh</b></td><td>26 <a href="extglob-match.test.html#L351">extended glob of single unicode char</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>0
+1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="extglob-match.test.html#L351">extended glob of single unicode char</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '0\n0\n'
+Got      '1\n1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+1
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-27-dash"></a><b>dash</b></td><td>27 <a href="extglob-match.test.html#L366">Extended glob in ${x//pat/replace}</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'foZ\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-27-ash"></a><b>ash</b></td><td>27 <a href="extglob-match.test.html#L366">Extended glob in ${x//pat/replace}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'foZ\n'
+Got      'foo.py\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo.py
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-27-zsh"></a><b>zsh</b></td><td>27 <a href="extglob-match.test.html#L366">Extended glob in ${x//pat/replace}</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'foZ\n'
+Got      'foo.py\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo.py
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-27-toysh"></a><b>toysh</b></td><td>27 <a href="extglob-match.test.html#L366">Extended glob in ${x//pat/replace}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'foZ\n'
+Got      'foo.py\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo.py
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-27-osh"></a><b>osh</b></td><td>27 <a href="extglob-match.test.html#L366">Extended glob in ${x//pat/replace}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  echo ${x//@(?.py)/Z}
+            ^~
+[ stdin ]:3: fatal: extended globs not supported in ${x//GLOB/}
+</pre></td></tr><tr><td><a name="details-28-dash"></a><b>dash</b></td><td>28 <a href="extglob-match.test.html#L378">Extended glob in ${x%PATTERN}</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'strip %  foo\nstrip %% foo\nstrip #  .py\nstrip ## .py\n'
+Got      'strip %  foo.py\nstrip %% foo.py\nstrip #  foo.py\nstrip ## foo.py\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>strip %  foo.py
+strip %% foo.py
+strip #  foo.py
+strip ## foo.py
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+</pre></td></tr><tr><td><a name="details-28-ash"></a><b>ash</b></td><td>28 <a href="extglob-match.test.html#L378">Extended glob in ${x%PATTERN}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'strip %  foo\nstrip %% foo\nstrip #  .py\nstrip ## .py\n'
+Got      'strip %  foo.py\nstrip %% foo.py\nstrip #  foo.py\nstrip ## foo.py\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>strip %  foo.py
+strip %% foo.py
+strip #  foo.py
+strip ## foo.py
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-28-zsh"></a><b>zsh</b></td><td>28 <a href="extglob-match.test.html#L378">Extended glob in ${x%PATTERN}</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'strip %  foo\nstrip %% foo\nstrip #  .py\nstrip ## .py\n'
+Got      'strip %  foo.py\nstrip %% foo.py\nstrip #  foo.py\nstrip ## foo.py\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>strip %  foo.py
+strip %% foo.py
+strip #  foo.py
+strip ## foo.py
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-28-toysh"></a><b>toysh</b></td><td>28 <a href="extglob-match.test.html#L378">Extended glob in ${x%PATTERN}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'strip %  foo\nstrip %% foo\nstrip #  .py\nstrip ## .py\n'
+Got      'strip %  foo.py\nstrip %% foo.py\nstrip #  foo.py\nstrip ## foo.py\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>strip %  foo.py
+strip %% foo.py
+strip #  foo.py
+strip ## foo.py
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr></table></body></html>

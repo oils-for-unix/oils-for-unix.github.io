@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-meta: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-meta.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>15</td><td>8</td><td>8</td><td>11</td><td>13</td><td>12</td><td>1</td><td>7</td><td>11</td><td>17</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>1</td><td>2</td><td>2</td><td>2</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>4</td><td>4</td><td>3</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug-2">BUG-2</td> <td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>1</td><td>2</td><td>2</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>16</td><td>10</td><td>6</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta.test.html#L3">command -v</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"><a href="#details-0-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"><a href="#details-0-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta.test.html#L40">command -v executable, builtin</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="bug">BUG</td>	<td class="bug-2">BUG-2</td>	<td class="bug-2">BUG-2</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta.test.html#L60">command -v with multiple names</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-2-bash">details</a></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta.test.html#L89">command -v doesn't find non-executable file</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta.test.html#L116">command -V</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-4-bash">details</a></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta.test.html#L206">command -V nonexistent</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta.test.html#L227">command skips function lookup</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta.test.html#L247">command command seq 3</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta.test.html#L257">command command -v seq</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta.test.html#L266">command -p (override existing program)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta.test.html#L281">command -p (hide tool in custom path)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta.test.html#L289">command -p (find hidden tool in default path)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta.test.html#L295">$(command type ls)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta.test.html#L313">builtin</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta.test.html#L326">builtin ls not found</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"><a href="#details-14-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta.test.html#L331">builtin usage</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"><a href="#details-15-ash">details</a></td><td class="details-row"><a href="#details-15-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"><a href="#details-15-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta.test.html#L360">builtin command echo hi</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-dash">details</a></td><td class="details-row"><a href="#details-16-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>103 passed, 10 OK, 12 not implemented, 8 BUG, 37 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="builtin-meta.test.html#L3">command -v</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>echo
+0
+myfunc
+0
+nonexistent=127
+empty=127
+for
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-ash"></a><b>ash</b></td><td>0 <a href="builtin-meta.test.html#L3">command -v</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>echo
+0
+myfunc
+0
+nonexistent=127
+empty=127
+for
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="builtin-meta.test.html#L3">command -v</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'echo\n0\nmyfunc\n0\nnonexistent=1\nempty=1\nfor\n0\n'
+Got      '127\n127\nnonexistent=127\nempty=127\n127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>127
+127
+nonexistent=127
+empty=127
+127
+</pre><i>stderr:</i> <br/>
+<pre>sh: command: No such file or directory
+sh: command: No such file or directory
+sh: command: No such file or directory
+sh: command: No such file or directory
+sh: command: No such file or directory
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="builtin-meta.test.html#L3">command -v</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'echo\n0\nmyfunc\n0\nnonexistent=1\nempty=1\nfor\n0\n'
+Got      'echo\n0\n1\nnonexistent=1\n\nempty=0\n1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>echo
+0
+1
+nonexistent=1
+
+empty=0
+1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-brush"></a><b>brush</b></td><td>0 <a href="builtin-meta.test.html#L3">command -v</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'echo\n0\nmyfunc\n0\nnonexistent=1\nempty=1\nfor\n0\n'
+Got      'echo\n0\n1\nnonexistent=1\n/home/andy/git/oils-for-unix/oils/spec/bin/\nempty=0\n1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>echo
+0
+1
+nonexistent=1
+/home/andy/git/oils-for-unix/oils/spec/bin/
+empty=0
+1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-meta.test.html#L40">command -v executable, builtin</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '/grep\n/ls\n\ntrue\neval\n'
+Got      '\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>sh: command: No such file or directory
+sh: command: No such file or directory
+sh: command: No such file or directory
+sh: command: No such file or directory
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="builtin-meta.test.html#L40">command -v executable, builtin</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '/grep\n/ls\n\ntrue\neval\n'
+Got      '\ntrue\neval\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+true
+eval
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-bash"></a><b>bash</b></td><td>2 <a href="builtin-meta.test.html#L60">command -v with multiple names</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>echo
+myfunc
+for
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="builtin-meta.test.html#L60">command -v with multiple names</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>echo
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="builtin-meta.test.html#L60">command -v with multiple names</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>echo
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="builtin-meta.test.html#L60">command -v with multiple names</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>echo
+myfunc
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="builtin-meta.test.html#L60">command -v with multiple names</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'echo\nmyfunc\nfor\nstatus=1\n'
+Got      'echo\nmyfunc\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>echo
+myfunc
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="builtin-meta.test.html#L60">command -v with multiple names</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'echo\nmyfunc\nfor\nstatus=1\n'
+Got      'status=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: command: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="builtin-meta.test.html#L60">command -v with multiple names</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'echo\nmyfunc\nfor\nstatus=1\n'
+Got      'echo\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>echo
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="builtin-meta.test.html#L60">command -v with multiple names</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'echo\nmyfunc\nfor\nstatus=1\n'
+Got      'echo\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>echo
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="builtin-meta.test.html#L89">command -v doesn't find non-executable file</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/non-executable
+status=0
+_tmp/executable
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="builtin-meta.test.html#L89">command -v doesn't find non-executable file</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/non-executable
+status=0
+_tmp/executable
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="builtin-meta.test.html#L89">command -v doesn't find non-executable file</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=1\n_tmp/executable\nstatus=0\n'
+Got      'status=1\n/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-meta.test.sh/03-ksh/_tmp/executable\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-meta.test.sh/03-ksh/_tmp/executable
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="builtin-meta.test.html#L89">command -v doesn't find non-executable file</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=1\n_tmp/executable\nstatus=0\n'
+Got      'status=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: command: No such file or directory
+sh: command: No such file or directory
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="builtin-meta.test.html#L89">command -v doesn't find non-executable file</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=1\n_tmp/executable\nstatus=0\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="builtin-meta.test.html#L89">command -v doesn't find non-executable file</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=1\n_tmp/executable\nstatus=0\n'
+Got      'status=1\n/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-meta.test.sh/03-brush/_tmp/executable\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-meta.test.sh/03-brush/_tmp/executable
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-bash"></a><b>bash</b></td><td>4 <a href="builtin-meta.test.html#L116">command -V</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ll is aliased to 'ls -l'
+status=0
+echo is a shell builtin
+status=0
+myfunc is a function
+myfunc () 
+{ 
+    echo x
+}
+status=0
+status=1
+for is a shell keyword
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 16: command: nonexistent: not found
+</pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="builtin-meta.test.html#L116">command -V</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ll is an alias for ls -l
+status=0
+echo is a shell builtin
+status=0
+myfunc is a function
+status=0
+nonexistent: not found
+status=127
+for is a shell keyword
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: shopt: not found
+</pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="builtin-meta.test.html#L116">command -V</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ll is an alias for ls -l
+status=0
+echo is a shell builtin
+status=0
+myfunc is a function
+status=0
+nonexistent: not found
+status=127
+for is a shell keyword
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="builtin-meta.test.html#L116">command -V</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ll is an alias for ls -l
+status=0
+echo is a shell builtin
+status=0
+myfunc is a function
+status=0
+nonexistent not found
+status=1
+for is a reserved word
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="builtin-meta.test.html#L116">command -V</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ll is an alias for 'ls -l'
+status=0
+echo is a shell builtin
+status=0
+myfunc is a function
+status=0
+nonexistent not found
+status=1
+for is a reserved word
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: shopt: not found
+</pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="builtin-meta.test.html#L116">command -V</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'll is an alias for "ls -l"\nstatus=0\necho is a shell builtin\nstatus=0\nmyfunc is a function\nstatus=0\nstatus=1\nfor is a shell keyword\nstatus=0\n'
+Got      "ll is an alias for 'ls -l'\nstatus=0\necho is a shell builtin\nstatus=0\nmyfunc is a function\nstatus=0\nnonexistent not found\nstatus=1\nfor is a reserved word\nstatus=0\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ll is an alias for 'ls -l'
+status=0
+echo is a shell builtin
+status=0
+myfunc is a function
+status=0
+nonexistent not found
+status=1
+for is a reserved word
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="builtin-meta.test.html#L116">command -V</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'll is an alias for "ls -l"\nstatus=0\necho is a shell builtin\nstatus=0\nmyfunc is a function\nstatus=0\nstatus=1\nfor is a shell keyword\nstatus=0\n'
+Got      'status=0\nstatus=127\nstatus=0\nstatus=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=127
+status=0
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+sh: alias: No such file or directory
+sh: command: No such file or directory
+sh: command: No such file or directory
+sh: command: No such file or directory
+sh: command: No such file or directory
+sh: command: No such file or directory
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="builtin-meta.test.html#L116">command -V</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'll is an alias for "ls -l"\nstatus=0\necho is a shell builtin\nstatus=0\nmyfunc is a function\nstatus=0\nstatus=1\nfor is a shell keyword\nstatus=0\n'
+Got      "ll is aliased to 'ls -l'\nstatus=0\necho is a shell builtin\nstatus=0\nstatus=0\nstatus=1\nstatus=1\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ll is aliased to 'ls -l'
+status=0
+echo is a shell builtin
+status=0
+status=0
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: command: myfunc: not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 16: command: nonexistent: not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 19: command: for: not found
+</pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="builtin-meta.test.html#L116">command -V</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'll is an alias for "ls -l"\nstatus=0\necho is a shell builtin\nstatus=0\nmyfunc is a function\nstatus=0\nstatus=1\nfor is a shell keyword\nstatus=0\n'
+Got      'status=0\necho is a shell builtin\nstatus=0\nstatus=0\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+echo is a shell builtin
+status=0
+status=0
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>command: ll: not found
+command: myfunc: not found
+command: nonexistent: not found
+command: for: not found
+</pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="builtin-meta.test.html#L206">command -V nonexistent</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>nonexistent: not found
+status=127
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="builtin-meta.test.html#L206">command -V nonexistent</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>nonexistent: not found
+status=127
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="builtin-meta.test.html#L206">command -V nonexistent</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>nonexistent not found
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="builtin-meta.test.html#L206">command -V nonexistent</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>nonexistent not found
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="builtin-meta.test.html#L206">command -V nonexistent</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=1\nnonexistent: not found\n'
+Got      'nonexistent not found\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>nonexistent not found
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="builtin-meta.test.html#L206">command -V nonexistent</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=1\nnonexistent: not found\n'
+Got      'status=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="builtin-meta.test.html#L227">command skips function lookup</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '3\n1\n2\n3\n1\n2\n3\n'
+Got      '3\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>3
+</pre><i>stderr:</i> <br/>
+<pre>sh: command: No such file or directory
+sh: command: No such file or directory
+sh: command: No such file or directory
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="builtin-meta.test.html#L227">command skips function lookup</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '3\n1\n2\n3\n1\n2\n3\n'
+Got      '3\n3\n3\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>3
+3
+3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="builtin-meta.test.html#L247">command command seq 3</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: command
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="builtin-meta.test.html#L247">command command seq 3</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1\n2\n3\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: command: No such file or directory
+</pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="builtin-meta.test.html#L257">command command -v seq</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: command
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="builtin-meta.test.html#L257">command command -v seq</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'seq\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: command: No such file or directory
+</pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="builtin-meta.test.html#L257">command command -v seq</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'seq\n'
+Got      '/usr/bin/seq\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/usr/bin/seq
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="builtin-meta.test.html#L266">command -p (override existing program)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'wrong\nbbb\n'
+Got      'wrong\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>wrong
+</pre><i>stderr:</i> <br/>
+<pre>sh: command: No such file or directory
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="builtin-meta.test.html#L266">command -p (override existing program)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'wrong\nbbb\n'
+Got      'wrong\nwrong\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>wrong
+wrong
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="builtin-meta.test.html#L281">command -p (hide tool in custom path)</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 127
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hello
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="builtin-meta.test.html#L289">command -p (find hidden tool in default path)</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: command: No such file or directory
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="builtin-meta.test.html#L289">command -p (find hidden tool in default path)</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: ls: command not found
+</pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="builtin-meta.test.html#L295">$(command type ls)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>FUNCTION
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: type
+</pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="builtin-meta.test.html#L295">$(command type ls)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: type: not found
+</pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="builtin-meta.test.html#L295">$(command type ls)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'FUNCTION\nstatus=0\n'
+Got      'status=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: type: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="builtin-meta.test.html#L295">$(command type ls)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'FUNCTION\nstatus=0\n'
+Got      'FUNCTION\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FUNCTION
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>sh: command: No such file or directory
+</pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="builtin-meta.test.html#L313">builtin</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: builtin: not found
+</pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="builtin-meta.test.html#L313">builtin</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>ash: builtin: not found
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="builtin-meta.test.html#L313">builtin</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'hi\n/\n'
+Got      'hi\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>sh: builtin: No such file or directory
+</pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="builtin-meta.test.html#L326">builtin ls not found</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: builtin: not found
+</pre></td></tr><tr><td><a name="details-14-ash"></a><b>ash</b></td><td>14 <a href="builtin-meta.test.html#L326">builtin ls not found</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: builtin: not found
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="builtin-meta.test.html#L326">builtin ls not found</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: builtin: No such file or directory
+</pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="builtin-meta.test.html#L331">builtin usage</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: builtin: not found
+dash: 4: builtin: not found
+dash: 7: builtin: not found
+</pre></td></tr><tr><td><a name="details-15-ash"></a><b>ash</b></td><td>15 <a href="builtin-meta.test.html#L331">builtin usage</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>ash: builtin: not found
+ash: builtin: not found
+ash: builtin: not found
+</pre></td></tr><tr><td><a name="details-15-zsh"></a><b>zsh</b></td><td>15 <a href="builtin-meta.test.html#L331">builtin usage</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>zsh: no such builtin: --
+zsh: no such builtin: --
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="builtin-meta.test.html#L331">builtin usage</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nstatus=0\nstatus=1\n'
+Got      'status=127\nstatus=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: builtin: No such file or directory
+sh: builtin: No such file or directory
+sh: builtin: No such file or directory
+</pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="builtin-meta.test.html#L331">builtin usage</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\nstatus=0\nstatus=1\n'
+Got      'status=0\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: builtin: --: not a shell builtin
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: builtin: --: not a shell builtin
+</pre></td></tr><tr><td><a name="details-15-brush"></a><b>brush</b></td><td>15 <a href="builtin-meta.test.html#L331">builtin usage</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=0\nstatus=0\nstatus=1\n'
+Got      'status=0\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>--: command not found
+--: command not found
+</pre></td></tr><tr><td><a name="details-16-dash"></a><b>dash</b></td><td>16 <a href="builtin-meta.test.html#L360">builtin command echo hi</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: builtin: not found
+</pre></td></tr><tr><td><a name="details-16-ash"></a><b>ash</b></td><td>16 <a href="builtin-meta.test.html#L360">builtin command echo hi</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: builtin: not found
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="builtin-meta.test.html#L360">builtin command echo hi</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'hi\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: builtin: No such file or directory
+</pre></td></tr></table></body></html>

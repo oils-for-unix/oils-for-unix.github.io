@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>background: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for background.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>23</td><td>17</td><td>19</td><td>12</td><td>20</td><td>21</td><td>9</td><td>12</td><td>9</td><td>23</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>2</td><td>7</td><td>0</td><td>0</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>7</td><td>14</td><td>0</td><td>5</td><td>17</td><td>14</td><td>17</td><td>3</td><td></td></tr>
+<tr><td>total</td><td>26</td><td>26</td><td>26</td><td>26</td><td>26</td><td>26</td><td>26</td><td>26</td><td>26</td><td>26</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L14">wait with nothing to wait for</a></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L18">wait -n with arguments - arguments are respected</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L47">wait -n with nothing to wait for</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="background.test.html#L54">wait with jobspec syntax %nonexistent</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"><a href="#details-3-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L59">wait with invalid PID</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L63">wait with invalid arg</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-5-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L70">wait for N parallel jobs</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L84">wait for N parallel jobs and check failure</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L112">Builtin in background</a></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L117">External command in background</a></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L122">Start background pipeline, wait $pid</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L156">Start background pipeline, wait %job_spec</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="background.test.html#L166">Wait for job and PIPESTATUS</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-dash">details</a></td><td class="details-row"><a href="#details-12-ash">details</a></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-12-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="background.test.html#L191">Wait for job and PIPESTATUS - cat</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"><a href="#details-13-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L224">Brace group in background, wait all</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L231">Wait on background process PID</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-15-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L245">Wait on multiple specific IDs returns last status</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"><a href="#details-16-sush">details</a></td><td class="details-row"><a href="#details-16-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L256">wait -n</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-dash">details</a></td><td class="details-row"><a href="#details-17-ash">details</a></td><td class="details-row"><a href="#details-17-zsh">details</a></td><td class="details-row"><a href="#details-17-mksh">details</a></td><td class="details-row"><a href="#details-17-ksh">details</a></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-17-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L271">Async for loop</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L284">Background process doesn't affect parent</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"><a href="#details-19-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L297">Background process and then a singleton pipeline</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-20-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L314">jobs prints one line per job</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-21-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L328">jobs -p prints one line per job</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L343">No stderr spew when shell is not interactive</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L356">YSH wait --all</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-24-bash">details</a></td><td class="details-row"><a href="#details-24-dash">details</a></td><td class="details-row"><a href="#details-24-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-24-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"><a href="#details-24-sush">details</a></td><td class="details-row"><a href="#details-24-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="background.test.html#L379">YSH wait --verbose</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-25-bash">details</a></td><td class="details-row"><a href="#details-25-dash">details</a></td><td class="details-row"><a href="#details-25-ash">details</a></td><td class="details-row"><a href="#details-25-zsh">details</a></td><td class="details-row"><a href="#details-25-mksh">details</a></td><td class="details-row"><a href="#details-25-ksh">details</a></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"><a href="#details-25-sush">details</a></td><td class="details-row"><a href="#details-25-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>165 passed, 2 OK, 14 not implemented, 2 BUG, 77 failed, 0 timeouts, 0 cases skipped
+3 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="background.test.html#L18">wait -n with arguments - arguments are respected</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="background.test.html#L18">wait -n with arguments - arguments are respected</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'x\nstatus=0\nstatus=127\n\ngot error lines\n'
+Got      'x\nstatus=0\nstatus=2\n\ngot error lines\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x
+status=0
+status=2
+
+got error lines
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="background.test.html#L18">wait -n with arguments - arguments are respected</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'x\nstatus=0\nstatus=127\n\ngot error lines\n'
+Got      'x\nstatus=1\nstatus=1\n\ngot error lines\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x
+status=1
+status=1
+
+got error lines
+</pre><i>stderr:</i> <br/>
+<pre>wait: job not found: -n
+</pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="background.test.html#L18">wait -n with arguments - arguments are respected</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="background.test.html#L18">wait -n with arguments - arguments are respected</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'x\nstatus=0\nstatus=127\n\ngot error lines\n'
+Got      'x\nstatus=1\nstatus=1\n\ngot error lines\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x
+status=1
+status=1
+
+got error lines
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: wait: -n: unknown option
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="background.test.html#L18">wait -n with arguments - arguments are respected</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'x\nstatus=0\nstatus=127\n\ngot error lines\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="background.test.html#L18">wait -n with arguments - arguments are respected</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'x\nstatus=0\nstatus=127\n\ngot error lines\n'
+Got      'x\nstatus=0\nstatus=-1\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x
+status=0
+status=-1
+
+</pre><i>stderr:</i> <br/>
+<pre>742547
+</pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="background.test.html#L18">wait -n with arguments - arguments are respected</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'x\nstatus=0\nstatus=127\n\ngot error lines\n'
+Got      'x\nstatus=1\nstatus=1\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x
+status=1
+status=1
+
+</pre><i>stderr:</i> <br/>
+<pre>[33m WARN[0m not yet implemented: wait -n
+[33m WARN[0m not yet implemented: wait -n
+</pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="background.test.html#L47">wait -n with nothing to wait for</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: wait: Illegal option -n
+</pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="background.test.html#L47">wait -n with nothing to wait for</a><br/><br/>
+<span class="assertion">
+[zsh status]
+Expected 127
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>wait: job not found: -n
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="background.test.html#L47">wait -n with nothing to wait for</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: wait: -n: unknown option
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="background.test.html#L47">wait -n with nothing to wait for</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 127
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: wait: -n: unknown option
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="background.test.html#L47">wait -n with nothing to wait for</a><br/><br/>
+<span class="assertion">
+[brush status]
+Expected 127
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[33m WARN[0m not yet implemented: wait -n
+</pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="background.test.html#L54">wait with jobspec syntax %nonexistent</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: wait: No such job: %nonexistent
+</pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="background.test.html#L54">wait with jobspec syntax %nonexistent</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 127
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: wait: line 1: %nonexistent: no such job
+</pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="background.test.html#L54">wait with jobspec syntax %nonexistent</a><br/><br/>
+<span class="assertion">
+[zsh status]
+Expected 127
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>wait: job not found: nonexistent
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="background.test.html#L54">wait with jobspec syntax %nonexistent</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 127
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>wait: %nonexistent: bad pid/job
+</pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="background.test.html#L54">wait with jobspec syntax %nonexistent</a><br/><br/>
+<span class="assertion">
+[brush status]
+Expected 127
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[33m WARN[0m not yet implemented: wait with job specs
+</pre></td></tr><tr><td><a name="details-3-osh"></a><b>osh</b></td><td>3 <a href="background.test.html#L54">wait with jobspec syntax %nonexistent</a><br/><br/>
+<span class="assertion">
+[osh status]
+Expected 127
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  wait %nonexistent
+       ^
+[ stdin ]:1: 'wait' expected PID or jobspec, got '%nonexistent'
+</pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="background.test.html#L59">wait with invalid PID</a><br/><br/>
+<span class="assertion">
+[zsh status]
+Expected 127
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>wait: pid 12345678 is not a child of this shell
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="background.test.html#L59">wait with invalid PID</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 127
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="background.test.html#L59">wait with invalid PID</a><br/><br/>
+<span class="assertion">
+[brush status]
+Expected 127
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[33m WARN[0m not yet implemented: wait with job specs
+</pre></td></tr><tr><td><a name="details-5-bash"></a><b>bash</b></td><td>5 <a href="background.test.html#L63">wait with invalid arg</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>bash: line 1: wait: `zzz': not a pid or valid job spec
+</pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="background.test.html#L63">wait with invalid arg</a><br/><br/>
+<span class="assertion">
+[zsh status]
+Expected 2
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>wait: job not found: zzz
+</pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="background.test.html#L63">wait with invalid arg</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: wait: zzz: argument must be %job or process id
+</pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="background.test.html#L63">wait with invalid arg</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 2
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: wait: zzz: argument must be %job or process id
+</pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="background.test.html#L63">wait with invalid arg</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 2
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>wait: zzz: bad pid/job
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="background.test.html#L63">wait with invalid arg</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 2
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="background.test.html#L63">wait with invalid arg</a><br/><br/>
+<span class="assertion">
+[brush status]
+Expected 2
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[33m WARN[0m not yet implemented: wait with job specs
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="background.test.html#L70">wait for N parallel jobs</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\n'
+Got      'status=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>744304
+744305
+744306
+</pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="background.test.html#L84">wait for N parallel jobs and check failure</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '1\n2\n3\nstatus=3\nstatus=2\nstatus=1\n'
+Got      '1\n2\n3\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+</pre><i>stderr:</i> <br/>
+<pre>wait: job not found:  745198 745199 745202
+zsh: read-only variable: status
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="background.test.html#L84">wait for N parallel jobs and check failure</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1\n2\n3\nstatus=3\nstatus=2\nstatus=1\n'
+Got      '1\n2\n3\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+set: bad -o errexit
+set: bad -o errexit
+</pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="background.test.html#L84">wait for N parallel jobs and check failure</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '1\n2\n3\nstatus=3\nstatus=2\nstatus=1\n'
+Got      '1\n2\n3\nstatus=3\nstatus=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+status=3
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+745646
+745648
+745650
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 10: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 10: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 10: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="background.test.html#L84">wait for N parallel jobs and check failure</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '1\n2\n3\nstatus=3\nstatus=2\nstatus=1\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-zsh"></a><b>zsh</b></td><td>10 <a href="background.test.html#L122">Start background pipeline, wait $pid</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=0\nstatus=99\n--\nstatus=3\nstatus=2\nstatus=1\n'
+Got      'status=0\nstatus=99\n--\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=99
+--
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>wait: job not found:  747123 747131 747150
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="background.test.html#L122">Start background pipeline, wait $pid</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nstatus=99\n--\nstatus=3\nstatus=2\nstatus=1\n'
+Got      'status=0\nstatus=0\n\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="background.test.html#L122">Start background pipeline, wait $pid</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\nstatus=99\n--\nstatus=3\nstatus=2\nstatus=1\n'
+Got      'status=0\nstatus=99\n--\nstatus=0\nstatus=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=99
+--
+status=0
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>747708
+747731
+747735
+747739
+</pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="background.test.html#L122">Start background pipeline, wait $pid</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=0\nstatus=99\n--\nstatus=3\nstatus=2\nstatus=1\n'
+Got      'status=0\nstatus=0\n--\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+--
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="background.test.html#L156">Start background pipeline, wait %job_spec</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nstatus=99\n'
+Got      'status=0\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>wait: %1: bad pid/job
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="background.test.html#L156">Start background pipeline, wait %job_spec</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\nstatus=99\n'
+Got      'status=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>748261
+</pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="background.test.html#L156">Start background pipeline, wait %job_spec</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=0\nstatus=99\n'
+Got      'status=0\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>[33m WARN[0m not yet implemented: wait with job specs
+</pre></td></tr><tr><td><a name="details-12-dash"></a><b>dash</b></td><td>12 <a href="background.test.html#L166">Wait for job and PIPESTATUS</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-12-ash"></a><b>ash</b></td><td>12 <a href="background.test.html#L166">Wait for job and PIPESTATUS</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'fore status=1 pipestatus=55 1\nback status=0 pipestatus=0\nwait status=1 pipestatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="background.test.html#L166">Wait for job and PIPESTATUS</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'fore status=1 pipestatus=55 1\nback status=0 pipestatus=0\nwait status=1 pipestatus=1\n'
+Got      'fore status=1 pipestatus=\nback status=0 pipestatus=\nwait status=1 pipestatus=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fore status=1 pipestatus=
+back status=0 pipestatus=
+wait status=1 pipestatus=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="background.test.html#L166">Wait for job and PIPESTATUS</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'fore status=1 pipestatus=55 1\nback status=0 pipestatus=0\nwait status=1 pipestatus=1\n'
+Got      'fore status=1 pipestatus=\nback status=0 pipestatus=\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -11
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fore status=1 pipestatus=
+back status=0 pipestatus=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="background.test.html#L166">Wait for job and PIPESTATUS</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'fore status=1 pipestatus=55 1\nback status=0 pipestatus=0\nwait status=1 pipestatus=1\n'
+Got      'fore status=1 pipestatus=55 1\nback status=0 pipestatus=55 1\nwait status=1 pipestatus=55 1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fore status=1 pipestatus=55 1
+back status=0 pipestatus=55 1
+wait status=1 pipestatus=55 1
+</pre><i>stderr:</i> <br/>
+<pre>748533
+</pre></td></tr><tr><td><a name="details-12-osh"></a><b>osh</b></td><td>12 <a href="background.test.html#L166">Wait for job and PIPESTATUS</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'fore status=1 pipestatus=55 1\nback status=0 pipestatus=0\nwait status=1 pipestatus=1\n'
+Got      'fore status=1 pipestatus=141 1\nback status=0 pipestatus=141 1\nwait status=1 pipestatus=141 1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fore status=1 pipestatus=141 1
+back status=0 pipestatus=141 1
+wait status=1 pipestatus=141 1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="background.test.html#L191">Wait for job and PIPESTATUS - cat</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="background.test.html#L191">Wait for job and PIPESTATUS - cat</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'fore status=99 pipestatus=55 99\nback status=0 pipestatus=0\nwait status=88 pipestatus=88\n\nwait status=77 pipestatus=77\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="background.test.html#L191">Wait for job and PIPESTATUS - cat</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'fore status=99 pipestatus=55 99\nback status=0 pipestatus=0\nwait status=88 pipestatus=88\n\nwait status=77 pipestatus=77\n'
+Got      'fore status=99 pipestatus=\nback status=0 pipestatus=\nwait status=88 pipestatus=\n\nwait status=77 pipestatus=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fore status=99 pipestatus=
+back status=0 pipestatus=
+wait status=88 pipestatus=
+
+wait status=77 pipestatus=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="background.test.html#L191">Wait for job and PIPESTATUS - cat</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'fore status=99 pipestatus=55 99\nback status=0 pipestatus=0\nwait status=88 pipestatus=88\n\nwait status=77 pipestatus=77\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      55
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="background.test.html#L191">Wait for job and PIPESTATUS - cat</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'fore status=99 pipestatus=55 99\nback status=0 pipestatus=0\nwait status=88 pipestatus=88\n\nwait status=77 pipestatus=77\n'
+Got      'fore status=99 pipestatus=55 99\nback status=0 pipestatus=55 99\nwait status=88 pipestatus=55 99\n\nwait status=77 pipestatus=55 99\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fore status=99 pipestatus=55 99
+back status=0 pipestatus=55 99
+wait status=88 pipestatus=55 99
+
+wait status=77 pipestatus=55 99
+</pre><i>stderr:</i> <br/>
+<pre>748971
+748991
+</pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="background.test.html#L191">Wait for job and PIPESTATUS - cat</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'fore status=99 pipestatus=55 99\nback status=0 pipestatus=0\nwait status=88 pipestatus=88\n\nwait status=77 pipestatus=77\n'
+Got      'fore status=99 pipestatus=55 99\nback status=0 pipestatus=0\nwait status=1 pipestatus=1\n\nwait status=1 pipestatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fore status=99 pipestatus=55 99
+back status=0 pipestatus=0
+wait status=1 pipestatus=1
+
+wait status=1 pipestatus=1
+</pre><i>stderr:</i> <br/>
+<pre>[33m WARN[0m not yet implemented: wait with job specs
+[33m WARN[0m not yet implemented: wait with job specs
+</pre></td></tr><tr><td><a name="details-13-osh"></a><b>osh</b></td><td>13 <a href="background.test.html#L191">Wait for job and PIPESTATUS - cat</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'fore status=99 pipestatus=55 99\nback status=0 pipestatus=0\nwait status=88 pipestatus=88\n\nwait status=77 pipestatus=77\n'
+Got      'fore status=99 pipestatus=55 99\nback status=0 pipestatus=55 99\nwait status=88 pipestatus=55 99\n\nwait status=77 pipestatus=55 99\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fore status=99 pipestatus=55 99
+back status=0 pipestatus=55 99
+wait status=88 pipestatus=55 99
+
+wait status=77 pipestatus=55 99
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="background.test.html#L224">Brace group in background, wait all</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\n'
+Got      'status=7\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=7
+</pre><i>stderr:</i> <br/>
+<pre>751061
+751063
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="background.test.html#L231">Wait on background process PID</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=7\nstatus=9\n'
+Got      'status=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-brush"></a><b>brush</b></td><td>15 <a href="background.test.html#L231">Wait on background process PID</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=7\nstatus=9\n'
+Got      'status=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="background.test.html#L245">Wait on multiple specific IDs returns last status</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=7\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-sush"></a><b>sush</b></td><td>16 <a href="background.test.html#L245">Wait on multiple specific IDs returns last status</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=7\n'
+Got      'status=8\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=8
+</pre><i>stderr:</i> <br/>
+<pre>756856
+756860
+756864
+</pre></td></tr><tr><td><a name="details-16-brush"></a><b>brush</b></td><td>16 <a href="background.test.html#L245">Wait on multiple specific IDs returns last status</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=7\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-dash"></a><b>dash</b></td><td>17 <a href="background.test.html#L256">wait -n</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-ash"></a><b>ash</b></td><td>17 <a href="background.test.html#L256">wait -n</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=3\nstatus=9\n'
+Got      'status=129\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=129
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-zsh"></a><b>zsh</b></td><td>17 <a href="background.test.html#L256">wait -n</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=3\nstatus=9\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>wait: job not found: -n
+wait: job not found: -n
+</pre></td></tr><tr><td><a name="details-17-mksh"></a><b>mksh</b></td><td>17 <a href="background.test.html#L256">wait -n</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-ksh"></a><b>ksh</b></td><td>17 <a href="background.test.html#L256">wait -n</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=3\nstatus=9\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: wait: -n: unknown option
+E: ksh: &lt;stdin&gt;[7]: wait: -n: unknown option
+</pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="background.test.html#L256">wait -n</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=3\nstatus=9\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-17-brush"></a><b>brush</b></td><td>17 <a href="background.test.html#L256">wait -n</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=3\nstatus=9\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>[33m WARN[0m not yet implemented: wait -n
+[33m WARN[0m not yet implemented: wait -n
+</pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="background.test.html#L271">Async for loop</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1\n2\n3\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-zsh"></a><b>zsh</b></td><td>19 <a href="background.test.html#L284">Background process doesn't affect parent</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '1\n1\n2\n\n'
+Got      '1\n1\n2\n2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+1
+2
+2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="background.test.html#L284">Background process doesn't affect parent</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1\n1\n2\n\n'
+Got      '1\n1\n2\n2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+1
+2
+2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-sush"></a><b>sush</b></td><td>19 <a href="background.test.html#L284">Background process doesn't affect parent</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '1\n1\n2\n\n'
+Got      '1\n1\n2\n2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+1
+2
+2
+</pre><i>stderr:</i> <br/>
+<pre>762013
+</pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="background.test.html#L297">Background process and then a singleton pipeline</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'begin\nend\nstatus=42\n'
+Got      'begin\nend\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>begin
+end
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-brush"></a><b>brush</b></td><td>20 <a href="background.test.html#L297">Background process and then a singleton pipeline</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'begin\nend\nstatus=42\n'
+Got      'begin\nend\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>begin
+end
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-dash"></a><b>dash</b></td><td>21 <a href="background.test.html#L314">jobs prints one line per job</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-zsh"></a><b>zsh</b></td><td>21 <a href="background.test.html#L314">jobs prints one line per job</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '2\n'
+Got      '0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-brush"></a><b>brush</b></td><td>21 <a href="background.test.html#L314">jobs prints one line per job</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '2\n'
+Got      '0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-zsh"></a><b>zsh</b></td><td>22 <a href="background.test.html#L328">jobs -p prints one line per job</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '2\n2\n'
+Got      '3\n15\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>3
+15
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-brush"></a><b>brush</b></td><td>22 <a href="background.test.html#L328">jobs -p prints one line per job</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '2\n2\n'
+Got      '0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-sush"></a><b>sush</b></td><td>23 <a href="background.test.html#L343">No stderr spew when shell is not interactive</a><br/><br/>
+<span class="assertion">
+[sush stderr]
+Expected ''
+Got      '769334\n769336\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>769334
+769336
+</pre></td></tr><tr><td><a name="details-24-bash"></a><b>bash</b></td><td>24 <a href="background.test.html#L356">YSH wait --all</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-dash"></a><b>dash</b></td><td>24 <a href="background.test.html#L356">YSH wait --all</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-ash"></a><b>ash</b></td><td>24 <a href="background.test.html#L356">YSH wait --all</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'wait 0\nwait --all 1\n'
+Got      'wait 0\nwait --all 2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>wait 0
+wait --all 2
+</pre><i>stderr:</i> <br/>
+<pre>ash: wait: line 12: illegal option --
+</pre></td></tr><tr><td><a name="details-24-mksh"></a><b>mksh</b></td><td>24 <a href="background.test.html#L356">YSH wait --all</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="background.test.html#L356">YSH wait --all</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'wait 0\nwait --all 1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-24-sush"></a><b>sush</b></td><td>24 <a href="background.test.html#L356">YSH wait --all</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'wait 0\nwait --all 1\n'
+Got      'wait 0\nwait --all 127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>wait 0
+wait --all 127
+</pre><i>stderr:</i> <br/>
+<pre>769842
+769844
+769848
+769875
+769877
+769879
+</pre></td></tr><tr><td><a name="details-24-brush"></a><b>brush</b></td><td>24 <a href="background.test.html#L356">YSH wait --all</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'wait 0\nwait --all 1\n'
+Got      'wait 0\nwait --all 2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>wait 0
+wait --all 2
+</pre><i>stderr:</i> <br/>
+<pre>error: unexpected argument '--all' found
+
+  tip: to pass '--all' as a value, use '-- --all'
+
+Usage: wait [OPTIONS] [JOB_SPECS]...
+
+For more information, try '--help'.
+
+</pre></td></tr><tr><td><a name="details-25-bash"></a><b>bash</b></td><td>25 <a href="background.test.html#L379">YSH wait --verbose</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-dash"></a><b>dash</b></td><td>25 <a href="background.test.html#L379">YSH wait --verbose</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-ash"></a><b>ash</b></td><td>25 <a href="background.test.html#L379">YSH wait --verbose</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'wait 0\nwait --all 1\n'
+Got      'wait 2\nwait --all 2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>wait 2
+wait --all 2
+</pre><i>stderr:</i> <br/>
+<pre>ash: wait: line 5: illegal option --
+ash: wait: line 10: illegal option --
+</pre></td></tr><tr><td><a name="details-25-zsh"></a><b>zsh</b></td><td>25 <a href="background.test.html#L379">YSH wait --verbose</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'wait 0\nwait --all 1\n'
+Got      'wait 1\nwait --all 1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>wait 1
+wait --all 1
+</pre><i>stderr:</i> <br/>
+<pre>wait: job not found: --verbose
+wait: job not found: --all
+</pre></td></tr><tr><td><a name="details-25-mksh"></a><b>mksh</b></td><td>25 <a href="background.test.html#L379">YSH wait --verbose</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-ksh"></a><b>ksh</b></td><td>25 <a href="background.test.html#L379">YSH wait --verbose</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'wait 0\nwait --all 1\n'
+Got      'wait 1\nwait --all 1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>wait 1
+wait --all 1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: wait: --: unknown option
+E: ksh: &lt;stdin&gt;[10]: wait: --: unknown option
+</pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="background.test.html#L379">YSH wait --verbose</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'wait 0\nwait --all 1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-25-sush"></a><b>sush</b></td><td>25 <a href="background.test.html#L379">YSH wait --verbose</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'wait 0\nwait --all 1\n'
+Got      'wait 127\nwait --all 127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>wait 127
+wait --all 127
+</pre><i>stderr:</i> <br/>
+<pre>770245
+770248
+770254
+770256
+</pre></td></tr><tr><td><a name="details-25-brush"></a><b>brush</b></td><td>25 <a href="background.test.html#L379">YSH wait --verbose</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'wait 0\nwait --all 1\n'
+Got      'wait 2\nwait --all 2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>wait 2
+wait --all 2
+</pre><i>stderr:</i> <br/>
+<pre>error: unexpected argument '--verbose' found
+
+  tip: to pass '--verbose' as a value, use '-- --verbose'
+
+Usage: wait [OPTIONS] [JOB_SPECS]...
+
+For more information, try '--help'.
+
+error: unexpected argument '--all' found
+
+  tip: to pass '--all' as a value, use '-- --all'
+
+Usage: wait [OPTIONS] [JOB_SPECS]...
+
+For more information, try '--help'.
+
+</pre></td></tr></table></body></html>

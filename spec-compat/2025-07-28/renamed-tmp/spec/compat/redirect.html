@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>redirect: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for redirect.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>34</td><td>19</td><td>27</td><td>31</td><td>29</td><td>29</td><td>18</td><td>22</td><td>29</td><td>35</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>10</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>7</td><td>0</td><td>0</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>3</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>10</td><td>6</td><td>0</td><td>8</td><td>19</td><td>15</td><td>8</td><td>1</td><td></td></tr>
+<tr><td>total</td><td>37</td><td>37</td><td>37</td><td>37</td><td>37</td><td>37</td><td>37</td><td>37</td><td>37</td><td>37</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L4">&gt;&amp; and &lt;&amp; are the same</a></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L16">&lt;&amp;</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L26">2&gt;&amp;1 with no command</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L38">2&amp;&gt;1 (is it a redirect or is it like a&amp;&gt;1)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L49">Nonexistent file</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L55">Descriptor redirect with spaces</a></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L69">Filename redirect with spaces</a></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L76">Quoted filename redirect with spaces</a></td></tr>
+<tr><td>  8</td><td class="bug">BUG</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L82">Descriptor redirect with filename</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-8-bash">details</a></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L92">Redirect echo to stderr, and then redirect all of stdout somewhere.</a></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L98">Named file descriptor</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L107">Double digit fd (20&gt; file)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-11-zsh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-11-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L115">: 9&gt; fdleak (OSH regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L121">: 3&gt;&amp;3 (OSH regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L133">: 3&gt;&amp;3-</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"><a href="#details-14-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L141">3&gt;&amp;- &lt;&lt; EOF (OSH regression: fail to restore fds)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L153">Open file on descriptor 3 and write to it many times</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L167">Open file on descriptor 4 and write to it many times</a></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L181">Redirect to empty string</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"><a href="#details-18-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L193">Redirect to file descriptor that's not open</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-19-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L220">Open descriptor with exec</a></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L227">Open multiple descriptors with exec</a></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L239">&gt;| to clobber</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L262">&amp;&gt; redirects stdout and stderr</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="redirect.test.html#L280">&gt;&amp;word redirects stdout and stderr when word is not a number or -</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-mksh">details</a></td><td class="details-row"><a href="#details-24-ksh">details</a></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"><a href="#details-24-sush">details</a></td><td class="details-row"><a href="#details-24-brush">details</a></td><td class="details-row"><a href="#details-24-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L300">1&gt;&amp;- to close file descriptor</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L310">1&gt;&amp;2- to move file descriptor</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-dash">details</a></td><td class="details-row"><a href="#details-26-ash">details</a></td><td class="details-row"><a href="#details-26-zsh">details</a></td><td class="details-row"><a href="#details-26-mksh">details</a></td><td class="details-row"><a href="#details-26-ksh">details</a></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"><a href="#details-26-sush">details</a></td><td class="details-row"><a href="#details-26-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="bug">BUG</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L327">1&gt;&amp;2- (Bash bug: fail to restore closed fd)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-27-bash">details</a></td><td class="details-row"><a href="#details-27-dash">details</a></td><td class="details-row"><a href="#details-27-ash">details</a></td><td class="details-row"><a href="#details-27-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-toysh">details</a></td><td class="details-row"><a href="#details-27-sush">details</a></td><td class="details-row"><a href="#details-27-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L362">&lt;&gt; for read/write</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-toysh">details</a></td><td class="details-row"><a href="#details-28-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L377">&lt;&gt; for read/write named pipes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-toysh">details</a></td><td class="details-row"><a href="#details-29-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 30</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L389">&amp;&gt;&gt; appends stdout and stderr</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-dash">details</a></td><td class="details-row"><a href="#details-30-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-toysh">details</a></td><td class="details-row"><a href="#details-30-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 31</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L412">exec redirect then various builtins</a></td></tr>
+<tr><td> 32</td><td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="redirect.test.html#L421">can't mention big file descriptor</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-32-bash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-32-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-32-toysh">details</a></td><td class="details-row"><a href="#details-32-sush">details</a></td><td class="details-row"><a href="#details-32-brush">details</a></td><td class="details-row"><a href="#details-32-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 33</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L443">: &gt;/dev/null 2&gt; / (OSH regression: fail to pop fd frame)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-33-dash">details</a></td><td class="details-row"><a href="#details-33-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-33-mksh">details</a></td><td class="details-row"><a href="#details-33-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 34</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L457">echo foo &gt;&amp;100 (OSH regression: does not fail with invalid fd 100)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-34-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-34-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 35</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L465">echo foo &gt;&amp;N where N is first unused fd</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-35-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-35-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 36</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="redirect.test.html#L491">exec {fd}&gt;&amp;- (OSH regression: fails to close fd)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-36-dash">details</a></td><td class="details-row"><a href="#details-36-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-36-mksh">details</a></td><td class="details-row"><a href="#details-36-ksh">details</a></td><td class="details-row"><a href="#details-36-toysh">details</a></td><td class="details-row"><a href="#details-36-sush">details</a></td><td class="details-row"><a href="#details-36-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>273 passed, 13 OK, 12 not implemented, 5 BUG, 67 failed, 0 timeouts, 0 cases skipped
+1 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="redirect.test.html#L16">&lt;&amp;</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '[foo51]\n'
+Got      '[]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="redirect.test.html#L26">2&gt;&amp;1 with no command</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=42\nstatus=0\n'
+Got      'status=42\necho status=$?\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=42
+echo status=$?
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="redirect.test.html#L38">2&amp;&gt;1 (is it a redirect or is it like a&amp;&gt;1)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: 2: not found
+</pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="redirect.test.html#L38">2&amp;&gt;1 (is it a redirect or is it like a&amp;&gt;1)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=127\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="redirect.test.html#L38">2&amp;&gt;1 (is it a redirect or is it like a&amp;&gt;1)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=127\n'
+Got      'echo status=$?\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>echo status=$?
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="redirect.test.html#L38">2&amp;&gt;1 (is it a redirect or is it like a&amp;&gt;1)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="redirect.test.html#L38">2&amp;&gt;1 (is it a redirect or is it like a&amp;&gt;1)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=127\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="redirect.test.html#L38">2&amp;&gt;1 (is it a redirect or is it like a&amp;&gt;1)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=127\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="redirect.test.html#L38">2&amp;&gt;1 (is it a redirect or is it like a&amp;&gt;1)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=127\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="redirect.test.html#L49">Nonexistent file</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: cannot open /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/redirect.test.sh/04-dash/nonexistent.txt: No such file
+</pre></td></tr><tr><td><a name="details-8-bash"></a><b>bash</b></td><td>8 <a href="redirect.test.html#L82">Descriptor redirect with filename</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="redirect.test.html#L82">Descriptor redirect with filename</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Syntax error: Bad fd number
+</pre></td></tr><tr><td><a name="details-8-ash"></a><b>ash</b></td><td>8 <a href="redirect.test.html#L82">Descriptor redirect with filename</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=1\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="redirect.test.html#L82">Descriptor redirect with filename</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=1\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="redirect.test.html#L82">Descriptor redirect with filename</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=1\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="redirect.test.html#L98">Named file descriptor</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: exec: {myfd}: not found
+</pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="redirect.test.html#L98">Named file descriptor</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'named-fd-contents\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: exec: line 1: {myfd}: not found
+</pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="redirect.test.html#L98">Named file descriptor</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: {myfd}: not found
+</pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="redirect.test.html#L98">Named file descriptor</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'named-fd-contents\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: {myfd}: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="redirect.test.html#L98">Named file descriptor</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'named-fd-contents\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: {myfd}: command not found
+</pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="redirect.test.html#L98">Named file descriptor</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'named-fd-contents\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>error: invalid redirection
+</pre></td></tr><tr><td><a name="details-11-dash"></a><b>dash</b></td><td>11 <a href="redirect.test.html#L107">Double digit fd (20&gt; file)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: exec: 20: not found
+</pre></td></tr><tr><td><a name="details-11-zsh"></a><b>zsh</b></td><td>11 <a href="redirect.test.html#L107">Double digit fd (20&gt; file)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'hello20\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: 20
+</pre></td></tr><tr><td><a name="details-11-ksh"></a><b>ksh</b></td><td>11 <a href="redirect.test.html#L107">Double digit fd (20&gt; file)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'hello20\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: 20: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="redirect.test.html#L115">: 9&gt; fdleak (OSH regression)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected u''
+Got      'world\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>world
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="redirect.test.html#L121">: 3&gt;&amp;3 (OSH regression)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="redirect.test.html#L121">: 3&gt;&amp;3 (OSH regression)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'hello\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="redirect.test.html#L121">: 3&gt;&amp;3 (OSH regression)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'hello\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      101
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>
+thread 'main' panicked at src/elements/io.rs:17:27:
+cannot close: EBADF
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+</pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="redirect.test.html#L133">: 3&gt;&amp;3-</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Syntax error: Bad fd number
+</pre></td></tr><tr><td><a name="details-14-ash"></a><b>ash</b></td><td>14 <a href="redirect.test.html#L133">: 3&gt;&amp;3-</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'hello\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: redir error
+</pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="redirect.test.html#L133">: 3&gt;&amp;3-</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: 3&gt;&amp;3- : illegal file descriptor name
+</pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="redirect.test.html#L133">: 3&gt;&amp;3-</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'hello\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[1]: 3&gt;&amp;3- : illegal file descriptor name
+E: ksh: &lt;stdin&gt;[1]: redirection failure
+</pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="redirect.test.html#L141">3&gt;&amp;- &lt;&lt; EOF (OSH regression: fail to restore fds)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'hello\nworld\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      101
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>
+thread 'main' panicked at src/elements/io.rs:17:27:
+cannot close: EBADF
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+</pre></td></tr><tr><td><a name="details-16-sush"></a><b>sush</b></td><td>16 <a href="redirect.test.html#L153">Open file on descriptor 3 and write to it many times</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'hello\nworld\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      101
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: 1: bad file descriptor
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: 1: bad file descriptor
+
+thread 'main' panicked at src/elements/io.rs:17:27:
+cannot close: EBADF
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+</pre></td></tr><tr><td><a name="details-18-dash"></a><b>dash</b></td><td>18 <a href="redirect.test.html#L181">Redirect to empty string</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>result=2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: cannot create : Directory nonexistent
+dash: 5: cannot create : Directory nonexistent
+</pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="redirect.test.html#L181">Redirect to empty string</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'result=1\n'
+Got      'result=1\nDONE\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>result=1
+DONE
+</pre><i>stderr:</i> <br/>
+<pre>sh: : No such file or directory
+set: bad -o errexit
+sh: : No such file or directory
+</pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="redirect.test.html#L181">Redirect to empty string</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'result=1\n'
+Got      'result=1\nDONE\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>result=1
+DONE
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: : entity not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: : entity not found
+</pre></td></tr><tr><td><a name="details-18-brush"></a><b>brush</b></td><td>18 <a href="redirect.test.html#L181">Redirect to empty string</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'result=1\n'
+Got      'result=1\nDONE\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>result=1
+DONE
+</pre><i>stderr:</i> <br/>
+<pre>error: failed to redirect to : No such file or directory (os error 2)
+error: failed to redirect to : No such file or directory (os error 2)
+</pre></td></tr><tr><td><a name="details-19-dash"></a><b>dash</b></td><td>19 <a href="redirect.test.html#L193">Redirect to file descriptor that's not open</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 8: 7: Bad file descriptor
+</pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="redirect.test.html#L193">Redirect to file descriptor that's not open</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 8: sh: syntax error: 1&gt;&amp;
+</pre></td></tr><tr><td><a name="details-19-brush"></a><b>brush</b></td><td>19 <a href="redirect.test.html#L193">Redirect to file descriptor that's not open</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected u''
+Got      "7\nFD 7 shouldn't be open\nOPENED:\n0\n1\n10\n11\n12\n13\n14\n16\n2\n3\n4\n5\n6\n7\n8\n9\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>7
+FD 7 shouldn't be open
+OPENED:
+0
+1
+10
+11
+12
+13
+14
+16
+2
+3
+4
+5
+6
+7
+8
+9
+</pre><i>stderr:</i> <br/>
+<pre>error: bad file descriptor: 7
+</pre></td></tr><tr><td><a name="details-22-dash"></a><b>dash</b></td><td>22 <a href="redirect.test.html#L239">&gt;| to clobber</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+XX
+ZZ
+</pre><i>stderr:</i> <br/>
+<pre>dash: 5: cannot create /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/redirect.test.sh/22-dash/c.txt: File exists
+</pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="redirect.test.html#L239">&gt;| to clobber</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=1\nXX\nZZ\n'
+Got      'status=0\nYY\nZZ\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+YY
+ZZ
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="redirect.test.html#L239">&gt;| to clobber</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=1\nXX\nZZ\n'
+Got      'status=0\nYY\nYY\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+YY
+YY
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: syntax error near unexpected token: &gt;|
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 10: syntax error near unexpected token: &gt;|
+</pre></td></tr><tr><td><a name="details-23-dash"></a><b>dash</b></td><td>23 <a href="redirect.test.html#L262">&amp;&gt; redirects stdout and stderr</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>STDOUT
+</pre><i>stderr:</i> <br/>
+<pre>STDERR
+</pre></td></tr><tr><td><a name="details-24-dash"></a><b>dash</b></td><td>24 <a href="redirect.test.html#L280">&gt;&amp;word redirects stdout and stderr when word is not a number or -</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-mksh"></a><b>mksh</b></td><td>24 <a href="redirect.test.html#L280">&gt;&amp;word redirects stdout and stderr when word is not a number or -</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-ksh"></a><b>ksh</b></td><td>24 <a href="redirect.test.html#L280">&gt;&amp;word redirects stdout and stderr when word is not a number or -</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'STDOUT\nSTDERR\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[5]: &gt;&amp;ksh-835020.txt : illegal file descriptor name
+grep: ksh-835020.txt: No such file or directory
+grep: ksh-835020.txt: No such file or directory
+</pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="redirect.test.html#L280">&gt;&amp;word redirects stdout and stderr when word is not a number or -</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'STDOUT\nSTDERR\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-24-sush"></a><b>sush</b></td><td>24 <a href="redirect.test.html#L280">&gt;&amp;word redirects stdout and stderr when word is not a number or -</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'STDOUT\nSTDERR\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: sush-835046.txt: ambiguous redirect
+grep: sush-835046.txt: No such file or directory
+grep: sush-835046.txt: No such file or directory
+</pre></td></tr><tr><td><a name="details-24-brush"></a><b>brush</b></td><td>24 <a href="redirect.test.html#L280">&gt;&amp;word redirects stdout and stderr when word is not a number or -</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'STDOUT\nSTDERR\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>error: invalid redirection
+grep: brush-835086.txt: No such file or directory
+grep: brush-835086.txt: No such file or directory
+</pre></td></tr><tr><td><a name="details-24-osh"></a><b>osh</b></td><td>24 <a href="redirect.test.html#L280">&gt;&amp;word redirects stdout and stderr when word is not a number or -</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'STDOUT\nSTDERR\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[osh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  stdout_stderr.py &gt;&amp;$tmp
+                     ^~~~
+[ stdin ]:5: Invalid descriptor 'osh-835118.txt'.  Expected D, -, or D- where D is an integer
+grep: osh-835118.txt: No such file or directory
+grep: osh-835118.txt: No such file or directory
+</pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="redirect.test.html#L300">1&gt;&amp;- to close file descriptor</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'hello\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 4: sh: syntax error: &gt;&amp;
+</pre></td></tr><tr><td><a name="details-26-dash"></a><b>dash</b></td><td>26 <a href="redirect.test.html#L310">1&gt;&amp;2- to move file descriptor</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 4: Syntax error: Bad fd number
+</pre></td></tr><tr><td><a name="details-26-ash"></a><b>ash</b></td><td>26 <a href="redirect.test.html#L310">1&gt;&amp;2- to move file descriptor</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'hello5\nworld6\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: redir error
+</pre></td></tr><tr><td><a name="details-26-zsh"></a><b>zsh</b></td><td>26 <a href="redirect.test.html#L310">1&gt;&amp;2- to move file descriptor</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'hello5\nworld6\n'
+Got      'hello5\nworld5\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hello5
+world5
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-mksh"></a><b>mksh</b></td><td>26 <a href="redirect.test.html#L310">1&gt;&amp;2- to move file descriptor</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: 6&gt;&amp;5- : illegal file descriptor name
+</pre></td></tr><tr><td><a name="details-26-ksh"></a><b>ksh</b></td><td>26 <a href="redirect.test.html#L310">1&gt;&amp;2- to move file descriptor</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'hello5\nworld6\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[3]: 6&gt;&amp;5- : illegal file descriptor name
+E: ksh: &lt;stdin&gt;[3]: redirection failure
+</pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="redirect.test.html#L310">1&gt;&amp;2- to move file descriptor</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'hello5\nworld6\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 4: sh: syntax error: &gt;&amp;
+</pre></td></tr><tr><td><a name="details-26-sush"></a><b>sush</b></td><td>26 <a href="redirect.test.html#L310">1&gt;&amp;2- to move file descriptor</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'hello5\nworld6\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      101
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: 5-: ambiguous redirect
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: 1: bad file descriptor
+
+thread 'main' panicked at src/elements/io.rs:17:27:
+cannot close: EBADF
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+</pre></td></tr><tr><td><a name="details-26-brush"></a><b>brush</b></td><td>26 <a href="redirect.test.html#L310">1&gt;&amp;2- to move file descriptor</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'hello5\nworld6\n'
+Got      'hello5\nworld5\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hello5
+world5
+</pre><i>stderr:</i> <br/>
+<pre>error: bad file descriptor: 6
+</pre></td></tr><tr><td><a name="details-27-bash"></a><b>bash</b></td><td>27 <a href="redirect.test.html#L327">1&gt;&amp;2- (Bash bug: fail to restore closed fd)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hello
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 19: 7: Bad file descriptor
+</pre></td></tr><tr><td><a name="details-27-dash"></a><b>dash</b></td><td>27 <a href="redirect.test.html#L327">1&gt;&amp;2- (Bash bug: fail to restore closed fd)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 19: Syntax error: Bad fd number
+</pre></td></tr><tr><td><a name="details-27-ash"></a><b>ash</b></td><td>27 <a href="redirect.test.html#L327">1&gt;&amp;2- (Bash bug: fail to restore closed fd)</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: redir error
+</pre></td></tr><tr><td><a name="details-27-zsh"></a><b>zsh</b></td><td>27 <a href="redirect.test.html#L327">1&gt;&amp;2- (Bash bug: fail to restore closed fd)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected u''
+Got      'hello\nworld\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hello
+world
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-toysh"></a><b>toysh</b></td><td>27 <a href="redirect.test.html#L327">1&gt;&amp;2- (Bash bug: fail to restore closed fd)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected u''
+Got      'hello\nworld\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hello
+world
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-sush"></a><b>sush</b></td><td>27 <a href="redirect.test.html#L327">1&gt;&amp;2- (Bash bug: fail to restore closed fd)</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      101
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>
+thread 'main' panicked at src/elements/io.rs:17:27:
+cannot close: EBADF
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+</pre></td></tr><tr><td><a name="details-27-brush"></a><b>brush</b></td><td>27 <a href="redirect.test.html#L327">1&gt;&amp;2- (Bash bug: fail to restore closed fd)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected u''
+Got      "7\nFD 7 shouldn't be open\nOPENED:\n0\n1\n10\n11\n12\n13\n14\n16\n2\n3\n4\n5\n6\n7\n8\n9\n6\nFD 6 shouldn't be open\nOPENED:\n0\n1\n10\n11\n12\n13\n14\n16\n2\n3\n4\n5\n6\n7\n8\n9\nhello\nworld\n"
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>7
+FD 7 shouldn't be open
+OPENED:
+0
+1
+10
+11
+12
+13
+14
+16
+2
+3
+4
+5
+6
+7
+8
+9
+6
+FD 6 shouldn't be open
+OPENED:
+0
+1
+10
+11
+12
+13
+14
+16
+2
+3
+4
+5
+6
+7
+8
+9
+hello
+world
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-toysh"></a><b>toysh</b></td><td>28 <a href="redirect.test.html#L362">&lt;&gt; for read/write</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'line=first\nCONTENTS\nfirst\nsecond\n'
+Got      'line=\nCONTENTS\nsecond\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line=
+CONTENTS
+second
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-28-sush"></a><b>sush</b></td><td>28 <a href="redirect.test.html#L362">&lt;&gt; for read/write</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'line=first\nCONTENTS\nfirst\nsecond\n'
+Got      'line=\nCONTENTS\nfirst\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line=
+CONTENTS
+first
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: syntax error near unexpected token: &lt;&gt;$TMP/rw.txt
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: 0: bad file descriptor
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: 1: bad file descriptor
+</pre></td></tr><tr><td><a name="details-29-toysh"></a><b>toysh</b></td><td>29 <a href="redirect.test.html#L377">&lt;&gt; for read/write named pipes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'line1=first line2=second\n'
+Got      'line1= line2=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line1= line2=
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-29-sush"></a><b>sush</b></td><td>29 <a href="redirect.test.html#L377">&lt;&gt; for read/write named pipes</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'line1=first line2=second\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      101
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: syntax error near unexpected token: &lt;&gt;
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: 1: bad file descriptor
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: 1: bad file descriptor
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: 0: bad file descriptor
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: 0: bad file descriptor
+
+thread 'main' panicked at src/elements/io.rs:17:27:
+cannot close: EBADF
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+</pre></td></tr><tr><td><a name="details-30-dash"></a><b>dash</b></td><td>30 <a href="redirect.test.html#L389">&amp;&gt;&gt; appends stdout and stderr</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-ash"></a><b>ash</b></td><td>30 <a href="redirect.test.html#L389">&amp;&gt;&gt; appends stdout and stderr</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'ok\nok\nok\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected redirection
+</pre></td></tr><tr><td><a name="details-30-toysh"></a><b>toysh</b></td><td>30 <a href="redirect.test.html#L389">&amp;&gt;&gt; appends stdout and stderr</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'ok\nok\nok\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-30-sush"></a><b>sush</b></td><td>30 <a href="redirect.test.html#L389">&amp;&gt;&gt; appends stdout and stderr</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'ok\nok\nok\n'
+Got      'ok\nSTDOUT\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+STDOUT
+</pre><i>stderr:</i> <br/>
+<pre>836317
+STDERR
+</pre></td></tr><tr><td><a name="details-32-bash"></a><b>bash</b></td><td>32 <a href="redirect.test.html#L421">can't mention big file descriptor</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hi
+hi
+hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-ash"></a><b>ash</b></td><td>32 <a href="redirect.test.html#L421">can't mention big file descriptor</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'hi\nhi 99\nhi 100\n'
+Got      'hi\nhi\nhi\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+hi
+hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-toysh"></a><b>toysh</b></td><td>32 <a href="redirect.test.html#L421">can't mention big file descriptor</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'hi\nhi 99\nhi 100\n'
+Got      'hi\nhi\nhi\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+hi
+hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-sush"></a><b>sush</b></td><td>32 <a href="redirect.test.html#L421">can't mention big file descriptor</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'hi\nhi 99\nhi 100\n'
+Got      'hi\nhi\nhi\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+hi
+hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-brush"></a><b>brush</b></td><td>32 <a href="redirect.test.html#L421">can't mention big file descriptor</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'hi\nhi 99\nhi 100\n'
+Got      'hi\nhi\nhi\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+hi
+hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-osh"></a><b>osh</b></td><td>32 <a href="redirect.test.html#L421">can't mention big file descriptor</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hi
+hi
+hi 100
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-dash"></a><b>dash</b></td><td>33 <a href="redirect.test.html#L443">: &gt;/dev/null 2&gt; / (OSH regression: fail to pop fd frame)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: cannot create /: Is a directory
+</pre></td></tr><tr><td><a name="details-33-ash"></a><b>ash</b></td><td>33 <a href="redirect.test.html#L443">: &gt;/dev/null 2&gt; / (OSH regression: fail to pop fd frame)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'hello\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: can't create /: Is a directory
+</pre></td></tr><tr><td><a name="details-33-mksh"></a><b>mksh</b></td><td>33 <a href="redirect.test.html#L443">: &gt;/dev/null 2&gt; / (OSH regression: fail to pop fd frame)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: can't create /: Is a directory
+</pre></td></tr><tr><td><a name="details-33-ksh"></a><b>ksh</b></td><td>33 <a href="redirect.test.html#L443">: &gt;/dev/null 2&gt; / (OSH regression: fail to pop fd frame)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'hello\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[1]: /: create: Is a directory
+E: ksh: &lt;stdin&gt;[1]: redirection failure
+</pre></td></tr><tr><td><a name="details-34-dash"></a><b>dash</b></td><td>34 <a href="redirect.test.html#L457">echo foo &gt;&amp;100 (OSH regression: does not fail with invalid fd 100)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Syntax error: Bad fd number
+</pre></td></tr><tr><td><a name="details-34-toysh"></a><b>toysh</b></td><td>34 <a href="redirect.test.html#L457">echo foo &gt;&amp;100 (OSH regression: does not fail with invalid fd 100)</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: &gt;&amp;
+</pre></td></tr><tr><td><a name="details-35-dash"></a><b>dash</b></td><td>35 <a href="redirect.test.html#L465">echo foo &gt;&amp;N where N is first unused fd</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 13: Syntax error: Bad fd number
+</pre></td></tr><tr><td><a name="details-35-toysh"></a><b>toysh</b></td><td>35 <a href="redirect.test.html#L465">echo foo &gt;&amp;N where N is first unused fd</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: (
+</pre></td></tr><tr><td><a name="details-36-dash"></a><b>dash</b></td><td>36 <a href="redirect.test.html#L491">exec {fd}&gt;&amp;- (OSH regression: fails to close fd)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-ash"></a><b>ash</b></td><td>36 <a href="redirect.test.html#L491">exec {fd}&gt;&amp;- (OSH regression: fails to close fd)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'foo55\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: exec: line 2: {fd}: not found
+</pre></td></tr><tr><td><a name="details-36-mksh"></a><b>mksh</b></td><td>36 <a href="redirect.test.html#L491">exec {fd}&gt;&amp;- (OSH regression: fails to close fd)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-ksh"></a><b>ksh</b></td><td>36 <a href="redirect.test.html#L491">exec {fd}&gt;&amp;- (OSH regression: fails to close fd)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'foo55\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: {fd}: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-36-toysh"></a><b>toysh</b></td><td>36 <a href="redirect.test.html#L491">exec {fd}&gt;&amp;- (OSH regression: fails to close fd)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'foo55\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-36-sush"></a><b>sush</b></td><td>36 <a href="redirect.test.html#L491">exec {fd}&gt;&amp;- (OSH regression: fails to close fd)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'foo55\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: {fd}: command not found
+</pre></td></tr><tr><td><a name="details-36-brush"></a><b>brush</b></td><td>36 <a href="redirect.test.html#L491">exec {fd}&gt;&amp;- (OSH regression: fails to close fd)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'foo55\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>error: invalid redirection
+error: invalid redirection
+</pre></td></tr></table></body></html>

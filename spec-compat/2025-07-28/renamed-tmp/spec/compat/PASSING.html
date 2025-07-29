@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PASSING - Shell Compatibility </title>
+<link rel="stylesheet" type="text/css" href="../../../web/table/table-sort.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-cpp.css" />
+<script type="text/javascript" src="../../../web/ajax.js"></script>
+<script type="text/javascript" src="../../../web/table/table-sort.js"></script>
+  </head>
+
+<body class="width50"
+      onload="initPage(gUrlHash, gTableStates, kStatusElem);"
+      onhashchange="onHashChange(gUrlHash, gTableStates, kStatusElem);">
+  <p id="status"></p>
+
+<p id="home-link">
+  <a href="/">Root</a> |
+  <a href="https://oils.pub/">oils.pub</a>
+</p>
+
+<h1>PASSING - Shell Compatibility</h1>
+
+<p>Back to <a href="TOP.html">TOP.html</a>
+</p>
+<table id="PASSING">
+  <thead>
+    <tr>
+    <td>name</td>
+    <td class="num">bash</td>
+    <td class="num">dash</td>
+    <td class="num">ash</td>
+    <td class="num">zsh</td>
+    <td class="num">mksh</td>
+    <td class="num">ksh</td>
+    <td class="num">toysh</td>
+    <td class="num">sush</td>
+    <td class="num">brush</td>
+    <td class="num">osh</td>
+    </tr>
+    <tr class="cpp-good">
+      <td> TOTAL </td>
+      <td class="num"> 2,164 </td>
+      <td class="num"> 986 </td>
+      <td class="num"> 1,191 </td>
+      <td class="num"> 1,265 </td>
+      <td class="num"> 1,434 </td>
+      <td class="num"> 1,470 </td>
+      <td class="num"> 811 </td>
+      <td class="num"> 1,375 </td>
+      <td class="num"> 1,553 </td>
+      <td class="num"> 2,273 </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="cpp-good">
+      <td> <a href="alias.html">alias</a> </td>
+      <td class="num"> 47 </td>
+      <td class="num"> 42 </td>
+      <td class="num"> 43 </td>
+      <td class="num"> 40 </td>
+      <td class="num"> 42 </td>
+      <td class="num"> 41 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 32 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 43 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="append.html">append</a> </td>
+      <td class="num"> 15 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 14 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 19 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="arith.html">arith</a> </td>
+      <td class="num"> 62 </td>
+      <td class="num"> 28 </td>
+      <td class="num"> 41 </td>
+      <td class="num"> 44 </td>
+      <td class="num"> 51 </td>
+      <td class="num"> 52 </td>
+      <td class="num"> 39 </td>
+      <td class="num"> 59 </td>
+      <td class="num"> 58 </td>
+      <td class="num"> 70 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="arith-context.html">arith-context</a> </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 10 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 14 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="arith-dynamic.html">arith-dynamic</a> </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 1 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="array.html">array</a> </td>
+      <td class="num"> 63 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 25 </td>
+      <td class="num"> 41 </td>
+      <td class="num"> 45 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 55 </td>
+      <td class="num"> 47 </td>
+      <td class="num"> 76 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="array-assign.html">array-assign</a> </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="array-assoc.html">array-assoc</a> </td>
+      <td class="num"> 34 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 10 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 26 </td>
+      <td class="num"> 27 </td>
+      <td class="num"> 38 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="array-basic.html">array-basic</a> </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="array-compat.html">array-compat</a> </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 7 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="array-literal.html">array-literal</a> </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 19 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="array-sparse.html">array-sparse</a> </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 15 </td>
+      <td class="num"> 38 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="assign.html">assign</a> </td>
+      <td class="num"> 36 </td>
+      <td class="num"> 22 </td>
+      <td class="num"> 28 </td>
+      <td class="num"> 35 </td>
+      <td class="num"> 33 </td>
+      <td class="num"> 34 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 28 </td>
+      <td class="num"> 36 </td>
+      <td class="num"> 45 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="assign-deferred.html">assign-deferred</a> </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 4 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="assign-dialects.html">assign-dialects</a> </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 1 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="assign-extended.html">assign-extended</a> </td>
+      <td class="num"> 23 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 36 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="background.html">background</a> </td>
+      <td class="num"> 23 </td>
+      <td class="num"> 17 </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 23 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="ble-features.html">ble-features</a> </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 5 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="ble-idioms.html">ble-idioms</a> </td>
+      <td class="num"> 25 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 15 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 21 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="ble-unset.html">ble-unset</a> </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 3 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="blog1.html">blog1</a> </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 5 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="blog2.html">blog2</a> </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 8 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="brace-expansion.html">brace-expansion</a> </td>
+      <td class="num"> 46 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 38 </td>
+      <td class="num"> 32 </td>
+      <td class="num"> 32 </td>
+      <td class="num"> 38 </td>
+      <td class="num"> 42 </td>
+      <td class="num"> 31 </td>
+      <td class="num"> 50 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="bugs.html">bugs</a> </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 17 </td>
+      <td class="num"> 17 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 16 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 26 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-bash.html">builtin-bash</a> </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 10 </td>
+      <td class="num"> 9 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-bind.html">builtin-bind</a> </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 2 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-bracket.html">builtin-bracket</a> </td>
+      <td class="num"> 49 </td>
+      <td class="num"> 42 </td>
+      <td class="num"> 44 </td>
+      <td class="num"> 37 </td>
+      <td class="num"> 45 </td>
+      <td class="num"> 48 </td>
+      <td class="num"> 40 </td>
+      <td class="num"> 44 </td>
+      <td class="num"> 42 </td>
+      <td class="num"> 52 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-cd.html">builtin-cd</a> </td>
+      <td class="num"> 26 </td>
+      <td class="num"> 22 </td>
+      <td class="num"> 22 </td>
+      <td class="num"> 23 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 14 </td>
+      <td class="num"> 17 </td>
+      <td class="num"> 22 </td>
+      <td class="num"> 23 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-completion.html">builtin-completion</a> </td>
+      <td class="num"> 42 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 16 </td>
+      <td class="num"> 29 </td>
+      <td class="num"> 48 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-dirs.html">builtin-dirs</a> </td>
+      <td class="num"> 16 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 16 </td>
+      <td class="num"> 16 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-echo.html">builtin-echo</a> </td>
+      <td class="num"> 27 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 14 </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 23 </td>
+      <td class="num"> 27 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-eval-source.html">builtin-eval-source</a> </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 15 </td>
+      <td class="num"> 15 </td>
+      <td class="num"> 22 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-fc.html">builtin-fc</a> </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 9 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-getopts.html">builtin-getopts</a> </td>
+      <td class="num"> 22 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 17 </td>
+      <td class="num"> 17 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 21 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-history.html">builtin-history</a> </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 8 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-kill.html">builtin-kill</a> </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-meta.html">builtin-meta</a> </td>
+      <td class="num"> 15 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 17 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-meta-assign.html">builtin-meta-assign</a> </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 11 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-misc.html">builtin-misc</a> </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 7 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-printf.html">builtin-printf</a> </td>
+      <td class="num"> 51 </td>
+      <td class="num"> 34 </td>
+      <td class="num"> 32 </td>
+      <td class="num"> 36 </td>
+      <td class="num"> 32 </td>
+      <td class="num"> 34 </td>
+      <td class="num"> 33 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 34 </td>
+      <td class="num"> 40 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-process.html">builtin-process</a> </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 17 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 17 </td>
+      <td class="num"> 26 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-read.html">builtin-read</a> </td>
+      <td class="num"> 46 </td>
+      <td class="num"> 16 </td>
+      <td class="num"> 38 </td>
+      <td class="num"> 17 </td>
+      <td class="num"> 29 </td>
+      <td class="num"> 30 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 31 </td>
+      <td class="num"> 49 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-special.html">builtin-special</a> </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 10 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 10 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-times.html">builtin-times</a> </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-trap.html">builtin-trap</a> </td>
+      <td class="num"> 22 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 14 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 20 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-trap-bash.html">builtin-trap-bash</a> </td>
+      <td class="num"> 22 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 16 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-trap-err.html">builtin-trap-err</a> </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 17 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 14 </td>
+      <td class="num"> 15 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 20 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-type.html">builtin-type</a> </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 6 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-type-bash.html">builtin-type-bash</a> </td>
+      <td class="num"> 28 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 29 </td>
+      <td class="num"> 28 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="builtin-vars.html">builtin-vars</a> </td>
+      <td class="num"> 35 </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 25 </td>
+      <td class="num"> 25 </td>
+      <td class="num"> 25 </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 24 </td>
+      <td class="num"> 25 </td>
+      <td class="num"> 37 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="case_.html">case_</a> </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 10 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 10 </td>
+      <td class="num"> 11 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="command_.html">command_</a> </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 14 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 10 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 14 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="command-parsing.html">command-parsing</a> </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 2 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="command-sub.html">command-sub</a> </td>
+      <td class="num"> 29 </td>
+      <td class="num"> 29 </td>
+      <td class="num"> 30 </td>
+      <td class="num"> 24 </td>
+      <td class="num"> 27 </td>
+      <td class="num"> 27 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 28 </td>
+      <td class="num"> 15 </td>
+      <td class="num"> 30 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="command-sub-ksh.html">command-sub-ksh</a> </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="comments.html">comments</a> </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="dbracket.html">dbracket</a> </td>
+      <td class="num"> 49 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 35 </td>
+      <td class="num"> 36 </td>
+      <td class="num"> 36 </td>
+      <td class="num"> 17 </td>
+      <td class="num"> 36 </td>
+      <td class="num"> 40 </td>
+      <td class="num"> 50 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="divergence.html">divergence</a> </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 0 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="dparen.html">dparen</a> </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 10 </td>
+      <td class="num"> 10 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 14 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="empty-bodies.html">empty-bodies</a> </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="errexit.html">errexit</a> </td>
+      <td class="num"> 34 </td>
+      <td class="num"> 29 </td>
+      <td class="num"> 30 </td>
+      <td class="num"> 32 </td>
+      <td class="num"> 35 </td>
+      <td class="num"> 35 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 14 </td>
+      <td class="num"> 35 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="errexit-osh.html">errexit-osh</a> </td>
+      <td class="num"> 15 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 14 </td>
+      <td class="num"> 10 </td>
+      <td class="num"> 10 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 35 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="exit-status.html">exit-status</a> </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 8 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="explore-parsing.html">explore-parsing</a> </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 5 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="extglob-files.html">extglob-files</a> </td>
+      <td class="num"> 22 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 14 </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 18 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="extglob-match.html">extglob-match</a> </td>
+      <td class="num"> 29 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 22 </td>
+      <td class="num"> 26 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 23 </td>
+      <td class="num"> 28 </td>
+      <td class="num"> 25 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="fatal-errors.html">fatal-errors</a> </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 5 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="for-expr.html">for-expr</a> </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 9 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="func-parsing.html">func-parsing</a> </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 14 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 14 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="glob.html">glob</a> </td>
+      <td class="num"> 31 </td>
+      <td class="num"> 24 </td>
+      <td class="num"> 27 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 26 </td>
+      <td class="num"> 28 </td>
+      <td class="num"> 16 </td>
+      <td class="num"> 24 </td>
+      <td class="num"> 27 </td>
+      <td class="num"> 29 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="glob-bash.html">glob-bash</a> </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 7 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="globignore.html">globignore</a> </td>
+      <td class="num"> 14 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="globstar.html">globstar</a> </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="here-doc.html">here-doc</a> </td>
+      <td class="num"> 33 </td>
+      <td class="num"> 31 </td>
+      <td class="num"> 32 </td>
+      <td class="num"> 27 </td>
+      <td class="num"> 32 </td>
+      <td class="num"> 32 </td>
+      <td class="num"> 22 </td>
+      <td class="num"> 23 </td>
+      <td class="num"> 31 </td>
+      <td class="num"> 31 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="if_.html">if_</a> </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="interactive.html">interactive</a> </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 18 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="introspect.html">introspect</a> </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 13 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="let.html">let</a> </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 0 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="loop.html">loop</a> </td>
+      <td class="num"> 23 </td>
+      <td class="num"> 23 </td>
+      <td class="num"> 23 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 23 </td>
+      <td class="num"> 24 </td>
+      <td class="num"> 16 </td>
+      <td class="num"> 15 </td>
+      <td class="num"> 15 </td>
+      <td class="num"> 29 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="nameref.html">nameref</a> </td>
+      <td class="num"> 25 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 25 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="nix-idioms.html">nix-idioms</a> </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 5 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="nocasematch-match.html">nocasematch-match</a> </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 6 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="nul-bytes.html">nul-bytes</a> </td>
+      <td class="num"> 16 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 14 </td>
+      <td class="num"> 14 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 11 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="osh-bugs.html">osh-bugs</a> </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 2 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="parse-errors.html">parse-errors</a> </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 22 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 14 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 24 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="pipeline.html">pipeline</a> </td>
+      <td class="num"> 24 </td>
+      <td class="num"> 16 </td>
+      <td class="num"> 17 </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 23 </td>
+      <td class="num"> 23 </td>
+      <td class="num"> 24 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="posix.html">posix</a> </td>
+      <td class="num"> 15 </td>
+      <td class="num"> 15 </td>
+      <td class="num"> 15 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 14 </td>
+      <td class="num"> 15 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="print-source-code.html">print-source-code</a> </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 4 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="process-sub.html">process-sub</a> </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 9 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="prompt.html">prompt</a> </td>
+      <td class="num"> 31 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 25 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="quote.html">quote</a> </td>
+      <td class="num"> 32 </td>
+      <td class="num"> 22 </td>
+      <td class="num"> 31 </td>
+      <td class="num"> 25 </td>
+      <td class="num"> 26 </td>
+      <td class="num"> 26 </td>
+      <td class="num"> 31 </td>
+      <td class="num"> 32 </td>
+      <td class="num"> 28 </td>
+      <td class="num"> 34 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="redirect.html">redirect</a> </td>
+      <td class="num"> 34 </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 27 </td>
+      <td class="num"> 31 </td>
+      <td class="num"> 29 </td>
+      <td class="num"> 29 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 22 </td>
+      <td class="num"> 29 </td>
+      <td class="num"> 35 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="redirect-command.html">redirect-command</a> </td>
+      <td class="num"> 22 </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 16 </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 23 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="redirect-multi.html">redirect-multi</a> </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 13 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="redir-order.html">redir-order</a> </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="regex.html">regex</a> </td>
+      <td class="num"> 35 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 10 </td>
+      <td class="num"> 16 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 23 </td>
+      <td class="num"> 30 </td>
+      <td class="num"> 37 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="serialize.html">serialize</a> </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 7 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="sh-func.html">sh-func</a> </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 10 </td>
+      <td class="num"> 10 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 10 </td>
+      <td class="num"> 11 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="sh-options.html">sh-options</a> </td>
+      <td class="num"> 34 </td>
+      <td class="num"> 16 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 27 </td>
+      <td class="num"> 44 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="sh-options-bash.html">sh-options-bash</a> </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 6 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="sh-usage.html">sh-usage</a> </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 10 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 14 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="smoke.html">smoke</a> </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 17 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 16 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 17 </td>
+      <td class="num"> 18 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="subshell.html">subshell</a> </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="temp-binding.html">temp-binding</a> </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 3 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="tilde.html">tilde</a> </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 13 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="toysh.html">toysh</a> </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 4 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="toysh-posix.html">toysh-posix</a> </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 17 </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 10 </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 14 </td>
+      <td class="num"> 15 </td>
+      <td class="num"> 16 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="type-compat.html">type-compat</a> </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="unicode.html">unicode</a> </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 7 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="var-num.html">var-num</a> </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 7 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="var-op-bash.html">var-op-bash</a> </td>
+      <td class="num"> 22 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 10 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 18 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="var-op-len.html">var-op-len</a> </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 8 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="var-op-patsub.html">var-op-patsub</a> </td>
+      <td class="num"> 27 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 14 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 19 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 15 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 26 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="var-op-slice.html">var-op-slice</a> </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 15 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 20 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="var-op-strip.html">var-op-strip</a> </td>
+      <td class="num"> 29 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 22 </td>
+      <td class="num"> 23 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 25 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 24 </td>
+      <td class="num"> 29 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="var-op-test.html">var-op-test</a> </td>
+      <td class="num"> 35 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 23 </td>
+      <td class="num"> 27 </td>
+      <td class="num"> 28 </td>
+      <td class="num"> 10 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 22 </td>
+      <td class="num"> 34 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="var-ref.html">var-ref</a> </td>
+      <td class="num"> 26 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 16 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 31 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="vars-bash.html">vars-bash</a> </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 0 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="vars-special.html">vars-special</a> </td>
+      <td class="num"> 38 </td>
+      <td class="num"> 17 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 28 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 21 </td>
+      <td class="num"> 20 </td>
+      <td class="num"> 25 </td>
+      <td class="num"> 26 </td>
+      <td class="num"> 38 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="var-sub.html">var-sub</a> </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 6 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="var-sub-quote.html">var-sub-quote</a> </td>
+      <td class="num"> 38 </td>
+      <td class="num"> 34 </td>
+      <td class="num"> 35 </td>
+      <td class="num"> 29 </td>
+      <td class="num"> 37 </td>
+      <td class="num"> 37 </td>
+      <td class="num"> 13 </td>
+      <td class="num"> 35 </td>
+      <td class="num"> 24 </td>
+      <td class="num"> 39 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="whitespace.html">whitespace</a> </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="word-eval.html">word-eval</a> </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 6 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 5 </td>
+      <td class="num"> 8 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 8 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="word-split.html">word-split</a> </td>
+      <td class="num"> 50 </td>
+      <td class="num"> 49 </td>
+      <td class="num"> 49 </td>
+      <td class="num"> 18 </td>
+      <td class="num"> 48 </td>
+      <td class="num"> 49 </td>
+      <td class="num"> 30 </td>
+      <td class="num"> 46 </td>
+      <td class="num"> 34 </td>
+      <td class="num"> 48 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="xtrace.html">xtrace</a> </td>
+      <td class="num"> 11 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 9 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 4 </td>
+      <td class="num"> 12 </td>
+      <td class="num"> 15 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="zsh-assoc.html">zsh-assoc</a> </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 7 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 1 </td>
+      <td class="num"> 0 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 2 </td>
+    </tr>
+    <tr class="cpp-good">
+      <td> <a href="zsh-idioms.html">zsh-idioms</a> </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 3 </td>
+      <td class="num"> 2 </td>
+      <td class="num"> 3 </td>
+    </tr>
+  </tbody>
+  <colgroup>
+    <col id="name" type="case-insensitive" />
+    <col id="bash" type="number" />
+    <col id="dash" type="number" />
+    <col id="ash" type="number" />
+    <col id="zsh" type="number" />
+    <col id="mksh" type="number" />
+    <col id="ksh" type="number" />
+    <col id="toysh" type="number" />
+    <col id="sush" type="number" />
+    <col id="brush" type="number" />
+    <col id="osh" type="number" />
+  </colgroup>
+</table>
+
+<p>Generated by <code>test/spec-compat.sh</code>.
+</p>
+
+<p><a href=PASSING.tsv>Raw TSV</a>
+</p>
+
+
+    <!-- page globals -->
+    <script type="text/javascript">
+      var gUrlHash = new UrlHash(location.hash);
+      var gTableStates = {};
+      var kStatusElem = document.getElementById('status');
+
+      function initPage(urlHash, tableStates, statusElem) {
+        var elem = document.getElementById('PASSING');
+        makeTablesSortable(urlHash, [elem], tableStates);
+        updateTables(urlHash, tableStates, statusElem);
+      }
+
+      function onHashChange(urlHash, tableStates, statusElem) {
+        updateTables(urlHash, tableStates, statusElem);
+      }
+    </script>
+
+  </body>
+</html>
