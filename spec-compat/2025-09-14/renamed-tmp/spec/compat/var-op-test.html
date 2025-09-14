@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>var-op-test: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for var-op-test.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>35</td><td>20</td><td>20</td><td>23</td><td>27</td><td>28</td><td>10</td><td>25</td><td>22</td><td>34</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>3</td><td>0</td><td>6</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>13</td><td>0</td><td>4</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>2</td><td>1</td><td>0</td><td>4</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>17</td><td>0</td><td>0</td><td>9</td><td>27</td><td>12</td><td>15</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>37</td><td>37</td><td>37</td><td>37</td><td>37</td><td>37</td><td>37</td><td>37</td><td>37</td><td>37</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L4">Lazy Evaluation of Alternative</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L24">Default value when empty</a></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L29">Default value when unset</a></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="var-op-test.test.html#L33">Unquoted with array as default value</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="var-op-test.test.html#L51">Quoted with array as default value</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="var-op-test.test.html#L72">Assign default with array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L89">Assign default value when empty</a></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L95">Assign default value when unset</a></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L100">${v:+foo} Alternative value when empty</a></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L106">${v+foo} Alternative value when unset</a></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L111">"${x+foo}" quoted (regression)</a></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L118">${s+foo} and ${s:+foo} when set -u</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L133">"${array[@]} with set -u (bash is outlier)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-12-bash">details</a></td><td class="details-row"><a href="#details-12-dash">details</a></td><td class="details-row"><a href="#details-12-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L165">"${undefined[@]+foo}" and "${undefined[@]:+foo}", with set -u</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L181">"${a[@]+foo}" and "${a[@]:+foo}" - operators are equivalent on arrays?</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"><a href="#details-14-ash">details</a></td><td class="details-row"><a href="#details-14-zsh">details</a></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L263">Nix idiom ${!hooksSlice+"${!hooksSlice}"} - was workaround for obsolete bash 4.3 bug</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"><a href="#details-15-ash">details</a></td><td class="details-row"><a href="#details-15-zsh">details</a></td><td class="details-row"><a href="#details-15-mksh">details</a></td><td class="details-row"><a href="#details-15-ksh">details</a></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L304">${v-foo} and ${v:-foo} when set -u</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L319">array and - and +</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-dash">details</a></td><td class="details-row"><a href="#details-17-ash">details</a></td><td class="details-row"><a href="#details-17-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-17-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L396">$@ (empty) and - and +</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-dash">details</a></td><td class="details-row"><a href="#details-18-ash">details</a></td><td class="details-row"><a href="#details-18-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"><a href="#details-18-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L414">$@ ("") and - and +</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L437">$@ ("" "") and - and +</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-20-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L450">$* ("" "") and - and + (IFS=)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-21-mksh">details</a></td><td class="details-row"><a href="#details-21-ksh">details</a></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"><a href="#details-21-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L470">"$*" ("" "") and - and + (IFS=)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-22-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L484">assoc array and - and +</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-dash">details</a></td><td class="details-row"><a href="#details-23-ash">details</a></td><td class="details-row"><a href="#details-23-zsh">details</a></td><td class="details-row"><a href="#details-23-mksh">details</a></td><td class="details-row"><a href="#details-23-ksh">details</a></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-23-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L528">Error when empty</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-dash">details</a></td><td class="details-row"><a href="#details-24-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"><a href="#details-24-sush">details</a></td><td class="details-row"><a href="#details-24-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L536">Error when unset</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-dash">details</a></td><td class="details-row"><a href="#details-25-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"><a href="#details-25-sush">details</a></td><td class="details-row"><a href="#details-25-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L543">Error when unset</a></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L548">${var=x} dynamic scope</a></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L562">array ${arr[0]=x}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-dash">details</a></td><td class="details-row"><a href="#details-28-ash">details</a></td><td class="details-row"><a href="#details-28-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L578">assoc array ${arr["k"]=x}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-dash">details</a></td><td class="details-row"><a href="#details-29-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-29-mksh">details</a></td><td class="details-row"><a href="#details-29-ksh">details</a></td><td class="details-row"><a href="#details-29-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 30</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L594">"\z" as arg</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-30-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 31</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L620">"\e" as arg</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-zsh">details</a></td><td class="details-row"><a href="#details-31-mksh">details</a></td><td class="details-row"><a href="#details-31-ksh">details</a></td><td class="details-row"><a href="#details-31-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-31-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 32</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L629">op-test for ${a} and ${a[0]}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-32-dash">details</a></td><td class="details-row"><a href="#details-32-ash">details</a></td><td class="details-row"><a href="#details-32-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-32-toysh">details</a></td><td class="details-row"><a href="#details-32-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 33</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L674">op-test for ${a[@]} and ${a[*]}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-33-dash">details</a></td><td class="details-row"><a href="#details-33-ash">details</a></td><td class="details-row"><a href="#details-33-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-33-toysh">details</a></td><td class="details-row"><a href="#details-33-sush">details</a></td><td class="details-row"><a href="#details-33-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 34</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L734">op-test for ${!array} with array="a" and array="a[0]"</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-34-dash">details</a></td><td class="details-row"><a href="#details-34-ash">details</a></td><td class="details-row"><a href="#details-34-zsh">details</a></td><td class="details-row"><a href="#details-34-mksh">details</a></td><td class="details-row"><a href="#details-34-ksh">details</a></td><td class="details-row"><a href="#details-34-toysh">details</a></td><td class="details-row"><a href="#details-34-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 35</td><td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L768">op-test for ${!array} with array="a[@]" or array="a[*]"</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-35-bash">details</a></td><td class="details-row"><a href="#details-35-dash">details</a></td><td class="details-row"><a href="#details-35-ash">details</a></td><td class="details-row"><a href="#details-35-zsh">details</a></td><td class="details-row"><a href="#details-35-mksh">details</a></td><td class="details-row"><a href="#details-35-ksh">details</a></td><td class="details-row"><a href="#details-35-toysh">details</a></td><td class="details-row"><a href="#details-35-sush">details</a></td><td class="details-row"><a href="#details-35-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 36</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-test.test.html#L813">op-test for unquoted ${a[*]:-empty} with IFS=</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-36-dash">details</a></td><td class="details-row"><a href="#details-36-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-36-mksh">details</a></td><td class="details-row"><a href="#details-36-ksh">details</a></td><td class="details-row"><a href="#details-36-toysh">details</a></td><td class="details-row"><a href="#details-36-sush">details</a></td><td class="details-row"><a href="#details-36-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>244 passed, 13 OK, 21 not implemented, 12 BUG, 80 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="var-op-test.test.html#L4">Lazy Evaluation of Alternative</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>x
+0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 5: arithmetic expression: expecting primary: "i++"
+</pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="var-op-test.test.html#L4">Lazy Evaluation of Alternative</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'x\n0\n0\n1\n'
+Got      'x\n0\n$((i++))\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x
+0
+$((i++))
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="var-op-test.test.html#L4">Lazy Evaluation of Alternative</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'x\n0\n0\n1\n'
+Got      'x\n0\n0\n2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x
+0
+0
+2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="var-op-test.test.html#L33">Unquoted with array as default value</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['Xx1 2 3 4xX']
+['Xx1 2 3 4xX']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="var-op-test.test.html#L33">Unquoted with array as default value</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['Xx1', '2', '3', '4xX']\n['Xx1', '2', '3', '4xX']\n"
+Got      '[\'Xx"$@"xX\']\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['Xx"$@"xX']
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+main: line 3: sh: unset: =x$@x}X
+</pre></td></tr><tr><td><a name="details-3-osh"></a><b>osh</b></td><td>3 <a href="var-op-test.test.html#L33">Unquoted with array as default value</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['Xx1 2', '3 4xX']
+['Xx1', '2', '3', '4xX']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="var-op-test.test.html#L51">Quoted with array as default value</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['Xx1 2 3 4xX']\n['Xx1 2 3 4xX']\n"
+Got      '[\'Xx"$@"xX\']\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['Xx"$@"xX']
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+main: line 3: sh: unset: =x$@x}X"
+</pre></td></tr><tr><td><a name="details-4-osh"></a><b>osh</b></td><td>4 <a href="var-op-test.test.html#L51">Quoted with array as default value</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['Xx1 2', '3 4xX']
+['Xx1 2 3 4xX']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="var-op-test.test.html#L72">Assign default with array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['Xx1 2 3 4xX']
+['x1 2 3 4x']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="var-op-test.test.html#L72">Assign default with array</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['Xx1', '2', '3', '4xX']\n['x1 2 3 4x']\n"
+Got      '[\'Xx"$@"xX\']\n[\'x"$@"x\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['Xx"$@"xX']
+['x"$@"x']
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-5-osh"></a><b>osh</b></td><td>5 <a href="var-op-test.test.html#L72">Assign default with array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['Xx1 2', '3 4xX']
+['x1 2 3 4x']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="var-op-test.test.html#L118">${s+foo} and ${s:+foo} when set -u</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'v=foo\nv=foo\nv=\nv=\n'
+Got      'v=foo\nv=foo\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>v=foo
+v=foo
+</pre><i>stderr:</i> <br/>
+<pre>main: line 6: sh: v: bad substitution
+main: line 7: sh: v: bad substitution
+</pre></td></tr><tr><td><a name="details-12-bash"></a><b>bash</b></td><td>12 <a href="var-op-test.test.html#L133">"${array[@]} with set -u (bash is outlier)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>empty //
+undefined //
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-dash"></a><b>dash</b></td><td>12 <a href="var-op-test.test.html#L133">"${array[@]} with set -u (bash is outlier)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-ash"></a><b>ash</b></td><td>12 <a href="var-op-test.test.html#L133">"${array[@]} with set -u (bash is outlier)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'empty //\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: typeset: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="var-op-test.test.html#L133">"${array[@]} with set -u (bash is outlier)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[8]: empty[@]: parameter not set
+</pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="var-op-test.test.html#L133">"${array[@]} with set -u (bash is outlier)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'empty //\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[8]: empty[@]: parameter not set
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="var-op-test.test.html#L133">"${array[@]} with set -u (bash is outlier)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'empty //\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="var-op-test.test.html#L133">"${array[@]} with set -u (bash is outlier)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'empty //\n'
+Got      'empty //\nundefined //\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>empty //
+undefined //
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="var-op-test.test.html#L165">"${undefined[@]+foo}" and "${undefined[@]:+foo}", with set -u</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="var-op-test.test.html#L165">"${undefined[@]+foo}" and "${undefined[@]:+foo}", with set -u</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'plus //\nplus colon //\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="var-op-test.test.html#L165">"${undefined[@]+foo}" and "${undefined[@]:+foo}", with set -u</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'plus //\nplus colon //\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="var-op-test.test.html#L165">"${undefined[@]+foo}" and "${undefined[@]:+foo}", with set -u</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'plus //\nplus colon //\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: array: unbound variable
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: array: unbound variable
+</pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="var-op-test.test.html#L165">"${undefined[@]+foo}" and "${undefined[@]:+foo}", with set -u</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'plus //\nplus colon //\n'
+Got      'plus /foo/\nplus colon //\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>plus /foo/
+plus colon //
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="var-op-test.test.html#L181">"${a[@]+foo}" and "${a[@]:+foo}" - operators are equivalent on arrays?</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-ash"></a><b>ash</b></td><td>14 <a href="var-op-test.test.html#L181">"${a[@]+foo}" and "${a[@]:+foo}" - operators are equivalent on arrays?</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-14-zsh"></a><b>zsh</b></td><td>14 <a href="var-op-test.test.html#L181">"${a[@]+foo}" and "${a[@]:+foo}" - operators are equivalent on arrays?</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>+  //
++: //
+
++  /foo/
++: //
+
++  /foo/
++: /foo/
+
++  /foo/
++: /foo/
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="var-op-test.test.html#L181">"${a[@]+foo}" and "${a[@]:+foo}" - operators are equivalent on arrays?</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>+  //
++: //
+
++  //
++: //
+
++  /foo/
++: //
+
++  /foo/
++: /foo/
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="var-op-test.test.html#L181">"${a[@]+foo}" and "${a[@]:+foo}" - operators are equivalent on arrays?</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="var-op-test.test.html#L263">Nix idiom ${!hooksSlice+"${!hooksSlice}"} - was workaround for obsolete bash 4.3 bug</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-ash"></a><b>ash</b></td><td>15 <a href="var-op-test.test.html#L263">Nix idiom ${!hooksSlice+"${!hooksSlice}"} - was workaround for obsolete bash 4.3 bug</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "[]\n[]\n['42']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-15-zsh"></a><b>zsh</b></td><td>15 <a href="var-op-test.test.html#L263">Nix idiom ${!hooksSlice+"${!hooksSlice}"} - was workaround for obsolete bash 4.3 bug</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-mksh"></a><b>mksh</b></td><td>15 <a href="var-op-test.test.html#L263">Nix idiom ${!hooksSlice+"${!hooksSlice}"} - was workaround for obsolete bash 4.3 bug</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-ksh"></a><b>ksh</b></td><td>15 <a href="var-op-test.test.html#L263">Nix idiom ${!hooksSlice+"${!hooksSlice}"} - was workaround for obsolete bash 4.3 bug</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "[]\n[]\n['42']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[4]: ${!hooksSlice+"${!hooksSlice}"}: bad substitution
+E: ksh: &lt;stdin&gt;[8]: ${!hooksSlice+"${!hooksSlice}"}: bad substitution
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="var-op-test.test.html#L263">Nix idiom ${!hooksSlice+"${!hooksSlice}"} - was workaround for obsolete bash 4.3 bug</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "[]\n[]\n['42']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="var-op-test.test.html#L263">Nix idiom ${!hooksSlice+"${!hooksSlice}"} - was workaround for obsolete bash 4.3 bug</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "[]\n[]\n['42']\n"
+Got      '[]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: `': not a valid identifier
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: `': not a valid identifier
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 12: `': not a valid identifier
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="var-op-test.test.html#L304">${v-foo} and ${v:-foo} when set -u</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'v=v\nv=v\nv=foo\nv=foo\n'
+Got      'v=v\nv=v\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>v=v
+v=v
+</pre><i>stderr:</i> <br/>
+<pre>main: line 6: sh: v: bad substitution
+main: line 7: sh: v: bad substitution
+</pre></td></tr><tr><td><a name="details-17-dash"></a><b>dash</b></td><td>17 <a href="var-op-test.test.html#L319">array and - and +</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-ash"></a><b>ash</b></td><td>17 <a href="var-op-test.test.html#L319">array and - and +</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "empty=minus\na1=\na1[0]=\na2= x\na3=3 4\n---\nempty=\na1=plus\na1[0]=plus\na2=plus\na3=plus\n---\nempty=\na1=plus\na2=plus\na3=plus\n---\n['minus']\n[]\n['']\n['plus']\n['']\n['plus']\n['', 'x']\n['plus']\n['3', '4']\n['plus']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-17-zsh"></a><b>zsh</b></td><td>17 <a href="var-op-test.test.html#L319">array and - and +</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>empty=
+a1=
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: no matches found: a1[0]=minus
+</pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="var-op-test.test.html#L319">array and - and +</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "empty=minus\na1=\na1[0]=\na2= x\na3=3 4\n---\nempty=\na1=plus\na1[0]=plus\na2=plus\na3=plus\n---\nempty=\na1=plus\na2=plus\na3=plus\n---\n['minus']\n[]\n['']\n['plus']\n['']\n['plus']\n['', 'x']\n['plus']\n['3', '4']\n['plus']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-17-brush"></a><b>brush</b></td><td>17 <a href="var-op-test.test.html#L319">array and - and +</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "empty=minus\na1=\na1[0]=\na2= x\na3=3 4\n---\nempty=\na1=plus\na1[0]=plus\na2=plus\na3=plus\n---\nempty=\na1=plus\na2=plus\na3=plus\n---\n['minus']\n[]\n['']\n['plus']\n['']\n['plus']\n['', 'x']\n['plus']\n['3', '4']\n['plus']\n"
+Got      "empty=\na1=\na1[0]=\na2= x\na3=3 4\n---\nempty=plus\na1=plus\na1[0]=plus\na2=plus\na3=plus\n---\nempty=\na1=plus\na2=plus\na3=plus\n---\n[]\n['plus']\n['']\n['plus']\n['']\n['plus']\n['', 'x']\n['plus']\n['3', '4']\n['plus']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>empty=
+a1=
+a1[0]=
+a2= x
+a3=3 4
+---
+empty=plus
+a1=plus
+a1[0]=plus
+a2=plus
+a3=plus
+---
+empty=
+a1=plus
+a2=plus
+a3=plus
+---
+[]
+['plus']
+['']
+['plus']
+['']
+['plus']
+['', 'x']
+['plus']
+['3', '4']
+['plus']
+</pre><i>stderr:</i> <br/>
+<pre>shopt: compat_array: invalid shell option name
+</pre></td></tr><tr><td><a name="details-18-dash"></a><b>dash</b></td><td>18 <a href="var-op-test.test.html#L396">$@ (empty) and - and +</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>argv=
+argv=plus
+argv=minus
+argv=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-ash"></a><b>ash</b></td><td>18 <a href="var-op-test.test.html#L396">$@ (empty) and - and +</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'argv=minus\nargv=\nargv=minus\nargv=\n'
+Got      'argv=\nargv=plus\nargv=minus\nargv=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>argv=
+argv=plus
+argv=minus
+argv=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-zsh"></a><b>zsh</b></td><td>18 <a href="var-op-test.test.html#L396">$@ (empty) and - and +</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>argv=
+argv=plus
+argv=minus
+argv=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="var-op-test.test.html#L396">$@ (empty) and - and +</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'argv=minus\nargv=\nargv=minus\nargv=\n'
+Got      'argv=\nargv=plus\nargv=minus\nargv=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>argv=
+argv=plus
+argv=minus
+argv=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-brush"></a><b>brush</b></td><td>18 <a href="var-op-test.test.html#L396">$@ (empty) and - and +</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'argv=minus\nargv=\nargv=minus\nargv=\n'
+Got      'argv=\nargv=plus\nargv=minus\nargv=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>argv=
+argv=plus
+argv=minus
+argv=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-zsh"></a><b>zsh</b></td><td>19 <a href="var-op-test.test.html#L414">$@ ("") and - and +</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>argv=
+argv=plus
+argv=
+argv=plus
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="var-op-test.test.html#L414">$@ ("") and - and +</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'argv=\nargv=plus\nargv=minus\nargv=\n'
+Got      'argv=minus\nargv=\nargv=minus\nargv=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>argv=minus
+argv=
+argv=minus
+argv=
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="var-op-test.test.html#L437">$@ ("" "") and - and +</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'argv=\nargv=plus\nargv=\nargv=plus\n'
+Got      'argv=minus\nargv=\nargv=minus\nargv=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>argv=minus
+argv=
+argv=minus
+argv=
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-20-brush"></a><b>brush</b></td><td>20 <a href="var-op-test.test.html#L437">$@ ("" "") and - and +</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'argv=\nargv=plus\nargv=\nargv=plus\n'
+Got      'argv=\nargv=plus\nargv=minus\nargv=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>argv=
+argv=plus
+argv=minus
+argv=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-ash"></a><b>ash</b></td><td>21 <a href="var-op-test.test.html#L450">$* ("" "") and - and + (IFS=)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'argv=\nargv=plus\nargv=\nargv=plus\n'
+Got      'argv=\nargv=plus\nargv=\nargv=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>argv=
+argv=plus
+argv=
+argv=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-mksh"></a><b>mksh</b></td><td>21 <a href="var-op-test.test.html#L450">$* ("" "") and - and + (IFS=)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>argv=
+argv=plus
+argv=minus
+argv=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-ksh"></a><b>ksh</b></td><td>21 <a href="var-op-test.test.html#L450">$* ("" "") and - and + (IFS=)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'argv=\nargv=plus\nargv=\nargv=plus\n'
+Got      'argv=\nargv=plus\nargv=minus\nargv=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>argv=
+argv=plus
+argv=minus
+argv=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="var-op-test.test.html#L450">$* ("" "") and - and + (IFS=)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'argv=\nargv=plus\nargv=\nargv=plus\n'
+Got      'argv=minus\nargv=\nargv=minus\nargv=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>argv=minus
+argv=
+argv=minus
+argv=
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="var-op-test.test.html#L450">$* ("" "") and - and + (IFS=)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'argv=\nargv=plus\nargv=\nargv=plus\n'
+Got      'argv=\nargv=plus\nargv=minus\nargv=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>argv=
+argv=plus
+argv=minus
+argv=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-brush"></a><b>brush</b></td><td>21 <a href="var-op-test.test.html#L450">$* ("" "") and - and + (IFS=)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'argv=\nargv=plus\nargv=\nargv=plus\n'
+Got      'argv=\nargv=plus\nargv=minus\nargv=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>argv=
+argv=plus
+argv=minus
+argv=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="var-op-test.test.html#L470">"$*" ("" "") and - and + (IFS=)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'argv=\nargv=plus\nargv=minus\nargv=\n'
+Got      'argv=minus\nargv=\nargv=minus\nargv=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>argv=minus
+argv=
+argv=minus
+argv=
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-22-brush"></a><b>brush</b></td><td>22 <a href="var-op-test.test.html#L470">"$*" ("" "") and - and + (IFS=)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'argv=\nargv=plus\nargv=minus\nargv=\n'
+Got      'argv= \nargv=plus\nargv=minus\nargv=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>argv= 
+argv=plus
+argv=minus
+argv=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-dash"></a><b>dash</b></td><td>23 <a href="var-op-test.test.html#L484">assoc array and - and +</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-ash"></a><b>ash</b></td><td>23 <a href="var-op-test.test.html#L484">assoc array and - and +</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'empty=minus\nempty=\nassoc=v\nassoc=plus\n---\nempty=minus\nempty=\nassoc=v\nassoc=plus\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-23-zsh"></a><b>zsh</b></td><td>23 <a href="var-op-test.test.html#L484">assoc array and - and +</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>empty=
+empty=plus
+assoc=minus
+assoc=
+---
+empty=minus
+empty=
+assoc=minus
+assoc=
+</pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [k]=v
+</pre></td></tr><tr><td><a name="details-23-mksh"></a><b>mksh</b></td><td>23 <a href="var-op-test.test.html#L484">assoc array and - and +</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-ksh"></a><b>ksh</b></td><td>23 <a href="var-op-test.test.html#L484">assoc array and - and +</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'empty=minus\nempty=\nassoc=v\nassoc=plus\n---\nempty=minus\nempty=\nassoc=v\nassoc=plus\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="var-op-test.test.html#L484">assoc array and - and +</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'empty=minus\nempty=\nassoc=v\nassoc=plus\n---\nempty=minus\nempty=\nassoc=v\nassoc=plus\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-23-brush"></a><b>brush</b></td><td>23 <a href="var-op-test.test.html#L484">assoc array and - and +</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'empty=minus\nempty=\nassoc=v\nassoc=plus\n---\nempty=minus\nempty=\nassoc=v\nassoc=plus\n'
+Got      'empty=\nempty=plus\nassoc=v\nassoc=plus\n---\nempty=minus\nempty=\nassoc=v\nassoc=plus\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>empty=
+empty=plus
+assoc=v
+assoc=plus
+---
+empty=minus
+empty=
+assoc=v
+assoc=plus
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-dash"></a><b>dash</b></td><td>24 <a href="var-op-test.test.html#L528">Error when empty</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: empty: is empty
+</pre></td></tr><tr><td><a name="details-24-ash"></a><b>ash</b></td><td>24 <a href="var-op-test.test.html#L528">Error when empty</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: empty: is empty
+</pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="var-op-test.test.html#L528">Error when empty</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected u''
+Got      'should not get here\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>should not get here
+</pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: empty: 'is em'pty
+</pre></td></tr><tr><td><a name="details-24-sush"></a><b>sush</b></td><td>24 <a href="var-op-test.test.html#L528">Error when empty</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected u''
+Got      'should not get here\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>should not get here
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: empty: is empty
+</pre></td></tr><tr><td><a name="details-24-brush"></a><b>brush</b></td><td>24 <a href="var-op-test.test.html#L528">Error when empty</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected u''
+Got      'should not get here\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>should not get here
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: expansion error: is empty
+</pre></td></tr><tr><td><a name="details-25-dash"></a><b>dash</b></td><td>25 <a href="var-op-test.test.html#L536">Error when unset</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: unset: is empty
+</pre></td></tr><tr><td><a name="details-25-ash"></a><b>ash</b></td><td>25 <a href="var-op-test.test.html#L536">Error when unset</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: unset: is empty
+</pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="var-op-test.test.html#L536">Error when unset</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected u''
+Got      'should not get here\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>should not get here
+</pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: unset: is empty
+</pre></td></tr><tr><td><a name="details-25-sush"></a><b>sush</b></td><td>25 <a href="var-op-test.test.html#L536">Error when unset</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected u''
+Got      'should not get here\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>should not get here
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: unset: is empty
+</pre></td></tr><tr><td><a name="details-25-brush"></a><b>brush</b></td><td>25 <a href="var-op-test.test.html#L536">Error when unset</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected u''
+Got      'should not get here\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>should not get here
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: expansion error: is empty
+</pre></td></tr><tr><td><a name="details-28-dash"></a><b>dash</b></td><td>28 <a href="var-op-test.test.html#L562">array ${arr[0]=x}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-28-ash"></a><b>ash</b></td><td>28 <a href="var-op-test.test.html#L562">array ${arr[0]=x}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '0\n1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-28-zsh"></a><b>zsh</b></td><td>28 <a href="var-op-test.test.html#L562">array ${arr[0]=x}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre>zsh: arr: assignment to invalid subscript range
+</pre></td></tr><tr><td><a name="details-28-toysh"></a><b>toysh</b></td><td>28 <a href="var-op-test.test.html#L562">array ${arr[0]=x}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '0\n1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: echo
+</pre></td></tr><tr><td><a name="details-29-dash"></a><b>dash</b></td><td>29 <a href="var-op-test.test.html#L578">assoc array ${arr["k"]=x}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-29-ash"></a><b>ash</b></td><td>29 <a href="var-op-test.test.html#L578">assoc array ${arr["k"]=x}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '0\n1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-29-mksh"></a><b>mksh</b></td><td>29 <a href="var-op-test.test.html#L578">assoc array ${arr["k"]=x}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-29-ksh"></a><b>ksh</b></td><td>29 <a href="var-op-test.test.html#L578">assoc array ${arr["k"]=x}</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '0\n1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-29-toysh"></a><b>toysh</b></td><td>29 <a href="var-op-test.test.html#L578">assoc array ${arr["k"]=x}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '0\n1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-30-toysh"></a><b>toysh</b></td><td>30 <a href="var-op-test.test.html#L594">"\z" as arg</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '$\n\\(\n\\z\n"\n`\n\\\n'
+Got      '$\n(\nz\n"\n`\n\\\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>$
+(
+z
+"
+`
+\
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-brush"></a><b>brush</b></td><td>30 <a href="var-op-test.test.html#L594">"\z" as arg</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '$\n\\(\n\\z\n"\n`\n\\\n'
+Got      '$\n(\nz\n"\n`\n\\\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>$
+(
+z
+"
+`
+\
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-zsh"></a><b>zsh</b></td><td>31 <a href="var-op-test.test.html#L620">"\e" as arg</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-mksh"></a><b>mksh</b></td><td>31 <a href="var-op-test.test.html#L620">"\e" as arg</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-ksh"></a><b>ksh</b></td><td>31 <a href="var-op-test.test.html#L620">"\e" as arg</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '\\e\n'
+Got      '\x1b\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-toysh"></a><b>toysh</b></td><td>31 <a href="var-op-test.test.html#L620">"\e" as arg</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '\\e\n'
+Got      'e\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>e
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-brush"></a><b>brush</b></td><td>31 <a href="var-op-test.test.html#L620">"\e" as arg</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '\\e\n'
+Got      'e\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>e
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-dash"></a><b>dash</b></td><td>32 <a href="var-op-test.test.html#L629">op-test for ${a} and ${a[0]}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-ash"></a><b>ash</b></td><td>32 <a href="var-op-test.test.html#L629">op-test for ${a} and ${a[0]}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "a   : 'no-colon' 'with-colon'\na[0]: 'no-colon' 'with-colon'\na   : '' 'with-colon'\na[0]: '' 'with-colon'\na   : '' 'with-colon'\na[0]: '' 'with-colon'\na   : '' 'with-colon'\na[0]: '' 'with-colon'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad function name
+</pre></td></tr><tr><td><a name="details-32-zsh"></a><b>zsh</b></td><td>32 <a href="var-op-test.test.html#L629">op-test for ${a} and ${a[0]}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a   : '' 'with-colon'
+a[0]: 'no-colon' 'with-colon'
+a   : '' 'with-colon'
+a[0]: 'no-colon' 'with-colon'
+a   : ' ' ' '
+a[0]: 'no-colon' 'with-colon'
+a   : '' 'with-colon'
+a[0]: 'no-colon' 'with-colon'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-toysh"></a><b>toysh</b></td><td>32 <a href="var-op-test.test.html#L629">op-test for ${a} and ${a[0]}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "a   : 'no-colon' 'with-colon'\na[0]: 'no-colon' 'with-colon'\na   : '' 'with-colon'\na[0]: '' 'with-colon'\na   : '' 'with-colon'\na[0]: '' 'with-colon'\na   : '' 'with-colon'\na[0]: '' 'with-colon'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-32-sush"></a><b>sush</b></td><td>32 <a href="var-op-test.test.html#L629">op-test for ${a} and ${a[0]}</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "a   : 'no-colon' 'with-colon'\na[0]: 'no-colon' 'with-colon'\na   : '' 'with-colon'\na[0]: '' 'with-colon'\na   : '' 'with-colon'\na[0]: '' 'with-colon'\na   : '' 'with-colon'\na[0]: '' 'with-colon'\n"
+Got      "a   : 'no-colon' 'with-colon'\na[0]: 'no-colon' 'with-colon'\n"
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a   : 'no-colon' 'with-colon'
+a[0]: 'no-colon' 'with-colon'
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: syntax error near unexpected token: ()
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: syntax error near unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: test-hyphen: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: test-hyphen: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: test-hyphen: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 15: test-hyphen: command not found
+</pre></td></tr><tr><td><a name="details-33-dash"></a><b>dash</b></td><td>33 <a href="var-op-test.test.html#L674">op-test for ${a[@]} and ${a[*]}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-ash"></a><b>ash</b></td><td>33 <a href="var-op-test.test.html#L674">op-test for ${a[@]} and ${a[*]}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "a[@]: 'no-colon' 'with-colon'\na[*]: 'no-colon' 'with-colon'\na[@]: '' 'with-colon'\na[*]: '' 'with-colon'\na[@]: ' ' ' '\na[*]: ' ' ' '\na[@]: ' ' ' '\na[*]: '' 'with-colon'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad function name
+</pre></td></tr><tr><td><a name="details-33-zsh"></a><b>zsh</b></td><td>33 <a href="var-op-test.test.html#L674">op-test for ${a[@]} and ${a[*]}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a[@]: '' 'with-colon'
+a[*]: '' 'with-colon'
+a[@]: '' ''
+a[*]: '' 'with-colon'
+a[@]: ' ' ' '
+a[*]: ' ' ' '
+a[@]: ' ' ' '
+a[*]: '' 'with-colon'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-toysh"></a><b>toysh</b></td><td>33 <a href="var-op-test.test.html#L674">op-test for ${a[@]} and ${a[*]}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "a[@]: 'no-colon' 'with-colon'\na[*]: 'no-colon' 'with-colon'\na[@]: '' 'with-colon'\na[*]: '' 'with-colon'\na[@]: ' ' ' '\na[*]: ' ' ' '\na[@]: ' ' ' '\na[*]: '' 'with-colon'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-33-sush"></a><b>sush</b></td><td>33 <a href="var-op-test.test.html#L674">op-test for ${a[@]} and ${a[*]}</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "a[@]: 'no-colon' 'with-colon'\na[*]: 'no-colon' 'with-colon'\na[@]: '' 'with-colon'\na[*]: '' 'with-colon'\na[@]: ' ' ' '\na[*]: ' ' ' '\na[@]: ' ' ' '\na[*]: '' 'with-colon'\n"
+Got      "a[@]: 'no-colon' 'with-colon'\na[*]: 'no-colon' 'with-colon'\n"
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a[@]: 'no-colon' 'with-colon'
+a[*]: 'no-colon' 'with-colon'
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: syntax error near unexpected token: ()
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: syntax error near unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: test-hyphen: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: test-hyphen: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: test-hyphen: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 15: test-hyphen: command not found
+</pre></td></tr><tr><td><a name="details-33-brush"></a><b>brush</b></td><td>33 <a href="var-op-test.test.html#L674">op-test for ${a[@]} and ${a[*]}</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "a[@]: 'no-colon' 'with-colon'\na[*]: 'no-colon' 'with-colon'\na[@]: '' 'with-colon'\na[*]: '' 'with-colon'\na[@]: ' ' ' '\na[*]: ' ' ' '\na[@]: ' ' ' '\na[*]: '' 'with-colon'\n"
+Got      "a[@]: '' 'with-colon'\na[*]: '' 'with-colon'\na[@]: '' 'with-colon'\na[*]: '' 'with-colon'\na[@]: ' ' 'with-colon'\na[*]: ' ' 'with-colon'\na[@]: ' ' 'with-colon'\na[*]: ' ' 'with-colon'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a[@]: '' 'with-colon'
+a[*]: '' 'with-colon'
+a[@]: '' 'with-colon'
+a[*]: '' 'with-colon'
+a[@]: ' ' 'with-colon'
+a[*]: ' ' 'with-colon'
+a[@]: ' ' 'with-colon'
+a[*]: ' ' 'with-colon'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-dash"></a><b>dash</b></td><td>34 <a href="var-op-test.test.html#L734">op-test for ${!array} with array="a" and array="a[0]"</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-ash"></a><b>ash</b></td><td>34 <a href="var-op-test.test.html#L734">op-test for ${!array} with array="a" and array="a[0]"</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "ref=a   : 'no-colon' 'with-colon'\nref=a[0]: 'no-colon' 'with-colon'\nref=a   : '' 'with-colon'\nref=a[0]: '' 'with-colon'\nref=a   : '' 'with-colon'\nref=a[0]: '' 'with-colon'\nref=a   : '' 'with-colon'\nref=a[0]: '' 'with-colon'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad function name
+</pre></td></tr><tr><td><a name="details-34-zsh"></a><b>zsh</b></td><td>34 <a href="var-op-test.test.html#L734">op-test for ${!array} with array="a" and array="a[0]"</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-mksh"></a><b>mksh</b></td><td>34 <a href="var-op-test.test.html#L734">op-test for ${!array} with array="a" and array="a[0]"</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-ksh"></a><b>ksh</b></td><td>34 <a href="var-op-test.test.html#L734">op-test for ${!array} with array="a" and array="a[0]"</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "ref=a   : 'no-colon' 'with-colon'\nref=a[0]: 'no-colon' 'with-colon'\nref=a   : '' 'with-colon'\nref=a[0]: '' 'with-colon'\nref=a   : '' 'with-colon'\nref=a[0]: '' 'with-colon'\nref=a   : '' 'with-colon'\nref=a[0]: '' 'with-colon'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[11]: ${!ref-no-colon}: bad substitution
+E: ksh: &lt;stdin&gt;[13]: ${!ref-no-colon}: bad substitution
+E: ksh: &lt;stdin&gt;[15]: ${!ref-no-colon}: bad substitution
+E: ksh: &lt;stdin&gt;[17]: ${!ref-no-colon}: bad substitution
+</pre></td></tr><tr><td><a name="details-34-toysh"></a><b>toysh</b></td><td>34 <a href="var-op-test.test.html#L734">op-test for ${!array} with array="a" and array="a[0]"</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "ref=a   : 'no-colon' 'with-colon'\nref=a[0]: 'no-colon' 'with-colon'\nref=a   : '' 'with-colon'\nref=a[0]: '' 'with-colon'\nref=a   : '' 'with-colon'\nref=a[0]: '' 'with-colon'\nref=a   : '' 'with-colon'\nref=a[0]: '' 'with-colon'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-34-sush"></a><b>sush</b></td><td>34 <a href="var-op-test.test.html#L734">op-test for ${!array} with array="a" and array="a[0]"</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "ref=a   : 'no-colon' 'with-colon'\nref=a[0]: 'no-colon' 'with-colon'\nref=a   : '' 'with-colon'\nref=a[0]: '' 'with-colon'\nref=a   : '' 'with-colon'\nref=a[0]: '' 'with-colon'\nref=a   : '' 'with-colon'\nref=a[0]: '' 'with-colon'\n"
+Got      "ref=a   : 'no-colon' 'with-colon'\nref=a[0]: 'no-colon' 'with-colon'\n"
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=a   : 'no-colon' 'with-colon'
+ref=a[0]: 'no-colon' 'with-colon'
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: syntax error near unexpected token: ()
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: syntax error near unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: test-hyphen: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: test-hyphen: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 15: test-hyphen: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 17: test-hyphen: command not found
+</pre></td></tr><tr><td><a name="details-35-bash"></a><b>bash</b></td><td>35 <a href="var-op-test.test.html#L768">op-test for ${!array} with array="a[@]" or array="a[*]"</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ref=a[@]: 'no-colon' 'with-colon'
+ref=a[*]: 'no-colon' 'with-colon'
+ref=a[@]: '' ''
+ref=a[*]: '' ''
+ref=a[@]: ' ' ' '
+ref=a[*]: ' ' ' '
+ref=a[@]: ' ' ' '
+ref=a[*]: '' ''
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-dash"></a><b>dash</b></td><td>35 <a href="var-op-test.test.html#L768">op-test for ${!array} with array="a[@]" or array="a[*]"</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-ash"></a><b>ash</b></td><td>35 <a href="var-op-test.test.html#L768">op-test for ${!array} with array="a[@]" or array="a[*]"</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "ref=a[@]: 'no-colon' 'with-colon'\nref=a[*]: 'no-colon' 'with-colon'\nref=a[@]: '' 'with-colon'\nref=a[*]: '' 'with-colon'\nref=a[@]: ' ' ' '\nref=a[*]: ' ' ' '\nref=a[@]: ' ' ' '\nref=a[*]: '' 'with-colon'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad function name
+</pre></td></tr><tr><td><a name="details-35-zsh"></a><b>zsh</b></td><td>35 <a href="var-op-test.test.html#L768">op-test for ${!array} with array="a[@]" or array="a[*]"</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-mksh"></a><b>mksh</b></td><td>35 <a href="var-op-test.test.html#L768">op-test for ${!array} with array="a[@]" or array="a[*]"</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-ksh"></a><b>ksh</b></td><td>35 <a href="var-op-test.test.html#L768">op-test for ${!array} with array="a[@]" or array="a[*]"</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "ref=a[@]: 'no-colon' 'with-colon'\nref=a[*]: 'no-colon' 'with-colon'\nref=a[@]: '' 'with-colon'\nref=a[*]: '' 'with-colon'\nref=a[@]: ' ' ' '\nref=a[*]: ' ' ' '\nref=a[@]: ' ' ' '\nref=a[*]: '' 'with-colon'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[11]: ${!ref-no-colon}: bad substitution
+E: ksh: &lt;stdin&gt;[13]: ${!ref-no-colon}: bad substitution
+E: ksh: &lt;stdin&gt;[15]: ${!ref-no-colon}: bad substitution
+E: ksh: &lt;stdin&gt;[17]: ${!ref-no-colon}: bad substitution
+</pre></td></tr><tr><td><a name="details-35-toysh"></a><b>toysh</b></td><td>35 <a href="var-op-test.test.html#L768">op-test for ${!array} with array="a[@]" or array="a[*]"</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "ref=a[@]: 'no-colon' 'with-colon'\nref=a[*]: 'no-colon' 'with-colon'\nref=a[@]: '' 'with-colon'\nref=a[*]: '' 'with-colon'\nref=a[@]: ' ' ' '\nref=a[*]: ' ' ' '\nref=a[@]: ' ' ' '\nref=a[*]: '' 'with-colon'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-35-sush"></a><b>sush</b></td><td>35 <a href="var-op-test.test.html#L768">op-test for ${!array} with array="a[@]" or array="a[*]"</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "ref=a[@]: 'no-colon' 'with-colon'\nref=a[*]: 'no-colon' 'with-colon'\nref=a[@]: '' 'with-colon'\nref=a[*]: '' 'with-colon'\nref=a[@]: ' ' ' '\nref=a[*]: ' ' ' '\nref=a[@]: ' ' ' '\nref=a[*]: '' 'with-colon'\n"
+Got      "ref=a[@]: 'no-colon' 'with-colon'\nref=a[*]: 'no-colon' 'with-colon'\n"
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=a[@]: 'no-colon' 'with-colon'
+ref=a[*]: 'no-colon' 'with-colon'
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: syntax error near unexpected token: ()
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: syntax error near unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: test-hyphen: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: test-hyphen: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 15: test-hyphen: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 17: test-hyphen: command not found
+</pre></td></tr><tr><td><a name="details-35-brush"></a><b>brush</b></td><td>35 <a href="var-op-test.test.html#L768">op-test for ${!array} with array="a[@]" or array="a[*]"</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "ref=a[@]: 'no-colon' 'with-colon'\nref=a[*]: 'no-colon' 'with-colon'\nref=a[@]: '' 'with-colon'\nref=a[*]: '' 'with-colon'\nref=a[@]: ' ' ' '\nref=a[*]: ' ' ' '\nref=a[@]: ' ' ' '\nref=a[*]: '' 'with-colon'\n"
+Got      "ref=a[@]: '' 'with-colon'\nref=a[*]: '' 'with-colon'\nref=a[@]: '' 'with-colon'\nref=a[*]: '' 'with-colon'\nref=a[@]: ' ' 'with-colon'\nref=a[*]: ' ' 'with-colon'\nref=a[@]: ' ' 'with-colon'\nref=a[*]: ' ' 'with-colon'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=a[@]: '' 'with-colon'
+ref=a[*]: '' 'with-colon'
+ref=a[@]: '' 'with-colon'
+ref=a[*]: '' 'with-colon'
+ref=a[@]: ' ' 'with-colon'
+ref=a[*]: ' ' 'with-colon'
+ref=a[@]: ' ' 'with-colon'
+ref=a[*]: ' ' 'with-colon'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-dash"></a><b>dash</b></td><td>36 <a href="var-op-test.test.html#L813">op-test for unquoted ${a[*]:-empty} with IFS=</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-ash"></a><b>ash</b></td><td>36 <a href="var-op-test.test.html#L813">op-test for unquoted ${a[*]:-empty} with IFS=</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '[]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-36-mksh"></a><b>mksh</b></td><td>36 <a href="var-op-test.test.html#L813">op-test for unquoted ${a[*]:-empty} with IFS=</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['empty']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-ksh"></a><b>ksh</b></td><td>36 <a href="var-op-test.test.html#L813">op-test for unquoted ${a[*]:-empty} with IFS=</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '[]\n'
+Got      "['empty']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['empty']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-toysh"></a><b>toysh</b></td><td>36 <a href="var-op-test.test.html#L813">op-test for unquoted ${a[*]:-empty} with IFS=</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '[]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-36-sush"></a><b>sush</b></td><td>36 <a href="var-op-test.test.html#L813">op-test for unquoted ${a[*]:-empty} with IFS=</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[]\n'
+Got      "['empty']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['empty']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-brush"></a><b>brush</b></td><td>36 <a href="var-op-test.test.html#L813">op-test for unquoted ${a[*]:-empty} with IFS=</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '[]\n'
+Got      "['empty']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['empty']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

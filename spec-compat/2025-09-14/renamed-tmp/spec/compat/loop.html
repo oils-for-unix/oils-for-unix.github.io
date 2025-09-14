@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>loop: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for loop.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>23</td><td>23</td><td>23</td><td>21</td><td>23</td><td>24</td><td>16</td><td>22</td><td>15</td><td>29</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>2</td><td>2</td><td>0</td><td>2</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>2</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug-2">BUG-2</td> <td>0</td><td>2</td><td>0</td><td>3</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>4</td><td>0</td><td>0</td><td>2</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>6</td><td>0</td><td>0</td><td>5</td><td>12</td><td>7</td><td>11</td><td>0</td><td></td></tr>
+<tr><td class="timeout">TIME</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>3</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td>29</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L4">implicit for loop</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L20">empty for loop (has "in")</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L28">for loop with invalid identifier</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-2-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L39">the word 'in' can be the loop variable</a></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L52">Tilde expansion within for loop</a></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L62">Brace Expansion within Array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L77">using loop var outside loop</a></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L93">continue</a></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L110">break</a></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L123">while in while condition</a></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L135">while in pipe</a></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L145">while in pipe with subshell</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L154">until loop</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L162">continue at top level</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="bug">BUG</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L179">continue in subshell</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-14-bash">details</a></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"><a href="#details-14-ash">details</a></td><td class="details-row"><a href="#details-14-zsh">details</a></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"><a href="#details-14-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="bug">BUG</td>	<td class="bug-2">BUG-2</td>	<td class="fail">FAIL</td>	<td class="bug-2">BUG-2</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L214">continue in subshell aborts with errexit</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-15-bash">details</a></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"><a href="#details-15-ash">details</a></td><td class="details-row"><a href="#details-15-zsh">details</a></td><td class="details-row"><a href="#details-15-mksh">details</a></td><td class="details-row"><a href="#details-15-ksh">details</a></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"><a href="#details-15-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="timeout">TIME</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L251">bad arg to break</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-16-bash">details</a></td><td class="details-row"><a href="#details-16-dash">details</a></td><td class="details-row"><a href="#details-16-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"><a href="#details-16-sush">details</a></td><td class="details-row"><a href="#details-16-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="bug">BUG</td>	<td class="bug-2">BUG-2</td>	<td class="fail">FAIL</td>	<td class="bug-2">BUG-2</td>	<td class="bug-2">BUG-2</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L263">too many args to continue</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-17-bash">details</a></td><td class="details-row"><a href="#details-17-dash">details</a></td><td class="details-row"><a href="#details-17-ash">details</a></td><td class="details-row"><a href="#details-17-zsh">details</a></td><td class="details-row"><a href="#details-17-mksh">details</a></td><td class="details-row"><a href="#details-17-ksh">details</a></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"><a href="#details-17-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="timeout">TIME</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L286">break in condition of loop</a></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="timeout">TIME</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L296">break in condition of nested loop</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-19-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L311">return within eval</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-20-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L322">break/continue within eval</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-21-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L352">break/continue within source</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-zsh">details</a></td><td class="details-row"><a href="#details-22-mksh">details</a></td><td class="details-row"><a href="#details-22-ksh">details</a></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-22-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug-2">BUG-2</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L387">top-level break/continue/return (without strict_control_flow)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-23-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"><a href="#details-23-sush">details</a></td><td class="details-row"><a href="#details-23-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L404">multi-level break with argument</a></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L433">multi-level continue</a></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L465">$b break, $c continue, $r return, $e exit</a></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L518">\break \continue \return \exit</a></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="loop.test.html#L564">builtin,command break,continue,return,exit</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-dash">details</a></td><td class="details-row"><a href="#details-28-ash">details</a></td><td class="details-row"><a href="#details-28-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-28-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>219 passed, 7 OK, 3 not implemented, 16 BUG, 41 failed, 4 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="loop.test.html#L4">implicit for loop</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1\n2\n3\nfinished=3\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: ;
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="loop.test.html#L20">empty for loop (has "in")</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="loop.test.html#L20">empty for loop (has "in")</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected ''
+Got      '1\n2\n3\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-bash"></a><b>bash</b></td><td>2 <a href="loop.test.html#L28">for loop with invalid identifier</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>bash: line 3: `-': not a valid identifier
+</pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="loop.test.html#L28">for loop with invalid identifier</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>zsh: parse error near `-'
+zsh: parse error near `done'
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="loop.test.html#L28">for loop with invalid identifier</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: for: bad identifier
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="loop.test.html#L28">for loop with invalid identifier</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 2
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: for: bad identifier
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="loop.test.html#L28">for loop with invalid identifier</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected u''
+Got      'hi\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: syntax error near unexpected token: -
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: syntax error near unexpected token: done
+
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="loop.test.html#L28">for loop with invalid identifier</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected u''
+Got      'hi\nhi\nhi\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+hi
+hi
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="loop.test.html#L62">Brace Expansion within Array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-{a,b}
+{c,d}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="loop.test.html#L62">Brace Expansion within Array</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '-a\n-b\nc-\nd-\n'
+Got      '-{a,b}\n{c,d}-\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-{a,b}
+{c,d}-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="loop.test.html#L145">while in pipe with subshell</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '3\n'
+Got      '0\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+sh: 1: No such file or directory
+sh: 2: No such file or directory
+sh: 3: No such file or directory
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="loop.test.html#L154">until loop</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: syntax error near unexpected token: do
+
+sush: break: only meaningful in a `for', `while', or `until' loop
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: syntax error near unexpected token: done
+
+</pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="loop.test.html#L162">continue at top level</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one
+</pre><i>stderr:</i> <br/>
+<pre>continue: not in while, until, select, or repeat loop
+</pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="loop.test.html#L162">continue at top level</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'one\ntwo\n'
+Got      'one\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-bash"></a><b>bash</b></td><td>14 <a href="loop.test.html#L179">continue in subshell</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>&gt; 1
+Should not print
+subshell status=0
+. 1
+&gt; 2
+Should not print
+subshell status=0
+. 2
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 3: continue: only meaningful in a `for', `while', or `until' loop
+bash: line 3: continue: only meaningful in a `for', `while', or `until' loop
+</pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="loop.test.html#L179">continue in subshell</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>&gt; 1
+subshell status=0
+. 1
+&gt; 2
+subshell status=0
+. 2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-ash"></a><b>ash</b></td><td>14 <a href="loop.test.html#L179">continue in subshell</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '&gt; 1\nsubshell status=1\n. 1\n&gt; 2\nsubshell status=1\n. 2\n'
+Got      '&gt; 1\nsubshell status=0\n. 1\n&gt; 2\nsubshell status=0\n. 2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>&gt; 1
+subshell status=0
+. 1
+&gt; 2
+subshell status=0
+. 2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-zsh"></a><b>zsh</b></td><td>14 <a href="loop.test.html#L179">continue in subshell</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>&gt; 1
+subshell status=0
+. 1
+&gt; 2
+subshell status=0
+. 2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="loop.test.html#L179">continue in subshell</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>&gt; 1
+Should not print
+subshell status=0
+. 1
+&gt; 2
+Should not print
+subshell status=0
+. 2
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[6]: continue: can't continue
+mksh: &lt;stdin&gt;[6]: continue: can't continue
+</pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="loop.test.html#L179">continue in subshell</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '&gt; 1\nsubshell status=1\n. 1\n&gt; 2\nsubshell status=1\n. 2\n'
+Got      '&gt; 1\nShould not print\nsubshell status=0\n. 1\n&gt; 2\nShould not print\nsubshell status=0\n. 2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>&gt; 1
+Should not print
+subshell status=0
+. 1
+&gt; 2
+Should not print
+subshell status=0
+. 2
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[6]: continue: can't continue
+W: ksh: &lt;stdin&gt;[6]: continue: can't continue
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="loop.test.html#L179">continue in subshell</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '&gt; 1\nsubshell status=1\n. 1\n&gt; 2\nsubshell status=1\n. 2\n'
+Got      '&gt; 1\nsubshell status=139\n. 1\n&gt; 2\nsubshell status=139\n. 2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>&gt; 1
+subshell status=139
+. 1
+&gt; 2
+subshell status=139
+. 2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="loop.test.html#L179">continue in subshell</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '&gt; 1\nsubshell status=1\n. 1\n&gt; 2\nsubshell status=1\n. 2\n'
+Got      '&gt; 1\nsubshell status=0\n. 1\n&gt; 2\nsubshell status=0\n. 2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>&gt; 1
+subshell status=0
+. 1
+&gt; 2
+subshell status=0
+. 2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-brush"></a><b>brush</b></td><td>14 <a href="loop.test.html#L179">continue in subshell</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '&gt; 1\nsubshell status=1\n. 1\n&gt; 2\nsubshell status=1\n. 2\n'
+Got      '&gt; 1\nsubshell status=0\n. 1\n&gt; 2\nsubshell status=0\n. 2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>&gt; 1
+subshell status=0
+. 1
+&gt; 2
+subshell status=0
+. 2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-bash"></a><b>bash</b></td><td>15 <a href="loop.test.html#L214">continue in subshell aborts with errexit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>&gt; 1
+Should not print
+should fail after subshell
+. 1
+&gt; 2
+Should not print
+should fail after subshell
+. 2
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 4: continue: only meaningful in a `for', `while', or `until' loop
+bash: line 4: continue: only meaningful in a `for', `while', or `until' loop
+</pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="loop.test.html#L214">continue in subshell aborts with errexit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>&gt; 1
+should fail after subshell
+. 1
+&gt; 2
+should fail after subshell
+. 2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-ash"></a><b>ash</b></td><td>15 <a href="loop.test.html#L214">continue in subshell aborts with errexit</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '&gt; 1\n'
+Got      '&gt; 1\nshould fail after subshell\n. 1\n&gt; 2\nshould fail after subshell\n. 2\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>&gt; 1
+should fail after subshell
+. 1
+&gt; 2
+should fail after subshell
+. 2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-zsh"></a><b>zsh</b></td><td>15 <a href="loop.test.html#L214">continue in subshell aborts with errexit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>&gt; 1
+should fail after subshell
+. 1
+&gt; 2
+should fail after subshell
+. 2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-mksh"></a><b>mksh</b></td><td>15 <a href="loop.test.html#L214">continue in subshell aborts with errexit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>&gt; 1
+Should not print
+should fail after subshell
+. 1
+&gt; 2
+Should not print
+should fail after subshell
+. 2
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[7]: continue: can't continue
+mksh: &lt;stdin&gt;[7]: continue: can't continue
+</pre></td></tr><tr><td><a name="details-15-ksh"></a><b>ksh</b></td><td>15 <a href="loop.test.html#L214">continue in subshell aborts with errexit</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '&gt; 1\n'
+Got      '&gt; 1\nShould not print\nshould fail after subshell\n. 1\n&gt; 2\nShould not print\nshould fail after subshell\n. 2\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>&gt; 1
+Should not print
+should fail after subshell
+. 1
+&gt; 2
+Should not print
+should fail after subshell
+. 2
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[7]: continue: can't continue
+W: ksh: &lt;stdin&gt;[7]: continue: can't continue
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="loop.test.html#L214">continue in subshell aborts with errexit</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '&gt; 1\n'
+Got      '&gt; 1\nshould fail after subshell\n. 1\n&gt; 2\nshould fail after subshell\n. 2\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>&gt; 1
+should fail after subshell
+. 1
+&gt; 2
+should fail after subshell
+. 2
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+</pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="loop.test.html#L214">continue in subshell aborts with errexit</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '&gt; 1\n'
+Got      '&gt; 1\nshould fail after subshell\n. 1\n&gt; 2\nshould fail after subshell\n. 2\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>&gt; 1
+should fail after subshell
+. 1
+&gt; 2
+should fail after subshell
+. 2
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-15-brush"></a><b>brush</b></td><td>15 <a href="loop.test.html#L214">continue in subshell aborts with errexit</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '&gt; 1\n'
+Got      '&gt; 1\nshould fail after subshell\n. 1\n&gt; 2\nshould fail after subshell\n. 2\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>&gt; 1
+should fail after subshell
+. 1
+&gt; 2
+should fail after subshell
+. 2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-bash"></a><b>bash</b></td><td>16 <a href="loop.test.html#L251">bad arg to break</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 4: break: oops: numeric argument required
+</pre></td></tr><tr><td><a name="details-16-dash"></a><b>dash</b></td><td>16 <a href="loop.test.html#L251">bad arg to break</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>dash: 4: break: Illegal number: oops
+</pre></td></tr><tr><td><a name="details-16-ash"></a><b>ash</b></td><td>16 <a href="loop.test.html#L251">bad arg to break</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>ash: break: line 4: Illegal number: oops
+</pre></td></tr><tr><td><a name="details-16-sush"></a><b>sush</b></td><td>16 <a href="loop.test.html#L251">bad arg to break</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      128
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+</pre><i>stderr:</i> <br/>
+<pre>sush: break: oops: numeric argument required
+</pre></td></tr><tr><td><a name="details-17-bash"></a><b>bash</b></td><td>17 <a href="loop.test.html#L263">too many args to continue</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a
+--
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 3: continue: too many arguments
+</pre></td></tr><tr><td><a name="details-17-dash"></a><b>dash</b></td><td>17 <a href="loop.test.html#L263">too many args to continue</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+--
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-ash"></a><b>ash</b></td><td>17 <a href="loop.test.html#L263">too many args to continue</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected u''
+Got      'a\nb\nc\n--\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+--
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-zsh"></a><b>zsh</b></td><td>17 <a href="loop.test.html#L263">too many args to continue</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+--
+</pre><i>stderr:</i> <br/>
+<pre>continue: too many arguments
+continue: too many arguments
+continue: too many arguments
+</pre></td></tr><tr><td><a name="details-17-mksh"></a><b>mksh</b></td><td>17 <a href="loop.test.html#L263">too many args to continue</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+--
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-ksh"></a><b>ksh</b></td><td>17 <a href="loop.test.html#L263">too many args to continue</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected u''
+Got      'a\nb\nc\n--\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+--
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="loop.test.html#L263">too many args to continue</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected u''
+Got      'a\nb\nc\n\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+
+</pre><i>stderr:</i> <br/>
+<pre>continue: Max 1 argument (see "continue --help")
+continue: Max 1 argument (see "continue --help")
+continue: Max 1 argument (see "continue --help")
+</pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="loop.test.html#L263">too many args to continue</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected u''
+Got      'a\nb\nc\n--\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+--
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-brush"></a><b>brush</b></td><td>17 <a href="loop.test.html#L263">too many args to continue</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected u''
+Got      'a\nb\nc\n--\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+--
+</pre><i>stderr:</i> <br/>
+<pre>error: unexpected argument '2' found
+
+Usage: continue [WHICH_LOOP]
+
+For more information, try '--help'.
+
+error: unexpected argument '2' found
+
+Usage: continue [WHICH_LOOP]
+
+For more information, try '--help'.
+
+error: unexpected argument '2' found
+
+Usage: continue [WHICH_LOOP]
+
+For more information, try '--help'.
+
+</pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="loop.test.html#L296">break in condition of nested loop</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'i=1\ni=2\ni=3\ndone\n'
+Got      'i=1\ndone\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>i=1
+done
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="loop.test.html#L311">return within eval</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'one\n'
+Got      'one\ntwo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-brush"></a><b>brush</b></td><td>20 <a href="loop.test.html#L311">return within eval</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'one\n'
+Got      'one\ntwo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-mksh"></a><b>mksh</b></td><td>21 <a href="loop.test.html#L322">break/continue within eval</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+5
+</pre><i>stderr:</i> <br/>
+<pre>mksh: continue: can't continue
+mksh: break: can't break
+</pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="loop.test.html#L322">break/continue within eval</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1\n3\n'
+Got      '1\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -11
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-brush"></a><b>brush</b></td><td>21 <a href="loop.test.html#L322">break/continue within eval</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '1\n3\n'
+Got      '1\n2\n3\n4\n5\ndone\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+5
+done
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-zsh"></a><b>zsh</b></td><td>22 <a href="loop.test.html#L352">break/continue within source</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+5
+done
+</pre><i>stderr:</i> <br/>
+<pre>spec/testdata/continue.sh:continue:1: not in while, until, select, or repeat loop
+spec/testdata/break.sh:break:1: not in while, until, select, or repeat loop
+</pre></td></tr><tr><td><a name="details-22-mksh"></a><b>mksh</b></td><td>22 <a href="loop.test.html#L352">break/continue within source</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+5
+done
+</pre><i>stderr:</i> <br/>
+<pre>mksh: spec/testdata/continue.sh[1]: continue: can't continue
+mksh: spec/testdata/break.sh[1]: break: can't break
+</pre></td></tr><tr><td><a name="details-22-ksh"></a><b>ksh</b></td><td>22 <a href="loop.test.html#L352">break/continue within source</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '1\n3\ndone\n'
+Got      '1\n2\n3\n4\n5\ndone\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+5
+done
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: spec/testdata/continue.sh[1]: continue: can't continue
+W: ksh: spec/testdata/break.sh[1]: break: can't break
+</pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="loop.test.html#L352">break/continue within source</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1\n3\ndone\n'
+Got      '1\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -11
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-brush"></a><b>brush</b></td><td>22 <a href="loop.test.html#L352">break/continue within source</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '1\n3\ndone\n'
+Got      '1\n2\n3\n4\n5\ndone\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+5
+done
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-bash"></a><b>bash</b></td><td>23 <a href="loop.test.html#L387">top-level break/continue/return (without strict_control_flow)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>break=0
+continue=0
+return=2
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: break: only meaningful in a `for', `while', or `until' loop
+bash: line 1: continue: only meaningful in a `for', `while', or `until' loop
+bash: line 1: return: can only `return' from a function or sourced script
+</pre></td></tr><tr><td><a name="details-23-zsh"></a><b>zsh</b></td><td>23 <a href="loop.test.html#L387">top-level break/continue/return (without strict_control_flow)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh:break:1: not in while, until, select, or repeat loop
+zsh:continue:1: not in while, until, select, or repeat loop
+</pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="loop.test.html#L387">top-level break/continue/return (without strict_control_flow)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'break=0\ncontinue=0\n'
+Got      'break=1\ncontinue=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>break=1
+continue=1
+</pre><i>stderr:</i> <br/>
+<pre>break: need for/while/until
+continue: need for/while/until
+</pre></td></tr><tr><td><a name="details-23-sush"></a><b>sush</b></td><td>23 <a href="loop.test.html#L387">top-level break/continue/return (without strict_control_flow)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'break=0\ncontinue=0\n'
+Got      'break=0\ncontinue=0\nreturn=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>break=0
+continue=0
+return=2
+</pre><i>stderr:</i> <br/>
+<pre>sush: break: only meaningful in a `for', `while', or `until' loop
+sush: continue: only meaningful in a `for', `while', or `until' loop
+sush: return: can only `return' from a function or sourced script
+</pre></td></tr><tr><td><a name="details-23-brush"></a><b>brush</b></td><td>23 <a href="loop.test.html#L387">top-level break/continue/return (without strict_control_flow)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'break=0\ncontinue=0\n'
+Got      'return=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>return=2
+</pre><i>stderr:</i> <br/>
+<pre>return: can only be used in a function or sourced script
+</pre></td></tr><tr><td><a name="details-28-dash"></a><b>dash</b></td><td>28 <a href="loop.test.html#L564">builtin,command break,continue,return,exit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-ash"></a><b>ash</b></td><td>28 <a href="loop.test.html#L564">builtin,command break,continue,return,exit</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '- break\n1\n- continue\n1\n3\n- return\n1\n2\nstatus=99\n- exit\n'
+Got      '- break\n1\n2\n3\n- continue\n1\n3\n- return\n1\n2\n3\nstatus=0\n- exit\nnot executed\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 5
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>- break
+1
+2
+3
+- continue
+1
+3
+- return
+1
+2
+3
+status=0
+- exit
+not executed
+</pre><i>stderr:</i> <br/>
+<pre>ash: builtin: not found
+ash: builtin: not found
+ash: builtin: not found
+ash: builtin: not found
+ash: builtin: not found
+</pre></td></tr><tr><td><a name="details-28-zsh"></a><b>zsh</b></td><td>28 <a href="loop.test.html#L564">builtin,command break,continue,return,exit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-toysh"></a><b>toysh</b></td><td>28 <a href="loop.test.html#L564">builtin,command break,continue,return,exit</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '- break\n1\n- continue\n1\n3\n- return\n1\n2\nstatus=99\n- exit\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 5
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-28-brush"></a><b>brush</b></td><td>28 <a href="loop.test.html#L564">builtin,command break,continue,return,exit</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '- break\n1\n- continue\n1\n3\n- return\n1\n2\nstatus=99\n- exit\n'
+Got      '- break\n1\n- continue\n1\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 5
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>- break
+1
+- continue
+1
+</pre><i>stderr:</i> <br/>
+<pre>Well, this is embarrassing.
+
+brush had a problem and crashed. To help us diagnose the problem you can send us a crash report.
+
+We have generated a report file at "/tmp/report-c408b519-863f-4fad-b25b-1b076d06e7f0.toml". Submit an issue or email with the subject of "brush Crash Report" and include the report as an attachment.
+
+
+To submit the crash report:
+
+please post a GitHub issue at https://github.com/reubeno/brush/issues/new
+
+We take privacy seriously, and do not perform any automated error collection. In order to improve the software, we rely on people to submit reports.
+
+Thank you kindly!
+</pre></td></tr></table></body></html>

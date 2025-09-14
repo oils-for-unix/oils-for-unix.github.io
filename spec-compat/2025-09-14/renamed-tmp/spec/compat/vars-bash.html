@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>vars-bash: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for vars-bash.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td></td></tr>
+<tr><td class="timeout">TIME</td> <td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="vars-bash.test.html#L4">$SHELL is set to what is in /etc/passwd</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-0-bash">details</a></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"><a href="#details-0-ash">details</a></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-0-osh">details</a></td><td class="details-row"></td></tr>
+</table>
+<pre>1 passed, 0 OK, 0 not implemented, 0 BUG, 3 failed, 6 timeouts, 0 cases skipped
+1 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="vars-bash.test.html#L4">$SHELL is set to what is in /etc/passwd</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'SHELL is set\nSHELL is set\nSHELL is set\n'
+Got      'SHELL is set\nSHELL is set\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>SHELL is set
+SHELL is set
+</pre><i>stderr:</i> <br/>
+<pre>SHELL=/bin/bash
+SHELL=/bin/bash
+sh: Unknown option 'l' (see "sh --help")
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="vars-bash.test.html#L4">$SHELL is set to what is in /etc/passwd</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'SHELL is set\nSHELL is set\nSHELL is set\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>: line : set: -i: invalid option
+: line : set: -l: invalid option
+</pre></td></tr><tr><td><a name="details-0-osh"></a><b>osh</b></td><td>0 <a href="vars-bash.test.html#L4">$SHELL is set to what is in /etc/passwd</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'SHELL is set\nSHELL is set\nSHELL is set\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  shopt -s globstar  # long overdue, try out wc -l **/*.py
+  ^~~~~
+/home/andy/git/dotfiles//interactive.bash:23: 'shopt' got invalid option 'globstar'
+</pre></td></tr></table></body></html>

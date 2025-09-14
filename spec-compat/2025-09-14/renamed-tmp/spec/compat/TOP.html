@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shell Compatibility Reports</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+  </head>
+
+  <body class="width35">
+    <style>
+      code { color: green; }
+    </style>
+
+    <p id="home-link">
+      <a href="/">Root</a> |
+      <a href="https://oils.pub/">oils.pub</a>
+    </p>
+  
+<h2>Shell Compatibility Reports</h2>
+<p>These reports are based on <a href="https://github.com/oils-for-unix/oils/wiki/Spec-Tests">spec tests written for Oils</a>.</p>
+<p>Here are some summary tables.  <strong>Click</strong> on the column headers to sort:</p>
+<ul>
+<li><a href="PASSING.html">Total Passing</a>
+<ul>
+<li>Each shell gets 1 point for each case we marked passing.</li>
+<li>Our assertions are usually based on a <strong>survey</strong> of <code>bash</code>, <code>dash</code>, <code>mksh</code>,
+<code>zsh</code>, and other shells.  Assertions from 2016-2018 may favor OSH, but
+there shouldn't be many of them.</li>
+</ul>
+</li>
+<li><a href="DELTA-bash.html">Delta bash</a>
+<ul>
+<li>Compare each shell's passing count vs. bash</li>
+</ul>
+</li>
+<li><a href="DELTA-osh.html">Delta OSH</a>
+<ul>
+<li>Compare each shell's passing count vs. OSH</li>
+</ul>
+</li>
+</ul>
+<p><a href="tree.html">tree.html</a></p>
+<h3>Notes and Caveats</h3>
+<ul>
+<li>Some tests may fail for innocuous reasons, e.g. printing <code>'$'</code> versus <code>\$</code>
+<ul>
+<li>Shell authors are welcome to use our test suite, and add assertions.</li>
+</ul>
+</li>
+<li>OSH has some features that bash doesn't have.
+<ul>
+<li>e.g. I removed <code>spec/strict-options</code> so shells aren't penalized for not
+having these features.</li>
+<li>But I left <code>spec/errexit-osh</code> in because I think new shells should provide
+alternatives to the <strong>bugs</strong> in POSIX:
+<a href="https://oils.pub/release/latest/doc/error-handling.html">YSH Fixes Shell's Error Handling (<code>errexit</code>)</a></li>
+<li>I also think shells should adopt <a href="https://oils.pub/release/latest/doc/simple-word-eval.html">Simple Word Evaluation in Unix Shell</a> (i.e. deprecate <code>$IFS</code>, more so than <code>zsh</code>)</li>
+</ul>
+</li>
+<li>Other ideas
+<ul>
+<li>We could add a  &quot;majority agreement&quot; metric, for a more neutral report.</li>
+<li>We could add the Smoosh test suite.  Results are published on our <a href="https://oils.pub/release/latest/quality.html">quality
+page</a>.</li>
+</ul>
+</li>
+</ul>
+<h3>Shells Compared</h3>
+<ul>
+<li>GNU <code>bash</code>
+<ul>
+<li><a href="https://www.gnu.org/software/bash/">https://www.gnu.org/software/bash/</a></li>
+<li>running fixed version built for Oils</li>
+</ul>
+</li>
+<li><code>mksh</code> - shell on Android, derivative of <code>pdksh</code>
+<ul>
+<li><a href="http://www.mirbsd.org/mksh.htm">http://www.mirbsd.org/mksh.htm</a></li>
+<li>running fixed version built for Oils</li>
+</ul>
+</li>
+<li>AT&amp;T <code>ksh</code>
+<ul>
+<li><a href="https://github.com/ksh93/ksh">https://github.com/ksh93/ksh</a></li>
+<li>running distro package</li>
+</ul>
+</li>
+<li><code>toysh</code>
+<ul>
+<li><a href="https://landley.net/toybox/">https://landley.net/toybox/</a></li>
+<li>running tarball release</li>
+</ul>
+</li>
+<li><code>sush</code>
+<ul>
+<li><a href="https://github.com/shellgei/rusty_bash">https://github.com/shellgei/rusty_bash</a></li>
+<li>running git HEAD</li>
+</ul>
+</li>
+<li><code>brush</code>
+<ul>
+<li><a href="https://github.com/reubeno/brush">https://github.com/reubeno/brush</a></li>
+<li>running git HEAD</li>
+</ul>
+</li>
+<li><code>osh</code>
+<ul>
+<li><a href="https://github.com/oils-for-unix/oils">https://github.com/oils-for-unix/oils</a></li>
+<li>running git HEAD</li>
+</ul>
+</li>
+</ul>
+<p>TODO: Add other shells, and be more specific about versions.</p>
+<h3>More Comparisons</h3>
+<ul>
+<li><a href="../../binary-sizes.txt">Binary Sizes</a></li>
+</ul>
+<p>Possibly TODO</p>
+<ul>
+<li>Build times</li>
+<li>Lines of code?
+<ul>
+<li><a href="https://www.oilshell.org/blog/2024/09/line-counts.html">Oils has a &quot;compressed&quot; implementation</a></li>
+</ul>
+</li>
+<li>Memory safety</li>
+<li>Oils has many other:
+<ul>
+<li>test suites - <code>test/gold</code>, <code>test/wild</code>, ...</li>
+<li>benchmarks - parse time, runtime, ...</li>
+</ul>
+</li>
+</ul>
+<h3>Links</h3>
+<ul>
+<li>Wiki:
+<ul>
+<li><a href="https://github.com/oils-for-unix/oils/wiki/Spec-Tests">Spec Tests</a></li>
+<li><a href="https://github.com/oils-for-unix/oils/wiki/Contributing">Contributing</a></li>
+</ul>
+</li>
+<li>Zulip:  <a href="https://oilshell.zulipchat.com/">https://oilshell.zulipchat.com/</a>
+<ul>
+<li>Feel free to send feedback, and ask questions!</li>
+</ul>
+</li>
+</ul>
+<h3>Features Not Yet Implemented in OSH</h3>
+<p>We know about these gaps:</p>
+<ul>
+<li><code>kill</code> builtin, <code>let</code> keyword - we do have some spec tests for them</li>
+<li><code>coproc</code> keyword</li>
+</ul>
+
+  </body>
+</html>
+

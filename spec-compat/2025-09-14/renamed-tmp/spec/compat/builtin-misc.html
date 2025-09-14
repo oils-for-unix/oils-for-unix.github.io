@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-misc: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-misc.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>3</td><td>3</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>2</td><td>3</td><td>7</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>4</td><td>2</td><td>0</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>2</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>0</td><td>0</td><td>2</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>3</td><td>0</td><td>0</td><td>4</td><td>5</td><td>5</td><td>4</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-misc.test.html#L4">history builtin usage</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-0-bash">details</a></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"><a href="#details-0-ash">details</a></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"><a href="#details-0-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-misc.test.html#L46">Print shell strings with weird chars: set and printf %q and ${x@Q}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-1-bash">details</a></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-misc.test.html#L93">Print shell strings with normal chars: set and printf %q and ${x@Q}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-2-bash">details</a></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-misc.test.html#L137">time pipeline</a></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-misc.test.html#L142">shift</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-misc.test.html#L154">Shifting too far</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-misc.test.html#L160">Invalid shift argument</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-6-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>33 passed, 9 OK, 3 not implemented, 4 BUG, 21 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-bash"></a><b>bash</b></td><td>0 <a href="builtin-misc.test.html#L4">history builtin usage</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+status=2
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 5: history: -5: invalid option
+history: usage: history [-c] [-d offset] [n] or history -anrw [filename] or history -ps arg [arg...]
+bash: line 7: history: f: numeric argument required
+bash: line 9: history: too: numeric argument required
+</pre></td></tr><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="builtin-misc.test.html#L4">history builtin usage</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: history: not found
+dash: 3: history: not found
+dash: 5: history: not found
+dash: 7: history: not found
+dash: 9: history: not found
+</pre></td></tr><tr><td><a name="details-0-ash"></a><b>ash</b></td><td>0 <a href="builtin-misc.test.html#L4">history builtin usage</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=0\nstatus=0\nstatus=2\nstatus=2\nstatus=2\n'
+Got      'status=0\nstatus=0\nstatus=0\nstatus=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+status=0
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="builtin-misc.test.html#L4">history builtin usage</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>fc: no such event: 1
+fc: no such event: 5
+fc: no such event: 0
+fc: event not found: f
+fc: event not found: too
+</pre></td></tr><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="builtin-misc.test.html#L4">history builtin usage</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: fc: history functions not available
+mksh: &lt;stdin&gt;[3]: fc: history functions not available
+mksh: &lt;stdin&gt;[5]: fc: history functions not available
+mksh: &lt;stdin&gt;[7]: fc: history functions not available
+mksh: &lt;stdin&gt;[9]: fc: history functions not available
+</pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="builtin-misc.test.html#L4">history builtin usage</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=0\nstatus=0\nstatus=2\nstatus=2\nstatus=2\n'
+Got      'status=1\nstatus=1\nstatus=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: fc: history functions not available
+E: ksh: &lt;stdin&gt;[3]: fc: history functions not available
+E: ksh: &lt;stdin&gt;[5]: fc: history functions not available
+E: ksh: &lt;stdin&gt;[7]: fc: history functions not available
+E: ksh: &lt;stdin&gt;[9]: fc: history functions not available
+</pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="builtin-misc.test.html#L4">history builtin usage</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nstatus=0\nstatus=2\nstatus=2\nstatus=2\n'
+Got      'status=127\nstatus=127\nstatus=127\nstatus=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: history: No such file or directory
+sh: history: No such file or directory
+sh: history: No such file or directory
+sh: history: No such file or directory
+sh: history: No such file or directory
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="builtin-misc.test.html#L4">history builtin usage</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\nstatus=0\nstatus=2\nstatus=2\nstatus=2\n'
+Got      'status=0\nstatus=1\nstatus=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=1
+status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: history: +5: invalid option
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: history: -5: invalid option
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: history: f: invalid option
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: history: too: invalid option
+</pre></td></tr><tr><td><a name="details-0-brush"></a><b>brush</b></td><td>0 <a href="builtin-misc.test.html#L4">history builtin usage</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=0\nstatus=0\nstatus=2\nstatus=2\nstatus=2\n'
+Got      'status=99\nstatus=99\nstatus=99\nstatus=99\nstatus=99\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=99
+status=99
+status=99
+status=99
+status=99
+</pre><i>stderr:</i> <br/>
+<pre>history: history not available in this shell
+history: history not available in this shell
+history: history not available in this shell
+history: history not available in this shell
+history: history not available in this shell
+</pre></td></tr><tr><td><a name="details-1-bash"></a><b>bash</b></td><td>1 <a href="builtin-misc.test.html#L46">Print shell strings with weird chars: set and printf %q and ${x@Q}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo=$'a\nb\001c\'d'
+pf  $'a\nb\001c\'d'
+@Q  $'a\nb\001c\'d'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="builtin-misc.test.html#L46">Print shell strings with weird chars: set and printf %q and ${x@Q}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="builtin-misc.test.html#L46">Print shell strings with weird chars: set and printf %q and ${x@Q}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "foo=$'a\\nb\\u0001c\\'d'\npf  $'a\\nb\\u0001c\\'d'\n@Q  $'a\\nb\\u0001c\\'d'\n"
+Got      'foo=\'a\nb\x01c\'"\'"\'d\'\npf  '
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo='a
+bc'"'"'d'
+pf  </pre><i>stderr:</i> <br/>
+<pre>ash: %q\n: invalid format
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="builtin-misc.test.html#L46">Print shell strings with weird chars: set and printf %q and ${x@Q}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="builtin-misc.test.html#L46">Print shell strings with weird chars: set and printf %q and ${x@Q}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="builtin-misc.test.html#L46">Print shell strings with weird chars: set and printf %q and ${x@Q}</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "foo=$'a\\nb\\u0001c\\'d'\npf  $'a\\nb\\u0001c\\'d'\n@Q  $'a\\nb\\u0001c\\'d'\n"
+Got      "foo=$'a\\nb\\001c\\047d'\npf  'a'$'\\n''b'$'\\001''c'\\''d'\n@Q  $'a\nb\x01c'd'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo=$'a\nb\001c\047d'
+pf  'a'$'\n''b'$'\001''c'\''d'
+@Q  $'a
+bc'd'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-misc.test.html#L46">Print shell strings with weird chars: set and printf %q and ${x@Q}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "foo=$'a\\nb\\u0001c\\'d'\npf  $'a\\nb\\u0001c\\'d'\n@Q  $'a\\nb\\u0001c\\'d'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="builtin-misc.test.html#L46">Print shell strings with weird chars: set and printf %q and ${x@Q}</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "foo=$'a\\nb\\u0001c\\'d'\npf  $'a\\nb\\u0001c\\'d'\n@Q  $'a\\nb\\u0001c\\'d'\n"
+Got      "foo=$'a\\nb\\001c\\'d'\npf  a\nb\x01c\\'d\n@Q  'a b\x01c'd'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo=$'a\nb\001c\'d'
+pf  a
+bc\'d
+@Q  'a bc'd'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="builtin-misc.test.html#L46">Print shell strings with weird chars: set and printf %q and ${x@Q}</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "foo=$'a\\nb\\u0001c\\'d'\npf  $'a\\nb\\u0001c\\'d'\n@Q  $'a\\nb\\u0001c\\'d'\n"
+Got      "foo=$'a\\nb\\001c\\'d'\npf  'a'$'\\n''b'$'\\001''c'\\''d'\n@Q  $'a\\nb\\001c\\'d'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo=$'a\nb\001c\'d'
+pf  'a'$'\n''b'$'\001''c'\''d'
+@Q  $'a\nb\001c\'d'
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: i/o error: stream did not contain valid UTF-8
+</pre></td></tr><tr><td><a name="details-2-bash"></a><b>bash</b></td><td>2 <a href="builtin-misc.test.html#L93">Print shell strings with normal chars: set and printf %q and ${x@Q}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo=spam
+declare -- foo="spam"
+pf  spam
+@Q  'spam'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="builtin-misc.test.html#L93">Print shell strings with normal chars: set and printf %q and ${x@Q}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="builtin-misc.test.html#L93">Print shell strings with normal chars: set and printf %q and ${x@Q}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'foo=spam\ndeclare -- foo=spam\npf  spam\n@Q  spam\n'
+Got      "foo='spam'\npf  "
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo='spam'
+pf  </pre><i>stderr:</i> <br/>
+<pre>ash: typeset: not found
+ash: %q\n: invalid format
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="builtin-misc.test.html#L93">Print shell strings with normal chars: set and printf %q and ${x@Q}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="builtin-misc.test.html#L93">Print shell strings with normal chars: set and printf %q and ${x@Q}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo=spam
+typeset foo=spam
+pf  spam
+@Q  spam
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="builtin-misc.test.html#L93">Print shell strings with normal chars: set and printf %q and ${x@Q}</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'foo=spam\ndeclare -- foo=spam\npf  spam\n@Q  spam\n'
+Got      'foo=spam\ntypeset foo=spam\npf  spam\n@Q  spam\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo=spam
+typeset foo=spam
+pf  spam
+@Q  spam
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="builtin-misc.test.html#L93">Print shell strings with normal chars: set and printf %q and ${x@Q}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'foo=spam\ndeclare -- foo=spam\npf  spam\n@Q  spam\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="builtin-misc.test.html#L93">Print shell strings with normal chars: set and printf %q and ${x@Q}</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'foo=spam\ndeclare -- foo=spam\npf  spam\n@Q  spam\n'
+Got      'foo=spam\ndeclare -- foo="spam"\npf  spam\n@Q  \'spam\'\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo=spam
+declare -- foo="spam"
+pf  spam
+@Q  'spam'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="builtin-misc.test.html#L93">Print shell strings with normal chars: set and printf %q and ${x@Q}</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'foo=spam\ndeclare -- foo=spam\npf  spam\n@Q  spam\n'
+Got      'foo=spam\ndeclare -- foo="spam"\npf  spam\n@Q  \'spam\'\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo=spam
+declare -- foo="spam"
+pf  spam
+@Q  'spam'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="builtin-misc.test.html#L142">shift</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '2 3 4\n4\n'
+Got      '\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="builtin-misc.test.html#L154">Shifting too far</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: shift: can't shift that many
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="builtin-misc.test.html#L154">Shifting too far</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="builtin-misc.test.html#L154">Shifting too far</a><br/><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-bash"></a><b>bash</b></td><td>6 <a href="builtin-misc.test.html#L160">Invalid shift argument</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>bash: line 1: shift: ZZZ: numeric argument required
+</pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="builtin-misc.test.html#L160">Invalid shift argument</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="builtin-misc.test.html#L160">Invalid shift argument</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="builtin-misc.test.html#L160">Invalid shift argument</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="builtin-misc.test.html#L160">Invalid shift argument</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 2
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>shift: not integer: ZZZ
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="builtin-misc.test.html#L160">Invalid shift argument</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 2
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: shift: ZZZ: numeric argument required
+</pre></td></tr></table></body></html>

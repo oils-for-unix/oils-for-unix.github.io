@@ -1,0 +1,2826 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>regex: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for regex.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>35</td><td>2</td><td>10</td><td>16</td><td>6</td><td>6</td><td>11</td><td>23</td><td>30</td><td>37</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>0</td><td>0</td><td>7</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>0</td><td>0</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>2</td><td>0</td><td>0</td><td>9</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>35</td><td>27</td><td>0</td><td>31</td><td>31</td><td>25</td><td>14</td><td>7</td><td>0</td><td></td></tr>
+<tr><td class="timeout">TIME</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>37</td><td>37</td><td>37</td><td>37</td><td>37</td><td>37</td><td>37</td><td>37</td><td>37</td><td>37</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L39">BASH_REMATCH</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"><a href="#details-0-ash">details</a></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L61">Match is unanchored at both ends</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L65">Failed match</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L70">Regex quoted with \ -- preferred in bash</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L74">Regex quoted with single quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L82">Regex quoted with double quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L90">Fix single quotes by storing in variable</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L95">Fix single quotes by storing in variable</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L100">Double quoting pat variable -- again bash doesn't like it.</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L108">Mixing quoted and unquoted parts</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L116">Regex with == and not =~ is parse error, different lexer mode required</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L122">Omitting ( )</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L126">Malformed regex</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L134">Regex with |</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"><a href="#details-13-ksh">details</a></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L140">Regex to match literal brackets []</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"><a href="#details-14-ash">details</a></td><td class="details-row"><a href="#details-14-zsh">details</a></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L157">Regex to match literals . ^ $ etc.</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"><a href="#details-15-ash">details</a></td><td class="details-row"><a href="#details-15-zsh">details</a></td><td class="details-row"><a href="#details-15-mksh">details</a></td><td class="details-row"><a href="#details-15-ksh">details</a></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L187">Unquoted { is a regex parse error</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-16-bash">details</a></td><td class="details-row"><a href="#details-16-dash">details</a></td><td class="details-row"><a href="#details-16-ash">details</a></td><td class="details-row"><a href="#details-16-zsh">details</a></td><td class="details-row"><a href="#details-16-mksh">details</a></td><td class="details-row"><a href="#details-16-ksh">details</a></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"><a href="#details-16-sush">details</a></td><td class="details-row"><a href="#details-16-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L201">Fatal error inside [[ =~ ]]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-17-bash">details</a></td><td class="details-row"><a href="#details-17-dash">details</a></td><td class="details-row"><a href="#details-17-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"><a href="#details-17-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L212">Quoted { and +</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-dash">details</a></td><td class="details-row"><a href="#details-18-ash">details</a></td><td class="details-row"><a href="#details-18-zsh">details</a></td><td class="details-row"><a href="#details-18-mksh">details</a></td><td class="details-row"><a href="#details-18-ksh">details</a></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L273">Escaped {</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-dash">details</a></td><td class="details-row"><a href="#details-19-ash">details</a></td><td class="details-row"><a href="#details-19-zsh">details</a></td><td class="details-row"><a href="#details-19-mksh">details</a></td><td class="details-row"><a href="#details-19-ksh">details</a></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L282">Escaped { stored in variable first</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-dash">details</a></td><td class="details-row"><a href="#details-20-ash">details</a></td><td class="details-row"><a href="#details-20-zsh">details</a></td><td class="details-row"><a href="#details-20-mksh">details</a></td><td class="details-row"><a href="#details-20-ksh">details</a></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L293">regex with ?</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-mksh">details</a></td><td class="details-row"><a href="#details-21-ksh">details</a></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L301">regex with unprintable characters</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-mksh">details</a></td><td class="details-row"><a href="#details-22-ksh">details</a></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L318">pattern $f(x)  -- regression</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-dash">details</a></td><td class="details-row"><a href="#details-23-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-23-mksh">details</a></td><td class="details-row"><a href="#details-23-ksh">details</a></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L329">pattern a=(1)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-dash">details</a></td><td class="details-row"><a href="#details-24-ash">details</a></td><td class="details-row"><a href="#details-24-zsh">details</a></td><td class="details-row"><a href="#details-24-mksh">details</a></td><td class="details-row"><a href="#details-24-ksh">details</a></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"><a href="#details-24-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L343">pattern @f(x)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-dash">details</a></td><td class="details-row"><a href="#details-25-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-25-mksh">details</a></td><td class="details-row"><a href="#details-25-ksh">details</a></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L355">Bug: Nix idiom with closing ) next to pattern</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-dash">details</a></td><td class="details-row"><a href="#details-26-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-26-mksh">details</a></td><td class="details-row"><a href="#details-26-ksh">details</a></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"><a href="#details-26-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L371">unquoted (a  b) as pattern, (a  b|c)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-dash">details</a></td><td class="details-row"><a href="#details-27-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-27-mksh">details</a></td><td class="details-row"><a href="#details-27-ksh">details</a></td><td class="details-row"><a href="#details-27-toysh">details</a></td><td class="details-row"><a href="#details-27-sush">details</a></td><td class="details-row"><a href="#details-27-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L397">Multiple adjacent () groups</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-dash">details</a></td><td class="details-row"><a href="#details-28-ash">details</a></td><td class="details-row"><a href="#details-28-zsh">details</a></td><td class="details-row"><a href="#details-28-mksh">details</a></td><td class="details-row"><a href="#details-28-ksh">details</a></td><td class="details-row"><a href="#details-28-toysh">details</a></td><td class="details-row"><a href="#details-28-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L433">unquoted [a  b] as pattern, [a  b|c]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-dash">details</a></td><td class="details-row"><a href="#details-29-ash">details</a></td><td class="details-row"><a href="#details-29-zsh">details</a></td><td class="details-row"><a href="#details-29-mksh">details</a></td><td class="details-row"><a href="#details-29-ksh">details</a></td><td class="details-row"><a href="#details-29-toysh">details</a></td><td class="details-row"><a href="#details-29-sush">details</a></td><td class="details-row"><a href="#details-29-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 30</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L466">c|a unquoted</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-dash">details</a></td><td class="details-row"><a href="#details-30-ash">details</a></td><td class="details-row"><a href="#details-30-zsh">details</a></td><td class="details-row"><a href="#details-30-mksh">details</a></td><td class="details-row"><a href="#details-30-ksh">details</a></td><td class="details-row"><a href="#details-30-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 31</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L477">Operator chars ; &amp; but not |</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-dash">details</a></td><td class="details-row"><a href="#details-31-ash">details</a></td><td class="details-row"><a href="#details-31-zsh">details</a></td><td class="details-row"><a href="#details-31-mksh">details</a></td><td class="details-row"><a href="#details-31-ksh">details</a></td><td class="details-row"><a href="#details-31-toysh">details</a></td><td class="details-row"><a href="#details-31-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 32</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L550">Quotes '' "" $'' $"" in pattern</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-32-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-32-mksh">details</a></td><td class="details-row"><a href="#details-32-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-32-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 33</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L584">Unicode in pattern</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-33-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-33-mksh">details</a></td><td class="details-row"><a href="#details-33-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 34</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L596">Parse error with 2 words</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-34-dash">details</a></td><td class="details-row"><a href="#details-34-ash">details</a></td><td class="details-row"><a href="#details-34-zsh">details</a></td><td class="details-row"><a href="#details-34-mksh">details</a></td><td class="details-row"><a href="#details-34-ksh">details</a></td><td class="details-row"><a href="#details-34-toysh">details</a></td><td class="details-row"><a href="#details-34-sush">details</a></td><td class="details-row"><a href="#details-34-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 35</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L611">make a lisp example</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-35-dash">details</a></td><td class="details-row"><a href="#details-35-ash">details</a></td><td class="details-row"><a href="#details-35-zsh">details</a></td><td class="details-row"><a href="#details-35-mksh">details</a></td><td class="details-row"><a href="#details-35-ksh">details</a></td><td class="details-row"><a href="#details-35-toysh">details</a></td><td class="details-row"><a href="#details-35-sush">details</a></td><td class="details-row"><a href="#details-35-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 36</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="regex.test.html#L630">Operators and space lose meaning inside ()</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-36-dash">details</a></td><td class="details-row"><a href="#details-36-ash">details</a></td><td class="details-row"><a href="#details-36-zsh">details</a></td><td class="details-row"><a href="#details-36-mksh">details</a></td><td class="details-row"><a href="#details-36-ksh">details</a></td><td class="details-row"><a href="#details-36-toysh">details</a></td><td class="details-row"><a href="#details-36-sush">details</a></td><td class="details-row"><a href="#details-36-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>176 passed, 7 OK, 5 not implemented, 11 BUG, 170 failed, 1 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="regex.test.html#L39">BASH_REMATCH</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "status=0\n['foo123', 'foo', '123']\nstatus=1\n[]\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-0-ash"></a><b>ash</b></td><td>0 <a href="regex.test.html#L39">BASH_REMATCH</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "status=0\n['foo123', 'foo', '123']\nstatus=1\n[]\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="regex.test.html#L39">BASH_REMATCH</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+['']
+status=1
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="regex.test.html#L39">BASH_REMATCH</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "status=0\n['foo123', 'foo', '123']\nstatus=1\n[]\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="regex.test.html#L39">BASH_REMATCH</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "status=0\n['foo123', 'foo', '123']\nstatus=1\n[]\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="regex.test.html#L39">BASH_REMATCH</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "status=0\n['foo123', 'foo', '123']\nstatus=1\n[]\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="regex.test.html#L61">Match is unanchored at both ends</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: [[: not found
+</pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="regex.test.html#L61">Match is unanchored at both ends</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="regex.test.html#L61">Match is unanchored at both ends</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="regex.test.html#L65">Failed match</a><br/><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: [[: not found
+</pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="regex.test.html#L70">Regex quoted with \ -- preferred in bash</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="regex.test.html#L70">Regex quoted with \ -- preferred in bash</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="regex.test.html#L70">Regex quoted with \ -- preferred in bash</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="regex.test.html#L70">Regex quoted with \ -- preferred in bash</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="regex.test.html#L70">Regex quoted with \ -- preferred in bash</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="regex.test.html#L74">Regex quoted with single quotes</a><br/><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: [[: not found
+</pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="regex.test.html#L74">Regex quoted with single quotes</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected u''
+Got      'true\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>true
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="regex.test.html#L74">Regex quoted with single quotes</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>true
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="regex.test.html#L82">Regex quoted with double quotes</a><br/><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: [[: not found
+</pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="regex.test.html#L82">Regex quoted with double quotes</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected u''
+Got      'true\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>true
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="regex.test.html#L82">Regex quoted with double quotes</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>true
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="regex.test.html#L90">Fix single quotes by storing in variable</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: [[: not found
+</pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="regex.test.html#L90">Fix single quotes by storing in variable</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="regex.test.html#L90">Fix single quotes by storing in variable</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="regex.test.html#L90">Fix single quotes by storing in variable</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="regex.test.html#L90">Fix single quotes by storing in variable</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="regex.test.html#L95">Fix single quotes by storing in variable</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: [[: not found
+</pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="regex.test.html#L95">Fix single quotes by storing in variable</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="regex.test.html#L95">Fix single quotes by storing in variable</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="regex.test.html#L95">Fix single quotes by storing in variable</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="regex.test.html#L95">Fix single quotes by storing in variable</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="regex.test.html#L100">Double quoting pat variable -- again bash doesn't like it.</a><br/><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: [[: not found
+</pre></td></tr><tr><td><a name="details-8-ash"></a><b>ash</b></td><td>8 <a href="regex.test.html#L100">Double quoting pat variable -- again bash doesn't like it.</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected u''
+Got      'true\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>true
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="regex.test.html#L100">Double quoting pat variable -- again bash doesn't like it.</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>true
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="regex.test.html#L108">Mixing quoted and unquoted parts</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'true\ntrue\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: [[: not found
+dash: 2: [[: not found
+</pre></td></tr><tr><td><a name="details-9-mksh"></a><b>mksh</b></td><td>9 <a href="regex.test.html#L108">Mixing quoted and unquoted parts</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'true\ntrue\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-9-ksh"></a><b>ksh</b></td><td>9 <a href="regex.test.html#L108">Mixing quoted and unquoted parts</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'true\ntrue\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="regex.test.html#L108">Mixing quoted and unquoted parts</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'true\ntrue\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-zsh"></a><b>zsh</b></td><td>10 <a href="regex.test.html#L116">Regex with == and not =~ is parse error, different lexer mode required</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="regex.test.html#L116">Regex with == and not =~ is parse error, different lexer mode required</a><br/><br/>
+<span class="assertion">
+[mksh status]
+Expected 2
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="regex.test.html#L116">Regex with == and not =~ is parse error, different lexer mode required</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 2
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '('
+</pre></td></tr><tr><td><a name="details-11-dash"></a><b>dash</b></td><td>11 <a href="regex.test.html#L122">Omitting ( )</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: [[: not found
+</pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="regex.test.html#L126">Malformed regex</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: parse error near `)'
+</pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="regex.test.html#L126">Malformed regex</a><br/><br/>
+<span class="assertion">
+[mksh status]
+Expected 2
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="regex.test.html#L126">Malformed regex</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 2
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="regex.test.html#L134">Regex with |</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: [[: not found
+dash: 1: bar: not found
+</pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="regex.test.html#L134">Regex with |</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: missing ]]
+ash: bar: not found
+</pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="regex.test.html#L134">Regex with |</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: parse error near `|'
+</pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="regex.test.html#L134">Regex with |</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-13-ksh"></a><b>ksh</b></td><td>13 <a href="regex.test.html#L134">Regex with |</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="regex.test.html#L134">Regex with |</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -11
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="regex.test.html#L140">Regex to match literal brackets []</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'true\ntrue\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: [[: not found
+dash: 4: [[: not found
+</pre></td></tr><tr><td><a name="details-14-ash"></a><b>ash</b></td><td>14 <a href="regex.test.html#L140">Regex to match literal brackets []</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'true\ntrue\n'
+Got      'true\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>true
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-zsh"></a><b>zsh</b></td><td>14 <a href="regex.test.html#L140">Regex to match literal brackets []</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>true
+</pre><i>stderr:</i> <br/>
+<pre>zsh: failed to compile regex: Unmatched [, [^, [:, [., or [=
+</pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="regex.test.html#L140">Regex to match literal brackets []</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'true\ntrue\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="regex.test.html#L140">Regex to match literal brackets []</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'true\ntrue\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="regex.test.html#L140">Regex to match literal brackets []</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'true\ntrue\n'
+Got      'true\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>true
+</pre><i>stderr:</i> <br/>
+<pre>[[: bad regex '[]': Unmatched [, [^, [:, [., or [=
+</pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="regex.test.html#L157">Regex to match literals . ^ $ etc.</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'false\ntrue\nfalse\ntrue\nfalse\ntrue\nfalse\ntrue\n'
+Got      'false\nfalse\nfalse\nfalse\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>false
+false
+false
+false
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: [[: not found
+dash: 2: [[: not found
+dash: 4: [[: not found
+dash: 5: [[: not found
+dash: 7: [[: not found
+dash: 8: [[: not found
+dash: 10: [[: not found
+dash: 11: [[: not found
+</pre></td></tr><tr><td><a name="details-15-ash"></a><b>ash</b></td><td>15 <a href="regex.test.html#L157">Regex to match literals . ^ $ etc.</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'false\ntrue\nfalse\ntrue\nfalse\ntrue\nfalse\ntrue\n'
+Got      'true\nfalse\nfalse\nfalse\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>true
+false
+false
+false
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-zsh"></a><b>zsh</b></td><td>15 <a href="regex.test.html#L157">Regex to match literals . ^ $ etc.</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>true
+false
+false
+false
+</pre><i>stderr:</i> <br/>
+<pre>zsh: failed to compile regex: Invalid preceding regular expression
+zsh: failed to compile regex: Invalid preceding regular expression
+zsh: failed to compile regex: Invalid preceding regular expression
+zsh: failed to compile regex: Invalid preceding regular expression
+</pre></td></tr><tr><td><a name="details-15-mksh"></a><b>mksh</b></td><td>15 <a href="regex.test.html#L157">Regex to match literals . ^ $ etc.</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'false\ntrue\nfalse\ntrue\nfalse\ntrue\nfalse\ntrue\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-15-ksh"></a><b>ksh</b></td><td>15 <a href="regex.test.html#L157">Regex to match literals . ^ $ etc.</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'false\ntrue\nfalse\ntrue\nfalse\ntrue\nfalse\ntrue\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="regex.test.html#L157">Regex to match literals . ^ $ etc.</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'false\ntrue\nfalse\ntrue\nfalse\ntrue\nfalse\ntrue\n'
+Got      'true\nfalse\nfalse\ntrue\nfalse\ntrue\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>true
+false
+false
+true
+false
+true
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-bash"></a><b>bash</b></td><td>16 <a href="regex.test.html#L187">Unquoted { is a regex parse error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-dash"></a><b>dash</b></td><td>16 <a href="regex.test.html#L187">Unquoted { is a regex parse error</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected u''
+Got      'status=127\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: [[: not found
+</pre></td></tr><tr><td><a name="details-16-ash"></a><b>ash</b></td><td>16 <a href="regex.test.html#L187">Unquoted { is a regex parse error</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected u''
+Got      'status=2\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-zsh"></a><b>zsh</b></td><td>16 <a href="regex.test.html#L187">Unquoted { is a regex parse error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>zsh: failed to compile regex: Invalid preceding regular expression
+</pre></td></tr><tr><td><a name="details-16-mksh"></a><b>mksh</b></td><td>16 <a href="regex.test.html#L187">Unquoted { is a regex parse error</a><br/><br/>
+<span class="assertion">
+[mksh status]
+Expected 2
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-16-ksh"></a><b>ksh</b></td><td>16 <a href="regex.test.html#L187">Unquoted { is a regex parse error</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 2
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="regex.test.html#L187">Unquoted { is a regex parse error</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected u''
+Got      'true\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>true
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-sush"></a><b>sush</b></td><td>16 <a href="regex.test.html#L187">Unquoted { is a regex parse error</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected u''
+Got      'status=2\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-brush"></a><b>brush</b></td><td>16 <a href="regex.test.html#L187">Unquoted { is a regex parse error</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected u''
+Got      'true\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>true
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-bash"></a><b>bash</b></td><td>17 <a href="regex.test.html#L201">Fatal error inside [[ =~ ]]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: 1 / 0 : division by 0 (error token is "0 ")
+</pre></td></tr><tr><td><a name="details-17-dash"></a><b>dash</b></td><td>17 <a href="regex.test.html#L201">Fatal error inside [[ =~ ]]</a><br/><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: arithmetic expression: division by zero: " 1 / 0 "
+</pre></td></tr><tr><td><a name="details-17-ash"></a><b>ash</b></td><td>17 <a href="regex.test.html#L201">Fatal error inside [[ =~ ]]</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: divide by zero
+</pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="regex.test.html#L201">Fatal error inside [[ =~ ]]</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected u''
+Got      'status=1\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: /0
+main: line 1: sh: bad math:  1 / 0  @ 8
+</pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="regex.test.html#L201">Fatal error inside [[ =~ ]]</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected u''
+Got      'status=2\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: 1 / 0 : division by 0 (error token is "0")
+</pre></td></tr><tr><td><a name="details-17-brush"></a><b>brush</b></td><td>17 <a href="regex.test.html#L201">Fatal error inside [[ =~ ]]</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected u''
+Got      'status=1\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: arithmetic evaluation error: division by zero
+</pre></td></tr><tr><td><a name="details-18-dash"></a><b>dash</b></td><td>18 <a href="regex.test.html#L212">Quoted { and +</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'yes {\nyes +\nyes *\nyes ?\nyes ^\nyes $\nyes (\nyes )\nyes |\nyes \\\n---\nyes .\nno .\n---\na 0\n- 1\nb 0\nz 0\nstatus=0\n'
+Got      '---\nno .\n---\na 127\n- 127\nb 127\nz 127\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>---
+no .
+---
+a 127
+- 127
+b 127
+z 127
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: [[: not found
+dash: 2: [[: not found
+dash: 3: [[: not found
+dash: 4: [[: not found
+dash: 5: [[: not found
+dash: 6: [[: not found
+dash: 7: [[: not found
+dash: 8: [[: not found
+dash: 9: [[: not found
+dash: 10: [[: not found
+dash: 13: [[: not found
+dash: 14: [[: not found
+dash: 17: [[: not found
+dash: 18: [[: not found
+dash: 19: [[: not found
+dash: 20: [[: not found
+</pre></td></tr><tr><td><a name="details-18-ash"></a><b>ash</b></td><td>18 <a href="regex.test.html#L212">Quoted { and +</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'yes {\nyes +\nyes *\nyes ?\nyes ^\nyes $\nyes (\nyes )\nyes |\nyes \\\n---\nyes .\nno .\n---\na 0\n- 1\nb 0\nz 0\nstatus=0\n'
+Got      'yes ^\nyes $\nyes )\nyes |\n---\nyes .\n---\na 0\n- 1\nb 0\nz 0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>yes ^
+yes $
+yes )
+yes |
+---
+yes .
+---
+a 0
+- 1
+b 0
+z 0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-zsh"></a><b>zsh</b></td><td>18 <a href="regex.test.html#L212">Quoted { and +</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>yes ^
+yes $
+yes )
+yes |
+---
+yes .
+---
+a 0
+- 1
+b 0
+z 0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>zsh: failed to compile regex: Invalid preceding regular expression
+zsh: failed to compile regex: Invalid preceding regular expression
+zsh: failed to compile regex: Invalid preceding regular expression
+zsh: failed to compile regex: Invalid preceding regular expression
+zsh: failed to compile regex: Unmatched ( or \(
+zsh: failed to compile regex: Trailing backslash
+</pre></td></tr><tr><td><a name="details-18-mksh"></a><b>mksh</b></td><td>18 <a href="regex.test.html#L212">Quoted { and +</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'yes {\nyes +\nyes *\nyes ?\nyes ^\nyes $\nyes (\nyes )\nyes |\nyes \\\n---\nyes .\nno .\n---\na 0\n- 1\nb 0\nz 0\nstatus=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-18-ksh"></a><b>ksh</b></td><td>18 <a href="regex.test.html#L212">Quoted { and +</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'yes {\nyes +\nyes *\nyes ?\nyes ^\nyes $\nyes (\nyes )\nyes |\nyes \\\n---\nyes .\nno .\n---\na 0\n- 1\nb 0\nz 0\nstatus=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="regex.test.html#L212">Quoted { and +</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'yes {\nyes +\nyes *\nyes ?\nyes ^\nyes $\nyes (\nyes )\nyes |\nyes \\\n---\nyes .\nno .\n---\na 0\n- 1\nb 0\nz 0\nstatus=0\n'
+Got      'yes {\nyes +\nyes *\nyes ?\nyes ^\nyes $\nyes (\nyes )\nyes |\n---\nyes .\n---\na 0\n- 1\nb 0\nz 0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>yes {
+yes +
+yes *
+yes ?
+yes ^
+yes $
+yes (
+yes )
+yes |
+---
+yes .
+---
+a 0
+- 1
+b 0
+z 0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>[[: bad regex '\': Trailing backslash
+</pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="regex.test.html#L212">Quoted { and +</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'yes {\nyes +\nyes *\nyes ?\nyes ^\nyes $\nyes (\nyes )\nyes |\nyes \\\n---\nyes .\nno .\n---\na 0\n- 1\nb 0\nz 0\nstatus=0\n'
+Got      '---\nno .\n---\na 0\n- 1\nb 0\nz 0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>---
+no .
+---
+a 0
+- 1
+b 0
+z 0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-dash"></a><b>dash</b></td><td>19 <a href="regex.test.html#L273">Escaped {</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['$PA', '$', 'PA']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-19-ash"></a><b>ash</b></td><td>19 <a href="regex.test.html#L273">Escaped {</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['$PA', '$', 'PA']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-19-zsh"></a><b>zsh</b></td><td>19 <a href="regex.test.html#L273">Escaped {</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: failed to compile regex: Invalid preceding regular expression
+</pre></td></tr><tr><td><a name="details-19-mksh"></a><b>mksh</b></td><td>19 <a href="regex.test.html#L273">Escaped {</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "['$PA', '$', 'PA']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-19-ksh"></a><b>ksh</b></td><td>19 <a href="regex.test.html#L273">Escaped {</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['$PA', '$', 'PA']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="regex.test.html#L273">Escaped {</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['$PA', '$', 'PA']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-20-dash"></a><b>dash</b></td><td>20 <a href="regex.test.html#L282">Escaped { stored in variable first</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['$PA', '$', 'PA']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: [[: not found
+</pre></td></tr><tr><td><a name="details-20-ash"></a><b>ash</b></td><td>20 <a href="regex.test.html#L282">Escaped { stored in variable first</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['$PA', '$', 'PA']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-20-zsh"></a><b>zsh</b></td><td>20 <a href="regex.test.html#L282">Escaped { stored in variable first</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-mksh"></a><b>mksh</b></td><td>20 <a href="regex.test.html#L282">Escaped { stored in variable first</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "['$PA', '$', 'PA']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-20-ksh"></a><b>ksh</b></td><td>20 <a href="regex.test.html#L282">Escaped { stored in variable first</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['$PA', '$', 'PA']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="regex.test.html#L282">Escaped { stored in variable first</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['$PA', '$', 'PA']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[[: bad regex '^(\$\{?)([A-Za-z0-9_]*)$': Unmatched \{
+</pre></td></tr><tr><td><a name="details-21-dash"></a><b>dash</b></td><td>21 <a href="regex.test.html#L293">regex with ?</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'true\ntrue\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: [[: not found
+dash: 2: [[: not found
+</pre></td></tr><tr><td><a name="details-21-mksh"></a><b>mksh</b></td><td>21 <a href="regex.test.html#L293">regex with ?</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'true\ntrue\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-21-ksh"></a><b>ksh</b></td><td>21 <a href="regex.test.html#L293">regex with ?</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'true\ntrue\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="regex.test.html#L293">regex with ?</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'true\ntrue\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-dash"></a><b>dash</b></td><td>22 <a href="regex.test.html#L301">regex with unprintable characters</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'status=0\nstatus=1\n'
+Got      'status=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: [[: not found
+dash: 4: [[: not found
+</pre></td></tr><tr><td><a name="details-22-mksh"></a><b>mksh</b></td><td>22 <a href="regex.test.html#L301">regex with unprintable characters</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'status=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-22-ksh"></a><b>ksh</b></td><td>22 <a href="regex.test.html#L301">regex with unprintable characters</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="regex.test.html#L301">regex with unprintable characters</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nstatus=1\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-dash"></a><b>dash</b></td><td>23 <a href="regex.test.html#L318">pattern $f(x)  -- regression</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'status=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-23-ash"></a><b>ash</b></td><td>23 <a href="regex.test.html#L318">pattern $f(x)  -- regression</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-23-mksh"></a><b>mksh</b></td><td>23 <a href="regex.test.html#L318">pattern $f(x)  -- regression</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'status=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-23-ksh"></a><b>ksh</b></td><td>23 <a href="regex.test.html#L318">pattern $f(x)  -- regression</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="regex.test.html#L318">pattern $f(x)  -- regression</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-24-dash"></a><b>dash</b></td><td>24 <a href="regex.test.html#L329">pattern a=(1)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'status=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-24-ash"></a><b>ash</b></td><td>24 <a href="regex.test.html#L329">pattern a=(1)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-24-zsh"></a><b>zsh</b></td><td>24 <a href="regex.test.html#L329">pattern a=(1)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>zsh: x not found
+</pre></td></tr><tr><td><a name="details-24-mksh"></a><b>mksh</b></td><td>24 <a href="regex.test.html#L329">pattern a=(1)</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'status=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-24-ksh"></a><b>ksh</b></td><td>24 <a href="regex.test.html#L329">pattern a=(1)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="regex.test.html#L329">pattern a=(1)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-24-sush"></a><b>sush</b></td><td>24 <a href="regex.test.html#L329">pattern a=(1)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\nstatus=1\n'
+Got      'status=0\nstatus=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-dash"></a><b>dash</b></td><td>25 <a href="regex.test.html#L343">pattern @f(x)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'status=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-25-ash"></a><b>ash</b></td><td>25 <a href="regex.test.html#L343">pattern @f(x)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-25-mksh"></a><b>mksh</b></td><td>25 <a href="regex.test.html#L343">pattern @f(x)</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'status=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+mksh: &lt;stdin&gt;[2]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-25-ksh"></a><b>ksh</b></td><td>25 <a href="regex.test.html#L343">pattern @f(x)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[2]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="regex.test.html#L343">pattern @f(x)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+main: line 2: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-26-dash"></a><b>dash</b></td><td>26 <a href="regex.test.html#L355">Bug: Nix idiom with closing ) next to pattern</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'one\ntwo\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected (expecting "then")
+</pre></td></tr><tr><td><a name="details-26-ash"></a><b>ash</b></td><td>26 <a href="regex.test.html#L355">Bug: Nix idiom with closing ) next to pattern</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'one\ntwo\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "(" (expecting "then")
+</pre></td></tr><tr><td><a name="details-26-mksh"></a><b>mksh</b></td><td>26 <a href="regex.test.html#L355">Bug: Nix idiom with closing ) next to pattern</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'one\ntwo\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' missing )
+</pre></td></tr><tr><td><a name="details-26-ksh"></a><b>ksh</b></td><td>26 <a href="regex.test.html#L355">Bug: Nix idiom with closing ) next to pattern</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'one\ntwo\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: missing ) '=~'
+</pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="regex.test.html#L355">Bug: Nix idiom with closing ) next to pattern</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'one\ntwo\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-26-sush"></a><b>sush</b></td><td>26 <a href="regex.test.html#L355">Bug: Nix idiom with closing ) next to pattern</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: syntax error near unexpected token: ]];
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: syntax error near unexpected token: fi
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: syntax error near unexpected token: ]];
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: syntax error near unexpected token: fi
+
+</pre></td></tr><tr><td><a name="details-27-dash"></a><b>dash</b></td><td>27 <a href="regex.test.html#L371">unquoted (a  b) as pattern, (a  b|c)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'one\ntwo\nthree\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected (expecting "then")
+</pre></td></tr><tr><td><a name="details-27-ash"></a><b>ash</b></td><td>27 <a href="regex.test.html#L371">unquoted (a  b) as pattern, (a  b|c)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'one\ntwo\nthree\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "(" (expecting "then")
+</pre></td></tr><tr><td><a name="details-27-mksh"></a><b>mksh</b></td><td>27 <a href="regex.test.html#L371">unquoted (a  b) as pattern, (a  b|c)</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'one\ntwo\nthree\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-27-ksh"></a><b>ksh</b></td><td>27 <a href="regex.test.html#L371">unquoted (a  b) as pattern, (a  b|c)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'one\ntwo\nthree\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-27-toysh"></a><b>toysh</b></td><td>27 <a href="regex.test.html#L371">unquoted (a  b) as pattern, (a  b|c)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'one\ntwo\nthree\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-27-sush"></a><b>sush</b></td><td>27 <a href="regex.test.html#L371">unquoted (a  b) as pattern, (a  b|c)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'one\ntwo\nthree\n'
+Got      'one\nBAD\ntwo\nthree\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+BAD
+two
+three
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: syntax error near unexpected token: )
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: syntax error near unexpected token: fi
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: syntax error near unexpected token: )
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: syntax error near unexpected token: fi
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 10: syntax error near unexpected token: |c)
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 12: syntax error near unexpected token: fi
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 15: syntax error near unexpected token: )
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 17: syntax error near unexpected token: fi
+
+</pre></td></tr><tr><td><a name="details-27-brush"></a><b>brush</b></td><td>27 <a href="regex.test.html#L371">unquoted (a  b) as pattern, (a  b|c)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'one\ntwo\nthree\n'
+Got      'BAD\ntwo\nthree\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>BAD
+two
+three
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-dash"></a><b>dash</b></td><td>28 <a href="regex.test.html#L397">Multiple adjacent () groups</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['a-b-c-d', 'b', 'd']\n['ff', '', '']\n['zz', 'zz', '']\n['zz', 'z', 'z', '']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected (expecting "then")
+</pre></td></tr><tr><td><a name="details-28-ash"></a><b>ash</b></td><td>28 <a href="regex.test.html#L397">Multiple adjacent () groups</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['a-b-c-d', 'b', 'd']\n['ff', '', '']\n['zz', 'zz', '']\n['zz', 'z', 'z', '']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "(" (expecting "then")
+</pre></td></tr><tr><td><a name="details-28-zsh"></a><b>zsh</b></td><td>28 <a href="regex.test.html#L397">Multiple adjacent () groups</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['']
+['']
+['']
+</pre><i>stderr:</i> <br/>
+<pre>zsh: parse error near `&gt;&gt;'
+zsh: parse error near `fi'
+zsh: parse error near `&gt;&gt;'
+zsh: parse error near `fi'
+zsh: parse error near `()'
+zsh: parse error near `fi'
+zsh: parse error near `()'
+zsh: parse error near `fi'
+</pre></td></tr><tr><td><a name="details-28-mksh"></a><b>mksh</b></td><td>28 <a href="regex.test.html#L397">Multiple adjacent () groups</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "['a-b-c-d', 'b', 'd']\n['ff', '', '']\n['zz', 'zz', '']\n['zz', 'z', 'z', '']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-28-ksh"></a><b>ksh</b></td><td>28 <a href="regex.test.html#L397">Multiple adjacent () groups</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['a-b-c-d', 'b', 'd']\n['ff', '', '']\n['zz', 'zz', '']\n['zz', 'z', 'z', '']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-28-toysh"></a><b>toysh</b></td><td>28 <a href="regex.test.html#L397">Multiple adjacent () groups</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['a-b-c-d', 'b', 'd']\n['ff', '', '']\n['zz', 'zz', '']\n['zz', 'z', 'z', '']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-28-sush"></a><b>sush</b></td><td>28 <a href="regex.test.html#L397">Multiple adjacent () groups</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['a-b-c-d', 'b', 'd']\n['ff', '', '']\n['zz', 'zz', '']\n['zz', 'z', 'z', '']\n"
+Got      "[]\n[]\n['zz', 'zz', '']\n['zz', 'z', 'z', '']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[]
+['zz', 'zz', '']
+['zz', 'z', 'z', '']
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: syntax error near unexpected token: )-c-(
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: syntax error near unexpected token: fi
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: syntax error near unexpected token: )-c-(
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: syntax error near unexpected token: fi
+
+</pre></td></tr><tr><td><a name="details-29-dash"></a><b>dash</b></td><td>29 <a href="regex.test.html#L433">unquoted [a  b] as pattern, [a  b|c]</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'yes\n[ab]=0\n[a b]=2\nyes\n[a b]=0\n'
+Got      '[ab]=127\n[a b]=127\n[a b]=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[ab]=127
+[a b]=127
+[a b]=2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: [[: not found
+dash: 1: [[: not found
+dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-29-ash"></a><b>ash</b></td><td>29 <a href="regex.test.html#L433">unquoted [a  b] as pattern, [a  b|c]</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'yes\n[ab]=0\n[a b]=2\nyes\n[a b]=0\n'
+Got      'yes\n[ab]=0\n[a b]=2\n[a b]=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>yes
+[ab]=0
+[a b]=2
+[a b]=2
+</pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-29-zsh"></a><b>zsh</b></td><td>29 <a href="regex.test.html#L433">unquoted [a  b] as pattern, [a  b|c]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>yes
+[ab]=0
+[a b]=1
+yes
+[a b]=0
+</pre><i>stderr:</i> <br/>
+<pre>zsh: condition expected: a
+</pre></td></tr><tr><td><a name="details-29-mksh"></a><b>mksh</b></td><td>29 <a href="regex.test.html#L433">unquoted [a  b] as pattern, [a  b|c]</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'yes\n[ab]=0\n[a b]=2\nyes\n[a b]=0\n'
+Got      '[ab]=1\n[a b]=1\n[a b]=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[ab]=1
+[a b]=1
+[a b]=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-29-ksh"></a><b>ksh</b></td><td>29 <a href="regex.test.html#L433">unquoted [a  b] as pattern, [a  b|c]</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'yes\n[ab]=0\n[a b]=2\nyes\n[a b]=0\n'
+Got      '[ab]=1\n[a b]=1\n[a b]=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[ab]=1
+[a b]=1
+[a b]=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-29-toysh"></a><b>toysh</b></td><td>29 <a href="regex.test.html#L433">unquoted [a  b] as pattern, [a  b|c]</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'yes\n[ab]=0\n[a b]=2\nyes\n[a b]=0\n'
+Got      'yes\n[ab]=0\n[a b]=2\n[a b]=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>yes
+[ab]=0
+[a b]=2
+[a b]=2
+</pre><i>stderr:</i> <br/>
+<pre>[[: bad regex '[a': Unmatched [, [^, [:, [., or [=
+main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-29-sush"></a><b>sush</b></td><td>29 <a href="regex.test.html#L433">unquoted [a  b] as pattern, [a  b|c]</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'yes\n[ab]=0\n[a b]=2\nyes\n[a b]=0\n'
+Got      'yes\n[ab]=0\n[a b]=2\n[a b]=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>yes
+[ab]=0
+[a b]=2
+[a b]=2
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: syntax error near unexpected token: )
+</pre></td></tr><tr><td><a name="details-29-brush"></a><b>brush</b></td><td>29 <a href="regex.test.html#L433">unquoted [a  b] as pattern, [a  b|c]</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'yes\n[ab]=0\n[a b]=2\nyes\n[a b]=0\n'
+Got      'yes\n[ab]=0\nyes\n[a b]=0\nyes\n[a b]=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>yes
+[ab]=0
+yes
+[a b]=0
+yes
+[a b]=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-dash"></a><b>dash</b></td><td>30 <a href="regex.test.html#L466">c|a unquoted</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'one\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: a: not found
+dash: 1: [[: not found
+</pre></td></tr><tr><td><a name="details-30-ash"></a><b>ash</b></td><td>30 <a href="regex.test.html#L466">c|a unquoted</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'one\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: missing ]]
+ash: a: not found
+</pre></td></tr><tr><td><a name="details-30-zsh"></a><b>zsh</b></td><td>30 <a href="regex.test.html#L466">c|a unquoted</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one
+</pre><i>stderr:</i> <br/>
+<pre>zsh: parse error near `|'
+zsh: parse error near `fi'
+</pre></td></tr><tr><td><a name="details-30-mksh"></a><b>mksh</b></td><td>30 <a href="regex.test.html#L466">c|a unquoted</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'one\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-30-ksh"></a><b>ksh</b></td><td>30 <a href="regex.test.html#L466">c|a unquoted</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'one\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-30-toysh"></a><b>toysh</b></td><td>30 <a href="regex.test.html#L466">c|a unquoted</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'one\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -11
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-dash"></a><b>dash</b></td><td>31 <a href="regex.test.html#L477">Operator chars ; &amp; but not |</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'semi=2\nsemi paren\nsemi paren=0\n\namp=2\npipe1\npipe2\npipe=0\nfour\npipe=0\nangle=2\nnewline=2\n'
+Got      'semi=127\nsemi paren=2\n\namp=127\npipe=127\npipe=127\nangle=127\nnewline=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>semi=127
+semi paren=2
+
+amp=127
+pipe=127
+pipe=127
+angle=127
+newline=127
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: [[: not found
+dash: 1: ]]: not found
+dash: 1: Syntax error: "(" unexpected
+dash: 1: ]]: not found
+dash: 1: [[: not found
+dash: 1: [[: not found
+dash: 1: ]]: not found
+dash: 2: [[: not found
+dash: 2: ]]: not found
+dash: 1: [[: not found
+dash: 1: ]]: not found
+dash: 1: [[: not found
+dash: 1: [[: not found
+dash: 2: b: not found
+</pre></td></tr><tr><td><a name="details-31-ash"></a><b>ash</b></td><td>31 <a href="regex.test.html#L477">Operator chars ; &amp; but not |</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'semi=2\nsemi paren\nsemi paren=0\n\namp=2\npipe1\npipe2\npipe=0\nfour\npipe=0\nangle=2\nnewline=2\n'
+Got      'semi=127\nsemi paren=2\n\namp=127\npipe=127\npipe=127\nangle=2\nnewline=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>semi=127
+semi paren=2
+
+amp=127
+pipe=127
+pipe=127
+angle=2
+newline=127
+</pre><i>stderr:</i> <br/>
+<pre>ash: missing ]]
+ash: ]]: not found
+ash: syntax error: unexpected "("
+ash: ash: missing ]]
+]]: not found
+ash: missing ]]
+ash: ]]: not found
+ash: missing ]]
+ash: ]]: not found
+ash: missing ]]
+ash: ]]: not found
+ash: missing ]]
+ash: missing ]]
+ash: b: not found
+</pre></td></tr><tr><td><a name="details-31-zsh"></a><b>zsh</b></td><td>31 <a href="regex.test.html#L477">Operator chars ; &amp; but not |</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>semi=1
+semi paren=1
+
+amp=1
+pipe=1
+pipe=1
+angle=1
+newline=1
+</pre><i>stderr:</i> <br/>
+<pre>zsh: parse error: condition expected: ';'
+zsh: parse error near `)'
+zsh: parse error: condition expected: '&amp;'
+zsh: parse error: condition expected: '|'
+zsh: parse error: condition expected: 'a'
+zsh: parse error near `|'
+zsh: parse error: condition expected: '&lt;&gt;'
+zsh: parse error near `b'
+</pre></td></tr><tr><td><a name="details-31-mksh"></a><b>mksh</b></td><td>31 <a href="regex.test.html#L477">Operator chars ; &amp; but not |</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'semi=2\nsemi paren\nsemi paren=0\n\namp=2\npipe1\npipe2\npipe=0\nfour\npipe=0\nangle=2\nnewline=2\n'
+Got      'semi=1\nsemi paren=1\n\namp=1\npipe=1\npipe=1\nangle=1\nnewline=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>semi=1
+semi paren=1
+
+amp=1
+pipe=1
+pipe=1
+angle=1
+newline=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-31-ksh"></a><b>ksh</b></td><td>31 <a href="regex.test.html#L477">Operator chars ; &amp; but not |</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'semi=2\nsemi paren\nsemi paren=0\n\namp=2\npipe1\npipe2\npipe=0\nfour\npipe=0\nangle=2\nnewline=2\n'
+Got      'semi=1\nsemi paren=1\n\namp=1\npipe=1\npipe=1\nangle=1\nnewline=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>semi=1
+semi paren=1
+
+amp=1
+pipe=1
+pipe=1
+angle=1
+newline=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-31-sush"></a><b>sush</b></td><td>31 <a href="regex.test.html#L477">Operator chars ; &amp; but not |</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'semi=2\nsemi paren\nsemi paren=0\n\namp=2\npipe1\npipe2\npipe=0\nfour\npipe=0\nangle=2\nnewline=2\n'
+Got      'semi\nsemi=0\nsemi paren\nsemi paren=0\n\namp\namp=0\npipe1\npipe2\npipe=0\nfour\npipe=0\nangle\nangle=0\nnewline=134\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>semi
+semi=0
+semi paren
+semi paren=0
+
+amp
+amp=0
+pipe1
+pipe2
+pipe=0
+four
+pipe=0
+angle
+angle=0
+newline=134
+</pre><i>stderr:</i> <br/>
+<pre>
+thread 'main' panicked at /rustc/17067e9ac6d7ecb70e50f92c1944e545188d2359/library/alloc/src/string.rs:1857:9:
+assertion failed: self.is_char_boundary(at)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+Pid: Pid(2032206), Signal: SIGABRT
+</pre></td></tr><tr><td><a name="details-32-dash"></a><b>dash</b></td><td>32 <a href="regex.test.html#L550">Quotes '' "" $'' $"" in pattern</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'sq\nsq=0\ndq\ndq=0\ndollar-sq\ndollar-sq=0\ndollar-dq\ndollar-dq=0\n'
+Got      'sq=127\ndq=127\ndollar-sq=127\ndollar-dq=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>sq=127
+dq=127
+dollar-sq=127
+dollar-dq=127
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: [[: not found
+dash: 1: [[: not found
+dash: 1: [[: not found
+dash: 1: [[: not found
+</pre></td></tr><tr><td><a name="details-32-mksh"></a><b>mksh</b></td><td>32 <a href="regex.test.html#L550">Quotes '' "" $'' $"" in pattern</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'sq\nsq=0\ndq\ndq=0\ndollar-sq\ndollar-sq=0\ndollar-dq\ndollar-dq=0\n'
+Got      'sq=1\ndq=1\ndollar-sq=1\ndollar-dq=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>sq=1
+dq=1
+dollar-sq=1
+dollar-dq=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-32-ksh"></a><b>ksh</b></td><td>32 <a href="regex.test.html#L550">Quotes '' "" $'' $"" in pattern</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'sq\nsq=0\ndq\ndq=0\ndollar-sq\ndollar-sq=0\ndollar-dq\ndollar-dq=0\n'
+Got      'sq=1\ndq=1\ndollar-sq=1\ndollar-dq=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>sq=1
+dq=1
+dollar-sq=1
+dollar-dq=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-32-sush"></a><b>sush</b></td><td>32 <a href="regex.test.html#L550">Quotes '' "" $'' $"" in pattern</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'sq\nsq=0\ndq\ndq=0\ndollar-sq\ndollar-sq=0\ndollar-dq\ndollar-dq=0\n'
+Got      'sq=1\ndq=1\ndollar-sq=1\ndollar-dq\ndollar-dq=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>sq=1
+dq=1
+dollar-sq=1
+dollar-dq
+dollar-dq=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-dash"></a><b>dash</b></td><td>33 <a href="regex.test.html#L584">Unicode in pattern</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'mu\nmu=0\n'
+Got      'mu=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>mu=127
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: [[: not found
+</pre></td></tr><tr><td><a name="details-33-mksh"></a><b>mksh</b></td><td>33 <a href="regex.test.html#L584">Unicode in pattern</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'mu\nmu=0\n'
+Got      'mu=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>mu=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-33-ksh"></a><b>ksh</b></td><td>33 <a href="regex.test.html#L584">Unicode in pattern</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'mu\nmu=0\n'
+Got      'mu=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>mu=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-34-dash"></a><b>dash</b></td><td>34 <a href="regex.test.html#L596">Parse error with 2 words</a><br/><br/>
+<span class="assertion">
+[dash status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: [[: not found
+</pre></td></tr><tr><td><a name="details-34-ash"></a><b>ash</b></td><td>34 <a href="regex.test.html#L596">Parse error with 2 words</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: a: unknown operand
+</pre></td></tr><tr><td><a name="details-34-zsh"></a><b>zsh</b></td><td>34 <a href="regex.test.html#L596">Parse error with 2 words</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one
+</pre><i>stderr:</i> <br/>
+<pre>zsh: condition expected: a
+zsh: parse error near `fi'
+</pre></td></tr><tr><td><a name="details-34-mksh"></a><b>mksh</b></td><td>34 <a href="regex.test.html#L596">Parse error with 2 words</a><br/><br/>
+<span class="assertion">
+[mksh status]
+Expected 2
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-34-ksh"></a><b>ksh</b></td><td>34 <a href="regex.test.html#L596">Parse error with 2 words</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 2
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-34-toysh"></a><b>toysh</b></td><td>34 <a href="regex.test.html#L596">Parse error with 2 words</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[[: too many arguments
+</pre></td></tr><tr><td><a name="details-34-sush"></a><b>sush</b></td><td>34 <a href="regex.test.html#L596">Parse error with 2 words</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-brush"></a><b>brush</b></td><td>34 <a href="regex.test.html#L596">Parse error with 2 words</a><br/><br/>
+<span class="assertion">
+[brush status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-dash"></a><b>dash</b></td><td>35 <a href="regex.test.html#L611">make a lisp example</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'status=0\nm=(\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-35-ash"></a><b>ash</b></td><td>35 <a href="regex.test.html#L611">make a lisp example</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=0\nm=(\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-35-zsh"></a><b>zsh</b></td><td>35 <a href="regex.test.html#L611">make a lisp example</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+m=
+</pre><i>stderr:</i> <br/>
+<pre>zsh: parse error near `|'
+</pre></td></tr><tr><td><a name="details-35-mksh"></a><b>mksh</b></td><td>35 <a href="regex.test.html#L611">make a lisp example</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'status=0\nm=(\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-35-ksh"></a><b>ksh</b></td><td>35 <a href="regex.test.html#L611">make a lisp example</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=0\nm=(\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-35-toysh"></a><b>toysh</b></td><td>35 <a href="regex.test.html#L611">make a lisp example</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nm=(\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-35-sush"></a><b>sush</b></td><td>35 <a href="regex.test.html#L611">make a lisp example</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\nm=(\n'
+Got      'status=2\nm=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+m=
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: syntax error near unexpected token: ;{}\(\)^@\,]+)|^[,]|^[[:space:]]+
+</pre></td></tr><tr><td><a name="details-35-brush"></a><b>brush</b></td><td>35 <a href="regex.test.html#L611">make a lisp example</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=0\nm=(\n'
+Got      'status=1\nm=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+m=
+</pre><i>stderr:</i> <br/>
+<pre>[33m WARN[0m error using regex: invalid regex: Parsing error at position 108: Invalid character class; expression: '(?ms)^^([][{}\(\)^@])|^(~@)|("(\\.|[^\\"])*")|^(;[^
+]*)|^([~'`])|^([^][ ~`'";{}\(\)^@,]+)|^[,]|^[[:space:]]+'
+</pre></td></tr><tr><td><a name="details-36-dash"></a><b>dash</b></td><td>36 <a href="regex.test.html#L630">Operators and space lose meaning inside ()</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-36-ash"></a><b>ash</b></td><td>36 <a href="regex.test.html#L630">Operators and space lose meaning inside ()</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-36-zsh"></a><b>zsh</b></td><td>36 <a href="regex.test.html#L630">Operators and space lose meaning inside ()</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: parse error near `&lt;'
+</pre></td></tr><tr><td><a name="details-36-mksh"></a><b>mksh</b></td><td>36 <a href="regex.test.html#L630">Operators and space lose meaning inside ()</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '=~' unexpected operator/operand
+</pre></td></tr><tr><td><a name="details-36-ksh"></a><b>ksh</b></td><td>36 <a href="regex.test.html#L630">Operators and space lose meaning inside ()</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected operator/operand '=~'
+</pre></td></tr><tr><td><a name="details-36-toysh"></a><b>toysh</b></td><td>36 <a href="regex.test.html#L630">Operators and space lose meaning inside ()</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-36-sush"></a><b>sush</b></td><td>36 <a href="regex.test.html#L630">Operators and space lose meaning inside ()</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: syntax error near unexpected token: )
+</pre></td></tr><tr><td><a name="details-36-brush"></a><b>brush</b></td><td>36 <a href="regex.test.html#L630">Operators and space lose meaning inside ()</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'true\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

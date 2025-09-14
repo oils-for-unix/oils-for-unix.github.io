@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>var-op-slice: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for var-op-slice.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>20</td><td>0</td><td>6</td><td>15</td><td>5</td><td>8</td><td>6</td><td>12</td><td>13</td><td>20</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>0</td><td>0</td><td>3</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>1</td><td>0</td><td>0</td><td>1</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>1</td><td>0</td><td>0</td><td>3</td><td>10</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>22</td><td>16</td><td>0</td><td>0</td><td>14</td><td>16</td><td>10</td><td>9</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>22</td><td>22</td><td>22</td><td>22</td><td>22</td><td>22</td><td>22</td><td>22</td><td>22</td><td>22</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L7">String slice</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="var-op-slice.test.html#L14">Cannot take length of substring slice</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"><a href="#details-1-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L24">Out of range string slice: begin</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L39">Out of range string slice: length</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L53">Negative start index</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L58">Negative start index respects unicode</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L64">Negative second arg is position, not length!</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L70">Negative start index respects unicode</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L76">String slice with math</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L83">Slice undefined</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L100">Slice UTF-8 String</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L107">Slice string with invalid UTF-8 results in empty string and warning</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-11-bash">details</a></td><td class="details-row"><a href="#details-11-dash">details</a></td><td class="details-row"><a href="#details-11-ash">details</a></td><td class="details-row"><a href="#details-11-zsh">details</a></td><td class="details-row"><a href="#details-11-mksh">details</a></td><td class="details-row"><a href="#details-11-ksh">details</a></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L124">Slice string with invalid UTF-8 with strict_word_eval</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-12-bash">details</a></td><td class="details-row"><a href="#details-12-dash">details</a></td><td class="details-row"><a href="#details-12-ash">details</a></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L139">Slice with an index that's an array -- silent a[0] decay</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L155">Slice with an assoc array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"><a href="#details-14-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L170">Simple ${@:offset}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"><a href="#details-15-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-15-mksh">details</a></td><td class="details-row"><a href="#details-15-ksh">details</a></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L191">${@:offset} and ${*:offset}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-dash">details</a></td><td class="details-row"><a href="#details-16-ash">details</a></td><td class="details-row"><a href="#details-16-zsh">details</a></td><td class="details-row"><a href="#details-16-mksh">details</a></td><td class="details-row"><a href="#details-16-ksh">details</a></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"><a href="#details-16-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L246">${@:offset:length} and ${*:offset:length}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-dash">details</a></td><td class="details-row"><a href="#details-17-ash">details</a></td><td class="details-row"><a href="#details-17-zsh">details</a></td><td class="details-row"><a href="#details-17-mksh">details</a></td><td class="details-row"><a href="#details-17-ksh">details</a></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L301">${@:0:1}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-dash">details</a></td><td class="details-row"><a href="#details-18-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-18-mksh">details</a></td><td class="details-row"><a href="#details-18-ksh">details</a></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L312">Permutations of implicit begin and length</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-dash">details</a></td><td class="details-row"><a href="#details-19-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-19-mksh">details</a></td><td class="details-row"><a href="#details-19-ksh">details</a></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="var-op-slice.test.html#L361">${array[@]:} vs ${array[@]: }  - bash and zsh inconsistent</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-dash">details</a></td><td class="details-row"><a href="#details-20-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-20-mksh">details</a></td><td class="details-row"><a href="#details-20-ksh">details</a></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-20-brush">details</a></td><td class="details-row"><a href="#details-20-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-slice.test.html#L385">${array[@]::} has implicit length of zero - for ble.sh</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-dash">details</a></td><td class="details-row"><a href="#details-21-ash">details</a></td><td class="details-row"><a href="#details-21-zsh">details</a></td><td class="details-row"><a href="#details-21-mksh">details</a></td><td class="details-row"><a href="#details-21-ksh">details</a></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>105 passed, 6 OK, 8 not implemented, 14 BUG, 87 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="var-op-slice.test.html#L7">String slice</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'bcd\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="var-op-slice.test.html#L14">Cannot take length of substring slice</a><br/><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>5
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="var-op-slice.test.html#L14">Cannot take length of substring slice</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="var-op-slice.test.html#L14">Cannot take length of substring slice</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="var-op-slice.test.html#L14">Cannot take length of substring slice</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="var-op-slice.test.html#L14">Cannot take length of substring slice</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="var-op-slice.test.html#L14">Cannot take length of substring slice</a><br/><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>${#v:1:3}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-osh"></a><b>osh</b></td><td>1 <a href="var-op-slice.test.html#L14">Cannot take length of substring slice</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  echo ${#v:1:3}
+           ^
+[ stdin ]:2: Expected } after length expression
+</pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="var-op-slice.test.html#L24">Out of range string slice: begin</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '_\n0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="var-op-slice.test.html#L24">Out of range string slice: begin</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="var-op-slice.test.html#L24">Out of range string slice: begin</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '_\n0\n'
+Got      '\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="var-op-slice.test.html#L39">Out of range string slice: length</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '_defg\n0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="var-op-slice.test.html#L39">Out of range string slice: length</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>_defg
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="var-op-slice.test.html#L53">Negative start index</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'def\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="var-op-slice.test.html#L53">Negative start index</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'def\n'
+Got      'abc\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>abc
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="var-op-slice.test.html#L58">Negative start index respects unicode</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'd-\xce\xbc\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="var-op-slice.test.html#L58">Negative start index respects unicode</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'd-\xce\xbc\n'
+Got      '-\xce\xbc\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-μ
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="var-op-slice.test.html#L58">Negative start index respects unicode</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-μ
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="var-op-slice.test.html#L58">Negative start index respects unicode</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'd-\xce\xbc\n'
+Got      '-\xce\xbc\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-μ
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="var-op-slice.test.html#L58">Negative start index respects unicode</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'd-\xce\xbc\n'
+Got      'abc\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>abc
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="var-op-slice.test.html#L64">Negative second arg is position, not length!</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'def de d\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="var-op-slice.test.html#L64">Negative second arg is position, not length!</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>defg defg defg
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="var-op-slice.test.html#L64">Negative second arg is position, not length!</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'def de d\n'
+Got      'defg defg defg\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>defg defg defg
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="var-op-slice.test.html#L64">Negative second arg is position, not length!</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'def de d\n'
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="var-op-slice.test.html#L64">Negative second arg is position, not length!</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'def de d\n'
+Got      'defg defg defg\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>defg defg defg
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="var-op-slice.test.html#L70">Negative start index respects unicode</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'cd\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="var-op-slice.test.html#L70">Negative start index respects unicode</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'cd\n'
+Got      'd-\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>d-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="var-op-slice.test.html#L70">Negative start index respects unicode</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>d-μ-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="var-op-slice.test.html#L70">Negative start index respects unicode</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'cd\n'
+Got      'cd-\xce\xbc-\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>cd-μ-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="var-op-slice.test.html#L70">Negative start index respects unicode</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'cd\n'
+Got      'd-\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>d-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="var-op-slice.test.html#L70">Negative start index respects unicode</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'cd\n'
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="var-op-slice.test.html#L70">Negative start index respects unicode</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'cd\n'
+Got      'abcd-\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>abcd-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="var-op-slice.test.html#L76">String slice with math</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'def\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="var-op-slice.test.html#L83">Slice undefined</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '--\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Bad substitution
+</pre></td></tr><tr><td><a name="details-9-ash"></a><b>ash</b></td><td>9 <a href="var-op-slice.test.html#L83">Slice undefined</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+</pre><i>stderr:</i> <br/>
+<pre>ash: undef: parameter not set
+</pre></td></tr><tr><td><a name="details-9-mksh"></a><b>mksh</b></td><td>9 <a href="var-op-slice.test.html#L83">Slice undefined</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>--
+--
+-done-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-ksh"></a><b>ksh</b></td><td>9 <a href="var-op-slice.test.html#L83">Slice undefined</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '--\n'
+Got      '--\n--\n-done-\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+--
+-done-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="var-op-slice.test.html#L83">Slice undefined</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '--\n'
+Got      '\n\n-done-\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+-done-
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o nounset
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="var-op-slice.test.html#L83">Slice undefined</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '--\n'
+Got      '--\n--\n-done-\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+--
+-done-
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: set: nounset: invalid option name
+</pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="var-op-slice.test.html#L83">Slice undefined</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '--\n'
+Got      '--\n--\n-done-\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+--
+-done-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="var-op-slice.test.html#L100">Slice UTF-8 String</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '-\xce\xbc-\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="var-op-slice.test.html#L100">Slice UTF-8 String</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '-\xce\xbc-\n'
+Got      '-\xce\xbc\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-μ
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="var-op-slice.test.html#L100">Slice UTF-8 String</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-μ
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="var-op-slice.test.html#L100">Slice UTF-8 String</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '-\xce\xbc-\n'
+Got      '-\xce\xbc\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-μ
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-bash"></a><b>bash</b></td><td>11 <a href="var-op-slice.test.html#L107">Slice string with invalid UTF-8 results in empty string and warning</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-bcd-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-dash"></a><b>dash</b></td><td>11 <a href="var-op-slice.test.html#L107">Slice string with invalid UTF-8 results in empty string and warning</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '--\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash stderr]
+Expected '[??? no location ???] warning: UTF-8 decode: Bad encoding at offset 0 in string of 6 bytes\n'
+Got      'dash: 2: Bad substitution\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-11-ash"></a><b>ash</b></td><td>11 <a href="var-op-slice.test.html#L107">Slice string with invalid UTF-8 results in empty string and warning</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '--\n'
+Got      '-bcd-\n'
+</span><br/>
+<span class="assertion">
+[ash stderr]
+Expected '[??? no location ???] warning: UTF-8 decode: Bad encoding at offset 0 in string of 6 bytes\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-bcd-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-zsh"></a><b>zsh</b></td><td>11 <a href="var-op-slice.test.html#L107">Slice string with invalid UTF-8 results in empty string and warning</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-bcd-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-mksh"></a><b>mksh</b></td><td>11 <a href="var-op-slice.test.html#L107">Slice string with invalid UTF-8 results in empty string and warning</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-bcd-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-ksh"></a><b>ksh</b></td><td>11 <a href="var-op-slice.test.html#L107">Slice string with invalid UTF-8 results in empty string and warning</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '--\n'
+Got      '-bcd-\n'
+</span><br/>
+<span class="assertion">
+[ksh stderr]
+Expected '[??? no location ???] warning: UTF-8 decode: Bad encoding at offset 0 in string of 6 bytes\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-bcd-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="var-op-slice.test.html#L107">Slice string with invalid UTF-8 results in empty string and warning</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '--\n'
+Got      '-\xbfbc-\n'
+</span><br/>
+<span class="assertion">
+[toysh stderr]
+Expected '[??? no location ???] warning: UTF-8 decode: Bad encoding at offset 0 in string of 6 bytes\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>'-\xbfbc-\n'</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="var-op-slice.test.html#L107">Slice string with invalid UTF-8 results in empty string and warning</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '--\n'
+Got      '-cde-\n'
+</span><br/>
+<span class="assertion">
+[sush stderr]
+Expected '[??? no location ???] warning: UTF-8 decode: Bad encoding at offset 0 in string of 6 bytes\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-cde-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="var-op-slice.test.html#L107">Slice string with invalid UTF-8 results in empty string and warning</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '--\n'
+Got      '-bcd-\n'
+</span><br/>
+<span class="assertion">
+[brush stderr]
+Expected '[??? no location ???] warning: UTF-8 decode: Bad encoding at offset 0 in string of 6 bytes\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-bcd-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-bash"></a><b>bash</b></td><td>12 <a href="var-op-slice.test.html#L124">Slice string with invalid UTF-8 with strict_word_eval</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>slice
+-bcd-
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: shopt: strict_word_eval: invalid shell option name
+</pre></td></tr><tr><td><a name="details-12-dash"></a><b>dash</b></td><td>12 <a href="var-op-slice.test.html#L124">Slice string with invalid UTF-8 with strict_word_eval</a><br/><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>slice
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 4: Bad substitution
+</pre></td></tr><tr><td><a name="details-12-ash"></a><b>ash</b></td><td>12 <a href="var-op-slice.test.html#L124">Slice string with invalid UTF-8 with strict_word_eval</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'slice\n'
+Got      'slice\n-bcd-\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>slice
+-bcd-
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="var-op-slice.test.html#L124">Slice string with invalid UTF-8 with strict_word_eval</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>slice
+-bcd-
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="var-op-slice.test.html#L124">Slice string with invalid UTF-8 with strict_word_eval</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>slice
+-bcd-
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="var-op-slice.test.html#L124">Slice string with invalid UTF-8 with strict_word_eval</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'slice\n'
+Got      'slice\n-bcd-\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>slice
+-bcd-
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="var-op-slice.test.html#L124">Slice string with invalid UTF-8 with strict_word_eval</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'slice\n'
+Got      'slice\n-\xbfbc-\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>'slice\n-\xbfbc-\n'</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="var-op-slice.test.html#L124">Slice string with invalid UTF-8 with strict_word_eval</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'slice\n'
+Got      'slice\n-cde-\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>slice
+-cde-
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: shopt: strict_word_eval: not supported yet
+</pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="var-op-slice.test.html#L124">Slice string with invalid UTF-8 with strict_word_eval</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'slice\n'
+Got      'slice\n-bcd-\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>slice
+-bcd-
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_word_eval: invalid shell option name
+</pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="var-op-slice.test.html#L139">Slice with an index that's an array -- silent a[0] decay</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'assigned\nde\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="var-op-slice.test.html#L139">Slice with an index that's an array -- silent a[0] decay</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'assigned\nde\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="var-op-slice.test.html#L139">Slice with an index that's an array -- silent a[0] decay</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>assigned
+</pre><i>stderr:</i> <br/>
+<pre>zsh: bad math expression: operator expected at `4 5'
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="var-op-slice.test.html#L139">Slice with an index that's an array -- silent a[0] decay</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'assigned\nde\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 3
+</pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="var-op-slice.test.html#L155">Slice with an assoc array</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'assigned\nab\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-14-ash"></a><b>ash</b></td><td>14 <a href="var-op-slice.test.html#L155">Slice with an assoc array</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'assigned\nab\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="var-op-slice.test.html#L155">Slice with an assoc array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="var-op-slice.test.html#L155">Slice with an assoc array</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'assigned\nab\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="var-op-slice.test.html#L155">Slice with an assoc array</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'assigned\nab\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="var-op-slice.test.html#L155">Slice with an assoc array</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'assigned\nab\n'
+Got      'assigned\nef\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>assigned
+ef
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="var-op-slice.test.html#L170">Simple ${@:offset}</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['SHELL', '4', '5', '6']\n['4', '5', '6']\n['5', '6']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+dash: 4: Bad substitution
+</pre></td></tr><tr><td><a name="details-15-ash"></a><b>ash</b></td><td>15 <a href="var-op-slice.test.html#L170">Simple ${@:offset}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['SHELL', '4', '5', '6']\n['4', '5', '6']\n['5', '6']\n"
+Got      "['4', '5', '6']\n['5', '6']\n['5', '6']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['4', '5', '6']
+['5', '6']
+['5', '6']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-mksh"></a><b>mksh</b></td><td>15 <a href="var-op-slice.test.html#L170">Simple ${@:offset}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: ${@: 0}: bad substitution
+mksh: &lt;stdin&gt;[6]: ${@: 1}: bad substitution
+</pre></td></tr><tr><td><a name="details-15-ksh"></a><b>ksh</b></td><td>15 <a href="var-op-slice.test.html#L170">Simple ${@:offset}</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['SHELL', '4', '5', '6']\n['4', '5', '6']\n['5', '6']\n"
+Got      '\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: ${@: 0}: bad substitution
+E: ksh: &lt;stdin&gt;[6]: ${@: 1}: bad substitution
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="var-op-slice.test.html#L170">Simple ${@:offset}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['SHELL', '4', '5', '6']\n['4', '5', '6']\n['5', '6']\n"
+Got      '[]\n[]\n[]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[]
+[]
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-16-dash"></a><b>dash</b></td><td>16 <a href="var-op-slice.test.html#L191">${@:offset} and ${*:offset}</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['-SHELL', 'a', '1', 'b', '2', 'c', '3-']\n['-a', '1', 'b', '2', 'c', '3-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL', 'a', '1', 'b', '2', 'c', '3-']\n['-a', '1', 'b', '2', 'c', '3-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL a 1 b 2 c 3-']\n['-a 1 b 2 c 3-']\n['-c 3-']\n['--']\n['--']\n['-SHELL', 'a 1', 'b 2', 'c 3-']\n['-a 1', 'b 2', 'c 3-']\n['-c 3-']\n['--']\n['--']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Syntax error: Bad function name
+</pre></td></tr><tr><td><a name="details-16-ash"></a><b>ash</b></td><td>16 <a href="var-op-slice.test.html#L191">${@:offset} and ${*:offset}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['-SHELL', 'a', '1', 'b', '2', 'c', '3-']\n['-a', '1', 'b', '2', 'c', '3-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL', 'a', '1', 'b', '2', 'c', '3-']\n['-a', '1', 'b', '2', 'c', '3-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL a 1 b 2 c 3-']\n['-a 1 b 2 c 3-']\n['-c 3-']\n['--']\n['--']\n['-SHELL', 'a 1', 'b 2', 'c 3-']\n['-a 1', 'b 2', 'c 3-']\n['-c 3-']\n['--']\n['--']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad function name
+</pre></td></tr><tr><td><a name="details-16-zsh"></a><b>zsh</b></td><td>16 <a href="var-op-slice.test.html#L191">${@:offset} and ${*:offset}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-mksh"></a><b>mksh</b></td><td>16 <a href="var-op-slice.test.html#L191">${@:offset} and ${*:offset}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[28]: ${*: 0}: bad substitution
+</pre></td></tr><tr><td><a name="details-16-ksh"></a><b>ksh</b></td><td>16 <a href="var-op-slice.test.html#L191">${@:offset} and ${*:offset}</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['-SHELL', 'a', '1', 'b', '2', 'c', '3-']\n['-a', '1', 'b', '2', 'c', '3-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL', 'a', '1', 'b', '2', 'c', '3-']\n['-a', '1', 'b', '2', 'c', '3-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL a 1 b 2 c 3-']\n['-a 1 b 2 c 3-']\n['-c 3-']\n['--']\n['--']\n['-SHELL', 'a 1', 'b 2', 'c 3-']\n['-a 1', 'b 2', 'c 3-']\n['-c 3-']\n['--']\n['--']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[28]: ${*: 0}: bad substitution
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="var-op-slice.test.html#L191">${@:offset} and ${*:offset}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['-SHELL', 'a', '1', 'b', '2', 'c', '3-']\n['-a', '1', 'b', '2', 'c', '3-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL', 'a', '1', 'b', '2', 'c', '3-']\n['-a', '1', 'b', '2', 'c', '3-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL a 1 b 2 c 3-']\n['-a 1 b 2 c 3-']\n['-c 3-']\n['--']\n['--']\n['-SHELL', 'a 1', 'b 2', 'c 3-']\n['-a 1', 'b 2', 'c 3-']\n['-c 3-']\n['--']\n['--']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-16-sush"></a><b>sush</b></td><td>16 <a href="var-op-slice.test.html#L191">${@:offset} and ${*:offset}</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['-SHELL', 'a', '1', 'b', '2', 'c', '3-']\n['-a', '1', 'b', '2', 'c', '3-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL', 'a', '1', 'b', '2', 'c', '3-']\n['-a', '1', 'b', '2', 'c', '3-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL a 1 b 2 c 3-']\n['-a 1 b 2 c 3-']\n['-c 3-']\n['--']\n['--']\n['-SHELL', 'a 1', 'b 2', 'c 3-']\n['-a 1', 'b 2', 'c 3-']\n['-c 3-']\n['--']\n['--']\n"
+Got      '[]\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: syntax error near unexpected token: ()
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: syntax error near unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 10: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 12: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 14: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 15: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 16: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 17: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 18: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 19: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 20: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 21: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 22: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 23: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 24: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 25: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 26: argv.shell-name-checked: command not found
+</pre></td></tr><tr><td><a name="details-17-dash"></a><b>dash</b></td><td>17 <a href="var-op-slice.test.html#L246">${@:offset:length} and ${*:offset:length}</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['-SHELL', 'a', '1-']\n['-a', '1', 'b', '2-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL', 'a', '1-']\n['-a', '1', 'b', '2-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL a 1-']\n['-a 1 b 2-']\n['-c 3-']\n['--']\n['--']\n['-SHELL', 'a 1-']\n['-a 1', 'b 2-']\n['-c 3-']\n['--']\n['--']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Syntax error: Bad function name
+</pre></td></tr><tr><td><a name="details-17-ash"></a><b>ash</b></td><td>17 <a href="var-op-slice.test.html#L246">${@:offset:length} and ${*:offset:length}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['-SHELL', 'a', '1-']\n['-a', '1', 'b', '2-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL', 'a', '1-']\n['-a', '1', 'b', '2-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL a 1-']\n['-a 1 b 2-']\n['-c 3-']\n['--']\n['--']\n['-SHELL', 'a 1-']\n['-a 1', 'b 2-']\n['-c 3-']\n['--']\n['--']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad function name
+</pre></td></tr><tr><td><a name="details-17-zsh"></a><b>zsh</b></td><td>17 <a href="var-op-slice.test.html#L246">${@:offset:length} and ${*:offset:length}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-mksh"></a><b>mksh</b></td><td>17 <a href="var-op-slice.test.html#L246">${@:offset:length} and ${*:offset:length}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[28]: ${*: 0:2}: bad substitution
+</pre></td></tr><tr><td><a name="details-17-ksh"></a><b>ksh</b></td><td>17 <a href="var-op-slice.test.html#L246">${@:offset:length} and ${*:offset:length}</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['-SHELL', 'a', '1-']\n['-a', '1', 'b', '2-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL', 'a', '1-']\n['-a', '1', 'b', '2-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL a 1-']\n['-a 1 b 2-']\n['-c 3-']\n['--']\n['--']\n['-SHELL', 'a 1-']\n['-a 1', 'b 2-']\n['-c 3-']\n['--']\n['--']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[28]: ${*: 0:2}: bad substitution
+</pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="var-op-slice.test.html#L246">${@:offset:length} and ${*:offset:length}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['-SHELL', 'a', '1-']\n['-a', '1', 'b', '2-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL', 'a', '1-']\n['-a', '1', 'b', '2-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL a 1-']\n['-a 1 b 2-']\n['-c 3-']\n['--']\n['--']\n['-SHELL', 'a 1-']\n['-a 1', 'b 2-']\n['-c 3-']\n['--']\n['--']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="var-op-slice.test.html#L246">${@:offset:length} and ${*:offset:length}</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['-SHELL', 'a', '1-']\n['-a', '1', 'b', '2-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL', 'a', '1-']\n['-a', '1', 'b', '2-']\n['-c', '3-']\n['--']\n['--']\n['-SHELL a 1-']\n['-a 1 b 2-']\n['-c 3-']\n['--']\n['--']\n['-SHELL', 'a 1-']\n['-a 1', 'b 2-']\n['-c 3-']\n['--']\n['--']\n"
+Got      '[]\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: syntax error near unexpected token: ()
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: syntax error near unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 10: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 12: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 14: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 15: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 16: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 17: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 18: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 19: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 20: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 21: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 22: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 23: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 24: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 25: argv.shell-name-checked: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 26: argv.shell-name-checked: command not found
+</pre></td></tr><tr><td><a name="details-18-dash"></a><b>dash</b></td><td>18 <a href="var-op-slice.test.html#L301">${@:0:1}</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'SHELL\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-18-ash"></a><b>ash</b></td><td>18 <a href="var-op-slice.test.html#L301">${@:0:1}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'SHELL\n'
+Got      'a\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-mksh"></a><b>mksh</b></td><td>18 <a href="var-op-slice.test.html#L301">${@:0:1}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: ${@: 0:1}: bad substitution
+</pre></td></tr><tr><td><a name="details-18-ksh"></a><b>ksh</b></td><td>18 <a href="var-op-slice.test.html#L301">${@:0:1}</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'SHELL\n'
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${@: 0:1}: bad substitution
+</pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="var-op-slice.test.html#L301">${@:0:1}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'SHELL\n'
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: }: 0:1}
+</pre></td></tr><tr><td><a name="details-19-dash"></a><b>dash</b></td><td>19 <a href="var-op-slice.test.html#L312">Permutations of implicit begin and length</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['1', '2', '3']\n['1', '2', '3']\n[]\n\n['1', '2', '3']\n['1', '2', '3']\n[]\n\n['123']\n['123']\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-19-ash"></a><b>ash</b></td><td>19 <a href="var-op-slice.test.html#L312">Permutations of implicit begin and length</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['1', '2', '3']\n['1', '2', '3']\n[]\n\n['1', '2', '3']\n['1', '2', '3']\n[]\n\n['123']\n['123']\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-19-mksh"></a><b>mksh</b></td><td>19 <a href="var-op-slice.test.html#L312">Permutations of implicit begin and length</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['1', '2', '3']
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: ${array[@]: 0}: bad substitution
+</pre></td></tr><tr><td><a name="details-19-ksh"></a><b>ksh</b></td><td>19 <a href="var-op-slice.test.html#L312">Permutations of implicit begin and length</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['1', '2', '3']\n['1', '2', '3']\n[]\n\n['1', '2', '3']\n['1', '2', '3']\n[]\n\n['123']\n['123']\n['']\n"
+Got      "['1', '2', '3']\n"
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1', '2', '3']
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: ${array[@]: 0}: bad substitution
+</pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="var-op-slice.test.html#L312">Permutations of implicit begin and length</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['1', '2', '3']\n['1', '2', '3']\n[]\n\n['1', '2', '3']\n['1', '2', '3']\n[]\n\n['123']\n['123']\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-20-dash"></a><b>dash</b></td><td>20 <a href="var-op-slice.test.html#L361">${array[@]:} vs ${array[@]: }  - bash and zsh inconsistent</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['space', '1', '2', '3']\n['space', '123']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+dash: 1: Syntax error: "(" unexpected
+dash: 1: Syntax error: Missing '}'
+dash: 1: Bad substitution
+</pre></td></tr><tr><td><a name="details-20-ash"></a><b>ash</b></td><td>20 <a href="var-op-slice.test.html#L361">${array[@]:} vs ${array[@]: }  - bash and zsh inconsistent</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['space', '1', '2', '3']\n['space', '123']\n"
+Got      "['space', '123']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['space', '123']
+</pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+ash: syntax error: unexpected "("
+ash: syntax error: missing '}'
+</pre></td></tr><tr><td><a name="details-20-mksh"></a><b>mksh</b></td><td>20 <a href="var-op-slice.test.html#L361">${array[@]:} vs ${array[@]: }  - bash and zsh inconsistent</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['space', '123']
+</pre><i>stderr:</i> <br/>
+<pre>mksh: ${array[@]:}: bad substitution
+mksh: ${array[@]: }: bad substitution
+mksh: ${s:}: bad substitution
+</pre></td></tr><tr><td><a name="details-20-ksh"></a><b>ksh</b></td><td>20 <a href="var-op-slice.test.html#L361">${array[@]:} vs ${array[@]: }  - bash and zsh inconsistent</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['space', '1', '2', '3']\n['space', '123']\n"
+Got      "['space', '123']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['space', '123']
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: ${array[@]:}: bad substitution
+E: ksh: ${array[@]: }: bad substitution
+E: ksh: ${s:}: bad substitution
+</pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="var-op-slice.test.html#L361">${array[@]:} vs ${array[@]: }  - bash and zsh inconsistent</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['space', '1', '2', '3']\n['space', '123']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>-c: line 1: sh: syntax error: 1
+-c: line 1: sh: syntax error: 1
+-c: line 1: sh: bad ${s:} @ 4
+-c: line 1: sh: bad ${s: } @ 5
+</pre></td></tr><tr><td><a name="details-20-brush"></a><b>brush</b></td><td>20 <a href="var-op-slice.test.html#L361">${array[@]:} vs ${array[@]: }  - bash and zsh inconsistent</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['space', '1', '2', '3']\n['space', '123']\n"
+Got      "['1', '2', '3']\n['123']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1', '2', '3']
+['123']
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: arithmetic evaluation error: failed to parse expression: ' '
+[31mERROR[0m error: arithmetic evaluation error: failed to parse expression: ' '
+</pre></td></tr><tr><td><a name="details-20-osh"></a><b>osh</b></td><td>20 <a href="var-op-slice.test.html#L361">${array[@]:} vs ${array[@]: }  - bash and zsh inconsistent</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['1', '2', '3']
+['space', '1', '2', '3']
+['123']
+['space', '123']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-dash"></a><b>dash</b></td><td>21 <a href="var-op-slice.test.html#L385">${array[@]::} has implicit length of zero - for ble.sh</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '[]\n[]\n\n[]\n[]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-21-ash"></a><b>ash</b></td><td>21 <a href="var-op-slice.test.html#L385">${array[@]::} has implicit length of zero - for ble.sh</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '[]\n[]\n\n[]\n[]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-21-zsh"></a><b>zsh</b></td><td>21 <a href="var-op-slice.test.html#L385">${array[@]::} has implicit length of zero - for ble.sh</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: closing brace expected
+</pre></td></tr><tr><td><a name="details-21-mksh"></a><b>mksh</b></td><td>21 <a href="var-op-slice.test.html#L385">${array[@]::} has implicit length of zero - for ble.sh</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: ${array[@]:0:}: bad substitution
+</pre></td></tr><tr><td><a name="details-21-ksh"></a><b>ksh</b></td><td>21 <a href="var-op-slice.test.html#L385">${array[@]::} has implicit length of zero - for ble.sh</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '[]\n[]\n\n[]\n[]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${array[@]:0:}: bad substitution
+</pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="var-op-slice.test.html#L385">${array[@]::} has implicit length of zero - for ble.sh</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '[]\n[]\n\n[]\n[]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="var-op-slice.test.html#L385">${array[@]::} has implicit length of zero - for ble.sh</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[]\n[]\n\n[]\n[]\n'
+Got      '\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: `': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: `': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: `': bad substitution
+</pre></td></tr></table></body></html>

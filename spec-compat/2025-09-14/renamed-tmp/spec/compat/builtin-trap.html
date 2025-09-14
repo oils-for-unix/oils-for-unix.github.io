@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-trap: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-trap.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>22</td><td>18</td><td>20</td><td>14</td><td>18</td><td>19</td><td>0</td><td>13</td><td>8</td><td>20</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>1</td><td>1</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>1</td><td>1</td><td>2</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>0</td><td>9</td><td>0</td><td>4</td><td>23</td><td>10</td><td>15</td><td>1</td><td></td></tr>
+<tr><td>total</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L6">trap accepts/ignores --</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"><a href="#details-0-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L14">Register invalid trap</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L18">Remove invalid trap</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L22">SIGINT and INT are aliases</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-trap.test.html#L36">trap without args prints traps, like trap -p</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-trap.test.html#L69">trap 'echo hi' KILL (regression test, caught by smoosh suite)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-5-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L95">Invalid trap invocation</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L108">exit 1 when trap code string is invalid</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-7-bash">details</a></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L132">trap EXIT calling exit</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L141">trap EXIT return status ignored</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L150">trap EXIT with PARSE error</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L157">trap EXIT with PARSE error and explicit exit</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L163">trap EXIT with explicit exit</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L174">trap EXIT with command sub / subshell / pipeline</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L190">trap 0 is equivalent to EXIT</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L202">trap 1 is equivalent to SIGHUP; HUP is equivalent to SIGHUP</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-15-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L225">eval in the exit trap (regression for issue #293)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-16-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L232">exit codes for traps are isolated</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"><a href="#details-17-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L249">traps are cleared in subshell (started with &amp;)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"><a href="#details-18-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L282">trap USR1, sleep, SIGINT: non-interactively</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-19-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-trap.test.html#L291">trap INT, sleep, SIGINT: non-interactively</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L315">trap EXIT, sleep, SIGINT: non-interactively</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-21-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap.test.html#L324">Remove trap with an unsigned integer</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"><a href="#details-22-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>152 passed, 6 OK, 3 not implemented, 7 BUG, 62 failed, 0 timeouts, 0 cases skipped
+1 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="builtin-trap.test.html#L6">trap accepts/ignores --</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'ok\nhi\n'
+Got      'ok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="builtin-trap.test.html#L6">trap accepts/ignores --</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'ok\nhi\n'
+Got      'ok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: trap: echo hi: invalid signal specification
+</pre></td></tr><tr><td><a name="details-0-brush"></a><b>brush</b></td><td>0 <a href="builtin-trap.test.html#L6">trap accepts/ignores --</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'ok\nhi\n'
+Got      'ok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-trap.test.html#L14">Register invalid trap</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="builtin-trap.test.html#L18">Remove invalid trap</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="builtin-trap.test.html#L22">SIGINT and INT are aliases</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+0
+</pre><i>stderr:</i> <br/>
+<pre>trap: SIGINT: bad trap
+</pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="builtin-trap.test.html#L22">SIGINT and INT are aliases</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '0\n0\n'
+Got      '1\n1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+1
+</pre><i>stderr:</i> <br/>
+<pre>trap: undefined signal: SIGINT
+trap: undefined signal: INT
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="builtin-trap.test.html#L22">SIGINT and INT are aliases</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '0\n0\n'
+Got      '127\n127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>127
+127
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="builtin-trap.test.html#L36">trap without args prints traps, like trap -p</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="builtin-trap.test.html#L36">trap without args prints traps, like trap -p</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="builtin-trap.test.html#L36">trap without args prints traps, like trap -p</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "status=0\ntrap -- 'true' EXIT\nstatus=0\n"
+Got      'status=0\ntrap -- true EXIT\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+trap -- true EXIT
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="builtin-trap.test.html#L36">trap without args prints traps, like trap -p</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="builtin-trap.test.html#L36">trap without args prints traps, like trap -p</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "status=0\ntrap -- 'true' EXIT\nstatus=0\n"
+Got      'status=0\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="builtin-trap.test.html#L36">trap without args prints traps, like trap -p</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "status=0\ntrap -- 'true' EXIT\nstatus=0\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-4-osh"></a><b>osh</b></td><td>4 <a href="builtin-trap.test.html#L36">trap without args prints traps, like trap -p</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected "status=0\ntrap -- 'true' EXIT\nstatus=0\n"
+Got      'status=0\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>  trap | grep EXIT
+  ^~~~
+[ -c flag ]:6: 'trap' requires a code string
+</pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="builtin-trap.test.html#L69">trap 'echo hi' KILL (regression test, caught by smoosh suite)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=0\nstatus=0\nstatus=0\nstatus=0\n'
+Got      'status=0\nstatus=1\nstatus=0\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=1
+status=0
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>trap: undefined signal: KILL
+trap: undefined signal: TERM
+</pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="builtin-trap.test.html#L69">trap 'echo hi' KILL (regression test, caught by smoosh suite)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nstatus=0\nstatus=0\nstatus=0\n'
+Got      'status=127\nstatus=127\nstatus=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+sh: trap: No such file or directory
+sh: trap: No such file or directory
+sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="builtin-trap.test.html#L69">trap 'echo hi' KILL (regression test, caught by smoosh suite)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\nstatus=0\nstatus=0\nstatus=0\n'
+Got      'status=1\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: trap: 9: forbidden signal for trap
+
+thread 'main' panicked at src/signal.rs:16:56:
+sush(fatal): cannot ignore signal: EINVAL
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+</pre></td></tr><tr><td><a name="details-5-osh"></a><b>osh</b></td><td>5 <a href="builtin-trap.test.html#L69">trap 'echo hi' KILL (regression test, caught by smoosh suite)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>  trap 'echo hi' 9
+                 ^
+[ stdin ]:1: Signal '9' can't be handled
+  trap 'echo hi' KILL
+                 ^~~~
+[ stdin ]:4: Invalid signal or hook 'KILL'
+  trap 'echo hi' STOP
+                 ^~~~
+[ stdin ]:7: Signal 'STOP' can't be handled
+</pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="builtin-trap.test.html#L95">Invalid trap invocation</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>trap: foo: bad trap
+</pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="builtin-trap.test.html#L95">Invalid trap invocation</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 1: foo: invalid signal specification
+</pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="builtin-trap.test.html#L95">Invalid trap invocation</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=2\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="builtin-trap.test.html#L95">Invalid trap invocation</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="builtin-trap.test.html#L95">Invalid trap invocation</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=2\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="builtin-trap.test.html#L95">Invalid trap invocation</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=2\n'
+Got      'status=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="builtin-trap.test.html#L95">Invalid trap invocation</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=2\n'
+Got      'status=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m foo: invalid signal specification
+</pre></td></tr><tr><td><a name="details-7-bash"></a><b>bash</b></td><td>7 <a href="builtin-trap.test.html#L108">exit 1 when trap code string is invalid</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>bash: exit trap: line 1: syntax error near unexpected token `newline'
+bash: exit trap: line 1: `echo &lt;'
+</pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="builtin-trap.test.html#L108">exit 1 when trap code string is invalid</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: end of file unexpected
+</pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="builtin-trap.test.html#L108">exit 1 when trap code string is invalid</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected end of file
+</pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="builtin-trap.test.html#L108">exit 1 when trap code string is invalid</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: syntax error: unexpected EOF
+</pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="builtin-trap.test.html#L108">exit 1 when trap code string is invalid</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=1\n'
+Got      'status=0\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: syntax error: unexpected EOF
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="builtin-trap.test.html#L108">exit 1 when trap code string is invalid</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=1\n'
+Got      'status=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="builtin-trap.test.html#L108">exit 1 when trap code string is invalid</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=1\n'
+Got      'status=0\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: syntax error near unexpected token: &lt;
+</pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="builtin-trap.test.html#L108">exit 1 when trap code string is invalid</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=1\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="builtin-trap.test.html#L132">trap EXIT calling exit</a><br/><br/>
+<span class="assertion">
+[zsh status]
+Expected 42
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>cleanup [x y z]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="builtin-trap.test.html#L132">trap EXIT calling exit</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'cleanup [x y z]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 42
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="builtin-trap.test.html#L132">trap EXIT calling exit</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'cleanup [x y z]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 42
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="builtin-trap.test.html#L141">trap EXIT return status ignored</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'cleanup [x y z]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="builtin-trap.test.html#L141">trap EXIT return status ignored</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      42
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>cleanup [x y z]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="builtin-trap.test.html#L141">trap EXIT return status ignored</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'cleanup [x y z]\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-zsh"></a><b>zsh</b></td><td>10 <a href="builtin-trap.test.html#L150">trap EXIT with PARSE error</a><br/><br/>
+<span class="assertion">
+[zsh status]
+Expected 2
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FAILED
+</pre><i>stderr:</i> <br/>
+<pre>zsh: parse error near `\n'
+</pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="builtin-trap.test.html#L150">trap EXIT with PARSE error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>FAILED
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: syntax error: 'newline' unexpected
+</pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="builtin-trap.test.html#L150">trap EXIT with PARSE error</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 2
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FAILED
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: syntax error: unexpected 'newline'
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="builtin-trap.test.html#L150">trap EXIT with PARSE error</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'FAILED\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+main: line 2: sh: syntax error: newline
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="builtin-trap.test.html#L150">trap EXIT with PARSE error</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FAILED
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: syntax error near unexpected token: 
+
+</pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="builtin-trap.test.html#L150">trap EXIT with PARSE error</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'FAILED\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error near token `
+' (line 1 col 4)
+</pre></td></tr><tr><td><a name="details-11-zsh"></a><b>zsh</b></td><td>11 <a href="builtin-trap.test.html#L157">trap EXIT with PARSE error and explicit exit</a><br/><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FAILED
+</pre><i>stderr:</i> <br/>
+<pre>zsh: parse error near `\n'
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="builtin-trap.test.html#L157">trap EXIT with PARSE error and explicit exit</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'FAILED\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+main: line 2: sh: syntax error: newline
+</pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="builtin-trap.test.html#L157">trap EXIT with PARSE error and explicit exit</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'FAILED\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m main: syntax error near token `
+' (line 1 col 4)
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="builtin-trap.test.html#L163">trap EXIT with explicit exit</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'IN TRAP\nFOO\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="builtin-trap.test.html#L163">trap EXIT with explicit exit</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 42
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>IN TRAP
+FOO
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="builtin-trap.test.html#L163">trap EXIT with explicit exit</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'IN TRAP\nFOO\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="builtin-trap.test.html#L174">trap EXIT with command sub / subshell / pipeline</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'command sub\nsubshell\npipeline\nEXIT TRAP\n'
+Got      'command sub\nsubshell\npipeline\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>command sub
+subshell
+pipeline
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="builtin-trap.test.html#L174">trap EXIT with command sub / subshell / pipeline</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'command sub\nsubshell\npipeline\nEXIT TRAP\n'
+Got      'command sub\nsubshell\npipeline\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>command sub
+subshell
+pipeline
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="builtin-trap.test.html#L190">trap 0 is equivalent to EXIT</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nstatus=0\n'
+Got      'status=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="builtin-trap.test.html#L190">trap 0 is equivalent to EXIT</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: -: command not found
+</pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="builtin-trap.test.html#L202">trap 1 is equivalent to SIGHUP; HUP is equivalent to SIGHUP</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=0
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>trap: SIGHUP: bad trap
+</pre></td></tr><tr><td><a name="details-15-zsh"></a><b>zsh</b></td><td>15 <a href="builtin-trap.test.html#L202">trap 1 is equivalent to SIGHUP; HUP is equivalent to SIGHUP</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=0\nstatus=0\nstatus=0\nstatus=0\n'
+Got      'status=1\nstatus=1\nstatus=0\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=0
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>trap: undefined signal: SIGHUP
+trap: undefined signal: HUP
+trap: undefined signal: HUP
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="builtin-trap.test.html#L202">trap 1 is equivalent to SIGHUP; HUP is equivalent to SIGHUP</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nstatus=0\nstatus=0\nstatus=0\n'
+Got      'status=127\nstatus=127\nstatus=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+sh: trap: No such file or directory
+sh: trap: No such file or directory
+sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="builtin-trap.test.html#L225">eval in the exit trap (regression for issue #293)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'hi\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-16-brush"></a><b>brush</b></td><td>16 <a href="builtin-trap.test.html#L225">eval in the exit trap (regression for issue #293)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'hi\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="builtin-trap.test.html#L232">exit codes for traps are isolated</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'before=0\nUSR1 trap status=0\nafter=0\n'
+Got      'before=127\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -10
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="builtin-trap.test.html#L232">exit codes for traps are isolated</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'before=0\nUSR1 trap status=0\nafter=0\n'
+Got      'before=0\nafter=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before=0
+after=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-brush"></a><b>brush</b></td><td>17 <a href="builtin-trap.test.html#L232">exit codes for traps are isolated</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'before=0\nUSR1 trap status=0\nafter=0\n'
+Got      'before=0\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 0
+Got      -10
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="builtin-trap.test.html#L249">traps are cleared in subshell (started with &amp;)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'SIGURG\nbegin child\nend child\nwait status 0\n'
+Got      'begin child\nend child\nwait status 0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>begin child
+end child
+wait status 0
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+kill: missing argument (see "kill --help")
+</pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="builtin-trap.test.html#L249">traps are cleared in subshell (started with &amp;)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'SIGURG\nbegin child\nend child\nwait status 0\n'
+Got      'begin child\nSIGURG\nend child\nwait status 0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>begin child
+SIGURG
+end child
+wait status 0
+</pre><i>stderr:</i> <br/>
+<pre>1974249
+</pre></td></tr><tr><td><a name="details-18-brush"></a><b>brush</b></td><td>18 <a href="builtin-trap.test.html#L249">traps are cleared in subshell (started with &amp;)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'SIGURG\nbegin child\nend child\nwait status 0\n'
+Got      'begin child\nend child\nwait status 0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>begin child
+end child
+wait status 0
+</pre><i>stderr:</i> <br/>
+<pre>kill: invalid usage
+</pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="builtin-trap.test.html#L282">trap USR1, sleep, SIGINT: non-interactively</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'usr1\nstatus=0\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: command: No such file or directory
+sh: trap: No such file or directory
+sh: -USR1: No such file or directory
+</pre></td></tr><tr><td><a name="details-19-brush"></a><b>brush</b></td><td>19 <a href="builtin-trap.test.html#L282">trap USR1, sleep, SIGINT: non-interactively</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'usr1\nstatus=0\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-mksh"></a><b>mksh</b></td><td>20 <a href="builtin-trap.test.html#L291">trap INT, sleep, SIGINT: non-interactively</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>mksh
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="builtin-trap.test.html#L291">trap INT, sleep, SIGINT: non-interactively</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-20-osh"></a><b>osh</b></td><td>20 <a href="builtin-trap.test.html#L291">trap INT, sleep, SIGINT: non-interactively</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>int
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="builtin-trap.test.html#L315">trap EXIT, sleep, SIGINT: non-interactively</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'on exit\nstatus=0\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: command: No such file or directory
+sh: trap: No such file or directory
+sh: -INT: No such file or directory
+</pre></td></tr><tr><td><a name="details-21-brush"></a><b>brush</b></td><td>21 <a href="builtin-trap.test.html#L315">trap EXIT, sleep, SIGINT: non-interactively</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'on exit\nstatus=0\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-zsh"></a><b>zsh</b></td><td>22 <a href="builtin-trap.test.html#L324">Remove trap with an unsigned integer</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'ok0\n\nok42space\n\nok07\n\ntrap-exit\nfailure\n'
+Got      'ok0\n\nok42space\n\nok07\n\nbad\nfailure\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok0
+
+ok42space
+
+ok07
+
+bad
+failure
+</pre><i>stderr:</i> <br/>
+<pre>zsh:1: command not found: 42
+zsh:1: command not found: -1
+</pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="builtin-trap.test.html#L324">Remove trap with an unsigned integer</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'ok0\n\nok42space\n\nok07\n\ntrap-exit\nfailure\n'
+Got      '\n\n\nfailure\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+
+failure
+</pre><i>stderr:</i> <br/>
+<pre>sh: Unknown option 'e' (see "sh --help")
+sh: Unknown option 'e' (see "sh --help")
+sh: Unknown option 'e' (see "sh --help")
+sh: Unknown option 'e' (see "sh --help")
+</pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="builtin-trap.test.html#L324">Remove trap with an unsigned integer</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'ok0\n\nok42space\n\nok07\n\ntrap-exit\nfailure\n'
+Got      'ok0\n\nok42space\n\nok07\n\nbad\nfailure\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok0
+
+ok42space
+
+ok07
+
+bad
+failure
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: 0: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: 42: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: 07: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: -1: command not found
+</pre></td></tr><tr><td><a name="details-22-brush"></a><b>brush</b></td><td>22 <a href="builtin-trap.test.html#L324">Remove trap with an unsigned integer</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'ok0\n\nok42space\n\nok07\n\ntrap-exit\nfailure\n'
+Got      '\n\n\nfailure\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+
+failure
+</pre><i>stderr:</i> <br/>
+<pre>error: unexpected argument '-e' found
+
+  tip: to pass '-e' as a value, use '-- -e'
+
+Usage: brush [OPTIONS]... [SCRIPT_PATH [SCRIPT_ARGS]...]
+
+For more information, try '--help'.
+error: unexpected argument '-e' found
+
+  tip: to pass '-e' as a value, use '-- -e'
+
+Usage: brush [OPTIONS]... [SCRIPT_PATH [SCRIPT_ARGS]...]
+
+For more information, try '--help'.
+error: unexpected argument '-e' found
+
+  tip: to pass '-e' as a value, use '-- -e'
+
+Usage: brush [OPTIONS]... [SCRIPT_PATH [SCRIPT_ARGS]...]
+
+For more information, try '--help'.
+error: unexpected argument '-e' found
+
+  tip: to pass '-e' as a value, use '-- -e'
+
+Usage: brush [OPTIONS]... [SCRIPT_PATH [SCRIPT_ARGS]...]
+
+For more information, try '--help'.
+</pre></td></tr></table></body></html>

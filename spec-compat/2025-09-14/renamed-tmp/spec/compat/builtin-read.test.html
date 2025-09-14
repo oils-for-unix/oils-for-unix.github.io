@@ -1,0 +1,6841 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>spec/builtin-read.test.sh</title>
+<link rel="stylesheet" type="text/css" href="../../../web/src-tree.css" />
+  </head>
+
+      <body class="">
+        <div id="home-link">
+          <a href="https://github.com/oilshell/oil/blob/master/spec/builtin-read.test.sh">View on Github</a>
+          |
+          <a href="/">oils.pub</a>
+        </div>
+        <table>
+      <tr>
+  <td class=num>1</td>
+  <td id=L1>
+    <span class="line comm">## oils_failures_allowed: 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>2</td>
+  <td id=L2>
+    <span class="line comm">## compare_shells: bash mksh zsh ash</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>3</td>
+  <td id=L3>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>4</td>
+  <td id=L4>
+    <span class="line spec-comment">#### read line from here doc</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>5</td>
+  <td id=L5>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>6</td>
+  <td id=L6>
+    <span class="line comm"># NOTE: there are TABS below</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>7</td>
+  <td id=L7>
+    <span class="line ">read x &lt;&lt;EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>8</td>
+  <td id=L8>
+    <span class="line ">A		B C D E</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>9</td>
+  <td id=L9>
+    <span class="line ">FG</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>10</td>
+  <td id=L10>
+    <span class="line ">EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>11</td>
+  <td id=L11>
+    <span class="line ">echo "[$x]"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>12</td>
+  <td id=L12>
+    <span class="line comm">## stdout: [A		B C D E]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>13</td>
+  <td id=L13>
+    <span class="line comm">## status: 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>14</td>
+  <td id=L14>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>15</td>
+  <td id=L15>
+    <span class="line spec-comment">#### read from empty file</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>16</td>
+  <td id=L16>
+    <span class="line ">echo -n '' &gt; $TMP/empty.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>17</td>
+  <td id=L17>
+    <span class="line ">read x &lt; $TMP/empty.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>18</td>
+  <td id=L18>
+    <span class="line ">argv.py "status=$?" "$x"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>19</td>
+  <td id=L19>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>20</td>
+  <td id=L20>
+    <span class="line comm"># No variable name, behaves the same</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>21</td>
+  <td id=L21>
+    <span class="line ">read &lt; $TMP/empty.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>22</td>
+  <td id=L22>
+    <span class="line ">argv.py "status=$?" "$REPLY"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>23</td>
+  <td id=L23>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>24</td>
+  <td id=L24>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>25</td>
+  <td id=L25>
+    <span class="line ">['status=1', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>26</td>
+  <td id=L26>
+    <span class="line ">['status=1', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>27</td>
+  <td id=L27>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>28</td>
+  <td id=L28>
+    <span class="line comm">## OK dash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>29</td>
+  <td id=L29>
+    <span class="line ">['status=1', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>30</td>
+  <td id=L30>
+    <span class="line ">['status=2', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>31</td>
+  <td id=L31>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>32</td>
+  <td id=L32>
+    <span class="line comm">## status: 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>33</td>
+  <td id=L33>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>34</td>
+  <td id=L34>
+    <span class="line spec-comment">#### read /dev/null</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>35</td>
+  <td id=L35>
+    <span class="line ">read -n 1 &lt;/dev/null</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>36</td>
+  <td id=L36>
+    <span class="line ">echo $?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>37</td>
+  <td id=L37>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>38</td>
+  <td id=L38>
+    <span class="line ">1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>39</td>
+  <td id=L39>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>40</td>
+  <td id=L40>
+    <span class="line comm">## OK dash stdout: 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>41</td>
+  <td id=L41>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>42</td>
+  <td id=L42>
+    <span class="line spec-comment">#### read with zero args</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>43</td>
+  <td id=L43>
+    <span class="line ">echo | read</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>44</td>
+  <td id=L44>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>45</td>
+  <td id=L45>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>46</td>
+  <td id=L46>
+    <span class="line ">status=0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>47</td>
+  <td id=L47>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>48</td>
+  <td id=L48>
+    <span class="line comm">## BUG dash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>49</td>
+  <td id=L49>
+    <span class="line ">status=2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>50</td>
+  <td id=L50>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>51</td>
+  <td id=L51>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>52</td>
+  <td id=L52>
+    <span class="line spec-comment">#### read builtin with no newline returns status 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>53</td>
+  <td id=L53>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>54</td>
+  <td id=L54>
+    <span class="line comm"># This is odd because the variable is populated successfully.  OSH/YSH might</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>55</td>
+  <td id=L55>
+    <span class="line comm"># need a separate put reading feature that doesn't use IFS.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>56</td>
+  <td id=L56>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>57</td>
+  <td id=L57>
+    <span class="line ">echo -n ZZZ | { read x; echo status=$?; echo $x; }</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>58</td>
+  <td id=L58>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>59</td>
+  <td id=L59>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>60</td>
+  <td id=L60>
+    <span class="line ">status=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>61</td>
+  <td id=L61>
+    <span class="line ">ZZZ</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>62</td>
+  <td id=L62>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>63</td>
+  <td id=L63>
+    <span class="line comm">## status: 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>64</td>
+  <td id=L64>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>65</td>
+  <td id=L65>
+    <span class="line spec-comment">#### read builtin splits value across multiple vars</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>66</td>
+  <td id=L66>
+    <span class="line comm"># NOTE: there are TABS below</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>67</td>
+  <td id=L67>
+    <span class="line ">read x y z &lt;&lt;EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>68</td>
+  <td id=L68>
+    <span class="line ">A		B C D E </span>
+  </td>
+</tr>
+<tr>
+  <td class=num>69</td>
+  <td id=L69>
+    <span class="line ">FG</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>70</td>
+  <td id=L70>
+    <span class="line ">EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>71</td>
+  <td id=L71>
+    <span class="line ">echo "[$x/$y/$z]"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>72</td>
+  <td id=L72>
+    <span class="line comm">## stdout: [A/B/C D E]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>73</td>
+  <td id=L73>
+    <span class="line comm">## status: 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>74</td>
+  <td id=L74>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>75</td>
+  <td id=L75>
+    <span class="line spec-comment">#### read builtin with too few variables</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>76</td>
+  <td id=L76>
+    <span class="line ">set -o errexit</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>77</td>
+  <td id=L77>
+    <span class="line ">set -o nounset  # hm this doesn't change it</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>78</td>
+  <td id=L78>
+    <span class="line ">read x y z &lt;&lt;EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>79</td>
+  <td id=L79>
+    <span class="line ">A B</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>80</td>
+  <td id=L80>
+    <span class="line ">EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>81</td>
+  <td id=L81>
+    <span class="line ">echo /$x/$y/$z/</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>82</td>
+  <td id=L82>
+    <span class="line comm">## stdout: /A/B//</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>83</td>
+  <td id=L83>
+    <span class="line comm">## status: 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>84</td>
+  <td id=L84>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>85</td>
+  <td id=L85>
+    <span class="line spec-comment">#### read -n (with $REPLY)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>86</td>
+  <td id=L86>
+    <span class="line ">echo 12345 &gt; $TMP/readn.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>87</td>
+  <td id=L87>
+    <span class="line ">read -n 4 x &lt; $TMP/readn.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>88</td>
+  <td id=L88>
+    <span class="line ">read -n 2 &lt; $TMP/readn.txt  # Do it again with no variable</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>89</td>
+  <td id=L89>
+    <span class="line ">argv.py $x $REPLY</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>90</td>
+  <td id=L90>
+    <span class="line comm">## stdout: ['1234', '12']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>91</td>
+  <td id=L91>
+    <span class="line comm">## N-I dash/zsh stdout: []</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>92</td>
+  <td id=L92>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>93</td>
+  <td id=L93>
+    <span class="line spec-comment">#### IFS= read -n (OSH regression: value saved in tempenv)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>94</td>
+  <td id=L94>
+    <span class="line ">echo XYZ &gt; "$TMP/readn.txt"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>95</td>
+  <td id=L95>
+    <span class="line ">IFS= TMOUT= read -n 1 char &lt; "$TMP/readn.txt"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>96</td>
+  <td id=L96>
+    <span class="line ">argv.py "$char"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>97</td>
+  <td id=L97>
+    <span class="line comm">## stdout: ['X']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>98</td>
+  <td id=L98>
+    <span class="line comm">## N-I dash/zsh stdout: ['']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>99</td>
+  <td id=L99>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>100</td>
+  <td id=L100>
+    <span class="line spec-comment">#### read -n doesn't strip whitespace (bug fix)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>101</td>
+  <td id=L101>
+    <span class="line ">case $SH in dash|zsh) exit ;; esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>102</td>
+  <td id=L102>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>103</td>
+  <td id=L103>
+    <span class="line ">echo '  a b  ' | (read -n 4; echo "[$REPLY]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>104</td>
+  <td id=L104>
+    <span class="line ">echo '  a b  ' | (read -n 5; echo "[$REPLY]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>105</td>
+  <td id=L105>
+    <span class="line ">echo '  a b  ' | (read -n 6; echo "[$REPLY]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>106</td>
+  <td id=L106>
+    <span class="line ">echo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>107</td>
+  <td id=L107>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>108</td>
+  <td id=L108>
+    <span class="line ">echo 'one var strips whitespace'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>109</td>
+  <td id=L109>
+    <span class="line ">echo '  a b  ' | (read -n 4 myvar; echo "[$myvar]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>110</td>
+  <td id=L110>
+    <span class="line ">echo '  a b  ' | (read -n 5 myvar; echo "[$myvar]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>111</td>
+  <td id=L111>
+    <span class="line ">echo '  a b  ' | (read -n 6 myvar; echo "[$myvar]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>112</td>
+  <td id=L112>
+    <span class="line ">echo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>113</td>
+  <td id=L113>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>114</td>
+  <td id=L114>
+    <span class="line ">echo 'three vars'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>115</td>
+  <td id=L115>
+    <span class="line ">echo '  a b  ' | (read -n 4 x y z; echo "[$x] [$y] [$z]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>116</td>
+  <td id=L116>
+    <span class="line ">echo '  a b  ' | (read -n 5 x y z; echo "[$x] [$y] [$z]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>117</td>
+  <td id=L117>
+    <span class="line ">echo '  a b  ' | (read -n 6 x y z; echo "[$x] [$y] [$z]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>118</td>
+  <td id=L118>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>119</td>
+  <td id=L119>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>120</td>
+  <td id=L120>
+    <span class="line ">[  a ]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>121</td>
+  <td id=L121>
+    <span class="line ">[  a b]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>122</td>
+  <td id=L122>
+    <span class="line ">[  a b ]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>123</td>
+  <td id=L123>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>124</td>
+  <td id=L124>
+    <span class="line ">one var strips whitespace</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>125</td>
+  <td id=L125>
+    <span class="line ">[a]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>126</td>
+  <td id=L126>
+    <span class="line ">[a b]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>127</td>
+  <td id=L127>
+    <span class="line ">[a b]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>128</td>
+  <td id=L128>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>129</td>
+  <td id=L129>
+    <span class="line ">three vars</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>130</td>
+  <td id=L130>
+    <span class="line ">[a] [] []</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>131</td>
+  <td id=L131>
+    <span class="line ">[a] [b] []</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>132</td>
+  <td id=L132>
+    <span class="line ">[a] [b] []</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>133</td>
+  <td id=L133>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>134</td>
+  <td id=L134>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>135</td>
+  <td id=L135>
+    <span class="line comm">## N-I dash/zsh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>136</td>
+  <td id=L136>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>137</td>
+  <td id=L137>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>138</td>
+  <td id=L138>
+    <span class="line comm">## BUG mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>139</td>
+  <td id=L139>
+    <span class="line ">[a]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>140</td>
+  <td id=L140>
+    <span class="line ">[a b]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>141</td>
+  <td id=L141>
+    <span class="line ">[a b]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>142</td>
+  <td id=L142>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>143</td>
+  <td id=L143>
+    <span class="line ">one var strips whitespace</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>144</td>
+  <td id=L144>
+    <span class="line ">[a]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>145</td>
+  <td id=L145>
+    <span class="line ">[a b]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>146</td>
+  <td id=L146>
+    <span class="line ">[a b]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>147</td>
+  <td id=L147>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>148</td>
+  <td id=L148>
+    <span class="line ">three vars</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>149</td>
+  <td id=L149>
+    <span class="line ">[a] [] []</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>150</td>
+  <td id=L150>
+    <span class="line ">[a] [b] []</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>151</td>
+  <td id=L151>
+    <span class="line ">[a] [b] []</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>152</td>
+  <td id=L152>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>153</td>
+  <td id=L153>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>154</td>
+  <td id=L154>
+    <span class="line spec-comment">#### read -d -n - respects delimiter and splits</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>155</td>
+  <td id=L155>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>156</td>
+  <td id=L156>
+    <span class="line ">case $SH in dash|zsh|ash) exit ;; esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>157</td>
+  <td id=L157>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>158</td>
+  <td id=L158>
+    <span class="line ">echo 'delim c'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>159</td>
+  <td id=L159>
+    <span class="line ">echo '  a b c ' | (read -d 'c' -n 3; echo "[$REPLY]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>160</td>
+  <td id=L160>
+    <span class="line ">echo '  a b c ' | (read -d 'c' -n 4; echo "[$REPLY]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>161</td>
+  <td id=L161>
+    <span class="line ">echo '  a b c ' | (read -d 'c' -n 5; echo "[$REPLY]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>162</td>
+  <td id=L162>
+    <span class="line ">echo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>163</td>
+  <td id=L163>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>164</td>
+  <td id=L164>
+    <span class="line ">echo 'one var'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>165</td>
+  <td id=L165>
+    <span class="line ">echo '  a b c ' | (read -d 'c' -n 3 myvar; echo "[$myvar]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>166</td>
+  <td id=L166>
+    <span class="line ">echo '  a b c ' | (read -d 'c' -n 4 myvar; echo "[$myvar]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>167</td>
+  <td id=L167>
+    <span class="line ">echo '  a b c ' | (read -d 'c' -n 5 myvar; echo "[$myvar]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>168</td>
+  <td id=L168>
+    <span class="line ">echo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>169</td>
+  <td id=L169>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>170</td>
+  <td id=L170>
+    <span class="line ">echo 'three vars'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>171</td>
+  <td id=L171>
+    <span class="line ">echo '  a b c ' | (read -d 'c' -n 3 x y z; echo "[$x] [$y] [$z]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>172</td>
+  <td id=L172>
+    <span class="line ">echo '  a b c ' | (read -d 'c' -n 4 x y z; echo "[$x] [$y] [$z]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>173</td>
+  <td id=L173>
+    <span class="line ">echo '  a b c ' | (read -d 'c' -n 5 x y z; echo "[$x] [$y] [$z]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>174</td>
+  <td id=L174>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>175</td>
+  <td id=L175>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>176</td>
+  <td id=L176>
+    <span class="line ">delim c</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>177</td>
+  <td id=L177>
+    <span class="line ">[  a]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>178</td>
+  <td id=L178>
+    <span class="line ">[  a ]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>179</td>
+  <td id=L179>
+    <span class="line ">[  a b]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>180</td>
+  <td id=L180>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>181</td>
+  <td id=L181>
+    <span class="line ">one var</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>182</td>
+  <td id=L182>
+    <span class="line ">[a]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>183</td>
+  <td id=L183>
+    <span class="line ">[a]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>184</td>
+  <td id=L184>
+    <span class="line ">[a b]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>185</td>
+  <td id=L185>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>186</td>
+  <td id=L186>
+    <span class="line ">three vars</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>187</td>
+  <td id=L187>
+    <span class="line ">[a] [] []</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>188</td>
+  <td id=L188>
+    <span class="line ">[a] [] []</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>189</td>
+  <td id=L189>
+    <span class="line ">[a] [b] []</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>190</td>
+  <td id=L190>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>191</td>
+  <td id=L191>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>192</td>
+  <td id=L192>
+    <span class="line comm">## N-I dash/zsh/ash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>193</td>
+  <td id=L193>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>194</td>
+  <td id=L194>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>195</td>
+  <td id=L195>
+    <span class="line comm">## BUG mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>196</td>
+  <td id=L196>
+    <span class="line ">delim c</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>197</td>
+  <td id=L197>
+    <span class="line ">[a]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>198</td>
+  <td id=L198>
+    <span class="line ">[a]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>199</td>
+  <td id=L199>
+    <span class="line ">[a b]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>200</td>
+  <td id=L200>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>201</td>
+  <td id=L201>
+    <span class="line ">one var</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>202</td>
+  <td id=L202>
+    <span class="line ">[a]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>203</td>
+  <td id=L203>
+    <span class="line ">[a]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>204</td>
+  <td id=L204>
+    <span class="line ">[a b]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>205</td>
+  <td id=L205>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>206</td>
+  <td id=L206>
+    <span class="line ">three vars</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>207</td>
+  <td id=L207>
+    <span class="line ">[a] [] []</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>208</td>
+  <td id=L208>
+    <span class="line ">[a] [] []</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>209</td>
+  <td id=L209>
+    <span class="line ">[a] [b] []</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>210</td>
+  <td id=L210>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>211</td>
+  <td id=L211>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>212</td>
+  <td id=L212>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>213</td>
+  <td id=L213>
+    <span class="line spec-comment">#### read -n with invalid arg</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>214</td>
+  <td id=L214>
+    <span class="line ">read -n not_a_number</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>215</td>
+  <td id=L215>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>216</td>
+  <td id=L216>
+    <span class="line comm">## stdout: status=2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>217</td>
+  <td id=L217>
+    <span class="line comm">## OK bash stdout: status=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>218</td>
+  <td id=L218>
+    <span class="line comm">## N-I zsh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>219</td>
+  <td id=L219>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>220</td>
+  <td id=L220>
+    <span class="line spec-comment">#### read -n from pipe</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>221</td>
+  <td id=L221>
+    <span class="line ">case $SH in dash|ash|zsh) exit ;; esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>222</td>
+  <td id=L222>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>223</td>
+  <td id=L223>
+    <span class="line ">echo abcxyz | { read -n 3; echo reply=$REPLY; }</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>224</td>
+  <td id=L224>
+    <span class="line comm">## status: 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>225</td>
+  <td id=L225>
+    <span class="line comm">## stdout: reply=abc</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>226</td>
+  <td id=L226>
+    <span class="line comm">## N-I dash/ash stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>227</td>
+  <td id=L227>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>228</td>
+  <td id=L228>
+    <span class="line comm"># zsh appears to hang with -k</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>229</td>
+  <td id=L229>
+    <span class="line comm">## N-I zsh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>230</td>
+  <td id=L230>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>231</td>
+  <td id=L231>
+    <span class="line spec-comment">#### read without args uses $REPLY, no splitting occurs (without -n)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>232</td>
+  <td id=L232>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>233</td>
+  <td id=L233>
+    <span class="line comm"># mksh and zsh implement splitting with $REPLY, bash/ash don't</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>234</td>
+  <td id=L234>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>235</td>
+  <td id=L235>
+    <span class="line ">echo '  a b  ' | (read; echo "[$REPLY]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>236</td>
+  <td id=L236>
+    <span class="line ">echo '  a b  ' | (read myvar; echo "[$myvar]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>237</td>
+  <td id=L237>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>238</td>
+  <td id=L238>
+    <span class="line ">echo '  a b  \</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>239</td>
+  <td id=L239>
+    <span class="line ">  line2' | (read; echo "[$REPLY]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>240</td>
+  <td id=L240>
+    <span class="line ">echo '  a b  \</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>241</td>
+  <td id=L241>
+    <span class="line ">  line2' | (read myvar; echo "[$myvar]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>242</td>
+  <td id=L242>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>243</td>
+  <td id=L243>
+    <span class="line comm"># Now test with -r</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>244</td>
+  <td id=L244>
+    <span class="line ">echo '  a b  \</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>245</td>
+  <td id=L245>
+    <span class="line ">  line2' | (read -r; echo "[$REPLY]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>246</td>
+  <td id=L246>
+    <span class="line ">echo '  a b  \</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>247</td>
+  <td id=L247>
+    <span class="line ">  line2' | (read -r myvar; echo "[$myvar]")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>248</td>
+  <td id=L248>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>249</td>
+  <td id=L249>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>250</td>
+  <td id=L250>
+    <span class="line ">[  a b  ]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>251</td>
+  <td id=L251>
+    <span class="line ">[a b]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>252</td>
+  <td id=L252>
+    <span class="line ">[  a b    line2]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>253</td>
+  <td id=L253>
+    <span class="line ">[a b    line2]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>254</td>
+  <td id=L254>
+    <span class="line ">[  a b  \]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>255</td>
+  <td id=L255>
+    <span class="line ">[a b  \]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>256</td>
+  <td id=L256>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>257</td>
+  <td id=L257>
+    <span class="line comm">## BUG mksh/zsh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>258</td>
+  <td id=L258>
+    <span class="line ">[a b]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>259</td>
+  <td id=L259>
+    <span class="line ">[a b]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>260</td>
+  <td id=L260>
+    <span class="line ">[a b    line2]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>261</td>
+  <td id=L261>
+    <span class="line ">[a b    line2]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>262</td>
+  <td id=L262>
+    <span class="line ">[a b  \]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>263</td>
+  <td id=L263>
+    <span class="line ">[a b  \]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>264</td>
+  <td id=L264>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>265</td>
+  <td id=L265>
+    <span class="line comm">## BUG dash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>266</td>
+  <td id=L266>
+    <span class="line ">[]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>267</td>
+  <td id=L267>
+    <span class="line ">[a b  ]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>268</td>
+  <td id=L268>
+    <span class="line ">[]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>269</td>
+  <td id=L269>
+    <span class="line ">[a b    line2]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>270</td>
+  <td id=L270>
+    <span class="line ">[]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>271</td>
+  <td id=L271>
+    <span class="line ">[a b  \]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>272</td>
+  <td id=L272>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>273</td>
+  <td id=L273>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>274</td>
+  <td id=L274>
+    <span class="line spec-comment">#### read -n vs. -N</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>275</td>
+  <td id=L275>
+    <span class="line comm"># dash, ash and zsh do not implement read -N</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>276</td>
+  <td id=L276>
+    <span class="line comm"># mksh treats -N exactly the same as -n</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>277</td>
+  <td id=L277>
+    <span class="line ">case $SH in dash|ash|zsh) exit ;; esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>278</td>
+  <td id=L278>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>279</td>
+  <td id=L279>
+    <span class="line comm"># bash docs: https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>280</td>
+  <td id=L280>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>281</td>
+  <td id=L281>
+    <span class="line ">echo 'a b c' &gt; $TMP/readn.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>282</td>
+  <td id=L282>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>283</td>
+  <td id=L283>
+    <span class="line ">echo 'read -n'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>284</td>
+  <td id=L284>
+    <span class="line ">read -n 5 A B C &lt; $TMP/readn.txt; echo "'$A' '$B' '$C'"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>285</td>
+  <td id=L285>
+    <span class="line ">read -n 4 A B C &lt; $TMP/readn.txt; echo "'$A' '$B' '$C'"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>286</td>
+  <td id=L286>
+    <span class="line ">echo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>287</td>
+  <td id=L287>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>288</td>
+  <td id=L288>
+    <span class="line ">echo 'read -N'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>289</td>
+  <td id=L289>
+    <span class="line ">read -N 5 A B C &lt; $TMP/readn.txt; echo "'$A' '$B' '$C'"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>290</td>
+  <td id=L290>
+    <span class="line ">read -N 4 A B C &lt; $TMP/readn.txt; echo "'$A' '$B' '$C'"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>291</td>
+  <td id=L291>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>292</td>
+  <td id=L292>
+    <span class="line ">read -n</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>293</td>
+  <td id=L293>
+    <span class="line ">'a' 'b' 'c'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>294</td>
+  <td id=L294>
+    <span class="line ">'a' 'b' ''</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>295</td>
+  <td id=L295>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>296</td>
+  <td id=L296>
+    <span class="line ">read -N</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>297</td>
+  <td id=L297>
+    <span class="line ">'a b c' '' ''</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>298</td>
+  <td id=L298>
+    <span class="line ">'a b ' '' ''</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>299</td>
+  <td id=L299>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>300</td>
+  <td id=L300>
+    <span class="line comm">## N-I dash/ash/zsh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>301</td>
+  <td id=L301>
+    <span class="line comm">## BUG mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>302</td>
+  <td id=L302>
+    <span class="line ">read -n</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>303</td>
+  <td id=L303>
+    <span class="line ">'a' 'b' 'c'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>304</td>
+  <td id=L304>
+    <span class="line ">'a' 'b' ''</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>305</td>
+  <td id=L305>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>306</td>
+  <td id=L306>
+    <span class="line ">read -N</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>307</td>
+  <td id=L307>
+    <span class="line ">'a' 'b' 'c'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>308</td>
+  <td id=L308>
+    <span class="line ">'a' 'b' ''</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>309</td>
+  <td id=L309>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>310</td>
+  <td id=L310>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>311</td>
+  <td id=L311>
+    <span class="line spec-comment">#### read -N ignores delimiters</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>312</td>
+  <td id=L312>
+    <span class="line ">case $SH in dash|ash|zsh) exit ;; esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>313</td>
+  <td id=L313>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>314</td>
+  <td id=L314>
+    <span class="line ">echo $'a\nb\nc' &gt; $TMP/read-lines.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>315</td>
+  <td id=L315>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>316</td>
+  <td id=L316>
+    <span class="line ">read -N 3 out &lt; $TMP/read-lines.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>317</td>
+  <td id=L317>
+    <span class="line ">echo "$out"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>318</td>
+  <td id=L318>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>319</td>
+  <td id=L319>
+    <span class="line ">a</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>320</td>
+  <td id=L320>
+    <span class="line ">b</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>321</td>
+  <td id=L321>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>322</td>
+  <td id=L322>
+    <span class="line comm">## N-I dash/ash/zsh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>323</td>
+  <td id=L323>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>324</td>
+  <td id=L324>
+    <span class="line spec-comment">#### read will unset extranous vars</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>325</td>
+  <td id=L325>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>326</td>
+  <td id=L326>
+    <span class="line ">echo 'a b' &gt; $TMP/read-few.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>327</td>
+  <td id=L327>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>328</td>
+  <td id=L328>
+    <span class="line ">c='some value'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>329</td>
+  <td id=L329>
+    <span class="line ">read a b c &lt; $TMP/read-few.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>330</td>
+  <td id=L330>
+    <span class="line ">echo "'$a' '$b' '$c'"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>331</td>
+  <td id=L331>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>332</td>
+  <td id=L332>
+    <span class="line ">case $SH in dash) exit ;; esac # dash does not implement -n</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>333</td>
+  <td id=L333>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>334</td>
+  <td id=L334>
+    <span class="line ">c='some value'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>335</td>
+  <td id=L335>
+    <span class="line ">read -n 3 a b c &lt; $TMP/read-few.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>336</td>
+  <td id=L336>
+    <span class="line ">echo "'$a' '$b' '$c'"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>337</td>
+  <td id=L337>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>338</td>
+  <td id=L338>
+    <span class="line ">'a' 'b' ''</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>339</td>
+  <td id=L339>
+    <span class="line ">'a' 'b' ''</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>340</td>
+  <td id=L340>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>341</td>
+  <td id=L341>
+    <span class="line comm">## N-I dash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>342</td>
+  <td id=L342>
+    <span class="line ">'a' 'b' ''</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>343</td>
+  <td id=L343>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>344</td>
+  <td id=L344>
+    <span class="line comm">## BUG zsh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>345</td>
+  <td id=L345>
+    <span class="line ">'a' 'b' ''</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>346</td>
+  <td id=L346>
+    <span class="line ">'b' '' ''</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>347</td>
+  <td id=L347>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>348</td>
+  <td id=L348>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>349</td>
+  <td id=L349>
+    <span class="line spec-comment">#### read -r ignores backslashes</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>350</td>
+  <td id=L350>
+    <span class="line ">echo 'one\ two' &gt; $TMP/readr.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>351</td>
+  <td id=L351>
+    <span class="line ">read escaped &lt; $TMP/readr.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>352</td>
+  <td id=L352>
+    <span class="line ">read -r raw &lt; $TMP/readr.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>353</td>
+  <td id=L353>
+    <span class="line ">argv.py "$escaped" "$raw"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>354</td>
+  <td id=L354>
+    <span class="line comm">## stdout: ['one two', 'one\\ two']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>355</td>
+  <td id=L355>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>356</td>
+  <td id=L356>
+    <span class="line spec-comment">#### read -r with other backslash escapes</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>357</td>
+  <td id=L357>
+    <span class="line ">echo 'one\ two\x65three' &gt; $TMP/readr.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>358</td>
+  <td id=L358>
+    <span class="line ">read escaped &lt; $TMP/readr.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>359</td>
+  <td id=L359>
+    <span class="line ">read -r raw &lt; $TMP/readr.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>360</td>
+  <td id=L360>
+    <span class="line ">argv.py "$escaped" "$raw"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>361</td>
+  <td id=L361>
+    <span class="line comm"># mksh respects the hex escapes here, but other shells don't!</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>362</td>
+  <td id=L362>
+    <span class="line comm">## stdout: ['one twox65three', 'one\\ two\\x65three']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>363</td>
+  <td id=L363>
+    <span class="line comm">## BUG mksh/zsh stdout: ['one twoethree', 'one\\ twoethree']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>364</td>
+  <td id=L364>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>365</td>
+  <td id=L365>
+    <span class="line spec-comment">#### read with line continuation reads multiple physical lines</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>366</td>
+  <td id=L366>
+    <span class="line comm"># NOTE: osh failing because of file descriptor issue.  stdin has to be closed!</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>367</td>
+  <td id=L367>
+    <span class="line ">tmp=$TMP/$(basename $SH)-readr.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>368</td>
+  <td id=L368>
+    <span class="line ">echo -e 'one\\\ntwo\n' &gt; $tmp</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>369</td>
+  <td id=L369>
+    <span class="line ">read escaped &lt; $tmp</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>370</td>
+  <td id=L370>
+    <span class="line ">read -r raw &lt; $tmp</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>371</td>
+  <td id=L371>
+    <span class="line ">argv.py "$escaped" "$raw"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>372</td>
+  <td id=L372>
+    <span class="line comm">## stdout: ['onetwo', 'one\\']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>373</td>
+  <td id=L373>
+    <span class="line comm">## N-I dash stdout: ['-e onetwo', '-e one\\']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>374</td>
+  <td id=L374>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>375</td>
+  <td id=L375>
+    <span class="line spec-comment">#### read multiple vars spanning many lines</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>376</td>
+  <td id=L376>
+    <span class="line ">read x y &lt;&lt; 'EOF'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>377</td>
+  <td id=L377>
+    <span class="line ">one-\</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>378</td>
+  <td id=L378>
+    <span class="line ">two three-\</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>379</td>
+  <td id=L379>
+    <span class="line ">four five-\</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>380</td>
+  <td id=L380>
+    <span class="line ">six</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>381</td>
+  <td id=L381>
+    <span class="line ">EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>382</td>
+  <td id=L382>
+    <span class="line ">argv.py "$x" "$y" "$z"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>383</td>
+  <td id=L383>
+    <span class="line comm">## stdout: ['one-two', 'three-four five-six', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>384</td>
+  <td id=L384>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>385</td>
+  <td id=L385>
+    <span class="line spec-comment">#### read -r with \n</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>386</td>
+  <td id=L386>
+    <span class="line ">echo '\nline' &gt; $TMP/readr.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>387</td>
+  <td id=L387>
+    <span class="line ">read escaped &lt; $TMP/readr.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>388</td>
+  <td id=L388>
+    <span class="line ">read -r raw &lt; $TMP/readr.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>389</td>
+  <td id=L389>
+    <span class="line ">argv.py "$escaped" "$raw"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>390</td>
+  <td id=L390>
+    <span class="line comm"># dash/mksh/zsh are bugs because at least the raw mode should let you read a</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>391</td>
+  <td id=L391>
+    <span class="line comm"># literal \n.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>392</td>
+  <td id=L392>
+    <span class="line comm">## stdout: ['nline', '\\nline']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>393</td>
+  <td id=L393>
+    <span class="line comm">## BUG dash/mksh/zsh stdout: ['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>394</td>
+  <td id=L394>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>395</td>
+  <td id=L395>
+    <span class="line spec-comment">#### read -s from pipe, not a terminal</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>396</td>
+  <td id=L396>
+    <span class="line ">case $SH in dash|zsh) exit ;; esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>397</td>
+  <td id=L397>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>398</td>
+  <td id=L398>
+    <span class="line comm"># It's hard to really test this because it requires a terminal.  We hit a</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>399</td>
+  <td id=L399>
+    <span class="line comm"># different code path when reading through a pipe.  There can be bugs there</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>400</td>
+  <td id=L400>
+    <span class="line comm"># too!</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>401</td>
+  <td id=L401>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>402</td>
+  <td id=L402>
+    <span class="line ">echo foo | { read -s; echo $REPLY; }</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>403</td>
+  <td id=L403>
+    <span class="line ">echo bar | { read -n 2 -s; echo $REPLY; }</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>404</td>
+  <td id=L404>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>405</td>
+  <td id=L405>
+    <span class="line comm"># Hm no exit 1 here?  Weird</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>406</td>
+  <td id=L406>
+    <span class="line ">echo b | { read -n 2 -s; echo $?; echo $REPLY; }</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>407</td>
+  <td id=L407>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>408</td>
+  <td id=L408>
+    <span class="line ">foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>409</td>
+  <td id=L409>
+    <span class="line ">ba</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>410</td>
+  <td id=L410>
+    <span class="line ">0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>411</td>
+  <td id=L411>
+    <span class="line ">b</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>412</td>
+  <td id=L412>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>413</td>
+  <td id=L413>
+    <span class="line comm">## N-I dash/zsh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>414</td>
+  <td id=L414>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>415</td>
+  <td id=L415>
+    <span class="line spec-comment">#### read with IFS=$'\n'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>416</td>
+  <td id=L416>
+    <span class="line comm"># The leading spaces are stripped if they appear in IFS.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>417</td>
+  <td id=L417>
+    <span class="line ">IFS=$(echo -e '\n')</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>418</td>
+  <td id=L418>
+    <span class="line ">read var &lt;&lt;EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>419</td>
+  <td id=L419>
+    <span class="line ">  a b c</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>420</td>
+  <td id=L420>
+    <span class="line ">  d e f</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>421</td>
+  <td id=L421>
+    <span class="line ">EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>422</td>
+  <td id=L422>
+    <span class="line ">echo "[$var]"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>423</td>
+  <td id=L423>
+    <span class="line comm">## stdout: [  a b c]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>424</td>
+  <td id=L424>
+    <span class="line comm">## N-I dash stdout: [a b c]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>425</td>
+  <td id=L425>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>426</td>
+  <td id=L426>
+    <span class="line spec-comment">#### read multiple lines with IFS=:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>427</td>
+  <td id=L427>
+    <span class="line comm"># The leading spaces are stripped if they appear in IFS.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>428</td>
+  <td id=L428>
+    <span class="line comm"># IFS chars are escaped with :.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>429</td>
+  <td id=L429>
+    <span class="line ">tmp=$TMP/$(basename $SH)-read-ifs.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>430</td>
+  <td id=L430>
+    <span class="line ">IFS=:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>431</td>
+  <td id=L431>
+    <span class="line ">cat &gt;$tmp &lt;&lt;'EOF'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>432</td>
+  <td id=L432>
+    <span class="line ">  \\a :b\: c:d\</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>433</td>
+  <td id=L433>
+    <span class="line ">  e</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>434</td>
+  <td id=L434>
+    <span class="line ">EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>435</td>
+  <td id=L435>
+    <span class="line ">read a b c d &lt; $tmp</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>436</td>
+  <td id=L436>
+    <span class="line comm"># Use printf because echo in dash/mksh interprets escapes, while it doesn't in</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>437</td>
+  <td id=L437>
+    <span class="line comm"># bash.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>438</td>
+  <td id=L438>
+    <span class="line ">printf "%s\n" "[$a|$b|$c|$d]"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>439</td>
+  <td id=L439>
+    <span class="line comm">## stdout: [  \a |b: c|d  e|]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>440</td>
+  <td id=L440>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>441</td>
+  <td id=L441>
+    <span class="line spec-comment">#### read with IFS=''</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>442</td>
+  <td id=L442>
+    <span class="line ">IFS=''</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>443</td>
+  <td id=L443>
+    <span class="line ">read x y &lt;&lt;EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>444</td>
+  <td id=L444>
+    <span class="line ">  a b c d</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>445</td>
+  <td id=L445>
+    <span class="line ">EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>446</td>
+  <td id=L446>
+    <span class="line ">echo "[$x|$y]"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>447</td>
+  <td id=L447>
+    <span class="line comm">## stdout: [  a b c d|]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>448</td>
+  <td id=L448>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>449</td>
+  <td id=L449>
+    <span class="line spec-comment">#### read does not respect C backslash escapes</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>450</td>
+  <td id=L450>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>451</td>
+  <td id=L451>
+    <span class="line comm"># bash doesn't respect these, but other shells do.  Gah!  I think bash</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>452</td>
+  <td id=L452>
+    <span class="line comm"># behavior makes more sense.  It only escapes IFS.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>453</td>
+  <td id=L453>
+    <span class="line ">echo '\a \b \c \d \e \f \g \h \x65 \145 \i' &gt; $TMP/read-c.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>454</td>
+  <td id=L454>
+    <span class="line ">read line &lt; $TMP/read-c.txt</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>455</td>
+  <td id=L455>
+    <span class="line ">echo $line</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>456</td>
+  <td id=L456>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>457</td>
+  <td id=L457>
+    <span class="line ">a b c d e f g h x65 145 i</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>458</td>
+  <td id=L458>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>459</td>
+  <td id=L459>
+    <span class="line comm">## BUG ash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>460</td>
+  <td id=L460>
+    <span class="line ">abcdefghx65 145 i</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>461</td>
+  <td id=L461>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>462</td>
+  <td id=L462>
+    <span class="line comm">## BUG dash/zsh stdout-json: "\u0007 \u0008\n"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>463</td>
+  <td id=L463>
+    <span class="line comm">## BUG mksh stdout-json: "\u0007 \u0008 d \u001b \u000c g h e 145 i\n"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>464</td>
+  <td id=L464>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>465</td>
+  <td id=L465>
+    <span class="line spec-comment">#### dynamic scope used to set vars</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>466</td>
+  <td id=L466>
+    <span class="line ">f() {</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>467</td>
+  <td id=L467>
+    <span class="line ">  read head &lt;&lt; EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>468</td>
+  <td id=L468>
+    <span class="line ">ref: refs/heads/dev/andy</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>469</td>
+  <td id=L469>
+    <span class="line ">EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>470</td>
+  <td id=L470>
+    <span class="line ">}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>471</td>
+  <td id=L471>
+    <span class="line ">f</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>472</td>
+  <td id=L472>
+    <span class="line ">echo $head</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>473</td>
+  <td id=L473>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>474</td>
+  <td id=L474>
+    <span class="line ">ref: refs/heads/dev/andy</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>475</td>
+  <td id=L475>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>476</td>
+  <td id=L476>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>477</td>
+  <td id=L477>
+    <span class="line spec-comment">#### read -a reads into array</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>478</td>
+  <td id=L478>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>479</td>
+  <td id=L479>
+    <span class="line comm"># read -a is used in bash-completion</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>480</td>
+  <td id=L480>
+    <span class="line comm"># none of these shells implement it</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>481</td>
+  <td id=L481>
+    <span class="line ">case $SH in</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>482</td>
+  <td id=L482>
+    <span class="line ">  *mksh|*dash|*zsh|*/ash)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>483</td>
+  <td id=L483>
+    <span class="line ">    exit 2;</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>484</td>
+  <td id=L484>
+    <span class="line ">    ;;</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>485</td>
+  <td id=L485>
+    <span class="line ">esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>486</td>
+  <td id=L486>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>487</td>
+  <td id=L487>
+    <span class="line ">read -a myarray &lt;&lt;'EOF'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>488</td>
+  <td id=L488>
+    <span class="line ">a b c\ d</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>489</td>
+  <td id=L489>
+    <span class="line ">EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>490</td>
+  <td id=L490>
+    <span class="line ">argv.py "${myarray[@]}"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>491</td>
+  <td id=L491>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>492</td>
+  <td id=L492>
+    <span class="line comm"># arguments are ignored here</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>493</td>
+  <td id=L493>
+    <span class="line ">read -r -a array2 extra arguments &lt;&lt;'EOF'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>494</td>
+  <td id=L494>
+    <span class="line ">a b c\ d</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>495</td>
+  <td id=L495>
+    <span class="line ">EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>496</td>
+  <td id=L496>
+    <span class="line ">argv.py "${array2[@]}"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>497</td>
+  <td id=L497>
+    <span class="line ">argv.py "${extra[@]}"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>498</td>
+  <td id=L498>
+    <span class="line ">argv.py "${arguments[@]}"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>499</td>
+  <td id=L499>
+    <span class="line comm">## status: 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>500</td>
+  <td id=L500>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>501</td>
+  <td id=L501>
+    <span class="line ">['a', 'b', 'c d']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>502</td>
+  <td id=L502>
+    <span class="line ">['a', 'b', 'c\\', 'd']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>503</td>
+  <td id=L503>
+    <span class="line ">[]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>504</td>
+  <td id=L504>
+    <span class="line ">[]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>505</td>
+  <td id=L505>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>506</td>
+  <td id=L506>
+    <span class="line comm">## N-I dash/mksh/zsh/ash status: 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>507</td>
+  <td id=L507>
+    <span class="line comm">## N-I dash/mksh/zsh/ash stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>508</td>
+  <td id=L508>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>509</td>
+  <td id=L509>
+    <span class="line spec-comment">#### read -d : (colon-separated records)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>510</td>
+  <td id=L510>
+    <span class="line ">printf a,b,c:d,e,f:g,h,i | {</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>511</td>
+  <td id=L511>
+    <span class="line ">  IFS=,</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>512</td>
+  <td id=L512>
+    <span class="line ">  read -d : v1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>513</td>
+  <td id=L513>
+    <span class="line ">  echo "v1=$v1"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>514</td>
+  <td id=L514>
+    <span class="line ">  read -d : v1 v2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>515</td>
+  <td id=L515>
+    <span class="line ">  echo "v1=$v1 v2=$v2"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>516</td>
+  <td id=L516>
+    <span class="line ">  read -d : v1 v2 v3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>517</td>
+  <td id=L517>
+    <span class="line ">  echo "v1=$v1 v2=$v2 v3=$v3"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>518</td>
+  <td id=L518>
+    <span class="line ">}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>519</td>
+  <td id=L519>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>520</td>
+  <td id=L520>
+    <span class="line ">v1=a,b,c</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>521</td>
+  <td id=L521>
+    <span class="line ">v1=d v2=e,f</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>522</td>
+  <td id=L522>
+    <span class="line ">v1=g v2=h v3=i</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>523</td>
+  <td id=L523>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>524</td>
+  <td id=L524>
+    <span class="line comm">## N-I dash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>525</td>
+  <td id=L525>
+    <span class="line ">v1=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>526</td>
+  <td id=L526>
+    <span class="line ">v1= v2=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>527</td>
+  <td id=L527>
+    <span class="line ">v1= v2= v3=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>528</td>
+  <td id=L528>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>529</td>
+  <td id=L529>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>530</td>
+  <td id=L530>
+    <span class="line spec-comment">#### read -d '' (null-separated records)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>531</td>
+  <td id=L531>
+    <span class="line ">printf 'a,b,c\0d,e,f\0g,h,i' | {</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>532</td>
+  <td id=L532>
+    <span class="line ">  IFS=,</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>533</td>
+  <td id=L533>
+    <span class="line ">  read -d '' v1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>534</td>
+  <td id=L534>
+    <span class="line ">  echo "v1=$v1"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>535</td>
+  <td id=L535>
+    <span class="line ">  read -d '' v1 v2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>536</td>
+  <td id=L536>
+    <span class="line ">  echo "v1=$v1 v2=$v2"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>537</td>
+  <td id=L537>
+    <span class="line ">  read -d '' v1 v2 v3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>538</td>
+  <td id=L538>
+    <span class="line ">  echo "v1=$v1 v2=$v2 v3=$v3"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>539</td>
+  <td id=L539>
+    <span class="line ">}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>540</td>
+  <td id=L540>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>541</td>
+  <td id=L541>
+    <span class="line ">v1=a,b,c</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>542</td>
+  <td id=L542>
+    <span class="line ">v1=d v2=e,f</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>543</td>
+  <td id=L543>
+    <span class="line ">v1=g v2=h v3=i</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>544</td>
+  <td id=L544>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>545</td>
+  <td id=L545>
+    <span class="line comm">## N-I dash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>546</td>
+  <td id=L546>
+    <span class="line ">v1=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>547</td>
+  <td id=L547>
+    <span class="line ">v1= v2=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>548</td>
+  <td id=L548>
+    <span class="line ">v1= v2= v3=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>549</td>
+  <td id=L549>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>550</td>
+  <td id=L550>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>551</td>
+  <td id=L551>
+    <span class="line spec-comment">#### read -rd</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>552</td>
+  <td id=L552>
+    <span class="line ">read -rd '' var &lt;&lt;EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>553</td>
+  <td id=L553>
+    <span class="line ">foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>554</td>
+  <td id=L554>
+    <span class="line ">bar</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>555</td>
+  <td id=L555>
+    <span class="line ">EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>556</td>
+  <td id=L556>
+    <span class="line ">echo "$var"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>557</td>
+  <td id=L557>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>558</td>
+  <td id=L558>
+    <span class="line ">foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>559</td>
+  <td id=L559>
+    <span class="line ">bar</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>560</td>
+  <td id=L560>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>561</td>
+  <td id=L561>
+    <span class="line comm">## N-I dash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>562</td>
+  <td id=L562>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>563</td>
+  <td id=L563>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>564</td>
+  <td id=L564>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>565</td>
+  <td id=L565>
+    <span class="line spec-comment">#### read -d when there's no delimiter</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>566</td>
+  <td id=L566>
+    <span class="line ">{ read -d : part</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>567</td>
+  <td id=L567>
+    <span class="line ">  echo $part $?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>568</td>
+  <td id=L568>
+    <span class="line ">  read -d : part</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>569</td>
+  <td id=L569>
+    <span class="line ">  echo $part $?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>570</td>
+  <td id=L570>
+    <span class="line ">} &lt;&lt;EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>571</td>
+  <td id=L571>
+    <span class="line ">foo:bar</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>572</td>
+  <td id=L572>
+    <span class="line ">EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>573</td>
+  <td id=L573>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>574</td>
+  <td id=L574>
+    <span class="line ">foo 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>575</td>
+  <td id=L575>
+    <span class="line ">bar 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>576</td>
+  <td id=L576>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>577</td>
+  <td id=L577>
+    <span class="line comm">## N-I dash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>578</td>
+  <td id=L578>
+    <span class="line ">2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>579</td>
+  <td id=L579>
+    <span class="line ">2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>580</td>
+  <td id=L580>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>581</td>
+  <td id=L581>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>582</td>
+  <td id=L582>
+    <span class="line spec-comment">#### read -t 0 tests if input is available</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>583</td>
+  <td id=L583>
+    <span class="line ">case $SH in dash|zsh|mksh) exit ;; esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>584</td>
+  <td id=L584>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>585</td>
+  <td id=L585>
+    <span class="line comm"># is there input available?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>586</td>
+  <td id=L586>
+    <span class="line ">read -t 0 &lt; /dev/null</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>587</td>
+  <td id=L587>
+    <span class="line ">echo $?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>588</td>
+  <td id=L588>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>589</td>
+  <td id=L589>
+    <span class="line comm"># floating point</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>590</td>
+  <td id=L590>
+    <span class="line ">read -t 0.0 &lt; /dev/null</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>591</td>
+  <td id=L591>
+    <span class="line ">echo $?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>592</td>
+  <td id=L592>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>593</td>
+  <td id=L593>
+    <span class="line comm"># floating point</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>594</td>
+  <td id=L594>
+    <span class="line ">echo foo | { read -t 0; echo reply=$REPLY; }</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>595</td>
+  <td id=L595>
+    <span class="line ">echo $?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>596</td>
+  <td id=L596>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>597</td>
+  <td id=L597>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>598</td>
+  <td id=L598>
+    <span class="line ">0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>599</td>
+  <td id=L599>
+    <span class="line ">0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>600</td>
+  <td id=L600>
+    <span class="line ">reply=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>601</td>
+  <td id=L601>
+    <span class="line ">0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>602</td>
+  <td id=L602>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>603</td>
+  <td id=L603>
+    <span class="line comm">## N-I dash/zsh/mksh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>604</td>
+  <td id=L604>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>605</td>
+  <td id=L605>
+    <span class="line spec-comment">#### read -t 0.5</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>606</td>
+  <td id=L606>
+    <span class="line ">case $SH in dash) exit ;; esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>607</td>
+  <td id=L607>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>608</td>
+  <td id=L608>
+    <span class="line ">read -t 0.5 &lt; /dev/null</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>609</td>
+  <td id=L609>
+    <span class="line ">echo $?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>610</td>
+  <td id=L610>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>611</td>
+  <td id=L611>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>612</td>
+  <td id=L612>
+    <span class="line ">1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>613</td>
+  <td id=L613>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>614</td>
+  <td id=L614>
+    <span class="line comm">## BUG zsh/mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>615</td>
+  <td id=L615>
+    <span class="line ">1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>616</td>
+  <td id=L616>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>617</td>
+  <td id=L617>
+    <span class="line comm">## N-I dash stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>618</td>
+  <td id=L618>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>619</td>
+  <td id=L619>
+    <span class="line spec-comment">#### read -t -0.5 is invalid</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>620</td>
+  <td id=L620>
+    <span class="line comm"># bash appears to just take the absolute value?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>621</td>
+  <td id=L621>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>622</td>
+  <td id=L622>
+    <span class="line ">read -t -0.5 &lt; /dev/null</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>623</td>
+  <td id=L623>
+    <span class="line ">echo $?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>624</td>
+  <td id=L624>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>625</td>
+  <td id=L625>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>626</td>
+  <td id=L626>
+    <span class="line ">2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>627</td>
+  <td id=L627>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>628</td>
+  <td id=L628>
+    <span class="line comm">## BUG bash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>629</td>
+  <td id=L629>
+    <span class="line ">1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>630</td>
+  <td id=L630>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>631</td>
+  <td id=L631>
+    <span class="line comm">## BUG zsh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>632</td>
+  <td id=L632>
+    <span class="line comm">## BUG zsh status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>633</td>
+  <td id=L633>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>634</td>
+  <td id=L634>
+    <span class="line spec-comment">#### read -u</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>635</td>
+  <td id=L635>
+    <span class="line ">case $SH in dash|mksh) exit ;; esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>636</td>
+  <td id=L636>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>637</td>
+  <td id=L637>
+    <span class="line comm"># file descriptor</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>638</td>
+  <td id=L638>
+    <span class="line ">read -u 3 3&lt;&lt;EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>639</td>
+  <td id=L639>
+    <span class="line ">hi</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>640</td>
+  <td id=L640>
+    <span class="line ">EOF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>641</td>
+  <td id=L641>
+    <span class="line ">echo reply=$REPLY</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>642</td>
+  <td id=L642>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>643</td>
+  <td id=L643>
+    <span class="line ">reply=hi</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>644</td>
+  <td id=L644>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>645</td>
+  <td id=L645>
+    <span class="line comm">## N-I dash/mksh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>646</td>
+  <td id=L646>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>647</td>
+  <td id=L647>
+    <span class="line spec-comment">#### read -u syntax error</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>648</td>
+  <td id=L648>
+    <span class="line ">read -u -3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>649</td>
+  <td id=L649>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>650</td>
+  <td id=L650>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>651</td>
+  <td id=L651>
+    <span class="line ">status=2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>652</td>
+  <td id=L652>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>653</td>
+  <td id=L653>
+    <span class="line comm">## OK bash/zsh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>654</td>
+  <td id=L654>
+    <span class="line ">status=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>655</td>
+  <td id=L655>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>656</td>
+  <td id=L656>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>657</td>
+  <td id=L657>
+    <span class="line spec-comment">#### read -N doesn't respect delimiter, while read -n does</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>658</td>
+  <td id=L658>
+    <span class="line ">case $SH in dash|zsh|ash) exit ;; esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>659</td>
+  <td id=L659>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>660</td>
+  <td id=L660>
+    <span class="line ">echo foobar | { read -n 5 -d b; echo $REPLY; }</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>661</td>
+  <td id=L661>
+    <span class="line ">echo foobar | { read -N 5 -d b; echo $REPLY; }</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>662</td>
+  <td id=L662>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>663</td>
+  <td id=L663>
+    <span class="line ">foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>664</td>
+  <td id=L664>
+    <span class="line ">fooba</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>665</td>
+  <td id=L665>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>666</td>
+  <td id=L666>
+    <span class="line comm">## OK mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>667</td>
+  <td id=L667>
+    <span class="line ">fooba</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>668</td>
+  <td id=L668>
+    <span class="line ">fooba</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>669</td>
+  <td id=L669>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>670</td>
+  <td id=L670>
+    <span class="line comm">## N-I dash/zsh/ash stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>671</td>
+  <td id=L671>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>672</td>
+  <td id=L672>
+    <span class="line spec-comment">#### read -p (not fully tested)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>673</td>
+  <td id=L673>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>674</td>
+  <td id=L674>
+    <span class="line comm"># hm DISABLED if we're not going to the terminal</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>675</td>
+  <td id=L675>
+    <span class="line comm"># so we're only testing that it accepts the flag here</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>676</td>
+  <td id=L676>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>677</td>
+  <td id=L677>
+    <span class="line ">case $SH in dash|mksh|zsh) exit ;; esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>678</td>
+  <td id=L678>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>679</td>
+  <td id=L679>
+    <span class="line ">echo hi | { read -p 'P'; echo $REPLY; }</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>680</td>
+  <td id=L680>
+    <span class="line ">echo hi | { read -p 'P' -n 1; echo $REPLY; }</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>681</td>
+  <td id=L681>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>682</td>
+  <td id=L682>
+    <span class="line ">hi</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>683</td>
+  <td id=L683>
+    <span class="line ">h</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>684</td>
+  <td id=L684>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>685</td>
+  <td id=L685>
+    <span class="line comm">## stderr-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>686</td>
+  <td id=L686>
+    <span class="line comm">## N-I dash/mksh/zsh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>687</td>
+  <td id=L687>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>688</td>
+  <td id=L688>
+    <span class="line spec-comment">#### read usage</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>689</td>
+  <td id=L689>
+    <span class="line ">read -n -1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>690</td>
+  <td id=L690>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>691</td>
+  <td id=L691>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>692</td>
+  <td id=L692>
+    <span class="line ">status=2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>693</td>
+  <td id=L693>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>694</td>
+  <td id=L694>
+    <span class="line comm">## OK bash stdout: status=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>695</td>
+  <td id=L695>
+    <span class="line comm">## BUG mksh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>696</td>
+  <td id=L696>
+    <span class="line comm"># zsh gives a fatal error?  seems inconsistent</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>697</td>
+  <td id=L697>
+    <span class="line comm">## BUG zsh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>698</td>
+  <td id=L698>
+    <span class="line comm">## BUG zsh status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>699</td>
+  <td id=L699>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>700</td>
+  <td id=L700>
+    <span class="line spec-comment">#### read with smooshed args</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>701</td>
+  <td id=L701>
+    <span class="line ">echo hi | { read -rn1 var; echo var=$var; }</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>702</td>
+  <td id=L702>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>703</td>
+  <td id=L703>
+    <span class="line ">var=h</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>704</td>
+  <td id=L704>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>705</td>
+  <td id=L705>
+    <span class="line comm">## N-I dash/zsh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>706</td>
+  <td id=L706>
+    <span class="line ">var=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>707</td>
+  <td id=L707>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>708</td>
+  <td id=L708>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>709</td>
+  <td id=L709>
+    <span class="line spec-comment">#### read -r -d '' for NUL strings, e.g. find -print0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>710</td>
+  <td id=L710>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>711</td>
+  <td id=L711>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>712</td>
+  <td id=L712>
+    <span class="line ">case $SH in dash|zsh|mksh) exit ;; esac  # NOT IMPLEMENTED</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>713</td>
+  <td id=L713>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>714</td>
+  <td id=L714>
+    <span class="line ">mkdir -p read0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>715</td>
+  <td id=L715>
+    <span class="line ">cd read0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>716</td>
+  <td id=L716>
+    <span class="line ">rm -f *</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>717</td>
+  <td id=L717>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>718</td>
+  <td id=L718>
+    <span class="line ">touch a\\b\\c\\d  # -r is necessary!</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>719</td>
+  <td id=L719>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>720</td>
+  <td id=L720>
+    <span class="line ">find . -type f -a -print0 | { read -r -d ''; echo "[$REPLY]"; }</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>721</td>
+  <td id=L721>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>722</td>
+  <td id=L722>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>723</td>
+  <td id=L723>
+    <span class="line ">[./a\b\c\d]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>724</td>
+  <td id=L724>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>725</td>
+  <td id=L725>
+    <span class="line comm">## N-I dash/zsh/mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>726</td>
+  <td id=L726>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>727</td>
+  <td id=L727>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>728</td>
+  <td id=L728>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>729</td>
+  <td id=L729>
+    <span class="line spec-comment">#### read from redirected directory is non-fatal error</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>730</td>
+  <td id=L730>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>731</td>
+  <td id=L731>
+    <span class="line comm"># This tickles an infinite loop bug in our version of mksh!  TODO: upgrade the</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>732</td>
+  <td id=L732>
+    <span class="line comm"># version and enable this</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>733</td>
+  <td id=L733>
+    <span class="line ">case $SH in mksh) return ;; esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>734</td>
+  <td id=L734>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>735</td>
+  <td id=L735>
+    <span class="line ">cd $TMP</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>736</td>
+  <td id=L736>
+    <span class="line ">mkdir -p dir</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>737</td>
+  <td id=L737>
+    <span class="line ">read x &lt; ./dir</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>738</td>
+  <td id=L738>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>739</td>
+  <td id=L739>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>740</td>
+  <td id=L740>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>741</td>
+  <td id=L741>
+    <span class="line ">status=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>742</td>
+  <td id=L742>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>743</td>
+  <td id=L743>
+    <span class="line comm"># OK mksh stdout: status=2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>744</td>
+  <td id=L744>
+    <span class="line comm">## OK mksh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>745</td>
+  <td id=L745>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>746</td>
+  <td id=L746>
+    <span class="line spec-comment">#### read -n from directory</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>747</td>
+  <td id=L747>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>748</td>
+  <td id=L748>
+    <span class="line ">case $SH in dash|ash) return ;; esac  # not implemented</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>749</td>
+  <td id=L749>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>750</td>
+  <td id=L750>
+    <span class="line comm"># same hanging bug</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>751</td>
+  <td id=L751>
+    <span class="line ">case $SH in mksh) return ;; esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>752</td>
+  <td id=L752>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>753</td>
+  <td id=L753>
+    <span class="line ">mkdir -p dir</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>754</td>
+  <td id=L754>
+    <span class="line ">read -n 3 x &lt; ./dir</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>755</td>
+  <td id=L755>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>756</td>
+  <td id=L756>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>757</td>
+  <td id=L757>
+    <span class="line ">status=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>758</td>
+  <td id=L758>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>759</td>
+  <td id=L759>
+    <span class="line comm">## OK mksh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>760</td>
+  <td id=L760>
+    <span class="line comm">## N-I dash/ash stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>761</td>
+  <td id=L761>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>762</td>
+  <td id=L762>
+    <span class="line spec-comment">#### mapfile from directory (bash doesn't handle errors)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>763</td>
+  <td id=L763>
+    <span class="line ">case $SH in dash|ash|mksh|zsh) return ;; esac  # not implemented</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>764</td>
+  <td id=L764>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>765</td>
+  <td id=L765>
+    <span class="line ">mkdir -p dir</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>766</td>
+  <td id=L766>
+    <span class="line ">mapfile $x &lt; ./dir</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>767</td>
+  <td id=L767>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>768</td>
+  <td id=L768>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>769</td>
+  <td id=L769>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>770</td>
+  <td id=L770>
+    <span class="line ">status=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>771</td>
+  <td id=L771>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>772</td>
+  <td id=L772>
+    <span class="line comm">## BUG bash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>773</td>
+  <td id=L773>
+    <span class="line ">status=0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>774</td>
+  <td id=L774>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>775</td>
+  <td id=L775>
+    <span class="line comm">## N-I dash/ash/mksh/zsh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>776</td>
+  <td id=L776>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>777</td>
+  <td id=L777>
+    <span class="line spec-comment">#### read -n 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>778</td>
+  <td id=L778>
+    <span class="line ">case $SH in zsh) exit 99;; esac  # read -n not implemented</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>779</td>
+  <td id=L779>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>780</td>
+  <td id=L780>
+    <span class="line ">echo 'a\b\c\d\e\f' | (read -n 0; argv.py "$REPLY")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>781</td>
+  <td id=L781>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>782</td>
+  <td id=L782>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>783</td>
+  <td id=L783>
+    <span class="line ">['']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>784</td>
+  <td id=L784>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>785</td>
+  <td id=L785>
+    <span class="line comm"># ash appears to treat 0 as unspecified</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>786</td>
+  <td id=L786>
+    <span class="line comm">## OK ash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>787</td>
+  <td id=L787>
+    <span class="line ">['abcdef']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>788</td>
+  <td id=L788>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>789</td>
+  <td id=L789>
+    <span class="line comm">## N-I zsh status: 99</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>790</td>
+  <td id=L790>
+    <span class="line comm">## N-I zsh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>791</td>
+  <td id=L791>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>792</td>
+  <td id=L792>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>793</td>
+  <td id=L793>
+    <span class="line spec-comment">#### read -n and backslash escape</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>794</td>
+  <td id=L794>
+    <span class="line ">case $SH in zsh) exit 99;; esac  # read -n not implemented</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>795</td>
+  <td id=L795>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>796</td>
+  <td id=L796>
+    <span class="line ">echo 'a\b\c\d\e\f' | (read -n 5; argv.py "$REPLY")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>797</td>
+  <td id=L797>
+    <span class="line ">echo 'a\ \ \ \ \ ' | (read -n 5; argv.py "$REPLY")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>798</td>
+  <td id=L798>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>799</td>
+  <td id=L799>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>800</td>
+  <td id=L800>
+    <span class="line ">['abcde']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>801</td>
+  <td id=L801>
+    <span class="line ">['a    ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>802</td>
+  <td id=L802>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>803</td>
+  <td id=L803>
+    <span class="line comm">## OK mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>804</td>
+  <td id=L804>
+    <span class="line ">['a\x08d\x1b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>805</td>
+  <td id=L805>
+    <span class="line ">['a ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>806</td>
+  <td id=L806>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>807</td>
+  <td id=L807>
+    <span class="line comm">## OK ash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>808</td>
+  <td id=L808>
+    <span class="line ">['abc']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>809</td>
+  <td id=L809>
+    <span class="line ">['a  ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>810</td>
+  <td id=L810>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>811</td>
+  <td id=L811>
+    <span class="line comm">## N-I zsh status: 99</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>812</td>
+  <td id=L812>
+    <span class="line comm">## N-I zsh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>813</td>
+  <td id=L813>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>814</td>
+  <td id=L814>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>815</td>
+  <td id=L815>
+    <span class="line spec-comment">#### read -n 4 with incomplete backslash</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>816</td>
+  <td id=L816>
+    <span class="line ">case $SH in zsh) exit 99;; esac  # read -n not implemented</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>817</td>
+  <td id=L817>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>818</td>
+  <td id=L818>
+    <span class="line ">echo 'abc\def\ghijklmn' | (read -n 4; argv.py "$REPLY")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>819</td>
+  <td id=L819>
+    <span class="line ">echo '   \xxx\xxxxxxxx' | (read -n 4; argv.py "$REPLY")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>820</td>
+  <td id=L820>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>821</td>
+  <td id=L821>
+    <span class="line comm"># bash implements "-n NUM" as number of characters</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>822</td>
+  <td id=L822>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>823</td>
+  <td id=L823>
+    <span class="line ">['abcd']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>824</td>
+  <td id=L824>
+    <span class="line ">['   x']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>825</td>
+  <td id=L825>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>826</td>
+  <td id=L826>
+    <span class="line comm"># ash implements "-n NUM" as number of bytes</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>827</td>
+  <td id=L827>
+    <span class="line comm">## OK-2 ash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>828</td>
+  <td id=L828>
+    <span class="line ">['abc']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>829</td>
+  <td id=L829>
+    <span class="line ">['   ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>830</td>
+  <td id=L830>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>831</td>
+  <td id=L831>
+    <span class="line comm"># mksh implements "-n NUM" as number of bytes, and also "read" (without</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>832</td>
+  <td id=L832>
+    <span class="line comm"># variable names) in mksh is equivalent to "read REPLY, i.e., consideres IFS.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>833</td>
+  <td id=L833>
+    <span class="line comm">## OK-3 mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>834</td>
+  <td id=L834>
+    <span class="line ">['abc']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>835</td>
+  <td id=L835>
+    <span class="line ">['']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>836</td>
+  <td id=L836>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>837</td>
+  <td id=L837>
+    <span class="line comm">## N-I zsh status: 99</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>838</td>
+  <td id=L838>
+    <span class="line comm">## N-I zsh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>839</td>
+  <td id=L839>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>840</td>
+  <td id=L840>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>841</td>
+  <td id=L841>
+    <span class="line spec-comment">#### read -n 4 with backslash + delim</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>842</td>
+  <td id=L842>
+    <span class="line ">case $SH in zsh) exit 99;; esac  # read -n not implemented</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>843</td>
+  <td id=L843>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>844</td>
+  <td id=L844>
+    <span class="line ">echo $'abc\\\ndefg' | (read -n 4; argv.py "$REPLY")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>845</td>
+  <td id=L845>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>846</td>
+  <td id=L846>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>847</td>
+  <td id=L847>
+    <span class="line ">['abcd']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>848</td>
+  <td id=L848>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>849</td>
+  <td id=L849>
+    <span class="line comm"># mksh and ash implements "-n NUM" as number of bytes.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>850</td>
+  <td id=L850>
+    <span class="line comm">## OK-2 mksh/ash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>851</td>
+  <td id=L851>
+    <span class="line ">['abc']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>852</td>
+  <td id=L852>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>853</td>
+  <td id=L853>
+    <span class="line comm">## N-I zsh status: 99</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>854</td>
+  <td id=L854>
+    <span class="line comm">## N-I zsh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>855</td>
+  <td id=L855>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>856</td>
+  <td id=L856>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>857</td>
+  <td id=L857>
+    <span class="line spec-comment">#### "backslash + newline" should be swallowed regardless of "-d &lt;delim&gt;"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>858</td>
+  <td id=L858>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>859</td>
+  <td id=L859>
+    <span class="line ">printf '%s\n' 'a b\' 'c d' | (read; argv.py "$REPLY")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>860</td>
+  <td id=L860>
+    <span class="line ">printf '%s\n' 'a b\,c d'   | (read; argv.py "$REPLY")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>861</td>
+  <td id=L861>
+    <span class="line ">printf '%s\n' 'a b\' 'c d' | (read -d ,; argv.py "$REPLY")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>862</td>
+  <td id=L862>
+    <span class="line ">printf '%s\n' 'a b\,c d'   | (read -d ,; argv.py "$REPLY")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>863</td>
+  <td id=L863>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>864</td>
+  <td id=L864>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>865</td>
+  <td id=L865>
+    <span class="line ">['a bc d']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>866</td>
+  <td id=L866>
+    <span class="line ">['a b,c d']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>867</td>
+  <td id=L867>
+    <span class="line ">['a bc d\n']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>868</td>
+  <td id=L868>
+    <span class="line ">['a b,c d\n']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>869</td>
+  <td id=L869>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>870</td>
+  <td id=L870>
+    <span class="line comm"># mksh/zsh swallows "backslash + delim" instead.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>871</td>
+  <td id=L871>
+    <span class="line comm">## OK-2 mksh/zsh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>872</td>
+  <td id=L872>
+    <span class="line ">['a bc d']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>873</td>
+  <td id=L873>
+    <span class="line ">['a b,c d']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>874</td>
+  <td id=L874>
+    <span class="line ">['a b\nc d']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>875</td>
+  <td id=L875>
+    <span class="line ">['a bc d']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>876</td>
+  <td id=L876>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>877</td>
+  <td id=L877>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>878</td>
+  <td id=L878>
+    <span class="line spec-comment">#### empty input and splitting</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>879</td>
+  <td id=L879>
+    <span class="line ">case $SH in mksh|ash|dash|zsh) exit 99; esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>880</td>
+  <td id=L880>
+    <span class="line ">echo '' | (read -a a; argv.py "${a[@]}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>881</td>
+  <td id=L881>
+    <span class="line ">IFS=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>882</td>
+  <td id=L882>
+    <span class="line ">echo '' | (read -a a; argv.py "${a[@]}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>883</td>
+  <td id=L883>
+    <span class="line ">IFS=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>884</td>
+  <td id=L884>
+    <span class="line ">echo '' | (read -a a; argv.py "${a[@]}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>885</td>
+  <td id=L885>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>886</td>
+  <td id=L886>
+    <span class="line ">[]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>887</td>
+  <td id=L887>
+    <span class="line ">[]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>888</td>
+  <td id=L888>
+    <span class="line ">[]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>889</td>
+  <td id=L889>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>890</td>
+  <td id=L890>
+    <span class="line comm">## N-I mksh/zsh/dash/ash status: 99</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>891</td>
+  <td id=L891>
+    <span class="line comm">## N-I mksh/zsh/dash/ash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>892</td>
+  <td id=L892>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>893</td>
+  <td id=L893>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>894</td>
+  <td id=L894>
+    <span class="line spec-comment">#### IFS='x ' read -a: trailing spaces (unlimited split)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>895</td>
+  <td id=L895>
+    <span class="line ">case $SH in mksh|ash|dash|zsh) exit 99; esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>896</td>
+  <td id=L896>
+    <span class="line ">IFS='x '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>897</td>
+  <td id=L897>
+    <span class="line ">echo 'a b'     | (read -a a; argv.py "${a[@]}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>898</td>
+  <td id=L898>
+    <span class="line ">echo 'a b '    | (read -a a; argv.py "${a[@]}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>899</td>
+  <td id=L899>
+    <span class="line ">echo 'a bx'    | (read -a a; argv.py "${a[@]}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>900</td>
+  <td id=L900>
+    <span class="line ">echo 'a bx '   | (read -a a; argv.py "${a[@]}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>901</td>
+  <td id=L901>
+    <span class="line ">echo 'a b x'   | (read -a a; argv.py "${a[@]}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>902</td>
+  <td id=L902>
+    <span class="line ">echo 'a b x '  | (read -a a; argv.py "${a[@]}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>903</td>
+  <td id=L903>
+    <span class="line ">echo 'a b x x' | (read -a a; argv.py "${a[@]}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>904</td>
+  <td id=L904>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>905</td>
+  <td id=L905>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>906</td>
+  <td id=L906>
+    <span class="line ">['a', 'b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>907</td>
+  <td id=L907>
+    <span class="line ">['a', 'b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>908</td>
+  <td id=L908>
+    <span class="line ">['a', 'b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>909</td>
+  <td id=L909>
+    <span class="line ">['a', 'b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>910</td>
+  <td id=L910>
+    <span class="line ">['a', 'b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>911</td>
+  <td id=L911>
+    <span class="line ">['a', 'b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>912</td>
+  <td id=L912>
+    <span class="line ">['a', 'b', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>913</td>
+  <td id=L913>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>914</td>
+  <td id=L914>
+    <span class="line comm">## N-I mksh/zsh/dash/ash status: 99</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>915</td>
+  <td id=L915>
+    <span class="line comm">## N-I mksh/zsh/dash/ash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>916</td>
+  <td id=L916>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>917</td>
+  <td id=L917>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>918</td>
+  <td id=L918>
+    <span class="line spec-comment">#### IFS='x ' read a b: trailing spaces (with max_split)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>919</td>
+  <td id=L919>
+    <span class="line ">echo 'hello world  test   ' | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>920</td>
+  <td id=L920>
+    <span class="line ">echo '-- IFS=x --'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>921</td>
+  <td id=L921>
+    <span class="line ">IFS='x '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>922</td>
+  <td id=L922>
+    <span class="line ">echo 'a ax  x  '     | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>923</td>
+  <td id=L923>
+    <span class="line ">echo 'a ax  x  x'    | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>924</td>
+  <td id=L924>
+    <span class="line ">echo 'a ax  x  x  '  | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>925</td>
+  <td id=L925>
+    <span class="line ">echo 'a ax  x  x  a' | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>926</td>
+  <td id=L926>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>927</td>
+  <td id=L927>
+    <span class="line ">['hello', 'world  test']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>928</td>
+  <td id=L928>
+    <span class="line ">-- IFS=x --</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>929</td>
+  <td id=L929>
+    <span class="line ">['a', 'ax  x']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>930</td>
+  <td id=L930>
+    <span class="line ">['a', 'ax  x  x']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>931</td>
+  <td id=L931>
+    <span class="line ">['a', 'ax  x  x']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>932</td>
+  <td id=L932>
+    <span class="line ">['a', 'ax  x  x  a']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>933</td>
+  <td id=L933>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>934</td>
+  <td id=L934>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>935</td>
+  <td id=L935>
+    <span class="line spec-comment">#### IFS='x ' read -a: intermediate spaces (unlimited split)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>936</td>
+  <td id=L936>
+    <span class="line ">case $SH in mksh|ash|dash|zsh) exit 99; esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>937</td>
+  <td id=L937>
+    <span class="line ">IFS='x '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>938</td>
+  <td id=L938>
+    <span class="line ">echo 'a x b'   | (read -a a; argv.py "${a[@]}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>939</td>
+  <td id=L939>
+    <span class="line ">echo 'a xx b'  | (read -a a; argv.py "${a[@]}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>940</td>
+  <td id=L940>
+    <span class="line ">echo 'a xxx b' | (read -a a; argv.py "${a[@]}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>941</td>
+  <td id=L941>
+    <span class="line ">echo 'a x xb'  | (read -a a; argv.py "${a[@]}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>942</td>
+  <td id=L942>
+    <span class="line ">echo 'a x x b' | (read -a a; argv.py "${a[@]}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>943</td>
+  <td id=L943>
+    <span class="line ">echo 'ax b'    | (read -a a; argv.py "${a[@]}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>944</td>
+  <td id=L944>
+    <span class="line ">echo 'ax xb'   | (read -a a; argv.py "${a[@]}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>945</td>
+  <td id=L945>
+    <span class="line ">echo 'ax  xb'  | (read -a a; argv.py "${a[@]}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>946</td>
+  <td id=L946>
+    <span class="line ">echo 'ax x xb' | (read -a a; argv.py "${a[@]}")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>947</td>
+  <td id=L947>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>948</td>
+  <td id=L948>
+    <span class="line ">['a', 'b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>949</td>
+  <td id=L949>
+    <span class="line ">['a', '', 'b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>950</td>
+  <td id=L950>
+    <span class="line ">['a', '', '', 'b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>951</td>
+  <td id=L951>
+    <span class="line ">['a', '', 'b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>952</td>
+  <td id=L952>
+    <span class="line ">['a', '', 'b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>953</td>
+  <td id=L953>
+    <span class="line ">['a', 'b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>954</td>
+  <td id=L954>
+    <span class="line ">['a', '', 'b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>955</td>
+  <td id=L955>
+    <span class="line ">['a', '', 'b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>956</td>
+  <td id=L956>
+    <span class="line ">['a', '', '', 'b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>957</td>
+  <td id=L957>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>958</td>
+  <td id=L958>
+    <span class="line comm">## N-I mksh/zsh/dash/ash status: 99</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>959</td>
+  <td id=L959>
+    <span class="line comm">## N-I mksh/zsh/dash/ash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>960</td>
+  <td id=L960>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>961</td>
+  <td id=L961>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>962</td>
+  <td id=L962>
+    <span class="line spec-comment">#### IFS='x ' incomplete backslash</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>963</td>
+  <td id=L963>
+    <span class="line ">echo ' a b \' | (read a; argv.py "$a")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>964</td>
+  <td id=L964>
+    <span class="line ">echo ' a b \' | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>965</td>
+  <td id=L965>
+    <span class="line ">IFS='x '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>966</td>
+  <td id=L966>
+    <span class="line ">echo $'a ax  x    \\\nhello' | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>967</td>
+  <td id=L967>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>968</td>
+  <td id=L968>
+    <span class="line ">['a b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>969</td>
+  <td id=L969>
+    <span class="line ">['a', 'b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>970</td>
+  <td id=L970>
+    <span class="line ">['a', 'ax  x    hello']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>971</td>
+  <td id=L971>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>972</td>
+  <td id=L972>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>973</td>
+  <td id=L973>
+    <span class="line spec-comment">#### IFS='\ ' and backslash escaping</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>974</td>
+  <td id=L974>
+    <span class="line ">IFS='\ '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>975</td>
+  <td id=L975>
+    <span class="line ">echo "hello\ world  test" | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>976</td>
+  <td id=L976>
+    <span class="line ">IFS='\'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>977</td>
+  <td id=L977>
+    <span class="line ">echo "hello\ world  test" | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>978</td>
+  <td id=L978>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>979</td>
+  <td id=L979>
+    <span class="line ">['hello world', 'test']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>980</td>
+  <td id=L980>
+    <span class="line ">['hello world  test', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>981</td>
+  <td id=L981>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>982</td>
+  <td id=L982>
+    <span class="line comm"># In mksh/zsh, IFS='\' is stronger than backslash escaping</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>983</td>
+  <td id=L983>
+    <span class="line comm">## OK mksh/zsh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>984</td>
+  <td id=L984>
+    <span class="line ">['hello', 'world  test']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>985</td>
+  <td id=L985>
+    <span class="line ">['hello', ' world  test']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>986</td>
+  <td id=L986>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>987</td>
+  <td id=L987>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>988</td>
+  <td id=L988>
+    <span class="line spec-comment">#### max_split and backslash escaping</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>989</td>
+  <td id=L989>
+    <span class="line ">echo 'Aa b \ a\ b' | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>990</td>
+  <td id=L990>
+    <span class="line ">echo 'Aa b \ a\ b' | (read a b c; argv.py "$a" "$b" "$c")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>991</td>
+  <td id=L991>
+    <span class="line ">echo 'Aa b \ a\ b' | (read a b c d; argv.py "$a" "$b" "$c" "$d")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>992</td>
+  <td id=L992>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>993</td>
+  <td id=L993>
+    <span class="line ">['Aa', 'b  a b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>994</td>
+  <td id=L994>
+    <span class="line ">['Aa', 'b', ' a b']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>995</td>
+  <td id=L995>
+    <span class="line ">['Aa', 'b', ' a b', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>996</td>
+  <td id=L996>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>997</td>
+  <td id=L997>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>998</td>
+  <td id=L998>
+    <span class="line spec-comment">#### IFS=x read a b &lt;&lt;&lt; xxxxxx</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>999</td>
+  <td id=L999>
+    <span class="line ">IFS='x '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1000</td>
+  <td id=L1000>
+    <span class="line ">echo x     | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1001</td>
+  <td id=L1001>
+    <span class="line ">echo xx    | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1002</td>
+  <td id=L1002>
+    <span class="line ">echo xxx   | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1003</td>
+  <td id=L1003>
+    <span class="line ">echo xxxx  | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1004</td>
+  <td id=L1004>
+    <span class="line ">echo xxxxx | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1005</td>
+  <td id=L1005>
+    <span class="line ">echo '-- spaces --'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1006</td>
+  <td id=L1006>
+    <span class="line ">echo 'x    ' | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1007</td>
+  <td id=L1007>
+    <span class="line ">echo 'xx   ' | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1008</td>
+  <td id=L1008>
+    <span class="line ">echo 'xxx  ' | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1009</td>
+  <td id=L1009>
+    <span class="line ">echo 'xxxx ' | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1010</td>
+  <td id=L1010>
+    <span class="line ">echo 'xxxxx' | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1011</td>
+  <td id=L1011>
+    <span class="line ">echo '-- with char --'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1012</td>
+  <td id=L1012>
+    <span class="line ">echo 'xa    ' | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1013</td>
+  <td id=L1013>
+    <span class="line ">echo 'xax   ' | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1014</td>
+  <td id=L1014>
+    <span class="line ">echo 'xaxx  ' | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1015</td>
+  <td id=L1015>
+    <span class="line ">echo 'xaxxx ' | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1016</td>
+  <td id=L1016>
+    <span class="line ">echo 'xaxxxx' | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1017</td>
+  <td id=L1017>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1018</td>
+  <td id=L1018>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1019</td>
+  <td id=L1019>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1020</td>
+  <td id=L1020>
+    <span class="line ">['', 'xx']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1021</td>
+  <td id=L1021>
+    <span class="line ">['', 'xxx']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1022</td>
+  <td id=L1022>
+    <span class="line ">['', 'xxxx']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1023</td>
+  <td id=L1023>
+    <span class="line ">-- spaces --</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1024</td>
+  <td id=L1024>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1025</td>
+  <td id=L1025>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1026</td>
+  <td id=L1026>
+    <span class="line ">['', 'xx']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1027</td>
+  <td id=L1027>
+    <span class="line ">['', 'xxx']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1028</td>
+  <td id=L1028>
+    <span class="line ">['', 'xxxx']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1029</td>
+  <td id=L1029>
+    <span class="line ">-- with char --</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1030</td>
+  <td id=L1030>
+    <span class="line ">['', 'a']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1031</td>
+  <td id=L1031>
+    <span class="line ">['', 'a']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1032</td>
+  <td id=L1032>
+    <span class="line ">['', 'axx']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1033</td>
+  <td id=L1033>
+    <span class="line ">['', 'axxx']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1034</td>
+  <td id=L1034>
+    <span class="line ">['', 'axxxx']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1035</td>
+  <td id=L1035>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1036</td>
+  <td id=L1036>
+    <span class="line comm">## OK-2 zsh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1037</td>
+  <td id=L1037>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1038</td>
+  <td id=L1038>
+    <span class="line ">['', 'x']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1039</td>
+  <td id=L1039>
+    <span class="line ">['', 'xx']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1040</td>
+  <td id=L1040>
+    <span class="line ">['', 'xxx']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1041</td>
+  <td id=L1041>
+    <span class="line ">['', 'xxxx']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1042</td>
+  <td id=L1042>
+    <span class="line ">-- spaces --</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1043</td>
+  <td id=L1043>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1044</td>
+  <td id=L1044>
+    <span class="line ">['', 'x']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1045</td>
+  <td id=L1045>
+    <span class="line ">['', 'xx']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1046</td>
+  <td id=L1046>
+    <span class="line ">['', 'xxx']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1047</td>
+  <td id=L1047>
+    <span class="line ">['', 'xxxx']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1048</td>
+  <td id=L1048>
+    <span class="line ">-- with char --</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1049</td>
+  <td id=L1049>
+    <span class="line ">['', 'a']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1050</td>
+  <td id=L1050>
+    <span class="line ">['', 'ax']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1051</td>
+  <td id=L1051>
+    <span class="line ">['', 'axx']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1052</td>
+  <td id=L1052>
+    <span class="line ">['', 'axxx']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1053</td>
+  <td id=L1053>
+    <span class="line ">['', 'axxxx']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1054</td>
+  <td id=L1054>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1055</td>
+  <td id=L1055>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1056</td>
+  <td id=L1056>
+    <span class="line spec-comment">#### read and "\ "</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1057</td>
+  <td id=L1057>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1058</td>
+  <td id=L1058>
+    <span class="line ">IFS='x '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1059</td>
+  <td id=L1059>
+    <span class="line ">check() { echo "$1" | (read a b; argv.py "$a" "$b"); }</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1060</td>
+  <td id=L1060>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1061</td>
+  <td id=L1061>
+    <span class="line ">echo '-- xs... --'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1062</td>
+  <td id=L1062>
+    <span class="line ">check 'x '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1063</td>
+  <td id=L1063>
+    <span class="line ">check 'x \ '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1064</td>
+  <td id=L1064>
+    <span class="line ">check 'x \ \ '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1065</td>
+  <td id=L1065>
+    <span class="line ">check 'x \ \ \ '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1066</td>
+  <td id=L1066>
+    <span class="line ">echo '-- xe... --'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1067</td>
+  <td id=L1067>
+    <span class="line ">check 'x\ '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1068</td>
+  <td id=L1068>
+    <span class="line ">check 'x\ \ '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1069</td>
+  <td id=L1069>
+    <span class="line ">check 'x\ \ \ '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1070</td>
+  <td id=L1070>
+    <span class="line ">check 'x\  '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1071</td>
+  <td id=L1071>
+    <span class="line ">check 'x\  '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1072</td>
+  <td id=L1072>
+    <span class="line ">check 'x\    '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1073</td>
+  <td id=L1073>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1074</td>
+  <td id=L1074>
+    <span class="line comm"># check 'xx\ '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1075</td>
+  <td id=L1075>
+    <span class="line comm"># check 'xx\ '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1076</td>
+  <td id=L1076>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1077</td>
+  <td id=L1077>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1078</td>
+  <td id=L1078>
+    <span class="line ">-- xs... --</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1079</td>
+  <td id=L1079>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1080</td>
+  <td id=L1080>
+    <span class="line ">['', ' ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1081</td>
+  <td id=L1081>
+    <span class="line ">['', '  ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1082</td>
+  <td id=L1082>
+    <span class="line ">['', '   ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1083</td>
+  <td id=L1083>
+    <span class="line ">-- xe... --</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1084</td>
+  <td id=L1084>
+    <span class="line ">['', ' ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1085</td>
+  <td id=L1085>
+    <span class="line ">['', '  ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1086</td>
+  <td id=L1086>
+    <span class="line ">['', '   ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1087</td>
+  <td id=L1087>
+    <span class="line ">['', ' ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1088</td>
+  <td id=L1088>
+    <span class="line ">['', ' ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1089</td>
+  <td id=L1089>
+    <span class="line ">['', ' ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1090</td>
+  <td id=L1090>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1091</td>
+  <td id=L1091>
+    <span class="line comm">## BUG mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1092</td>
+  <td id=L1092>
+    <span class="line ">-- xs... --</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1093</td>
+  <td id=L1093>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1094</td>
+  <td id=L1094>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1095</td>
+  <td id=L1095>
+    <span class="line ">['', ' ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1096</td>
+  <td id=L1096>
+    <span class="line ">['', '  ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1097</td>
+  <td id=L1097>
+    <span class="line ">-- xe... --</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1098</td>
+  <td id=L1098>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1099</td>
+  <td id=L1099>
+    <span class="line ">['', ' ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1100</td>
+  <td id=L1100>
+    <span class="line ">['', '  ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1101</td>
+  <td id=L1101>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1102</td>
+  <td id=L1102>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1103</td>
+  <td id=L1103>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1104</td>
+  <td id=L1104>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1105</td>
+  <td id=L1105>
+    <span class="line comm">## OK-2 zsh/ash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1106</td>
+  <td id=L1106>
+    <span class="line ">-- xs... --</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1107</td>
+  <td id=L1107>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1108</td>
+  <td id=L1108>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1109</td>
+  <td id=L1109>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1110</td>
+  <td id=L1110>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1111</td>
+  <td id=L1111>
+    <span class="line ">-- xe... --</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1112</td>
+  <td id=L1112>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1113</td>
+  <td id=L1113>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1114</td>
+  <td id=L1114>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1115</td>
+  <td id=L1115>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1116</td>
+  <td id=L1116>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1117</td>
+  <td id=L1117>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1118</td>
+  <td id=L1118>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1119</td>
+  <td id=L1119>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1120</td>
+  <td id=L1120>
+    <span class="line spec-comment">#### read bash bug</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1121</td>
+  <td id=L1121>
+    <span class="line ">IFS='x '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1122</td>
+  <td id=L1122>
+    <span class="line ">echo 'x\  \ ' | (read a b; argv.py "$a" "$b")</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1123</td>
+  <td id=L1123>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1124</td>
+  <td id=L1124>
+    <span class="line ">['', '   ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1125</td>
+  <td id=L1125>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1126</td>
+  <td id=L1126>
+    <span class="line comm">## BUG bash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1127</td>
+  <td id=L1127>
+    <span class="line ">['', '\x01']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1128</td>
+  <td id=L1128>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1129</td>
+  <td id=L1129>
+    <span class="line comm">## BUG-2 mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1130</td>
+  <td id=L1130>
+    <span class="line ">['', '  ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1131</td>
+  <td id=L1131>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1132</td>
+  <td id=L1132>
+    <span class="line comm">## OK-3 zsh/ash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1133</td>
+  <td id=L1133>
+    <span class="line ">['', '']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1134</td>
+  <td id=L1134>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1135</td>
+  <td id=L1135>
+    <span class="line comm">## OK-4 osh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1136</td>
+  <td id=L1136>
+    <span class="line ">['', ' ']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>1137</td>
+  <td id=L1137>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+
+        </table>
+      </body>
+    </html>

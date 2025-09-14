@@ -1,0 +1,3132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>var-ref: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for var-ref.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>26</td><td>0</td><td>0</td><td>5</td><td>2</td><td>3</td><td>5</td><td>16</td><td>21</td><td>31</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>31</td><td>31</td><td>26</td><td>29</td><td>28</td><td>26</td><td>15</td><td>10</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L11">var ref ${!a}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"><a href="#details-0-ash">details</a></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L17">${!ref-default}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L33">${!undef:-}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L57">comparison to ${!array[@]} keys (similar SYNTAX)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-3-bash">details</a></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L98">${!a[@]-'default'} is legal but fails with more than one element</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L129">var ref to $@ with @</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L137">var ref to $1 and $2 with 1 and 2</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L149">var ref: 1, @, *</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L161">var ref to special var BASH_SOURCE</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L168">var ref to $? with '?'</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"><a href="#details-9-zsh">details</a></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L181">Var ref, then assignment with ${ := }</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L191">Var ref, then error with ${ ? }</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-dash">details</a></td><td class="details-row"><a href="#details-11-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-11-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L200">Indirect expansion, THEN suffix operators</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-dash">details</a></td><td class="details-row"><a href="#details-12-ash">details</a></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L262">var ref OF array var -- silent a[0] decay</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"><a href="#details-13-ksh">details</a></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L275">array ref</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"><a href="#details-14-ash">details</a></td><td class="details-row"><a href="#details-14-zsh">details</a></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L285">array ref with strict_array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-15-bash">details</a></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"><a href="#details-15-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"><a href="#details-15-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L298">var ref TO array var</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-dash">details</a></td><td class="details-row"><a href="#details-16-ash">details</a></td><td class="details-row"><a href="#details-16-zsh">details</a></td><td class="details-row"><a href="#details-16-mksh">details</a></td><td class="details-row"><a href="#details-16-ksh">details</a></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L314">var ref TO array var, with subscripts</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-dash">details</a></td><td class="details-row"><a href="#details-17-ash">details</a></td><td class="details-row"><a href="#details-17-zsh">details</a></td><td class="details-row"><a href="#details-17-mksh">details</a></td><td class="details-row"><a href="#details-17-ksh">details</a></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L333">var ref TO assoc array a[key]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-dash">details</a></td><td class="details-row"><a href="#details-18-ash">details</a></td><td class="details-row"><a href="#details-18-zsh">details</a></td><td class="details-row"><a href="#details-18-mksh">details</a></td><td class="details-row"><a href="#details-18-ksh">details</a></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L361">var ref TO array with arbitrary subscripts</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-dash">details</a></td><td class="details-row"><a href="#details-19-ash">details</a></td><td class="details-row"><a href="#details-19-zsh">details</a></td><td class="details-row"><a href="#details-19-mksh">details</a></td><td class="details-row"><a href="#details-19-ksh">details</a></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L409">Bizarre tilde expansion in array index</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-dash">details</a></td><td class="details-row"><a href="#details-20-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-20-mksh">details</a></td><td class="details-row"><a href="#details-20-ksh">details</a></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L423">Indirect expansion TO fancy expansion features bash disallows</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-dash">details</a></td><td class="details-row"><a href="#details-21-ash">details</a></td><td class="details-row"><a href="#details-21-zsh">details</a></td><td class="details-row"><a href="#details-21-mksh">details</a></td><td class="details-row"><a href="#details-21-ksh">details</a></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L458">Bad var ref</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-dash">details</a></td><td class="details-row"><a href="#details-22-ash">details</a></td><td class="details-row"><a href="#details-22-zsh">details</a></td><td class="details-row"><a href="#details-22-mksh">details</a></td><td class="details-row"><a href="#details-22-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L467">Bad var ref 2</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-dash">details</a></td><td class="details-row"><a href="#details-23-ash">details</a></td><td class="details-row"><a href="#details-23-zsh">details</a></td><td class="details-row"><a href="#details-23-mksh">details</a></td><td class="details-row"><a href="#details-23-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L475">${!OPTIND} (used by bash completion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-dash">details</a></td><td class="details-row"><a href="#details-24-ash">details</a></td><td class="details-row"><a href="#details-24-zsh">details</a></td><td class="details-row"><a href="#details-24-mksh">details</a></td><td class="details-row"><a href="#details-24-ksh">details</a></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L491">var ref doesn't need cycle detection</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-25-bash">details</a></td><td class="details-row"><a href="#details-25-dash">details</a></td><td class="details-row"><a href="#details-25-ash">details</a></td><td class="details-row"><a href="#details-25-zsh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-25-ksh">details</a></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"><a href="#details-25-sush">details</a></td><td class="details-row"><a href="#details-25-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L509">Var Ref Code Injection $(tee PWNED)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-26-bash">details</a></td><td class="details-row"><a href="#details-26-dash">details</a></td><td class="details-row"><a href="#details-26-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-26-mksh">details</a></td><td class="details-row"><a href="#details-26-ksh">details</a></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"><a href="#details-26-sush">details</a></td><td class="details-row"><a href="#details-26-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L536">${!array_ref:-set} and ${!array_ref:=assign}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-dash">details</a></td><td class="details-row"><a href="#details-27-ash">details</a></td><td class="details-row"><a href="#details-27-zsh">details</a></td><td class="details-row"><a href="#details-27-mksh">details</a></td><td class="details-row"><a href="#details-27-ksh">details</a></td><td class="details-row"><a href="#details-27-toysh">details</a></td><td class="details-row"><a href="#details-27-sush">details</a></td><td class="details-row"><a href="#details-27-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L566">Array indirect expansion with suffix operators</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-dash">details</a></td><td class="details-row"><a href="#details-28-ash">details</a></td><td class="details-row"><a href="#details-28-zsh">details</a></td><td class="details-row"><a href="#details-28-mksh">details</a></td><td class="details-row"><a href="#details-28-ksh">details</a></td><td class="details-row"><a href="#details-28-toysh">details</a></td><td class="details-row"><a href="#details-28-sush">details</a></td><td class="details-row"><a href="#details-28-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L637">Array indirect expansion with replacements</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-dash">details</a></td><td class="details-row"><a href="#details-29-ash">details</a></td><td class="details-row"><a href="#details-29-zsh">details</a></td><td class="details-row"><a href="#details-29-mksh">details</a></td><td class="details-row"><a href="#details-29-ksh">details</a></td><td class="details-row"><a href="#details-29-toysh">details</a></td><td class="details-row"><a href="#details-29-sush">details</a></td><td class="details-row"><a href="#details-29-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 30</td><td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-ref.test.html#L692">Array indirect expansion with @? conversion</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-30-bash">details</a></td><td class="details-row"><a href="#details-30-dash">details</a></td><td class="details-row"><a href="#details-30-ash">details</a></td><td class="details-row"><a href="#details-30-zsh">details</a></td><td class="details-row"><a href="#details-30-mksh">details</a></td><td class="details-row"><a href="#details-30-ksh">details</a></td><td class="details-row"><a href="#details-30-toysh">details</a></td><td class="details-row"><a href="#details-30-sush">details</a></td><td class="details-row"><a href="#details-30-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>109 passed, 2 OK, 1 not implemented, 2 BUG, 196 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="var-ref.test.html#L11">var ref ${!a}</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'ref c b\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-0-ash"></a><b>ash</b></td><td>0 <a href="var-ref.test.html#L11">var ref ${!a}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'ref c b\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="var-ref.test.html#L11">var ref ${!a}</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'ref c b\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="var-ref.test.html#L11">var ref ${!a}</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'ref c b\n'
+Got      'ref a b\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref a b
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="var-ref.test.html#L11">var ref ${!a}</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'ref c b\n'
+Got      'ref a b\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref a b
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="var-ref.test.html#L17">${!ref-default}</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'x=default\nx=\nx=foo\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="var-ref.test.html#L17">${!ref-default}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'x=default\nx=\nx=foo\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="var-ref.test.html#L17">${!ref-default}</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'x=default\nx=\nx=foo\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="var-ref.test.html#L17">${!ref-default}</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'x=default\nx=\nx=foo\n'
+Got      'x=ref\nx=ref\nx=ref\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=ref
+x=ref
+x=ref
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="var-ref.test.html#L17">${!ref-default}</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'x=default\nx=\nx=foo\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${!ref-default}: bad substitution
+</pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="var-ref.test.html#L33">${!undef:-}</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'NOUNSET\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Bad substitution
+</pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="var-ref.test.html#L33">${!undef:-}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'NOUNSET\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="var-ref.test.html#L33">${!undef:-}</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'NOUNSET\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="var-ref.test.html#L33">${!undef:-}</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'NOUNSET\n'
+Got      'undef=undef\nundef=undef\nNOUNSET\nundef=undef\nundef=undef\n'
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>undef=undef
+undef=undef
+NOUNSET
+undef=undef
+undef=undef
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="var-ref.test.html#L33">${!undef:-}</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'NOUNSET\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: ${!undef-"default"}: bad substitution
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="var-ref.test.html#L33">${!undef:-}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'NOUNSET\n'
+Got      "undef='default'\nundef=\nNOUNSET\nundef='default'\nundef=\n"
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>undef='default'
+undef=
+NOUNSET
+undef='default'
+undef=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="var-ref.test.html#L33">${!undef:-}</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'NOUNSET\n'
+Got      'undef=default\nNOUNSET\nundef=default\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>undef=default
+NOUNSET
+undef=default
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `': not a valid identifier
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: `': not a valid identifier
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="var-ref.test.html#L33">${!undef:-}</a><br/><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>NOUNSET
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: failed to parse parameter ''
+[31mERROR[0m error: failed to parse parameter ''
+[31mERROR[0m error: failed to parse parameter ''
+[31mERROR[0m error: failed to parse parameter ''
+</pre></td></tr><tr><td><a name="details-3-bash"></a><b>bash</b></td><td>3 <a href="var-ref.test.html#L57">comparison to ${!array[@]} keys (similar SYNTAX)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['0', '1']
+a_keys=0
+['']
+a_nobrackets=0
+---
+['A', 'B']
+A_keys=0
+['']
+A_nobrackets=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="var-ref.test.html#L57">comparison to ${!array[@]} keys (similar SYNTAX)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['0', '1']\na_keys=0\n['']\na_nobrackets=0\n---\n['A', 'B']\nA_keys=0\nA_nobrackets=1\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="var-ref.test.html#L57">comparison to ${!array[@]} keys (similar SYNTAX)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['0', '1']\na_keys=0\n['']\na_nobrackets=0\n---\n['A', 'B']\nA_keys=0\nA_nobrackets=1\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="var-ref.test.html#L57">comparison to ${!array[@]} keys (similar SYNTAX)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['0', '1']\na_keys=0\n['']\na_nobrackets=0\n---\n['A', 'B']\nA_keys=0\nA_nobrackets=1\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="var-ref.test.html#L57">comparison to ${!array[@]} keys (similar SYNTAX)</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "['0', '1']\na_keys=0\n['']\na_nobrackets=0\n---\n['A', 'B']\nA_keys=0\nA_nobrackets=1\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="var-ref.test.html#L57">comparison to ${!array[@]} keys (similar SYNTAX)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['0', '1']\na_keys=0\n['']\na_nobrackets=0\n---\n['A', 'B']\nA_keys=0\nA_nobrackets=1\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="var-ref.test.html#L57">comparison to ${!array[@]} keys (similar SYNTAX)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['0', '1']\na_keys=0\n['']\na_nobrackets=0\n---\n['A', 'B']\nA_keys=0\nA_nobrackets=1\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="var-ref.test.html#L57">comparison to ${!array[@]} keys (similar SYNTAX)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['0', '1']\na_keys=0\n['']\na_nobrackets=0\n---\n['A', 'B']\nA_keys=0\nA_nobrackets=1\n"
+Got      "['0', '1']\na_keys=0\n['']\na_nobrackets=0\n---\n['A', 'B']\nA_keys=0\n['']\nA_nobrackets=0\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['0', '1']
+a_keys=0
+['']
+a_nobrackets=0
+---
+['A', 'B']
+A_keys=0
+['']
+A_nobrackets=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="var-ref.test.html#L98">${!a[@]-'default'} is legal but fails with more than one element</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'status=1\nstatus=1\n'
+Got      'status=2\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: Bad substitution
+dash: 4: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="var-ref.test.html#L98">${!a[@]-'default'} is legal but fails with more than one element</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=1\nstatus=1\n'
+Got      'status=2\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="var-ref.test.html#L98">${!a[@]-'default'} is legal but fails with more than one element</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'status=1\nstatus=1\n'
+Got      "['default']\nstatus=0\n['0', '1', '2']\nstatus=0\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['default']
+status=0
+['0', '1', '2']
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="var-ref.test.html#L98">${!a[@]-'default'} is legal but fails with more than one element</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=1\nstatus=1\n'
+Got      "['']\nstatus=0\n"
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>main: line 4: sh: syntax error: x
+</pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="var-ref.test.html#L129">var ref to $@ with @</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'ref=one two\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="var-ref.test.html#L129">var ref to $@ with @</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'ref=one two\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="var-ref.test.html#L129">var ref to $@ with @</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'ref=one two\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="var-ref.test.html#L129">var ref to $@ with @</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'ref=one two\n'
+Got      'ref=ref\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=ref
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="var-ref.test.html#L129">var ref to $@ with @</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'ref=one two\n'
+Got      'ref=ref\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=ref
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="var-ref.test.html#L129">var ref to $@ with @</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'ref=one two\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>set: bad --
+main: line 3: sh: @: bad substitution
+</pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="var-ref.test.html#L137">var ref to $1 and $2 with 1 and 2</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'ref1=one\nref2=two\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="var-ref.test.html#L137">var ref to $1 and $2 with 1 and 2</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'ref1=one\nref2=two\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="var-ref.test.html#L137">var ref to $1 and $2 with 1 and 2</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'ref1=one\nref2=two\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="var-ref.test.html#L137">var ref to $1 and $2 with 1 and 2</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'ref1=one\nref2=two\n'
+Got      'ref1=ref1\nref2=ref2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref1=ref1
+ref2=ref2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="var-ref.test.html#L137">var ref to $1 and $2 with 1 and 2</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'ref1=one\nref2=two\n'
+Got      'ref1=ref1\nref2=ref2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref1=ref1
+ref2=ref2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="var-ref.test.html#L137">var ref to $1 and $2 with 1 and 2</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'ref1=one\nref2=two\n'
+Got      'ref1=\nref2=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref1=
+ref2=
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="var-ref.test.html#L149">var ref: 1, @, *</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['x']\n['x', 'y']\n['x y']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="var-ref.test.html#L149">var ref: 1, @, *</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['x']\n['x', 'y']\n['x y']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="var-ref.test.html#L149">var ref: 1, @, *</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['x']\n['x', 'y']\n['x y']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="var-ref.test.html#L149">var ref: 1, @, *</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "['x']\n['x', 'y']\n['x y']\n"
+Got      "['ref']\n['ref']\n['ref']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['ref']
+['ref']
+['ref']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="var-ref.test.html#L149">var ref: 1, @, *</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['x']\n['x', 'y']\n['x y']\n"
+Got      "['ref']\n['ref']\n['ref']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['ref']
+['ref']
+['ref']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="var-ref.test.html#L149">var ref: 1, @, *</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['x']\n['x', 'y']\n['x y']\n"
+Got      "['']\n"
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+main: line 3: sh: @: bad substitution
+main: line 4: sh: *: bad substitution
+</pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="var-ref.test.html#L149">var ref: 1, @, *</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['x']\n['x', 'y']\n['x y']\n"
+Got      "['x']\n['x y']\n['x y']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['x']
+['x y']
+['x y']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="var-ref.test.html#L161">var ref to special var BASH_SOURCE</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'lineno=2\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-8-ash"></a><b>ash</b></td><td>8 <a href="var-ref.test.html#L161">var ref to special var BASH_SOURCE</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'lineno=2\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="var-ref.test.html#L161">var ref to special var BASH_SOURCE</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'lineno=2\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-8-mksh"></a><b>mksh</b></td><td>8 <a href="var-ref.test.html#L161">var ref to special var BASH_SOURCE</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'lineno=2\n'
+Got      'lineno=ref\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>lineno=ref
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-ksh"></a><b>ksh</b></td><td>8 <a href="var-ref.test.html#L161">var ref to special var BASH_SOURCE</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'lineno=2\n'
+Got      'lineno=ref\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>lineno=ref
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="var-ref.test.html#L168">var ref to $? with '?'</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'myfunc\n0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-9-ash"></a><b>ash</b></td><td>9 <a href="var-ref.test.html#L168">var ref to $? with '?'</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'myfunc\n0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-9-zsh"></a><b>zsh</b></td><td>9 <a href="var-ref.test.html#L168">var ref to $? with '?'</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'myfunc\n0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>myfunc:2: bad substitution
+</pre></td></tr><tr><td><a name="details-9-mksh"></a><b>mksh</b></td><td>9 <a href="var-ref.test.html#L168">var ref to $? with '?'</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'myfunc\n0\n'
+Got      'ref\nref\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref
+ref
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-ksh"></a><b>ksh</b></td><td>9 <a href="var-ref.test.html#L168">var ref to $? with '?'</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'myfunc\n0\n'
+Got      'ref\nref\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref
+ref
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="var-ref.test.html#L168">var ref to $? with '?'</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'myfunc\n0\n'
+Got      '\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="var-ref.test.html#L181">Var ref, then assignment with ${ := }</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'foo\nfoo\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="var-ref.test.html#L181">Var ref, then assignment with ${ := }</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'foo\nfoo\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-10-zsh"></a><b>zsh</b></td><td>10 <a href="var-ref.test.html#L181">Var ref, then assignment with ${ := }</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'foo\nfoo\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="var-ref.test.html#L181">Var ref, then assignment with ${ := }</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'foo\nfoo\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: ${!z:=foo}: bad substitution
+</pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="var-ref.test.html#L181">Var ref, then assignment with ${ := }</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'foo\nfoo\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: ${!z:=foo}: bad substitution
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="var-ref.test.html#L181">Var ref, then assignment with ${ := }</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'foo\nfoo\n'
+Got      'foo\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+</pre><i>stderr:</i> <br/>
+<pre>main: line 4: sh: bad ${!z:=bar} @ 5
+</pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="var-ref.test.html#L181">Var ref, then assignment with ${ := }</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'foo\nfoo\n'
+Got      'foo\nbar\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-dash"></a><b>dash</b></td><td>11 <a href="var-ref.test.html#L191">Var ref, then error with ${ ? }</a><br/><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-11-ash"></a><b>ash</b></td><td>11 <a href="var-ref.test.html#L191">Var ref, then error with ${ ? }</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-11-mksh"></a><b>mksh</b></td><td>11 <a href="var-ref.test.html#L191">Var ref, then error with ${ ? }</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected ''
+Got      'w\ndone\n'
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>w
+done
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="var-ref.test.html#L191">Var ref, then error with ${ ? }</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected ''
+Got      'done\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>done
+</pre><i>stderr:</i> <br/>
+<pre>main: line 3: sh: ww: 'my message'
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="var-ref.test.html#L191">Var ref, then error with ${ ? }</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected ''
+Got      'done\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>done
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: ww: my message
+</pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="var-ref.test.html#L191">Var ref, then error with ${ ? }</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected ''
+Got      'done\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>done
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: expansion error: my message
+</pre></td></tr><tr><td><a name="details-12-dash"></a><b>dash</b></td><td>12 <a href="var-ref.test.html#L200">Indirect expansion, THEN suffix operators</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'ok\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 22: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-12-ash"></a><b>ash</b></td><td>12 <a href="var-ref.test.html#L200">Indirect expansion, THEN suffix operators</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'ok\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="var-ref.test.html#L200">Indirect expansion, THEN suffix operators</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'ok\n'
+Got      '${!a[1]} -&gt; expected xx, got \n${!b[1]} -&gt; expected asdf, got \n${!y:-foo} -&gt; expected foo, got \n${!x:-foo} -&gt; expected aaabcc, got \n${!x:?oops} -&gt; expected aaabcc, got \n${!x:+foo} -&gt; expected foo, got \n${!x:2} -&gt; expected abcc, got \n${!x:2:2} -&gt; expected ab, got \n${!x#*a} -&gt; expected aabcc, got \n${!x%%c*} -&gt; expected aaab, got \n${!x/a*b/d} -&gt; expected dcc, got \n${!p@P} -&gt; expected $ , got \nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>${!a[1]} -&gt; expected xx, got 
+${!b[1]} -&gt; expected asdf, got 
+${!y:-foo} -&gt; expected foo, got 
+${!x:-foo} -&gt; expected aaabcc, got 
+${!x:?oops} -&gt; expected aaabcc, got 
+${!x:+foo} -&gt; expected foo, got 
+${!x:2} -&gt; expected abcc, got 
+${!x:2:2} -&gt; expected ab, got 
+${!x#*a} -&gt; expected aabcc, got 
+${!x%%c*} -&gt; expected aaab, got 
+${!x/a*b/d} -&gt; expected dcc, got 
+${!p@P} -&gt; expected $ , got 
+ok
+</pre><i>stderr:</i> <br/>
+<pre>(eval):1: bad substitution
+(eval):1: bad substitution
+(eval):1: bad substitution
+(eval):1: bad substitution
+(eval):1: bad substitution
+(eval):1: bad substitution
+(eval):1: bad substitution
+(eval):1: bad substitution
+(eval):1: bad substitution
+(eval):1: bad substitution
+(eval):1: bad substitution
+(eval):1: bad substitution
+(eval):1: bad substitution
+</pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="var-ref.test.html#L200">Indirect expansion, THEN suffix operators</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'ok\n'
+Got      '${!a[1]} -&gt; expected xx, got a[1]\n${!b[1]} -&gt; expected asdf, got b[1]\n${!y:-foo} -&gt; expected foo, got y\n${!x:-foo} -&gt; expected aaabcc, got x\n${!x:?oops} -&gt; expected aaabcc, got x\n${!y:+foo} -&gt; expected , got foo\n${!x:2} -&gt; expected abcc, got \n${!x:2:2} -&gt; expected ab, got \n${!x#*a} -&gt; expected aabcc, got xx\n${!x%%c*} -&gt; expected aaab, got xx\n${!x/a*b/d} -&gt; expected dcc, got xx\n${!p@P} -&gt; expected $ , got p\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>${!a[1]} -&gt; expected xx, got a[1]
+${!b[1]} -&gt; expected asdf, got b[1]
+${!y:-foo} -&gt; expected foo, got y
+${!x:-foo} -&gt; expected aaabcc, got x
+${!x:?oops} -&gt; expected aaabcc, got x
+${!y:+foo} -&gt; expected , got foo
+${!x:2} -&gt; expected abcc, got 
+${!x:2:2} -&gt; expected ab, got 
+${!x#*a} -&gt; expected aabcc, got xx
+${!x%%c*} -&gt; expected aaab, got xx
+${!x/a*b/d} -&gt; expected dcc, got xx
+${!p@P} -&gt; expected $ , got p
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="var-ref.test.html#L200">Indirect expansion, THEN suffix operators</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'ok\n'
+Got      'bad success: ${!#x}\nbad success: ${!#a[@]}\n${!a[1]} -&gt; expected xx, got a[1]\n${!b[1]} -&gt; expected asdf, got b[1]\n${!y:-foo} -&gt; expected foo, got \n${!x:-foo} -&gt; expected aaabcc, got \n${!x:?oops} -&gt; expected aaabcc, got \n${!x:+foo} -&gt; expected foo, got \n${!x:2} -&gt; expected abcc, got \n${!x:2:2} -&gt; expected ab, got \n${!x#*a} -&gt; expected aabcc, got \n${!x%%c*} -&gt; expected aaab, got \n${!x/a*b/d} -&gt; expected dcc, got \n${!p@P} -&gt; expected $ , got \nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>bad success: ${!#x}
+bad success: ${!#a[@]}
+${!a[1]} -&gt; expected xx, got a[1]
+${!b[1]} -&gt; expected asdf, got b[1]
+${!y:-foo} -&gt; expected foo, got 
+${!x:-foo} -&gt; expected aaabcc, got 
+${!x:?oops} -&gt; expected aaabcc, got 
+${!x:+foo} -&gt; expected foo, got 
+${!x:2} -&gt; expected abcc, got 
+${!x:2:2} -&gt; expected ab, got 
+${!x#*a} -&gt; expected aabcc, got 
+${!x%%c*} -&gt; expected aaab, got 
+${!x/a*b/d} -&gt; expected dcc, got 
+${!p@P} -&gt; expected $ , got 
+ok
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: ${!y:-foo}: bad substitution
+E: ksh: ${!x:-foo}: bad substitution
+E: ksh: ${!x:?oops}: bad substitution
+E: ksh: ${!y:+foo}: bad substitution
+E: ksh: ${!x:+foo}: bad substitution
+E: ksh: ${!x: 2}: bad substitution
+E: ksh: ${!x: 2:2}: bad substitution
+E: ksh: ${!x#*a}: bad substitution
+E: ksh: ${!x%%c*}: bad substitution
+E: ksh: ${!x/a*b/d}: bad substitution
+E: ksh: ${!p@P}: bad substitution
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="var-ref.test.html#L200">Indirect expansion, THEN suffix operators</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'ok\n'
+Got      'bad success: ${!!xd}\nbad success: ${!!x*}\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>bad success: ${!!xd}
+bad success: ${!!x*}
+</pre><i>stderr:</i> <br/>
+<pre>main: line 22: sh: syntax error: asdf
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="var-ref.test.html#L200">Indirect expansion, THEN suffix operators</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'ok\n'
+Got      '${!x:+foo} -&gt; expected foo, got \n${!x:2} -&gt; expected abcc, got \n${!x:2:2} -&gt; expected ab, got \n${!p@P} -&gt; expected $ , got \nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>${!x:+foo} -&gt; expected foo, got 
+${!x:2} -&gt; expected abcc, got 
+${!x:2:2} -&gt; expected ab, got 
+${!p@P} -&gt; expected $ , got 
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="var-ref.test.html#L262">var ref OF array var -- silent a[0] decay</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'first=\nfirst=zzz\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="var-ref.test.html#L262">var ref OF array var -- silent a[0] decay</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'first=\nfirst=zzz\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="var-ref.test.html#L262">var ref OF array var -- silent a[0] decay</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'first=\nfirst=zzz\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="var-ref.test.html#L262">var ref OF array var -- silent a[0] decay</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'first=\nfirst=zzz\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-13-ksh"></a><b>ksh</b></td><td>13 <a href="var-ref.test.html#L262">var ref OF array var -- silent a[0] decay</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'first=\nfirst=zzz\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="var-ref.test.html#L262">var ref OF array var -- silent a[0] decay</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'first=\nfirst=zzz\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="var-ref.test.html#L275">array ref</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'ale\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-14-ash"></a><b>ash</b></td><td>14 <a href="var-ref.test.html#L275">array ref</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'ale\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-14-zsh"></a><b>zsh</b></td><td>14 <a href="var-ref.test.html#L275">array ref</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'ale\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="var-ref.test.html#L275">array ref</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'ale\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="var-ref.test.html#L275">array ref</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'ale\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="var-ref.test.html#L275">array ref</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'ale\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-15-bash"></a><b>bash</b></td><td>15 <a href="var-ref.test.html#L285">array ref with strict_array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ale
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: shopt: strict_array: invalid shell option name
+</pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="var-ref.test.html#L285">array ref with strict_array</a><br/><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 3: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-15-ash"></a><b>ash</b></td><td>15 <a href="var-ref.test.html#L285">array ref with strict_array</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="var-ref.test.html#L285">array ref with strict_array</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+main: line 3: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="var-ref.test.html#L285">array ref with strict_array</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected u''
+Got      'ale\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ale
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: shopt: strict_array: not supported yet
+</pre></td></tr><tr><td><a name="details-15-brush"></a><b>brush</b></td><td>15 <a href="var-ref.test.html#L285">array ref with strict_array</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected u''
+Got      'ale\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ale
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_array: invalid shell option name
+</pre></td></tr><tr><td><a name="details-16-dash"></a><b>dash</b></td><td>16 <a href="var-ref.test.html#L298">var ref TO array var</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'ale\nale bean\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 3: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-16-ash"></a><b>ash</b></td><td>16 <a href="var-ref.test.html#L298">var ref TO array var</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'ale\nale bean\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-16-zsh"></a><b>zsh</b></td><td>16 <a href="var-ref.test.html#L298">var ref TO array var</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'ale\nale bean\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-16-mksh"></a><b>mksh</b></td><td>16 <a href="var-ref.test.html#L298">var ref TO array var</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'ale\nale bean\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+mksh: &lt;stdin&gt;[3]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-16-ksh"></a><b>ksh</b></td><td>16 <a href="var-ref.test.html#L298">var ref TO array var</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'ale\nale bean\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[3]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="var-ref.test.html#L298">var ref TO array var</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'ale\nale bean\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+main: line 3: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-17-dash"></a><b>dash</b></td><td>17 <a href="var-ref.test.html#L314">var ref TO array var, with subscripts</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['']\n['x']\n['z']\n['x', 'y', 'z']\n['x y z']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-17-ash"></a><b>ash</b></td><td>17 <a href="var-ref.test.html#L314">var ref TO array var, with subscripts</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['']\n['x']\n['z']\n['x', 'y', 'z']\n['x y z']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-17-zsh"></a><b>zsh</b></td><td>17 <a href="var-ref.test.html#L314">var ref TO array var, with subscripts</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['']\n['x']\n['z']\n['x', 'y', 'z']\n['x y z']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>f:1: bad substitution
+</pre></td></tr><tr><td><a name="details-17-mksh"></a><b>mksh</b></td><td>17 <a href="var-ref.test.html#L314">var ref TO array var, with subscripts</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "['']\n['x']\n['z']\n['x', 'y', 'z']\n['x y z']\n"
+Got      "['1']\n['1']\n['1']\n['1']\n['1']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1']
+['1']
+['1']
+['1']
+['1']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-ksh"></a><b>ksh</b></td><td>17 <a href="var-ref.test.html#L314">var ref TO array var, with subscripts</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['']\n['x']\n['z']\n['x', 'y', 'z']\n['x y z']\n"
+Got      "['1']\n['1']\n['1']\n['1']\n['1']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1']
+['1']
+['1']
+['1']
+['1']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="var-ref.test.html#L314">var ref TO array var, with subscripts</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['']\n['x']\n['z']\n['x', 'y', 'z']\n['x y z']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 4: sh: nonexistent[0]: bad substitution
+main: line 5: sh: syntax error: x
+</pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="var-ref.test.html#L314">var ref TO array var, with subscripts</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['']\n['x']\n['z']\n['x', 'y', 'z']\n['x y z']\n"
+Got      "['']\n['x']\n['z']\n['x y z']\n['x y z']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+['x']
+['z']
+['x y z']
+['x y z']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-dash"></a><b>dash</b></td><td>18 <a href="var-ref.test.html#L333">var ref TO assoc array a[key]</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'ref=\nref_SUB=bean\nref_SUB_QUOTED=bean\nref_SUB_BAD=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 3: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-18-ash"></a><b>ash</b></td><td>18 <a href="var-ref.test.html#L333">var ref TO assoc array a[key]</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'ref=\nref_SUB=bean\nref_SUB_QUOTED=bean\nref_SUB_BAD=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-18-zsh"></a><b>zsh</b></td><td>18 <a href="var-ref.test.html#L333">var ref TO assoc array a[key]</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'ref=\nref_SUB=bean\nref_SUB_QUOTED=bean\nref_SUB_BAD=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: no matches found: [ale]=bean
+zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-18-mksh"></a><b>mksh</b></td><td>18 <a href="var-ref.test.html#L333">var ref TO assoc array a[key]</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'ref=\nref_SUB=bean\nref_SUB_QUOTED=bean\nref_SUB_BAD=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+mksh: &lt;stdin&gt;[3]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-18-ksh"></a><b>ksh</b></td><td>18 <a href="var-ref.test.html#L333">var ref TO assoc array a[key]</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'ref=\nref_SUB=bean\nref_SUB_QUOTED=bean\nref_SUB_BAD=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[3]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="var-ref.test.html#L333">var ref TO assoc array a[key]</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'ref=\nref_SUB=bean\nref_SUB_QUOTED=bean\nref_SUB_BAD=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+main: line 3: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="var-ref.test.html#L333">var ref TO assoc array a[key]</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'ref=\nref_SUB=bean\nref_SUB_QUOTED=bean\nref_SUB_BAD=\n'
+Got      'ref=dip\nref_SUB=bean\nref_SUB_QUOTED=bean\nref_SUB_BAD=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref=dip
+ref_SUB=bean
+ref_SUB_QUOTED=bean
+ref_SUB_BAD=
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: shopt: compat_array: not supported yet
+</pre></td></tr><tr><td><a name="details-19-dash"></a><b>dash</b></td><td>19 <a href="var-ref.test.html#L361">var ref TO array with arbitrary subscripts</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'works: a[1]\nworks: a[$b]\nworks: a[${c:-1}]\nworks: a[$(echo 1)]\nworks: a[$(( 3 - 2 ))]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 9: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-19-ash"></a><b>ash</b></td><td>19 <a href="var-ref.test.html#L361">var ref TO array with arbitrary subscripts</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'works: a[1]\nworks: a[$b]\nworks: a[${c:-1}]\nworks: a[$(echo 1)]\nworks: a[$(( 3 - 2 ))]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-19-zsh"></a><b>zsh</b></td><td>19 <a href="var-ref.test.html#L361">var ref TO array with arbitrary subscripts</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'works: a[1]\nworks: a[$b]\nworks: a[${c:-1}]\nworks: a[$(echo 1)]\nworks: a[$(( 3 - 2 ))]\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+f:1: bad substitution
+f:1: bad substitution
+f:1: bad substitution
+f:1: bad substitution
+f:1: bad substitution
+f:1: bad substitution
+f:1: bad substitution
+f:1: bad substitution
+f:1: bad substitution
+f:1: bad substitution
+</pre></td></tr><tr><td><a name="details-19-mksh"></a><b>mksh</b></td><td>19 <a href="var-ref.test.html#L361">var ref TO array with arbitrary subscripts</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'works: a[1]\nworks: a[$b]\nworks: a[${c:-1}]\nworks: a[$(echo 1)]\nworks: a[$(( 3 - 2 ))]\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-19-ksh"></a><b>ksh</b></td><td>19 <a href="var-ref.test.html#L361">var ref TO array with arbitrary subscripts</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'works: a[1]\nworks: a[$b]\nworks: a[${c:-1}]\nworks: a[$(echo 1)]\nworks: a[$(( 3 - 2 ))]\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="var-ref.test.html#L361">var ref TO array with arbitrary subscripts</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'works: a[1]\nworks: a[$b]\nworks: a[${c:-1}]\nworks: a[$(echo 1)]\nworks: a[$(( 3 - 2 ))]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+main: line 9: sh: syntax error: x
+</pre></td></tr><tr><td><a name="details-20-dash"></a><b>dash</b></td><td>20 <a href="var-ref.test.html#L409">Bizarre tilde expansion in array index</a><br/><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-20-ash"></a><b>ash</b></td><td>20 <a href="var-ref.test.html#L409">Bizarre tilde expansion in array index</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-20-mksh"></a><b>mksh</b></td><td>20 <a href="var-ref.test.html#L409">Bizarre tilde expansion in array index</a><br/><br/>
+<span class="assertion">
+[mksh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-ksh"></a><b>ksh</b></td><td>20 <a href="var-ref.test.html#L409">Bizarre tilde expansion in array index</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="var-ref.test.html#L409">Bizarre tilde expansion in array index</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: x
+</pre></td></tr><tr><td><a name="details-21-dash"></a><b>dash</b></td><td>21 <a href="var-ref.test.html#L423">Indirect expansion TO fancy expansion features bash disallows</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'done\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 8: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-21-ash"></a><b>ash</b></td><td>21 <a href="var-ref.test.html#L423">Indirect expansion TO fancy expansion features bash disallows</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'done\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-21-zsh"></a><b>zsh</b></td><td>21 <a href="var-ref.test.html#L423">Indirect expansion TO fancy expansion features bash disallows</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'done\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [k]=r
+</pre></td></tr><tr><td><a name="details-21-mksh"></a><b>mksh</b></td><td>21 <a href="var-ref.test.html#L423">Indirect expansion TO fancy expansion features bash disallows</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'done\n'
+Got      '!x x\n!a[0] a[0]\n!a@ a\ndone\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>!x x
+!a[0] a[0]
+!a@ a
+done
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[9]: declare: not found
+mksh: missing ]
+mksh: missing ]
+</pre></td></tr><tr><td><a name="details-21-ksh"></a><b>ksh</b></td><td>21 <a href="var-ref.test.html#L423">Indirect expansion TO fancy expansion features bash disallows</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'done\n'
+Got      '!x x\n!a[0] a[0]\n!a@ \ndone\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>!x x
+!a[0] a[0]
+!a@ 
+done
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[9]: declare: inaccessible or not found
+E: ksh: missing ]
+E: ksh: missing ]
+E: ksh: ${!a@}: bad substitution
+</pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="var-ref.test.html#L423">Indirect expansion TO fancy expansion features bash disallows</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'done\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 8: sh: syntax error: x
+</pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="var-ref.test.html#L423">Indirect expansion TO fancy expansion features bash disallows</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'done\n'
+Got      'a[0 x\naa[k s\ndone\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a[0 x
+aa[k s
+done
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-dash"></a><b>dash</b></td><td>22 <a href="var-ref.test.html#L458">Bad var ref</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'status=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-22-ash"></a><b>ash</b></td><td>22 <a href="var-ref.test.html#L458">Bad var ref</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-22-zsh"></a><b>zsh</b></td><td>22 <a href="var-ref.test.html#L458">Bad var ref</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-22-mksh"></a><b>mksh</b></td><td>22 <a href="var-ref.test.html#L458">Bad var ref</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'status=1\n'
+Got      'ref a\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref a
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-ksh"></a><b>ksh</b></td><td>22 <a href="var-ref.test.html#L458">Bad var ref</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=1\n'
+Got      'ref a\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref a
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-dash"></a><b>dash</b></td><td>23 <a href="var-ref.test.html#L467">Bad var ref 2</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'status=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-23-ash"></a><b>ash</b></td><td>23 <a href="var-ref.test.html#L467">Bad var ref 2</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-23-zsh"></a><b>zsh</b></td><td>23 <a href="var-ref.test.html#L467">Bad var ref 2</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-23-mksh"></a><b>mksh</b></td><td>23 <a href="var-ref.test.html#L467">Bad var ref 2</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'status=1\n'
+Got      'ref b\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref b
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-ksh"></a><b>ksh</b></td><td>23 <a href="var-ref.test.html#L467">Bad var ref 2</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=1\n'
+Got      'ref b\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ref b
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-dash"></a><b>dash</b></td><td>24 <a href="var-ref.test.html#L475">${!OPTIND} (used by bash completion</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'a\nx\ny\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-24-ash"></a><b>ash</b></td><td>24 <a href="var-ref.test.html#L475">${!OPTIND} (used by bash completion</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'a\nx\ny\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-24-zsh"></a><b>zsh</b></td><td>24 <a href="var-ref.test.html#L475">${!OPTIND} (used by bash completion</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'a\nx\ny\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-24-mksh"></a><b>mksh</b></td><td>24 <a href="var-ref.test.html#L475">${!OPTIND} (used by bash completion</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'a\nx\ny\n'
+Got      'OPTIND\nOPTIND\nOPTIND\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND
+OPTIND
+OPTIND
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-ksh"></a><b>ksh</b></td><td>24 <a href="var-ref.test.html#L475">${!OPTIND} (used by bash completion</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'a\nx\ny\n'
+Got      'OPTIND\nOPTIND\nOPTIND\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND
+OPTIND
+OPTIND
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="var-ref.test.html#L475">${!OPTIND} (used by bash completion</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'a\nx\ny\n'
+Got      '\nx\nx\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+x
+x
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-25-bash"></a><b>bash</b></td><td>25 <a href="var-ref.test.html#L491">var ref doesn't need cycle detection</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>cycle=x
+cycle=
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 7: warning: a: circular name reference
+</pre></td></tr><tr><td><a name="details-25-dash"></a><b>dash</b></td><td>25 <a href="var-ref.test.html#L491">var ref doesn't need cycle detection</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'cycle=x\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-25-ash"></a><b>ash</b></td><td>25 <a href="var-ref.test.html#L491">var ref doesn't need cycle detection</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'cycle=x\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-25-zsh"></a><b>zsh</b></td><td>25 <a href="var-ref.test.html#L491">var ref doesn't need cycle detection</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'cycle=x\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-25-ksh"></a><b>ksh</b></td><td>25 <a href="var-ref.test.html#L491">var ref doesn't need cycle detection</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'cycle=x\n'
+Got      'cycle=x\ncycle=\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>cycle=x
+cycle=
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[6]: typeset: b: expression recurses on parameter
+</pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="var-ref.test.html#L491">var ref doesn't need cycle detection</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'cycle=x\n'
+Got      'cycle=x\ncycle=\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>cycle=x
+cycle=
+</pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+sh: typeset: No such file or directory
+</pre></td></tr><tr><td><a name="details-25-sush"></a><b>sush</b></td><td>25 <a href="var-ref.test.html#L491">var ref doesn't need cycle detection</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'cycle=x\n'
+Got      'cycle=x\ncycle=b\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>cycle=x
+cycle=b
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-brush"></a><b>brush</b></td><td>25 <a href="var-ref.test.html#L491">var ref doesn't need cycle detection</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'cycle=x\n'
+Got      'cycle=x\ncycle=b\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>cycle=x
+cycle=b
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-bash"></a><b>bash</b></td><td>26 <a href="var-ref.test.html#L509">Var Ref Code Injection $(tee PWNED)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>42
+PWNED
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-dash"></a><b>dash</b></td><td>26 <a href="var-ref.test.html#L509">Var Ref Code Injection $(tee PWNED)</a><br/><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: typeset: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-26-ash"></a><b>ash</b></td><td>26 <a href="var-ref.test.html#L509">Var Ref Code Injection $(tee PWNED)</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: typeset: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-26-mksh"></a><b>mksh</b></td><td>26 <a href="var-ref.test.html#L509">Var Ref Code Injection $(tee PWNED)</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected ''
+Got      'x\nNOPE\n'
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x
+NOPE
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-ksh"></a><b>ksh</b></td><td>26 <a href="var-ref.test.html#L509">Var Ref Code Injection $(tee PWNED)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected ''
+Got      'x\nNOPE\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x
+NOPE
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="var-ref.test.html#L509">Var Ref Code Injection $(tee PWNED)</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+main: line 2: sh: syntax error: 42
+</pre></td></tr><tr><td><a name="details-26-sush"></a><b>sush</b></td><td>26 <a href="var-ref.test.html#L509">Var Ref Code Injection $(tee PWNED)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected ''
+Got      '42\nPWNED\n0\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>42
+PWNED
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-brush"></a><b>brush</b></td><td>26 <a href="var-ref.test.html#L509">Var Ref Code Injection $(tee PWNED)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected ''
+Got      '42\nPWNED\n0\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>42
+PWNED
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-dash"></a><b>dash</b></td><td>27 <a href="var-ref.test.html#L536">${!array_ref:-set} and ${!array_ref:=assign}</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "==== check ====\n['', '', '']\n['', '', '']\n==== assign ====\n['', '', '']\n['', '', '']\n['', '', '']\n['', '', '']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-27-ash"></a><b>ash</b></td><td>27 <a href="var-ref.test.html#L536">${!array_ref:-set} and ${!array_ref:=assign}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "==== check ====\n['', '', '']\n['', '', '']\n==== assign ====\n['', '', '']\n['', '', '']\n['', '', '']\n['', '', '']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-27-zsh"></a><b>zsh</b></td><td>27 <a href="var-ref.test.html#L536">${!array_ref:-set} and ${!array_ref:=assign}</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "==== check ====\n['', '', '']\n['', '', '']\n==== assign ====\n['', '', '']\n['', '', '']\n['', '', '']\n['', '', '']\n"
+Got      '==== check ====\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>==== check ====
+</pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-27-mksh"></a><b>mksh</b></td><td>27 <a href="var-ref.test.html#L536">${!array_ref:-set} and ${!array_ref:=assign}</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "==== check ====\n['', '', '']\n['', '', '']\n==== assign ====\n['', '', '']\n['', '', '']\n['', '', '']\n['', '', '']\n"
+Got      "==== check ====\n['ref']\n['', '', '']\n==== assign ====\n"
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>==== check ====
+['ref']
+['', '', '']
+==== assign ====
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[11]: ${!ref:=assign}: bad substitution
+</pre></td></tr><tr><td><a name="details-27-ksh"></a><b>ksh</b></td><td>27 <a href="var-ref.test.html#L536">${!array_ref:-set} and ${!array_ref:=assign}</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "==== check ====\n['', '', '']\n['', '', '']\n==== assign ====\n['', '', '']\n['', '', '']\n['', '', '']\n['', '', '']\n"
+Got      '==== check ====\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>==== check ====
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[6]: ${!ref:-set}: bad substitution
+</pre></td></tr><tr><td><a name="details-27-toysh"></a><b>toysh</b></td><td>27 <a href="var-ref.test.html#L536">${!array_ref:-set} and ${!array_ref:=assign}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "==== check ====\n['', '', '']\n['', '', '']\n==== assign ====\n['', '', '']\n['', '', '']\n['', '', '']\n['', '', '']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: ''
+</pre></td></tr><tr><td><a name="details-27-sush"></a><b>sush</b></td><td>27 <a href="var-ref.test.html#L536">${!array_ref:-set} and ${!array_ref:=assign}</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "==== check ====\n['', '', '']\n['', '', '']\n==== assign ====\n['', '', '']\n['', '', '']\n['', '', '']\n['', '', '']\n"
+Got      "==== check ====\n['  ']\n['', '', '']\n==== assign ====\n['  ']\n['  ']\n['', '', '']\n['', '', '']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>==== check ====
+['  ']
+['', '', '']
+==== assign ====
+['  ']
+['  ']
+['', '', '']
+['', '', '']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-brush"></a><b>brush</b></td><td>27 <a href="var-ref.test.html#L536">${!array_ref:-set} and ${!array_ref:=assign}</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "==== check ====\n['', '', '']\n['', '', '']\n==== assign ====\n['', '', '']\n['', '', '']\n['', '', '']\n['', '', '']\n"
+Got      "==== check ====\n['set']\n['set']\n==== assign ====\n['assign']\n['']\n['', '', '']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>==== check ====
+['set']
+['set']
+==== assign ====
+['assign']
+['']
+['', '', '']
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: cannot assign in this way
+</pre></td></tr><tr><td><a name="details-28-dash"></a><b>dash</b></td><td>28 <a href="var-ref.test.html#L566">Array indirect expansion with suffix operators</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "==== v1 ====\n['lue']\n['al']\n['value']\n['set']\n['value']\nv1=value\n==== v2 ====\n['']\n['']\n['empty']\n['']\n['assign']\nv2=assign\n==== a1 ====\n['']\n['']\n['empty']\n['']\n['assign']\n['assign']\n==== a2[0] ====\n['ement']\n['le']\n['element']\n['set']\n['element']\n['element']\n==== a3[@] ====\n['3']\n['2', '3']\n['1', '2', '3']\n['set']\n['1', '2', '3']\n['1', '2', '3']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-28-ash"></a><b>ash</b></td><td>28 <a href="var-ref.test.html#L566">Array indirect expansion with suffix operators</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "==== v1 ====\n['lue']\n['al']\n['value']\n['set']\n['value']\nv1=value\n==== v2 ====\n['']\n['']\n['empty']\n['']\n['assign']\nv2=assign\n==== a1 ====\n['']\n['']\n['empty']\n['']\n['assign']\n['assign']\n==== a2[0] ====\n['ement']\n['le']\n['element']\n['set']\n['element']\n['element']\n==== a3[@] ====\n['3']\n['2', '3']\n['1', '2', '3']\n['set']\n['1', '2', '3']\n['1', '2', '3']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-28-zsh"></a><b>zsh</b></td><td>28 <a href="var-ref.test.html#L566">Array indirect expansion with suffix operators</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "==== v1 ====\n['lue']\n['al']\n['value']\n['set']\n['value']\nv1=value\n==== v2 ====\n['']\n['']\n['empty']\n['']\n['assign']\nv2=assign\n==== a1 ====\n['']\n['']\n['empty']\n['']\n['assign']\n['assign']\n==== a2[0] ====\n['ement']\n['le']\n['element']\n['set']\n['element']\n['element']\n==== a3[@] ====\n['3']\n['2', '3']\n['1', '2', '3']\n['set']\n['1', '2', '3']\n['1', '2', '3']\n"
+Got      '==== v1 ====\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>==== v1 ====
+</pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [dummy]=v1
+test-suffixes:2: bad math expression: operand expected at `'dummy''
+</pre></td></tr><tr><td><a name="details-28-mksh"></a><b>mksh</b></td><td>28 <a href="var-ref.test.html#L566">Array indirect expansion with suffix operators</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "==== v1 ====\n['lue']\n['al']\n['value']\n['set']\n['value']\nv1=value\n==== v2 ====\n['']\n['']\n['empty']\n['']\n['assign']\nv2=assign\n==== a1 ====\n['']\n['']\n['empty']\n['']\n['assign']\n['assign']\n==== a2[0] ====\n['ement']\n['le']\n['element']\n['set']\n['element']\n['element']\n==== a3[@] ====\n['3']\n['2', '3']\n['1', '2', '3']\n['set']\n['1', '2', '3']\n['1', '2', '3']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-28-ksh"></a><b>ksh</b></td><td>28 <a href="var-ref.test.html#L566">Array indirect expansion with suffix operators</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "==== v1 ====\n['lue']\n['al']\n['value']\n['set']\n['value']\nv1=value\n==== v2 ====\n['']\n['']\n['empty']\n['']\n['assign']\nv2=assign\n==== a1 ====\n['']\n['']\n['empty']\n['']\n['assign']\n['assign']\n==== a2[0] ====\n['ement']\n['le']\n['element']\n['set']\n['element']\n['element']\n==== a3[@] ====\n['3']\n['2', '3']\n['1', '2', '3']\n['set']\n['1', '2', '3']\n['1', '2', '3']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-28-toysh"></a><b>toysh</b></td><td>28 <a href="var-ref.test.html#L566">Array indirect expansion with suffix operators</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "==== v1 ====\n['lue']\n['al']\n['value']\n['set']\n['value']\nv1=value\n==== v2 ====\n['']\n['']\n['empty']\n['']\n['assign']\nv2=assign\n==== a1 ====\n['']\n['']\n['empty']\n['']\n['assign']\n['assign']\n==== a2[0] ====\n['ement']\n['le']\n['element']\n['set']\n['element']\n['element']\n==== a3[@] ====\n['3']\n['2', '3']\n['1', '2', '3']\n['set']\n['1', '2', '3']\n['1', '2', '3']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-28-sush"></a><b>sush</b></td><td>28 <a href="var-ref.test.html#L566">Array indirect expansion with suffix operators</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "==== v1 ====\n['lue']\n['al']\n['value']\n['set']\n['value']\nv1=value\n==== v2 ====\n['']\n['']\n['empty']\n['']\n['assign']\nv2=assign\n==== a1 ====\n['']\n['']\n['empty']\n['']\n['assign']\n['assign']\n==== a2[0] ====\n['ement']\n['le']\n['element']\n['set']\n['element']\n['element']\n==== a3[@] ====\n['3']\n['2', '3']\n['1', '2', '3']\n['set']\n['1', '2', '3']\n['1', '2', '3']\n"
+Got      "====  ====\nv1=value\nv2=\n[]\n['element']\n['1', '2', '3']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>====  ====
+v1=value
+v2=
+[]
+['element']
+['1', '2', '3']
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: function: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: `': not a valid identifier
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: `': not a valid identifier
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: `': not a valid identifier
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: `': not a valid identifier
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: `': not a valid identifier
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: syntax error near unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: test-suffixes: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 17: test-suffixes: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 21: test-suffixes: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 25: test-suffixes: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 29: test-suffixes: command not found
+</pre></td></tr><tr><td><a name="details-28-brush"></a><b>brush</b></td><td>28 <a href="var-ref.test.html#L566">Array indirect expansion with suffix operators</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "==== v1 ====\n['lue']\n['al']\n['value']\n['set']\n['value']\nv1=value\n==== v2 ====\n['']\n['']\n['empty']\n['']\n['assign']\nv2=assign\n==== a1 ====\n['']\n['']\n['empty']\n['']\n['assign']\n['assign']\n==== a2[0] ====\n['ement']\n['le']\n['element']\n['set']\n['element']\n['element']\n==== a3[@] ====\n['3']\n['2', '3']\n['1', '2', '3']\n['set']\n['1', '2', '3']\n['1', '2', '3']\n"
+Got      "==== v1 ====\n['${!ref[@]:2}']\n['${!ref[@]:1:2}']\n['value']\n['set']\n['value']\nv1=value\n==== v2 ====\n['${!ref[@]:2}']\n['${!ref[@]:1:2}']\n['empty']\n['']\nv2=\n==== a1 ====\n['${!ref[@]:2}']\n['${!ref[@]:1:2}']\n['empty']\n['']\n[]\n==== a2[0] ====\n['${!ref[@]:2}']\n['${!ref[@]:1:2}']\n['element']\n['set']\n['element']\n['element']\n==== a3[@] ====\n['${!ref[@]:2}']\n['${!ref[@]:1:2}']\n['1', '2', '3']\n['set']\n['1', '2', '3']\n['1', '2', '3']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>==== v1 ====
+['${!ref[@]:2}']
+['${!ref[@]:1:2}']
+['value']
+['set']
+['value']
+v1=value
+==== v2 ====
+['${!ref[@]:2}']
+['${!ref[@]:1:2}']
+['empty']
+['']
+v2=
+==== a1 ====
+['${!ref[@]:2}']
+['${!ref[@]:1:2}']
+['empty']
+['']
+[]
+==== a2[0] ====
+['${!ref[@]:2}']
+['${!ref[@]:1:2}']
+['element']
+['set']
+['element']
+['element']
+==== a3[@] ====
+['${!ref[@]:2}']
+['${!ref[@]:1:2}']
+['1', '2', '3']
+['set']
+['1', '2', '3']
+['1', '2', '3']
+</pre><i>stderr:</i> <br/>
+<pre>[31mERROR[0m error: cannot assign in this way
+[31mERROR[0m error: cannot assign in this way
+</pre></td></tr><tr><td><a name="details-29-dash"></a><b>dash</b></td><td>29 <a href="var-ref.test.html#L637">Array indirect expansion with replacements</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "==== v1 ====\n['alue']\n['valu']\n['vlu']\n['vxlux']\n==== v2 ====\n['']\n['']\n['']\n['']\n==== a1 ====\n['']\n['']\n['']\n['']\n==== a2[0] ====\n['lement']\n['elemen']\n['lmnt']\n['xlxmxnt']\n==== a3[@] ====\n['', '', '']\n['', '', '']\n['1', '2', '3']\n['1', '2', '3']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-29-ash"></a><b>ash</b></td><td>29 <a href="var-ref.test.html#L637">Array indirect expansion with replacements</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "==== v1 ====\n['alue']\n['valu']\n['vlu']\n['vxlux']\n==== v2 ====\n['']\n['']\n['']\n['']\n==== a1 ====\n['']\n['']\n['']\n['']\n==== a2[0] ====\n['lement']\n['elemen']\n['lmnt']\n['xlxmxnt']\n==== a3[@] ====\n['', '', '']\n['', '', '']\n['1', '2', '3']\n['1', '2', '3']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-29-zsh"></a><b>zsh</b></td><td>29 <a href="var-ref.test.html#L637">Array indirect expansion with replacements</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "==== v1 ====\n['alue']\n['valu']\n['vlu']\n['vxlux']\n==== v2 ====\n['']\n['']\n['']\n['']\n==== a1 ====\n['']\n['']\n['']\n['']\n==== a2[0] ====\n['lement']\n['elemen']\n['lmnt']\n['xlxmxnt']\n==== a3[@] ====\n['', '', '']\n['', '', '']\n['1', '2', '3']\n['1', '2', '3']\n"
+Got      '==== v1 ====\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>==== v1 ====
+</pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [dummy]=v1
+test-rep:2: bad math expression: operand expected at `'dummy''
+</pre></td></tr><tr><td><a name="details-29-mksh"></a><b>mksh</b></td><td>29 <a href="var-ref.test.html#L637">Array indirect expansion with replacements</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "==== v1 ====\n['alue']\n['valu']\n['vlu']\n['vxlux']\n==== v2 ====\n['']\n['']\n['']\n['']\n==== a1 ====\n['']\n['']\n['']\n['']\n==== a2[0] ====\n['lement']\n['elemen']\n['lmnt']\n['xlxmxnt']\n==== a3[@] ====\n['', '', '']\n['', '', '']\n['1', '2', '3']\n['1', '2', '3']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-29-ksh"></a><b>ksh</b></td><td>29 <a href="var-ref.test.html#L637">Array indirect expansion with replacements</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "==== v1 ====\n['alue']\n['valu']\n['vlu']\n['vxlux']\n==== v2 ====\n['']\n['']\n['']\n['']\n==== a1 ====\n['']\n['']\n['']\n['']\n==== a2[0] ====\n['lement']\n['elemen']\n['lmnt']\n['xlxmxnt']\n==== a3[@] ====\n['', '', '']\n['', '', '']\n['1', '2', '3']\n['1', '2', '3']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-29-toysh"></a><b>toysh</b></td><td>29 <a href="var-ref.test.html#L637">Array indirect expansion with replacements</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "==== v1 ====\n['alue']\n['valu']\n['vlu']\n['vxlux']\n==== v2 ====\n['']\n['']\n['']\n['']\n==== a1 ====\n['']\n['']\n['']\n['']\n==== a2[0] ====\n['lement']\n['elemen']\n['lmnt']\n['xlxmxnt']\n==== a3[@] ====\n['', '', '']\n['', '', '']\n['1', '2', '3']\n['1', '2', '3']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-29-sush"></a><b>sush</b></td><td>29 <a href="var-ref.test.html#L637">Array indirect expansion with replacements</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "==== v1 ====\n['alue']\n['valu']\n['vlu']\n['vxlux']\n==== v2 ====\n['']\n['']\n['']\n['']\n==== a1 ====\n['']\n['']\n['']\n['']\n==== a2[0] ====\n['lement']\n['elemen']\n['lmnt']\n['xlxmxnt']\n==== a3[@] ====\n['', '', '']\n['', '', '']\n['1', '2', '3']\n['1', '2', '3']\n"
+Got      '====  ====\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>====  ====
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: function: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: `': not a valid identifier
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: `': not a valid identifier
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: `': not a valid identifier
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: `': not a valid identifier
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 10: syntax error near unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 12: test-rep: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 15: test-rep: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 18: test-rep: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 21: test-rep: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 24: test-rep: command not found
+</pre></td></tr><tr><td><a name="details-29-brush"></a><b>brush</b></td><td>29 <a href="var-ref.test.html#L637">Array indirect expansion with replacements</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "==== v1 ====\n['alue']\n['valu']\n['vlu']\n['vxlux']\n==== v2 ====\n['']\n['']\n['']\n['']\n==== a1 ====\n['']\n['']\n['']\n['']\n==== a2[0] ====\n['lement']\n['elemen']\n['lmnt']\n['xlxmxnt']\n==== a3[@] ====\n['', '', '']\n['', '', '']\n['1', '2', '3']\n['1', '2', '3']\n"
+Got      "==== v1 ====\n['alue']\n['valu']\n['${!ref[@]//[a-f]}']\n['${!ref[@]//[a-f]/x}']\n==== v2 ====\n['']\n['']\n['${!ref[@]//[a-f]}']\n['${!ref[@]//[a-f]/x}']\n==== a1 ====\n['']\n['']\n['${!ref[@]//[a-f]}']\n['${!ref[@]//[a-f]/x}']\n==== a2[0] ====\n['lement']\n['elemen']\n['${!ref[@]//[a-f]}']\n['${!ref[@]//[a-f]/x}']\n==== a3[@] ====\n['', '', '']\n['', '', '']\n['${!ref[@]//[a-f]}']\n['${!ref[@]//[a-f]/x}']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>==== v1 ====
+['alue']
+['valu']
+['${!ref[@]//[a-f]}']
+['${!ref[@]//[a-f]/x}']
+==== v2 ====
+['']
+['']
+['${!ref[@]//[a-f]}']
+['${!ref[@]//[a-f]/x}']
+==== a1 ====
+['']
+['']
+['${!ref[@]//[a-f]}']
+['${!ref[@]//[a-f]/x}']
+==== a2[0] ====
+['lement']
+['elemen']
+['${!ref[@]//[a-f]}']
+['${!ref[@]//[a-f]/x}']
+==== a3[@] ====
+['', '', '']
+['', '', '']
+['${!ref[@]//[a-f]}']
+['${!ref[@]//[a-f]/x}']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-bash"></a><b>bash</b></td><td>30 <a href="var-ref.test.html#L692">Array indirect expansion with @? conversion</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>==== v1 ====
+["'value'"]
+['value']
+['']
+==== v2 ====
+["''"]
+['']
+['']
+==== a1 ====
+['']
+['']
+['a']
+==== a2[0] ====
+["'element'"]
+['element']
+['a']
+==== a3[@] ====
+["'1'", "'2'", "'3'"]
+['1', '2', '3']
+['a', 'a', 'a']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-dash"></a><b>dash</b></td><td>30 <a href="var-ref.test.html#L692">Array indirect expansion with @? conversion</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '==== v1 ====\n[\'value\']\n[\'value\']\n[\'\']\n==== v2 ====\n["\'\'"]\n[\'\']\n[\'\']\n==== a1 ====\n[\'\']\n[\'\']\n[\'a\']\n==== a2[0] ====\n[\'element\']\n[\'element\']\n[\'a\']\n==== a3[@] ====\n[\'1\', \'2\', \'3\']\n[\'1\', \'2\', \'3\']\n[\'a\', \'a\', \'a\']\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-30-ash"></a><b>ash</b></td><td>30 <a href="var-ref.test.html#L692">Array indirect expansion with @? conversion</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '==== v1 ====\n[\'value\']\n[\'value\']\n[\'\']\n==== v2 ====\n["\'\'"]\n[\'\']\n[\'\']\n==== a1 ====\n[\'\']\n[\'\']\n[\'a\']\n==== a2[0] ====\n[\'element\']\n[\'element\']\n[\'a\']\n==== a3[@] ====\n[\'1\', \'2\', \'3\']\n[\'1\', \'2\', \'3\']\n[\'a\', \'a\', \'a\']\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-30-zsh"></a><b>zsh</b></td><td>30 <a href="var-ref.test.html#L692">Array indirect expansion with @? conversion</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '==== v1 ====\n[\'value\']\n[\'value\']\n[\'\']\n==== v2 ====\n["\'\'"]\n[\'\']\n[\'\']\n==== a1 ====\n[\'\']\n[\'\']\n[\'a\']\n==== a2[0] ====\n[\'element\']\n[\'element\']\n[\'a\']\n==== a3[@] ====\n[\'1\', \'2\', \'3\']\n[\'1\', \'2\', \'3\']\n[\'a\', \'a\', \'a\']\n'
+Got      '==== v1 ====\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>==== v1 ====
+</pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [dummy]=v1
+test-op0:2: bad math expression: operand expected at `'dummy''
+</pre></td></tr><tr><td><a name="details-30-mksh"></a><b>mksh</b></td><td>30 <a href="var-ref.test.html#L692">Array indirect expansion with @? conversion</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '==== v1 ====\n[\'value\']\n[\'value\']\n[\'\']\n==== v2 ====\n["\'\'"]\n[\'\']\n[\'\']\n==== a1 ====\n[\'\']\n[\'\']\n[\'a\']\n==== a2[0] ====\n[\'element\']\n[\'element\']\n[\'a\']\n==== a3[@] ====\n[\'1\', \'2\', \'3\']\n[\'1\', \'2\', \'3\']\n[\'a\', \'a\', \'a\']\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-30-ksh"></a><b>ksh</b></td><td>30 <a href="var-ref.test.html#L692">Array indirect expansion with @? conversion</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '==== v1 ====\n[\'value\']\n[\'value\']\n[\'\']\n==== v2 ====\n["\'\'"]\n[\'\']\n[\'\']\n==== a1 ====\n[\'\']\n[\'\']\n[\'a\']\n==== a2[0] ====\n[\'element\']\n[\'element\']\n[\'a\']\n==== a3[@] ====\n[\'1\', \'2\', \'3\']\n[\'1\', \'2\', \'3\']\n[\'a\', \'a\', \'a\']\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-30-toysh"></a><b>toysh</b></td><td>30 <a href="var-ref.test.html#L692">Array indirect expansion with @? conversion</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '==== v1 ====\n[\'value\']\n[\'value\']\n[\'\']\n==== v2 ====\n["\'\'"]\n[\'\']\n[\'\']\n==== a1 ====\n[\'\']\n[\'\']\n[\'a\']\n==== a2[0] ====\n[\'element\']\n[\'element\']\n[\'a\']\n==== a3[@] ====\n[\'1\', \'2\', \'3\']\n[\'1\', \'2\', \'3\']\n[\'a\', \'a\', \'a\']\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-30-sush"></a><b>sush</b></td><td>30 <a href="var-ref.test.html#L692">Array indirect expansion with @? conversion</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '==== v1 ====\n[\'value\']\n[\'value\']\n[\'\']\n==== v2 ====\n["\'\'"]\n[\'\']\n[\'\']\n==== a1 ====\n[\'\']\n[\'\']\n[\'a\']\n==== a2[0] ====\n[\'element\']\n[\'element\']\n[\'a\']\n==== a3[@] ====\n[\'1\', \'2\', \'3\']\n[\'1\', \'2\', \'3\']\n[\'a\', \'a\', \'a\']\n'
+Got      '====  ====\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>====  ====
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: function: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: `': not a valid identifier
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: `${!ref[@]@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: `${!ref[@]@a}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: syntax error near unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: test-op0: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 14: test-op0: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 17: test-op0: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 20: test-op0: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 23: test-op0: command not found
+</pre></td></tr><tr><td><a name="details-30-brush"></a><b>brush</b></td><td>30 <a href="var-ref.test.html#L692">Array indirect expansion with @? conversion</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '==== v1 ====\n[\'value\']\n[\'value\']\n[\'\']\n==== v2 ====\n["\'\'"]\n[\'\']\n[\'\']\n==== a1 ====\n[\'\']\n[\'\']\n[\'a\']\n==== a2[0] ====\n[\'element\']\n[\'element\']\n[\'a\']\n==== a3[@] ====\n[\'1\', \'2\', \'3\']\n[\'1\', \'2\', \'3\']\n[\'a\', \'a\', \'a\']\n'
+Got      "==== v1 ====\n['${!ref[@]@Q}']\n['${!ref[@]@P}']\n['${!ref[@]@a}']\n==== v2 ====\n['${!ref[@]@Q}']\n['${!ref[@]@P}']\n['${!ref[@]@a}']\n==== a1 ====\n['${!ref[@]@Q}']\n['${!ref[@]@P}']\n['${!ref[@]@a}']\n==== a2[0] ====\n['${!ref[@]@Q}']\n['${!ref[@]@P}']\n['${!ref[@]@a}']\n==== a3[@] ====\n['${!ref[@]@Q}']\n['${!ref[@]@P}']\n['${!ref[@]@a}']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>==== v1 ====
+['${!ref[@]@Q}']
+['${!ref[@]@P}']
+['${!ref[@]@a}']
+==== v2 ====
+['${!ref[@]@Q}']
+['${!ref[@]@P}']
+['${!ref[@]@a}']
+==== a1 ====
+['${!ref[@]@Q}']
+['${!ref[@]@P}']
+['${!ref[@]@a}']
+==== a2[0] ====
+['${!ref[@]@Q}']
+['${!ref[@]@P}']
+['${!ref[@]@a}']
+==== a3[@] ====
+['${!ref[@]@Q}']
+['${!ref[@]@P}']
+['${!ref[@]@a}']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>type-compat: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for type-compat.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>4</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td><td>2</td><td>2</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>2</td><td>7</td><td>7</td><td>6</td><td>6</td><td>6</td><td>6</td><td>5</td><td>5</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="type-compat.test.html#L12">declare -i -l -u errors can be silenced - ignore_flags_not_impl</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-0-bash">details</a></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"><a href="#details-0-ash">details</a></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"><a href="#details-0-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="type-compat.test.html#L42">declare -i with +=</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"><a href="#details-1-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="type-compat.test.html#L69">declare -i with arithmetic inside strings (Nix, issue 864)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"><a href="#details-2-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="type-compat.test.html#L92">append in arith context</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-3-bash">details</a></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="type-compat.test.html#L107">declare array vs. string: mixing -a +a and () ''</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"><a href="#details-4-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="type-compat.test.html#L122">declare array vs. associative array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-5-bash">details</a></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"><a href="#details-5-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="type-compat.test.html#L139">declare -l -u</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-osh">details</a></td><td class="details-row"></td></tr>
+</table>
+<pre>14 passed, 1 OK, 5 not implemented, 0 BUG, 50 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-bash"></a><b>bash</b></td><td>0 <a href="type-compat.test.html#L12">declare -i -l -u errors can be silenced - ignore_flags_not_impl</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+foo=5
+
+status=0
+bar=5
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 6: shopt: ignore_flags_not_impl: invalid shell option name
+</pre></td></tr><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="type-compat.test.html#L12">declare -i -l -u errors can be silenced - ignore_flags_not_impl</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'status=2\nfoo=\n\nstatus=0\nbar=2+3\n'
+Got      'status=127\nfoo=\n\nstatus=127\nbar=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+foo=
+
+status=127
+bar=
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 6: shopt: not found
+dash: 7: declare: not found
+</pre></td></tr><tr><td><a name="details-0-ash"></a><b>ash</b></td><td>0 <a href="type-compat.test.html#L12">declare -i -l -u errors can be silenced - ignore_flags_not_impl</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=2\nfoo=\n\nstatus=0\nbar=2+3\n'
+Got      'status=127\nfoo=\n\nstatus=127\nbar=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+foo=
+
+status=127
+bar=
+</pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: shopt: not found
+ash: declare: not found
+</pre></td></tr><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="type-compat.test.html#L12">declare -i -l -u errors can be silenced - ignore_flags_not_impl</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=2\nfoo=\n\nstatus=0\nbar=2+3\n'
+Got      'status=0\nfoo=5\n\nstatus=0\nbar=5\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+foo=5
+
+status=0
+bar=5
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="type-compat.test.html#L12">declare -i -l -u errors can be silenced - ignore_flags_not_impl</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'status=2\nfoo=\n\nstatus=0\nbar=2+3\n'
+Got      'status=127\nfoo=\n\nstatus=127\nbar=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+foo=
+
+status=127
+bar=
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[6]: shopt: not found
+mksh: &lt;stdin&gt;[7]: declare: not found
+</pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="type-compat.test.html#L12">declare -i -l -u errors can be silenced - ignore_flags_not_impl</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=2\nfoo=\n\nstatus=0\nbar=2+3\n'
+Got      'status=127\nfoo=\n\nstatus=127\nbar=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+foo=
+
+status=127
+bar=
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[6]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[7]: declare: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="type-compat.test.html#L12">declare -i -l -u errors can be silenced - ignore_flags_not_impl</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=2\nfoo=\n\nstatus=0\nbar=2+3\n'
+Got      'status=0\nfoo=2+3\n\nstatus=0\nbar=2+3\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+foo=2+3
+
+status=0
+bar=2+3
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="type-compat.test.html#L12">declare -i -l -u errors can be silenced - ignore_flags_not_impl</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=2\nfoo=\n\nstatus=0\nbar=2+3\n'
+Got      'status=0\nfoo=5\n\nstatus=0\nbar=5\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+foo=5
+
+status=0
+bar=5
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: shopt: ignore_flags_not_impl: not supported yet
+</pre></td></tr><tr><td><a name="details-0-brush"></a><b>brush</b></td><td>0 <a href="type-compat.test.html#L12">declare -i -l -u errors can be silenced - ignore_flags_not_impl</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=2\nfoo=\n\nstatus=0\nbar=2+3\n'
+Got      'status=0\nfoo=0\n\nstatus=0\nbar=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+foo=0
+
+status=0
+bar=0
+</pre><i>stderr:</i> <br/>
+<pre>shopt: ignore_flags_not_impl: invalid shell option name
+</pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="type-compat.test.html#L42">declare -i with +=</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '[1  2 ]\n[3]\n[2]\n'
+Got      '[1 ]\n[1 ]\n[x]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[1 ]
+[1 ]
+[x]
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 3: s+= 2 : not found
+dash: 5: declare: not found
+dash: 7: i+= 2 : not found
+dash: 9: declare: not found
+dash: 11: j+= 2 : not found
+</pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="type-compat.test.html#L42">declare -i with +=</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '[1  2 ]\n[3]\n[2]\n'
+Got      '[1 ]\n[1 ]\n[x]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[1 ]
+[1 ]
+[x]
+</pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: s+= 2 : not found
+ash: declare: not found
+ash: i+= 2 : not found
+ash: declare: not found
+ash: j+= 2 : not found
+</pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="type-compat.test.html#L42">declare -i with +=</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '[1  2 ]\n[3]\n[2]\n'
+Got      '[1  2 ]\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[1  2 ]
+</pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [3]
+</pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="type-compat.test.html#L42">declare -i with +=</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '[1  2 ]\n[3]\n[2]\n'
+Got      '[1  2 ]\n[1 2 ]\n[x 2 ]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[1  2 ]
+[1 2 ]
+[x 2 ]
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[5]: declare: not found
+mksh: &lt;stdin&gt;[9]: declare: not found
+</pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="type-compat.test.html#L42">declare -i with +=</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '[1  2 ]\n[3]\n[2]\n'
+Got      '[1  2 ]\n[1 2 ]\n[x 2 ]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[1  2 ]
+[1 2 ]
+[x 2 ]
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[5]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[9]: declare: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="type-compat.test.html#L42">declare -i with +=</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[1  2 ]\n[3]\n[2]\n'
+Got      '[1  2 ]\n[0]\n[0]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[1  2 ]
+[0]
+[0]
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: '1 ': syntax error: operand expected (error token is "'1 '")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: ' 2 ': syntax error: operand expected (error token is "' 2 '")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: ' 2 ': syntax error: operand expected (error token is "' 2 '")
+</pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="type-compat.test.html#L42">declare -i with +=</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '[1  2 ]\n[3]\n[2]\n'
+Got      '[1  2 ]\n[0]\n[0]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[1  2 ]
+[0]
+[0]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-osh"></a><b>osh</b></td><td>1 <a href="type-compat.test.html#L42">declare -i with +=</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[1  2 ]
+[1 2 ]
+[x 2 ]
+</pre><i>stderr:</i> <br/>
+<pre>  declare -i i
+  ^~~~~~~
+[ stdin ]:5: 'declare' doesn't implement flag -i (shopt --set ignore_flags_not_impl)
+  declare -i j
+  ^~~~~~~
+[ stdin ]:9: 'declare' doesn't implement flag -i (shopt --set ignore_flags_not_impl)
+</pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="type-compat.test.html#L69">declare -i with arithmetic inside strings (Nix, issue 864)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 's=3\nitem=3\n'
+Got      's=1 + 2\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>s=1 + 2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 5: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="type-compat.test.html#L69">declare -i with arithmetic inside strings (Nix, issue 864)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 's=3\nitem=3\n'
+Got      's=1 + 2\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>s=1 + 2
+</pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="type-compat.test.html#L69">declare -i with arithmetic inside strings (Nix, issue 864)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 's=3\nitem=3\n'
+Got      's=3\nitem=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>s=3
+item=2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="type-compat.test.html#L69">declare -i with arithmetic inside strings (Nix, issue 864)</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 's=3\nitem=3\n'
+Got      's=1 + 2\n'
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>s=1 + 2
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[5]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="type-compat.test.html#L69">declare -i with arithmetic inside strings (Nix, issue 864)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 's=3\nitem=3\n'
+Got      's=1 + 2\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>s=1 + 2
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[5]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="type-compat.test.html#L69">declare -i with arithmetic inside strings (Nix, issue 864)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 's=3\nitem=3\n'
+Got      's=3\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>s=3
+</pre><i>stderr:</i> <br/>
+<pre>main: line 5: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="type-compat.test.html#L69">declare -i with arithmetic inside strings (Nix, issue 864)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 's=3\nitem=3\n'
+Got      's=0\nitem=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>s=0
+item=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: '1 + 2': syntax error: operand expected (error token is "'1 + 2'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: 'array[1+1]': syntax error: operand expected (error token is "'array[1+1]'")
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="type-compat.test.html#L69">declare -i with arithmetic inside strings (Nix, issue 864)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 's=3\nitem=3\n'
+Got      's=0\nitem=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>s=0
+item=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-osh"></a><b>osh</b></td><td>2 <a href="type-compat.test.html#L69">declare -i with arithmetic inside strings (Nix, issue 864)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>s=1 + 2
+item=array[1+1]
+</pre><i>stderr:</i> <br/>
+<pre>  declare -i s
+  ^~~~~~~
+[ stdin ]:1: 'declare' doesn't implement flag -i (shopt --set ignore_flags_not_impl)
+  declare -i item
+  ^~~~~~~
+[ stdin ]:6: 'declare' doesn't implement flag -i (shopt --set ignore_flags_not_impl)
+</pre></td></tr><tr><td><a name="details-3-bash"></a><b>bash</b></td><td>3 <a href="type-compat.test.html#L92">append in arith context</a><br/><br/>
+<span class="assertion">
+[bash stdout]
+Expected '3|3|2\n'
+Got      '||\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>||
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 2: ((: s='1 ': syntax error: operand expected (error token is "'1 '")
+bash: line 3: ((: s+=' 2 ': syntax error: operand expected (error token is "' 2 '")
+bash: line 5: ((: i='1 ' : syntax error: operand expected (error token is "'1 ' ")
+bash: line 6: ((: i+=' 2 ' : syntax error: operand expected (error token is "' 2 ' ")
+bash: line 8: ((: j='x ' : syntax error: operand expected (error token is "'x ' ")
+bash: line 9: ((: j+=' 2 ' : syntax error: operand expected (error token is "' 2 ' ")
+</pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="type-compat.test.html#L92">append in arith context</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '3|3|2\n'
+Got      '||\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>||
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 3: s+= 2 : not found
+dash: 4: declare: not found
+dash: 6: i+= 2 : not found
+dash: 7: declare: not found
+dash: 9: j+= 2 : not found
+</pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="type-compat.test.html#L92">append in arith context</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '3|3|2\n'
+Got      '||\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>||
+</pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: s+= 2 : not found
+ash: declare: not found
+ash: i+= 2 : not found
+ash: declare: not found
+ash: j+= 2 : not found
+</pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="type-compat.test.html#L92">append in arith context</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '3|3|2\n'
+Got      '|0|0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>|0|0
+</pre><i>stderr:</i> <br/>
+<pre>zsh: bad math expression: operand expected at `'1 ''
+zsh: bad math expression: operand expected at `' 2 ''
+zsh: bad math expression: operand expected at `'1 ' '
+zsh: bad math expression: operand expected at `' 2 ' '
+zsh: bad math expression: operand expected at `'x ' '
+zsh: bad math expression: operand expected at `' 2 ' '
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="type-compat.test.html#L92">append in arith context</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '3|3|2\n'
+Got      '2|2|2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>2|2|2
+</pre><i>stderr:</i> <br/>
+<pre>main: line 8: sh: =0
+main: line 8: sh: bad math:  j=x   @ 6
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="type-compat.test.html#L92">append in arith context</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '3|3|2\n'
+Got      '|0|0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>|0|0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: ((: s='1 ': syntax error: operand expected (error token is "'1 '")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: ((: s+=' 2 ': syntax error: operand expected (error token is "' 2 '")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: ((: i='1 ' : syntax error: operand expected (error token is "'1 '")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: ((: i+=' 2 ' : syntax error: operand expected (error token is "' 2 '")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: ((: j='x ' : syntax error: operand expected (error token is "'x '")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: ((: j+=' 2 ' : syntax error: operand expected (error token is "' 2 '")
+</pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="type-compat.test.html#L107">declare array vs. string: mixing -a +a and () ''</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['1', '(2 3)', '4', '5', '6']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: declare: not found
+dash: 3: declare: not found
+dash: 4: declare: not found
+dash: 5: Bad substitution
+</pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="type-compat.test.html#L107">declare array vs. string: mixing -a +a and () ''</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['1', '(2 3)', '4', '5', '6']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: declare: not found
+ash: declare: not found
+ash: declare: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="type-compat.test.html#L107">declare array vs. string: mixing -a +a and () ''</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['1', '(2 3)', '4', '5', '6']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>declare: xyz3: inconsistent type for assignment
+</pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="type-compat.test.html#L107">declare array vs. string: mixing -a +a and () ''</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "['1', '(2 3)', '4', '5', '6']\n"
+Got      "['', '']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['', '']
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[2]: declare: not found
+mksh: &lt;stdin&gt;[3]: declare: not found
+mksh: &lt;stdin&gt;[4]: declare: not found
+</pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="type-compat.test.html#L107">declare array vs. string: mixing -a +a and () ''</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['1', '(2 3)', '4', '5', '6']\n"
+Got      "['', '']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['', '']
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[2]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[3]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[4]: declare: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="type-compat.test.html#L107">declare array vs. string: mixing -a +a and () ''</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['1', '(2 3)', '4', '5', '6']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>declare: bad +a
+declare: bad +a
+main: line 5: sh: xyz3: [@]}"
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="type-compat.test.html#L107">declare array vs. string: mixing -a +a and () ''</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['1', '(2 3)', '4', '5', '6']\n"
+Got      "['1', '2', '4', '5', '6']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1', '2', '4', '5', '6']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="type-compat.test.html#L107">declare array vs. string: mixing -a +a and () ''</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['1', '(2 3)', '4', '5', '6']\n"
+Got      "['', '']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['', '']
+</pre><i>stderr:</i> <br/>
+<pre>declare: xyz1=1: not a valid variable name
+declare: xyz2=(2 3): not a valid variable name
+declare: xyz3=4: not a valid variable name
+declare: xyz4=(5 6): not a valid variable name
+</pre></td></tr><tr><td><a name="details-4-osh"></a><b>osh</b></td><td>4 <a href="type-compat.test.html#L107">declare array vs. string: mixing -a +a and () ''</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['', '']
+</pre><i>stderr:</i> <br/>
+<pre>  declare +a 'xyz1=1'
+          ^
+[ stdin ]:1: 'declare' doesn't accept option +a
+  declare +a 'xyz2=(2 3)'
+          ^
+[ stdin ]:2: 'declare' doesn't accept option +a
+  declare -a 'xyz3=4'
+             ^
+[ stdin ]:3: 'declare' Got -a but RHS isn't an initializer list
+  declare -a 'xyz4=(5 6)'
+             ^
+[ stdin ]:4: 'declare' Got -a but RHS isn't an initializer list
+</pre></td></tr><tr><td><a name="details-5-bash"></a><b>bash</b></td><td>5 <a href="type-compat.test.html#L122">declare array vs. associative array</a><br/><br/>
+<span class="assertion">
+[bash stdout]
+Expected "['1', '0', 'd']\n['2', 'a', 'c', 'b', 'd']\n"
+Got      "['1', '0', 'd']\n['2', 'c', 'a', 'd', 'b']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1', '0', 'd']
+['2', 'c', 'a', 'd', 'b']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="type-compat.test.html#L122">declare array vs. associative array</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['1', '0', 'd']\n['2', 'a', 'c', 'b', 'd']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: declare: not found
+dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="type-compat.test.html#L122">declare array vs. associative array</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['1', '0', 'd']\n['2', 'a', 'c', 'b', 'd']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: declare: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="type-compat.test.html#L122">declare array vs. associative array</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['1', '0', 'd']\n['2', 'a', 'c', 'b', 'd']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>declare: array: inconsistent type for assignment
+</pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="type-compat.test.html#L122">declare array vs. associative array</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "['1', '0', 'd']\n['2', 'a', 'c', 'b', 'd']\n"
+Got      "['0']\n['0']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['0']
+['0']
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[2]: declare: not found
+</pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="type-compat.test.html#L122">declare array vs. associative array</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['1', '0', 'd']\n['2', 'a', 'c', 'b', 'd']\n"
+Got      "['0']\n['0']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['0']
+['0']
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[2]: declare: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="type-compat.test.html#L122">declare array vs. associative array</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['1', '0', 'd']\n['2', 'a', 'c', 'b', 'd']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 3: sh: array: [@]}"
+main: line 4: sh: assoc: [@]}"
+</pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="type-compat.test.html#L122">declare array vs. associative array</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['1', '0', 'd']\n['2', 'a', 'c', 'b', 'd']\n"
+Got      "['0']\n['0']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['0']
+['0']
+</pre><i>stderr:</i> <br/>
+<pre>declare: array=([a]=b [c]=d): not a valid variable name
+declare: assoc=([a]=b [c]=d): not a valid variable name
+</pre></td></tr><tr><td><a name="details-5-osh"></a><b>osh</b></td><td>5 <a href="type-compat.test.html#L122">declare array vs. associative array</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['0']
+['0']
+</pre><i>stderr:</i> <br/>
+<pre>  declare -a 'array=([a]=b [c]=d)'
+             ^
+[ stdin ]:1: 'declare' Got -a but RHS isn't an initializer list
+  declare -A 'assoc=([a]=b [c]=d)'
+             ^
+[ stdin ]:2: 'declare' Got -A but RHS isn't an initializer list
+</pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="type-compat.test.html#L139">declare -l -u</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'foo\nFOO\n'
+Got      '\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: declare: not found
+</pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="type-compat.test.html#L139">declare -l -u</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'foo\nFOO\n'
+Got      '\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+</pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: declare: not found
+</pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="type-compat.test.html#L139">declare -l -u</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'foo\nFOO\n'
+Got      '\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+mksh: &lt;stdin&gt;[2]: declare: not found
+</pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="type-compat.test.html#L139">declare -l -u</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'foo\nFOO\n'
+Got      '\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[2]: declare: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="type-compat.test.html#L139">declare -l -u</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'foo\nFOO\n'
+Got      'FOO\nfoo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FOO
+foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-osh"></a><b>osh</b></td><td>6 <a href="type-compat.test.html#L139">declare -l -u</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>FOO
+foo
+</pre><i>stderr:</i> <br/>
+<pre>  declare -l lower=FOO
+  ^~~~~~~
+[ stdin ]:1: Warning: OSH doesn't implement flags -l or -u (shopt --set ignore_flags_not_impl)
+  declare -u upper=foo
+  ^~~~~~~
+[ stdin ]:2: Warning: OSH doesn't implement flags -l or -u (shopt --set ignore_flags_not_impl)
+</pre></td></tr></table></body></html>
