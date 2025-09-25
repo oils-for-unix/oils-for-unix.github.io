@@ -47,7 +47,7 @@ index-html() {
   - [oils.vim Test Output](oils-vim/index.html)
 
 
-## spec-compat
+## test/spec-compat
 
 - [2025-06-15](spec-compat/2025-06-15/renamed-tmp/spec/compat/TOP.html)
 - [2025-06-19](spec-compat/2025-06-19/renamed-tmp/spec/compat/TOP.html)
