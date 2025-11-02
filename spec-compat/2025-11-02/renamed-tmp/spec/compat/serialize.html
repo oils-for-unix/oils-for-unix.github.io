@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>serialize: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for serialize.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>7</td><td>0</td><td>0</td><td>3</td><td>4</td><td>4</td><td>0</td><td>2</td><td>6</td><td>7</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>3</td><td>0</td><td>2</td><td>4</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>0</td><td>8</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>0</td><td>0</td><td>2</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>10</td><td>0</td><td>0</td><td>0</td><td>6</td><td>10</td><td>8</td><td>4</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td><td>10</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="serialize.test.html#L12">printf %q newline</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"><a href="#details-0-ash">details</a></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"><a href="#details-0-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="serialize.test.html#L36">printf %q spaces</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-1-bash">details</a></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="serialize.test.html#L52">printf %q quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"><a href="#details-2-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="serialize.test.html#L76">printf %q unprintable</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"><a href="#details-3-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="serialize.test.html#L94">printf %q unicode</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-4-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="ok">ok</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="serialize.test.html#L111">printf %q invalid unicode</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-5-bash">details</a></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="serialize.test.html#L159">set</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="bug">BUG</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="serialize.test.html#L174">declare</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="serialize.test.html#L193">${var@Q}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="serialize.test.html#L213">xtrace</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-9-bash">details</a></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"><a href="#details-9-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>33 passed, 15 OK, 9 not implemented, 5 BUG, 38 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="serialize.test.html#L12">printf %q newline</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "$'one\\ntwo'\nroundtrip-ok\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 4: printf: %q: invalid directive
+dash: 6: printf: %q: invalid directive
+</pre></td></tr><tr><td><a name="details-0-ash"></a><b>ash</b></td><td>0 <a href="serialize.test.html#L12">printf %q newline</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="serialize.test.html#L12">printf %q newline</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one$'\n'two
+roundtrip-ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="serialize.test.html#L12">printf %q newline</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>'one'$'\n''two'
+roundtrip-ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="serialize.test.html#L12">printf %q newline</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "$'one\\ntwo'\nroundtrip-ok\n"
+Got      "'one'$'\\n''two'\nroundtrip-ok\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>'one'$'\n''two'
+roundtrip-ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="serialize.test.html#L12">printf %q newline</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "$'one\\ntwo'\nroundtrip-ok\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="serialize.test.html#L12">printf %q newline</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "$'one\\ntwo'\nroundtrip-ok\n"
+Got      'one\ntwo\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: two: command not found
+</pre></td></tr><tr><td><a name="details-0-brush"></a><b>brush</b></td><td>0 <a href="serialize.test.html#L12">printf %q newline</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "$'one\\ntwo'\nroundtrip-ok\n"
+Got      "'one'$'\\n''two'\nroundtrip-ok\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>'one'$'\n''two'
+roundtrip-ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-bash"></a><b>bash</b></td><td>1 <a href="serialize.test.html#L36">printf %q spaces</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one\ two
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="serialize.test.html#L36">printf %q spaces</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "'one two'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 5: printf: %q: invalid directive
+</pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="serialize.test.html#L36">printf %q spaces</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="serialize.test.html#L36">printf %q spaces</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one\ two
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="serialize.test.html#L36">printf %q spaces</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "'one two'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="serialize.test.html#L36">printf %q spaces</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "'one two'\n"
+Got      'one two\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one two
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="serialize.test.html#L52">printf %q quotes</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '\\\'\\"\nroundtrip-ok\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 4: printf: %q: invalid directive
+dash: 6: printf: %q: invalid directive
+</pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="serialize.test.html#L52">printf %q quotes</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="serialize.test.html#L52">printf %q quotes</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>''\''"'
+roundtrip-ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="serialize.test.html#L52">printf %q quotes</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '\\\'\\"\nroundtrip-ok\n'
+Got      '\'\'\\\'\'"\'\nroundtrip-ok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>''\''"'
+roundtrip-ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="serialize.test.html#L52">printf %q quotes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '\\\'\\"\nroundtrip-ok\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="serialize.test.html#L52">printf %q quotes</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '\\\'\\"\nroundtrip-ok\n'
+Got      '\'\'\\\'\'"\'\nroundtrip-ok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>''\''"'
+roundtrip-ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-osh"></a><b>osh</b></td><td>2 <a href="serialize.test.html#L52">printf %q quotes</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>$'\'"'
+roundtrip-ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="serialize.test.html#L76">printf %q unprintable</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "$'\\377'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 4: printf: %q: invalid directive
+</pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="serialize.test.html#L76">printf %q unprintable</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="serialize.test.html#L76">printf %q unprintable</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>''$'\377'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="serialize.test.html#L76">printf %q unprintable</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "$'\\377'\n"
+Got      "''$'\\377'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>''$'\377'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="serialize.test.html#L76">printf %q unprintable</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "$'\\377'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="serialize.test.html#L76">printf %q unprintable</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "$'\\377'\n"
+Got      '\xee\x83\xbf\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="serialize.test.html#L76">printf %q unprintable</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "$'\\377'\n"
+Got      '\xef\xbf\xbd\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>�
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-osh"></a><b>osh</b></td><td>3 <a href="serialize.test.html#L76">printf %q unprintable</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>$'\xff'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="serialize.test.html#L94">printf %q unicode</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '\xce\xbc\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 6: printf: %q: invalid directive
+</pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="serialize.test.html#L94">printf %q unicode</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="serialize.test.html#L94">printf %q unicode</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '\xce\xbc\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="serialize.test.html#L94">printf %q unicode</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '\xce\xbc\n'
+Got      '\xee\x83\x8e\xee\x82\xbc\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-osh"></a><b>osh</b></td><td>4 <a href="serialize.test.html#L94">printf %q unicode</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>'μ'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-bash"></a><b>bash</b></td><td>5 <a href="serialize.test.html#L111">printf %q invalid unicode</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>$'\316'
+$'\316μ'
+$'μ\316'
+$'\316a'
+$'a\316'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="serialize.test.html#L111">printf %q invalid unicode</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "$'\\xce'\n$'\\xce\xce\xbc'\n$'\xce\xbc\\xce'\n$'\\xcea'\n$'a\\xce'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 4: printf: %q: invalid directive
+dash: 7: printf: %q: invalid directive
+dash: 10: printf: %q: invalid directive
+dash: 15: printf: %q: invalid directive
+dash: 17: printf: %q: invalid directive
+</pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="serialize.test.html#L111">printf %q invalid unicode</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="serialize.test.html#L111">printf %q invalid unicode</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>$'\316'
+$'\316'μ
+μ$'\316'
+$'\316'a
+a$'\316'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="serialize.test.html#L111">printf %q invalid unicode</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>''$'\316'
+''$'\316''μ'
+'μ'$'\316'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="serialize.test.html#L111">printf %q invalid unicode</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "$'\\xce'\n$'\\xce\xce\xbc'\n$'\xce\xbc\\xce'\n$'\\xcea'\n$'a\\xce'\n"
+Got      "''$'\\316'\n''$'\\316''\xce\xbc'\n'\xce\xbc'$'\\316'\n\xe0\xb3\xaa\n'a'$'\\316'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>''$'\316'
+''$'\316''μ'
+'μ'$'\316'
+೪
+'a'$'\316'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="serialize.test.html#L111">printf %q invalid unicode</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "$'\\xce'\n$'\\xce\xce\xbc'\n$'\xce\xbc\\xce'\n$'\\xcea'\n$'a\\xce'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="serialize.test.html#L111">printf %q invalid unicode</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "$'\\xce'\n$'\\xce\xce\xbc'\n$'\xce\xbc\\xce'\n$'\\xcea'\n$'a\\xce'\n"
+Got      '\xee\x83\x8e\n\xee\x83\x8e\xee\x83\x8e\xee\x82\xbc\n\xee\x83\x8e\xee\x82\xbc\xee\x83\x8e\n\xee\x83\x8ea\na\xee\x83\x8e\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+
+a
+a
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="serialize.test.html#L111">printf %q invalid unicode</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "$'\\xce'\n$'\\xce\xce\xbc'\n$'\xce\xbc\\xce'\n$'\\xcea'\n$'a\\xce'\n"
+Got      '\xef\xbf\xbd\n\xef\xbf\xbd\xce\xbc\n\xce\xbc\xef\xbf\xbd\n\xef\xbf\xbda\na\xef\xbf\xbd\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>�
+�μ
+μ�
+�a
+a�
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="serialize.test.html#L159">set</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "zz=$'one\\ntwo'\n"
+Got      "zz='$one\\ntwo'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zz='$one\ntwo'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="serialize.test.html#L159">set</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>zz='one
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="serialize.test.html#L159">set</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="serialize.test.html#L159">set</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "zz=$'one\\ntwo'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="serialize.test.html#L174">declare</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "zz=$'one\\ntwo'\ndeclare -- zz=$'one\\ntwo'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 5: typeset: not found
+dash: 6: typeset: not found
+</pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="serialize.test.html#L174">declare</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="serialize.test.html#L174">declare</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="serialize.test.html#L174">declare</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>typeset zz
+typeset zz=$'one\ntwo'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="serialize.test.html#L174">declare</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "zz=$'one\\ntwo'\ndeclare -- zz=$'one\\ntwo'\n"
+Got      "typeset zz\ntypeset zz=$'one\\ntwo'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>typeset zz
+typeset zz=$'one\ntwo'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="serialize.test.html#L174">declare</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "zz=$'one\\ntwo'\ndeclare -- zz=$'one\\ntwo'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="serialize.test.html#L174">declare</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "zz=$'one\\ntwo'\ndeclare -- zz=$'one\\ntwo'\n"
+Got      'zz=$\'one\\ntwo\'\ndeclare -- zz="$\'one\\ntwo\'"\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>zz=$'one\ntwo'
+declare -- zz="$'one\ntwo'"
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="serialize.test.html#L193">${var@Q}</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "$'one\\ntwo \xce\xbc'\n$'one\\ntwo \xce\xbc'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 5: Bad substitution
+</pre></td></tr><tr><td><a name="details-8-ash"></a><b>ash</b></td><td>8 <a href="serialize.test.html#L193">${var@Q}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="serialize.test.html#L193">${var@Q}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-mksh"></a><b>mksh</b></td><td>8 <a href="serialize.test.html#L193">${var@Q}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>$'one
+two μ'
+$'one
+two μ'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-ksh"></a><b>ksh</b></td><td>8 <a href="serialize.test.html#L193">${var@Q}</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "$'one\\ntwo \xce\xbc'\n$'one\\ntwo \xce\xbc'\n"
+Got      "$'one\ntwo \xce\xbc'\n$'one\ntwo \xce\xbc'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>$'one
+two μ'
+$'one
+two μ'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="serialize.test.html#L193">${var@Q}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "$'one\\ntwo \xce\xbc'\n$'one\\ntwo \xce\xbc'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="serialize.test.html#L193">${var@Q}</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "$'one\\ntwo \xce\xbc'\n$'one\\ntwo \xce\xbc'\n"
+Got      "'one two \xce\xbc'\n'one\ntwo \xce\xbc'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>'one two μ'
+'one
+two μ'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-bash"></a><b>bash</b></td><td>9 <a href="serialize.test.html#L213">xtrace</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+</pre><i>stderr:</i> <br/>
+<pre>+ echo 'one
+two'
+</pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="serialize.test.html#L213">xtrace</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'one\ntwo\n'
+Got      '$one\ntwo\n'
+</span><br/>
+<span class="assertion">
+[dash stderr]
+Expected "+ echo $'one\\ntwo'\n"
+Got      '+ echo $one\\ntwo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>$one
+two
+</pre><i>stderr:</i> <br/>
+<pre>+ echo $one\ntwo
+</pre></td></tr><tr><td><a name="details-9-ash"></a><b>ash</b></td><td>9 <a href="serialize.test.html#L213">xtrace</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+</pre><i>stderr:</i> <br/>
+<pre>+ echo 'one
+two'
+</pre></td></tr><tr><td><a name="details-9-zsh"></a><b>zsh</b></td><td>9 <a href="serialize.test.html#L213">xtrace</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+</pre><i>stderr:</i> <br/>
+<pre>+zsh:3&gt; echo 'one
+two'
+</pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="serialize.test.html#L213">xtrace</a><br/><br/>
+<span class="assertion">
+[toysh stderr]
+Expected "+ echo $'one\\ntwo'\n"
+Got      ' echo "$zz" \n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+</pre><i>stderr:</i> <br/>
+<pre> echo "$zz" 
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="serialize.test.html#L213">xtrace</a><br/><br/>
+<span class="assertion">
+[sush stderr]
+Expected "+ echo $'one\\ntwo'\n"
+Got      '+ echo one\ntwo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+two
+</pre><i>stderr:</i> <br/>
+<pre>+ echo one
+two
+</pre></td></tr></table></body></html>

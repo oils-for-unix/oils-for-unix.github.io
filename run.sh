@@ -54,6 +54,7 @@ index-html() {
 - [2025-06-26](spec-compat/2025-06-26/renamed-tmp/spec/compat/TOP.html)
 - [2025-07-28](spec-compat/2025-07-28/renamed-tmp/spec/compat/TOP.html)
 - [2025-09-14](spec-compat/2025-09-14/renamed-tmp/spec/compat/TOP.html)
+- [2025-11-02](spec-compat/2025-11-02/renamed-tmp/spec/compat/TOP.html)
 
 ## regtest/aports
 

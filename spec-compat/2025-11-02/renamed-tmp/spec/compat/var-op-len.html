@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>var-op-len: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for var-op-len.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>6</td><td>2</td><td>4</td><td>6</td><td>3</td><td>4</td><td>2</td><td>4</td><td>2</td><td>8</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>5</td><td>0</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>2</td><td>1</td><td>0</td><td>3</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>5</td><td>0</td><td>0</td><td>5</td><td>7</td><td>5</td><td>7</td><td>1</td><td></td></tr>
+<tr><td>total</td><td>9</td><td>9</td><td>9</td><td>9</td><td>9</td><td>9</td><td>9</td><td>9</td><td>9</td><td>9</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-len.test.html#L7">String length</a></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-len.test.html#L12">Unicode string length (UTF-8)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-len.test.html#L19">Unicode string length (spec/testdata/utf8-chars.txt)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-len.test.html#L26">String length with incomplete utf-8</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-3-bash">details</a></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-len.test.html#L93">String length with invalid utf-8 continuation bytes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-4-bash">details</a></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-len.test.html#L188">Length of undefined variable</a></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-len.test.html#L192">Length of undefined variable with nounset</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="ok">ok</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-len.test.html#L198">Length operator can't be followed by test operator</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-7-bash">details</a></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="var-op-len.test.html#L223">${#s} respects LC_ALL - length in bytes or code points</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"><a href="#details-8-osh">details</a></td><td class="details-row"></td></tr>
+</table>
+<pre>41 passed, 3 OK, 9 not implemented, 7 BUG, 30 failed, 0 timeouts, 0 cases skipped
+1 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="var-op-len.test.html#L12">Unicode string length (UTF-8)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>9
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="var-op-len.test.html#L12">Unicode string length (UTF-8)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '3\n'
+Got      '8\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>8
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="var-op-len.test.html#L12">Unicode string length (UTF-8)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>4
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="var-op-len.test.html#L12">Unicode string length (UTF-8)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '3\n'
+Got      '4\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>4
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="var-op-len.test.html#L12">Unicode string length (UTF-8)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '3\n'
+Got      '4\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>4
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="var-op-len.test.html#L19">Unicode string length (spec/testdata/utf8-chars.txt)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>13
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="var-op-len.test.html#L19">Unicode string length (spec/testdata/utf8-chars.txt)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>13
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="var-op-len.test.html#L19">Unicode string length (spec/testdata/utf8-chars.txt)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '7\n'
+Got      '10\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>10
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="var-op-len.test.html#L19">Unicode string length (spec/testdata/utf8-chars.txt)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '7\n'
+Got      '13\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>13
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="var-op-len.test.html#L19">Unicode string length (spec/testdata/utf8-chars.txt)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '7\n'
+Got      '13\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>13
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-bash"></a><b>bash</b></td><td>3 <a href="var-op-len.test.html#L26">String length with incomplete utf-8</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>0
+1
+2
+3
+3
+4
+5
+6
+5
+6
+7
+8
+9
+7
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="var-op-len.test.html#L26">String length with incomplete utf-8</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="var-op-len.test.html#L26">String length with incomplete utf-8</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '0\n1\n2\n-1\n3\n4\n-1\n-1\n5\n6\n-1\n-1\n-1\n7\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 2 in string of 3 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 5 in string of 6 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 5 in string of 7 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 9 in string of 10 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 9 in string of 11 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 9 in string of 12 bytes\n'
+Got      '0\n1\n2\n3\n3\n4\n6\n7\n5\n6\n10\n11\n12\n7\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+1
+2
+3
+3
+4
+6
+7
+5
+6
+10
+11
+12
+7
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="var-op-len.test.html#L26">String length with incomplete utf-8</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>0
+1
+2
+3
+3
+4
+5
+6
+5
+6
+7
+8
+9
+7
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="var-op-len.test.html#L26">String length with incomplete utf-8</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="var-op-len.test.html#L26">String length with incomplete utf-8</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '0\n1\n2\n-1\n3\n4\n-1\n-1\n5\n6\n-1\n-1\n-1\n7\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 2 in string of 3 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 5 in string of 6 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 5 in string of 7 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 9 in string of 10 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 9 in string of 11 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 9 in string of 12 bytes\n'
+Got      '0\n1\n2\n3\n3\n4\n5\n6\n5\n6\n7\n8\n9\n10\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+1
+2
+3
+3
+4
+5
+6
+5
+6
+7
+8
+9
+10
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="var-op-len.test.html#L26">String length with incomplete utf-8</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '0\n1\n2\n-1\n3\n4\n-1\n-1\n5\n6\n-1\n-1\n-1\n7\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 2 in string of 3 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 5 in string of 6 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 5 in string of 7 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 9 in string of 10 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 9 in string of 11 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 9 in string of 12 bytes\n'
+Got      '0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="var-op-len.test.html#L26">String length with incomplete utf-8</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '0\n1\n2\n-1\n3\n4\n-1\n-1\n5\n6\n-1\n-1\n-1\n7\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 2 in string of 3 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 5 in string of 6 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 5 in string of 7 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 9 in string of 10 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 9 in string of 11 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 9 in string of 12 bytes\n'
+Got      '0\n1\n2\n0\n3\n4\n0\n0\n5\n6\n0\n0\n0\n7\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+1
+2
+0
+3
+4
+0
+0
+5
+6
+0
+0
+0
+7
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="var-op-len.test.html#L26">String length with incomplete utf-8</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '0\n1\n2\n-1\n3\n4\n-1\n-1\n5\n6\n-1\n-1\n-1\n7\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 2 in string of 3 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 5 in string of 6 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 5 in string of 7 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 9 in string of 10 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 9 in string of 11 bytes\n[ stdin ]:3: warning: UTF-8 decode: Truncated bytes at offset 9 in string of 12 bytes\n'
+Got      '0\n1\n2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+1
+2
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m i/o error: stream did not contain valid UTF-8
+</pre></td></tr><tr><td><a name="details-4-bash"></a><b>bash</b></td><td>4 <a href="var-op-len.test.html#L93">String length with invalid utf-8 continuation bytes</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+4
+5
+6
+7
+6
+7
+8
+9
+10
+8
+8
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="var-op-len.test.html#L93">String length with invalid utf-8 continuation bytes</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+20
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="var-op-len.test.html#L93">String length with invalid utf-8 continuation bytes</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 0 in string of 1 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 1 in string of 2 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 2 in string of 3 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 2 in string of 4 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 4 in string of 5 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 5 in string of 6 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 5 in string of 7 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 5 in string of 8 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 8 in string of 9 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 10 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 11 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 12 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 13 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 13 in string of 14 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 13 in string of 14 bytes\n'
+Got      '1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n14\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+14
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="var-op-len.test.html#L93">String length with invalid utf-8 continuation bytes</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+4
+5
+6
+7
+6
+7
+8
+9
+10
+8
+8
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="var-op-len.test.html#L93">String length with invalid utf-8 continuation bytes</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+14
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="var-op-len.test.html#L93">String length with invalid utf-8 continuation bytes</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 0 in string of 1 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 1 in string of 2 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 2 in string of 3 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 2 in string of 4 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 4 in string of 5 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 5 in string of 6 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 5 in string of 7 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 5 in string of 8 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 8 in string of 9 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 10 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 11 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 12 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 13 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 13 in string of 14 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 13 in string of 14 bytes\n'
+Got      '1\n2\n3\n4\n4\n5\n6\n7\n6\n7\n8\n9\n10\n11\n11\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+4
+4
+5
+6
+7
+6
+7
+8
+9
+10
+11
+11
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="var-op-len.test.html#L93">String length with invalid utf-8 continuation bytes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 0 in string of 1 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 1 in string of 2 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 2 in string of 3 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 2 in string of 4 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 4 in string of 5 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 5 in string of 6 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 5 in string of 7 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 5 in string of 8 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 8 in string of 9 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 10 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 11 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 12 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 13 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 13 in string of 14 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 13 in string of 14 bytes\n'
+Got      '2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n15\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+15
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="var-op-len.test.html#L93">String length with invalid utf-8 continuation bytes</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 0 in string of 1 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 1 in string of 2 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 2 in string of 3 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 2 in string of 4 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 4 in string of 5 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 5 in string of 6 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 5 in string of 7 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 5 in string of 8 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 8 in string of 9 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 10 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 11 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 12 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 13 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 13 in string of 14 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 13 in string of 14 bytes\n'
+Got      '0\n1\n2\n0\n3\n4\n0\n0\n5\n6\n0\n0\n0\n7\n7\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+1
+2
+0
+3
+4
+0
+0
+5
+6
+0
+0
+0
+7
+7
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="var-op-len.test.html#L93">String length with invalid utf-8 continuation bytes</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n-1\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 0 in string of 1 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 1 in string of 2 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 2 in string of 3 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 2 in string of 4 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 4 in string of 5 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 5 in string of 6 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 5 in string of 7 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 5 in string of 8 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 8 in string of 9 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 10 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 11 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 12 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 9 in string of 13 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 13 in string of 14 bytes\n[ stdin ]:3: warning: UTF-8 decode: Bad encoding at offset 13 in string of 14 bytes\n'
+Got      '3\n4\n5\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>3
+4
+5
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m i/o error: stream did not contain valid UTF-8
+</pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="var-op-len.test.html#L192">Length of undefined variable with nounset</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: undef: parameter not set
+</pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="var-op-len.test.html#L192">Length of undefined variable with nounset</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: undef: parameter not set
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="var-op-len.test.html#L192">Length of undefined variable with nounset</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o nounset
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="var-op-len.test.html#L192">Length of undefined variable with nounset</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: nounset: invalid option name
+</pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="var-op-len.test.html#L192">Length of undefined variable with nounset</a><br/><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-bash"></a><b>bash</b></td><td>7 <a href="var-op-len.test.html#L198">Length operator can't be followed by test operator</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>bash: line 1: ${#x-default}: bad substitution
+bash: line 4: ${#x-default}: bad substitution
+bash: line 7: ${#x-default}: bad substitution
+</pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="var-op-len.test.html#L198">Length operator can't be followed by test operator</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="var-op-len.test.html#L198">Length operator can't be followed by test operator</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>7
+0
+3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="var-op-len.test.html#L198">Length operator can't be followed by test operator</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: ${#x-default}: bad substitution
+</pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="var-op-len.test.html#L198">Length operator can't be followed by test operator</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 2
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: ${#x-default}: bad substitution
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="var-op-len.test.html#L198">Length operator can't be followed by test operator</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected u''
+Got      '0\n0\n3\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="var-op-len.test.html#L198">Length operator can't be followed by test operator</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected u''
+Got      'default\n0\n3\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>default
+0
+3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="var-op-len.test.html#L198">Length operator can't be followed by test operator</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected u''
+Got      '${#x-default}\n${#x-default}\n${#x-default}\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>${#x-default}
+${#x-default}
+${#x-default}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="var-op-len.test.html#L223">${#s} respects LC_ALL - length in bytes or code points</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-ash"></a><b>ash</b></td><td>8 <a href="var-op-len.test.html#L223">${#s} respects LC_ALL - length in bytes or code points</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'len=1\nlen=2\n\nlen=1\nlen=4\n\n'
+Got      'len=6\nlen=6\n\nlen=10\nlen=10\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=6
+len=6
+
+len=10
+len=10
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-mksh"></a><b>mksh</b></td><td>8 <a href="var-op-len.test.html#L223">${#s} respects LC_ALL - length in bytes or code points</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>len=2
+len=2
+
+len=3
+len=3
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-ksh"></a><b>ksh</b></td><td>8 <a href="var-op-len.test.html#L223">${#s} respects LC_ALL - length in bytes or code points</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'len=1\nlen=2\n\nlen=1\nlen=4\n\n'
+Got      'len=1\nlen=2\n\nlen=1\nlen=3\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=1
+len=2
+
+len=1
+len=3
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="var-op-len.test.html#L223">${#s} respects LC_ALL - length in bytes or code points</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'len=1\nlen=2\n\nlen=1\nlen=4\n\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="var-op-len.test.html#L223">${#s} respects LC_ALL - length in bytes or code points</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'len=1\nlen=2\n\nlen=1\nlen=4\n\n'
+Got      'len=1\nlen=1\n\nlen=4\nlen=4\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=1
+len=1
+
+len=4
+len=4
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="var-op-len.test.html#L223">${#s} respects LC_ALL - length in bytes or code points</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'len=1\nlen=2\n\nlen=1\nlen=4\n\n'
+Got      'len=2\nlen=2\n\nlen=4\nlen=4\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=2
+len=2
+
+len=4
+len=4
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-osh"></a><b>osh</b></td><td>8 <a href="var-op-len.test.html#L223">${#s} respects LC_ALL - length in bytes or code points</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'len=1\nlen=2\n\nlen=1\nlen=4\n\n'
+Got      'len=1\nlen=1\n\nlen=1\nlen=1\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=1
+len=1
+
+len=1
+len=1
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

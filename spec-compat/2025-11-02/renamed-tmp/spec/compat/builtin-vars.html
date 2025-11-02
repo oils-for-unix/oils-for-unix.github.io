@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-vars: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-vars.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>35</td><td>19</td><td>21</td><td>25</td><td>25</td><td>25</td><td>19</td><td>23</td><td>27</td><td>37</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>2</td><td>9</td><td>2</td><td>4</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>13</td><td>0</td><td>8</td><td>8</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>2</td><td>0</td><td>0</td><td>4</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>2</td><td>0</td><td>18</td><td>0</td><td>0</td><td>16</td><td>22</td><td>18</td><td>14</td><td>1</td><td></td></tr>
+<tr><td>total</td><td>41</td><td>41</td><td>41</td><td>41</td><td>41</td><td>41</td><td>41</td><td>41</td><td>41</td><td>41</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L8">Export sets a global variable</a></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L19">Export sets a global variable that persists after export -n</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L46">export -n undefined is ignored</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L56">export -n foo=bar not allowed</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-3-bash">details</a></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L78">Export a global variable and unset it</a></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L93">Export existing global variables</a></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L103">Export existing local variable</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L116">Export a local that shadows a global</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L133">Export a variable before defining it</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L139">Unset exported variable, then define it again.  It's NOT still exported.</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L155">Exporting a parent func variable (dynamic scope)</a></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L180">Dependent export setting</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L186">Exporting a variable doesn't change it</a></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-vars.test.html#L193">can't export array (strict_array)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"><a href="#details-13-ksh">details</a></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"><a href="#details-13-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-vars.test.html#L212">can't export associative array (strict_array)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"><a href="#details-14-brush">details</a></td><td class="details-row"><a href="#details-14-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="bug">BUG</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L228">assign to readonly variable</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-15-bash">details</a></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"><a href="#details-15-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-15-mksh">details</a></td><td class="details-row"><a href="#details-15-ksh">details</a></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"><a href="#details-15-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L238">Make an existing local variable readonly</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-dash">details</a></td><td class="details-row"><a href="#details-16-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-16-mksh">details</a></td><td class="details-row"><a href="#details-16-ksh">details</a></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L265">assign to readonly variable - errexit</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-dash">details</a></td><td class="details-row"><a href="#details-17-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-17-mksh">details</a></td><td class="details-row"><a href="#details-17-ksh">details</a></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"><a href="#details-17-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L273">Unset a variable</a></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L283">Unset exit status</a></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L289">Unset nonexistent variable</a></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L294">Unset readonly variable</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-dash">details</a></td><td class="details-row"><a href="#details-21-ash">details</a></td><td class="details-row"><a href="#details-21-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L306">Unset a function without -f</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-dash">details</a></td><td class="details-row"><a href="#details-22-ash">details</a></td><td class="details-row"><a href="#details-22-zsh">details</a></td><td class="details-row"><a href="#details-22-mksh">details</a></td><td class="details-row"><a href="#details-22-ksh">details</a></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L321">Unset has dynamic scope</a></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L334">Unset and scope (bug #653)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-dash">details</a></td><td class="details-row"><a href="#details-24-ash">details</a></td><td class="details-row"><a href="#details-24-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"><a href="#details-24-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L378">unset of local reveals variable in higher scope</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-25-bash">details</a></td><td class="details-row"><a href="#details-25-dash">details</a></td><td class="details-row"><a href="#details-25-ash">details</a></td><td class="details-row"><a href="#details-25-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"><a href="#details-25-sush">details</a></td><td class="details-row"><a href="#details-25-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L400">Unset invalid variable name</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-26-bash">details</a></td><td class="details-row"><a href="#details-26-dash">details</a></td><td class="details-row"><a href="#details-26-ash">details</a></td><td class="details-row"><a href="#details-26-zsh">details</a></td><td class="details-row"><a href="#details-26-mksh">details</a></td><td class="details-row"><a href="#details-26-ksh">details</a></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"><a href="#details-26-sush">details</a></td><td class="details-row"><a href="#details-26-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L416">Unset nonexistent variable</a></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L423">Unset -v</a></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L436">Unset -f</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 30</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L450">Unset array member</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-dash">details</a></td><td class="details-row"><a href="#details-30-ash">details</a></td><td class="details-row"><a href="#details-30-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 31</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L466">Unset errors</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-dash">details</a></td><td class="details-row"><a href="#details-31-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 32</td><td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-vars.test.html#L487">Unset wrong type</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-32-bash">details</a></td><td class="details-row"><a href="#details-32-dash">details</a></td><td class="details-row"><a href="#details-32-ash">details</a></td><td class="details-row"><a href="#details-32-zsh">details</a></td><td class="details-row"><a href="#details-32-mksh">details</a></td><td class="details-row"><a href="#details-32-ksh">details</a></td><td class="details-row"><a href="#details-32-toysh">details</a></td><td class="details-row"><a href="#details-32-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-32-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 33</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L540">unset -v assoc (related to issue #661)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-33-dash">details</a></td><td class="details-row"><a href="#details-33-ash">details</a></td><td class="details-row"><a href="#details-33-zsh">details</a></td><td class="details-row"><a href="#details-33-mksh">details</a></td><td class="details-row"><a href="#details-33-ksh">details</a></td><td class="details-row"><a href="#details-33-toysh">details</a></td><td class="details-row"><a href="#details-33-sush">details</a></td><td class="details-row"><a href="#details-33-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 34</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L565">unset assoc errors</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-34-dash">details</a></td><td class="details-row"><a href="#details-34-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-34-mksh">details</a></td><td class="details-row"><a href="#details-34-ksh">details</a></td><td class="details-row"><a href="#details-34-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 35</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L579">Unset array member with dynamic parsing</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-35-dash">details</a></td><td class="details-row"><a href="#details-35-ash">details</a></td><td class="details-row"><a href="#details-35-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-35-toysh">details</a></td><td class="details-row"><a href="#details-35-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 36</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L595">Use local twice</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-36-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 37</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L608">Local without variable is still unset!</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-37-dash">details</a></td><td class="details-row"><a href="#details-37-ash">details</a></td><td class="details-row"><a href="#details-37-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-37-toysh">details</a></td><td class="details-row"><a href="#details-37-sush">details</a></td><td class="details-row"><a href="#details-37-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 38</td><td class="bug">BUG</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-vars.test.html#L622">local after readonly</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-38-bash">details</a></td><td class="details-row"><a href="#details-38-dash">details</a></td><td class="details-row"><a href="#details-38-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-38-mksh">details</a></td><td class="details-row"><a href="#details-38-ksh">details</a></td><td class="details-row"><a href="#details-38-toysh">details</a></td><td class="details-row"><a href="#details-38-sush">details</a></td><td class="details-row"><a href="#details-38-brush">details</a></td><td class="details-row"><a href="#details-38-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 39</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L647">unset a[-1] (bf.bash regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-39-dash">details</a></td><td class="details-row"><a href="#details-39-ash">details</a></td><td class="details-row"><a href="#details-39-zsh">details</a></td><td class="details-row"><a href="#details-39-mksh">details</a></td><td class="details-row"><a href="#details-39-ksh">details</a></td><td class="details-row"><a href="#details-39-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-39-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 40</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-vars.test.html#L676">unset a[-1] in sparse array (bf.bash regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-40-dash">details</a></td><td class="details-row"><a href="#details-40-ash">details</a></td><td class="details-row"><a href="#details-40-zsh">details</a></td><td class="details-row"><a href="#details-40-mksh">details</a></td><td class="details-row"><a href="#details-40-ksh">details</a></td><td class="details-row"><a href="#details-40-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-40-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>256 passed, 24 OK, 29 not implemented, 10 BUG, 91 failed, 0 timeouts, 0 cases skipped
+1 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="builtin-vars.test.html#L19">Export sets a global variable that persists after export -n</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>X
+X
+</pre><i>stderr:</i> <br/>
+<pre>dash: 5: export: Illegal option -n
+</pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="builtin-vars.test.html#L19">Export sets a global variable that persists after export -n</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>X
+X
+X
+X
+</pre><i>stderr:</i> <br/>
+<pre>zsh: bad option: -n
+</pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="builtin-vars.test.html#L19">Export sets a global variable that persists after export -n</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>X
+X
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: export: -n: unknown option
+</pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="builtin-vars.test.html#L19">Export sets a global variable that persists after export -n</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'X\nX\nX\nNone\n'
+Got      'X\nX\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>X
+X
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: export: -n: unknown option
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-vars.test.html#L19">Export sets a global variable that persists after export -n</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'X\nX\nX\nNone\n'
+Got      'X\nX\nX\nX\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>X
+X
+X
+X
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="builtin-vars.test.html#L19">Export sets a global variable that persists after export -n</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'X\nX\nX\nNone\n'
+Got      'X\nX\nX\nX\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>X
+X
+X
+X
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="builtin-vars.test.html#L46">export -n undefined is ignored</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: export: Illegal option -n
+</pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="builtin-vars.test.html#L46">export -n undefined is ignored</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad option: -n
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="builtin-vars.test.html#L46">export -n undefined is ignored</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: export: -n: unknown option
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="builtin-vars.test.html#L46">export -n undefined is ignored</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: export: -n: unknown option
+</pre></td></tr><tr><td><a name="details-3-bash"></a><b>bash</b></td><td>3 <a href="builtin-vars.test.html#L56">export -n foo=bar not allowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+new
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="builtin-vars.test.html#L56">export -n foo=bar not allowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: export: Illegal option -n
+</pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="builtin-vars.test.html#L56">export -n foo=bar not allowed</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=2\nold\n'
+Got      'status=0\nnew\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+new
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="builtin-vars.test.html#L56">export -n foo=bar not allowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+old
+</pre><i>stderr:</i> <br/>
+<pre>zsh: bad option: -n
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="builtin-vars.test.html#L56">export -n foo=bar not allowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: export: -n: unknown option
+</pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="builtin-vars.test.html#L56">export -n foo=bar not allowed</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=2\nold\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: export: -n: unknown option
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="builtin-vars.test.html#L56">export -n foo=bar not allowed</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=2\nold\n'
+Got      'status=0\nnew\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+new
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="builtin-vars.test.html#L56">export -n foo=bar not allowed</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=2\nold\n'
+Got      'status=0\nnew\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+new
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="builtin-vars.test.html#L56">export -n foo=bar not allowed</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=2\nold\n'
+Got      'status=0\nnew\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+new
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="builtin-vars.test.html#L103">Export existing local variable</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'local1\nNone\n'
+Got      'local1\nlocal1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>local1
+local1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="builtin-vars.test.html#L116">Export a local that shadows a global</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'local1\nNone\nglobal\n'
+Got      'local1\nlocal1\nglobal\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>local1
+local1
+global
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="builtin-vars.test.html#L133">Export a variable before defining it</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'u\n'
+Got      'None\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>None
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="builtin-vars.test.html#L139">Unset exported variable, then define it again.  It's NOT still exported.</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'u\nNone\nnewvalue\nNone\n'
+Got      'None\nNone\nnewvalue\nNone\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>None
+None
+newvalue
+None
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="builtin-vars.test.html#L180">Dependent export setting</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'v=None\n'
+Got      'v=foo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>v=foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="builtin-vars.test.html#L193">can't export array (strict_array)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 3: typeset: not found
+dash: 4: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="builtin-vars.test.html#L193">can't export array (strict_array)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'None\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: typeset: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="builtin-vars.test.html#L193">can't export array (strict_array)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-13-ksh"></a><b>ksh</b></td><td>13 <a href="builtin-vars.test.html#L193">can't export array (strict_array)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'None\n'
+Got      '1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="builtin-vars.test.html#L193">can't export array (strict_array)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'None\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+sh: typeset: No such file or directory
+main: line 4: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="builtin-vars.test.html#L193">can't export array (strict_array)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'None\n'
+Got      '1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: shopt: strict_array: not supported yet
+</pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="builtin-vars.test.html#L193">can't export array (strict_array)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'None\n'
+Got      '1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_array: invalid shell option name
+</pre></td></tr><tr><td><a name="details-13-osh"></a><b>osh</b></td><td>13 <a href="builtin-vars.test.html#L193">can't export array (strict_array)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  export a
+         ^
+[ stdin ]:6: fatal: Only strings can be exported (strict_array)
+</pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="builtin-vars.test.html#L212">can't export associative array (strict_array)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+mksh: &lt;stdin&gt;[3]: typeset: -A: unknown option
+mksh: &lt;stdin&gt;[4]: "foo": unexpected '"'
+</pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="builtin-vars.test.html#L212">can't export associative array (strict_array)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'None\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[3]: typeset: -A: unknown option
+W: ksh: &lt;stdin&gt;[4]: "foo": unexpected '"'
+</pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="builtin-vars.test.html#L212">can't export associative array (strict_array)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'None\n'
+Got      'bar\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>bar
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: shopt: strict_array: not supported yet
+</pre></td></tr><tr><td><a name="details-14-brush"></a><b>brush</b></td><td>14 <a href="builtin-vars.test.html#L212">can't export associative array (strict_array)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'None\n'
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_array: invalid shell option name
+</pre></td></tr><tr><td><a name="details-14-osh"></a><b>osh</b></td><td>14 <a href="builtin-vars.test.html#L212">can't export associative array (strict_array)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  export a
+         ^
+[ stdin ]:6: fatal: Only strings can be exported (strict_array)
+</pre></td></tr><tr><td><a name="details-15-bash"></a><b>bash</b></td><td>15 <a href="builtin-vars.test.html#L228">assign to readonly variable</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 2: foo: readonly variable
+</pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="builtin-vars.test.html#L228">assign to readonly variable</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: foo: is read only
+</pre></td></tr><tr><td><a name="details-15-ash"></a><b>ash</b></td><td>15 <a href="builtin-vars.test.html#L228">assign to readonly variable</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: foo: is read only
+</pre></td></tr><tr><td><a name="details-15-mksh"></a><b>mksh</b></td><td>15 <a href="builtin-vars.test.html#L228">assign to readonly variable</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: read-only: foo
+</pre></td></tr><tr><td><a name="details-15-ksh"></a><b>ksh</b></td><td>15 <a href="builtin-vars.test.html#L228">assign to readonly variable</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: read-only: foo
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="builtin-vars.test.html#L228">assign to readonly variable</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: readonly: No such file or directory
+</pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="builtin-vars.test.html#L228">assign to readonly variable</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: foo: readonly variable
+</pre></td></tr><tr><td><a name="details-15-brush"></a><b>brush</b></td><td>15 <a href="builtin-vars.test.html#L228">assign to readonly variable</a><br/><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m cannot mutate readonly variable
+</pre></td></tr><tr><td><a name="details-16-dash"></a><b>dash</b></td><td>16 <a href="builtin-vars.test.html#L238">Make an existing local variable readonly</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>local
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: eval: x: is read only
+</pre></td></tr><tr><td><a name="details-16-ash"></a><b>ash</b></td><td>16 <a href="builtin-vars.test.html#L238">Make an existing local variable readonly</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'local\nstatus=1\nglobal\n'
+Got      'local\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>local
+</pre><i>stderr:</i> <br/>
+<pre>ash: eval: line 5: x: is read only
+</pre></td></tr><tr><td><a name="details-16-mksh"></a><b>mksh</b></td><td>16 <a href="builtin-vars.test.html#L238">Make an existing local variable readonly</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>local
+global
+</pre><i>stderr:</i> <br/>
+<pre>mksh: read-only: x
+</pre></td></tr><tr><td><a name="details-16-ksh"></a><b>ksh</b></td><td>16 <a href="builtin-vars.test.html#L238">Make an existing local variable readonly</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'local\nstatus=1\nglobal\n'
+Got      'local\nglobal\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>local
+global
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: read-only: x
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="builtin-vars.test.html#L238">Make an existing local variable readonly</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'local\nstatus=1\nglobal\n'
+Got      'local\nstatus=0\nglobal\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>local
+status=0
+global
+</pre><i>stderr:</i> <br/>
+<pre>sh: readonly: No such file or directory
+</pre></td></tr><tr><td><a name="details-17-dash"></a><b>dash</b></td><td>17 <a href="builtin-vars.test.html#L265">assign to readonly variable - errexit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: foo: is read only
+</pre></td></tr><tr><td><a name="details-17-ash"></a><b>ash</b></td><td>17 <a href="builtin-vars.test.html#L265">assign to readonly variable - errexit</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: foo: is read only
+</pre></td></tr><tr><td><a name="details-17-mksh"></a><b>mksh</b></td><td>17 <a href="builtin-vars.test.html#L265">assign to readonly variable - errexit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: read-only: foo
+</pre></td></tr><tr><td><a name="details-17-ksh"></a><b>ksh</b></td><td>17 <a href="builtin-vars.test.html#L265">assign to readonly variable - errexit</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: read-only: foo
+</pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="builtin-vars.test.html#L265">assign to readonly variable - errexit</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: readonly: No such file or directory
+</pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="builtin-vars.test.html#L265">assign to readonly variable - errexit</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: foo: readonly variable
+</pre></td></tr><tr><td><a name="details-17-brush"></a><b>brush</b></td><td>17 <a href="builtin-vars.test.html#L265">assign to readonly variable - errexit</a><br/><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m cannot mutate readonly variable
+</pre></td></tr><tr><td><a name="details-21-dash"></a><b>dash</b></td><td>21 <a href="builtin-vars.test.html#L294">Unset readonly variable</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: unset: R: is read only
+</pre></td></tr><tr><td><a name="details-21-ash"></a><b>ash</b></td><td>21 <a href="builtin-vars.test.html#L294">Unset readonly variable</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: unset: line 2: R: is read only
+</pre></td></tr><tr><td><a name="details-21-zsh"></a><b>zsh</b></td><td>21 <a href="builtin-vars.test.html#L294">Unset readonly variable</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: read-only variable: R
+</pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="builtin-vars.test.html#L294">Unset readonly variable</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=1\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: readonly: No such file or directory
+</pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="builtin-vars.test.html#L294">Unset readonly variable</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=1\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-dash"></a><b>dash</b></td><td>22 <a href="builtin-vars.test.html#L306">Unset a function without -f</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo
+foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-ash"></a><b>ash</b></td><td>22 <a href="builtin-vars.test.html#L306">Unset a function without -f</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'foo\n'
+Got      'foo\nfoo\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 127
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-zsh"></a><b>zsh</b></td><td>22 <a href="builtin-vars.test.html#L306">Unset a function without -f</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo
+foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-mksh"></a><b>mksh</b></td><td>22 <a href="builtin-vars.test.html#L306">Unset a function without -f</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo
+foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-ksh"></a><b>ksh</b></td><td>22 <a href="builtin-vars.test.html#L306">Unset a function without -f</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'foo\n'
+Got      'foo\nfoo\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 127
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="builtin-vars.test.html#L306">Unset a function without -f</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 127
+Got      -11
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-dash"></a><b>dash</b></td><td>24 <a href="builtin-vars.test.html#L334">Unset and scope (bug #653)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>level2=yy
+level2=
+level1=xx
+level1=
+level2=yy
+level2=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-ash"></a><b>ash</b></td><td>24 <a href="builtin-vars.test.html#L334">Unset and scope (bug #653)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>level2=yy
+level2=
+level1=xx
+level1=
+level2=yy
+level2=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-zsh"></a><b>zsh</b></td><td>24 <a href="builtin-vars.test.html#L334">Unset and scope (bug #653)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>level2=yy
+level2=
+level1=xx
+level1=
+level2=yy
+level2=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="builtin-vars.test.html#L334">Unset and scope (bug #653)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'level2=yy\nlevel2=xx\nlevel1=xx\nlevel1=global\nlevel2=yy\nlevel2=global\n'
+Got      'level2=yy\nlevel2=\nlevel1=xx\nlevel1=\nlevel2=yy\nlevel2=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>level2=yy
+level2=
+level1=xx
+level1=
+level2=yy
+level2=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-sush"></a><b>sush</b></td><td>24 <a href="builtin-vars.test.html#L334">Unset and scope (bug #653)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'level2=yy\nlevel2=xx\nlevel1=xx\nlevel1=global\nlevel2=yy\nlevel2=global\n'
+Got      'level2=yy\nlevel2=\nlevel1=\nlevel1=\nlevel2=yy\nlevel2=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>level2=yy
+level2=
+level1=
+level1=
+level2=yy
+level2=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-bash"></a><b>bash</b></td><td>25 <a href="builtin-vars.test.html#L378">unset of local reveals variable in higher scope</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>x=foo
+x=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-dash"></a><b>dash</b></td><td>25 <a href="builtin-vars.test.html#L378">unset of local reveals variable in higher scope</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>x=foo
+x=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-ash"></a><b>ash</b></td><td>25 <a href="builtin-vars.test.html#L378">unset of local reveals variable in higher scope</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>x=foo
+x=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-zsh"></a><b>zsh</b></td><td>25 <a href="builtin-vars.test.html#L378">unset of local reveals variable in higher scope</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>x=foo
+x=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="builtin-vars.test.html#L378">unset of local reveals variable in higher scope</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'x=foo\nx=global\n'
+Got      'x=foo\nx=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=foo
+x=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-sush"></a><b>sush</b></td><td>25 <a href="builtin-vars.test.html#L378">unset of local reveals variable in higher scope</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'x=foo\nx=global\n'
+Got      'x=foo\nx=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=foo
+x=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-brush"></a><b>brush</b></td><td>25 <a href="builtin-vars.test.html#L378">unset of local reveals variable in higher scope</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'x=foo\nx=global\n'
+Got      'x=foo\nx=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=foo
+x=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-bash"></a><b>bash</b></td><td>26 <a href="builtin-vars.test.html#L400">Unset invalid variable name</a><br/><br/>
+<span class="assertion">
+[bash stdout]
+Expected 'status=1\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-dash"></a><b>dash</b></td><td>26 <a href="builtin-vars.test.html#L400">Unset invalid variable name</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: unset: %: bad variable name
+</pre></td></tr><tr><td><a name="details-26-ash"></a><b>ash</b></td><td>26 <a href="builtin-vars.test.html#L400">Unset invalid variable name</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=2\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: unset: line 1: %: bad variable name
+</pre></td></tr><tr><td><a name="details-26-zsh"></a><b>zsh</b></td><td>26 <a href="builtin-vars.test.html#L400">Unset invalid variable name</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-mksh"></a><b>mksh</b></td><td>26 <a href="builtin-vars.test.html#L400">Unset invalid variable name</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: read-only: %
+</pre></td></tr><tr><td><a name="details-26-ksh"></a><b>ksh</b></td><td>26 <a href="builtin-vars.test.html#L400">Unset invalid variable name</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=2\n'
+Got      'status=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[1]: read-only: %
+</pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="builtin-vars.test.html#L400">Unset invalid variable name</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=2\n'
+Got      'status=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>unset: bad '%'
+</pre></td></tr><tr><td><a name="details-26-sush"></a><b>sush</b></td><td>26 <a href="builtin-vars.test.html#L400">Unset invalid variable name</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=2\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-brush"></a><b>brush</b></td><td>26 <a href="builtin-vars.test.html#L400">Unset invalid variable name</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=2\n'
+Got      'status=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m unset: failed to parse parameter '%'
+</pre></td></tr><tr><td><a name="details-29-toysh"></a><b>toysh</b></td><td>29 <a href="builtin-vars.test.html#L436">Unset -f</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'foo=bar\nstatus=127\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -11
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-dash"></a><b>dash</b></td><td>30 <a href="builtin-vars.test.html#L450">Unset array member</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-30-ash"></a><b>ash</b></td><td>30 <a href="builtin-vars.test.html#L450">Unset array member</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=0\nx z len=2\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-30-zsh"></a><b>zsh</b></td><td>30 <a href="builtin-vars.test.html#L450">Unset array member</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+ y z len=3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-toysh"></a><b>toysh</b></td><td>30 <a href="builtin-vars.test.html#L450">Unset array member</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nx z len=2\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: x
+</pre></td></tr><tr><td><a name="details-31-dash"></a><b>dash</b></td><td>31 <a href="builtin-vars.test.html#L466">Unset errors</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 4: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-31-ash"></a><b>ash</b></td><td>31 <a href="builtin-vars.test.html#L466">Unset errors</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=0\nstatus=0\nstatus=0\n'
+Got      'status=0\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-31-toysh"></a><b>toysh</b></td><td>31 <a href="builtin-vars.test.html#L466">Unset errors</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nstatus=0\nstatus=0\n'
+Got      'status=0\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>main: line 4: sh: syntax error: x
+</pre></td></tr><tr><td><a name="details-32-bash"></a><b>bash</b></td><td>32 <a href="builtin-vars.test.html#L487">Unset wrong type</a><br/><br/>
+<span class="assertion">
+[bash stdout]
+Expected 'undef 1\nundef 1\narray 0\narray 1\nassoc 0\nassoc 0\n'
+Got      'undef 1\nundef 0\narray 0\narray 0\nassoc 0\nassoc 0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>undef 1
+undef 0
+array 0
+array 0
+assoc 0
+assoc 0
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 4: unset: undef: not an array variable
+</pre></td></tr><tr><td><a name="details-32-dash"></a><b>dash</b></td><td>32 <a href="builtin-vars.test.html#L487">Unset wrong type</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: declare: not found
+dash: 4: unset: undef[1]: bad variable name
+</pre></td></tr><tr><td><a name="details-32-ash"></a><b>ash</b></td><td>32 <a href="builtin-vars.test.html#L487">Unset wrong type</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'undef 1\nundef 1\narray 0\narray 1\nassoc 0\nassoc 0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: unset: line 4: undef[1]: bad variable name
+</pre></td></tr><tr><td><a name="details-32-zsh"></a><b>zsh</b></td><td>32 <a href="builtin-vars.test.html#L487">Unset wrong type</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>undef 0
+undef 1
+array 0
+array 1
+assoc 0
+assoc 0
+</pre><i>stderr:</i> <br/>
+<pre>zsh: bad math expression: operand expected at `"key"'
+zsh: bad math expression: operand expected at `"key"'
+zsh: no matches found: [key]=val
+</pre></td></tr><tr><td><a name="details-32-mksh"></a><b>mksh</b></td><td>32 <a href="builtin-vars.test.html#L487">Unset wrong type</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-ksh"></a><b>ksh</b></td><td>32 <a href="builtin-vars.test.html#L487">Unset wrong type</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'undef 1\nundef 1\narray 0\narray 1\nassoc 0\nassoc 0\n'
+Got      'undef 0\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>undef 0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: declare: inaccessible or not found
+W: ksh: &lt;stdin&gt;[6]: "key": unexpected '"'
+</pre></td></tr><tr><td><a name="details-32-toysh"></a><b>toysh</b></td><td>32 <a href="builtin-vars.test.html#L487">Unset wrong type</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'undef 1\nundef 1\narray 0\narray 1\nassoc 0\nassoc 0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-32-sush"></a><b>sush</b></td><td>32 <a href="builtin-vars.test.html#L487">Unset wrong type</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'undef 1\nundef 1\narray 0\narray 1\nassoc 0\nassoc 0\n'
+Got      'undef 0\nundef 0\narray 0\narray 0\nassoc 0\nassoc 0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>undef 0
+undef 0
+array 0
+array 0
+assoc 0
+assoc 0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-osh"></a><b>osh</b></td><td>32 <a href="builtin-vars.test.html#L487">Unset wrong type</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>undef 1
+undef 1
+array 0
+array 0
+assoc 0
+assoc 0
+</pre><i>stderr:</i> <br/>
+<pre>  unset -v 'undef[1]'
+           ^
+[ stdin ]:4: 'undef' isn't an array
+  unset -v 'undef["key"]'
+           ^
+[ stdin ]:6: 'undef' isn't an array
+</pre></td></tr><tr><td><a name="details-33-dash"></a><b>dash</b></td><td>33 <a href="builtin-vars.test.html#L540">unset -v assoc (related to issue #661)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-ash"></a><b>ash</b></td><td>33 <a href="builtin-vars.test.html#L540">unset -v assoc (related to issue #661)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '1\nkeys=1],a[1\nvals=foo\n0\nkeys=\nvals=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-33-zsh"></a><b>zsh</b></td><td>33 <a href="builtin-vars.test.html#L540">unset -v assoc (related to issue #661)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-mksh"></a><b>mksh</b></td><td>33 <a href="builtin-vars.test.html#L540">unset -v assoc (related to issue #661)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-ksh"></a><b>ksh</b></td><td>33 <a href="builtin-vars.test.html#L540">unset -v assoc (related to issue #661)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '1\nkeys=1],a[1\nvals=foo\n0\nkeys=\nvals=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-33-toysh"></a><b>toysh</b></td><td>33 <a href="builtin-vars.test.html#L540">unset -v assoc (related to issue #661)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1\nkeys=1],a[1\nvals=foo\n0\nkeys=\nvals=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-33-sush"></a><b>sush</b></td><td>33 <a href="builtin-vars.test.html#L540">unset -v assoc (related to issue #661)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '1\nkeys=1],a[1\nvals=foo\n0\nkeys=\nvals=\n'
+Got      '1\nkeys=1],a[1\nvals=foo\n1\nkeys=1],a[1\nvals=foo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+keys=1],a[1
+vals=foo
+1
+keys=1],a[1
+vals=foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-brush"></a><b>brush</b></td><td>33 <a href="builtin-vars.test.html#L540">unset -v assoc (related to issue #661)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '1\nkeys=1],a[1\nvals=foo\n0\nkeys=\nvals=\n'
+Got      '1\nkeys=1],a[1\nvals=foo\n1\nkeys=1],a[1\nvals=foo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+keys=1],a[1
+vals=foo
+1
+keys=1],a[1
+vals=foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-dash"></a><b>dash</b></td><td>34 <a href="builtin-vars.test.html#L565">unset assoc errors</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-ash"></a><b>ash</b></td><td>34 <a href="builtin-vars.test.html#L565">unset assoc errors</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-34-mksh"></a><b>mksh</b></td><td>34 <a href="builtin-vars.test.html#L565">unset assoc errors</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-ksh"></a><b>ksh</b></td><td>34 <a href="builtin-vars.test.html#L565">unset assoc errors</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-34-toysh"></a><b>toysh</b></td><td>34 <a href="builtin-vars.test.html#L565">unset assoc errors</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-35-dash"></a><b>dash</b></td><td>35 <a href="builtin-vars.test.html#L579">Unset array member with dynamic parsing</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-35-ash"></a><b>ash</b></td><td>35 <a href="builtin-vars.test.html#L579">Unset array member with dynamic parsing</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=0\nx z len=2\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-35-zsh"></a><b>zsh</b></td><td>35 <a href="builtin-vars.test.html#L579">Unset array member with dynamic parsing</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: a[i+1]
+</pre></td></tr><tr><td><a name="details-35-toysh"></a><b>toysh</b></td><td>35 <a href="builtin-vars.test.html#L579">Unset array member with dynamic parsing</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nx z len=2\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: w
+</pre></td></tr><tr><td><a name="details-35-sush"></a><b>sush</b></td><td>35 <a href="builtin-vars.test.html#L579">Unset array member with dynamic parsing</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\nx z len=2\n'
+Got      'status=1\nw x y z len=4\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+w x y z len=4
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: unset: [ i - 1 ]: bad array subscript
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: unset: [i+1]: bad array subscript
+</pre></td></tr><tr><td><a name="details-36-zsh"></a><b>zsh</b></td><td>36 <a href="builtin-vars.test.html#L595">Use local twice</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>foo=bar
+bar
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-37-dash"></a><b>dash</b></td><td>37 <a href="builtin-vars.test.html#L608">Local without variable is still unset!</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 4: foo: parameter not set
+</pre></td></tr><tr><td><a name="details-37-ash"></a><b>ash</b></td><td>37 <a href="builtin-vars.test.html#L608">Local without variable is still unset!</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: foo: parameter not set
+</pre></td></tr><tr><td><a name="details-37-zsh"></a><b>zsh</b></td><td>37 <a href="builtin-vars.test.html#L608">Local without variable is still unset!</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-37-toysh"></a><b>toysh</b></td><td>37 <a href="builtin-vars.test.html#L608">Local without variable is still unset!</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected u''
+Got      '[]\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o nounset
+</pre></td></tr><tr><td><a name="details-37-sush"></a><b>sush</b></td><td>37 <a href="builtin-vars.test.html#L608">Local without variable is still unset!</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected u''
+Got      '[]\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: nounset: invalid option name
+</pre></td></tr><tr><td><a name="details-37-brush"></a><b>brush</b></td><td>37 <a href="builtin-vars.test.html#L608">Local without variable is still unset!</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected u''
+Got      '[]\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-bash"></a><b>bash</b></td><td>38 <a href="builtin-vars.test.html#L622">local after readonly</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>y=
+y=
+</pre><i>stderr:</i> <br/>
+<pre>main: line 3: local: y: readonly variable
+</pre></td></tr><tr><td><a name="details-38-dash"></a><b>dash</b></td><td>38 <a href="builtin-vars.test.html#L622">local after readonly</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: local: y: is read only
+</pre></td></tr><tr><td><a name="details-38-ash"></a><b>ash</b></td><td>38 <a href="builtin-vars.test.html#L622">local after readonly</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: local: line 3: y: is read only
+</pre></td></tr><tr><td><a name="details-38-mksh"></a><b>mksh</b></td><td>38 <a href="builtin-vars.test.html#L622">local after readonly</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>y=0
+y=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-ksh"></a><b>ksh</b></td><td>38 <a href="builtin-vars.test.html#L622">local after readonly</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected u''
+Got      'y=0\ny=\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>y=0
+y=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-toysh"></a><b>toysh</b></td><td>38 <a href="builtin-vars.test.html#L622">local after readonly</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected u''
+Got      'y=0\ny=\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>y=0
+y=
+</pre><i>stderr:</i> <br/>
+<pre>sh: readonly: No such file or directory
+</pre></td></tr><tr><td><a name="details-38-sush"></a><b>sush</b></td><td>38 <a href="builtin-vars.test.html#L622">local after readonly</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected u''
+Got      'y=\ny=\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>y=
+y=
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: y: readonly variable
+</pre></td></tr><tr><td><a name="details-38-brush"></a><b>brush</b></td><td>38 <a href="builtin-vars.test.html#L622">local after readonly</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected u''
+Got      'y=\ny=\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>y=
+y=
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m local: cannot mutate readonly variable
+</pre></td></tr><tr><td><a name="details-38-osh"></a><b>osh</b></td><td>38 <a href="builtin-vars.test.html#L622">local after readonly</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected u''
+Got      'y=0\ny=\n'
+</span><br/>
+<span class="assertion">
+[osh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>y=0
+y=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-dash"></a><b>dash</b></td><td>39 <a href="builtin-vars.test.html#L647">unset a[-1] (bf.bash regression)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-ash"></a><b>ash</b></td><td>39 <a href="builtin-vars.test.html#L647">unset a[-1] (bf.bash regression)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'len=2\nlast=2\nlast=2\n1 42\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-39-zsh"></a><b>zsh</b></td><td>39 <a href="builtin-vars.test.html#L647">unset a[-1] (bf.bash regression)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-mksh"></a><b>mksh</b></td><td>39 <a href="builtin-vars.test.html#L647">unset a[-1] (bf.bash regression)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>len=3
+last=
+last=0
+1 2 3 42
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-ksh"></a><b>ksh</b></td><td>39 <a href="builtin-vars.test.html#L647">unset a[-1] (bf.bash regression)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'len=2\nlast=2\nlast=2\n1 42\n'
+Got      'len=3\nlast=\nlast=0\n1 2 3 42\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=3
+last=
+last=0
+1 2 3 42
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-toysh"></a><b>toysh</b></td><td>39 <a href="builtin-vars.test.html#L647">unset a[-1] (bf.bash regression)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'len=2\nlast=2\nlast=2\n1 42\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-39-brush"></a><b>brush</b></td><td>39 <a href="builtin-vars.test.html#L647">unset a[-1] (bf.bash regression)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'len=2\nlast=2\nlast=2\n1 42\n'
+Got      'len=2\nlast=2\nlast=2\n42 2 3\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=2
+last=2
+last=2
+42 2 3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-dash"></a><b>dash</b></td><td>40 <a href="builtin-vars.test.html#L676">unset a[-1] in sparse array (bf.bash regression)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-ash"></a><b>ash</b></td><td>40 <a href="builtin-vars.test.html#L676">unset a[-1] in sparse array (bf.bash regression)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'len=3 a=0 2 3\nlast=3 second=2 third=\n---\nlen=2 a=0 2\nlast=2 second= third=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-40-zsh"></a><b>zsh</b></td><td>40 <a href="builtin-vars.test.html#L676">unset a[-1] in sparse array (bf.bash regression)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-mksh"></a><b>mksh</b></td><td>40 <a href="builtin-vars.test.html#L676">unset a[-1] in sparse array (bf.bash regression)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>len=3 a=0 2 3
+last= second= third=
+---
+len=2 a=0 2
+last= second= third=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-ksh"></a><b>ksh</b></td><td>40 <a href="builtin-vars.test.html#L676">unset a[-1] in sparse array (bf.bash regression)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'len=3 a=0 2 3\nlast=3 second=2 third=\n---\nlen=2 a=0 2\nlast=2 second= third=0\n'
+Got      'len=3 a=0 2 3\nlast= second= third=\n---\nlen=2 a=0 2\nlast= second= third=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=3 a=0 2 3
+last= second= third=
+---
+len=2 a=0 2
+last= second= third=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-toysh"></a><b>toysh</b></td><td>40 <a href="builtin-vars.test.html#L676">unset a[-1] in sparse array (bf.bash regression)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'len=3 a=0 2 3\nlast=3 second=2 third=\n---\nlen=2 a=0 2\nlast=2 second= third=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-40-brush"></a><b>brush</b></td><td>40 <a href="builtin-vars.test.html#L676">unset a[-1] in sparse array (bf.bash regression)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'len=3 a=0 2 3\nlast=3 second=2 third=\n---\nlen=2 a=0 2\nlast=2 second= third=0\n'
+Got      'len=3 a=0 2 3\nlast=2 second= third=0\n---\nlen=2 a=0 2\nlast= second=0 third=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>len=3 a=0 2 3
+last=2 second= third=0
+---
+len=2 a=0 2
+last= second=0 third=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-meta-assign: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-meta-assign.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>6</td><td>1</td><td>3</td><td>4</td><td>5</td><td>5</td><td>0</td><td>0</td><td>4</td><td>11</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>7</td><td>7</td><td>7</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>5</td><td>3</td><td>1</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>6</td><td>11</td><td>11</td><td>7</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>11</td><td>11</td><td>11</td><td>11</td><td>11</td><td>11</td><td>11</td><td>11</td><td>11</td><td>11</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta-assign.test.html#L4">builtin declare a=(x y) is allowed</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-0-bash">details</a></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"><a href="#details-0-ash">details</a></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"><a href="#details-0-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta-assign.test.html#L38">command export,readonly</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta-assign.test.html#L67">command local</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta-assign.test.html#L88">export, builtin export</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-3-bash">details</a></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="bug">BUG</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta-assign.test.html#L118">\builtin declare - ble.sh relies on it</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-4-bash">details</a></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta-assign.test.html#L159">\command readonly - similar issue</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-5-bash">details</a></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta-assign.test.html#L207">Dynamic $c readonly - bash and dash change behavior, mksh bug</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-6-bash">details</a></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta-assign.test.html#L239">static builtin command ASSIGN, command builtin ASSIGN</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta-assign.test.html#L268">dynamic builtin command ASSIGN, command builtin ASSIGN</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta-assign.test.html#L322">builtin typeset, export,readonly</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-meta-assign.test.html#L357">builtin declare,local</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>39 passed, 0 OK, 25 not implemented, 11 BUG, 35 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-bash"></a><b>bash</b></td><td>0 <a href="builtin-meta-assign.test.html#L4">builtin declare a=(x y) is allowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>declare -a a=([0]="x" [1]="y")
+fail
+fail
+</pre><i>stderr:</i> <br/>
+<pre>bash: -c: line 1: syntax error near unexpected token `('
+bash: -c: line 1: `builtin declare a=(x y); declare -p a'
+bash: -c: line 1: syntax error near unexpected token `('
+bash: -c: line 1: `builtin declare -a a=(x y); declare -p a'
+</pre></td></tr><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="builtin-meta-assign.test.html#L4">builtin declare a=(x y) is allowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-ash"></a><b>ash</b></td><td>0 <a href="builtin-meta-assign.test.html#L4">builtin declare a=(x y) is allowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="builtin-meta-assign.test.html#L4">builtin declare a=(x y) is allowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="builtin-meta-assign.test.html#L4">builtin declare a=(x y) is allowed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="builtin-meta-assign.test.html#L4">builtin declare a=(x y) is allowed</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'declare -a a=(x y)\ndeclare -a a=(x y)\ndeclare -a a=(x y)\n'
+Got      'fail\nfail\nfail\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fail
+fail
+fail
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: syntax error: unexpected '('
+E: ksh: syntax error: unexpected '('
+E: ksh: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="builtin-meta-assign.test.html#L4">builtin declare a=(x y) is allowed</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'declare -a a=(x y)\ndeclare -a a=(x y)\ndeclare -a a=(x y)\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="builtin-meta-assign.test.html#L4">builtin declare a=(x y) is allowed</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'declare -a a=(x y)\ndeclare -a a=(x y)\ndeclare -a a=(x y)\n'
+Got      'declare -a a=([0]="x" [1]="y")\nfail\nfail\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>declare -a a=([0]="x" [1]="y")
+fail
+fail
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: syntax error near unexpected token: (x
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: syntax error near unexpected token: (x
+</pre></td></tr><tr><td><a name="details-0-brush"></a><b>brush</b></td><td>0 <a href="builtin-meta-assign.test.html#L4">builtin declare a=(x y) is allowed</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'declare -a a=(x y)\ndeclare -a a=(x y)\ndeclare -a a=(x y)\n'
+Got      'declare -a a=([0]="x" [1]="y")\ndeclare -a a=([0]="x" [1]="y")\ndeclare -a a=([0]="x" [1]="y")\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>declare -a a=([0]="x" [1]="y")
+declare -a a=([0]="x" [1]="y")
+declare -a a=([0]="x" [1]="y")
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="builtin-meta-assign.test.html#L38">command export,readonly</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-meta-assign.test.html#L38">command export,readonly</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'c=export\nc=readonly\n--\ncc=export\ncc=readonly\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="builtin-meta-assign.test.html#L38">command export,readonly</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'c=export\nc=readonly\n--\ncc=export\ncc=readonly\n'
+Got      'c=\ndeclare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")\ndeclare -ir UID="1000"\nc=\n--\ncc=\ndeclare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")\ndeclare -ir UID="1000"\ncc=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>c=
+declare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")
+declare -ir UID="1000"
+c=
+--
+cc=
+declare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")
+declare -ir UID="1000"
+cc=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="builtin-meta-assign.test.html#L38">command export,readonly</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'c=export\nc=readonly\n--\ncc=export\ncc=readonly\n'
+Got      'c=\nc=\n--\ncc=\ncc=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>c=
+c=
+--
+cc=
+cc=
+</pre><i>stderr:</i> <br/>
+<pre>readonly: c=readonly: not a valid variable name
+readonly: cc=readonly: not a valid variable name
+</pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="builtin-meta-assign.test.html#L67">command local</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>s=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="builtin-meta-assign.test.html#L67">command local</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>s=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="builtin-meta-assign.test.html#L67">command local</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>s=
+</pre><i>stderr:</i> <br/>
+<pre>f:1: command not found: local
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="builtin-meta-assign.test.html#L67">command local</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>s=
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[6]: local: not found
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="builtin-meta-assign.test.html#L67">command local</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 's=local\n'
+Got      's=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>s=
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[6]: local: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="builtin-meta-assign.test.html#L67">command local</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 's=local\n'
+Got      's=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>s=
+</pre><i>stderr:</i> <br/>
+<pre>sh: command: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="builtin-meta-assign.test.html#L67">command local</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 's=local\n'
+Got      's=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>s=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="builtin-meta-assign.test.html#L67">command local</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 's=local\n'
+Got      's=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>s=
+</pre><i>stderr:</i> <br/>
+<pre>local: s=local: not a valid variable name
+</pre></td></tr><tr><td><a name="details-3-bash"></a><b>bash</b></td><td>3 <a href="builtin-meta-assign.test.html#L88">export, builtin export</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a b
+a
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="builtin-meta-assign.test.html#L88">export, builtin export</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a
+
+</pre><i>stderr:</i> <br/>
+<pre>dash: 6: builtin: not found
+</pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="builtin-meta-assign.test.html#L88">export, builtin export</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a b
+
+</pre><i>stderr:</i> <br/>
+<pre>ash: builtin: not found
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="builtin-meta-assign.test.html#L88">export, builtin export</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a b
+a
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="builtin-meta-assign.test.html#L88">export, builtin export</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'a b\na b\n'
+Got      'a b\na\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a b
+a
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="builtin-meta-assign.test.html#L88">export, builtin export</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'a b\na b\n'
+Got      'a\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+
+</pre><i>stderr:</i> <br/>
+<pre>sh: builtin: No such file or directory
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="builtin-meta-assign.test.html#L88">export, builtin export</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'a b\na b\n'
+Got      'a b\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a b
+
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: builtin: export: not a shell builtin
+</pre></td></tr><tr><td><a name="details-4-bash"></a><b>bash</b></td><td>4 <a href="builtin-meta-assign.test.html#L118">\builtin declare - ble.sh relies on it</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a
+a
+a
+a
+a
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="builtin-meta-assign.test.html#L118">\builtin declare - ble.sh relies on it</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="builtin-meta-assign.test.html#L118">\builtin declare - ble.sh relies on it</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="builtin-meta-assign.test.html#L118">\builtin declare - ble.sh relies on it</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="builtin-meta-assign.test.html#L118">\builtin declare - ble.sh relies on it</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'a b\na b\na b\na b\na b\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: builtin: declare: not found
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="builtin-meta-assign.test.html#L118">\builtin declare - ble.sh relies on it</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'a b\na b\na b\na b\na b\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="builtin-meta-assign.test.html#L118">\builtin declare - ble.sh relies on it</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'a b\na b\na b\na b\na b\n'
+Got      '\n\n\n\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+
+
+
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: builtin: declare: not a shell builtin
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: builtin: declare: not a shell builtin
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: builtin: declare: not a shell builtin
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 15: builtin: declare: not a shell builtin
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 19: builtin: declare: not a shell builtin
+</pre></td></tr><tr><td><a name="details-5-bash"></a><b>bash</b></td><td>5 <a href="builtin-meta-assign.test.html#L159">\command readonly - similar issue</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a b
+a
+a
+a
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="builtin-meta-assign.test.html#L159">\command readonly - similar issue</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a
+a
+a
+a
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="builtin-meta-assign.test.html#L159">\command readonly - similar issue</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="builtin-meta-assign.test.html#L159">\command readonly - similar issue</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'a b\na b\na b\na b\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="builtin-meta-assign.test.html#L159">\command readonly - similar issue</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'a b\na b\na b\na b\n'
+Got      'a b\ndeclare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")\ndeclare -ir UID="1000"\ndeclare -r b="a b"\n\ndeclare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")\ndeclare -ir UID="1000"\ndeclare -r b="a b"\n\ndeclare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")\ndeclare -ir UID="1000"\ndeclare -r b="a b"\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a b
+declare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")
+declare -ir UID="1000"
+declare -r b="a b"
+
+declare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")
+declare -ir UID="1000"
+declare -r b="a b"
+
+declare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")
+declare -ir UID="1000"
+declare -r b="a b"
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="builtin-meta-assign.test.html#L159">\command readonly - similar issue</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'a b\na b\na b\na b\n'
+Got      'a b\n\n\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a b
+
+
+
+</pre><i>stderr:</i> <br/>
+<pre>readonly: c=a: not a valid variable name
+readonly: d=a: not a valid variable name
+readonly: e=a: not a valid variable name
+</pre></td></tr><tr><td><a name="details-6-bash"></a><b>bash</b></td><td>6 <a href="builtin-meta-assign.test.html#L207">Dynamic $c readonly - bash and dash change behavior, mksh bug</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a
+a
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="builtin-meta-assign.test.html#L207">Dynamic $c readonly - bash and dash change behavior, mksh bug</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a
+a
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="builtin-meta-assign.test.html#L207">Dynamic $c readonly - bash and dash change behavior, mksh bug</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="builtin-meta-assign.test.html#L207">Dynamic $c readonly - bash and dash change behavior, mksh bug</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[10]: read-only: b
+</pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="builtin-meta-assign.test.html#L207">Dynamic $c readonly - bash and dash change behavior, mksh bug</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'a b\na b\n'
+Got      'a\na\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+a
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="builtin-meta-assign.test.html#L207">Dynamic $c readonly - bash and dash change behavior, mksh bug</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'a b\na b\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="builtin-meta-assign.test.html#L207">Dynamic $c readonly - bash and dash change behavior, mksh bug</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'a b\na b\n'
+Got      'declare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")\ndeclare -ir UID="1000"\n\ndeclare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")\ndeclare -ir UID="1000"\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>declare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")
+declare -ir UID="1000"
+
+declare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")
+declare -ir UID="1000"
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="builtin-meta-assign.test.html#L207">Dynamic $c readonly - bash and dash change behavior, mksh bug</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'a b\na b\n'
+Got      '\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+</pre><i>stderr:</i> <br/>
+<pre>readonly: c=a: not a valid variable name
+readonly: d=a: not a valid variable name
+</pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="builtin-meta-assign.test.html#L239">static builtin command ASSIGN, command builtin ASSIGN</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="builtin-meta-assign.test.html#L239">static builtin command ASSIGN, command builtin ASSIGN</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="builtin-meta-assign.test.html#L239">static builtin command ASSIGN, command builtin ASSIGN</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="builtin-meta-assign.test.html#L239">static builtin command ASSIGN, command builtin ASSIGN</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'bc=export\nbc=readonly\n--\ncb=export\ncb=readonly\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="builtin-meta-assign.test.html#L239">static builtin command ASSIGN, command builtin ASSIGN</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'bc=export\nbc=readonly\n--\ncb=export\ncb=readonly\n'
+Got      'bc=\ndeclare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")\ndeclare -ir UID="1000"\nbc=\n--\ncb=\ncb=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>bc=
+declare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")
+declare -ir UID="1000"
+bc=
+--
+cb=
+cb=
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 12: builtin: export: not a shell builtin
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 15: builtin: readonly: not a shell builtin
+</pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="builtin-meta-assign.test.html#L239">static builtin command ASSIGN, command builtin ASSIGN</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'bc=export\nbc=readonly\n--\ncb=export\ncb=readonly\n'
+Got      'bc=\nbc=\n--\ncb=\ncb=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>bc=
+bc=
+--
+cb=
+cb=
+</pre><i>stderr:</i> <br/>
+<pre>readonly: bc=readonly: not a valid variable name
+readonly: cb=readonly: not a valid variable name
+</pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="builtin-meta-assign.test.html#L268">dynamic builtin command ASSIGN, command builtin ASSIGN</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-ash"></a><b>ash</b></td><td>8 <a href="builtin-meta-assign.test.html#L268">dynamic builtin command ASSIGN, command builtin ASSIGN</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="builtin-meta-assign.test.html#L268">dynamic builtin command ASSIGN, command builtin ASSIGN</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="builtin-meta-assign.test.html#L268">dynamic builtin command ASSIGN, command builtin ASSIGN</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'bc=export\nbc=readonly\n--\ncb=export\ncb=readonly\n--\nbce=export\nbcr=readonly\n--\ncbe=export\ncbr=readonly\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="builtin-meta-assign.test.html#L268">dynamic builtin command ASSIGN, command builtin ASSIGN</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'bc=export\nbc=readonly\n--\ncb=export\ncb=readonly\n--\nbce=export\nbcr=readonly\n--\ncbe=export\ncbr=readonly\n'
+Got      'bc=\ndeclare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")\ndeclare -ir UID="1000"\nbc=\n--\ncb=\ncb=\n--\nbce=\ndeclare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")\ndeclare -ir UID="1000"\nbcr=\n--\ncbe=\ncbr=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>bc=
+declare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")
+declare -ir UID="1000"
+bc=
+--
+cb=
+cb=
+--
+bce=
+declare -ar BASH_VERSINFO=([0]="1" [1]="2" [2]="2" [3]="rusty_bash" [4]="release" [5]="x86_64-unknown-linux")
+declare -ir UID="1000"
+bcr=
+--
+cbe=
+cbr=
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 16: builtin: export: not a shell builtin
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 19: builtin: readonly: not a shell builtin
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 32: builtin: export: not a shell builtin
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 35: builtin: readonly: not a shell builtin
+</pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="builtin-meta-assign.test.html#L268">dynamic builtin command ASSIGN, command builtin ASSIGN</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'bc=export\nbc=readonly\n--\ncb=export\ncb=readonly\n--\nbce=export\nbcr=readonly\n--\ncbe=export\ncbr=readonly\n'
+Got      'bc=\nbc=\n--\ncb=\ncb=\n--\nbce=\nbcr=\n--\ncbe=\ncbr=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>bc=
+bc=
+--
+cb=
+cb=
+--
+bce=
+bcr=
+--
+cbe=
+cbr=
+</pre><i>stderr:</i> <br/>
+<pre>readonly: bc=readonly: not a valid variable name
+readonly: cb=readonly: not a valid variable name
+readonly: bcr=readonly: not a valid variable name
+readonly: cbr=readonly: not a valid variable name
+</pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="builtin-meta-assign.test.html#L322">builtin typeset, export,readonly</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-ash"></a><b>ash</b></td><td>9 <a href="builtin-meta-assign.test.html#L322">builtin typeset, export,readonly</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="builtin-meta-assign.test.html#L322">builtin typeset, export,readonly</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 's=typeset\ns=export\ns=readonly\n--\ns2=typeset\ns2=export\ns2=readonly\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="builtin-meta-assign.test.html#L322">builtin typeset, export,readonly</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 's=typeset\ns=export\ns=readonly\n--\ns2=typeset\ns2=export\ns2=readonly\n'
+Got      's=\ns=\ns=\n--\ns2=\ns2=\ns2=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>s=
+s=
+s=
+--
+s2=
+s2=
+s2=
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: builtin: typeset: not a shell builtin
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: builtin: export: not a shell builtin
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: builtin: readonly: not a shell builtin
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 14: builtin: typeset: not a shell builtin
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 17: builtin: export: not a shell builtin
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 20: builtin: readonly: not a shell builtin
+</pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="builtin-meta-assign.test.html#L357">builtin declare,local</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="builtin-meta-assign.test.html#L357">builtin declare,local</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="builtin-meta-assign.test.html#L357">builtin declare,local</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="builtin-meta-assign.test.html#L357">builtin declare,local</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 's=declare\ns=local\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: builtin: declare: not found
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="builtin-meta-assign.test.html#L357">builtin declare,local</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 's=declare\ns=local\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="builtin-meta-assign.test.html#L357">builtin declare,local</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 's=declare\ns=local\n'
+Got      's=\ns=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>s=
+s=
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: builtin: declare: not a shell builtin
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: builtin: local: not a shell builtin
+</pre></td></tr></table></body></html>

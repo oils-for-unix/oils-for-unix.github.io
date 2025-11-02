@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-cd: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-cd.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>26</td><td>24</td><td>24</td><td>24</td><td>19</td><td>19</td><td>14</td><td>17</td><td>23</td><td>25</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>1</td><td>1</td><td>1</td><td>1</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>2</td><td>2</td><td>3</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>9</td><td>14</td><td>11</td><td>5</td><td>3</td><td></td></tr>
+<tr><td>total</td><td>28</td><td>28</td><td>28</td><td>28</td><td>28</td><td>28</td><td>28</td><td>28</td><td>28</td><td>28</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L5">cd and $PWD</a></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-cd.test.html#L10">cd BAD/..</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-1-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L26">cd with 2 or more args - with strict_arg_parse</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L54">cd with 2 or more args is allowed (strict_arg_parse disabled)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-3-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L63">cd - without OLDPWD</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L81">$OLDPWD</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L101">pwd</a></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L108">pwd after cd ..</a></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L120">pwd with symlink and -P</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L140">setting $PWD doesn't affect the value of 'pwd' builtin</a></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L155">unset PWD; then pwd</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L170">'unset PWD; pwd' before any cd (tickles a rare corner case)</a></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L182">lie about PWD; pwd before any cd</a></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L194">remove pwd dir</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"><a href="#details-13-ksh">details</a></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L215">pwd in symlinked dir on shell initialization</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"><a href="#details-14-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L236">Test the current directory after 'cd ..' involving symlinks</a></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L253">cd with no arguments</a></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L260">cd to nonexistent dir</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-dash">details</a></td><td class="details-row"><a href="#details-17-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-17-mksh">details</a></td><td class="details-row"><a href="#details-17-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L266">cd away from dir that was deleted</a></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L279">cd permits double bare dash</a></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L284">cd to symlink with -L and -P</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"><a href="#details-20-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L305">cd to relative path with -L and -P</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L334">unset PWD; cd /tmp is allowed (regression)</a></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-cd.test.html#L343">CDPATH is respected</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"><a href="#details-23-sush">details</a></td><td class="details-row"><a href="#details-23-brush">details</a></td><td class="details-row"><a href="#details-23-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L366">Change directory in non-shell parent process (make or Python)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L407">What happens when inherited $PWD and current dir disagree?</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-mksh">details</a></td><td class="details-row"><a href="#details-25-ksh">details</a></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"><a href="#details-25-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-cd.test.html#L467">Survey of getcwd() syscall</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-mksh">details</a></td><td class="details-row"><a href="#details-26-ksh">details</a></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"><a href="#details-26-sush">details</a></td><td class="details-row"><a href="#details-26-brush">details</a></td><td class="details-row"><a href="#details-26-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-cd.test.html#L488">chdir is a synonym for cd - busybox ash</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-27-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-toysh">details</a></td><td class="details-row"><a href="#details-27-sush">details</a></td><td class="details-row"><a href="#details-27-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>215 passed, 9 OK, 3 not implemented, 11 BUG, 42 failed, 0 timeouts, 0 cases skipped
+3 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="builtin-cd.test.html#L10">cd BAD/..</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="builtin-cd.test.html#L10">cd BAD/..</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="builtin-cd.test.html#L10">cd BAD/..</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="builtin-cd.test.html#L10">cd BAD/..</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=1\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-cd.test.html#L10">cd BAD/..</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=1\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="builtin-cd.test.html#L10">cd BAD/..</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=1\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-osh"></a><b>osh</b></td><td>1 <a href="builtin-cd.test.html#L10">cd BAD/..</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'status=1\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="builtin-cd.test.html#L26">cd with 2 or more args - with strict_arg_parse</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+</pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="builtin-cd.test.html#L26">cd with 2 or more args - with strict_arg_parse</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="builtin-cd.test.html#L26">cd with 2 or more args - with strict_arg_parse</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=0\nstatus=0\nfailed with multiple args\n'
+Got      'status=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict_arg_parse: invalid shell option name
+error: unexpected argument 'bar' found
+
+Usage: cd [OPTIONS] [TARGET_DIR]
+
+For more information, try '--help'.
+
+</pre></td></tr><tr><td><a name="details-3-bash"></a><b>bash</b></td><td>3 <a href="builtin-cd.test.html#L54">cd with 2 or more args is allowed (strict_arg_parse disabled)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>bash: line 2: cd: too many arguments
+</pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="builtin-cd.test.html#L54">cd with 2 or more args is allowed (strict_arg_parse disabled)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>cd: string not in pwd: foo
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="builtin-cd.test.html#L54">cd with 2 or more args is allowed (strict_arg_parse disabled)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: cd: bad substitution
+</pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="builtin-cd.test.html#L54">cd with 2 or more args is allowed (strict_arg_parse disabled)</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: cd: bad substitution
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="builtin-cd.test.html#L54">cd with 2 or more args is allowed (strict_arg_parse disabled)</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>cd: Max 1 argument (see "cd --help")
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="builtin-cd.test.html#L54">cd with 2 or more args is allowed (strict_arg_parse disabled)</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sush: cd: too many arguments
+</pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="builtin-cd.test.html#L63">cd - without OLDPWD</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="builtin-cd.test.html#L63">cd - without OLDPWD</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="builtin-cd.test.html#L63">cd - without OLDPWD</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="builtin-cd.test.html#L63">cd - without OLDPWD</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: cd: no OLDPWD
+</pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="builtin-cd.test.html#L63">cd - without OLDPWD</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=1\n'
+Got      'status=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: cd: no OLDPWD
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="builtin-cd.test.html#L63">cd - without OLDPWD</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=1\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="builtin-cd.test.html#L81">$OLDPWD</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>old: /
+OLDPWD=/
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="builtin-cd.test.html#L81">$OLDPWD</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>old: /
+/
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="builtin-cd.test.html#L81">$OLDPWD</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'old: /\nOLDPWD=/\n/\n'
+Got      'old: /\n/\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>old: /
+/
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="builtin-cd.test.html#L81">$OLDPWD</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'old: /\nOLDPWD=/\n/\n'
+Got      'old: /\nOLDPWD=/\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>old: /
+OLDPWD=/
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="builtin-cd.test.html#L81">$OLDPWD</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'old: /\nOLDPWD=/\n/\n'
+Got      'old: /\n/\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>old: /
+/
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="builtin-cd.test.html#L120">pwd with symlink and -P</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'pwd:\nsymlink\npwd -P:\ntarget\n'
+Got      'pwd:\ntarget\npwd -P:\ntarget\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pwd:
+target
+pwd -P:
+target
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="builtin-cd.test.html#L155">unset PWD; then pwd</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>PWD=
+/tmp/oil-spec-test/pwd
+PWD=
+</pre><i>stderr:</i> <br/>
+<pre>free(): double free detected in tcache 2
+</pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="builtin-cd.test.html#L194">remove pwd dir</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>/tmp/oil-spec-test/pwd
+status=0
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[7]: pwd: can't determine current directory: No such file or directory
+</pre></td></tr><tr><td><a name="details-13-ksh"></a><b>ksh</b></td><td>13 <a href="builtin-cd.test.html#L194">remove pwd dir</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '/tmp/oil-spec-test/pwd\nstatus=0\n/tmp/oil-spec-test/pwd\nstatus=0\n'
+Got      '/tmp/oil-spec-test/pwd\nstatus=0\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/tmp/oil-spec-test/pwd
+status=0
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[7]: pwd: can't determine current directory: No such file or directory
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="builtin-cd.test.html#L194">remove pwd dir</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '/tmp/oil-spec-test/pwd\nstatus=0\n/tmp/oil-spec-test/pwd\nstatus=0\n'
+Got      '/tmp/oil-spec-test/pwd\nstatus=0\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/tmp/oil-spec-test/pwd
+status=0
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>pwd: xgetcwd: No such file or directory
+</pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="builtin-cd.test.html#L215">pwd in symlinked dir on shell initialization</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>target
+target
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="builtin-cd.test.html#L215">pwd in symlinked dir on shell initialization</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'symlink\ntarget\n'
+Got      'target\ntarget\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>target
+target
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="builtin-cd.test.html#L215">pwd in symlinked dir on shell initialization</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'symlink\ntarget\n'
+Got      'target\ntarget\n'
+</span><br/>
+<span class="assertion">
+[toysh stderr]
+Expected u''
+Got      'free(): double free detected in tcache 2\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>target
+target
+</pre><i>stderr:</i> <br/>
+<pre>free(): double free detected in tcache 2
+</pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="builtin-cd.test.html#L215">pwd in symlinked dir on shell initialization</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'symlink\ntarget\n'
+Got      'target\ntarget\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>target
+target
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-brush"></a><b>brush</b></td><td>14 <a href="builtin-cd.test.html#L215">pwd in symlinked dir on shell initialization</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'symlink\ntarget\n'
+Got      'target\ntarget\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>target
+target
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-dash"></a><b>dash</b></td><td>17 <a href="builtin-cd.test.html#L260">cd to nonexistent dir</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: cd: can't cd to /nonexistent/dir
+</pre></td></tr><tr><td><a name="details-17-ash"></a><b>ash</b></td><td>17 <a href="builtin-cd.test.html#L260">cd to nonexistent dir</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>ash: cd: line 1: can't cd to /nonexistent/dir: No such file or directory
+</pre></td></tr><tr><td><a name="details-17-mksh"></a><b>mksh</b></td><td>17 <a href="builtin-cd.test.html#L260">cd to nonexistent dir</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: cd: /nonexistent/dir: No such file or directory
+</pre></td></tr><tr><td><a name="details-17-ksh"></a><b>ksh</b></td><td>17 <a href="builtin-cd.test.html#L260">cd to nonexistent dir</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=1\n'
+Got      'status=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: cd: /nonexistent/dir: No such file or directory
+</pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="builtin-cd.test.html#L284">cd to symlink with -L and -P</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'OK\nOK\nOK\n'
+Got      'OK\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OK
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-sush"></a><b>sush</b></td><td>20 <a href="builtin-cd.test.html#L284">cd to symlink with -L and -P</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'OK\nOK\nOK\n'
+Got      'OK\nOK\n/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-cd.test.sh/20-sush/cd-symlink\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OK
+OK
+/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-cd.test.sh/20-sush/cd-symlink
+</pre><i>stderr:</i> <br/>
+<pre>sush: cd: too many arguments
+sush: cd: too many arguments
+</pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="builtin-cd.test.html#L305">cd to relative path with -L and -P</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'OK\nOK\nOK\n'
+Got      'failed\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>failed
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="builtin-cd.test.html#L305">cd to relative path with -L and -P</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'OK\nOK\nOK\n'
+Got      'OK\n/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-cd.test.sh/21-sush/cd-symlink/subdir\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OK
+/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-cd.test.sh/21-sush/cd-symlink/subdir
+</pre><i>stderr:</i> <br/>
+<pre>sush: cd: too many arguments
+sush: cd: too many arguments
+</pre></td></tr><tr><td><a name="details-23-zsh"></a><b>zsh</b></td><td>23 <a href="builtin-cd.test.html#L343">CDPATH is respected</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+/tmp/spam/foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="builtin-cd.test.html#L343">CDPATH is respected</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '/tmp/spam/foo\nstatus=0\n/tmp/spam/foo\n'
+Got      'status=1\n/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-cd.test.sh/23-toysh\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-cd.test.sh/23-toysh
+</pre><i>stderr:</i> <br/>
+<pre>cd: foo: No such file or directory
+</pre></td></tr><tr><td><a name="details-23-sush"></a><b>sush</b></td><td>23 <a href="builtin-cd.test.html#L343">CDPATH is respected</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '/tmp/spam/foo\nstatus=0\n/tmp/spam/foo\n'
+Got      'status=1\n/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-cd.test.sh/23-sush\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-cd.test.sh/23-sush
+</pre><i>stderr:</i> <br/>
+<pre>sush: cd: "/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-cd.test.sh/23-sush/foo": No such file or directory
+</pre></td></tr><tr><td><a name="details-23-brush"></a><b>brush</b></td><td>23 <a href="builtin-cd.test.html#L343">CDPATH is respected</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '/tmp/spam/foo\nstatus=0\n/tmp/spam/foo\n'
+Got      'status=1\n/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-cd.test.sh/23-brush\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-cd.test.sh/23-brush
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m cd: i/o error: No such file or directory (os error 2)
+</pre></td></tr><tr><td><a name="details-23-osh"></a><b>osh</b></td><td>23 <a href="builtin-cd.test.html#L343">CDPATH is respected</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected '/tmp/spam/foo\nstatus=0\n/tmp/spam/foo\n'
+Got      'status=1\n/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-cd.test.sh/23-osh\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-cd.test.sh/23-osh
+</pre><i>stderr:</i> <br/>
+<pre>  cd foo
+     ^~~
+[ stdin ]:5: cd '/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-cd.test.sh/23-osh/foo': No such file or directory
+</pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="builtin-cd.test.html#L366">Change directory in non-shell parent process (make or Python)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '/cpan/Encode/Byte\n'
+Got      '\n'
+</span><br/>
+<span class="assertion">[toysh stderr] Found 'Traceback (most recent'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+Python PWD = '/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-cd.test.sh/24-toysh'
+Python argv = ['']
+Traceback (most recent call last):
+  File "&lt;string&gt;", line 10, in &lt;module&gt;
+  File "/home/andy/git/oils-for-unix/oils.DEPS/wedge/python2/2.7.18/lib/python2.7/subprocess.py", line 185, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/home/andy/git/oils-for-unix/oils.DEPS/wedge/python2/2.7.18/lib/python2.7/subprocess.py", line 172, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/home/andy/git/oils-for-unix/oils.DEPS/wedge/python2/2.7.18/lib/python2.7/subprocess.py", line 394, in __init__
+    errread, errwrite)
+  File "/home/andy/git/oils-for-unix/oils.DEPS/wedge/python2/2.7.18/lib/python2.7/subprocess.py", line 1047, in _execute_child
+    raise child_exception
+OSError: [Errno 13] Permission denied
+</pre></td></tr><tr><td><a name="details-25-mksh"></a><b>mksh</b></td><td>25 <a href="builtin-cd.test.html#L407">What happens when inherited $PWD and current dir disagree?</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>Python PWD = None
+PWD = /tmp/osh-spec-cd/cpan/Encode
+/tmp/osh-spec-cd/cpan/Encode
+cd=0
+PWD = /tmp/osh-spec-cd/cpan/Encode/Byte
+/tmp/osh-spec-cd/cpan/Encode/Byte
+</pre><i>stderr:</i> <br/>
+<pre>Python argv = ['mksh', '-c', '\necho "PWD = $PWD"; pwd\ncd Byte; echo cd=$?\necho "PWD = $PWD"; pwd\n']
+</pre></td></tr><tr><td><a name="details-25-ksh"></a><b>ksh</b></td><td>25 <a href="builtin-cd.test.html#L407">What happens when inherited $PWD and current dir disagree?</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "Python PWD = '/tmp/osh-spec-cd'\nPWD = /tmp/osh-spec-cd/cpan/Encode\n/tmp/osh-spec-cd/cpan/Encode\ncd=0\nPWD = /tmp/osh-spec-cd/cpan/Encode/Byte\n/tmp/osh-spec-cd/cpan/Encode/Byte\n"
+Got      'Python PWD = None\nPWD = /tmp/osh-spec-cd/cpan/Encode\n/tmp/osh-spec-cd/cpan/Encode\ncd=0\nPWD = /tmp/osh-spec-cd/cpan/Encode/Byte\n/tmp/osh-spec-cd/cpan/Encode/Byte\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>Python PWD = None
+PWD = /tmp/osh-spec-cd/cpan/Encode
+/tmp/osh-spec-cd/cpan/Encode
+cd=0
+PWD = /tmp/osh-spec-cd/cpan/Encode/Byte
+/tmp/osh-spec-cd/cpan/Encode/Byte
+</pre><i>stderr:</i> <br/>
+<pre>Python argv = ['ksh', '-c', '\necho "PWD = $PWD"; pwd\ncd Byte; echo cd=$?\necho "PWD = $PWD"; pwd\n']
+</pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="builtin-cd.test.html#L407">What happens when inherited $PWD and current dir disagree?</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "Python PWD = '/tmp/osh-spec-cd'\nPWD = /tmp/osh-spec-cd/cpan/Encode\n/tmp/osh-spec-cd/cpan/Encode\ncd=0\nPWD = /tmp/osh-spec-cd/cpan/Encode/Byte\n/tmp/osh-spec-cd/cpan/Encode/Byte\n"
+Got      "Python PWD = '/tmp/osh-spec-cd'\n"
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<span class="assertion">[toysh stderr] Found 'Traceback (most recent'</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>Python PWD = '/tmp/osh-spec-cd'
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+Python argv = ['']
+Traceback (most recent call last):
+  File "&lt;string&gt;", line 12, in &lt;module&gt;
+  File "/home/andy/git/oils-for-unix/oils.DEPS/wedge/python2/2.7.18/lib/python2.7/subprocess.py", line 185, in check_call
+    retcode = call(*popenargs, **kwargs)
+  File "/home/andy/git/oils-for-unix/oils.DEPS/wedge/python2/2.7.18/lib/python2.7/subprocess.py", line 172, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/home/andy/git/oils-for-unix/oils.DEPS/wedge/python2/2.7.18/lib/python2.7/subprocess.py", line 394, in __init__
+    errread, errwrite)
+  File "/home/andy/git/oils-for-unix/oils.DEPS/wedge/python2/2.7.18/lib/python2.7/subprocess.py", line 1047, in _execute_child
+    raise child_exception
+OSError: [Errno 13] Permission denied
+</pre></td></tr><tr><td><a name="details-25-sush"></a><b>sush</b></td><td>25 <a href="builtin-cd.test.html#L407">What happens when inherited $PWD and current dir disagree?</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "Python PWD = '/tmp/osh-spec-cd'\nPWD = /tmp/osh-spec-cd/cpan/Encode\n/tmp/osh-spec-cd/cpan/Encode\ncd=0\nPWD = /tmp/osh-spec-cd/cpan/Encode/Byte\n/tmp/osh-spec-cd/cpan/Encode/Byte\n"
+Got      'Python PWD = None\nPWD = \n/tmp/osh-spec-cd/cpan/Encode\ncd=0\nPWD = /tmp/osh-spec-cd/cpan/Encode/Byte\n/tmp/osh-spec-cd/cpan/Encode/Byte\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>Python PWD = None
+PWD = 
+/tmp/osh-spec-cd/cpan/Encode
+cd=0
+PWD = /tmp/osh-spec-cd/cpan/Encode/Byte
+/tmp/osh-spec-cd/cpan/Encode/Byte
+</pre><i>stderr:</i> <br/>
+<pre>Python argv = ['/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush', '-c', '\necho "PWD = $PWD"; pwd\ncd Byte; echo cd=$?\necho "PWD = $PWD"; pwd\n']
+</pre></td></tr><tr><td><a name="details-26-mksh"></a><b>mksh</b></td><td>26 <a href="builtin-cd.test.html#L467">Survey of getcwd() syscall</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>2 err.txt
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-ksh"></a><b>ksh</b></td><td>26 <a href="builtin-cd.test.html#L467">Survey of getcwd() syscall</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '1 err.txt\n'
+Got      '2 err.txt\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>2 err.txt
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="builtin-cd.test.html#L467">Survey of getcwd() syscall</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1 err.txt\n'
+Got      '2 err.txt\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>2 err.txt
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-sush"></a><b>sush</b></td><td>26 <a href="builtin-cd.test.html#L467">Survey of getcwd() syscall</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '1 err.txt\n'
+Got      '2 err.txt\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>2 err.txt
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-brush"></a><b>brush</b></td><td>26 <a href="builtin-cd.test.html#L467">Survey of getcwd() syscall</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '1 err.txt\n'
+Got      '2 err.txt\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>2 err.txt
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-osh"></a><b>osh</b></td><td>26 <a href="builtin-cd.test.html#L467">Survey of getcwd() syscall</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected '1 err.txt\n'
+Got      '2 err.txt\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>2 err.txt
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-bash"></a><b>bash</b></td><td>27 <a href="builtin-cd.test.html#L488">chdir is a synonym for cd - busybox ash</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>fail
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: chdir: command not found
+</pre></td></tr><tr><td><a name="details-27-toysh"></a><b>toysh</b></td><td>27 <a href="builtin-cd.test.html#L488">chdir is a synonym for cd - busybox ash</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '/tmp\n'
+Got      'fail\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fail
+</pre><i>stderr:</i> <br/>
+<pre>sh: chdir: No such file or directory
+</pre></td></tr><tr><td><a name="details-27-sush"></a><b>sush</b></td><td>27 <a href="builtin-cd.test.html#L488">chdir is a synonym for cd - busybox ash</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '/tmp\n'
+Got      'fail\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fail
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: chdir: command not found
+</pre></td></tr><tr><td><a name="details-27-brush"></a><b>brush</b></td><td>27 <a href="builtin-cd.test.html#L488">chdir is a synonym for cd - busybox ash</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '/tmp\n'
+Got      '/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-cd.test.sh/27-brush\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-cd.test.sh/27-brush
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m command not found: chdir
+</pre></td></tr></table></body></html>

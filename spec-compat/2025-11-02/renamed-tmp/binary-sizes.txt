@@ -1,0 +1,82 @@
+[1/38] cxx opt '' mycpp/bump_leak_heap.cc _build/obj/cxx-opt/mycpp/bump_leak_heap.o
+[2/38] cxx opt '' _gen/frontend/id_kind.asdl.cc _build/obj/cxx-opt/_gen/frontend/id_kind.asdl.o
+[3/38] cxx opt '' mycpp/gc_iolib.cc _build/obj/cxx-opt/mycpp/gc_iolib.o
+[4/38] cxx opt '' mycpp/gc_mops.cc _build/obj/cxx-opt/mycpp/gc_mops.o
+[5/38] cxx opt '' cpp/data_lang.cc _build/obj/cxx-opt/cpp/data_lang.o
+[6/38] cxx opt '' mycpp/gc_mylib.cc _build/obj/cxx-opt/mycpp/gc_mylib.o
+[7/38] cxx opt '' mycpp/hash.cc _build/obj/cxx-opt/mycpp/hash.o
+[8/38] cxx opt '' _gen/cpp/build_stamp.cc _build/obj/cxx-opt/_gen/cpp/build_stamp.o
+[9/38] cxx opt '' _gen/bin/text_files.cc _build/obj/cxx-opt/_gen/bin/text_files.o
+[10/38] cxx opt '' mycpp/gc_builtins.cc _build/obj/cxx-opt/mycpp/gc_builtins.o
+[11/38] cxx opt '' _gen/display/pretty.asdl.cc _build/obj/cxx-opt/_gen/display/pretty.asdl.o
+[12/38] cxx opt '' cpp/fanos.cc _build/obj/cxx-opt/cpp/fanos.o
+[13/38] cxx opt '' mycpp/mark_sweep_heap.cc _build/obj/cxx-opt/mycpp/mark_sweep_heap.o
+[14/38] cxx opt '' cpp/frontend_pyreadline.cc _build/obj/cxx-opt/cpp/frontend_pyreadline.o
+[15/38] cxx opt '' cpp/frontend_flag_spec.cc _build/obj/cxx-opt/cpp/frontend_flag_spec.o
+[16/38] cxx opt '' cpp/libc.cc _build/obj/cxx-opt/cpp/libc.o
+[17/38] cxx opt '' cpp/core.cc _build/obj/cxx-opt/cpp/core.o
+[18/38] cxx opt '' cpp/osh_tdop.cc _build/obj/cxx-opt/cpp/osh_tdop.o
+[19/38] cxx opt '' cpp/osh.cc _build/obj/cxx-opt/cpp/osh.o
+[20/38] cxx opt '' _gen/core/runtime.asdl.cc _build/obj/cxx-opt/_gen/core/runtime.asdl.o
+[21/38] cxx opt '' _gen/core/value.asdl.cc _build/obj/cxx-opt/_gen/core/value.asdl.o
+[22/38] cxx opt '' cpp/pylib.cc _build/obj/cxx-opt/cpp/pylib.o
+[23/38] cxx opt '' cpp/pgen2.cc _build/obj/cxx-opt/cpp/pgen2.o
+[24/38] cxx opt '' _gen/frontend/arg_types.cc _build/obj/cxx-opt/_gen/frontend/arg_types.o
+[25/38] cxx opt '' _gen/data_lang/nil8.asdl.cc _build/obj/cxx-opt/_gen/data_lang/nil8.asdl.o
+[26/38] cxx opt '' _gen/frontend/signal.cc _build/obj/cxx-opt/_gen/frontend/signal.o
+[27/38] cxx opt '' cpp/stdlib.cc _build/obj/cxx-opt/cpp/stdlib.o
+[28/38] cxx opt '' _gen/osh/arith_parse.cc _build/obj/cxx-opt/_gen/osh/arith_parse.o
+[29/38] cxx opt '' _gen/bin/oils_for_unix.mycpp-main.cc _build/obj/cxx-opt/_gen/bin/oils_for_unix.mycpp-main.o
+[30/38] cxx opt '' _gen/frontend/consts.cc _build/obj/cxx-opt/_gen/frontend/consts.o
+[31/38] cxx opt '' cpp/frontend_match.cc _build/obj/cxx-opt/cpp/frontend_match.o
+[32/38] cxx opt '' _gen/frontend/help_meta.cc _build/obj/cxx-opt/_gen/frontend/help_meta.o
+[33/38] cxx opt '' _gen/frontend/syntax.asdl.cc _build/obj/cxx-opt/_gen/frontend/syntax.asdl.o
+[34/38] cxx opt '' mycpp/gc_str.cc _build/obj/cxx-opt/mycpp/gc_str.o
+mycpp/gc_str.cc: In member function ‘BigStr* BigStr::rstrip(BigStr*)’:
+mycpp/gc_str.cc:410:17: warning: unused variable ‘char_data’ [-Wunused-variable]
+  410 |     const char* char_data = data_;
+      |                 ^~~~~~~~~
+[35/38] cxx opt '' _gen/ysh/grammar_tables.cc _build/obj/cxx-opt/_gen/ysh/grammar_tables.o
+[36/38] cxx opt '' _gen/bin/oils_for_unix.mycpp.cc _build/obj/cxx-opt/_gen/bin/oils_for_unix.mycpp.o
+_build/obj/cxx-opt/_gen/bin/oils_for_unix.mycpp.o { elapsed: 26.02, max_RSS: 554204 }
+[37/38] LINK cxx opt '' _bin/cxx-opt/bin/oils_for_unix.mycpp _build/obj/cxx-opt/_gen/bin/oils_for_unix.mycpp-main.o _build/obj/cxx-opt/_gen/bin/oils_for_unix.mycpp.o _build/obj/cxx-opt/_gen/bin/text_files.o _build/obj/cxx-opt/_gen/core/runtime.asdl.o _build/obj/cxx-opt/_gen/core/value.asdl.o _build/obj/cxx-opt/_gen/cpp/build_stamp.o _build/obj/cxx-opt/cpp/core.o _build/obj/cxx-opt/cpp/data_lang.o _build/obj/cxx-opt/cpp/fanos.o _build/obj/cxx-opt/cpp/fanos_shared.o _build/obj/cxx-opt/cpp/frontend_flag_spec.o _build/obj/cxx-opt/cpp/frontend_match.o _build/obj/cxx-opt/cpp/frontend_pyreadline.o _build/obj/cxx-opt/cpp/libc.o _build/obj/cxx-opt/cpp/osh.o _build/obj/cxx-opt/cpp/osh_tdop.o _build/obj/cxx-opt/cpp/pgen2.o _build/obj/cxx-opt/cpp/pylib.o _build/obj/cxx-opt/cpp/stdlib.o _build/obj/cxx-opt/_gen/data_lang/nil8.asdl.o _build/obj/cxx-opt/_gen/display/pretty.asdl.o _build/obj/cxx-opt/_gen/frontend/arg_types.o _build/obj/cxx-opt/_gen/frontend/consts.o _build/obj/cxx-opt/_gen/frontend/help_meta.o _build/obj/cxx-opt/_gen/frontend/id_kind.asdl.o _build/obj/cxx-opt/_gen/frontend/signal.o _build/obj/cxx-opt/_gen/frontend/syntax.asdl.o _build/obj/cxx-opt/mycpp/bump_leak_heap.o _build/obj/cxx-opt/mycpp/gc_iolib.o _build/obj/cxx-opt/mycpp/gc_mylib.o _build/obj/cxx-opt/mycpp/gc_builtins.o _build/obj/cxx-opt/mycpp/gc_mops.o _build/obj/cxx-opt/mycpp/gc_str.o _build/obj/cxx-opt/mycpp/hash.o _build/obj/cxx-opt/mycpp/mark_sweep_heap.o _build/obj/cxx-opt/_gen/osh/arith_parse.o _build/obj/cxx-opt/_gen/ysh/grammar_tables.o
+[38/38] STRIP _bin/cxx-opt/bin/oils_for_unix.mycpp _bin/cxx-opt/bin/oils_for_unix.mycpp.stripped _bin/cxx-opt/bin/oils_for_unix.mycpp.symbols
+
+-rwxr-xr-x 1 andy andy 2.0M Nov  2 14:50 _bin/cxx-opt/bin/oils_for_unix.mycpp.stripped
+-rwxr-xr-x 1 andy andy 2.5M Nov  2 14:47 _tmp/musl-libc/oils-for-unix-static.stripped
+-rwxr-xr-x 1 andy andy 3.4M Nov  2 14:46 _bin/cxx-opt-sh/oils-for-unix-static.stripped
+
+-rwxr-xr-x 1 andy andy 7.6M Nov  2 14:50 ../../shells/brush/target/release/brush.stripped
+-rwxr-xr-x 1 andy andy 3.8M Nov  2 14:50 ../../shells/rusty_bash/target/release/sush.stripped
+-r-xr-xr-x 1 andy andy 111k Jun  1 18:28 /home/andy/src/toybox-0.8.12/sh
+
+_bin/cxx-opt/bin/oils_for_unix.mycpp.stripped:
+	linux-vdso.so.1 (0x00007ffd8e7ac000)
+	libreadline.so.8 => /lib/x86_64-linux-gnu/libreadline.so.8 (0x00007fe22c7b2000)
+	libstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007fe22c400000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007fe22c6d2000)
+	libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007fe22c6b2000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fe22c21f000)
+	libtinfo.so.6 => /lib/x86_64-linux-gnu/libtinfo.so.6 (0x00007fe22c67d000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007fe22ca01000)
+_tmp/musl-libc/oils-for-unix-static.stripped:
+	statically linked
+_bin/cxx-opt-sh/oils-for-unix-static.stripped:
+
+../../shells/brush/target/release/brush.stripped:
+	linux-vdso.so.1 (0x00007ffd399f3000)
+	libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007f8202c5e000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007f8202b7e000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f820221f000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f8202c9f000)
+../../shells/rusty_bash/target/release/sush.stripped:
+	linux-vdso.so.1 (0x00007ffdfb1a9000)
+	libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007f8be110a000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007f8be102a000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f8be0a1f000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f8be114b000)
+/home/andy/src/toybox-0.8.12/sh:
+	linux-vdso.so.1 (0x00007ffecd6fd000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007fda36d21000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fda36b40000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007fda36e3f000)

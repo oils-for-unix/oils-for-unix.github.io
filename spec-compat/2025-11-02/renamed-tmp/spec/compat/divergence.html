@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>divergence: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for divergence.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>5</td><td>5</td><td>5</td><td>4</td><td>3</td><td>3</td><td>1</td><td>3</td><td>1</td><td>1</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>3</td><td>2</td><td>3</td><td>4</td><td></td></tr>
+<tr><td class="timeout">TIME</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="divergence.test.html#L10">xz package: dirprefix="${line##*([}"</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"><a href="#details-0-brush">details</a></td><td class="details-row"><a href="#details-0-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="divergence.test.html#L38">!( as negation and subshell versus extended glob - #2463</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"><a href="#details-1-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="divergence.test.html#L57">Changing PATH will invalidate PATH cache</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"><a href="#details-2-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="divergence.test.html#L107">test builtin - Unexpected trailing word '--' (#2409)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="timeout">TIME</td>	<td class="pass">pass</td>	<td class="timeout">TIME</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="divergence.test.html#L137">builtin cat crashes a subshell (#2530)</a></td></tr>
+</table>
+<pre>31 passed, 0 OK, 2 not implemented, 1 BUG, 14 failed, 2 timeouts, 0 cases skipped
+4 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="divergence.test.html#L10">xz package: dirprefix="${line##*([}"</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: bad pattern: *([
+</pre></td></tr><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="divergence.test.html#L10">xz package: dirprefix="${line##*([}"</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+mksh: &lt;stdin&gt;[11]: no closing quote
+</pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="divergence.test.html#L10">xz package: dirprefix="${line##*([}"</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '--\n-foo-\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[11]: no closing quote
+</pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="divergence.test.html#L10">xz package: dirprefix="${line##*([}"</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '--\n-foo-\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+main: line 4: sh: syntax error: unexpected end of file
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="divergence.test.html#L10">xz package: dirprefix="${line##*([}"</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '--\n-foo-\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: syntax error: unexpected end of file
+</pre></td></tr><tr><td><a name="details-0-brush"></a><b>brush</b></td><td>0 <a href="divergence.test.html#L10">xz package: dirprefix="${line##*([}"</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '--\n-foo-\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m main: unterminated extglob near line 8 col 1 (detected near line 8 col 1)
+</pre></td></tr><tr><td><a name="details-0-osh"></a><b>osh</b></td><td>0 <a href="divergence.test.html#L10">xz package: dirprefix="${line##*([}"</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected '--\n-foo-\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[osh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  echo "-$dirprefix-"
+                    ^
+[ stdin ]:9: Unexpected EOF reading double-quoted string that began here
+</pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="divergence.test.html#L38">!( as negation and subshell versus extended glob - #2463</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>two
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[6]: !(false &amp;&amp; false): not found
+</pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="divergence.test.html#L38">!( as negation and subshell versus extended glob - #2463</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'one\ntwo\n'
+Got      'two\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>two
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[6]: !(false &amp;&amp; false): inaccessible or not found
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="divergence.test.html#L38">!( as negation and subshell versus extended glob - #2463</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'one\ntwo\n'
+Got      'two\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>two
+</pre><i>stderr:</i> <br/>
+<pre>sh: !(false &amp;&amp; false): No such file or directory
+</pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="divergence.test.html#L38">!( as negation and subshell versus extended glob - #2463</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'one\ntwo\n'
+Got      'two\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>two
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m command not found: !(false
+</pre></td></tr><tr><td><a name="details-1-osh"></a><b>osh</b></td><td>1 <a href="divergence.test.html#L38">!( as negation and subshell versus extended glob - #2463</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'one\ntwo\n'
+Got      'two\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>two
+</pre><i>stderr:</i> <br/>
+<pre>  if !($have_icu_uc &amp;&amp; $have_icu_i18n); then
+     ^~
+[ stdin ]:4: Command '!(false &amp;&amp; false)' not found (OILS-ERR-100)
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="divergence.test.html#L57">Changing PATH will invalidate PATH cache</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'hi\nstatus=0\nhey\nstatus=0\nhi\nstatus=0\nhey\nstatus=0\nhi\nstatus=0\nhey\nstatus=0\n'
+Got      'status=127\nstatus=127\nstatus=127\nstatus=127\nstatus=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+status=127
+status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: hello: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 14: hello: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 18: hello: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 21: hello: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 25: hello: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 28: hello: command not found
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="divergence.test.html#L57">Changing PATH will invalidate PATH cache</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'hi\nstatus=0\nhey\nstatus=0\nhi\nstatus=0\nhey\nstatus=0\nhi\nstatus=0\nhey\nstatus=0\n'
+Got      'hi\nstatus=0\nhi\nstatus=0\nhi\nstatus=0\nhi\nstatus=0\nhi\nstatus=0\nhi\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+status=0
+hi
+status=0
+hi
+status=0
+hi
+status=0
+hi
+status=0
+hi
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-osh"></a><b>osh</b></td><td>2 <a href="divergence.test.html#L57">Changing PATH will invalidate PATH cache</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'hi\nstatus=0\nhey\nstatus=0\nhi\nstatus=0\nhey\nstatus=0\nhi\nstatus=0\nhey\nstatus=0\n'
+Got      'hi\nstatus=0\nhi\nstatus=0\nhi\nstatus=0\nhi\nstatus=0\nhi\nstatus=0\nhi\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+status=0
+hi
+status=0
+hi
+status=0
+hi
+status=0
+hi
+status=0
+hi
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="divergence.test.html#L107">test builtin - Unexpected trailing word '--' (#2409)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nstatus=0\nstatus=0\nstatus=0\nstatus=0\n'
+Got      'status=1\nstatus=1\nstatus=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+set: bad --
+set: bad --
+</pre></td></tr><tr><td><a name="details-3-osh"></a><b>osh</b></td><td>3 <a href="divergence.test.html#L107">test builtin - Unexpected trailing word '--' (#2409)</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'status=0\nstatus=0\nstatus=0\nstatus=0\nstatus=0\n'
+Got      'status=2\nstatus=2\nstatus=2\nstatus=2\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=2
+status=2
+status=2
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>  set -- -o; test $# -ne 0 -a "$1" != "--"
+                                      ^
+[ stdin ]:1: (test) Unexpected trailing word '--'
+  test $# -ne 0 -a "-o" != "--"
+                           ^
+[ stdin ]:4: (test) Unexpected trailing word '--'
+  test $# -ne 0 -a -o != "--"
+                         ^
+[ stdin ]:7: (test) Unexpected trailing word '--'
+  set -- -z; test $# -ne 0 -a "$1" != "--"
+                                      ^
+[ stdin ]:10: (test) Unexpected trailing word '--'
+</pre></td></tr></table></body></html>

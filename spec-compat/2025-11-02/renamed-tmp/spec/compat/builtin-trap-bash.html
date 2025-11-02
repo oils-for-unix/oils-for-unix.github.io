@@ -1,0 +1,2617 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-trap-bash: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-trap-bash.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>22</td><td>1</td><td>1</td><td>4</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><td>16</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>3</td><td>3</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>19</td><td>19</td><td>19</td><td>19</td><td>22</td><td>23</td><td>22</td><td>22</td><td>2</td><td></td></tr>
+<tr><td>total</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L15">trap -l</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"><a href="#details-0-ash">details</a></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L20">trap -p</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L38">trap -p in child is BUGGY in bash</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-2-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L62">trap DEBUG ignores $?</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L89">but trap DEBUG respects errexit</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L110">trap DEBUG with 'return'</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"><a href="#details-5-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L146">trap DEBUG with 'exit'</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L166">trap DEBUG with non-compound commands</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L206">trap DEBUG and control flow</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L231">trap DEBUG and command sub / subshell</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"><a href="#details-9-zsh">details</a></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L255">trap DEBUG not run in forked interpreter for first pipeline part</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L276">One 'echo' in first pipeline part - why does bash behave differently from case above?</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-dash">details</a></td><td class="details-row"><a href="#details-11-ash">details</a></td><td class="details-row"><a href="#details-11-zsh">details</a></td><td class="details-row"><a href="#details-11-mksh">details</a></td><td class="details-row"><a href="#details-11-ksh">details</a></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"><a href="#details-11-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L310">trap DEBUG and pipeline (lastpipe difference)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-dash">details</a></td><td class="details-row"><a href="#details-12-ash">details</a></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"><a href="#details-12-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L362">trap DEBUG function call</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"><a href="#details-13-ksh">details</a></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L396">trap DEBUG case</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"><a href="#details-14-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"><a href="#details-14-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L423">trap DEBUG for each</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"><a href="#details-15-ash">details</a></td><td class="details-row"><a href="#details-15-zsh">details</a></td><td class="details-row"><a href="#details-15-mksh">details</a></td><td class="details-row"><a href="#details-15-ksh">details</a></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"><a href="#details-15-brush">details</a></td><td class="details-row"><a href="#details-15-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L462">trap DEBUG for expr</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-dash">details</a></td><td class="details-row"><a href="#details-16-ash">details</a></td><td class="details-row"><a href="#details-16-zsh">details</a></td><td class="details-row"><a href="#details-16-mksh">details</a></td><td class="details-row"><a href="#details-16-ksh">details</a></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"><a href="#details-16-sush">details</a></td><td class="details-row"><a href="#details-16-brush">details</a></td><td class="details-row"><a href="#details-16-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L497">trap DEBUG if while</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-dash">details</a></td><td class="details-row"><a href="#details-17-ash">details</a></td><td class="details-row"><a href="#details-17-zsh">details</a></td><td class="details-row"><a href="#details-17-mksh">details</a></td><td class="details-row"><a href="#details-17-ksh">details</a></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"><a href="#details-17-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L519">trap RETURN</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-dash">details</a></td><td class="details-row"><a href="#details-18-ash">details</a></td><td class="details-row"><a href="#details-18-zsh">details</a></td><td class="details-row"><a href="#details-18-mksh">details</a></td><td class="details-row"><a href="#details-18-ksh">details</a></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"><a href="#details-18-brush">details</a></td><td class="details-row"><a href="#details-18-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L552">Compare trap DEBUG vs. trap ERR</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-dash">details</a></td><td class="details-row"><a href="#details-19-ash">details</a></td><td class="details-row"><a href="#details-19-zsh">details</a></td><td class="details-row"><a href="#details-19-mksh">details</a></td><td class="details-row"><a href="#details-19-ksh">details</a></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"><a href="#details-19-sush">details</a></td><td class="details-row"><a href="#details-19-brush">details</a></td><td class="details-row"><a href="#details-19-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L594">Combine DEBUG trap and USR1 trap</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-dash">details</a></td><td class="details-row"><a href="#details-20-ash">details</a></td><td class="details-row"><a href="#details-20-zsh">details</a></td><td class="details-row"><a href="#details-20-mksh">details</a></td><td class="details-row"><a href="#details-20-ksh">details</a></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"><a href="#details-20-sush">details</a></td><td class="details-row"><a href="#details-20-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L616">Combine ERR trap and USR1 trap</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-dash">details</a></td><td class="details-row"><a href="#details-21-ash">details</a></td><td class="details-row"><a href="#details-21-zsh">details</a></td><td class="details-row"><a href="#details-21-mksh">details</a></td><td class="details-row"><a href="#details-21-ksh">details</a></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"><a href="#details-21-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-trap-bash.test.html#L635">Combine DEBUG trap and ERR trap</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-dash">details</a></td><td class="details-row"><a href="#details-22-ash">details</a></td><td class="details-row"><a href="#details-22-zsh">details</a></td><td class="details-row"><a href="#details-22-mksh">details</a></td><td class="details-row"><a href="#details-22-ksh">details</a></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"><a href="#details-22-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>48 passed, 3 OK, 11 not implemented, 1 BUG, 167 failed, 0 timeouts, 0 cases skipped
+2 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="builtin-trap-bash.test.html#L15">trap -l</a><br/><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: trap: Illegal option -l
+</pre></td></tr><tr><td><a name="details-0-ash"></a><b>ash</b></td><td>0 <a href="builtin-trap-bash.test.html#L15">trap -l</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 1: illegal option -l
+</pre></td></tr><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="builtin-trap-bash.test.html#L15">trap -l</a><br/><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="builtin-trap-bash.test.html#L15">trap -l</a><br/><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: trap: -l: unknown option
+</pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="builtin-trap-bash.test.html#L15">trap -l</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: trap: -l: unknown option
+</pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="builtin-trap-bash.test.html#L15">trap -l</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="builtin-trap-bash.test.html#L15">trap -l</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>trap: usage: trap arg signal_spec ...
+</pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="builtin-trap-bash.test.html#L20">trap -p</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'shown\nexit\n'
+Got      'exit\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>exit
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: trap: Illegal option -p
+</pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="builtin-trap-bash.test.html#L20">trap -p</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'shown\nexit\n'
+Got      'exit\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>exit
+</pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 3: illegal option -p
+</pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="builtin-trap-bash.test.html#L20">trap -p</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'shown\nexit\n'
+Got      'not shown\nexit\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>not shown
+exit
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="builtin-trap-bash.test.html#L20">trap -p</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'shown\nexit\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: trap: -p: unknown option
+</pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="builtin-trap-bash.test.html#L20">trap -p</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'shown\nexit\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: trap: -p: unknown option
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-trap-bash.test.html#L20">trap -p</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'shown\nexit\n'
+Got      'not shown\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>not shown
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="builtin-trap-bash.test.html#L20">trap -p</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'shown\nexit\n'
+Got      'not shown\nexit\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>not shown
+exit
+</pre><i>stderr:</i> <br/>
+<pre>trap: usage: trap arg signal_spec ...
+</pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="builtin-trap-bash.test.html#L20">trap -p</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'shown\nexit\n'
+Got      'shown\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>shown
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-bash"></a><b>bash</b></td><td>2 <a href="builtin-trap-bash.test.html#L38">trap -p in child is BUGGY in bash</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>shown
+exit
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="builtin-trap-bash.test.html#L38">trap -p in child is BUGGY in bash</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'not shown\nexit\n'
+Got      'not shown\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>not shown
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="builtin-trap-bash.test.html#L38">trap -p in child is BUGGY in bash</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'not shown\nexit\n'
+Got      'shown\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>shown
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="builtin-trap-bash.test.html#L62">trap DEBUG ignores $?</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '  [8]\nstatus=0\n  [9]\nA\n  [10]\nstatus=0\n  [11]\nB\n  [12]\nstatus=0\n'
+Got      'status=1\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>trap: DEBUG: bad trap
+</pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="builtin-trap-bash.test.html#L62">trap DEBUG ignores $?</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '  [8]\nstatus=0\n  [9]\nA\n  [10]\nstatus=0\n  [11]\nB\n  [12]\nstatus=0\n'
+Got      'status=1\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 6: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="builtin-trap-bash.test.html#L62">trap DEBUG ignores $?</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '  [8]\nstatus=0\n  [9]\nA\n  [10]\nstatus=0\n  [11]\nB\n  [12]\nstatus=0\n'
+Got      'status=1\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[6]: trap: bad signal 'DEBUG'
+</pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="builtin-trap-bash.test.html#L62">trap DEBUG ignores $?</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '  [8]\nstatus=0\n  [9]\nA\n  [10]\nstatus=0\n  [11]\nB\n  [12]\nstatus=0\n'
+Got      'status=1\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[6]: trap: bad signal: DEBUG
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="builtin-trap-bash.test.html#L62">trap DEBUG ignores $?</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '  [8]\nstatus=0\n  [9]\nA\n  [10]\nstatus=0\n  [11]\nB\n  [12]\nstatus=0\n'
+Got      'status=127\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="builtin-trap-bash.test.html#L62">trap DEBUG ignores $?</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '  [8]\nstatus=0\n  [9]\nA\n  [10]\nstatus=0\n  [11]\nB\n  [12]\nstatus=0\n'
+Got      'status=1\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: trap: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="builtin-trap-bash.test.html#L62">trap DEBUG ignores $?</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '  [8]\nstatus=0\n  [9]\nA\n  [10]\nstatus=0\n  [11]\nB\n  [12]\nstatus=0\n'
+Got      '  [6]\nstatus=0\n  [8]\nA\n  [10]\nstatus=0\n  [12]\nB\n  [14]\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [6]
+status=0
+  [8]
+A
+  [10]
+status=0
+  [12]
+B
+  [14]
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="builtin-trap-bash.test.html#L89">but trap DEBUG respects errexit</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '  [10]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 42
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>trap: DEBUG: bad trap
+</pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="builtin-trap-bash.test.html#L89">but trap DEBUG respects errexit</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '  [10]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 42
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 8: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="builtin-trap-bash.test.html#L89">but trap DEBUG respects errexit</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '  [10]\n'
+Got      '  [10]\nstatus=0\n  [11]\nA\n  [12]\nstatus=0\n  [13]\nB\n  [14]\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 42
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [10]
+status=0
+  [11]
+A
+  [12]
+status=0
+  [13]
+B
+  [14]
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="builtin-trap-bash.test.html#L89">but trap DEBUG respects errexit</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '  [10]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 42
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[8]: trap: bad signal 'DEBUG'
+</pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="builtin-trap-bash.test.html#L89">but trap DEBUG respects errexit</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '  [10]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 42
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[8]: trap: bad signal: DEBUG
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="builtin-trap-bash.test.html#L89">but trap DEBUG respects errexit</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '  [10]\n'
+Got      'status=127\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 42
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="builtin-trap-bash.test.html#L89">but trap DEBUG respects errexit</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '  [10]\n'
+Got      'status=1\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 42
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: trap: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="builtin-trap-bash.test.html#L89">but trap DEBUG respects errexit</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '  [10]\n'
+Got      '  [8]\nstatus=0\n  [10]\nA\n  [12]\nstatus=0\n  [14]\nB\n  [16]\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 42
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [8]
+status=0
+  [10]
+A
+  [12]
+status=0
+  [14]
+B
+  [16]
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="builtin-trap-bash.test.html#L110">trap DEBUG with 'return'</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '  [7]\nstatus=0\n  [8]\nA\n  [9]\nstatus=0\n  [10]\nB\n  [11]\nstatus=0\n'
+Got      'status=1\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>trap: DEBUG: bad trap
+</pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="builtin-trap-bash.test.html#L110">trap DEBUG with 'return'</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '  [7]\nstatus=0\n  [8]\nA\n  [9]\nstatus=0\n  [10]\nB\n  [11]\nstatus=0\n'
+Got      'status=1\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 5: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="builtin-trap-bash.test.html#L110">trap DEBUG with 'return'</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '  [7]\nstatus=0\n  [8]\nA\n  [9]\nstatus=0\n  [10]\nB\n  [11]\nstatus=0\n'
+Got      '  [7]\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      42
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [7]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="builtin-trap-bash.test.html#L110">trap DEBUG with 'return'</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '  [7]\nstatus=0\n  [8]\nA\n  [9]\nstatus=0\n  [10]\nB\n  [11]\nstatus=0\n'
+Got      'status=1\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: trap: bad signal 'DEBUG'
+</pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="builtin-trap-bash.test.html#L110">trap DEBUG with 'return'</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '  [7]\nstatus=0\n  [8]\nA\n  [9]\nstatus=0\n  [10]\nB\n  [11]\nstatus=0\n'
+Got      'status=1\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[5]: trap: bad signal: DEBUG
+</pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="builtin-trap-bash.test.html#L110">trap DEBUG with 'return'</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '  [7]\nstatus=0\n  [8]\nA\n  [9]\nstatus=0\n  [10]\nB\n  [11]\nstatus=0\n'
+Got      'status=127\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="builtin-trap-bash.test.html#L110">trap DEBUG with 'return'</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '  [7]\nstatus=0\n  [8]\nA\n  [9]\nstatus=0\n  [10]\nB\n  [11]\nstatus=0\n'
+Got      'status=1\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: trap: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="builtin-trap-bash.test.html#L110">trap DEBUG with 'return'</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '  [7]\nstatus=0\n  [8]\nA\n  [9]\nstatus=0\n  [10]\nB\n  [11]\nstatus=0\n'
+Got      '  [6]\nstatus=0\n  [8]\nA\n  [10]\nstatus=0\n  [12]\nB\n  [14]\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [6]
+status=0
+  [8]
+A
+  [10]
+status=0
+  [12]
+B
+  [14]
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>return: can only be used in a function or sourced script
+return: can only be used in a function or sourced script
+return: can only be used in a function or sourced script
+return: can only be used in a function or sourced script
+return: can only be used in a function or sourced script
+</pre></td></tr><tr><td><a name="details-5-osh"></a><b>osh</b></td><td>5 <a href="builtin-trap-bash.test.html#L110">trap DEBUG with 'return'</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>  [7]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="builtin-trap-bash.test.html#L146">trap DEBUG with 'exit'</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '  [7]\n'
+Got      'status=1\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 42
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>trap: DEBUG: bad trap
+</pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="builtin-trap-bash.test.html#L146">trap DEBUG with 'exit'</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '  [7]\n'
+Got      'status=1\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 42
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 5: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="builtin-trap-bash.test.html#L146">trap DEBUG with 'exit'</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '  [7]\n'
+Got      'status=1\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 42
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: trap: bad signal 'DEBUG'
+</pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="builtin-trap-bash.test.html#L146">trap DEBUG with 'exit'</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '  [7]\n'
+Got      'status=1\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 42
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[5]: trap: bad signal: DEBUG
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="builtin-trap-bash.test.html#L146">trap DEBUG with 'exit'</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '  [7]\n'
+Got      'status=127\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 42
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="builtin-trap-bash.test.html#L146">trap DEBUG with 'exit'</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '  [7]\n'
+Got      'status=1\nA\nstatus=0\nB\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 42
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+A
+status=0
+B
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: trap: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="builtin-trap-bash.test.html#L146">trap DEBUG with 'exit'</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '  [7]\n'
+Got      '  [6]\nstatus=0\n  [8]\nA\n  [10]\nstatus=0\n  [12]\nB\n  [14]\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 42
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [6]
+status=0
+  [8]
+A
+  [10]
+status=0
+  [12]
+B
+  [14]
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="builtin-trap-bash.test.html#L166">trap DEBUG with non-compound commands</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '  [8]\na\n  [9]\nb\n  [9]\nc\n  [11]\nd\n  [11]\ne\n  [12]\nf\n  [14]\n  [15]\n  [17]\n  [19]\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="builtin-trap-bash.test.html#L166">trap DEBUG with non-compound commands</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '  [8]\na\n  [9]\nb\n  [9]\nc\n  [11]\nd\n  [11]\ne\n  [12]\nf\n  [14]\n  [15]\n  [17]\n  [19]\n'
+Got      'a\nb\nc\nd\ne\nf\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+d
+e
+f
+</pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 6: DEBUG: invalid signal specification
+ash: h: not found
+</pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="builtin-trap-bash.test.html#L166">trap DEBUG with non-compound commands</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '  [8]\na\n  [9]\nb\n  [9]\nc\n  [11]\nd\n  [11]\ne\n  [12]\nf\n  [14]\n  [15]\n  [17]\n  [19]\n'
+Got      '  [8]\na\n  [9]\nb\n  [9]\nc\n  [11]\nd\ne\n  [12]\nf\n  [14]\n  [15]\n  [17]\n  [19]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [8]
+a
+  [9]
+b
+  [9]
+c
+  [11]
+d
+e
+  [12]
+f
+  [14]
+  [15]
+  [17]
+  [19]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="builtin-trap-bash.test.html#L166">trap DEBUG with non-compound commands</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '  [8]\na\n  [9]\nb\n  [9]\nc\n  [11]\nd\n  [11]\ne\n  [12]\nf\n  [14]\n  [15]\n  [17]\n  [19]\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="builtin-trap-bash.test.html#L166">trap DEBUG with non-compound commands</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '  [8]\na\n  [9]\nb\n  [9]\nc\n  [11]\nd\n  [11]\ne\n  [12]\nf\n  [14]\n  [15]\n  [17]\n  [19]\n'
+Got      'a\nb\nc\nd\ne\nf\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+d
+e
+f
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[6]: trap: bad signal: DEBUG
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="builtin-trap-bash.test.html#L166">trap DEBUG with non-compound commands</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '  [8]\na\n  [9]\nb\n  [9]\nc\n  [11]\nd\n  [11]\ne\n  [12]\nf\n  [14]\n  [15]\n  [17]\n  [19]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="builtin-trap-bash.test.html#L166">trap DEBUG with non-compound commands</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '  [8]\na\n  [9]\nb\n  [9]\nc\n  [11]\nd\n  [11]\ne\n  [12]\nf\n  [14]\n  [15]\n  [17]\n  [19]\n'
+Got      'a\nb\nc\nd\ne\nf\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+d
+e
+f
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: trap: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="builtin-trap-bash.test.html#L166">trap DEBUG with non-compound commands</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '  [8]\na\n  [9]\nb\n  [9]\nc\n  [11]\nd\n  [11]\ne\n  [12]\nf\n  [14]\n  [15]\n  [17]\n  [19]\n'
+Got      '  [7]\na\n  [9]\nb\n  [10]\nc\n  [13]\nd\n  [14]\ne\n  [16]\nf\n  [24]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [7]
+a
+  [9]
+b
+  [10]
+c
+  [13]
+d
+  [14]
+e
+  [16]
+f
+  [24]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="builtin-trap-bash.test.html#L206">trap DEBUG and control flow</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '  [6]\n  [7]\nhello\n  [8]\n'
+Got      'hello\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hello
+</pre><i>stderr:</i> <br/>
+<pre>trap: DEBUG: bad trap
+</pre></td></tr><tr><td><a name="details-8-ash"></a><b>ash</b></td><td>8 <a href="builtin-trap-bash.test.html#L206">trap DEBUG and control flow</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '  [6]\n  [7]\nhello\n  [8]\n'
+Got      'hello\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hello
+</pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 4: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="builtin-trap-bash.test.html#L206">trap DEBUG and control flow</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '  [6]\n  [7]\nhello\n  [8]\n'
+Got      '  [6]\n  [6]\n  [7]\nhello\n  [8]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [6]
+  [6]
+  [7]
+hello
+  [8]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-mksh"></a><b>mksh</b></td><td>8 <a href="builtin-trap-bash.test.html#L206">trap DEBUG and control flow</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '  [6]\n  [7]\nhello\n  [8]\n'
+Got      'hello\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hello
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[4]: trap: bad signal 'DEBUG'
+</pre></td></tr><tr><td><a name="details-8-ksh"></a><b>ksh</b></td><td>8 <a href="builtin-trap-bash.test.html#L206">trap DEBUG and control flow</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '  [6]\n  [7]\nhello\n  [8]\n'
+Got      'hello\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hello
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[4]: trap: bad signal: DEBUG
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="builtin-trap-bash.test.html#L206">trap DEBUG and control flow</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '  [6]\n  [7]\nhello\n  [8]\n'
+Got      'hello\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hello
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="builtin-trap-bash.test.html#L206">trap DEBUG and control flow</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '  [6]\n  [7]\nhello\n  [8]\n'
+Got      'hello\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hello
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: trap: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="builtin-trap-bash.test.html#L206">trap DEBUG and control flow</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '  [6]\n  [7]\nhello\n  [8]\n'
+Got      '  [5]\n  [6]\nhello\n  [7]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [5]
+  [6]
+hello
+  [7]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="builtin-trap-bash.test.html#L231">trap DEBUG and command sub / subshell</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '  [8]\nresult = command sub\ntwo\nsubshell\ntwo\n  [12]\ndone\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-ash"></a><b>ash</b></td><td>9 <a href="builtin-trap-bash.test.html#L231">trap DEBUG and command sub / subshell</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '  [8]\nresult = command sub\ntwo\nsubshell\ntwo\n  [12]\ndone\n'
+Got      'result = command sub\ntwo\nsubshell\ntwo\ndone\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>result = command sub
+two
+subshell
+two
+done
+</pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 6: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-9-zsh"></a><b>zsh</b></td><td>9 <a href="builtin-trap-bash.test.html#L231">trap DEBUG and command sub / subshell</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '  [8]\nresult = command sub\ntwo\nsubshell\ntwo\n  [12]\ndone\n'
+Got      '  [8]\nresult =   [8]\ncommand sub\n  [8]\ntwo\n  [9]\n  [9]\nsubshell\n  [10]\ntwo\n  [12]\ndone\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [8]
+result =   [8]
+command sub
+  [8]
+two
+  [9]
+  [9]
+subshell
+  [10]
+two
+  [12]
+done
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-mksh"></a><b>mksh</b></td><td>9 <a href="builtin-trap-bash.test.html#L231">trap DEBUG and command sub / subshell</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '  [8]\nresult = command sub\ntwo\nsubshell\ntwo\n  [12]\ndone\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-ksh"></a><b>ksh</b></td><td>9 <a href="builtin-trap-bash.test.html#L231">trap DEBUG and command sub / subshell</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '  [8]\nresult = command sub\ntwo\nsubshell\ntwo\n  [12]\ndone\n'
+Got      'result = command sub\ntwo\nsubshell\ntwo\ndone\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>result = command sub
+two
+subshell
+two
+done
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[6]: trap: bad signal: DEBUG
+</pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="builtin-trap-bash.test.html#L231">trap DEBUG and command sub / subshell</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '  [8]\nresult = command sub\ntwo\nsubshell\ntwo\n  [12]\ndone\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="builtin-trap-bash.test.html#L231">trap DEBUG and command sub / subshell</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '  [8]\nresult = command sub\ntwo\nsubshell\ntwo\n  [12]\ndone\n'
+Got      'result = command sub\ntwo\nsubshell\ntwo\ndone\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>result = command sub
+two
+subshell
+two
+done
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: trap: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="builtin-trap-bash.test.html#L231">trap DEBUG and command sub / subshell</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '  [8]\nresult = command sub\ntwo\nsubshell\ntwo\n  [12]\ndone\n'
+Got      '  [7]\nresult =   [7]\ncommand sub\n  [8]\ntwo\n  [9]\nsubshell\n  [10]\ntwo\n  [10]\ndone\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [7]
+result =   [7]
+command sub
+  [8]
+two
+  [9]
+subshell
+  [10]
+two
+  [10]
+done
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="builtin-trap-bash.test.html#L255">trap DEBUG not run in forked interpreter for first pipeline part</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '  LINENO=8\npipe1\npipe2\n  LINENO=9\nok\n'
+Got      'pipe1\npipe2\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pipe1
+pipe2
+ok
+</pre><i>stderr:</i> <br/>
+<pre>trap: DEBUG: bad trap
+</pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="builtin-trap-bash.test.html#L255">trap DEBUG not run in forked interpreter for first pipeline part</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '  LINENO=8\npipe1\npipe2\n  LINENO=9\nok\n'
+Got      'pipe1\npipe2\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pipe1
+pipe2
+ok
+</pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 4: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-10-zsh"></a><b>zsh</b></td><td>10 <a href="builtin-trap-bash.test.html#L255">trap DEBUG not run in forked interpreter for first pipeline part</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '  LINENO=8\npipe1\npipe2\n  LINENO=9\nok\n'
+Got      '  LINENO=6\n  LINENO=6\npipe1\n  LINENO=7\npipe2\n  LINENO=9\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  LINENO=6
+  LINENO=6
+pipe1
+  LINENO=7
+pipe2
+  LINENO=9
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="builtin-trap-bash.test.html#L255">trap DEBUG not run in forked interpreter for first pipeline part</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '  LINENO=8\npipe1\npipe2\n  LINENO=9\nok\n'
+Got      'pipe1\npipe2\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pipe1
+pipe2
+ok
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[4]: trap: bad signal 'DEBUG'
+</pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="builtin-trap-bash.test.html#L255">trap DEBUG not run in forked interpreter for first pipeline part</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '  LINENO=8\npipe1\npipe2\n  LINENO=9\nok\n'
+Got      'pipe1\npipe2\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pipe1
+pipe2
+ok
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[4]: trap: bad signal: DEBUG
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="builtin-trap-bash.test.html#L255">trap DEBUG not run in forked interpreter for first pipeline part</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '  LINENO=8\npipe1\npipe2\n  LINENO=9\nok\n'
+Got      'pipe1\npipe2\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pipe1
+pipe2
+ok
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="builtin-trap-bash.test.html#L255">trap DEBUG not run in forked interpreter for first pipeline part</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '  LINENO=8\npipe1\npipe2\n  LINENO=9\nok\n'
+Got      'pipe1\npipe2\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pipe1
+pipe2
+ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: trap: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="builtin-trap-bash.test.html#L255">trap DEBUG not run in forked interpreter for first pipeline part</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '  LINENO=8\npipe1\npipe2\n  LINENO=9\nok\n'
+Got      '  LINENO=5\npipe1\n  LINENO=6\npipe2\n  LINENO=9\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  LINENO=5
+pipe1
+  LINENO=6
+pipe2
+  LINENO=9
+ok
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m main: syntax error near token `|' (line 1 col 3)
+</pre></td></tr><tr><td><a name="details-11-dash"></a><b>dash</b></td><td>11 <a href="builtin-trap-bash.test.html#L276">One 'echo' in first pipeline part - why does bash behave differently from case above?</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '  LINENO=6\n  LINENO=7\npipeline\n  LINENO=8\nok\n'
+Got      'pipeline\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pipeline
+ok
+</pre><i>stderr:</i> <br/>
+<pre>trap: DEBUG: bad trap
+</pre></td></tr><tr><td><a name="details-11-ash"></a><b>ash</b></td><td>11 <a href="builtin-trap-bash.test.html#L276">One 'echo' in first pipeline part - why does bash behave differently from case above?</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '  LINENO=6\n  LINENO=7\npipeline\n  LINENO=8\nok\n'
+Got      'pipeline\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pipeline
+ok
+</pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 4: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-11-zsh"></a><b>zsh</b></td><td>11 <a href="builtin-trap-bash.test.html#L276">One 'echo' in first pipeline part - why does bash behave differently from case above?</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '  LINENO=6\n  LINENO=7\npipeline\n  LINENO=8\nok\n'
+Got      '  LINENO=6\npipeline\n  LINENO=8\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  LINENO=6
+pipeline
+  LINENO=8
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-mksh"></a><b>mksh</b></td><td>11 <a href="builtin-trap-bash.test.html#L276">One 'echo' in first pipeline part - why does bash behave differently from case above?</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '  LINENO=6\n  LINENO=7\npipeline\n  LINENO=8\nok\n'
+Got      'pipeline\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pipeline
+ok
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[4]: trap: bad signal 'DEBUG'
+</pre></td></tr><tr><td><a name="details-11-ksh"></a><b>ksh</b></td><td>11 <a href="builtin-trap-bash.test.html#L276">One 'echo' in first pipeline part - why does bash behave differently from case above?</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '  LINENO=6\n  LINENO=7\npipeline\n  LINENO=8\nok\n'
+Got      'pipeline\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pipeline
+ok
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[4]: trap: bad signal: DEBUG
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="builtin-trap-bash.test.html#L276">One 'echo' in first pipeline part - why does bash behave differently from case above?</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '  LINENO=6\n  LINENO=7\npipeline\n  LINENO=8\nok\n'
+Got      'pipeline\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pipeline
+ok
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="builtin-trap-bash.test.html#L276">One 'echo' in first pipeline part - why does bash behave differently from case above?</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '  LINENO=6\n  LINENO=7\npipeline\n  LINENO=8\nok\n'
+Got      'pipeline\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pipeline
+ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: trap: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="builtin-trap-bash.test.html#L276">One 'echo' in first pipeline part - why does bash behave differently from case above?</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '  LINENO=6\n  LINENO=7\npipeline\n  LINENO=8\nok\n'
+Got      '  LINENO=5\npipeline\n  LINENO=8\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  LINENO=5
+pipeline
+  LINENO=8
+ok
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m main: syntax error near token `|' (line 1 col 3)
+</pre></td></tr><tr><td><a name="details-11-osh"></a><b>osh</b></td><td>11 <a href="builtin-trap-bash.test.html#L276">One 'echo' in first pipeline part - why does bash behave differently from case above?</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>  LINENO=7
+pipeline
+  LINENO=8
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-dash"></a><b>dash</b></td><td>12 <a href="builtin-trap-bash.test.html#L310">trap DEBUG and pipeline (lastpipe difference)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '  [6]\na\n  [6]\nb\n  [8]\n2\n  [10]\n  [10]\n  [10]\n1\n  [12]\n  [13]\n  [14]\n1\n'
+Got      'a\nb\n2\n1\n1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+2
+1
+1
+</pre><i>stderr:</i> <br/>
+<pre>trap: DEBUG: bad trap
+</pre></td></tr><tr><td><a name="details-12-ash"></a><b>ash</b></td><td>12 <a href="builtin-trap-bash.test.html#L310">trap DEBUG and pipeline (lastpipe difference)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '  [6]\na\n  [6]\nb\n  [8]\n2\n  [10]\n  [10]\n  [10]\n1\n  [12]\n  [13]\n  [14]\n1\n'
+Got      'a\nb\n2\n1\n1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+2
+1
+1
+</pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 4: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="builtin-trap-bash.test.html#L310">trap DEBUG and pipeline (lastpipe difference)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '  [6]\na\n  [6]\nb\n  [8]\n2\n  [10]\n  [10]\n  [10]\n1\n  [12]\n  [13]\n  [14]\n1\n'
+Got      '  [6]\n  [6]\na\n  [6]\nb\n  [8]\n4\n  [10]\n1\n  [12]\n1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [6]
+  [6]
+a
+  [6]
+b
+  [8]
+4
+  [10]
+1
+  [12]
+1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="builtin-trap-bash.test.html#L310">trap DEBUG and pipeline (lastpipe difference)</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '  [6]\na\n  [6]\nb\n  [8]\n2\n  [10]\n  [10]\n  [10]\n1\n  [12]\n  [13]\n  [14]\n1\n'
+Got      'a\nb\n2\n1\n1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+2
+1
+1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[4]: trap: bad signal 'DEBUG'
+</pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="builtin-trap-bash.test.html#L310">trap DEBUG and pipeline (lastpipe difference)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '  [6]\na\n  [6]\nb\n  [8]\n2\n  [10]\n  [10]\n  [10]\n1\n  [12]\n  [13]\n  [14]\n1\n'
+Got      'a\nb\n2\n1\n1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+2
+1
+1
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[4]: trap: bad signal: DEBUG
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="builtin-trap-bash.test.html#L310">trap DEBUG and pipeline (lastpipe difference)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '  [6]\na\n  [6]\nb\n  [8]\n2\n  [10]\n  [10]\n  [10]\n1\n  [12]\n  [13]\n  [14]\n1\n'
+Got      'a\nb\n2\n1\n1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+2
+1
+1
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="builtin-trap-bash.test.html#L310">trap DEBUG and pipeline (lastpipe difference)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '  [6]\na\n  [6]\nb\n  [8]\n2\n  [10]\n  [10]\n  [10]\n1\n  [12]\n  [13]\n  [14]\n1\n'
+Got      'a\nb\n2\n1\n1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+2
+1
+1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: trap: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="builtin-trap-bash.test.html#L310">trap DEBUG and pipeline (lastpipe difference)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '  [6]\na\n  [6]\nb\n  [8]\n2\n  [10]\n  [10]\n  [10]\n1\n  [12]\n  [13]\n  [14]\n1\n'
+Got      '  [5]\na\n  [6]\nb\n  [9]\n4\n  [11]\n3\n  [13]\n3\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [5]
+a
+  [6]
+b
+  [9]
+4
+  [11]
+3
+  [13]
+3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-osh"></a><b>osh</b></td><td>12 <a href="builtin-trap-bash.test.html#L310">trap DEBUG and pipeline (lastpipe difference)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>  [6]
+a
+  [6]
+b
+  [8]
+2
+  [10]
+1
+  [14]
+1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="builtin-trap-bash.test.html#L362">trap DEBUG function call</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '  [13]\ni=A\ni=B\n  [15]\nnext\n  [17]\ni=X\ni=Y\n  [19]\nok\n'
+Got      'i=A\ni=B\nnext\ni=X\ni=Y\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>i=A
+i=B
+next
+i=X
+i=Y
+ok
+</pre><i>stderr:</i> <br/>
+<pre>trap: DEBUG: bad trap
+</pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="builtin-trap-bash.test.html#L362">trap DEBUG function call</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '  [13]\ni=A\ni=B\n  [15]\nnext\n  [17]\ni=X\ni=Y\n  [19]\nok\n'
+Got      'i=A\ni=B\nnext\ni=X\ni=Y\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>i=A
+i=B
+next
+i=X
+i=Y
+ok
+</pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 4: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="builtin-trap-bash.test.html#L362">trap DEBUG function call</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '  [13]\ni=A\ni=B\n  [15]\nnext\n  [17]\ni=X\ni=Y\n  [19]\nok\n'
+Got      '  [6]\n  [13]\n  [1]\n  [2]\n  [3]\ni=A\n  [3]\ni=B\n  [15]\nnext\n  [17]\n  [1]\n  [2]\n  [3]\ni=X\n  [3]\ni=Y\n  [19]\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [6]
+  [13]
+  [1]
+  [2]
+  [3]
+i=A
+  [3]
+i=B
+  [15]
+next
+  [17]
+  [1]
+  [2]
+  [3]
+i=X
+  [3]
+i=Y
+  [19]
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="builtin-trap-bash.test.html#L362">trap DEBUG function call</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '  [13]\ni=A\ni=B\n  [15]\nnext\n  [17]\ni=X\ni=Y\n  [19]\nok\n'
+Got      'i=A\ni=B\nnext\ni=X\ni=Y\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>i=A
+i=B
+next
+i=X
+i=Y
+ok
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[4]: trap: bad signal 'DEBUG'
+</pre></td></tr><tr><td><a name="details-13-ksh"></a><b>ksh</b></td><td>13 <a href="builtin-trap-bash.test.html#L362">trap DEBUG function call</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '  [13]\ni=A\ni=B\n  [15]\nnext\n  [17]\ni=X\ni=Y\n  [19]\nok\n'
+Got      'i=A\ni=B\nnext\ni=X\ni=Y\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>i=A
+i=B
+next
+i=X
+i=Y
+ok
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[4]: trap: bad signal: DEBUG
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="builtin-trap-bash.test.html#L362">trap DEBUG function call</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '  [13]\ni=A\ni=B\n  [15]\nnext\n  [17]\ni=X\ni=Y\n  [19]\nok\n'
+Got      'i=A\ni=B\nnext\ni=X\ni=Y\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>i=A
+i=B
+next
+i=X
+i=Y
+ok
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="builtin-trap-bash.test.html#L362">trap DEBUG function call</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '  [13]\ni=A\ni=B\n  [15]\nnext\n  [17]\ni=X\ni=Y\n  [19]\nok\n'
+Got      'i=A\ni=B\nnext\ni=X\ni=Y\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>i=A
+i=B
+next
+i=X
+i=Y
+ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: trap: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="builtin-trap-bash.test.html#L362">trap DEBUG function call</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '  [13]\ni=A\ni=B\n  [15]\nnext\n  [17]\ni=X\ni=Y\n  [19]\nok\n'
+Got      '  [7]\n  [8]\n  [9]\ni=A\n  [10]\ni=B\n  [13]\nnext\n  [16]\n  [17]\n  [18]\ni=X\n  [19]\ni=Y\n  [22]\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [7]
+  [8]
+  [9]
+i=A
+  [10]
+i=B
+  [13]
+next
+  [16]
+  [17]
+  [18]
+i=X
+  [19]
+i=Y
+  [22]
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="builtin-trap-bash.test.html#L396">trap DEBUG case</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '  [6]\n  [8]\n  [10]\npython\n  [16]\nok\n'
+Got      'python\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>python
+ok
+</pre><i>stderr:</i> <br/>
+<pre>trap: DEBUG: bad trap
+</pre></td></tr><tr><td><a name="details-14-ash"></a><b>ash</b></td><td>14 <a href="builtin-trap-bash.test.html#L396">trap DEBUG case</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '  [6]\n  [8]\n  [10]\npython\n  [16]\nok\n'
+Got      'python\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>python
+ok
+</pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 4: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="builtin-trap-bash.test.html#L396">trap DEBUG case</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '  [6]\n  [8]\n  [10]\npython\n  [16]\nok\n'
+Got      'python\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>python
+ok
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[4]: trap: bad signal 'DEBUG'
+</pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="builtin-trap-bash.test.html#L396">trap DEBUG case</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '  [6]\n  [8]\n  [10]\npython\n  [16]\nok\n'
+Got      'python\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>python
+ok
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[4]: trap: bad signal: DEBUG
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="builtin-trap-bash.test.html#L396">trap DEBUG case</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '  [6]\n  [8]\n  [10]\npython\n  [16]\nok\n'
+Got      'python\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>python
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+free(): invalid pointer
+</pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="builtin-trap-bash.test.html#L396">trap DEBUG case</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '  [6]\n  [8]\n  [10]\npython\n  [16]\nok\n'
+Got      'python\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>python
+ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: trap: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-14-brush"></a><b>brush</b></td><td>14 <a href="builtin-trap-bash.test.html#L396">trap DEBUG case</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '  [6]\n  [8]\n  [10]\npython\n  [16]\nok\n'
+Got      '  [7]\npython\n  [9]\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [7]
+python
+  [9]
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="builtin-trap-bash.test.html#L423">trap DEBUG for each</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '  [6]\n  [7]\nx=1\n  [6]\n  [7]\nx=2\n  [10]\nok\n'
+Got      'x=1\nx=2\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=1
+x=2
+ok
+</pre><i>stderr:</i> <br/>
+<pre>trap: DEBUG: bad trap
+</pre></td></tr><tr><td><a name="details-15-ash"></a><b>ash</b></td><td>15 <a href="builtin-trap-bash.test.html#L423">trap DEBUG for each</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '  [6]\n  [7]\nx=1\n  [6]\n  [7]\nx=2\n  [10]\nok\n'
+Got      'x=1\nx=2\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=1
+x=2
+ok
+</pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 4: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-15-zsh"></a><b>zsh</b></td><td>15 <a href="builtin-trap-bash.test.html#L423">trap DEBUG for each</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '  [6]\n  [7]\nx=1\n  [6]\n  [7]\nx=2\n  [10]\nok\n'
+Got      '  [6]\n  [7]\nx=1\n  [7]\nx=2\n  [10]\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [6]
+  [7]
+x=1
+  [7]
+x=2
+  [10]
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-mksh"></a><b>mksh</b></td><td>15 <a href="builtin-trap-bash.test.html#L423">trap DEBUG for each</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '  [6]\n  [7]\nx=1\n  [6]\n  [7]\nx=2\n  [10]\nok\n'
+Got      'x=1\nx=2\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=1
+x=2
+ok
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[4]: trap: bad signal 'DEBUG'
+</pre></td></tr><tr><td><a name="details-15-ksh"></a><b>ksh</b></td><td>15 <a href="builtin-trap-bash.test.html#L423">trap DEBUG for each</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '  [6]\n  [7]\nx=1\n  [6]\n  [7]\nx=2\n  [10]\nok\n'
+Got      'x=1\nx=2\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=1
+x=2
+ok
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[4]: trap: bad signal: DEBUG
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="builtin-trap-bash.test.html#L423">trap DEBUG for each</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '  [6]\n  [7]\nx=1\n  [6]\n  [7]\nx=2\n  [10]\nok\n'
+Got      'x=1\nx=2\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=1
+x=2
+ok
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="builtin-trap-bash.test.html#L423">trap DEBUG for each</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '  [6]\n  [7]\nx=1\n  [6]\n  [7]\nx=2\n  [10]\nok\n'
+Got      'x=1\nx=2\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=1
+x=2
+ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: trap: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-15-brush"></a><b>brush</b></td><td>15 <a href="builtin-trap-bash.test.html#L423">trap DEBUG for each</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '  [6]\n  [7]\nx=1\n  [6]\n  [7]\nx=2\n  [10]\nok\n'
+Got      '  [5]\nx=1\n  [6]\nx=2\n  [9]\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [5]
+x=1
+  [6]
+x=2
+  [9]
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-osh"></a><b>osh</b></td><td>15 <a href="builtin-trap-bash.test.html#L423">trap DEBUG for each</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>  [7]
+x=1
+  [7]
+x=2
+  [10]
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-dash"></a><b>dash</b></td><td>16 <a href="builtin-trap-bash.test.html#L462">trap DEBUG for expr</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '  [6]\n  [6]\n  [7]\ni=3\n  [6]\n  [6]\n  [7]\ni=4\n  [6]\n  [6]\n  [10]\nok\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>trap: DEBUG: bad trap
+dash: 6: Syntax error: Bad for loop variable
+</pre></td></tr><tr><td><a name="details-16-ash"></a><b>ash</b></td><td>16 <a href="builtin-trap-bash.test.html#L462">trap DEBUG for expr</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '  [6]\n  [6]\n  [7]\ni=3\n  [6]\n  [6]\n  [7]\ni=4\n  [6]\n  [6]\n  [10]\nok\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 4: DEBUG: invalid signal specification
+ash: syntax error: bad for loop variable
+</pre></td></tr><tr><td><a name="details-16-zsh"></a><b>zsh</b></td><td>16 <a href="builtin-trap-bash.test.html#L462">trap DEBUG for expr</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '  [6]\n  [6]\n  [7]\ni=3\n  [6]\n  [6]\n  [7]\ni=4\n  [6]\n  [6]\n  [10]\nok\n'
+Got      '  [6]\n  [7]\ni=3\n  [7]\ni=4\n  [10]\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [6]
+  [7]
+i=3
+  [7]
+i=4
+  [10]
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-mksh"></a><b>mksh</b></td><td>16 <a href="builtin-trap-bash.test.html#L462">trap DEBUG for expr</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '  [6]\n  [6]\n  [7]\ni=3\n  [6]\n  [6]\n  [7]\ni=4\n  [6]\n  [6]\n  [10]\nok\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[4]: trap: bad signal 'DEBUG'
+mksh: &lt;stdin&gt;[6]: syntax error: '((' unexpected
+</pre></td></tr><tr><td><a name="details-16-ksh"></a><b>ksh</b></td><td>16 <a href="builtin-trap-bash.test.html#L462">trap DEBUG for expr</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '  [6]\n  [6]\n  [7]\ni=3\n  [6]\n  [6]\n  [7]\ni=4\n  [6]\n  [6]\n  [10]\nok\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[4]: trap: bad signal: DEBUG
+E: ksh: &lt;stdin&gt;[6]: syntax error: unexpected '(('
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="builtin-trap-bash.test.html#L462">trap DEBUG for expr</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '  [6]\n  [6]\n  [7]\ni=3\n  [6]\n  [6]\n  [7]\ni=4\n  [6]\n  [6]\n  [10]\nok\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+main: line 6: sh: syntax error: ;
+</pre></td></tr><tr><td><a name="details-16-sush"></a><b>sush</b></td><td>16 <a href="builtin-trap-bash.test.html#L462">trap DEBUG for expr</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '  [6]\n  [6]\n  [7]\ni=3\n  [6]\n  [6]\n  [7]\ni=4\n  [6]\n  [6]\n  [10]\nok\n'
+Got      'i=3\ni=4\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>i=3
+i=4
+ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: trap: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-16-brush"></a><b>brush</b></td><td>16 <a href="builtin-trap-bash.test.html#L462">trap DEBUG for expr</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '  [6]\n  [6]\n  [7]\ni=3\n  [6]\n  [6]\n  [7]\ni=4\n  [6]\n  [6]\n  [10]\nok\n'
+Got      '  [5]\ni=3\n  [6]\ni=4\n  [9]\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [5]
+i=3
+  [6]
+i=4
+  [9]
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-osh"></a><b>osh</b></td><td>16 <a href="builtin-trap-bash.test.html#L462">trap DEBUG for expr</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>  [7]
+i=3
+  [7]
+i=4
+  [10]
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-dash"></a><b>dash</b></td><td>17 <a href="builtin-trap-bash.test.html#L497">trap DEBUG if while</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '  [6]\n  [7]\nif\n  [10]\n'
+Got      'if\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>if
+</pre><i>stderr:</i> <br/>
+<pre>trap: DEBUG: bad trap
+</pre></td></tr><tr><td><a name="details-17-ash"></a><b>ash</b></td><td>17 <a href="builtin-trap-bash.test.html#L497">trap DEBUG if while</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '  [6]\n  [7]\nif\n  [10]\n'
+Got      'if\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>if
+</pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 4: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-17-zsh"></a><b>zsh</b></td><td>17 <a href="builtin-trap-bash.test.html#L497">trap DEBUG if while</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '  [6]\n  [7]\nif\n  [10]\n'
+Got      '  [6]\n  [6]\n  [7]\nif\n  [10]\n  [10]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [6]
+  [6]
+  [7]
+if
+  [10]
+  [10]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-mksh"></a><b>mksh</b></td><td>17 <a href="builtin-trap-bash.test.html#L497">trap DEBUG if while</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '  [6]\n  [7]\nif\n  [10]\n'
+Got      'if\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>if
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[4]: trap: bad signal 'DEBUG'
+</pre></td></tr><tr><td><a name="details-17-ksh"></a><b>ksh</b></td><td>17 <a href="builtin-trap-bash.test.html#L497">trap DEBUG if while</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '  [6]\n  [7]\nif\n  [10]\n'
+Got      'if\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>if
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[4]: trap: bad signal: DEBUG
+</pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="builtin-trap-bash.test.html#L497">trap DEBUG if while</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '  [6]\n  [7]\nif\n  [10]\n'
+Got      'if\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>if
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="builtin-trap-bash.test.html#L497">trap DEBUG if while</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '  [6]\n  [7]\nif\n  [10]\n'
+Got      'if\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>if
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: trap: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-17-brush"></a><b>brush</b></td><td>17 <a href="builtin-trap-bash.test.html#L497">trap DEBUG if while</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '  [6]\n  [7]\nif\n  [10]\n'
+Got      '  [5]\n  [6]\nif\n  [9]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  [5]
+  [6]
+if
+  [9]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-dash"></a><b>dash</b></td><td>18 <a href="builtin-trap-bash.test.html#L519">trap RETURN</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '--\nf\n--\n--\ng\n--\nreturn-helper.sh\nprofile [x y]\n'
+Got      '--\nf\n--\n--\ng\n--\nreturn-helper.sh\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+f
+--
+--
+g
+--
+return-helper.sh
+</pre><i>stderr:</i> <br/>
+<pre>trap: RETURN: bad trap
+</pre></td></tr><tr><td><a name="details-18-ash"></a><b>ash</b></td><td>18 <a href="builtin-trap-bash.test.html#L519">trap RETURN</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '--\nf\n--\n--\ng\n--\nreturn-helper.sh\nprofile [x y]\n'
+Got      '--\nf\n--\n--\ng\n--\nreturn-helper.sh\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+f
+--
+--
+g
+--
+return-helper.sh
+</pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 16: RETURN: invalid signal specification
+</pre></td></tr><tr><td><a name="details-18-zsh"></a><b>zsh</b></td><td>18 <a href="builtin-trap-bash.test.html#L519">trap RETURN</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '--\nf\n--\n--\ng\n--\nreturn-helper.sh\nprofile [x y]\n'
+Got      '--\nf\n--\n--\ng\n--\nreturn-helper.sh\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+f
+--
+--
+g
+--
+return-helper.sh
+</pre><i>stderr:</i> <br/>
+<pre>trap: undefined signal: RETURN
+</pre></td></tr><tr><td><a name="details-18-mksh"></a><b>mksh</b></td><td>18 <a href="builtin-trap-bash.test.html#L519">trap RETURN</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '--\nf\n--\n--\ng\n--\nreturn-helper.sh\nprofile [x y]\n'
+Got      '--\nf\n--\n--\ng\n--\nreturn-helper.sh\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+f
+--
+--
+g
+--
+return-helper.sh
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[16]: trap: bad signal 'RETURN'
+</pre></td></tr><tr><td><a name="details-18-ksh"></a><b>ksh</b></td><td>18 <a href="builtin-trap-bash.test.html#L519">trap RETURN</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '--\nf\n--\n--\ng\n--\nreturn-helper.sh\nprofile [x y]\n'
+Got      '--\nf\n--\n--\ng\n--\nreturn-helper.sh\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+f
+--
+--
+g
+--
+return-helper.sh
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[16]: trap: bad signal: RETURN
+</pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="builtin-trap-bash.test.html#L519">trap RETURN</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '--\nf\n--\n--\ng\n--\nreturn-helper.sh\nprofile [x y]\n'
+Got      '\nf\n\n\ng\n\nreturn-helper.sh\nshould not see\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 42
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+f
+
+
+g
+
+return-helper.sh
+should not see
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="builtin-trap-bash.test.html#L519">trap RETURN</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '--\nf\n--\n--\ng\n--\nreturn-helper.sh\nprofile [x y]\n'
+Got      '--\nf\n--\n--\ng\n--\nreturn-helper.sh\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+f
+--
+--
+g
+--
+return-helper.sh
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 16: trap: RETURN: invalid signal specification
+</pre></td></tr><tr><td><a name="details-18-brush"></a><b>brush</b></td><td>18 <a href="builtin-trap-bash.test.html#L519">trap RETURN</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '--\nf\n--\n--\ng\n--\nreturn-helper.sh\nprofile [x y]\n'
+Got      '--\nf\n--\n--\ng\n--\nreturn-helper.sh\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+f
+--
+--
+g
+--
+return-helper.sh
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-osh"></a><b>osh</b></td><td>18 <a href="builtin-trap-bash.test.html#L519">trap RETURN</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected '--\nf\n--\n--\ng\n--\nreturn-helper.sh\nprofile [x y]\n'
+Got      '--\nf\n--\n--\ng\n--\nreturn-helper.sh\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+f
+--
+--
+g
+--
+return-helper.sh
+</pre><i>stderr:</i> <br/>
+<pre>osh warning: The 'RETURN' hook isn't implemented
+</pre></td></tr><tr><td><a name="details-19-dash"></a><b>dash</b></td><td>19 <a href="builtin-trap-bash.test.html#L552">Compare trap DEBUG vs. trap ERR</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'dbg 3\ndbg 3\ndbg 3\ndbg 5\ndbg 5\ndbg 5\ndbg 7\ndbg 9\nerr 14\nerr 16\nok\n'
+Got      'ok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre>trap: DEBUG: bad trap
+trap: DEBUG: bad trap
+trap: ERR: bad trap
+</pre></td></tr><tr><td><a name="details-19-ash"></a><b>ash</b></td><td>19 <a href="builtin-trap-bash.test.html#L552">Compare trap DEBUG vs. trap ERR</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'dbg 3\ndbg 3\ndbg 3\ndbg 5\ndbg 5\ndbg 5\ndbg 7\ndbg 9\nerr 14\nerr 16\nok\n'
+Got      'err 12\nerr 16\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>err 12
+err 16
+ok
+</pre><i>stderr:</i> <br/>
+<pre>ash: trap: line 1: DEBUG: invalid signal specification
+ash: trap: line 9: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-19-zsh"></a><b>zsh</b></td><td>19 <a href="builtin-trap-bash.test.html#L552">Compare trap DEBUG vs. trap ERR</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'dbg 3\ndbg 3\ndbg 3\ndbg 5\ndbg 5\ndbg 5\ndbg 7\ndbg 9\nerr 14\nerr 16\nok\n'
+Got      'dbg 3\ndbg 5\ndbg 7\ndbg 9\nerr 14\nerr 16\nerr 18\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>dbg 3
+dbg 5
+dbg 7
+dbg 9
+err 14
+err 16
+err 18
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-mksh"></a><b>mksh</b></td><td>19 <a href="builtin-trap-bash.test.html#L552">Compare trap DEBUG vs. trap ERR</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'dbg 3\ndbg 3\ndbg 3\ndbg 5\ndbg 5\ndbg 5\ndbg 7\ndbg 9\nerr 14\nerr 16\nok\n'
+Got      'err 12\nerr 16\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>err 12
+err 16
+ok
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: trap: bad signal 'DEBUG'
+mksh: &lt;stdin&gt;[9]: trap: bad signal 'DEBUG'
+</pre></td></tr><tr><td><a name="details-19-ksh"></a><b>ksh</b></td><td>19 <a href="builtin-trap-bash.test.html#L552">Compare trap DEBUG vs. trap ERR</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'dbg 3\ndbg 3\ndbg 3\ndbg 5\ndbg 5\ndbg 5\ndbg 7\ndbg 9\nerr 14\nerr 16\nok\n'
+Got      'err 12\nerr 16\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>err 12
+err 16
+ok
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[1]: trap: bad signal: DEBUG
+W: ksh: &lt;stdin&gt;[9]: trap: bad signal: DEBUG
+</pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="builtin-trap-bash.test.html#L552">Compare trap DEBUG vs. trap ERR</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'dbg 3\ndbg 3\ndbg 3\ndbg 5\ndbg 5\ndbg 5\ndbg 7\ndbg 9\nerr 14\nerr 16\nok\n'
+Got      'ok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+sh: trap: No such file or directory
+sh: trap: No such file or directory
+</pre></td></tr><tr><td><a name="details-19-sush"></a><b>sush</b></td><td>19 <a href="builtin-trap-bash.test.html#L552">Compare trap DEBUG vs. trap ERR</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'dbg 3\ndbg 3\ndbg 3\ndbg 5\ndbg 5\ndbg 5\ndbg 7\ndbg 9\nerr 14\nerr 16\nok\n'
+Got      'ok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ok
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: trap: DEBUG: invalid signal specification
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: trap: DEBUG: invalid signal specification
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 12: trap: ERR: invalid signal specification
+</pre></td></tr><tr><td><a name="details-19-brush"></a><b>brush</b></td><td>19 <a href="builtin-trap-bash.test.html#L552">Compare trap DEBUG vs. trap ERR</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'dbg 3\ndbg 3\ndbg 3\ndbg 5\ndbg 5\ndbg 5\ndbg 7\ndbg 9\nerr 14\nerr 16\nok\n'
+Got      'dbg 4\ndbg 6\ndbg 7\ndbg 8\ndbg 11\ndbg 14\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>dbg 4
+dbg 6
+dbg 7
+dbg 8
+dbg 11
+dbg 14
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-osh"></a><b>osh</b></td><td>19 <a href="builtin-trap-bash.test.html#L552">Compare trap DEBUG vs. trap ERR</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'dbg 3\ndbg 3\ndbg 3\ndbg 5\ndbg 5\ndbg 5\ndbg 7\ndbg 9\nerr 14\nerr 16\nok\n'
+Got      'dbg 3\ndbg 5\ndbg 5\ndbg 5\ndbg 7\ndbg 9\nerr 14\nerr 16\nok\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>dbg 3
+dbg 5
+dbg 5
+dbg 5
+dbg 7
+dbg 9
+err 14
+err 16
+ok
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-dash"></a><b>dash</b></td><td>20 <a href="builtin-trap-bash.test.html#L594">Combine DEBUG trap and USR1 trap</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-ash"></a><b>ash</b></td><td>20 <a href="builtin-trap-bash.test.html#L594">Combine DEBUG trap and USR1 trap</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-zsh"></a><b>zsh</b></td><td>20 <a href="builtin-trap-bash.test.html#L594">Combine DEBUG trap and USR1 trap</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '6 dbg\n1 dbg\n1 dbg\n1 usr1\n7 dbg\nafter=0\n'
+Got      '6 dbg\n6 usr1\n7 dbg\nafter=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>6 dbg
+6 usr1
+7 dbg
+after=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-mksh"></a><b>mksh</b></td><td>20 <a href="builtin-trap-bash.test.html#L594">Combine DEBUG trap and USR1 trap</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-ksh"></a><b>ksh</b></td><td>20 <a href="builtin-trap-bash.test.html#L594">Combine DEBUG trap and USR1 trap</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '6 dbg\n1 dbg\n1 dbg\n1 usr1\n7 dbg\nafter=0\n'
+Got      '6 usr1\nafter=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>6 usr1
+after=0
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[4]: trap: bad signal: DEBUG
+</pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="builtin-trap-bash.test.html#L594">Combine DEBUG trap and USR1 trap</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '6 dbg\n1 dbg\n1 dbg\n1 usr1\n7 dbg\nafter=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-20-sush"></a><b>sush</b></td><td>20 <a href="builtin-trap-bash.test.html#L594">Combine DEBUG trap and USR1 trap</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '6 dbg\n1 dbg\n1 dbg\n1 usr1\n7 dbg\nafter=0\n'
+Got      'after=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>after=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: trap: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-20-brush"></a><b>brush</b></td><td>20 <a href="builtin-trap-bash.test.html#L594">Combine DEBUG trap and USR1 trap</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '6 dbg\n1 dbg\n1 dbg\n1 usr1\n7 dbg\nafter=0\n'
+Got      '7 dbg\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 0
+Got      -10
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>7 dbg
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-dash"></a><b>dash</b></td><td>21 <a href="builtin-trap-bash.test.html#L616">Combine ERR trap and USR1 trap</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-ash"></a><b>ash</b></td><td>21 <a href="builtin-trap-bash.test.html#L616">Combine ERR trap and USR1 trap</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-zsh"></a><b>zsh</b></td><td>21 <a href="builtin-trap-bash.test.html#L616">Combine ERR trap and USR1 trap</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '1 err\n1 usr1\nafter=0\n'
+Got      '6 usr1\nafter=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>6 usr1
+after=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-mksh"></a><b>mksh</b></td><td>21 <a href="builtin-trap-bash.test.html#L616">Combine ERR trap and USR1 trap</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-ksh"></a><b>ksh</b></td><td>21 <a href="builtin-trap-bash.test.html#L616">Combine ERR trap and USR1 trap</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '1 err\n1 usr1\nafter=0\n'
+Got      '6 err\n6 usr1\nafter=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>6 err
+6 usr1
+after=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="builtin-trap-bash.test.html#L616">Combine ERR trap and USR1 trap</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1 err\n1 usr1\nafter=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="builtin-trap-bash.test.html#L616">Combine ERR trap and USR1 trap</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '1 err\n1 usr1\nafter=0\n'
+Got      'after=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>after=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: trap: ERR: invalid signal specification
+</pre></td></tr><tr><td><a name="details-21-brush"></a><b>brush</b></td><td>21 <a href="builtin-trap-bash.test.html#L616">Combine ERR trap and USR1 trap</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '1 err\n1 usr1\nafter=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 0
+Got      -10
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-dash"></a><b>dash</b></td><td>22 <a href="builtin-trap-bash.test.html#L635">Combine DEBUG trap and ERR trap</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-ash"></a><b>ash</b></td><td>22 <a href="builtin-trap-bash.test.html#L635">Combine DEBUG trap and ERR trap</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-zsh"></a><b>zsh</b></td><td>22 <a href="builtin-trap-bash.test.html#L635">Combine DEBUG trap and ERR trap</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '6 err\n6 debug\n6 debug\n6 debug\n6 err\n7 err\n7 debug\nafter=1\n'
+Got      '6 debug\n6 err\n7 debug\nafter=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>6 debug
+6 err
+7 debug
+after=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-mksh"></a><b>mksh</b></td><td>22 <a href="builtin-trap-bash.test.html#L635">Combine DEBUG trap and ERR trap</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-ksh"></a><b>ksh</b></td><td>22 <a href="builtin-trap-bash.test.html#L635">Combine DEBUG trap and ERR trap</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '6 err\n6 debug\n6 debug\n6 debug\n6 err\n7 err\n7 debug\nafter=1\n'
+Got      '4 err\n6 err\nafter=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>4 err
+6 err
+after=1
+</pre><i>stderr:</i> <br/>
+<pre>W: ksh: &lt;stdin&gt;[4]: trap: bad signal: DEBUG
+</pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="builtin-trap-bash.test.html#L635">Combine DEBUG trap and ERR trap</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '6 err\n6 debug\n6 debug\n6 debug\n6 err\n7 err\n7 debug\nafter=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="builtin-trap-bash.test.html#L635">Combine DEBUG trap and ERR trap</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '6 err\n6 debug\n6 debug\n6 debug\n6 err\n7 err\n7 debug\nafter=1\n'
+Got      'after=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>after=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: trap: ERR: invalid signal specification
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: trap: DEBUG: invalid signal specification
+</pre></td></tr><tr><td><a name="details-22-brush"></a><b>brush</b></td><td>22 <a href="builtin-trap-bash.test.html#L635">Combine DEBUG trap and ERR trap</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '6 err\n6 debug\n6 debug\n6 debug\n6 err\n7 err\n7 debug\nafter=1\n'
+Got      '7 debug\n9 debug\nafter=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>7 debug
+9 debug
+after=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

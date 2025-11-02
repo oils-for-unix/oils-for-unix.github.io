@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-kill: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-kill.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>16</td><td>4</td><td>9</td><td>7</td><td>7</td><td>9</td><td>1</td><td>6</td><td>3</td><td>13</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>9</td><td>0</td><td>2</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>2</td><td>0</td><td>1</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>7</td><td>5</td><td>0</td><td>7</td><td>15</td><td>10</td><td>13</td><td>2</td><td></td></tr>
+<tr><td>total</td><td>16</td><td>16</td><td>16</td><td>16</td><td>16</td><td>16</td><td>16</td><td>16</td><td>16</td><td>16</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-kill.test.html#L7">kill -15 kills the process with SIGTERM</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"><a href="#details-0-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-kill.test.html#L24">kill -KILL kills the process with SIGKILL</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-kill.test.html#L37">kill -n 9 specifies the signal number</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-kill.test.html#L60">kill -s TERM specifies the signal name</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-kill.test.html#L77">kill -terM -SigterM isn't case sensitive</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-kill.test.html#L102">kill HUP pid gives the correct error</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-kill.test.html#L115">kill -l shows signals</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-kill.test.html#L128">kill -L also shows signals</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-kill.test.html#L138">kill -l 10 TERM translates between names and numbers</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-kill.test.html#L173">kill -L checks for invalid input</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"><a href="#details-9-zsh">details</a></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"><a href="#details-9-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-kill.test.html#L197">kill -9999 is an invalid signal</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-kill.test.html#L212">kill -15 %% kills current job</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-dash">details</a></td><td class="details-row"><a href="#details-11-ash">details</a></td><td class="details-row"><a href="#details-11-zsh">details</a></td><td class="details-row"><a href="#details-11-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"><a href="#details-11-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-kill.test.html#L248">kill -15 %- kills previous job</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-kill.test.html#L280">kill multiple pids at once</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-kill.test.html#L294">kill pid and job at once</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-14-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-kill.test.html#L306">Numeric signal out of range - OSH may send it anyway</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>75 passed, 3 OK, 16 not implemented, 7 BUG, 59 failed, 0 timeouts, 0 cases skipped
+2 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="builtin-kill.test.html#L7">kill -15 kills the process with SIGTERM</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="builtin-kill.test.html#L7">kill -15 kills the process with SIGTERM</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'kill=0\nwait=143\n'
+Got      'kill=0\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=0
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="builtin-kill.test.html#L7">kill -15 kills the process with SIGTERM</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'kill=0\nwait=143\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="builtin-kill.test.html#L7">kill -15 kills the process with SIGTERM</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'kill=0\nwait=143\n'
+Got      'kill=0\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=0
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>695561
+</pre></td></tr><tr><td><a name="details-0-brush"></a><b>brush</b></td><td>0 <a href="builtin-kill.test.html#L7">kill -15 kills the process with SIGTERM</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'kill=0\nwait=143\n'
+Got      'kill=2\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=2
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>kill: invalid signal name
+</pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="builtin-kill.test.html#L24">kill -KILL kills the process with SIGKILL</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'kill=0\nwait=137\n'
+Got      'kill=1\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=1
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>kill: unknown signal: SIGKILL
+kill: type kill -l for a list of signals
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-kill.test.html#L24">kill -KILL kills the process with SIGKILL</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'kill=0\nwait=137\n'
+Got      'kill=1\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=1
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>kill: missing argument (see "kill --help")
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="builtin-kill.test.html#L24">kill -KILL kills the process with SIGKILL</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'kill=0\nwait=137\n'
+Got      'kill=0\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=0
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>696039
+</pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="builtin-kill.test.html#L24">kill -KILL kills the process with SIGKILL</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'kill=0\nwait=137\n'
+Got      'kill=2\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=2
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>kill: invalid usage
+</pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="builtin-kill.test.html#L37">kill -n 9 specifies the signal number</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>kill=2
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: kill: Illegal option -n
+</pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="builtin-kill.test.html#L37">kill -n 9 specifies the signal number</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'kill=0\nwait=137\n'
+Got      'kill=1\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=1
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>ash: bad signal name 'n'
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="builtin-kill.test.html#L37">kill -n 9 specifies the signal number</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>kill=1
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: kill: -n: unknown option
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="builtin-kill.test.html#L37">kill -n 9 specifies the signal number</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'kill=0\nwait=137\n'
+Got      'kill=1\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=1
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: kill: -n: unknown option
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="builtin-kill.test.html#L37">kill -n 9 specifies the signal number</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'kill=0\nwait=137\n'
+Got      'kill=1\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=1
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>kill: Unknown signal 'n'
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="builtin-kill.test.html#L37">kill -n 9 specifies the signal number</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'kill=0\nwait=137\n'
+Got      'kill=0\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=0
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>697080
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="builtin-kill.test.html#L37">kill -n 9 specifies the signal number</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'kill=0\nwait=137\n'
+Got      'kill=2\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=2
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>kill: invalid usage
+</pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="builtin-kill.test.html#L60">kill -s TERM specifies the signal name</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'kill=0\nwait=143\n'
+Got      'kill=1\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=1
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>kill: unknown signal: SIGTERM
+kill: type kill -l for a list of signals
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="builtin-kill.test.html#L60">kill -s TERM specifies the signal name</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>kill=0
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="builtin-kill.test.html#L60">kill -s TERM specifies the signal name</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'kill=0\nwait=143\n'
+Got      'kill=0\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=0
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="builtin-kill.test.html#L60">kill -s TERM specifies the signal name</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'kill=0\nwait=143\n'
+Got      'kill=1\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=1
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>kill: missing argument (see "kill --help")
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="builtin-kill.test.html#L60">kill -s TERM specifies the signal name</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'kill=0\nwait=143\n'
+Got      'kill=0\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=0
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>698168
+</pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="builtin-kill.test.html#L60">kill -s TERM specifies the signal name</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'kill=0\nwait=143\n'
+Got      'kill=2\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=2
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>kill: invalid usage
+</pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="builtin-kill.test.html#L77">kill -terM -SigterM isn't case sensitive</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="builtin-kill.test.html#L77">kill -terM -SigterM isn't case sensitive</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="builtin-kill.test.html#L77">kill -terM -SigterM isn't case sensitive</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="builtin-kill.test.html#L77">kill -terM -SigterM isn't case sensitive</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'kill=0\nwait=143\nkill=0\nwait=143\n'
+Got      'kill=1\nwait=0\nkill=1\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=1
+wait=0
+kill=1
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: kill: bad signal: SigterM
+E: ksh: &lt;stdin&gt;[12]: kill: -t: unknown option
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="builtin-kill.test.html#L77">kill -terM -SigterM isn't case sensitive</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'kill=0\nwait=143\nkill=0\nwait=143\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="builtin-kill.test.html#L77">kill -terM -SigterM isn't case sensitive</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'kill=0\nwait=143\nkill=0\nwait=143\n'
+Got      'kill=0\nwait=0\nkill=0\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=0
+wait=0
+kill=0
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>698862
+698873
+</pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="builtin-kill.test.html#L77">kill -terM -SigterM isn't case sensitive</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'kill=0\nwait=143\nkill=0\nwait=143\n'
+Got      'kill=2\nwait=0\nkill=2\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=2
+wait=0
+kill=2
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>kill: invalid usage
+kill: invalid usage
+</pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="builtin-kill.test.html#L102">kill HUP pid gives the correct error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="builtin-kill.test.html#L102">kill HUP pid gives the correct error</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '1\n'
+Got      '127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>127
+</pre><i>stderr:</i> <br/>
+<pre>ash: builtin: not found
+</pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="builtin-kill.test.html#L102">kill HUP pid gives the correct error</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-5-osh"></a><b>osh</b></td><td>5 <a href="builtin-kill.test.html#L102">kill HUP pid gives the correct error</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>2
+</pre><i>stderr:</i> <br/>
+<pre>  builtin kill HUP $pid
+               ^~~
+[ stdin ]:3: 'kill' got invalid process ID 'HUP'
+</pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="builtin-kill.test.html#L115">kill -l shows signals</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="builtin-kill.test.html#L115">kill -l shows signals</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '0\n'
+Got      '1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre>ash: builtin: not found
+</pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="builtin-kill.test.html#L115">kill -l shows signals</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '0\n'
+Got      '1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="builtin-kill.test.html#L115">kill -l shows signals</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="builtin-kill.test.html#L128">kill -L also shows signals</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="builtin-kill.test.html#L128">kill -L also shows signals</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '0\n'
+Got      '1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre>ash: builtin: not found
+</pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="builtin-kill.test.html#L128">kill -L also shows signals</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="builtin-kill.test.html#L128">kill -L also shows signals</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="builtin-kill.test.html#L128">kill -L also shows signals</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '0\n'
+Got      '1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: kill: bad signal: L
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="builtin-kill.test.html#L128">kill -L also shows signals</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="builtin-kill.test.html#L138">kill -l 10 TERM translates between names and numbers</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-ash"></a><b>ash</b></td><td>8 <a href="builtin-kill.test.html#L138">kill -l 10 TERM translates between names and numbers</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'USR1\nSEGV\nUSR2\nstatus=0\n\n10\n11\n12\nstatus=0\n\nUSR1\n11\nUSR2\nstatus=0\n\n'
+Got      'status=127\n\nstatus=127\n\nstatus=127\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+
+status=127
+
+status=127
+
+</pre><i>stderr:</i> <br/>
+<pre>ash: builtin: not found
+ash: builtin: not found
+ash: builtin: not found
+</pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="builtin-kill.test.html#L138">kill -l 10 TERM translates between names and numbers</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'USR1\nSEGV\nUSR2\nstatus=0\n\n10\n11\n12\nstatus=0\n\nUSR1\n11\nUSR2\nstatus=0\n\n'
+Got      'USR1\n11\nUSR2\nstatus=0\n\n10\n12\nstatus=1\n\nUSR1\nUSR2\nstatus=1\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>USR1
+11
+USR2
+status=0
+
+10
+12
+status=1
+
+USR1
+USR2
+status=1
+
+</pre><i>stderr:</i> <br/>
+<pre>kill: unknown signal: SIGSEGV
+kill: unknown signal: SIGSEGV
+</pre></td></tr><tr><td><a name="details-8-mksh"></a><b>mksh</b></td><td>8 <a href="builtin-kill.test.html#L138">kill -l 10 TERM translates between names and numbers</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-ksh"></a><b>ksh</b></td><td>8 <a href="builtin-kill.test.html#L138">kill -l 10 TERM translates between names and numbers</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'USR1\nSEGV\nUSR2\nstatus=0\n\n10\n11\n12\nstatus=0\n\nUSR1\n11\nUSR2\nstatus=0\n\n'
+Got      'USR1\nSEGV\nUSR2\nstatus=0\n\nstatus=1\n\nUSR1\nstatus=1\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>USR1
+SEGV
+USR2
+status=0
+
+status=1
+
+USR1
+status=1
+
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[7]: kill: bad number: SIGUSR1
+E: ksh: &lt;stdin&gt;[11]: kill: bad number: SIGSEGV
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="builtin-kill.test.html#L138">kill -l 10 TERM translates between names and numbers</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'USR1\nSEGV\nUSR2\nstatus=0\n\n10\n11\n12\nstatus=0\n\nUSR1\n11\nUSR2\nstatus=0\n\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="builtin-kill.test.html#L138">kill -l 10 TERM translates between names and numbers</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'USR1\nSEGV\nUSR2\nstatus=0\n\n10\n11\n12\nstatus=0\n\nUSR1\n11\nUSR2\nstatus=0\n\n'
+Got      'USR1\nstatus=0\n\n10\nstatus=0\n\nUSR1\nstatus=0\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>USR1
+status=0
+
+10
+status=0
+
+USR1
+status=0
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="builtin-kill.test.html#L138">kill -l 10 TERM translates between names and numbers</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'USR1\nSEGV\nUSR2\nstatus=0\n\n10\n11\n12\nstatus=0\n\nUSR1\n11\nUSR2\nstatus=0\n\n'
+Got      'status=2\n\nstatus=2\n\nstatus=2\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+
+status=2
+
+status=2
+
+</pre><i>stderr:</i> <br/>
+<pre>kill: too many jobs or processes specified
+kill: too many jobs or processes specified
+kill: too many jobs or processes specified
+</pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="builtin-kill.test.html#L173">kill -L checks for invalid input</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-ash"></a><b>ash</b></td><td>9 <a href="builtin-kill.test.html#L173">kill -L checks for invalid input</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'USR1\nUSR2\nstatus=1\n\n10\n12\nstatus=1\n\n'
+Got      'status=127\n\nstatus=127\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+
+status=127
+
+</pre><i>stderr:</i> <br/>
+<pre>ash: builtin: not found
+ash: builtin: not found
+</pre></td></tr><tr><td><a name="details-9-zsh"></a><b>zsh</b></td><td>9 <a href="builtin-kill.test.html#L173">kill -L checks for invalid input</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'USR1\nUSR2\nstatus=1\n\n10\n12\nstatus=1\n\n'
+Got      'status=1\n\nstatus=1\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+
+status=1
+
+</pre><i>stderr:</i> <br/>
+<pre>kill: unknown signal: SIGL
+kill: type kill -l for a list of signals
+kill: unknown signal: SIGL
+kill: type kill -l for a list of signals
+</pre></td></tr><tr><td><a name="details-9-mksh"></a><b>mksh</b></td><td>9 <a href="builtin-kill.test.html#L173">kill -L checks for invalid input</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-ksh"></a><b>ksh</b></td><td>9 <a href="builtin-kill.test.html#L173">kill -L checks for invalid input</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'USR1\nUSR2\nstatus=1\n\n10\n12\nstatus=1\n\n'
+Got      'status=1\n\nstatus=1\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+
+status=1
+
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: kill: bad signal: L
+E: ksh: &lt;stdin&gt;[7]: kill: bad signal: L
+</pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="builtin-kill.test.html#L173">kill -L checks for invalid input</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'USR1\nUSR2\nstatus=1\n\n10\n12\nstatus=1\n\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="builtin-kill.test.html#L173">kill -L checks for invalid input</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'USR1\nUSR2\nstatus=1\n\n10\n12\nstatus=1\n\n'
+Got      ' 1 HUP      2 INT      3 QUIT     4 ILL      5 TRAP     6 ABRT     7 BUS\n 8 FPE      9 KILL    10 USR1    11 SEGV    12 USR2    13 PIPE    14 ALRM\n15 TERM    16 STKFLT  17 CHLD    18 CONT    19 STOP    20 TSTP    21 TTIN\n22 TTOU    23 URG     24 XCPU    25 XFSZ    26 VTALRM  27 PROF    28 WINCH\n29 POLL    30 PWR     31 SYS     \nstatus=0\n\n 1 HUP      2 INT      3 QUIT     4 ILL      5 TRAP     6 ABRT     7 BUS\n 8 FPE      9 KILL    10 USR1    11 SEGV    12 USR2    13 PIPE    14 ALRM\n15 TERM    16 STKFLT  17 CHLD    18 CONT    19 STOP    20 TSTP    21 TTIN\n22 TTOU    23 URG     24 XCPU    25 XFSZ    26 VTALRM  27 PROF    28 WINCH\n29 POLL    30 PWR     31 SYS     \nstatus=0\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre> 1 HUP      2 INT      3 QUIT     4 ILL      5 TRAP     6 ABRT     7 BUS
+ 8 FPE      9 KILL    10 USR1    11 SEGV    12 USR2    13 PIPE    14 ALRM
+15 TERM    16 STKFLT  17 CHLD    18 CONT    19 STOP    20 TSTP    21 TTIN
+22 TTOU    23 URG     24 XCPU    25 XFSZ    26 VTALRM  27 PROF    28 WINCH
+29 POLL    30 PWR     31 SYS     
+status=0
+
+ 1 HUP      2 INT      3 QUIT     4 ILL      5 TRAP     6 ABRT     7 BUS
+ 8 FPE      9 KILL    10 USR1    11 SEGV    12 USR2    13 PIPE    14 ALRM
+15 TERM    16 STKFLT  17 CHLD    18 CONT    19 STOP    20 TSTP    21 TTIN
+22 TTOU    23 URG     24 XCPU    25 XFSZ    26 VTALRM  27 PROF    28 WINCH
+29 POLL    30 PWR     31 SYS     
+status=0
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="builtin-kill.test.html#L173">kill -L checks for invalid input</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'USR1\nUSR2\nstatus=1\n\n10\n12\nstatus=1\n\n'
+Got      'status=2\n\nstatus=2\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+
+status=2
+
+</pre><i>stderr:</i> <br/>
+<pre>kill: too many jobs or processes specified
+kill: too many jobs or processes specified
+</pre></td></tr><tr><td><a name="details-9-osh"></a><b>osh</b></td><td>9 <a href="builtin-kill.test.html#L173">kill -L checks for invalid input</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'USR1\nUSR2\nstatus=1\n\n10\n12\nstatus=1\n\n'
+Got      'USR1\nstatus=2\n\n10\nstatus=2\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>USR1
+status=2
+
+10
+status=2
+
+</pre><i>stderr:</i> <br/>
+<pre>  builtin kill -L 10 BAD 12
+                     ^~~
+[ stdin ]:3: 'kill' can't translate name 'BAD' to a number
+  builtin kill -L USR1 9999 USR2
+                       ^~~~
+[ stdin ]:7: 'kill' can't translate number '9999' to a name
+</pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="builtin-kill.test.html#L197">kill -9999 is an invalid signal</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="builtin-kill.test.html#L197">kill -9999 is an invalid signal</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'kill=1\nwait=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="builtin-kill.test.html#L197">kill -9999 is an invalid signal</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'kill=1\nwait=0\n'
+Got      'kill=0\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=0
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>704249
+</pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="builtin-kill.test.html#L197">kill -9999 is an invalid signal</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'kill=1\nwait=0\n'
+Got      'kill=2\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=2
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>kill: invalid signal name
+</pre></td></tr><tr><td><a name="details-11-dash"></a><b>dash</b></td><td>11 <a href="builtin-kill.test.html#L212">kill -15 %% kills current job</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>kill=1
+wait=0
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: kill: No such process
+
+</pre></td></tr><tr><td><a name="details-11-ash"></a><b>ash</b></td><td>11 <a href="builtin-kill.test.html#L212">kill -15 %% kills current job</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'kill=0\nwait=143\nwait=127\n'
+Got      'kill=0\nwait=143\nwait=143\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=0
+wait=143
+wait=143
+</pre><i>stderr:</i> <br/>
+<pre>Terminated
+</pre></td></tr><tr><td><a name="details-11-zsh"></a><b>zsh</b></td><td>11 <a href="builtin-kill.test.html#L212">kill -15 %% kills current job</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>kill=0
+wait=143
+wait=1
+</pre><i>stderr:</i> <br/>
+<pre>wait: no current job
+</pre></td></tr><tr><td><a name="details-11-mksh"></a><b>mksh</b></td><td>11 <a href="builtin-kill.test.html#L212">kill -15 %% kills current job</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>kill=0
+wait=0
+wait=127
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="builtin-kill.test.html#L212">kill -15 %% kills current job</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'kill=0\nwait=143\nwait=127\n'
+Got      'kill=1\nwait=1\nwait=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=1
+wait=1
+wait=1
+</pre><i>stderr:</i> <br/>
+<pre>kill: bad pid '%%': No such process
+wait: %%: bad pid/job
+wait: %%: bad pid/job
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="builtin-kill.test.html#L212">kill -15 %% kills current job</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'kill=0\nwait=143\nwait=127\n'
+Got      'kill=0\nwait=0\nwait=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=0
+wait=0
+wait=127
+</pre><i>stderr:</i> <br/>
+<pre>708648
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: wait: %%: no such job
+</pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="builtin-kill.test.html#L212">kill -15 %% kills current job</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'kill=0\nwait=143\nwait=127\n'
+Got      'kill=2\nwait=99\nwait=99\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=2
+wait=99
+wait=99
+</pre><i>stderr:</i> <br/>
+<pre>kill: invalid signal name
+[31merror:[39m wait: not yet implemented: wait with job specs
+[31merror:[39m wait: not yet implemented: wait with job specs
+</pre></td></tr><tr><td><a name="details-11-osh"></a><b>osh</b></td><td>11 <a href="builtin-kill.test.html#L212">kill -15 %% kills current job</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'kill=0\nwait=143\nwait=127\n'
+Got      'kill=0\nwait=143\nwait=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=0
+wait=143
+wait=2
+</pre><i>stderr:</i> <br/>
+<pre>  wait %%
+       ^
+[ stdin ]:9: 'wait' expected PID or jobspec, got '%%'
+</pre></td></tr><tr><td><a name="details-12-dash"></a><b>dash</b></td><td>12 <a href="builtin-kill.test.html#L248">kill -15 %- kills previous job</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>kill=1
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 4: kill: No such process
+
+</pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="builtin-kill.test.html#L248">kill -15 %- kills previous job</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>kill=0
+wait=1
+</pre><i>stderr:</i> <br/>
+<pre>wait: no previous job
+</pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="builtin-kill.test.html#L248">kill -15 %- kills previous job</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>kill=0
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="builtin-kill.test.html#L248">kill -15 %- kills previous job</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'kill=0\nwait=143\n'
+Got      'kill=1\nwait=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=1
+wait=1
+</pre><i>stderr:</i> <br/>
+<pre>kill: bad pid '%-': No such process
+wait: %-: bad pid/job
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="builtin-kill.test.html#L248">kill -15 %- kills previous job</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'kill=0\nwait=143\n'
+Got      'kill=0\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=0
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>713439
+713441
+</pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="builtin-kill.test.html#L248">kill -15 %- kills previous job</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'kill=0\nwait=143\n'
+Got      'kill=2\nwait=99\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=2
+wait=99
+</pre><i>stderr:</i> <br/>
+<pre>kill: invalid signal name
+[31merror:[39m wait: not yet implemented: wait with job specs
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="builtin-kill.test.html#L280">kill multiple pids at once</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '0\n'
+Got      '1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre>kill: missing argument (see "kill --help")
+</pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="builtin-kill.test.html#L280">kill multiple pids at once</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '0\n'
+Got      '2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>2
+</pre><i>stderr:</i> <br/>
+<pre>kill: invalid usage
+</pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="builtin-kill.test.html#L294">kill pid and job at once</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre>dash: 4: kill: No such process
+
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="builtin-kill.test.html#L294">kill pid and job at once</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '0\n'
+Got      '1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre>kill: bad pid '%2': No such process
+</pre></td></tr><tr><td><a name="details-14-brush"></a><b>brush</b></td><td>14 <a href="builtin-kill.test.html#L294">kill pid and job at once</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '0\n'
+Got      '1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m kill: failed to send signal to process
+</pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="builtin-kill.test.html#L306">Numeric signal out of range - OSH may send it anyway</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>kill=2
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 4: kill: invalid signal number or name: 9999
+</pre></td></tr><tr><td><a name="details-15-brush"></a><b>brush</b></td><td>15 <a href="builtin-kill.test.html#L306">Numeric signal out of range - OSH may send it anyway</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'kill=1\nwait=0\n'
+Got      'kill=2\nwait=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>kill=2
+wait=0
+</pre><i>stderr:</i> <br/>
+<pre>kill: invalid signal name: 9999
+</pre></td></tr></table></body></html>

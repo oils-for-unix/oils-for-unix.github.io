@@ -1,0 +1,71 @@
+@media screen and (min-width: 801px) {
+  body {
+    font-size: large;
+  }
+  body > pre {
+    margin-left: initial;
+  }
+}
+
+/* Not used - could we use it for chapters? */
+.custom-toc {
+  background-color: oldlace;
+  /*
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  */
+
+  column-width: 8em;
+}
+
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* e.g. type-method for chap-type-method.html */
+.group-link {
+  font-family: monospace;
+  font-weight: normal; /* not bold like heading */
+  float: right;
+}
+
+h1 {
+  font-size: 1.4em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+/* Copied from manual.css */
+p code, li code, h2 code, h3 code, div code {
+  background-color: #eee;
+  padding: 4px;
+}
+
+/*
+  Tried columns, but it didn't fit on one screen.  And it's not that portable.
+  40em works in Chrome, but not in Firefox? 
+
+#groups {
+  padding-top: 1em;
+
+  columns: 2;
+  column-width: 30em;
+}
+*/
+
+#sublang {
+  /* Works in Chrome but not Firefox? */
+  break-after: column;
+}
+
+#compact-title {
+  font-weight: bold;
+  float: left;
+}

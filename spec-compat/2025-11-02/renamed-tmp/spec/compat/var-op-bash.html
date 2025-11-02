@@ -1,0 +1,2781 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>var-op-bash: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for var-op-bash.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>22</td><td>2</td><td>2</td><td>3</td><td>4</td><td>3</td><td>10</td><td>6</td><td>20</td><td>18</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>25</td><td>25</td><td>24</td><td>23</td><td>24</td><td>17</td><td>21</td><td>7</td><td>7</td><td></td></tr>
+<tr><td>total</td><td>27</td><td>27</td><td>27</td><td>27</td><td>27</td><td>27</td><td>27</td><td>27</td><td>27</td><td>27</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-bash.test.html#L4">Lower Case with , and ,,</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"><a href="#details-0-ash">details</a></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-bash.test.html#L17">Upper Case with ^ and ^^</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="var-op-bash.test.html#L30">Case folding - Unicode characters</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"><a href="#details-2-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="var-op-bash.test.html#L60">Case folding - multi code point</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-3-bash">details</a></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"><a href="#details-3-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="var-op-bash.test.html#L118">Case folding that depends on locale (not enabled, requires Turkish locale)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-4-bash">details</a></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="var-op-bash.test.html#L141">Lower Case with constant string (VERY WEIRD)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="var-op-bash.test.html#L150">Lower Case glob</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="var-op-bash.test.html#L163">${x@u} U L - upper / lower case (bash 5.1 feature)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-7-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-bash.test.html#L182">${x@Q}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="var-op-bash.test.html#L190">${array@Q} and ${array[@]@Q}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"><a href="#details-9-zsh">details</a></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-9-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-bash.test.html#L206">${!prefix@} ${!prefix*} yields sorted array of var names</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-bash.test.html#L237">${!prefix@} matches var name (regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-dash">details</a></td><td class="details-row"><a href="#details-11-ash">details</a></td><td class="details-row"><a href="#details-11-zsh">details</a></td><td class="details-row"><a href="#details-11-mksh">details</a></td><td class="details-row"><a href="#details-11-ksh">details</a></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-bash.test.html#L247">${var@a} for attributes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-dash">details</a></td><td class="details-row"><a href="#details-12-ash">details</a></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-bash.test.html#L264">${var@a} error conditions</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"><a href="#details-13-ksh">details</a></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-bash.test.html#L270">undef and @P @Q @a</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"><a href="#details-14-ash">details</a></td><td class="details-row"><a href="#details-14-zsh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="var-op-bash.test.html#L287">argv array and @P @Q @a</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"><a href="#details-15-ash">details</a></td><td class="details-row"><a href="#details-15-zsh">details</a></td><td class="details-row"><a href="#details-15-mksh">details</a></td><td class="details-row"><a href="#details-15-ksh">details</a></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-15-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-bash.test.html#L303">assoc array and @P @Q @a</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-dash">details</a></td><td class="details-row"><a href="#details-16-ash">details</a></td><td class="details-row"><a href="#details-16-zsh">details</a></td><td class="details-row"><a href="#details-16-mksh">details</a></td><td class="details-row"><a href="#details-16-ksh">details</a></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"><a href="#details-16-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-bash.test.html#L324">${!var[@]@X}</a></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-bash.test.html#L341">${#var@X} is a parse error</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"><a href="#details-18-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-bash.test.html#L358">${!A@a} and ${!A[@]@a}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-19-bash">details</a></td><td class="details-row"><a href="#details-19-dash">details</a></td><td class="details-row"><a href="#details-19-ash">details</a></td><td class="details-row"><a href="#details-19-zsh">details</a></td><td class="details-row"><a href="#details-19-mksh">details</a></td><td class="details-row"><a href="#details-19-ksh">details</a></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"><a href="#details-19-sush">details</a></td><td class="details-row"><a href="#details-19-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="var-op-bash.test.html#L381">undef vs. empty string in var ops</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-dash">details</a></td><td class="details-row"><a href="#details-20-ash">details</a></td><td class="details-row"><a href="#details-20-zsh">details</a></td><td class="details-row"><a href="#details-20-mksh">details</a></td><td class="details-row"><a href="#details-20-ksh">details</a></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"><a href="#details-20-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-20-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-bash.test.html#L410">-o nounset with var ops</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-dash">details</a></td><td class="details-row"><a href="#details-21-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-21-mksh">details</a></td><td class="details-row"><a href="#details-21-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"><a href="#details-21-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-bash.test.html#L424">${a[0]@a} and ${a@a}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-dash">details</a></td><td class="details-row"><a href="#details-22-ash">details</a></td><td class="details-row"><a href="#details-22-zsh">details</a></td><td class="details-row"><a href="#details-22-mksh">details</a></td><td class="details-row"><a href="#details-22-ksh">details</a></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-bash.test.html#L436">${!r@a} with r='a[0]' (attribute for indirect expansion of an array element)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-dash">details</a></td><td class="details-row"><a href="#details-23-ash">details</a></td><td class="details-row"><a href="#details-23-zsh">details</a></td><td class="details-row"><a href="#details-23-mksh">details</a></td><td class="details-row"><a href="#details-23-ksh">details</a></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"><a href="#details-23-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-bash.test.html#L458">Array expansion with nullary var op @Q</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-24-bash">details</a></td><td class="details-row"><a href="#details-24-dash">details</a></td><td class="details-row"><a href="#details-24-ash">details</a></td><td class="details-row"><a href="#details-24-zsh">details</a></td><td class="details-row"><a href="#details-24-mksh">details</a></td><td class="details-row"><a href="#details-24-ksh">details</a></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"><a href="#details-24-sush">details</a></td><td class="details-row"><a href="#details-24-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-bash.test.html#L488">Array expansion with nullary var op @P</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-25-bash">details</a></td><td class="details-row"><a href="#details-25-dash">details</a></td><td class="details-row"><a href="#details-25-ash">details</a></td><td class="details-row"><a href="#details-25-zsh">details</a></td><td class="details-row"><a href="#details-25-mksh">details</a></td><td class="details-row"><a href="#details-25-ksh">details</a></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"><a href="#details-25-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-op-bash.test.html#L518">Array expansion with nullary var op @a</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-dash">details</a></td><td class="details-row"><a href="#details-26-ash">details</a></td><td class="details-row"><a href="#details-26-zsh">details</a></td><td class="details-row"><a href="#details-26-mksh">details</a></td><td class="details-row"><a href="#details-26-ksh">details</a></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"><a href="#details-26-sush">details</a></td><td class="details-row"><a href="#details-26-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>90 passed, 5 OK, 0 not implemented, 2 BUG, 173 failed, 0 timeouts, 0 cases skipped
+7 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="var-op-bash.test.html#L4">Lower Case with , and ,,</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'aBC DEF\nabc def\nempty=\nempty=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-0-ash"></a><b>ash</b></td><td>0 <a href="var-op-bash.test.html#L4">Lower Case with , and ,,</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'aBC DEF\nabc def\nempty=\nempty=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="var-op-bash.test.html#L4">Lower Case with , and ,,</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'aBC DEF\nabc def\nempty=\nempty=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="var-op-bash.test.html#L4">Lower Case with , and ,,</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'aBC DEF\nabc def\nempty=\nempty=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: ${x,}: bad substitution
+</pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="var-op-bash.test.html#L4">Lower Case with , and ,,</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'aBC DEF\nabc def\nempty=\nempty=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${x,}: bad substitution
+</pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="var-op-bash.test.html#L17">Upper Case with ^ and ^^</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'Abc def\nABC DEF\nempty=\nempty=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="var-op-bash.test.html#L17">Upper Case with ^ and ^^</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'Abc def\nABC DEF\nempty=\nempty=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="var-op-bash.test.html#L17">Upper Case with ^ and ^^</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'Abc def\nABC DEF\nempty=\nempty=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="var-op-bash.test.html#L17">Upper Case with ^ and ^^</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'Abc def\nABC DEF\nempty=\nempty=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: ${x^}: bad substitution
+</pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="var-op-bash.test.html#L17">Upper Case with ^ and ^^</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'Abc def\nABC DEF\nempty=\nempty=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${x^}: bad substitution
+</pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="var-op-bash.test.html#L30">Case folding - Unicode characters</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'u \xc3\x80\xc3\x88\nU \xc3\x80\xc3\x88\nl \xc3\xa0\xc3\x88\nL \xc3\xa0\xc3\xa8\nu \xc3\x81\xc3\xa9\nU \xc3\x81\xc3\x89\nl \xc3\xa1\xc3\xa9\nL \xc3\xa1\xc3\xa9\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 4: Bad substitution
+</pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="var-op-bash.test.html#L30">Case folding - Unicode characters</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'u \xc3\x80\xc3\x88\nU \xc3\x80\xc3\x88\nl \xc3\xa0\xc3\x88\nL \xc3\xa0\xc3\xa8\nu \xc3\x81\xc3\xa9\nU \xc3\x81\xc3\x89\nl \xc3\xa1\xc3\xa9\nL \xc3\xa1\xc3\xa9\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="var-op-bash.test.html#L30">Case folding - Unicode characters</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'u \xc3\x80\xc3\x88\nU \xc3\x80\xc3\x88\nl \xc3\xa0\xc3\x88\nL \xc3\xa0\xc3\xa8\nu \xc3\x81\xc3\xa9\nU \xc3\x81\xc3\x89\nl \xc3\xa1\xc3\xa9\nL \xc3\xa1\xc3\xa9\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="var-op-bash.test.html#L30">Case folding - Unicode characters</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'u \xc3\x80\xc3\x88\nU \xc3\x80\xc3\x88\nl \xc3\xa0\xc3\x88\nL \xc3\xa0\xc3\xa8\nu \xc3\x81\xc3\xa9\nU \xc3\x81\xc3\x89\nl \xc3\xa1\xc3\xa9\nL \xc3\xa1\xc3\xa9\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[4]: ${x^}: bad substitution
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="var-op-bash.test.html#L30">Case folding - Unicode characters</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'u \xc3\x80\xc3\x88\nU \xc3\x80\xc3\x88\nl \xc3\xa0\xc3\x88\nL \xc3\xa0\xc3\xa8\nu \xc3\x81\xc3\xa9\nU \xc3\x81\xc3\x89\nl \xc3\xa1\xc3\xa9\nL \xc3\xa1\xc3\xa9\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[4]: ${x^}: bad substitution
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="var-op-bash.test.html#L30">Case folding - Unicode characters</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'u \xc3\x80\xc3\x88\nU \xc3\x80\xc3\x88\nl \xc3\xa0\xc3\x88\nL \xc3\xa0\xc3\xa8\nu \xc3\x81\xc3\xa9\nU \xc3\x81\xc3\x89\nl \xc3\xa1\xc3\xa9\nL \xc3\xa1\xc3\xa9\n'
+Got      'u \xc3\x80\xc3\x88\nU \xc3\x80\xc3\x88\nl \xc3\x80\xc3\x88\nL \xc3\x80\xc3\x88\nu \xc3\xa1\xc3\xa9\nU \xc3\xa1\xc3\xa9\nl \xc3\xa1\xc3\xa9\nL \xc3\xa1\xc3\xa9\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>u ÀÈ
+U ÀÈ
+l ÀÈ
+L ÀÈ
+u áé
+U áé
+l áé
+L áé
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="var-op-bash.test.html#L30">Case folding - Unicode characters</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'u \xc3\x80\xc3\x88\nU \xc3\x80\xc3\x88\nl \xc3\xa0\xc3\x88\nL \xc3\xa0\xc3\xa8\nu \xc3\x81\xc3\xa9\nU \xc3\x81\xc3\x89\nl \xc3\xa1\xc3\xa9\nL \xc3\xa1\xc3\xa9\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>Well, this is embarrassing.
+
+brush had a problem and crashed. To help us diagnose the problem you can send us a crash report.
+
+We have generated a report file at "/tmp/report-1e3b7441-6bec-46f9-a3a8-ab78b971db04.toml". Submit an issue or email with the subject of "brush Crash Report" and include the report as an attachment.
+
+
+To submit the crash report:
+
+please post a GitHub issue at https://github.com/reubeno/brush/issues/new
+
+We take privacy seriously, and do not perform any automated error collection. In order to improve the software, we rely on people to submit reports.
+
+Thank you kindly!
+</pre></td></tr><tr><td><a name="details-2-osh"></a><b>osh</b></td><td>2 <a href="var-op-bash.test.html#L30">Case folding - Unicode characters</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'u \xc3\x80\xc3\x88\nU \xc3\x80\xc3\x88\nl \xc3\xa0\xc3\x88\nL \xc3\xa0\xc3\xa8\nu \xc3\x81\xc3\xa9\nU \xc3\x81\xc3\x89\nl \xc3\xa1\xc3\xa9\nL \xc3\xa1\xc3\xa9\n'
+Got      'u \xc3\x80\xc3\x88\nU \xc3\x80\xc3\x88\nl \xc3\x80\xc3\x88\nL \xc3\x80\xc3\x88\nu \xc3\xa1\xc3\xa9\nU \xc3\xa1\xc3\xa9\nl \xc3\xa1\xc3\xa9\nL \xc3\xa1\xc3\xa9\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>u ÀÈ
+U ÀÈ
+l ÀÈ
+L ÀÈ
+u áé
+U áé
+l áé
+L áé
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-bash"></a><b>bash</b></td><td>3 <a href="var-op-bash.test.html#L60">Case folding - multi code point</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>shell
+u ß
+U ß
+l ß
+L ß
+
+python2
+ß
+ß
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="var-op-bash.test.html#L60">Case folding - multi code point</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected ''
+Got      'shell\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>shell
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="var-op-bash.test.html#L60">Case folding - multi code point</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected ''
+Got      'shell\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>shell
+</pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="var-op-bash.test.html#L60">Case folding - multi code point</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected ''
+Got      'shell\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>shell
+</pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="var-op-bash.test.html#L60">Case folding - multi code point</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected ''
+Got      'shell\n'
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>shell
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: ${small^}: bad substitution
+</pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="var-op-bash.test.html#L60">Case folding - multi code point</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected ''
+Got      'shell\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>shell
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: ${small^}: bad substitution
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="var-op-bash.test.html#L60">Case folding - multi code point</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected ''
+Got      'shell\nu \xc3\x9f\nU \xc3\x9f\nl \xc3\x9f\nL \xc3\x9f\n\npython2\n\xc3\x9f\n\xc3\x9f\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>shell
+u ß
+U ß
+l ß
+L ß
+
+python2
+ß
+ß
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="var-op-bash.test.html#L60">Case folding - multi code point</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected ''
+Got      'shell\nu \xc3\x9f\nU \xc3\x9f\nl \xc3\x9f\nL \xc3\x9f\n\npython2\n\xc3\x9f\n\xc3\x9f\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>shell
+u ß
+U ß
+l ß
+L ß
+
+python2
+ß
+ß
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="var-op-bash.test.html#L60">Case folding - multi code point</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected ''
+Got      'shell\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>shell
+</pre><i>stderr:</i> <br/>
+<pre>Well, this is embarrassing.
+
+brush had a problem and crashed. To help us diagnose the problem you can send us a crash report.
+
+We have generated a report file at "/tmp/report-9bd45f5e-813a-46b9-b606-59f0ac49f7a0.toml". Submit an issue or email with the subject of "brush Crash Report" and include the report as an attachment.
+
+
+To submit the crash report:
+
+please post a GitHub issue at https://github.com/reubeno/brush/issues/new
+
+We take privacy seriously, and do not perform any automated error collection. In order to improve the software, we rely on people to submit reports.
+
+Thank you kindly!
+</pre></td></tr><tr><td><a name="details-3-osh"></a><b>osh</b></td><td>3 <a href="var-op-bash.test.html#L60">Case folding - multi code point</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected ''
+Got      'shell\nu \xc3\x9f\nU \xc3\x9f\nl \xc3\x9f\nL \xc3\x9f\n\npython2\n\xc3\x9f\n\xc3\x9f\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>shell
+u ß
+U ß
+l ß
+L ß
+
+python2
+ß
+ß
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-bash"></a><b>bash</b></td><td>4 <a href="var-op-bash.test.html#L118">Case folding that depends on locale (not enabled, requires Turkish locale)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>u I
+U I
+l i
+L i
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="var-op-bash.test.html#L118">Case folding that depends on locale (not enabled, requires Turkish locale)</a><br/><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="var-op-bash.test.html#L118">Case folding that depends on locale (not enabled, requires Turkish locale)</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="var-op-bash.test.html#L118">Case folding that depends on locale (not enabled, requires Turkish locale)</a><br/><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="var-op-bash.test.html#L118">Case folding that depends on locale (not enabled, requires Turkish locale)</a><br/><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: ${x^}: bad substitution
+</pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="var-op-bash.test.html#L118">Case folding that depends on locale (not enabled, requires Turkish locale)</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: ${x^}: bad substitution
+</pre></td></tr><tr><td><a name="details-4-osh"></a><b>osh</b></td><td>4 <a href="var-op-bash.test.html#L118">Case folding that depends on locale (not enabled, requires Turkish locale)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>u I
+U I
+l i
+L i
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="var-op-bash.test.html#L141">Lower Case with constant string (VERY WEIRD)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'aAA ABC DEF\naaa aBC DEF\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="var-op-bash.test.html#L141">Lower Case with constant string (VERY WEIRD)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'aAA ABC DEF\naaa aBC DEF\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="var-op-bash.test.html#L141">Lower Case with constant string (VERY WEIRD)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'aAA ABC DEF\naaa aBC DEF\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="var-op-bash.test.html#L141">Lower Case with constant string (VERY WEIRD)</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'aAA ABC DEF\naaa aBC DEF\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: ${x,A}: bad substitution
+</pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="var-op-bash.test.html#L141">Lower Case with constant string (VERY WEIRD)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'aAA ABC DEF\naaa aBC DEF\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${x,A}: bad substitution
+</pre></td></tr><tr><td><a name="details-5-osh"></a><b>osh</b></td><td>5 <a href="var-op-bash.test.html#L141">Lower Case with constant string (VERY WEIRD)</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'aAA ABC DEF\naaa aBC DEF\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[osh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  echo ${x,A}
+          ^
+[ stdin ]:2: fatal: Id.VOp1_Comma can't have an argument
+</pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="var-op-bash.test.html#L150">Lower Case glob</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'ABC DEF\nABC DEF\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 4: Bad substitution
+</pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="var-op-bash.test.html#L150">Lower Case glob</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'ABC DEF\nABC DEF\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="var-op-bash.test.html#L150">Lower Case glob</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'ABC DEF\nABC DEF\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="var-op-bash.test.html#L150">Lower Case glob</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'ABC DEF\nABC DEF\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[4]: ${x,[d-f]}: bad substitution
+</pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="var-op-bash.test.html#L150">Lower Case glob</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'ABC DEF\nABC DEF\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[4]: ${x,[d-f]}: bad substitution
+</pre></td></tr><tr><td><a name="details-6-osh"></a><b>osh</b></td><td>6 <a href="var-op-bash.test.html#L150">Lower Case glob</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'ABC DEF\nABC DEF\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[osh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>osh: _gen/bin/oils_for_unix.mycpp.cc:43911: BigStr* string_ops::DoUnarySuffixOp(BigStr*, syntax_asdl::Token*, BigStr*, bool): Assertion `false' failed.
+</pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="var-op-bash.test.html#L163">${x@u} U L - upper / lower case (bash 5.1 feature)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'Abc DEF\nABC DEF\nabc def\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="var-op-bash.test.html#L163">${x@u} U L - upper / lower case (bash 5.1 feature)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'Abc DEF\nABC DEF\nabc def\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="var-op-bash.test.html#L163">${x@u} U L - upper / lower case (bash 5.1 feature)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'Abc DEF\nABC DEF\nabc def\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="var-op-bash.test.html#L163">${x@u} U L - upper / lower case (bash 5.1 feature)</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'Abc DEF\nABC DEF\nabc def\n'
+Got      'abc DEF\nabc DEF\nabc DEF\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>abc DEF
+abc DEF
+abc DEF
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="var-op-bash.test.html#L163">${x@u} U L - upper / lower case (bash 5.1 feature)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'Abc DEF\nABC DEF\nabc def\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: ${x@u}: bad substitution
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="var-op-bash.test.html#L163">${x@u} U L - upper / lower case (bash 5.1 feature)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'Abc DEF\nABC DEF\nabc def\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 3: sh: x: @u}"
+main: line 5: sh: x: @U}"
+main: line 7: sh: x: @L}"
+</pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="var-op-bash.test.html#L163">${x@u} U L - upper / lower case (bash 5.1 feature)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'Abc DEF\nABC DEF\nabc def\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: `${x@u}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: `${x@U}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: `${x@L}': bad substitution
+</pre></td></tr><tr><td><a name="details-7-osh"></a><b>osh</b></td><td>7 <a href="var-op-bash.test.html#L163">${x@u} U L - upper / lower case (bash 5.1 feature)</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'Abc DEF\nABC DEF\nabc def\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[osh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  echo "${x@u}"
+           ^
+[ stdin ]:3: Unexpected token in ${} (VOp3)
+</pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="var-op-bash.test.html#L182">${x@Q}</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'OK\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-8-ash"></a><b>ash</b></td><td>8 <a href="var-op-bash.test.html#L182">${x@Q}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'OK\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="var-op-bash.test.html#L182">${x@Q}</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'OK\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="var-op-bash.test.html#L182">${x@Q}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'OK\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: x: @Q}"
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="var-op-bash.test.html#L182">${x@Q}</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'OK\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: syntax error: unexpected end of file
+</pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="var-op-bash.test.html#L190">${array@Q} and ${array[@]@Q}</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "'x' 'y\\nz'\n'x'\n'x'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-9-ash"></a><b>ash</b></td><td>9 <a href="var-op-bash.test.html#L190">${array@Q} and ${array[@]@Q}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "'x' 'y\\nz'\n'x'\n'x'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-9-zsh"></a><b>zsh</b></td><td>9 <a href="var-op-bash.test.html#L190">${array@Q} and ${array[@]@Q}</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "'x' 'y\\nz'\n'x'\n'x'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-9-mksh"></a><b>mksh</b></td><td>9 <a href="var-op-bash.test.html#L190">${array@Q} and ${array[@]@Q}</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "'x' 'y\\nz'\n'x'\n'x'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: ${array[@]@Q}: bad substitution
+</pre></td></tr><tr><td><a name="details-9-ksh"></a><b>ksh</b></td><td>9 <a href="var-op-bash.test.html#L190">${array@Q} and ${array[@]@Q}</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "'x' 'y\\nz'\n'x'\n'x'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${array[@]@Q}: bad substitution
+</pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="var-op-bash.test.html#L190">${array@Q} and ${array[@]@Q}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "'x' 'y\\nz'\n'x'\n'x'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: x
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="var-op-bash.test.html#L190">${array@Q} and ${array[@]@Q}</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "'x' 'y\\nz'\n'x'\n'x'\n"
+Got      "${array[@]@Q}\n'x'\n'x'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>${array[@]@Q}
+'x'
+'x'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-osh"></a><b>osh</b></td><td>9 <a href="var-op-bash.test.html#L190">${array@Q} and ${array[@]@Q}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>x $'y\\nz'
+x
+x
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="var-op-bash.test.html#L206">${!prefix@} ${!prefix*} yields sorted array of var names</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 8: Bad substitution
+</pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="var-op-bash.test.html#L206">${!prefix@} ${!prefix*} yields sorted array of var names</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-10-zsh"></a><b>zsh</b></td><td>10 <a href="var-op-bash.test.html#L206">${!prefix@} ${!prefix*} yields sorted array of var names</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="var-op-bash.test.html#L206">${!prefix@} ${!prefix*} yields sorted array of var names</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[8]: ${!Z*}: bad substitution
+</pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="var-op-bash.test.html#L206">${!prefix@} ${!prefix*} yields sorted array of var names</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[8]: ${!Z*}: bad substitution
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="var-op-bash.test.html#L206">${!prefix@} ${!prefix*} yields sorted array of var names</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n"
+Got      "['Z', 'ZOOM', 'ZIP', 'ZOO']\n['Z', 'ZOOM', 'ZIP', 'ZOO']\n['Z', 'ZOOM', 'ZIP', 'ZOO']\n['Z', 'ZOOM', 'ZIP', 'ZOO']\n['Z', 'ZOOM', 'ZIP', 'ZOO']\n['Z', 'ZOOM', 'ZIP', 'ZOO']\n['Z', 'ZOOM', 'ZIP', 'ZOO']\n['Z', 'ZOOM', 'ZIP', 'ZOO']\n['Z', 'ZOOM', 'ZIP', 'ZOO']\n['Z', 'ZOOM', 'ZIP', 'ZOO']\n['Z', 'ZOOM', 'ZIP', 'ZOO']\n['Z', 'ZOOM', 'ZIP', 'ZOO']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['Z', 'ZOOM', 'ZIP', 'ZOO']
+['Z', 'ZOOM', 'ZIP', 'ZOO']
+['Z', 'ZOOM', 'ZIP', 'ZOO']
+['Z', 'ZOOM', 'ZIP', 'ZOO']
+['Z', 'ZOOM', 'ZIP', 'ZOO']
+['Z', 'ZOOM', 'ZIP', 'ZOO']
+['Z', 'ZOOM', 'ZIP', 'ZOO']
+['Z', 'ZOOM', 'ZIP', 'ZOO']
+['Z', 'ZOOM', 'ZIP', 'ZOO']
+['Z', 'ZOOM', 'ZIP', 'ZOO']
+['Z', 'ZOOM', 'ZIP', 'ZOO']
+['Z', 'ZOOM', 'ZIP', 'ZOO']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="var-op-bash.test.html#L206">${!prefix@} ${!prefix*} yields sorted array of var names</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z ZIP ZOO ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n['Z', 'ZIP', 'ZOO', 'ZOOM']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: `${!Z*}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: `${!Z@}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 10: `${!Z*}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: `${!Z@}': bad substitution
+</pre></td></tr><tr><td><a name="details-11-dash"></a><b>dash</b></td><td>11 <a href="var-op-bash.test.html#L237">${!prefix@} matches var name (regression)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'hello1 hello2 hello3\nhello hello1 hello2 hello3\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-11-ash"></a><b>ash</b></td><td>11 <a href="var-op-bash.test.html#L237">${!prefix@} matches var name (regression)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'hello1 hello2 hello3\nhello hello1 hello2 hello3\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-11-zsh"></a><b>zsh</b></td><td>11 <a href="var-op-bash.test.html#L237">${!prefix@} matches var name (regression)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'hello1 hello2 hello3\nhello hello1 hello2 hello3\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-11-mksh"></a><b>mksh</b></td><td>11 <a href="var-op-bash.test.html#L237">${!prefix@} matches var name (regression)</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'hello1 hello2 hello3\nhello hello1 hello2 hello3\n'
+Got      'hello\nhello\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hello
+hello
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-ksh"></a><b>ksh</b></td><td>11 <a href="var-op-bash.test.html#L237">${!prefix@} matches var name (regression)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'hello1 hello2 hello3\nhello hello1 hello2 hello3\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${!hello@}: bad substitution
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="var-op-bash.test.html#L237">${!prefix@} matches var name (regression)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'hello1 hello2 hello3\nhello hello1 hello2 hello3\n'
+Got      'hello3 hello2 hello1\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hello3 hello2 hello1
+</pre><i>stderr:</i> <br/>
+<pre>main: line 3: sh: syntax error: echo
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="var-op-bash.test.html#L237">${!prefix@} matches var name (regression)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'hello1 hello2 hello3\nhello hello1 hello2 hello3\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${!hello@}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: `${!hello@}': bad substitution
+</pre></td></tr><tr><td><a name="details-12-dash"></a><b>dash</b></td><td>12 <a href="var-op-bash.test.html#L247">${var@a} for attributes</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'a\nar\nrx\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-12-ash"></a><b>ash</b></td><td>12 <a href="var-op-bash.test.html#L247">${var@a} for attributes</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'a\nar\nrx\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="var-op-bash.test.html#L247">${var@a} for attributes</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'a\nar\nrx\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="var-op-bash.test.html#L247">${var@a} for attributes</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'a\nar\nrx\n'
+Got      'one\n'
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="var-op-bash.test.html#L247">${var@a} for attributes</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'a\nar\nrx\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${array@a}: bad substitution
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="var-op-bash.test.html#L247">${var@a} for attributes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'a\nar\nrx\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: one
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="var-op-bash.test.html#L247">${var@a} for attributes</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'a\nar\nrx\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${array@a}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: `${array@a}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: `${PYTHONPATH@a}': bad substitution
+</pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="var-op-bash.test.html#L264">${var@a} error conditions</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '[]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Bad substitution
+</pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="var-op-bash.test.html#L264">${var@a} error conditions</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '[]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="var-op-bash.test.html#L264">${var@a} error conditions</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '[]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="var-op-bash.test.html#L264">${var@a} error conditions</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '[]\n'
+Got      '[0]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[0]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-ksh"></a><b>ksh</b></td><td>13 <a href="var-op-bash.test.html#L264">${var@a} error conditions</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '[]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: ${?@a}: bad substitution
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="var-op-bash.test.html#L264">${var@a} error conditions</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '[]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: ?: @a}]
+</pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="var-op-bash.test.html#L264">${var@a} error conditions</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: `${?@a}': bad substitution
+</pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="var-op-bash.test.html#L270">undef and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '\nstatus=0\n\nstatus=0\n\nstatus=0\n'
+Got      'status=2\nstatus=2\nstatus=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=2
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: Bad substitution
+dash: 1: Bad substitution
+dash: 1: Bad substitution
+</pre></td></tr><tr><td><a name="details-14-ash"></a><b>ash</b></td><td>14 <a href="var-op-bash.test.html#L270">undef and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '\nstatus=0\n\nstatus=0\n\nstatus=0\n'
+Got      'status=2\nstatus=2\nstatus=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=2
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+ash: syntax error: bad substitution
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-14-zsh"></a><b>zsh</b></td><td>14 <a href="var-op-bash.test.html#L270">undef and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '\nstatus=0\n\nstatus=0\n\nstatus=0\n'
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>zsh:1: bad substitution
+zsh:1: bad substitution
+zsh:1: bad substitution
+</pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="var-op-bash.test.html#L270">undef and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '\nstatus=0\n\nstatus=0\n\nstatus=0\n'
+Got      "status=1\n''\nstatus=0\nstatus=1\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+''
+status=0
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: ${undef@P}: bad substitution
+E: ksh: ${undef@a}: bad substitution
+</pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="var-op-bash.test.html#L270">undef and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '\nstatus=0\n\nstatus=0\n\nstatus=0\n'
+Got      "status=1\n''\nstatus=0\nstatus=1\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+''
+status=0
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: `${undef@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: `${undef@a}': bad substitution
+</pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="var-op-bash.test.html#L287">argv array and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "a b c\nstatus=0\n'a' 'b\\nc'\nstatus=0\n\nstatus=0\n"
+Got      'status=2\nstatus=2\nstatus=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=2
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>dummy: 1: dummy: Bad substitution
+dummy: 1: dummy: Bad substitution
+dummy: 1: dummy: Bad substitution
+</pre></td></tr><tr><td><a name="details-15-ash"></a><b>ash</b></td><td>15 <a href="var-op-bash.test.html#L287">argv array and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "a b c\nstatus=0\n'a' 'b\\nc'\nstatus=0\n\nstatus=0\n"
+Got      'status=2\nstatus=2\nstatus=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=2
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>dummy: line 0: syntax error: bad substitution
+dummy: line 0: syntax error: bad substitution
+dummy: line 0: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-15-zsh"></a><b>zsh</b></td><td>15 <a href="var-op-bash.test.html#L287">argv array and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "a b c\nstatus=0\n'a' 'b\\nc'\nstatus=0\n\nstatus=0\n"
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>zsh:1: bad substitution
+zsh:1: bad substitution
+zsh:1: bad substitution
+</pre></td></tr><tr><td><a name="details-15-mksh"></a><b>mksh</b></td><td>15 <a href="var-op-bash.test.html#L287">argv array and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "a b c\nstatus=0\n'a' 'b\\nc'\nstatus=0\n\nstatus=0\n"
+Got      'a b c\nstatus=0\nstatus=1\na b c\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a b c
+status=0
+status=1
+a b c
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>dummy: ${@@Q}: bad substitution
+</pre></td></tr><tr><td><a name="details-15-ksh"></a><b>ksh</b></td><td>15 <a href="var-op-bash.test.html#L287">argv array and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "a b c\nstatus=0\n'a' 'b\\nc'\nstatus=0\n\nstatus=0\n"
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: dummy: ${@@P}: bad substitution
+E: dummy: ${@@Q}: bad substitution
+E: dummy: ${@@a}: bad substitution
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="var-op-bash.test.html#L287">argv array and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "a b c\nstatus=0\n'a' 'b\\nc'\nstatus=0\n\nstatus=0\n"
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>-c: line 1: sh: @: @P}
+-c: line 1: sh: @: @Q}
+-c: line 1: sh: @: @a}
+</pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="var-op-bash.test.html#L287">argv array and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "a b c\nstatus=0\n'a' 'b\\nc'\nstatus=0\n\nstatus=0\n"
+Got      'status=1\n${@@Q}\nstatus=0\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+${@@Q}
+status=0
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>dummy: line 1: `${@@P}': bad substitution
+dummy: line 1: `${@@a}': bad substitution
+</pre></td></tr><tr><td><a name="details-15-osh"></a><b>osh</b></td><td>15 <a href="var-op-bash.test.html#L287">argv array and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected "a b c\nstatus=0\n'a' 'b\\nc'\nstatus=0\n\nstatus=0\n"
+Got      "a b c\nstatus=0\na $'b\\\\nc'\nstatus=0\na a a\nstatus=0\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a b c
+status=0
+a $'b\\nc'
+status=0
+a a a
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-dash"></a><b>dash</b></td><td>16 <a href="var-op-bash.test.html#L303">assoc array and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "- y\nstatus=0\n- 'y'\nstatus=0\nA - A\nstatus=0\n"
+Got      'status=2\nstatus=0\nstatus=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=0
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+dash: 1: Syntax error: "(" unexpected
+dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-16-ash"></a><b>ash</b></td><td>16 <a href="var-op-bash.test.html#L303">assoc array and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "- y\nstatus=0\n- 'y'\nstatus=0\nA - A\nstatus=0\n"
+Got      'status=2\nstatus=0\nstatus=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=0
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+ash: syntax error: unexpected "("
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-16-zsh"></a><b>zsh</b></td><td>16 <a href="var-op-bash.test.html#L303">assoc array and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "- y\nstatus=0\n- 'y'\nstatus=0\nA - A\nstatus=0\n"
+Got      'status=1\nstatus=0\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=0
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>zsh:1: no matches found: [x]=y
+zsh:1: bad substitution
+zsh:1: no matches found: [x]=y
+zsh:1: bad substitution
+zsh:1: no matches found: [x]=y
+zsh:1: bad substitution
+</pre></td></tr><tr><td><a name="details-16-mksh"></a><b>mksh</b></td><td>16 <a href="var-op-bash.test.html#L303">assoc array and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "- y\nstatus=0\n- 'y'\nstatus=0\nA - A\nstatus=0\n"
+Got      'status=1\nstatus=0\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=0
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: syntax error: '(' unexpected
+mksh: syntax error: '(' unexpected
+mksh: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-16-ksh"></a><b>ksh</b></td><td>16 <a href="var-op-bash.test.html#L303">assoc array and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "- y\nstatus=0\n- 'y'\nstatus=0\nA - A\nstatus=0\n"
+Got      'status=1\nstatus=0\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=0
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: syntax error: unexpected '('
+E: ksh: syntax error: unexpected '('
+E: ksh: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="var-op-bash.test.html#L303">assoc array and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "- y\nstatus=0\n- 'y'\nstatus=0\nA - A\nstatus=0\n"
+Got      'status=2\nstatus=0\nstatus=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=0
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>-c: line 1: sh: syntax error: )
+-c: line 1: sh: syntax error: )
+-c: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-16-sush"></a><b>sush</b></td><td>16 <a href="var-op-bash.test.html#L303">assoc array and @P @Q @a</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "- y\nstatus=0\n- 'y'\nstatus=0\nA - A\nstatus=0\n"
+Got      "status=1\n'y' - ${A[@]@Q}\nstatus=0\nstatus=1\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+'y' - ${A[@]@Q}
+status=0
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: `${A@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: `${A@a}': bad substitution
+</pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="var-op-bash.test.html#L341">${#var@X} is a parse error</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'fail\nfail\nfail\n'
+Got      'fail\n${#A[@]@Q}\nfail\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fail
+${#A[@]@Q}
+fail
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: `${#A[@]@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: `${#A[@]@a}': bad substitution
+</pre></td></tr><tr><td><a name="details-18-brush"></a><b>brush</b></td><td>18 <a href="var-op-bash.test.html#L341">${#var@X} is a parse error</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'fail\nfail\nfail\n'
+Got      '${#A[@]@P}\n${#A[@]@Q}\n${#A[@]@a}\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>${#A[@]@P}
+${#A[@]@Q}
+${#A[@]@a}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-bash"></a><b>bash</b></td><td>19 <a href="var-op-bash.test.html#L358">${!A@a} and ${!A[@]@a}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>x=
+invalid=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-dash"></a><b>dash</b></td><td>19 <a href="var-op-bash.test.html#L358">${!A@a} and ${!A[@]@a}</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'x=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-19-ash"></a><b>ash</b></td><td>19 <a href="var-op-bash.test.html#L358">${!A@a} and ${!A[@]@a}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'x=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-19-zsh"></a><b>zsh</b></td><td>19 <a href="var-op-bash.test.html#L358">${!A@a} and ${!A[@]@a}</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'x=\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [x]=y
+zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-19-mksh"></a><b>mksh</b></td><td>19 <a href="var-op-bash.test.html#L358">${!A@a} and ${!A[@]@a}</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'x=\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-19-ksh"></a><b>ksh</b></td><td>19 <a href="var-op-bash.test.html#L358">${!A@a} and ${!A[@]@a}</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'x=\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="var-op-bash.test.html#L358">${!A@a} and ${!A[@]@a}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'x=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-19-sush"></a><b>sush</b></td><td>19 <a href="var-op-bash.test.html#L358">${!A@a} and ${!A[@]@a}</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'x=\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${!A[@]@a}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: `${!A@a}': bad substitution
+</pre></td></tr><tr><td><a name="details-19-brush"></a><b>brush</b></td><td>19 <a href="var-op-bash.test.html#L358">${!A@a} and ${!A[@]@a}</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'x=\n'
+Got      'x=${!A[@]@a}\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=${!A[@]@a}
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m failed to parse parameter ''
+</pre></td></tr><tr><td><a name="details-20-dash"></a><b>dash</b></td><td>20 <a href="var-op-bash.test.html#L381">undef vs. empty string in var ops</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "'x' '' 'x'\n'x' '' 'x'\n'x' '' 'x'\nx='x' empty='' x='x'\nr r\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 4: Bad substitution
+</pre></td></tr><tr><td><a name="details-20-ash"></a><b>ash</b></td><td>20 <a href="var-op-bash.test.html#L381">undef vs. empty string in var ops</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "'x' '' 'x'\n'x' '' 'x'\n'x' '' 'x'\nx='x' empty='' x='x'\nr r\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-20-zsh"></a><b>zsh</b></td><td>20 <a href="var-op-bash.test.html#L381">undef vs. empty string in var ops</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "'x' '' 'x'\n'x' '' 'x'\n'x' '' 'x'\nx='x' empty='' x='x'\nr r\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-20-mksh"></a><b>mksh</b></td><td>20 <a href="var-op-bash.test.html#L381">undef vs. empty string in var ops</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "'x' '' 'x'\n'x' '' 'x'\n'x' '' 'x'\nx='x' empty='' x='x'\nr r\n"
+Got      'x x\nx x\nx x\nx x\nx x\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x x
+x x
+x x
+x x
+x x
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[12]: declare: not found
+</pre></td></tr><tr><td><a name="details-20-ksh"></a><b>ksh</b></td><td>20 <a href="var-op-bash.test.html#L381">undef vs. empty string in var ops</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "'x' '' 'x'\n'x' '' 'x'\n'x' '' 'x'\nx='x' empty='' x='x'\nr r\n"
+Got      "x '' '' x\n"
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x '' '' x
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[6]: ${x@K}: bad substitution
+</pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="var-op-bash.test.html#L381">undef vs. empty string in var ops</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "'x' '' 'x'\n'x' '' 'x'\n'x' '' 'x'\nx='x' empty='' x='x'\nr r\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 4: sh: x: @Q}
+main: line 6: sh: x: @K}
+main: line 8: sh: x: @k}
+main: line 10: sh: x: @A}
+main: line 13: sh: x: @a}
+</pre></td></tr><tr><td><a name="details-20-sush"></a><b>sush</b></td><td>20 <a href="var-op-bash.test.html#L381">undef vs. empty string in var ops</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "'x' '' 'x'\n'x' '' 'x'\n'x' '' 'x'\nx='x' empty='' x='x'\nr r\n"
+Got      "'x' '' '' 'x'\n'x' '' '' 'x'\n'x' '' '' 'x'\n"
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>'x' '' '' 'x'
+'x' '' '' 'x'
+'x' '' '' 'x'
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 10: `${x@A}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 13: `${x@a}': bad substitution
+</pre></td></tr><tr><td><a name="details-20-osh"></a><b>osh</b></td><td>20 <a href="var-op-bash.test.html#L381">undef vs. empty string in var ops</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected "'x' '' 'x'\n'x' '' 'x'\n'x' '' 'x'\nx='x' empty='' x='x'\nr r\n"
+Got      "x '' x\n"
+</span><br/>
+<span class="assertion">
+[osh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x '' x
+</pre><i>stderr:</i> <br/>
+<pre>  echo ${x@K} ${empty@K} ${undef@K} ${x@K}
+          ^
+[ stdin ]:6: Unexpected token in ${} (VOp3)
+</pre></td></tr><tr><td><a name="details-21-dash"></a><b>dash</b></td><td>21 <a href="var-op-bash.test.html#L410">-o nounset with var ops</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'stat: 1\nstat: 1\nstat: 1\n'
+Got      'stat: 2\nstat: 2\nstat: 2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>stat: 2
+stat: 2
+stat: 2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+dash: 3: Bad substitution
+dash: 4: Bad substitution
+</pre></td></tr><tr><td><a name="details-21-ash"></a><b>ash</b></td><td>21 <a href="var-op-bash.test.html#L410">-o nounset with var ops</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'stat: 1\nstat: 1\nstat: 1\n'
+Got      'stat: 2\nstat: 2\nstat: 2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>stat: 2
+stat: 2
+stat: 2
+</pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+ash: syntax error: bad substitution
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-21-mksh"></a><b>mksh</b></td><td>21 <a href="var-op-bash.test.html#L410">-o nounset with var ops</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'stat: 1\nstat: 1\nstat: 1\n'
+Got      '\nstat: 0\nstat: 1\nstat: 1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+stat: 0
+stat: 1
+stat: 1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: undef: parameter not set
+mksh: &lt;stdin&gt;[4]: undef: parameter not set
+</pre></td></tr><tr><td><a name="details-21-ksh"></a><b>ksh</b></td><td>21 <a href="var-op-bash.test.html#L410">-o nounset with var ops</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'stat: 1\nstat: 1\nstat: 1\n'
+Got      "''\nstat: 0\nstat: 1\nstat: 1\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>''
+stat: 0
+stat: 1
+stat: 1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: ${undef@P}: bad substitution
+E: ksh: &lt;stdin&gt;[4]: ${undef@a}: bad substitution
+</pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="var-op-bash.test.html#L410">-o nounset with var ops</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'stat: 1\nstat: 1\nstat: 1\n'
+Got      "''\nstat: 0\nstat: 1\nstat: 1\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>''
+stat: 0
+stat: 1
+stat: 1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: `${undef@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: `${undef@a}': bad substitution
+</pre></td></tr><tr><td><a name="details-21-brush"></a><b>brush</b></td><td>21 <a href="var-op-bash.test.html#L410">-o nounset with var ops</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'stat: 1\nstat: 1\nstat: 1\n'
+Got      '\nstat: 0\n\nstat: 0\n\nstat: 0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+stat: 0
+
+stat: 0
+
+stat: 0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-dash"></a><b>dash</b></td><td>22 <a href="var-op-bash.test.html#L424">${a[0]@a} and ${a@a}</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "attr = 'a'\nattr = 'a'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-22-ash"></a><b>ash</b></td><td>22 <a href="var-op-bash.test.html#L424">${a[0]@a} and ${a@a}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "attr = 'a'\nattr = 'a'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-22-zsh"></a><b>zsh</b></td><td>22 <a href="var-op-bash.test.html#L424">${a[0]@a} and ${a@a}</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "attr = 'a'\nattr = 'a'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-22-mksh"></a><b>mksh</b></td><td>22 <a href="var-op-bash.test.html#L424">${a[0]@a} and ${a@a}</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "attr = 'a'\nattr = 'a'\n"
+Got      "attr = '1'\nattr = '1'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>attr = '1'
+attr = '1'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-ksh"></a><b>ksh</b></td><td>22 <a href="var-op-bash.test.html#L424">${a[0]@a} and ${a@a}</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "attr = 'a'\nattr = 'a'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: ${a[0]@a}: bad substitution
+</pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="var-op-bash.test.html#L424">${a[0]@a} and ${a@a}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "attr = 'a'\nattr = 'a'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="var-op-bash.test.html#L424">${a[0]@a} and ${a@a}</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "attr = 'a'\nattr = 'a'\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: `${a[0]@a}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: `${a@a}': bad substitution
+</pre></td></tr><tr><td><a name="details-23-dash"></a><b>dash</b></td><td>23 <a href="var-op-bash.test.html#L436">${!r@a} with r='a[0]' (attribute for indirect expansion of an array element)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'a\na\nA\nA\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-23-ash"></a><b>ash</b></td><td>23 <a href="var-op-bash.test.html#L436">${!r@a} with r='a[0]' (attribute for indirect expansion of an array element)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'a\na\nA\nA\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-23-zsh"></a><b>zsh</b></td><td>23 <a href="var-op-bash.test.html#L436">${!r@a} with r='a[0]' (attribute for indirect expansion of an array element)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'a\na\nA\nA\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-23-mksh"></a><b>mksh</b></td><td>23 <a href="var-op-bash.test.html#L436">${!r@a} with r='a[0]' (attribute for indirect expansion of an array element)</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'a\na\nA\nA\n'
+Got      'r\nr\n'
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>r
+r
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[7]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-23-ksh"></a><b>ksh</b></td><td>23 <a href="var-op-bash.test.html#L436">${!r@a} with r='a[0]' (attribute for indirect expansion of an array element)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'a\na\nA\nA\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: ${!r@a}: bad substitution
+</pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="var-op-bash.test.html#L436">${!r@a} with r='a[0]' (attribute for indirect expansion of an array element)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'a\na\nA\nA\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-23-sush"></a><b>sush</b></td><td>23 <a href="var-op-bash.test.html#L436">${!r@a} with r='a[0]' (attribute for indirect expansion of an array element)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'a\na\nA\nA\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: `${!r@a}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: `${!r@a}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: `${!r@a}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: `${!r@a}': bad substitution
+</pre></td></tr><tr><td><a name="details-24-bash"></a><b>bash</b></td><td>24 <a href="var-op-bash.test.html#L458">Array expansion with nullary var op @Q</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>["'1'", "'2'", "'3'", "'4'", "'5'", "'6'", "'7'", "'8'", "'9'"]
+["'1' '2' '3' '4' '5' '6' '7' '8' '9'"]
+["'ysh'", "'osh'", "'world'", "'hello'"]
+["'ysh' 'osh' 'world' 'hello'"]
+[]
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-dash"></a><b>dash</b></td><td>24 <a href="var-op-bash.test.html#L458">Array expansion with nullary var op @Q</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['1', '2', '3', '4', '5', '6', '7', '8', '9']\n['1 2 3 4 5 6 7 8 9']\n['hello', 'world', 'osh', 'ysh']\n['hello world osh ysh']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-24-ash"></a><b>ash</b></td><td>24 <a href="var-op-bash.test.html#L458">Array expansion with nullary var op @Q</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['1', '2', '3', '4', '5', '6', '7', '8', '9']\n['1 2 3 4 5 6 7 8 9']\n['hello', 'world', 'osh', 'ysh']\n['hello world osh ysh']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-24-zsh"></a><b>zsh</b></td><td>24 <a href="var-op-bash.test.html#L458">Array expansion with nullary var op @Q</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['1', '2', '3', '4', '5', '6', '7', '8', '9']\n['1 2 3 4 5 6 7 8 9']\n['hello', 'world', 'osh', 'ysh']\n['hello world osh ysh']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [a]=hello
+zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-24-mksh"></a><b>mksh</b></td><td>24 <a href="var-op-bash.test.html#L458">Array expansion with nullary var op @Q</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "['1', '2', '3', '4', '5', '6', '7', '8', '9']\n['1 2 3 4 5 6 7 8 9']\n['hello', 'world', 'osh', 'ysh']\n['hello world osh ysh']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-24-ksh"></a><b>ksh</b></td><td>24 <a href="var-op-bash.test.html#L458">Array expansion with nullary var op @Q</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['1', '2', '3', '4', '5', '6', '7', '8', '9']\n['1 2 3 4 5 6 7 8 9']\n['hello', 'world', 'osh', 'ysh']\n['hello world osh ysh']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="var-op-bash.test.html#L458">Array expansion with nullary var op @Q</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['1', '2', '3', '4', '5', '6', '7', '8', '9']\n['1 2 3 4 5 6 7 8 9']\n['hello', 'world', 'osh', 'ysh']\n['hello world osh ysh']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-24-sush"></a><b>sush</b></td><td>24 <a href="var-op-bash.test.html#L458">Array expansion with nullary var op @Q</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['1', '2', '3', '4', '5', '6', '7', '8', '9']\n['1 2 3 4 5 6 7 8 9']\n['hello', 'world', 'osh', 'ysh']\n['hello world osh ysh']\n[]\n['']\n"
+Got      '["\'1\'", "\'2\'", "\'3\'", "\'4\'", "\'5\'", "\'6\'", "\'7\'", "\'8\'", "\'9\'"]\n["\'1\' \'2\' \'3\' \'4\' \'5\' \'6\' \'7\' \'8\' \'9\'"]\n["\'hello\'", "\'world\'", "\'osh\'", "\'ysh\'"]\n["\'hello\' \'world\' \'osh\' \'ysh\'"]\n[]\n[\'\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>["'1'", "'2'", "'3'", "'4'", "'5'", "'6'", "'7'", "'8'", "'9'"]
+["'1' '2' '3' '4' '5' '6' '7' '8' '9'"]
+["'hello'", "'world'", "'osh'", "'ysh'"]
+["'hello' 'world' 'osh' 'ysh'"]
+[]
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-brush"></a><b>brush</b></td><td>24 <a href="var-op-bash.test.html#L458">Array expansion with nullary var op @Q</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['1', '2', '3', '4', '5', '6', '7', '8', '9']\n['1 2 3 4 5 6 7 8 9']\n['hello', 'world', 'osh', 'ysh']\n['hello world osh ysh']\n[]\n['']\n"
+Got      '["\'1\'", "\'2\'", "\'3\'", "\'4\'", "\'5\'", "\'6\'", "\'7\'", "\'8\'", "\'9\'"]\n["\'1\' \'2\' \'3\' \'4\' \'5\' \'6\' \'7\' \'8\' \'9\'"]\n["\'hello\'", "\'world\'", "\'osh\'", "\'ysh\'"]\n["\'hello\' \'world\' \'osh\' \'ysh\'"]\n[]\n[\'\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>["'1'", "'2'", "'3'", "'4'", "'5'", "'6'", "'7'", "'8'", "'9'"]
+["'1' '2' '3' '4' '5' '6' '7' '8' '9'"]
+["'hello'", "'world'", "'osh'", "'ysh'"]
+["'hello' 'world' 'osh' 'ysh'"]
+[]
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-bash"></a><b>bash</b></td><td>25 <a href="var-op-bash.test.html#L488">Array expansion with nullary var op @P</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['1', '2', '3', '4', '5', '6', '7', '8', '9']
+['1 2 3 4 5 6 7 8 9']
+['ysh', 'osh', 'world', 'hello']
+['ysh osh world hello']
+[]
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-dash"></a><b>dash</b></td><td>25 <a href="var-op-bash.test.html#L488">Array expansion with nullary var op @P</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['1', '2', '3', '4', '5', '6', '7', '8', '9']\n['1 2 3 4 5 6 7 8 9']\n['hello', 'world', 'osh', 'ysh']\n['hello world osh ysh']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-25-ash"></a><b>ash</b></td><td>25 <a href="var-op-bash.test.html#L488">Array expansion with nullary var op @P</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['1', '2', '3', '4', '5', '6', '7', '8', '9']\n['1 2 3 4 5 6 7 8 9']\n['hello', 'world', 'osh', 'ysh']\n['hello world osh ysh']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-25-zsh"></a><b>zsh</b></td><td>25 <a href="var-op-bash.test.html#L488">Array expansion with nullary var op @P</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['1', '2', '3', '4', '5', '6', '7', '8', '9']\n['1 2 3 4 5 6 7 8 9']\n['hello', 'world', 'osh', 'ysh']\n['hello world osh ysh']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [a]=hello
+zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-25-mksh"></a><b>mksh</b></td><td>25 <a href="var-op-bash.test.html#L488">Array expansion with nullary var op @P</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "['1', '2', '3', '4', '5', '6', '7', '8', '9']\n['1 2 3 4 5 6 7 8 9']\n['hello', 'world', 'osh', 'ysh']\n['hello world osh ysh']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-25-ksh"></a><b>ksh</b></td><td>25 <a href="var-op-bash.test.html#L488">Array expansion with nullary var op @P</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['1', '2', '3', '4', '5', '6', '7', '8', '9']\n['1 2 3 4 5 6 7 8 9']\n['hello', 'world', 'osh', 'ysh']\n['hello world osh ysh']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="var-op-bash.test.html#L488">Array expansion with nullary var op @P</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['1', '2', '3', '4', '5', '6', '7', '8', '9']\n['1 2 3 4 5 6 7 8 9']\n['hello', 'world', 'osh', 'ysh']\n['hello world osh ysh']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-25-sush"></a><b>sush</b></td><td>25 <a href="var-op-bash.test.html#L488">Array expansion with nullary var op @P</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['1', '2', '3', '4', '5', '6', '7', '8', '9']\n['1 2 3 4 5 6 7 8 9']\n['hello', 'world', 'osh', 'ysh']\n['hello world osh ysh']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: `${a[@]@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: `${a[*]@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: `${A[@]@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: `${A[*]@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: `${u[@]@P}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: `${u[*]@P}': bad substitution
+</pre></td></tr><tr><td><a name="details-26-dash"></a><b>dash</b></td><td>26 <a href="var-op-bash.test.html#L518">Array expansion with nullary var op @a</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a']\n['a a a a a a a a a']\n['A', 'A', 'A', 'A']\n['A A A A']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-26-ash"></a><b>ash</b></td><td>26 <a href="var-op-bash.test.html#L518">Array expansion with nullary var op @a</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a']\n['a a a a a a a a a']\n['A', 'A', 'A', 'A']\n['A A A A']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-26-zsh"></a><b>zsh</b></td><td>26 <a href="var-op-bash.test.html#L518">Array expansion with nullary var op @a</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a']\n['a a a a a a a a a']\n['A', 'A', 'A', 'A']\n['A A A A']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no matches found: [a]=hello
+zsh: bad substitution
+</pre></td></tr><tr><td><a name="details-26-mksh"></a><b>mksh</b></td><td>26 <a href="var-op-bash.test.html#L518">Array expansion with nullary var op @a</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected "['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a']\n['a a a a a a a a a']\n['A', 'A', 'A', 'A']\n['A A A A']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-26-ksh"></a><b>ksh</b></td><td>26 <a href="var-op-bash.test.html#L518">Array expansion with nullary var op @a</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a']\n['a a a a a a a a a']\n['A', 'A', 'A', 'A']\n['A A A A']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="var-op-bash.test.html#L518">Array expansion with nullary var op @a</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a']\n['a a a a a a a a a']\n['A', 'A', 'A', 'A']\n['A A A A']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-26-sush"></a><b>sush</b></td><td>26 <a href="var-op-bash.test.html#L518">Array expansion with nullary var op @a</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a']\n['a a a a a a a a a']\n['A', 'A', 'A', 'A']\n['A A A A']\n[]\n['']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: `${a[@]@a}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: `${a[*]@a}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: `${A[@]@a}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: `${A[*]@a}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: `${u[@]@a}': bad substitution
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: `${u[*]@a}': bad substitution
+</pre></td></tr><tr><td><a name="details-26-brush"></a><b>brush</b></td><td>26 <a href="var-op-bash.test.html#L518">Array expansion with nullary var op @a</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a']\n['a a a a a a a a a']\n['A', 'A', 'A', 'A']\n['A A A A']\n[]\n['']\n"
+Got      "['a']\n['a']\n['A']\n['A']\n['']\n['']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a']
+['a']
+['A']
+['A']
+['']
+['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

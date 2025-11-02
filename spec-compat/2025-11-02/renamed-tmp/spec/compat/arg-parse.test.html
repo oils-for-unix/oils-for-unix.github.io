@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>spec/arg-parse.test.sh</title>
+<link rel="stylesheet" type="text/css" href="../../../web/src-tree.css" />
+  </head>
+
+      <body class="">
+        <div id="home-link">
+          <a href="https://github.com/oilshell/oil/blob/master/spec/arg-parse.test.sh">View on Github</a>
+          |
+          <a href="/">oils.pub</a>
+        </div>
+        <table>
+      <tr>
+  <td class=num>1</td>
+  <td id=L1>
+    <span class="line comm">## compare_shells: bash dash mksh zsh ash</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>2</td>
+  <td id=L2>
+    <span class="line comm">## oils_failures_allowed: 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>3</td>
+  <td id=L3>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>4</td>
+  <td id=L4>
+    <span class="line comm"># TODO:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>5</td>
+  <td id=L5>
+    <span class="line comm"># - go through all of compgen -A builtin - which ones allow extra args?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>6</td>
+  <td id=L6>
+    <span class="line comm"># - cd builtin should be strict</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>7</td>
+  <td id=L7>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>8</td>
+  <td id=L8>
+    <span class="line spec-comment">#### true extra</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>9</td>
+  <td id=L9>
+    <span class="line ">true extra</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>10</td>
+  <td id=L10>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>11</td>
+  <td id=L11>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>12</td>
+  <td id=L12>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>13</td>
+  <td id=L13>
+    <span class="line spec-comment">#### shift 1 extra</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>14</td>
+  <td id=L14>
+    <span class="line ">$SH -c '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>15</td>
+  <td id=L15>
+    <span class="line ">set -- a b c</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>16</td>
+  <td id=L16>
+    <span class="line ">shift 1 extra</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>17</td>
+  <td id=L17>
+    <span class="line ">'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>18</td>
+  <td id=L18>
+    <span class="line ">if test $? -eq 0; then</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>19</td>
+  <td id=L19>
+    <span class="line ">  echo fail</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>20</td>
+  <td id=L20>
+    <span class="line ">fi</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>21</td>
+  <td id=L21>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>22</td>
+  <td id=L22>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>23</td>
+  <td id=L23>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>24</td>
+  <td id=L24>
+    <span class="line comm">## BUG dash/mksh/zsh/ash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>25</td>
+  <td id=L25>
+    <span class="line ">fail</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>26</td>
+  <td id=L26>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>27</td>
+  <td id=L27>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>28</td>
+  <td id=L28>
+    <span class="line spec-comment">#### continue 1 extra, break, etc.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>29</td>
+  <td id=L29>
+    <span class="line ">$SH -c '</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>30</td>
+  <td id=L30>
+    <span class="line ">for i in foo; do</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>31</td>
+  <td id=L31>
+    <span class="line ">  continue 1 extra</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>32</td>
+  <td id=L32>
+    <span class="line ">done</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>33</td>
+  <td id=L33>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>34</td>
+  <td id=L34>
+    <span class="line ">'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>35</td>
+  <td id=L35>
+    <span class="line ">if test $? -eq 0; then</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>36</td>
+  <td id=L36>
+    <span class="line ">  echo fail</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>37</td>
+  <td id=L37>
+    <span class="line ">fi</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>38</td>
+  <td id=L38>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>39</td>
+  <td id=L39>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>40</td>
+  <td id=L40>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>41</td>
+  <td id=L41>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>42</td>
+  <td id=L42>
+    <span class="line comm">## BUG dash/ash/mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>43</td>
+  <td id=L43>
+    <span class="line ">status=0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>44</td>
+  <td id=L44>
+    <span class="line ">fail</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>45</td>
+  <td id=L45>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>46</td>
+  <td id=L46>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>47</td>
+  <td id=L47>
+    <span class="line comm">## BUG-2 zsh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>48</td>
+  <td id=L48>
+    <span class="line ">status=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>49</td>
+  <td id=L49>
+    <span class="line ">fail</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>50</td>
+  <td id=L50>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+
+        </table>
+      </body>
+    </html>

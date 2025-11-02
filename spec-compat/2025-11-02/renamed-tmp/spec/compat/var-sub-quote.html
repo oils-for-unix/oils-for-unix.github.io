@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>var-sub-quote: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for var-sub-quote.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>40</td><td>35</td><td>37</td><td>30</td><td>38</td><td>38</td><td>13</td><td>37</td><td>25</td><td>41</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>4</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>4</td><td>11</td><td>0</td><td>3</td><td>28</td><td>4</td><td>16</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>41</td><td>41</td><td>41</td><td>41</td><td>41</td><td>41</td><td>41</td><td>41</td><td>41</td><td>41</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L17">"${empty:-}"</a></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L22">${empty:-}</a></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L27">array with empty values</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L36">substitution of IFS character, quoted and unquoted</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L46">:-</a></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L51">-</a></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L57">Inner single quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L61">Inner single quotes, outer double quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L66">Inner double quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L70">Inner double quotes, outer double quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L74">Multiple words: no quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L78">Multiple words: no outer quotes, inner single quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L82">Multiple words: no outer quotes, inner double quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L86">Multiple words: outer double quotes, no inner quotes</a></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L90">Multiple words: outer double quotes, inner double quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L94">Multiple words: outer double quotes, inner single quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L99">Mixed inner quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-16-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L103">Mixed inner quotes with outer quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L107">part_value tree with multiple words</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-18-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L111">part_value tree on RHS</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L116">Var with multiple words: no quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L121">Multiple words: no outer quotes, inner single quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L126">Multiple words: no outer quotes, inner double quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-22-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L131">Multiple words: outer double quotes, no inner quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L136">Multiple words: outer double quotes, inner double quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L141">Multiple words: outer double quotes, inner single quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"><a href="#details-25-sush">details</a></td><td class="details-row"><a href="#details-25-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L150">No outer quotes, Multiple internal quotes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-26-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L156">Strip a string with single quotes, unquoted</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L161">Strip a string with single quotes, double quoted</a></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L168">The string to strip is space sensitive</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 30</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L173">The string to strip can be single quoted, outer is unquoted</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 31</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L178">Syntax error for single quote in double quote</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-zsh">details</a></td><td class="details-row"><a href="#details-31-mksh">details</a></td><td class="details-row"><a href="#details-31-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-31-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 32</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L185">"${undef-'c d'}" and "${foo%'c d'}" are parsed differently</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-32-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-32-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-32-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-32-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 33</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L217">$'' allowed within VarSub arguments</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-33-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-33-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 34</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L231"># operator with single quoted arg (dash/ash and bash/mksh disagree, reported by Crestwave)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-34-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-34-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 35</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L251">/ operator with single quoted arg (causes syntax error in regex in OSH, reported by Crestwave)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-35-dash">details</a></td><td class="details-row"><a href="#details-35-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-35-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 36</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L268">single quotes work inside character classes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-36-dash">details</a></td><td class="details-row"><a href="#details-36-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-36-toysh">details</a></td><td class="details-row"><a href="#details-36-sush">details</a></td><td class="details-row"><a href="#details-36-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 37</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L280">comparison: :- operator with single quoted arg</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-37-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-37-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 38</td><td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L289">Right Brace as argument (similar to #702)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-38-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-38-toysh">details</a></td><td class="details-row"><a href="#details-38-sush">details</a></td><td class="details-row"><a href="#details-38-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 39</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L314">Var substitution with newlines (#2492)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-39-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 40</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="var-sub-quote.test.html#L344">Var substitution with \n in value</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-40-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-40-zsh">details</a></td><td class="details-row"><a href="#details-40-mksh">details</a></td><td class="details-row"><a href="#details-40-ksh">details</a></td><td class="details-row"><a href="#details-40-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-40-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>334 passed, 2 OK, 5 not implemented, 3 BUG, 66 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="var-sub-quote.test.html#L27">array with empty values</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="var-sub-quote.test.html#L27">array with empty values</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['', 'x', '', '']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="var-sub-quote.test.html#L27">array with empty values</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: syntax error: '(' unexpected
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="var-sub-quote.test.html#L27">array with empty values</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "['', 'x', '', '']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="var-sub-quote.test.html#L27">array with empty values</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['', 'x', '', '']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: )
+</pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="var-sub-quote.test.html#L36">substitution of IFS character, quoted and unquoted</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['']\n[':']\n"
+Got      "[':']\n[':']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[':']
+[':']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="var-sub-quote.test.html#L36">substitution of IFS character, quoted and unquoted</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['']\n[':']\n"
+Got      "[]\n[':']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[':']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="var-sub-quote.test.html#L57">Inner single quotes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['b']\n"
+Got      '["\'b\'"]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>["'b'"]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="var-sub-quote.test.html#L61">Inner single quotes, outer double quotes</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '["\'b\'"]\n'
+Got      "['b']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['b']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="var-sub-quote.test.html#L66">Inner double quotes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['b']\n"
+Got      '[\'"b"\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['"b"']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="var-sub-quote.test.html#L70">Inner double quotes, outer double quotes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['b']\n"
+Got      '[\'"b"\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['"b"']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-zsh"></a><b>zsh</b></td><td>10 <a href="var-sub-quote.test.html#L74">Multiple words: no quotes</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['a', 'b', 'c']\n"
+Got      "['a b c']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a b c']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="var-sub-quote.test.html#L78">Multiple words: no outer quotes, inner single quotes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['a b c']\n"
+Got      '["\'a", \'b\', "c\'"]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>["'a", 'b', "c'"]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="var-sub-quote.test.html#L78">Multiple words: no outer quotes, inner single quotes</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['a b c']\n"
+Got      "['a', 'b', 'c']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a', 'b', 'c']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="var-sub-quote.test.html#L82">Multiple words: no outer quotes, inner double quotes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['a b c']\n"
+Got      '[\'"a\', \'b\', \'c"\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['"a', 'b', 'c"']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="var-sub-quote.test.html#L82">Multiple words: no outer quotes, inner double quotes</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['a b c']\n"
+Got      "['a', 'b', 'c']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a', 'b', 'c']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="var-sub-quote.test.html#L90">Multiple words: outer double quotes, inner double quotes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['a b c']\n"
+Got      '[\'"a b c"\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['"a b c"']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-brush"></a><b>brush</b></td><td>15 <a href="var-sub-quote.test.html#L94">Multiple words: outer double quotes, inner single quotes</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '["\'a b c\'"]\n'
+Got      "['a b c']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a b c']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-zsh"></a><b>zsh</b></td><td>16 <a href="var-sub-quote.test.html#L99">Mixed inner quotes</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['a b', 'c']\n"
+Got      "['a b c']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a b c']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="var-sub-quote.test.html#L99">Mixed inner quotes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['a b', 'c']\n"
+Got      '[\'"a\', \'b"\', \'c\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['"a', 'b"', 'c']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-brush"></a><b>brush</b></td><td>16 <a href="var-sub-quote.test.html#L99">Mixed inner quotes</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['a b', 'c']\n"
+Got      "['a', 'b', 'c']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a', 'b', 'c']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="var-sub-quote.test.html#L103">Mixed inner quotes with outer quotes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['a b c']\n"
+Got      '[\'"a b" c\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['"a b" c']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-zsh"></a><b>zsh</b></td><td>18 <a href="var-sub-quote.test.html#L107">part_value tree with multiple words</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['1 2', '3 45', '6 7']\n"
+Got      "['1 2 3 45 6 7']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1 2 3 45 6 7']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="var-sub-quote.test.html#L107">part_value tree with multiple words</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['1 2', '3 45', '6 7']\n"
+Got      '[\'${a:-"1\', \'2"\', \'"3\', \'4"5 6 7}\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['${a:-"1', '2"', '"3', '4"5 6 7}']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-brush"></a><b>brush</b></td><td>18 <a href="var-sub-quote.test.html#L107">part_value tree with multiple words</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['1 2', '3 45', '6 7']\n"
+Got      "['1', '2', '3', '45', '6', '7']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['1', '2', '3', '45', '6', '7']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="var-sub-quote.test.html#L111">part_value tree on RHS</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['1 2 3 45 6 7']\n"
+Got      '[\'${a:-"1 2" "3 4"5 6 7}\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['${a:-"1 2" "3 4"5 6 7}']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-zsh"></a><b>zsh</b></td><td>20 <a href="var-sub-quote.test.html#L116">Var with multiple words: no quotes</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['a', 'b', 'c']\n"
+Got      "['a b c']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a b c']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="var-sub-quote.test.html#L116">Var with multiple words: no quotes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['a', 'b', 'c']\n"
+Got      "['$var']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['$var']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="var-sub-quote.test.html#L121">Multiple words: no outer quotes, inner single quotes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['$var']\n"
+Got      '["\'$var\'"]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>["'$var'"]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="var-sub-quote.test.html#L126">Multiple words: no outer quotes, inner double quotes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['a b c']\n"
+Got      '[\'"$var"\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['"$var"']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-brush"></a><b>brush</b></td><td>22 <a href="var-sub-quote.test.html#L126">Multiple words: no outer quotes, inner double quotes</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['a b c']\n"
+Got      "['a', 'b', 'c']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a', 'b', 'c']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="var-sub-quote.test.html#L131">Multiple words: outer double quotes, no inner quotes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['a b c']\n"
+Got      "['$var']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['$var']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="var-sub-quote.test.html#L136">Multiple words: outer double quotes, inner double quotes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['a b c']\n"
+Got      '[\'"$var"\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['"$var"']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="var-sub-quote.test.html#L141">Multiple words: outer double quotes, inner single quotes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '["\'a b c\'"]\n'
+Got      '["\'$var\'"]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>["'$var'"]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-sush"></a><b>sush</b></td><td>25 <a href="var-sub-quote.test.html#L141">Multiple words: outer double quotes, inner single quotes</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '["\'a b c\'"]\n'
+Got      '["\'$var\'"]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>["'$var'"]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-brush"></a><b>brush</b></td><td>25 <a href="var-sub-quote.test.html#L141">Multiple words: outer double quotes, inner single quotes</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '["\'a b c\'"]\n'
+Got      "['$var']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['$var']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-zsh"></a><b>zsh</b></td><td>26 <a href="var-sub-quote.test.html#L150">No outer quotes, Multiple internal quotes</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['Aa', 'b', 'c', ' a b cD', 'E', 'F']\n"
+Got      "['Aa b c  a b cD E F']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['Aa b c  a b cD E F']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="var-sub-quote.test.html#L150">No outer quotes, Multiple internal quotes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['Aa', 'b', 'c', ' a b cD', 'E', 'F']\n"
+Got      '[\'A$var\', \'"\', \'$var"D\', \'E\', \'F\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['A$var', '"', '$var"D', 'E', 'F']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-brush"></a><b>brush</b></td><td>26 <a href="var-sub-quote.test.html#L150">No outer quotes, Multiple internal quotes</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['Aa', 'b', 'c', ' a b cD', 'E', 'F']\n"
+Got      "['Aa', 'b', 'c', 'a', 'b', 'cD', 'E', 'F']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['Aa', 'b', 'c', 'a', 'b', 'cD', 'E', 'F']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-zsh"></a><b>zsh</b></td><td>27 <a href="var-sub-quote.test.html#L156">Strip a string with single quotes, unquoted</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '["\'a", \'b\', \'c\']\n'
+Got      '["\'a b c "]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>["'a b c "]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-brush"></a><b>brush</b></td><td>29 <a href="var-sub-quote.test.html#L168">The string to strip is space sensitive</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['a b ', 'a b c d']\n"
+Got      "['a b ', 'a b ']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a b ', 'a b ']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-zsh"></a><b>zsh</b></td><td>30 <a href="var-sub-quote.test.html#L173">The string to strip can be single quoted, outer is unquoted</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected "['a', 'b', 'a', 'b', 'c', 'd']\n"
+Got      "['a b ', 'a b c d']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a b ', 'a b c d']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-toysh"></a><b>toysh</b></td><td>30 <a href="var-sub-quote.test.html#L173">The string to strip can be single quoted, outer is unquoted</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['a', 'b', 'a', 'b', 'c', 'd']\n"
+Got      "['a', 'b', 'c', 'd', 'a', 'b', 'c', 'd']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['a', 'b', 'c', 'd', 'a', 'b', 'c', 'd']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-zsh"></a><b>zsh</b></td><td>31 <a href="var-sub-quote.test.html#L178">Syntax error for single quote in double quote</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected u''
+Got      '["\'a b c "]\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>["'a b c "]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-mksh"></a><b>mksh</b></td><td>31 <a href="var-sub-quote.test.html#L178">Syntax error for single quote in double quote</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: no closing quote
+</pre></td></tr><tr><td><a name="details-31-ksh"></a><b>ksh</b></td><td>31 <a href="var-sub-quote.test.html#L178">Syntax error for single quote in double quote</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 2
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: no closing quote
+</pre></td></tr><tr><td><a name="details-31-sush"></a><b>sush</b></td><td>31 <a href="var-sub-quote.test.html#L178">Syntax error for single quote in double quote</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected u''
+Got      '["\'a b c "]\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>["'a b c "]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-dash"></a><b>dash</b></td><td>32 <a href="var-sub-quote.test.html#L185">"${undef-'c d'}" and "${foo%'c d'}" are parsed differently</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>["'c d'", "'c  d'"]
+['c d', 'c  d']
+---
+['a b ', 'a b c d']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-zsh"></a><b>zsh</b></td><td>32 <a href="var-sub-quote.test.html#L185">"${undef-'c d'}" and "${foo%'c d'}" are parsed differently</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '["\'c d\'", "\'c  d\'"]\n[\'c d\', \'c  d\']\n---\n[\'a b \', \'a b c d\']\n[\'a b zzz\', \'a b c d\']\n[\'a b zzz\', \'a b c d\']\n'
+Got      '["\'c d\'", "\'c  d\'"]\n[\'c d\', \'c  d\']\n---\n[\'a b \', \'a b c d\']\n[\'a b zzz\', \'a b c d\']\n["a b \'zzz\'", \'a b c d\']\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>["'c d'", "'c  d'"]
+['c d', 'c  d']
+---
+['a b ', 'a b c d']
+['a b zzz', 'a b c d']
+["a b 'zzz'", 'a b c d']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-toysh"></a><b>toysh</b></td><td>32 <a href="var-sub-quote.test.html#L185">"${undef-'c d'}" and "${foo%'c d'}" are parsed differently</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '["\'c d\'", "\'c  d\'"]\n[\'c d\', \'c  d\']\n---\n[\'a b \', \'a b c d\']\n[\'a b zzz\', \'a b c d\']\n[\'a b zzz\', \'a b c d\']\n'
+Got      '["\'c d\'", "\'c  d\'"]\n["\'c", "d\'", "\'c", "d\'"]\n---\n[\'a b c d\', \'a b c d\']\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>["'c d'", "'c  d'"]
+["'c", "d'", "'c", "d'"]
+---
+['a b c d', 'a b c d']
+</pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-32-brush"></a><b>brush</b></td><td>32 <a href="var-sub-quote.test.html#L185">"${undef-'c d'}" and "${foo%'c d'}" are parsed differently</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '["\'c d\'", "\'c  d\'"]\n[\'c d\', \'c  d\']\n---\n[\'a b \', \'a b c d\']\n[\'a b zzz\', \'a b c d\']\n[\'a b zzz\', \'a b c d\']\n'
+Got      "['c d', 'c  d']\n['c', 'd', 'c', 'd']\n---\n['a b ', 'a b c d']\n['a b zzz', 'a b c d']\n['a b zzz', 'a b c d']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['c d', 'c  d']
+['c', 'd', 'c', 'd']
+---
+['a b ', 'a b c d']
+['a b zzz', 'a b c d']
+['a b zzz', 'a b c d']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-dash"></a><b>dash</b></td><td>33 <a href="var-sub-quote.test.html#L217">$'' allowed within VarSub arguments</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>abc
+abc
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-toysh"></a><b>toysh</b></td><td>33 <a href="var-sub-quote.test.html#L217">$'' allowed within VarSub arguments</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'a\na\n'
+Got      'abc\nabc\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>abc
+abc
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-ash"></a><b>ash</b></td><td>34 <a href="var-sub-quote.test.html#L231"># operator with single quoted arg (dash/ash and bash/mksh disagree, reported by Crestwave)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "--\n-a-\n-'a'-\n--\n"
+Got      "--\n--\n-'a'-\n-'a'-\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+--
+-'a'-
+-'a'-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-toysh"></a><b>toysh</b></td><td>34 <a href="var-sub-quote.test.html#L231"># operator with single quoted arg (dash/ash and bash/mksh disagree, reported by Crestwave)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "--\n--\n-'a'-\n-'a'-\n"
+Got      '-a-\n-a-\n\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-a-
+-a-
+
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-dash"></a><b>dash</b></td><td>35 <a href="var-sub-quote.test.html#L251">/ operator with single quoted arg (causes syntax error in regex in OSH, reported by Crestwave)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-35-ash"></a><b>ash</b></td><td>35 <a href="var-sub-quote.test.html#L251">/ operator with single quoted arg (causes syntax error in regex in OSH, reported by Crestwave)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "no plus or minus ''''\nno plus or minus ++--++--\n"
+Got      "no plus or minus ''''\nno plus or minus ''''\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>no plus or minus ''''
+no plus or minus ''''
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-toysh"></a><b>toysh</b></td><td>35 <a href="var-sub-quote.test.html#L251">/ operator with single quoted arg (causes syntax error in regex in OSH, reported by Crestwave)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "no plus or minus ''''\nno plus or minus ''''\n"
+Got      "no plus or minus ++--''++--''\nno plus or minus ++--''++--''\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>no plus or minus ++--''++--''
+no plus or minus ++--''++--''
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-dash"></a><b>dash</b></td><td>36 <a href="var-sub-quote.test.html#L268">single quotes work inside character classes</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-36-ash"></a><b>ash</b></td><td>36 <a href="var-sub-quote.test.html#L268">single quotes work inside character classes</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'a[[[---]]]b\n'
+Got      'a---b\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a---b
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-toysh"></a><b>toysh</b></td><td>36 <a href="var-sub-quote.test.html#L268">single quotes work inside character classes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'a---b\n'
+Got      'a[[[---]]]b\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a[[[---]]]b
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-sush"></a><b>sush</b></td><td>36 <a href="var-sub-quote.test.html#L268">single quotes work inside character classes</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'a---b\n'
+Got      'a[[[---]]]b\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a[[[---]]]b
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-brush"></a><b>brush</b></td><td>36 <a href="var-sub-quote.test.html#L268">single quotes work inside character classes</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'a---b\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m invalid regex: Parsing error at position 14: Invalid character class; expression: '(?ms)[\\\[\]\]'
+</pre></td></tr><tr><td><a name="details-37-toysh"></a><b>toysh</b></td><td>37 <a href="var-sub-quote.test.html#L280">comparison: :- operator with single quoted arg</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "a\n'a'\n"
+Got      "'a'\n'a'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>'a'
+'a'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-37-brush"></a><b>brush</b></td><td>37 <a href="var-sub-quote.test.html#L280">comparison: :- operator with single quoted arg</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "a\n'a'\n"
+Got      'a\na\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+a
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-bash"></a><b>bash</b></td><td>38 <a href="var-sub-quote.test.html#L289">Right Brace as argument (similar to #702)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>}
+}
+'}'
+}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-toysh"></a><b>toysh</b></td><td>38 <a href="var-sub-quote.test.html#L289">Right Brace as argument (similar to #702)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "}\n}\n''}\n}\n"
+Got      '}\n}\n\'\'}\n"}\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>}
+}
+''}
+"}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-sush"></a><b>sush</b></td><td>38 <a href="var-sub-quote.test.html#L289">Right Brace as argument (similar to #702)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "}\n}\n''}\n}\n"
+Got      "}\n\\}\n'}'\n}\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>}
+\}
+'}'
+}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-brush"></a><b>brush</b></td><td>38 <a href="var-sub-quote.test.html#L289">Right Brace as argument (similar to #702)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "}\n}\n''}\n}\n"
+Got      '}\n}\n}\n}\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>}
+}
+}
+}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-toysh"></a><b>toysh</b></td><td>39 <a href="var-sub-quote.test.html#L314">Var substitution with newlines (#2492)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'a b\na\nb\nc d\nc\nd\ne f\ne\nf\n'
+Got      'a \nb\na\nb\nc \nd\nc\nd\ne \nf\ne\nf\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a 
+b
+a
+b
+c 
+d
+c
+d
+e 
+f
+e
+f
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-dash"></a><b>dash</b></td><td>40 <a href="var-sub-quote.test.html#L344">Var substitution with \n in value</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+d
+e
+f
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-zsh"></a><b>zsh</b></td><td>40 <a href="var-sub-quote.test.html#L344">Var substitution with \n in value</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'a\\nb\nc\\nd\ne\\nf\n'
+Got      'a\nb\nc\nd\ne\nf\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+d
+e
+f
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-mksh"></a><b>mksh</b></td><td>40 <a href="var-sub-quote.test.html#L344">Var substitution with \n in value</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+d
+e
+f
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-ksh"></a><b>ksh</b></td><td>40 <a href="var-sub-quote.test.html#L344">Var substitution with \n in value</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'a\\nb\nc\\nd\ne\\nf\n'
+Got      'a\nb\nc\nd\ne\nf\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a
+b
+c
+d
+e
+f
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-toysh"></a><b>toysh</b></td><td>40 <a href="var-sub-quote.test.html#L344">Var substitution with \n in value</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'a\\nb\nc\\nd\ne\\nf\n'
+Got      'anb\ncnd\nenf\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>anb
+cnd
+enf
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-brush"></a><b>brush</b></td><td>40 <a href="var-sub-quote.test.html#L344">Var substitution with \n in value</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'a\\nb\nc\\nd\ne\\nf\n'
+Got      'anb\ncnd\nenf\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>anb
+cnd
+enf
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

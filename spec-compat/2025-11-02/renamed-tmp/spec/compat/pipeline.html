@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>pipeline: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for pipeline.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>25</td><td>16</td><td>17</td><td>19</td><td>21</td><td>21</td><td>12</td><td>23</td><td>23</td><td>24</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>9</td><td>0</td><td>5</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>0</td><td>0</td><td>2</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>9</td><td>0</td><td>0</td><td>5</td><td>13</td><td>3</td><td>3</td><td>1</td><td></td></tr>
+<tr><td class="timeout">TIME</td> <td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>26</td><td>26</td><td>26</td><td>26</td><td>26</td><td>26</td><td>26</td><td>26</td><td>26</td><td>26</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L11">Brace group in pipeline</a></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L18">For loop starts pipeline</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L27">While Loop ends pipeline</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L38">Redirect in Pipeline</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L43">Pipeline comments</a></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L49">Exit code is last status</a></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L53">Initial value of PIPESTATUS is empty string</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L66">PIPESTATUS</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="pipeline.test.html#L80">PIPESTATUS is set on simple commands</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-8-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L100">PIPESTATUS with shopt -s lastpipe</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"><a href="#details-9-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="pipeline.test.html#L115">|&amp;</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L127">! turns non-zero into zero</a></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L132">! turns zero into 1</a></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L137">! in if</a></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L149">! with ||</a></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L157">! with { }</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L166">! with ( )</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L175">! is not a command</a></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L180">Evaluation of argv[0] in pipeline occurs in child</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L192">bash/dash/mksh run the last command is run in its own process</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-19-bash">details</a></td><td class="details-row"><a href="#details-19-dash">details</a></td><td class="details-row"><a href="#details-19-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-19-mksh">details</a></td><td class="details-row"><a href="#details-19-ksh">details</a></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"><a href="#details-19-sush">details</a></td><td class="details-row"><a href="#details-19-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L198">shopt -s lastpipe (always on in OSH)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-dash">details</a></td><td class="details-row"><a href="#details-20-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-20-mksh">details</a></td><td class="details-row"><a href="#details-20-ksh">details</a></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L205">shopt -s lastpipe (always on in OSH)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-dash">details</a></td><td class="details-row"><a href="#details-21-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-21-mksh">details</a></td><td class="details-row"><a href="#details-21-ksh">details</a></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="timeout">TIME</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L216">SIGPIPE causes pipeline to die (regression for issue #295)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-dash">details</a></td><td class="details-row"><a href="#details-22-ash">details</a></td><td class="details-row"><a href="#details-22-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L229">Nested pipelines</a></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L239">Pipeline in eval</a></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="pipeline.test.html#L246">shopt -s lastpipe and shopt -s no_last_fork interaction</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-25-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>201 passed, 3 OK, 18 not implemented, 3 BUG, 34 failed, 1 timeouts, 0 cases skipped
+1 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="pipeline.test.html#L18">For loop starts pipeline</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'two\none\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="pipeline.test.html#L27">While Loop ends pipeline</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '.1\n.2\n.3\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+sh: 1: No such file or directory
+sh: 2: No such file or directory
+sh: 3: No such file or directory
+</pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="pipeline.test.html#L38">Redirect in Pipeline</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre>hi
+</pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="pipeline.test.html#L53">Initial value of PIPESTATUS is empty string</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="pipeline.test.html#L53">Initial value of PIPESTATUS is empty string</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'pipestatus\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="pipeline.test.html#L53">Initial value of PIPESTATUS is empty string</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="pipeline.test.html#L53">Initial value of PIPESTATUS is empty string</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>pipestatus 0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="pipeline.test.html#L53">Initial value of PIPESTATUS is empty string</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'pipestatus\n'
+Got      'pipestatus 0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pipestatus 0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="pipeline.test.html#L53">Initial value of PIPESTATUS is empty string</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'pipestatus\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="pipeline.test.html#L53">Initial value of PIPESTATUS is empty string</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'pipestatus\n'
+Got      'pipestatus 0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pipestatus 0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="pipeline.test.html#L66">PIPESTATUS</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 5: Bad substitution
+</pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="pipeline.test.html#L66">PIPESTATUS</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '1 2 3\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="pipeline.test.html#L66">PIPESTATUS</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="pipeline.test.html#L66">PIPESTATUS</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1 2 3\n'
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="pipeline.test.html#L80">PIPESTATUS is set on simple commands</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-ash"></a><b>ash</b></td><td>8 <a href="pipeline.test.html#L80">PIPESTATUS is set on simple commands</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'pipestatus 1\npipestatus 55 44\npipestatus 0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="pipeline.test.html#L80">PIPESTATUS is set on simple commands</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="pipeline.test.html#L80">PIPESTATUS is set on simple commands</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'pipestatus 1\npipestatus 55 44\npipestatus 0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="pipeline.test.html#L80">PIPESTATUS is set on simple commands</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'pipestatus 1\npipestatus 55 44\npipestatus 0\n'
+Got      'pipestatus\npipestatus 55 44\npipestatus 55 44\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pipestatus
+pipestatus 55 44
+pipestatus 55 44
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-osh"></a><b>osh</b></td><td>8 <a href="pipeline.test.html#L80">PIPESTATUS is set on simple commands</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'pipestatus 1\npipestatus 55 44\npipestatus 0\n'
+Got      'pipestatus\npipestatus 55 44\npipestatus 55 44\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pipestatus
+pipestatus 55 44
+pipestatus 55 44
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="pipeline.test.html#L100">PIPESTATUS with shopt -s lastpipe</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 6: Bad substitution
+</pre></td></tr><tr><td><a name="details-9-ash"></a><b>ash</b></td><td>9 <a href="pipeline.test.html#L100">PIPESTATUS with shopt -s lastpipe</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '1 2 3\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-9-zsh"></a><b>zsh</b></td><td>9 <a href="pipeline.test.html#L100">PIPESTATUS with shopt -s lastpipe</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="pipeline.test.html#L100">PIPESTATUS with shopt -s lastpipe</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1 2 3\n'
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="pipeline.test.html#L115">|&amp;</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Syntax error: "&amp;" unexpected
+</pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="pipeline.test.html#L115">|&amp;</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'STDERR\nSTDOUT\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected "&amp;"
+</pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="pipeline.test.html#L115">|&amp;</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>STDERR
+close failed in file object destructor:
+sys.excepthook is missing
+lost sys.stderr
+</pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="pipeline.test.html#L115">|&amp;</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'STDERR\nSTDOUT\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>STDERR
+close failed in file object destructor:
+sys.excepthook is missing
+lost sys.stderr
+</pre></td></tr><tr><td><a name="details-10-osh"></a><b>osh</b></td><td>10 <a href="pipeline.test.html#L115">|&amp;</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  stdout_stderr.py |&amp; cat
+                   ^~
+[ stdin ]:1: fatal: |&amp; isn't supported
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="pipeline.test.html#L157">! with { }</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1\n2\nFAILED\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: }
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="pipeline.test.html#L166">! with ( )</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1\n2\nFAILED\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 1: sh: syntax error: echo
+</pre></td></tr><tr><td><a name="details-18-zsh"></a><b>zsh</b></td><td>18 <a href="pipeline.test.html#L180">Evaluation of argv[0] in pipeline occurs in child</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+cmd=echo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="pipeline.test.html#L180">Evaluation of argv[0] in pipeline occurs in child</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1\ncmd=\n'
+Got      '1\ncmd=echo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+cmd=echo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="pipeline.test.html#L180">Evaluation of argv[0] in pipeline occurs in child</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '1\ncmd=\n'
+Got      '1\ncmd=echo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+cmd=echo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-bash"></a><b>bash</b></td><td>19 <a href="pipeline.test.html#L192">bash/dash/mksh run the last command is run in its own process</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>line=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-dash"></a><b>dash</b></td><td>19 <a href="pipeline.test.html#L192">bash/dash/mksh run the last command is run in its own process</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>line=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-ash"></a><b>ash</b></td><td>19 <a href="pipeline.test.html#L192">bash/dash/mksh run the last command is run in its own process</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'line=hi\n'
+Got      'line=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-mksh"></a><b>mksh</b></td><td>19 <a href="pipeline.test.html#L192">bash/dash/mksh run the last command is run in its own process</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>line=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-ksh"></a><b>ksh</b></td><td>19 <a href="pipeline.test.html#L192">bash/dash/mksh run the last command is run in its own process</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'line=hi\n'
+Got      'line=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="pipeline.test.html#L192">bash/dash/mksh run the last command is run in its own process</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'line=hi\n'
+Got      'line=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line=
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-19-sush"></a><b>sush</b></td><td>19 <a href="pipeline.test.html#L192">bash/dash/mksh run the last command is run in its own process</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'line=hi\n'
+Got      'line=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-brush"></a><b>brush</b></td><td>19 <a href="pipeline.test.html#L192">bash/dash/mksh run the last command is run in its own process</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'line=hi\n'
+Got      'line=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-dash"></a><b>dash</b></td><td>20 <a href="pipeline.test.html#L198">shopt -s lastpipe (always on in OSH)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>line=
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+</pre></td></tr><tr><td><a name="details-20-ash"></a><b>ash</b></td><td>20 <a href="pipeline.test.html#L198">shopt -s lastpipe (always on in OSH)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'line=hi\n'
+Got      'line=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line=
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-20-mksh"></a><b>mksh</b></td><td>20 <a href="pipeline.test.html#L198">shopt -s lastpipe (always on in OSH)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>line=
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-20-ksh"></a><b>ksh</b></td><td>20 <a href="pipeline.test.html#L198">shopt -s lastpipe (always on in OSH)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'line=hi\n'
+Got      'line=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line=
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="pipeline.test.html#L198">shopt -s lastpipe (always on in OSH)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'line=hi\n'
+Got      'line=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line=
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-21-dash"></a><b>dash</b></td><td>21 <a href="pipeline.test.html#L205">shopt -s lastpipe (always on in OSH)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>i=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 4: i++: not found
+dash: 4: i++: not found
+dash: 4: i++: not found
+</pre></td></tr><tr><td><a name="details-21-ash"></a><b>ash</b></td><td>21 <a href="pipeline.test.html#L205">shopt -s lastpipe (always on in OSH)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'i=3\n'
+Got      'i=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>i=0
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: i++: not found
+ash: i++: not found
+ash: i++: not found
+</pre></td></tr><tr><td><a name="details-21-mksh"></a><b>mksh</b></td><td>21 <a href="pipeline.test.html#L205">shopt -s lastpipe (always on in OSH)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>i=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-21-ksh"></a><b>ksh</b></td><td>21 <a href="pipeline.test.html#L205">shopt -s lastpipe (always on in OSH)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'i=3\n'
+Got      'i=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>i=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="pipeline.test.html#L205">shopt -s lastpipe (always on in OSH)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'i=3\n'
+Got      'i=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>i=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-22-dash"></a><b>dash</b></td><td>22 <a href="pipeline.test.html#L216">SIGPIPE causes pipeline to die (regression for issue #295)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-22-ash"></a><b>ash</b></td><td>22 <a href="pipeline.test.html#L216">SIGPIPE causes pipeline to die (regression for issue #295)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '141 0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-22-zsh"></a><b>zsh</b></td><td>22 <a href="pipeline.test.html#L216">SIGPIPE causes pipeline to die (regression for issue #295)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-dash"></a><b>dash</b></td><td>25 <a href="pipeline.test.html#L246">shopt -s lastpipe and shopt -s no_last_fork interaction</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="pipeline.test.html#L246">shopt -s lastpipe and shopt -s no_last_fork interaction</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '0\nstatus=1\n0\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-25-brush"></a><b>brush</b></td><td>25 <a href="pipeline.test.html#L246">shopt -s lastpipe and shopt -s no_last_fork interaction</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '0\nstatus=1\n0\nstatus=1\n'
+Got      '0\nstatus=0\n0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+status=0
+0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>shopt: no_fork_last: invalid shell option name
+</pre></td></tr></table></body></html>

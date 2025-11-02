@@ -1,0 +1,3841 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>spec/nameref.test.sh</title>
+<link rel="stylesheet" type="text/css" href="../../../web/src-tree.css" />
+  </head>
+
+      <body class="">
+        <div id="home-link">
+          <a href="https://github.com/oilshell/oil/blob/master/spec/nameref.test.sh">View on Github</a>
+          |
+          <a href="/">oils.pub</a>
+        </div>
+        <table>
+      <tr>
+  <td class=num>1</td>
+  <td id=L1>
+    <span class="line comm">## oils_failures_allowed: 7</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>2</td>
+  <td id=L2>
+    <span class="line comm">## compare_shells: bash mksh</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>3</td>
+  <td id=L3>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>4</td>
+  <td id=L4>
+    <span class="line spec-comment">#### pass array by reference</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>5</td>
+  <td id=L5>
+    <span class="line ">show_value() {</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>6</td>
+  <td id=L6>
+    <span class="line ">  local -n array_name=$1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>7</td>
+  <td id=L7>
+    <span class="line ">  local idx=$2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>8</td>
+  <td id=L8>
+    <span class="line ">  echo "${array_name[$idx]}"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>9</td>
+  <td id=L9>
+    <span class="line ">}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>10</td>
+  <td id=L10>
+    <span class="line ">shadock=(ga bu zo meu)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>11</td>
+  <td id=L11>
+    <span class="line ">show_value shadock 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>12</td>
+  <td id=L12>
+    <span class="line comm">## stdout: zo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>13</td>
+  <td id=L13>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>14</td>
+  <td id=L14>
+    <span class="line spec-comment">#### mutate array by reference</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>15</td>
+  <td id=L15>
+    <span class="line ">set1() {</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>16</td>
+  <td id=L16>
+    <span class="line ">  local -n array_name=$1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>17</td>
+  <td id=L17>
+    <span class="line ">  local val=$2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>18</td>
+  <td id=L18>
+    <span class="line ">  array_name[1]=$val</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>19</td>
+  <td id=L19>
+    <span class="line ">}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>20</td>
+  <td id=L20>
+    <span class="line ">shadock=(a b c d)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>21</td>
+  <td id=L21>
+    <span class="line ">set1 shadock ZZZ</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>22</td>
+  <td id=L22>
+    <span class="line ">echo ${shadock[@]}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>23</td>
+  <td id=L23>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>24</td>
+  <td id=L24>
+    <span class="line ">a ZZZ c d</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>25</td>
+  <td id=L25>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>26</td>
+  <td id=L26>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>27</td>
+  <td id=L27>
+    <span class="line spec-comment">#### pass assoc array by reference</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>28</td>
+  <td id=L28>
+    <span class="line ">show_value() {</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>29</td>
+  <td id=L29>
+    <span class="line ">  local -n array_name=$1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>30</td>
+  <td id=L30>
+    <span class="line ">  local idx=$2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>31</td>
+  <td id=L31>
+    <span class="line ">  echo "${array_name[$idx]}"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>32</td>
+  <td id=L32>
+    <span class="line ">}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>33</td>
+  <td id=L33>
+    <span class="line ">days=([monday]=eggs [tuesday]=bread [sunday]=jam)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>34</td>
+  <td id=L34>
+    <span class="line ">show_value days sunday</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>35</td>
+  <td id=L35>
+    <span class="line comm">## stdout: jam</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>36</td>
+  <td id=L36>
+    <span class="line comm">## BUG mksh stdout: [monday]=eggs</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>37</td>
+  <td id=L37>
+    <span class="line comm">#  mksh note: it coerces "days" to 0?  Horrible.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>38</td>
+  <td id=L38>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>39</td>
+  <td id=L39>
+    <span class="line spec-comment">#### pass local array by reference, relying on DYNAMIC SCOPING</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>40</td>
+  <td id=L40>
+    <span class="line ">show_value() {</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>41</td>
+  <td id=L41>
+    <span class="line ">  local -n array_name=$1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>42</td>
+  <td id=L42>
+    <span class="line ">  local idx=$2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>43</td>
+  <td id=L43>
+    <span class="line ">  echo "${array_name[$idx]}"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>44</td>
+  <td id=L44>
+    <span class="line ">}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>45</td>
+  <td id=L45>
+    <span class="line ">caller() {</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>46</td>
+  <td id=L46>
+    <span class="line ">  local shadock=(ga bu zo meu)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>47</td>
+  <td id=L47>
+    <span class="line ">  show_value shadock 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>48</td>
+  <td id=L48>
+    <span class="line ">}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>49</td>
+  <td id=L49>
+    <span class="line ">caller</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>50</td>
+  <td id=L50>
+    <span class="line comm">## stdout: zo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>51</td>
+  <td id=L51>
+    <span class="line comm"># mksh appears not to have local arrays!</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>52</td>
+  <td id=L52>
+    <span class="line comm">## BUG mksh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>53</td>
+  <td id=L53>
+    <span class="line comm">## BUG mksh status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>54</td>
+  <td id=L54>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>55</td>
+  <td id=L55>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>56</td>
+  <td id=L56>
+    <span class="line spec-comment">#### flag -n and +n</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>57</td>
+  <td id=L57>
+    <span class="line ">x=foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>58</td>
+  <td id=L58>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>59</td>
+  <td id=L59>
+    <span class="line ">ref=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>60</td>
+  <td id=L60>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>61</td>
+  <td id=L61>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>62</td>
+  <td id=L62>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>63</td>
+  <td id=L63>
+    <span class="line ">typeset -n ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>64</td>
+  <td id=L64>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>65</td>
+  <td id=L65>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>66</td>
+  <td id=L66>
+    <span class="line comm"># mutate underlying var</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>67</td>
+  <td id=L67>
+    <span class="line ">x=bar</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>68</td>
+  <td id=L68>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>69</td>
+  <td id=L69>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>70</td>
+  <td id=L70>
+    <span class="line ">typeset +n ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>71</td>
+  <td id=L71>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>72</td>
+  <td id=L72>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>73</td>
+  <td id=L73>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>74</td>
+  <td id=L74>
+    <span class="line ">ref=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>75</td>
+  <td id=L75>
+    <span class="line ">ref=foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>76</td>
+  <td id=L76>
+    <span class="line ">ref=bar</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>77</td>
+  <td id=L77>
+    <span class="line ">ref=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>78</td>
+  <td id=L78>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>79</td>
+  <td id=L79>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>80</td>
+  <td id=L80>
+    <span class="line spec-comment">#### mutating through nameref: ref=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>81</td>
+  <td id=L81>
+    <span class="line ">x=XX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>82</td>
+  <td id=L82>
+    <span class="line ">y=YY</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>83</td>
+  <td id=L83>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>84</td>
+  <td id=L84>
+    <span class="line ">ref=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>85</td>
+  <td id=L85>
+    <span class="line ">ref=y</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>86</td>
+  <td id=L86>
+    <span class="line ">echo 1 ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>87</td>
+  <td id=L87>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>88</td>
+  <td id=L88>
+    <span class="line comm"># now it's a reference</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>89</td>
+  <td id=L89>
+    <span class="line ">typeset -n ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>90</td>
+  <td id=L90>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>91</td>
+  <td id=L91>
+    <span class="line ">echo 2 ref=$ref  # prints YY</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>92</td>
+  <td id=L92>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>93</td>
+  <td id=L93>
+    <span class="line ">ref=XXXX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>94</td>
+  <td id=L94>
+    <span class="line ">echo 3 ref=$ref  # it actually prints y, which is XXXX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>95</td>
+  <td id=L95>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>96</td>
+  <td id=L96>
+    <span class="line comm"># now Y is mutated!</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>97</td>
+  <td id=L97>
+    <span class="line ">echo 4 y=$y</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>98</td>
+  <td id=L98>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>99</td>
+  <td id=L99>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>100</td>
+  <td id=L100>
+    <span class="line ">1 ref=y</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>101</td>
+  <td id=L101>
+    <span class="line ">2 ref=YY</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>102</td>
+  <td id=L102>
+    <span class="line ">3 ref=XXXX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>103</td>
+  <td id=L103>
+    <span class="line ">4 y=XXXX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>104</td>
+  <td id=L104>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>105</td>
+  <td id=L105>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>106</td>
+  <td id=L106>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>107</td>
+  <td id=L107>
+    <span class="line spec-comment">#### flag -n combined ${!ref} -- bash INVERTS</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>108</td>
+  <td id=L108>
+    <span class="line ">foo=FOO  # should NOT use this</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>109</td>
+  <td id=L109>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>110</td>
+  <td id=L110>
+    <span class="line ">x=foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>111</td>
+  <td id=L111>
+    <span class="line ">ref=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>112</td>
+  <td id=L112>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>113</td>
+  <td id=L113>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>114</td>
+  <td id=L114>
+    <span class="line ">echo "!ref=${!ref}"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>115</td>
+  <td id=L115>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>116</td>
+  <td id=L116>
+    <span class="line ">echo 'NOW A NAMEREF'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>117</td>
+  <td id=L117>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>118</td>
+  <td id=L118>
+    <span class="line ">typeset -n ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>119</td>
+  <td id=L119>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>120</td>
+  <td id=L120>
+    <span class="line ">echo "!ref=${!ref}"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>121</td>
+  <td id=L121>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>122</td>
+  <td id=L122>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>123</td>
+  <td id=L123>
+    <span class="line ">ref=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>124</td>
+  <td id=L124>
+    <span class="line ">!ref=foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>125</td>
+  <td id=L125>
+    <span class="line ">NOW A NAMEREF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>126</td>
+  <td id=L126>
+    <span class="line ">ref=foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>127</td>
+  <td id=L127>
+    <span class="line ">!ref=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>128</td>
+  <td id=L128>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>129</td>
+  <td id=L129>
+    <span class="line comm">## N-I mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>130</td>
+  <td id=L130>
+    <span class="line ">ref=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>131</td>
+  <td id=L131>
+    <span class="line ">!ref=ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>132</td>
+  <td id=L132>
+    <span class="line ">NOW A NAMEREF</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>133</td>
+  <td id=L133>
+    <span class="line ">ref=foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>134</td>
+  <td id=L134>
+    <span class="line ">!ref=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>135</td>
+  <td id=L135>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>136</td>
+  <td id=L136>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>137</td>
+  <td id=L137>
+    <span class="line spec-comment">#### named ref with $# doesn't work</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>138</td>
+  <td id=L138>
+    <span class="line ">set -- one two three</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>139</td>
+  <td id=L139>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>140</td>
+  <td id=L140>
+    <span class="line ">ref='#'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>141</td>
+  <td id=L141>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>142</td>
+  <td id=L142>
+    <span class="line ">typeset -n ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>143</td>
+  <td id=L143>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>144</td>
+  <td id=L144>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>145</td>
+  <td id=L145>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>146</td>
+  <td id=L146>
+    <span class="line ">ref=#</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>147</td>
+  <td id=L147>
+    <span class="line ">ref=#</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>148</td>
+  <td id=L148>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>149</td>
+  <td id=L149>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>150</td>
+  <td id=L150>
+    <span class="line comm"># mksh does respect it!!  Gah.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>151</td>
+  <td id=L151>
+    <span class="line comm">## OK mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>152</td>
+  <td id=L152>
+    <span class="line ">ref=#</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>153</td>
+  <td id=L153>
+    <span class="line ">ref=3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>154</td>
+  <td id=L154>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>155</td>
+  <td id=L155>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>156</td>
+  <td id=L156>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>157</td>
+  <td id=L157>
+    <span class="line spec-comment">#### named ref with $# and shopt -s strict_nameref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>158</td>
+  <td id=L158>
+    <span class="line ">shopt -s strict_nameref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>159</td>
+  <td id=L159>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>160</td>
+  <td id=L160>
+    <span class="line ">ref='#'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>161</td>
+  <td id=L161>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>162</td>
+  <td id=L162>
+    <span class="line ">typeset -n ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>163</td>
+  <td id=L163>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>164</td>
+  <td id=L164>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>165</td>
+  <td id=L165>
+    <span class="line ">ref=#</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>166</td>
+  <td id=L166>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>167</td>
+  <td id=L167>
+    <span class="line comm">## status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>168</td>
+  <td id=L168>
+    <span class="line comm">## N-I bash status: 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>169</td>
+  <td id=L169>
+    <span class="line comm">## N-I bash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>170</td>
+  <td id=L170>
+    <span class="line ">ref=#</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>171</td>
+  <td id=L171>
+    <span class="line ">ref=#</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>172</td>
+  <td id=L172>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>173</td>
+  <td id=L173>
+    <span class="line comm">## N-I mksh status: 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>174</td>
+  <td id=L174>
+    <span class="line comm">## N-I mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>175</td>
+  <td id=L175>
+    <span class="line ">ref=#</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>176</td>
+  <td id=L176>
+    <span class="line ">ref=0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>177</td>
+  <td id=L177>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>178</td>
+  <td id=L178>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>179</td>
+  <td id=L179>
+    <span class="line spec-comment">#### named ref with 1 $1 etc.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>180</td>
+  <td id=L180>
+    <span class="line ">set -- one two three</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>181</td>
+  <td id=L181>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>182</td>
+  <td id=L182>
+    <span class="line ">x=X</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>183</td>
+  <td id=L183>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>184</td>
+  <td id=L184>
+    <span class="line ">ref='1'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>185</td>
+  <td id=L185>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>186</td>
+  <td id=L186>
+    <span class="line ">typeset -n ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>187</td>
+  <td id=L187>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>188</td>
+  <td id=L188>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>189</td>
+  <td id=L189>
+    <span class="line comm"># BUG: This is really assigning '1', which is INVALID</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>190</td>
+  <td id=L190>
+    <span class="line comm"># with strict_nameref that degrades!!!</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>191</td>
+  <td id=L191>
+    <span class="line ">ref2='$1'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>192</td>
+  <td id=L192>
+    <span class="line ">echo ref2=$ref2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>193</td>
+  <td id=L193>
+    <span class="line ">typeset -n ref2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>194</td>
+  <td id=L194>
+    <span class="line ">echo ref2=$ref2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>195</td>
+  <td id=L195>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>196</td>
+  <td id=L196>
+    <span class="line ">x=foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>197</td>
+  <td id=L197>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>198</td>
+  <td id=L198>
+    <span class="line ">ref3='x'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>199</td>
+  <td id=L199>
+    <span class="line ">echo ref3=$ref3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>200</td>
+  <td id=L200>
+    <span class="line ">typeset -n ref3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>201</td>
+  <td id=L201>
+    <span class="line ">echo ref3=$ref3</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>202</td>
+  <td id=L202>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>203</td>
+  <td id=L203>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>204</td>
+  <td id=L204>
+    <span class="line ">ref=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>205</td>
+  <td id=L205>
+    <span class="line ">ref=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>206</td>
+  <td id=L206>
+    <span class="line ">ref2=$1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>207</td>
+  <td id=L207>
+    <span class="line ">ref2=$1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>208</td>
+  <td id=L208>
+    <span class="line ">ref3=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>209</td>
+  <td id=L209>
+    <span class="line ">ref3=foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>210</td>
+  <td id=L210>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>211</td>
+  <td id=L211>
+    <span class="line comm">## BUG mksh status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>212</td>
+  <td id=L212>
+    <span class="line comm">## BUG mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>213</td>
+  <td id=L213>
+    <span class="line ">ref=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>214</td>
+  <td id=L214>
+    <span class="line ">ref=one</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>215</td>
+  <td id=L215>
+    <span class="line ">ref2=$1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>216</td>
+  <td id=L216>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>217</td>
+  <td id=L217>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>218</td>
+  <td id=L218>
+    <span class="line spec-comment">#### assign to invalid ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>219</td>
+  <td id=L219>
+    <span class="line ">ref=1   # mksh makes this READ-ONLY!  Because it's not valid.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>220</td>
+  <td id=L220>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>221</td>
+  <td id=L221>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>222</td>
+  <td id=L222>
+    <span class="line ">typeset -n ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>223</td>
+  <td id=L223>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>224</td>
+  <td id=L224>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>225</td>
+  <td id=L225>
+    <span class="line ">ref=foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>226</td>
+  <td id=L226>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>227</td>
+  <td id=L227>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>228</td>
+  <td id=L228>
+    <span class="line ">ref=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>229</td>
+  <td id=L229>
+    <span class="line ">ref=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>230</td>
+  <td id=L230>
+    <span class="line ">ref=foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>231</td>
+  <td id=L231>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>232</td>
+  <td id=L232>
+    <span class="line comm">## OK mksh status: 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>233</td>
+  <td id=L233>
+    <span class="line comm">## OK mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>234</td>
+  <td id=L234>
+    <span class="line ">ref=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>235</td>
+  <td id=L235>
+    <span class="line ">ref=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>236</td>
+  <td id=L236>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>237</td>
+  <td id=L237>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>238</td>
+  <td id=L238>
+    <span class="line spec-comment">#### assign to invalid ref with strict_nameref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>239</td>
+  <td id=L239>
+    <span class="line ">case $SH in *bash|*mksh) exit ;; esac</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>240</td>
+  <td id=L240>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>241</td>
+  <td id=L241>
+    <span class="line ">shopt -s strict_nameref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>242</td>
+  <td id=L242>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>243</td>
+  <td id=L243>
+    <span class="line ">ref=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>244</td>
+  <td id=L244>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>245</td>
+  <td id=L245>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>246</td>
+  <td id=L246>
+    <span class="line ">typeset -n ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>247</td>
+  <td id=L247>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>248</td>
+  <td id=L248>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>249</td>
+  <td id=L249>
+    <span class="line ">ref=foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>250</td>
+  <td id=L250>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>251</td>
+  <td id=L251>
+    <span class="line comm">## status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>252</td>
+  <td id=L252>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>253</td>
+  <td id=L253>
+    <span class="line ">ref=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>254</td>
+  <td id=L254>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>255</td>
+  <td id=L255>
+    <span class="line comm">## N-I bash/mksh status: 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>256</td>
+  <td id=L256>
+    <span class="line comm">## N-I bash/mksh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>257</td>
+  <td id=L257>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>258</td>
+  <td id=L258>
+    <span class="line spec-comment">#### name ref on Undef cell</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>259</td>
+  <td id=L259>
+    <span class="line ">typeset  -n ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>260</td>
+  <td id=L260>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>261</td>
+  <td id=L261>
+    <span class="line comm"># This is technically incorrect: an undefined name shouldn't evaluate to empty</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>262</td>
+  <td id=L262>
+    <span class="line comm"># string.  mksh doesn't allow it.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>263</td>
+  <td id=L263>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>264</td>
+  <td id=L264>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>265</td>
+  <td id=L265>
+    <span class="line ">echo nounset</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>266</td>
+  <td id=L266>
+    <span class="line ">set -o nounset</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>267</td>
+  <td id=L267>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>268</td>
+  <td id=L268>
+    <span class="line comm">## status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>269</td>
+  <td id=L269>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>270</td>
+  <td id=L270>
+    <span class="line ">ref=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>271</td>
+  <td id=L271>
+    <span class="line ">nounset</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>272</td>
+  <td id=L272>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>273</td>
+  <td id=L273>
+    <span class="line comm">## OK mksh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>274</td>
+  <td id=L274>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>275</td>
+  <td id=L275>
+    <span class="line spec-comment">#### assign to empty nameref and invalid nameref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>276</td>
+  <td id=L276>
+    <span class="line ">typeset -n ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>277</td>
+  <td id=L277>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>278</td>
+  <td id=L278>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>279</td>
+  <td id=L279>
+    <span class="line comm"># this is a no-op in bash, should be stricter</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>280</td>
+  <td id=L280>
+    <span class="line ">ref=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>281</td>
+  <td id=L281>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>282</td>
+  <td id=L282>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>283</td>
+  <td id=L283>
+    <span class="line ">typeset -n ref2=undef</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>284</td>
+  <td id=L284>
+    <span class="line ">echo ref2=$ref2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>285</td>
+  <td id=L285>
+    <span class="line ">ref2=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>286</td>
+  <td id=L286>
+    <span class="line ">echo ref2=$ref2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>287</td>
+  <td id=L287>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>288</td>
+  <td id=L288>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>289</td>
+  <td id=L289>
+    <span class="line ">ref=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>290</td>
+  <td id=L290>
+    <span class="line ">ref=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>291</td>
+  <td id=L291>
+    <span class="line ">ref2=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>292</td>
+  <td id=L292>
+    <span class="line ">ref2=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>293</td>
+  <td id=L293>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>294</td>
+  <td id=L294>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>295</td>
+  <td id=L295>
+    <span class="line comm"># mksh gives a good error: empty nameref target</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>296</td>
+  <td id=L296>
+    <span class="line comm">## OK mksh status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>297</td>
+  <td id=L297>
+    <span class="line comm">## OK mksh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>298</td>
+  <td id=L298>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>299</td>
+  <td id=L299>
+    <span class="line spec-comment">#### -n attribute before it has a value</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>300</td>
+  <td id=L300>
+    <span class="line ">typeset -n ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>301</td>
+  <td id=L301>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>302</td>
+  <td id=L302>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>303</td>
+  <td id=L303>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>304</td>
+  <td id=L304>
+    <span class="line comm"># Now that it's a string, it still has the -n attribute</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>305</td>
+  <td id=L305>
+    <span class="line ">x=XX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>306</td>
+  <td id=L306>
+    <span class="line ">ref=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>307</td>
+  <td id=L307>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>308</td>
+  <td id=L308>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>309</td>
+  <td id=L309>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>310</td>
+  <td id=L310>
+    <span class="line ">ref=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>311</td>
+  <td id=L311>
+    <span class="line ">ref=XX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>312</td>
+  <td id=L312>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>313</td>
+  <td id=L313>
+    <span class="line comm">## N-I mksh status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>314</td>
+  <td id=L314>
+    <span class="line comm">## N-I mksh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>315</td>
+  <td id=L315>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>316</td>
+  <td id=L316>
+    <span class="line spec-comment">#### -n attribute on array is hard error, not a warning</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>317</td>
+  <td id=L317>
+    <span class="line ">x=X</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>318</td>
+  <td id=L318>
+    <span class="line ">typeset -n ref #=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>319</td>
+  <td id=L319>
+    <span class="line ">echo hi</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>320</td>
+  <td id=L320>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>321</td>
+  <td id=L321>
+    <span class="line comm"># bash prints warning: REMOVES the nameref attribute here!</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>322</td>
+  <td id=L322>
+    <span class="line ">ref=(x y)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>323</td>
+  <td id=L323>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>324</td>
+  <td id=L324>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>325</td>
+  <td id=L325>
+    <span class="line comm">## status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>326</td>
+  <td id=L326>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>327</td>
+  <td id=L327>
+    <span class="line ">hi</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>328</td>
+  <td id=L328>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>329</td>
+  <td id=L329>
+    <span class="line comm">## N-I mksh status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>330</td>
+  <td id=L330>
+    <span class="line comm">## N-I mksh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>331</td>
+  <td id=L331>
+    <span class="line comm">## BUG bash status: 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>332</td>
+  <td id=L332>
+    <span class="line comm">## BUG bash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>333</td>
+  <td id=L333>
+    <span class="line ">hi</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>334</td>
+  <td id=L334>
+    <span class="line ">ref=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>335</td>
+  <td id=L335>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>336</td>
+  <td id=L336>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>337</td>
+  <td id=L337>
+    <span class="line spec-comment">#### exported nameref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>338</td>
+  <td id=L338>
+    <span class="line ">x=foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>339</td>
+  <td id=L339>
+    <span class="line ">typeset -n -x ref=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>340</td>
+  <td id=L340>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>341</td>
+  <td id=L341>
+    <span class="line comm"># hm bash ignores it but mksh doesn't.  maybe disallow it.</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>342</td>
+  <td id=L342>
+    <span class="line ">printenv.py x ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>343</td>
+  <td id=L343>
+    <span class="line ">echo ---</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>344</td>
+  <td id=L344>
+    <span class="line ">export x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>345</td>
+  <td id=L345>
+    <span class="line ">printenv.py x ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>346</td>
+  <td id=L346>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>347</td>
+  <td id=L347>
+    <span class="line ">None</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>348</td>
+  <td id=L348>
+    <span class="line ">x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>349</td>
+  <td id=L349>
+    <span class="line ">---</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>350</td>
+  <td id=L350>
+    <span class="line ">foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>351</td>
+  <td id=L351>
+    <span class="line ">x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>352</td>
+  <td id=L352>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>353</td>
+  <td id=L353>
+    <span class="line comm">## OK mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>354</td>
+  <td id=L354>
+    <span class="line ">None</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>355</td>
+  <td id=L355>
+    <span class="line ">None</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>356</td>
+  <td id=L356>
+    <span class="line ">---</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>357</td>
+  <td id=L357>
+    <span class="line ">foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>358</td>
+  <td id=L358>
+    <span class="line ">None</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>359</td>
+  <td id=L359>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>360</td>
+  <td id=L360>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>361</td>
+  <td id=L361>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>362</td>
+  <td id=L362>
+    <span class="line spec-comment">#### readonly nameref doesn't prevent assigning through it</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>363</td>
+  <td id=L363>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>364</td>
+  <td id=L364>
+    <span class="line comm"># hm bash also ignores -r when -n is set</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>365</td>
+  <td id=L365>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>366</td>
+  <td id=L366>
+    <span class="line ">x=XX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>367</td>
+  <td id=L367>
+    <span class="line ">typeset -n -r ref=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>368</td>
+  <td id=L368>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>369</td>
+  <td id=L369>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>370</td>
+  <td id=L370>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>371</td>
+  <td id=L371>
+    <span class="line comm"># it feels like I shouldn't be able to mutate this?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>372</td>
+  <td id=L372>
+    <span class="line ">ref=XXXX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>373</td>
+  <td id=L373>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>374</td>
+  <td id=L374>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>375</td>
+  <td id=L375>
+    <span class="line ">x=X</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>376</td>
+  <td id=L376>
+    <span class="line ">echo x=$x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>377</td>
+  <td id=L377>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>378</td>
+  <td id=L378>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>379</td>
+  <td id=L379>
+    <span class="line ">ref=XX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>380</td>
+  <td id=L380>
+    <span class="line ">ref=XXXX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>381</td>
+  <td id=L381>
+    <span class="line ">x=X</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>382</td>
+  <td id=L382>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>383</td>
+  <td id=L383>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>384</td>
+  <td id=L384>
+    <span class="line spec-comment">#### readonly var can't be assigned through nameref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>385</td>
+  <td id=L385>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>386</td>
+  <td id=L386>
+    <span class="line ">x=X</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>387</td>
+  <td id=L387>
+    <span class="line ">typeset -n -r ref=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>388</td>
+  <td id=L388>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>389</td>
+  <td id=L389>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>390</td>
+  <td id=L390>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>391</td>
+  <td id=L391>
+    <span class="line comm"># it feels like I shouldn't be able to mutate this?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>392</td>
+  <td id=L392>
+    <span class="line ">ref=XX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>393</td>
+  <td id=L393>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>394</td>
+  <td id=L394>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>395</td>
+  <td id=L395>
+    <span class="line comm"># now the underling variable is immutable</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>396</td>
+  <td id=L396>
+    <span class="line ">typeset -r x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>397</td>
+  <td id=L397>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>398</td>
+  <td id=L398>
+    <span class="line ">ref=XXX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>399</td>
+  <td id=L399>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>400</td>
+  <td id=L400>
+    <span class="line ">echo x=$x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>401</td>
+  <td id=L401>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>402</td>
+  <td id=L402>
+    <span class="line comm">## status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>403</td>
+  <td id=L403>
+    <span class="line comm">## OK mksh status: 2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>404</td>
+  <td id=L404>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>405</td>
+  <td id=L405>
+    <span class="line ">ref=X</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>406</td>
+  <td id=L406>
+    <span class="line ">ref=XX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>407</td>
+  <td id=L407>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>408</td>
+  <td id=L408>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>409</td>
+  <td id=L409>
+    <span class="line comm">## OK bash status: 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>410</td>
+  <td id=L410>
+    <span class="line comm">## OK bash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>411</td>
+  <td id=L411>
+    <span class="line ">ref=X</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>412</td>
+  <td id=L412>
+    <span class="line ">ref=XX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>413</td>
+  <td id=L413>
+    <span class="line ">ref=XX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>414</td>
+  <td id=L414>
+    <span class="line ">x=XX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>415</td>
+  <td id=L415>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>416</td>
+  <td id=L416>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>417</td>
+  <td id=L417>
+    <span class="line spec-comment">#### unset nameref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>418</td>
+  <td id=L418>
+    <span class="line ">x=X</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>419</td>
+  <td id=L419>
+    <span class="line ">typeset -n ref=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>420</td>
+  <td id=L420>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>421</td>
+  <td id=L421>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>422</td>
+  <td id=L422>
+    <span class="line comm"># this works</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>423</td>
+  <td id=L423>
+    <span class="line ">unset ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>424</td>
+  <td id=L424>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>425</td>
+  <td id=L425>
+    <span class="line ">echo x=$x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>426</td>
+  <td id=L426>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>427</td>
+  <td id=L427>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>428</td>
+  <td id=L428>
+    <span class="line ">ref=X</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>429</td>
+  <td id=L429>
+    <span class="line ">ref=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>430</td>
+  <td id=L430>
+    <span class="line ">x=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>431</td>
+  <td id=L431>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>432</td>
+  <td id=L432>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>433</td>
+  <td id=L433>
+    <span class="line spec-comment">#### Chain of namerefs</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>434</td>
+  <td id=L434>
+    <span class="line ">x=foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>435</td>
+  <td id=L435>
+    <span class="line ">typeset -n ref=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>436</td>
+  <td id=L436>
+    <span class="line ">typeset -n ref_to_ref=ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>437</td>
+  <td id=L437>
+    <span class="line ">echo ref_to_ref=$ref_to_ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>438</td>
+  <td id=L438>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>439</td>
+  <td id=L439>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>440</td>
+  <td id=L440>
+    <span class="line ">ref_to_ref=foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>441</td>
+  <td id=L441>
+    <span class="line ">ref=foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>442</td>
+  <td id=L442>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>443</td>
+  <td id=L443>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>444</td>
+  <td id=L444>
+    <span class="line spec-comment">#### Mutually recursive namerefs detected on READ</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>445</td>
+  <td id=L445>
+    <span class="line ">typeset -n ref1=ref2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>446</td>
+  <td id=L446>
+    <span class="line ">typeset -n ref2=ref1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>447</td>
+  <td id=L447>
+    <span class="line ">echo defined</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>448</td>
+  <td id=L448>
+    <span class="line ">echo ref1=$ref1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>449</td>
+  <td id=L449>
+    <span class="line ">echo ref2=$ref1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>450</td>
+  <td id=L450>
+    <span class="line comm">## status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>451</td>
+  <td id=L451>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>452</td>
+  <td id=L452>
+    <span class="line ">defined</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>453</td>
+  <td id=L453>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>454</td>
+  <td id=L454>
+    <span class="line comm">## OK mksh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>455</td>
+  <td id=L455>
+    <span class="line comm">## BUG bash status: 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>456</td>
+  <td id=L456>
+    <span class="line comm">## BUG bash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>457</td>
+  <td id=L457>
+    <span class="line ">defined</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>458</td>
+  <td id=L458>
+    <span class="line ">ref1=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>459</td>
+  <td id=L459>
+    <span class="line ">ref2=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>460</td>
+  <td id=L460>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>461</td>
+  <td id=L461>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>462</td>
+  <td id=L462>
+    <span class="line spec-comment">#### Mutually recursive namerefs detected on WRITE</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>463</td>
+  <td id=L463>
+    <span class="line ">typeset -n ref1=ref2</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>464</td>
+  <td id=L464>
+    <span class="line ">typeset -n ref2=ref1  # not detected here</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>465</td>
+  <td id=L465>
+    <span class="line ">echo defined $?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>466</td>
+  <td id=L466>
+    <span class="line ">ref1=z  # detected here</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>467</td>
+  <td id=L467>
+    <span class="line ">echo mutated $?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>468</td>
+  <td id=L468>
+    <span class="line comm">## status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>469</td>
+  <td id=L469>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>470</td>
+  <td id=L470>
+    <span class="line ">defined 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>471</td>
+  <td id=L471>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>472</td>
+  <td id=L472>
+    <span class="line comm">## OK mksh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>473</td>
+  <td id=L473>
+    <span class="line comm">## BUG bash status: 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>474</td>
+  <td id=L474>
+    <span class="line comm">## BUG bash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>475</td>
+  <td id=L475>
+    <span class="line ">defined 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>476</td>
+  <td id=L476>
+    <span class="line ">mutated 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>477</td>
+  <td id=L477>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>478</td>
+  <td id=L478>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>479</td>
+  <td id=L479>
+    <span class="line spec-comment">#### Dynamic scope with namerefs</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>480</td>
+  <td id=L480>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>481</td>
+  <td id=L481>
+    <span class="line ">f3() {</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>482</td>
+  <td id=L482>
+    <span class="line ">  local -n ref=$1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>483</td>
+  <td id=L483>
+    <span class="line ">  ref=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>484</td>
+  <td id=L484>
+    <span class="line ">}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>485</td>
+  <td id=L485>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>486</td>
+  <td id=L486>
+    <span class="line ">f2() {</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>487</td>
+  <td id=L487>
+    <span class="line ">  f3 "$@"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>488</td>
+  <td id=L488>
+    <span class="line ">}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>489</td>
+  <td id=L489>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>490</td>
+  <td id=L490>
+    <span class="line ">f1() {</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>491</td>
+  <td id=L491>
+    <span class="line ">  local F1=F1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>492</td>
+  <td id=L492>
+    <span class="line ">  echo F1=$F1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>493</td>
+  <td id=L493>
+    <span class="line ">  f2 F1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>494</td>
+  <td id=L494>
+    <span class="line ">  echo F1=$F1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>495</td>
+  <td id=L495>
+    <span class="line ">}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>496</td>
+  <td id=L496>
+    <span class="line ">f1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>497</td>
+  <td id=L497>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>498</td>
+  <td id=L498>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>499</td>
+  <td id=L499>
+    <span class="line ">F1=F1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>500</td>
+  <td id=L500>
+    <span class="line ">F1=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>501</td>
+  <td id=L501>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>502</td>
+  <td id=L502>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>503</td>
+  <td id=L503>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>504</td>
+  <td id=L504>
+    <span class="line spec-comment">#### change reference itself</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>505</td>
+  <td id=L505>
+    <span class="line ">x=XX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>506</td>
+  <td id=L506>
+    <span class="line ">y=YY</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>507</td>
+  <td id=L507>
+    <span class="line ">typeset -n ref=x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>508</td>
+  <td id=L508>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>509</td>
+  <td id=L509>
+    <span class="line ">echo x=$x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>510</td>
+  <td id=L510>
+    <span class="line ">echo y=$y</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>511</td>
+  <td id=L511>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>512</td>
+  <td id=L512>
+    <span class="line ">echo ----</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>513</td>
+  <td id=L513>
+    <span class="line ">typeset -n ref=y</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>514</td>
+  <td id=L514>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>515</td>
+  <td id=L515>
+    <span class="line ">echo x=$x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>516</td>
+  <td id=L516>
+    <span class="line ">echo y=$y</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>517</td>
+  <td id=L517>
+    <span class="line ">echo ----</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>518</td>
+  <td id=L518>
+    <span class="line ">ref=z</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>519</td>
+  <td id=L519>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>520</td>
+  <td id=L520>
+    <span class="line ">echo x=$x</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>521</td>
+  <td id=L521>
+    <span class="line ">echo y=$y</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>522</td>
+  <td id=L522>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>523</td>
+  <td id=L523>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>524</td>
+  <td id=L524>
+    <span class="line ">ref=XX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>525</td>
+  <td id=L525>
+    <span class="line ">x=XX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>526</td>
+  <td id=L526>
+    <span class="line ">y=YY</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>527</td>
+  <td id=L527>
+    <span class="line ">----</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>528</td>
+  <td id=L528>
+    <span class="line ">ref=YY</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>529</td>
+  <td id=L529>
+    <span class="line ">x=XX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>530</td>
+  <td id=L530>
+    <span class="line ">y=YY</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>531</td>
+  <td id=L531>
+    <span class="line ">----</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>532</td>
+  <td id=L532>
+    <span class="line ">ref=z</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>533</td>
+  <td id=L533>
+    <span class="line ">x=XX</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>534</td>
+  <td id=L534>
+    <span class="line ">y=z</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>535</td>
+  <td id=L535>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>536</td>
+  <td id=L536>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>537</td>
+  <td id=L537>
+    <span class="line spec-comment">#### a[2] in nameref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>538</td>
+  <td id=L538>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>539</td>
+  <td id=L539>
+    <span class="line ">typeset -n ref='a[2]'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>540</td>
+  <td id=L540>
+    <span class="line ">a=(zero one two three)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>541</td>
+  <td id=L541>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>542</td>
+  <td id=L542>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>543</td>
+  <td id=L543>
+    <span class="line ">ref=two</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>544</td>
+  <td id=L544>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>545</td>
+  <td id=L545>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>546</td>
+  <td id=L546>
+    <span class="line spec-comment">#### a[expr] in nameref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>547</td>
+  <td id=L547>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>548</td>
+  <td id=L548>
+    <span class="line comm"># this confuses code and data</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>549</td>
+  <td id=L549>
+    <span class="line ">typeset -n ref='a[$(echo 2) + 1]'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>550</td>
+  <td id=L550>
+    <span class="line ">a=(zero one two three)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>551</td>
+  <td id=L551>
+    <span class="line ">echo ref=$ref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>552</td>
+  <td id=L552>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>553</td>
+  <td id=L553>
+    <span class="line ">ref=three</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>554</td>
+  <td id=L554>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>555</td>
+  <td id=L555>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>556</td>
+  <td id=L556>
+    <span class="line spec-comment">#### a[@] in nameref</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>557</td>
+  <td id=L557>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>558</td>
+  <td id=L558>
+    <span class="line comm"># this confuses code and data</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>559</td>
+  <td id=L559>
+    <span class="line ">typeset -n ref='a[@]'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>560</td>
+  <td id=L560>
+    <span class="line ">a=('A B' C)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>561</td>
+  <td id=L561>
+    <span class="line ">argv.py ref "$ref"  # READ through ref works</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>562</td>
+  <td id=L562>
+    <span class="line ">ref=(X Y Z)    # WRITE through doesn't work</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>563</td>
+  <td id=L563>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>564</td>
+  <td id=L564>
+    <span class="line ">argv.py 'ref[@]' "${ref[@]}"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>565</td>
+  <td id=L565>
+    <span class="line ">argv.py ref "$ref"  # JOINING mangles the array?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>566</td>
+  <td id=L566>
+    <span class="line ">argv.py 'a[@]' "${a[@]}"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>567</td>
+  <td id=L567>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>568</td>
+  <td id=L568>
+    <span class="line ">['ref', 'A B', 'C']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>569</td>
+  <td id=L569>
+    <span class="line ">status=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>570</td>
+  <td id=L570>
+    <span class="line ">['ref[@]']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>571</td>
+  <td id=L571>
+    <span class="line ">['ref', 'A B', 'C']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>572</td>
+  <td id=L572>
+    <span class="line ">['a[@]', 'A B', 'C']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>573</td>
+  <td id=L573>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>574</td>
+  <td id=L574>
+    <span class="line comm">## OK mksh status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>575</td>
+  <td id=L575>
+    <span class="line comm">## OK mksh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>576</td>
+  <td id=L576>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>577</td>
+  <td id=L577>
+    <span class="line spec-comment">#### mutate through nameref: ref[0]=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>578</td>
+  <td id=L578>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>579</td>
+  <td id=L579>
+    <span class="line comm"># This is DIFFERENT than the nameref itself being 'array[0]' !</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>580</td>
+  <td id=L580>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>581</td>
+  <td id=L581>
+    <span class="line ">array=(X Y Z)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>582</td>
+  <td id=L582>
+    <span class="line ">typeset -n ref=array</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>583</td>
+  <td id=L583>
+    <span class="line ">ref[0]=xx</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>584</td>
+  <td id=L584>
+    <span class="line ">echo ${array[@]}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>585</td>
+  <td id=L585>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>586</td>
+  <td id=L586>
+    <span class="line ">xx Y Z</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>587</td>
+  <td id=L587>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>588</td>
+  <td id=L588>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>589</td>
+  <td id=L589>
+    <span class="line spec-comment">#### bad mutation through nameref: ref[0]= where ref is array[0]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>590</td>
+  <td id=L590>
+    <span class="line ">array=(X Y Z)</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>591</td>
+  <td id=L591>
+    <span class="line ">typeset -n ref='array[0]'</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>592</td>
+  <td id=L592>
+    <span class="line ">ref[0]=foo  # error in bash: 'array[0]': not a valid identifier</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>593</td>
+  <td id=L593>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>594</td>
+  <td id=L594>
+    <span class="line ">echo ${array[@]}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>595</td>
+  <td id=L595>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>596</td>
+  <td id=L596>
+    <span class="line ">status=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>597</td>
+  <td id=L597>
+    <span class="line ">X Y Z</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>598</td>
+  <td id=L598>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>599</td>
+  <td id=L599>
+    <span class="line comm">## BUG mksh STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>600</td>
+  <td id=L600>
+    <span class="line ">status=0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>601</td>
+  <td id=L601>
+    <span class="line ">foo Y Z</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>602</td>
+  <td id=L602>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>603</td>
+  <td id=L603>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>604</td>
+  <td id=L604>
+    <span class="line spec-comment">#### @ in nameref isn't supported, unlike in ${!ref}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>605</td>
+  <td id=L605>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>606</td>
+  <td id=L606>
+    <span class="line ">set -- A B</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>607</td>
+  <td id=L607>
+    <span class="line ">typeset -n ref='@'  # bash gives an error here</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>608</td>
+  <td id=L608>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>609</td>
+  <td id=L609>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>610</td>
+  <td id=L610>
+    <span class="line ">echo ref=$ref  # bash doesn't give an error here</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>611</td>
+  <td id=L611>
+    <span class="line ">echo status=$?</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>612</td>
+  <td id=L612>
+    <span class="line comm">## status: 1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>613</td>
+  <td id=L613>
+    <span class="line comm">## stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>614</td>
+  <td id=L614>
+    <span class="line comm">## OK bash status: 0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>615</td>
+  <td id=L615>
+    <span class="line comm">## OK bash STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>616</td>
+  <td id=L616>
+    <span class="line ">status=1</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>617</td>
+  <td id=L617>
+    <span class="line ">ref=</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>618</td>
+  <td id=L618>
+    <span class="line ">status=0</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>619</td>
+  <td id=L619>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>620</td>
+  <td id=L620>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>621</td>
+  <td id=L621>
+    <span class="line spec-comment">#### Unquoted assoc reference on RHS</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>622</td>
+  <td id=L622>
+    <span class="line ">typeset -A bashup_ev_r</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>623</td>
+  <td id=L623>
+    <span class="line ">bashup_ev_r['foo']=bar</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>624</td>
+  <td id=L624>
+    <span class="line "></span>
+  </td>
+</tr>
+<tr>
+  <td class=num>625</td>
+  <td id=L625>
+    <span class="line ">p() {</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>626</td>
+  <td id=L626>
+    <span class="line ">  local s=foo</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>627</td>
+  <td id=L627>
+    <span class="line ">  local -n e=bashup_ev["$s"] f=bashup_ev_r["$s"]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>628</td>
+  <td id=L628>
+    <span class="line comm">  # Different!</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>629</td>
+  <td id=L629>
+    <span class="line comm">  #local e=bashup_ev["$s"] f=bashup_ev_r["$s"]</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>630</td>
+  <td id=L630>
+    <span class="line ">  argv.py "$f"</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>631</td>
+  <td id=L631>
+    <span class="line ">}</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>632</td>
+  <td id=L632>
+    <span class="line ">p</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>633</td>
+  <td id=L633>
+    <span class="line comm">## STDOUT:</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>634</td>
+  <td id=L634>
+    <span class="line ">['bar']</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>635</td>
+  <td id=L635>
+    <span class="line comm">## END</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>636</td>
+  <td id=L636>
+    <span class="line comm">## N-I mksh stdout-json: ""</span>
+  </td>
+</tr>
+<tr>
+  <td class=num>637</td>
+  <td id=L637>
+    <span class="line comm">## N-I mksh status: 1</span>
+  </td>
+</tr>
+
+        </table>
+      </body>
+    </html>

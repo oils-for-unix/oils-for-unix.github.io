@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-history: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-history.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>7</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td><td>9</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>10</td><td>7</td><td>10</td><td>10</td><td>10</td><td>16</td><td>17</td><td>16</td><td>7</td><td></td></tr>
+<tr><td class="timeout">TIME</td> <td>9</td><td>6</td><td>9</td><td>6</td><td>6</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td>17</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-history.test.html#L6">history -a</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-0-bash">details</a></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"><a href="#details-0-ash">details</a></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"><a href="#details-0-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-history.test.html#L38">history -w writes out the in-memory history to the history file</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"><a href="#details-1-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-history.test.html#L57">history -r reads from the history file, and appends it to the current history</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-history.test.html#L75">history -n reads *new* commands from the history file, and appends them to the current history</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"><a href="#details-3-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-history.test.html#L97">history -c clears in-memory history</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-4-bash">details</a></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-history.test.html#L114">history -d to delete 1 item</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-history.test.html#L130">history -d to delete history from end</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-6-bash">details</a></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"><a href="#details-6-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-history.test.html#L184">HISTFILE is defined initially</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-7-bash">details</a></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-history.test.html#L197">HISTFILE must point to a file</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-8-bash">details</a></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-history.test.html#L215">HISTFILE set to array</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-9-bash">details</a></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"><a href="#details-9-zsh">details</a></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-history.test.html#L237">HISTFILE unset</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-10-bash">details</a></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-history.test.html#L253">history usage</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-11-bash">details</a></td><td class="details-row"><a href="#details-11-dash">details</a></td><td class="details-row"><a href="#details-11-ash">details</a></td><td class="details-row"><a href="#details-11-zsh">details</a></td><td class="details-row"><a href="#details-11-mksh">details</a></td><td class="details-row"><a href="#details-11-ksh">details</a></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-history.test.html#L272">HISTSIZE shrinks the in-memory history when changed</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-dash">details</a></td><td class="details-row"><a href="#details-12-ash">details</a></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"><a href="#details-12-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-history.test.html#L289">HISTFILESIZE shrinks the history file when changed</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"><a href="#details-13-ksh">details</a></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"><a href="#details-13-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-history.test.html#L302">recording history can be toggled with set -o/+o history</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-14-bash">details</a></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"><a href="#details-14-ash">details</a></td><td class="details-row"><a href="#details-14-zsh">details</a></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"><a href="#details-14-brush">details</a></td><td class="details-row"><a href="#details-14-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-history.test.html#L327">shopt histappend toggle check</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"><a href="#details-15-ash">details</a></td><td class="details-row"><a href="#details-15-zsh">details</a></td><td class="details-row"><a href="#details-15-mksh">details</a></td><td class="details-row"><a href="#details-15-ksh">details</a></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"><a href="#details-15-brush">details</a></td><td class="details-row"><a href="#details-15-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-history.test.html#L348">shopt histappend - osh ignores shopt and appends, bash sometimes overwrites</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-16-bash">details</a></td><td class="details-row"><a href="#details-16-dash">details</a></td><td class="details-row"><a href="#details-16-ash">details</a></td><td class="details-row"><a href="#details-16-zsh">details</a></td><td class="details-row"><a href="#details-16-mksh">details</a></td><td class="details-row"><a href="#details-16-ksh">details</a></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"><a href="#details-16-sush">details</a></td><td class="details-row"><a href="#details-16-brush">details</a></td><td class="details-row"><a href="#details-16-osh">details</a></td><td class="details-row"></td></tr>
+</table>
+<pre>23 passed, 2 OK, 0 not implemented, 0 BUG, 103 failed, 42 timeouts, 0 cases skipped
+7 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="builtin-history.test.html#L6">history -a</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1\nHISTFILE=tmp\necho 1\nhistory -a\n2\nHISTFILE=tmp\necho 1\nhistory -a\n^D\n'
+Got      '1\n2\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+</pre><i>stderr:</i> <br/>
+<pre>$ $ sh: history: No such file or directory
+$ $ $ $ sh: history: No such file or directory
+$ cat: tmp: No such file or directory
+$ $ $ $ cat: tmp: No such file or directory
+$ $ munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="builtin-history.test.html#L6">history -a</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '1\nHISTFILE=tmp\necho 1\nhistory -a\n2\nHISTFILE=tmp\necho 1\nhistory -a\n^D\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>: line : set: -i: invalid option
+</pre></td></tr><tr><td><a name="details-0-brush"></a><b>brush</b></td><td>0 <a href="builtin-history.test.html#L6">history -a</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '1\nHISTFILE=tmp\necho 1\nhistory -a\n2\nHISTFILE=tmp\necho 1\nhistory -a\n^D\n'
+Got      '1\nHISTFILE=tmp\necho 1\nhistory -a\n2\nHISTFILE=tmp\necho 1\nhistory -a\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+HISTFILE=tmp
+echo 1
+history -a
+2
+HISTFILE=tmp
+echo 1
+history -a
+</pre><i>stderr:</i> <br/>
+<pre>exit
+</pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="builtin-history.test.html#L38">history -w writes out the in-memory history to the history file</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'found=1\n'
+Got      'found=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>found=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 5: history: not found
+dash: 7: history: not found
+</pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="builtin-history.test.html#L38">history -w writes out the in-memory history to the history file</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'found=1\n'
+Got      'found=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>found=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="builtin-history.test.html#L38">history -w writes out the in-memory history to the history file</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'found=1\n'
+Got      'found=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>found=0
+</pre><i>stderr:</i> <br/>
+<pre>zsh: bad option: -c
+zsh: bad option: -w
+</pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="builtin-history.test.html#L38">history -w writes out the in-memory history to the history file</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'found=1\n'
+Got      'found=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>found=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: fc: history functions not available
+mksh: &lt;stdin&gt;[7]: fc: history functions not available
+</pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="builtin-history.test.html#L38">history -w writes out the in-memory history to the history file</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'found=1\n'
+Got      'found=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>found=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: fc: history functions not available
+E: ksh: &lt;stdin&gt;[7]: fc: history functions not available
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-history.test.html#L38">history -w writes out the in-memory history to the history file</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'found=1\n'
+Got      'found=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>found=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: history: No such file or directory
+sh: history: No such file or directory
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="builtin-history.test.html#L38">history -w writes out the in-memory history to the history file</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'found=1\n'
+Got      'found=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>found=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: history: -w: invalid option
+</pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="builtin-history.test.html#L38">history -w writes out the in-memory history to the history file</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'found=1\n'
+Got      'found=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>found=0
+</pre><i>stderr:</i> <br/>
+<pre>history: history not available in this shell
+history: history not available in this shell
+</pre></td></tr><tr><td><a name="details-1-osh"></a><b>osh</b></td><td>1 <a href="builtin-history.test.html#L38">history -w writes out the in-memory history to the history file</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'found=1\n'
+Got      'found=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>found=0
+</pre><i>stderr:</i> <br/>
+<pre>  history -w # Overwrite history file
+          ^~
+[ stdin ]:7: 'history' doesn't accept flag -w
+</pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="builtin-history.test.html#L57">history -r reads from the history file, and appends it to the current history</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '20\n'
+Got      '0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 5: history: not found
+dash: 7: history: not found
+dash: 8: history: not found
+dash: 10: history: not found
+</pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="builtin-history.test.html#L57">history -r reads from the history file, and appends it to the current history</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '20\n'
+Got      '0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="builtin-history.test.html#L57">history -r reads from the history file, and appends it to the current history</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '20\n'
+Got      '0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre>zsh: bad option: -c
+fc: no such event: 1
+fc: no such event: 1
+fc: no such event: 1
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="builtin-history.test.html#L57">history -r reads from the history file, and appends it to the current history</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '20\n'
+Got      '0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: fc: history functions not available
+mksh: &lt;stdin&gt;[7]: fc: history functions not available
+mksh: &lt;stdin&gt;[8]: fc: history functions not available
+mksh: &lt;stdin&gt;[10]: fc: history functions not available
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="builtin-history.test.html#L57">history -r reads from the history file, and appends it to the current history</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '20\n'
+Got      '0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: fc: history functions not available
+E: ksh: &lt;stdin&gt;[7]: fc: history functions not available
+E: ksh: &lt;stdin&gt;[8]: fc: history functions not available
+E: ksh: &lt;stdin&gt;[10]: fc: history functions not available
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="builtin-history.test.html#L57">history -r reads from the history file, and appends it to the current history</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '20\n'
+Got      '0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre>sh: history: No such file or directory
+sh: history: No such file or directory
+sh: history: No such file or directory
+sh: history: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="builtin-history.test.html#L57">history -r reads from the history file, and appends it to the current history</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '20\n'
+Got      '10\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>10
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: history: -r: invalid option
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: history: -r: invalid option
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="builtin-history.test.html#L57">history -r reads from the history file, and appends it to the current history</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '20\n'
+Got      '0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre>history: history not available in this shell
+history: history not available in this shell
+history: history not available in this shell
+history: history not available in this shell
+</pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="builtin-history.test.html#L75">history -n reads *new* commands from the history file, and appends them to the current history</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '10\n10\n'
+Got      '0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 7: history: not found
+dash: 8: history: not found
+dash: 9: history: not found
+dash: 11: history: not found
+dash: 12: history: not found
+</pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="builtin-history.test.html#L75">history -n reads *new* commands from the history file, and appends them to the current history</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '10\n10\n'
+Got      '0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="builtin-history.test.html#L75">history -n reads *new* commands from the history file, and appends them to the current history</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '10\n10\n'
+Got      '0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre>zsh: bad option: -c
+fc: no such event: 1
+fc: no such event: 1
+fc: no such event: 1
+fc: no such event: 1
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="builtin-history.test.html#L75">history -n reads *new* commands from the history file, and appends them to the current history</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '10\n10\n'
+Got      '0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[7]: fc: history functions not available
+mksh: &lt;stdin&gt;[8]: fc: history functions not available
+mksh: &lt;stdin&gt;[9]: fc: history functions not available
+mksh: &lt;stdin&gt;[11]: fc: history functions not available
+mksh: &lt;stdin&gt;[12]: fc: history functions not available
+</pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="builtin-history.test.html#L75">history -n reads *new* commands from the history file, and appends them to the current history</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '10\n10\n'
+Got      '0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[7]: fc: history functions not available
+E: ksh: &lt;stdin&gt;[8]: fc: history functions not available
+E: ksh: &lt;stdin&gt;[9]: fc: history functions not available
+E: ksh: &lt;stdin&gt;[11]: fc: history functions not available
+E: ksh: &lt;stdin&gt;[12]: fc: history functions not available
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="builtin-history.test.html#L75">history -n reads *new* commands from the history file, and appends them to the current history</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '10\n10\n'
+Got      '0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre>sh: history: No such file or directory
+sh: history: No such file or directory
+sh: history: No such file or directory
+sh: history: No such file or directory
+sh: history: No such file or directory
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="builtin-history.test.html#L75">history -n reads *new* commands from the history file, and appends them to the current history</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '10\n10\n'
+Got      '0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: history: -r: invalid option
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: history: -n: invalid option
+</pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="builtin-history.test.html#L75">history -n reads *new* commands from the history file, and appends them to the current history</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '10\n10\n'
+Got      '0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre>history: history not available in this shell
+history: history not available in this shell
+history: history not available in this shell
+history: history not available in this shell
+history: history not available in this shell
+</pre></td></tr><tr><td><a name="details-3-osh"></a><b>osh</b></td><td>3 <a href="builtin-history.test.html#L75">history -n reads *new* commands from the history file, and appends them to the current history</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected '10\n10\n'
+Got      '10\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>10
+0
+</pre><i>stderr:</i> <br/>
+<pre>  HISTFILE=tmp2 history -n
+                        ^~
+[ stdin ]:9: 'history' doesn't accept flag -n
+</pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="builtin-history.test.html#L97">history -c clears in-memory history</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '1\n^D\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 0: Illegal option --
+</pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="builtin-history.test.html#L97">history -c clears in-memory history</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '1\n^D\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no such option: norc
+</pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="builtin-history.test.html#L97">history -c clears in-memory history</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '1\n^D\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: mksh: --: unknown option
+</pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="builtin-history.test.html#L97">history -c clears in-memory history</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '1\n^D\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: --: unknown option
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="builtin-history.test.html#L97">history -c clears in-memory history</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1\n^D\n'
+Got      '0\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre>$ $ $ sh: history: No such file or directory
+$ sh: history: No such file or directory
+$ munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="builtin-history.test.html#L97">history -c clears in-memory history</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '1\n^D\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>: line : set: --norc: invalid option
+</pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="builtin-history.test.html#L97">history -c clears in-memory history</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '1\n^D\n'
+Got      '1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre>exit
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="builtin-history.test.html#L114">history -d to delete 1 item</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=1\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: history: -r: invalid option
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: history: -d: invalid option
+</pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="builtin-history.test.html#L130">history -d to delete history from end</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '42\n43\n44\nstatus=0\nstatus=0\nstatus=0\nstatus=1\n^D\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 0: Illegal option --
+</pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="builtin-history.test.html#L130">history -d to delete history from end</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '42\n43\n44\nstatus=0\nstatus=0\nstatus=0\nstatus=1\n^D\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: no such option: norc
+</pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="builtin-history.test.html#L130">history -d to delete history from end</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '42\n43\n44\nstatus=0\nstatus=0\nstatus=0\nstatus=1\n^D\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: mksh: --: unknown option
+</pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="builtin-history.test.html#L130">history -d to delete history from end</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '42\n43\n44\nstatus=0\nstatus=0\nstatus=0\nstatus=1\n^D\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: --: unknown option
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="builtin-history.test.html#L130">history -d to delete history from end</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '42\n43\n44\nstatus=0\nstatus=0\nstatus=0\nstatus=1\n^D\n'
+Got      '42\n43\n44\nstatus=127\nstatus=127\nstatus=127\nstatus=127\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      139
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>42
+43
+44
+status=127
+status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>$ $ $ $ $ $ sh: history: No such file or directory
+$ $ sh: history: No such file or directory
+$ $ $ sh: history: No such file or directory
+$ $ sh: history: No such file or directory
+$ $ sh: history: No such file or directory
+$ $ $ </pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="builtin-history.test.html#L130">history -d to delete history from end</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '42\n43\n44\nstatus=0\nstatus=0\nstatus=0\nstatus=1\n^D\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>: line : set: --norc: invalid option
+</pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="builtin-history.test.html#L130">history -d to delete history from end</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '42\n43\n44\nstatus=0\nstatus=0\nstatus=0\nstatus=1\n^D\n'
+Got      '42\n43\n44\nstatus=0\nstatus=0\nstatus=0\nstatus=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>42
+43
+44
+status=0
+status=0
+status=0
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>index past end of history
+exit
+</pre></td></tr><tr><td><a name="details-6-osh"></a><b>osh</b></td><td>6 <a href="builtin-history.test.html#L130">history -d to delete history from end</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected '42\n43\n44\nstatus=0\nstatus=0\nstatus=0\nstatus=1\n^D\n'
+Got      '42\n43\n44\nstatus=0\nstatus=2\nstatus=2\nstatus=2\n^D\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>42
+43
+44
+status=0
+status=2
+status=2
+status=2
+^D
+</pre><i>stderr:</i> <br/>
+<pre>osh-0.36$ osh-0.36$ osh-0.36$ osh-0.36$ osh-0.36$ osh-0.36$ osh-0.36$ osh-0.36$ osh-0.36$ osh-0.36$ osh-0.36$   history -d -1
+             ^~
+[ stdin -i ]:11: 'history' got invalid integer for -d: -1
+osh-0.36$ osh-0.36$   history -d -2
+             ^~
+[ stdin -i ]:13: 'history' got invalid integer for -d: -2
+osh-0.36$ osh-0.36$   history -d 99
+  ^~~~~~~
+[ stdin -i ]:15: 'history' couldn't find item 99
+osh-0.36$ osh-0.36$ osh-0.36$ osh-0.36$ osh-0.36$ </pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="builtin-history.test.html#L184">HISTFILE is defined initially</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'exists\n^D\n'
+Got      'exists\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>exists
+</pre><i>stderr:</i> <br/>
+<pre>$ $ $ $ munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="builtin-history.test.html#L184">HISTFILE is defined initially</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'exists\n^D\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>: line : set: -i: invalid option
+</pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="builtin-history.test.html#L184">HISTFILE is defined initially</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'exists\n^D\n'
+Got      'exists\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>exists
+</pre><i>stderr:</i> <br/>
+<pre>exit
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="builtin-history.test.html#L197">HISTFILE must point to a file</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=1\n^D\n'
+Got      'status=127\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>$ $ $ sh: history: No such file or directory
+$ $ $ munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="builtin-history.test.html#L197">HISTFILE must point to a file</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=1\n^D\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>: line : set: -i: invalid option
+</pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="builtin-history.test.html#L197">HISTFILE must point to a file</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=1\n^D\n'
+Got      'status=99\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=99
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m history: not yet implemented: history -r is not yet implemented
+exit
+</pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="builtin-history.test.html#L215">HISTFILE set to array</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=1\n^D\n'
+Got      'status=127\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>$ $ sh: syntax error: a
+$ sh: history: No such file or directory
+$ $ $ munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="builtin-history.test.html#L215">HISTFILE set to array</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=1\n^D\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>: line : set: -i: invalid option
+</pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="builtin-history.test.html#L215">HISTFILE set to array</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=1\n^D\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>exit
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="builtin-history.test.html#L237">HISTFILE unset</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=1\n^D\n'
+Got      'status=127\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>$ $ $ sh: history: No such file or directory
+$ $ $ munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="builtin-history.test.html#L237">HISTFILE unset</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=1\n^D\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>: line : set: -i: invalid option
+</pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="builtin-history.test.html#L237">HISTFILE unset</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=1\n^D\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>exit
+</pre></td></tr><tr><td><a name="details-11-bash"></a><b>bash</b></td><td>11 <a href="builtin-history.test.html#L253">history usage</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: history: not-a-number: numeric argument required
+bash: line 4: history: too many arguments
+</pre></td></tr><tr><td><a name="details-11-dash"></a><b>dash</b></td><td>11 <a href="builtin-history.test.html#L253">history usage</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'status=2\nstatus=2\n'
+Got      'status=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: history: not found
+dash: 4: history: not found
+</pre></td></tr><tr><td><a name="details-11-ash"></a><b>ash</b></td><td>11 <a href="builtin-history.test.html#L253">history usage</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=2\nstatus=2\n'
+Got      'status=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-zsh"></a><b>zsh</b></td><td>11 <a href="builtin-history.test.html#L253">history usage</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=2\nstatus=2\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>fc: event not found: not-a-number
+fc: event not found: too-many
+</pre></td></tr><tr><td><a name="details-11-mksh"></a><b>mksh</b></td><td>11 <a href="builtin-history.test.html#L253">history usage</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'status=2\nstatus=2\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: fc: history functions not available
+mksh: &lt;stdin&gt;[4]: fc: history functions not available
+</pre></td></tr><tr><td><a name="details-11-ksh"></a><b>ksh</b></td><td>11 <a href="builtin-history.test.html#L253">history usage</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=2\nstatus=2\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: fc: history functions not available
+E: ksh: &lt;stdin&gt;[4]: fc: history functions not available
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="builtin-history.test.html#L253">history usage</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=2\nstatus=2\n'
+Got      'status=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: history: No such file or directory
+sh: history: No such file or directory
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="builtin-history.test.html#L253">history usage</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=2\nstatus=2\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: history: not-a-number: invalid option
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: history: 3: invalid option
+</pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="builtin-history.test.html#L253">history usage</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=2\nstatus=2\n'
+Got      'status=99\nstatus=99\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=99
+status=99
+</pre><i>stderr:</i> <br/>
+<pre>history: history not available in this shell
+history: history not available in this shell
+</pre></td></tr><tr><td><a name="details-12-dash"></a><b>dash</b></td><td>12 <a href="builtin-history.test.html#L272">HISTSIZE shrinks the in-memory history when changed</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '10\n5\n'
+Got      '0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 4: history: not found
+dash: 5: history: not found
+dash: 6: history: not found
+dash: 8: history: not found
+</pre></td></tr><tr><td><a name="details-12-ash"></a><b>ash</b></td><td>12 <a href="builtin-history.test.html#L272">HISTSIZE shrinks the in-memory history when changed</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '10\n5\n'
+Got      '0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="builtin-history.test.html#L272">HISTSIZE shrinks the in-memory history when changed</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '10\n5\n'
+Got      '0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre>zsh: bad option: -c
+fc: no such event: 1
+fc: no such event: 1
+fc: no such event: 1
+</pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="builtin-history.test.html#L272">HISTSIZE shrinks the in-memory history when changed</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '10\n5\n'
+Got      '0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[4]: fc: history functions not available
+mksh: &lt;stdin&gt;[5]: fc: history functions not available
+mksh: &lt;stdin&gt;[6]: fc: history functions not available
+mksh: &lt;stdin&gt;[8]: fc: history functions not available
+</pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="builtin-history.test.html#L272">HISTSIZE shrinks the in-memory history when changed</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '10\n5\n'
+Got      '0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[4]: fc: history functions not available
+E: ksh: &lt;stdin&gt;[5]: fc: history functions not available
+E: ksh: &lt;stdin&gt;[6]: fc: history functions not available
+E: ksh: &lt;stdin&gt;[8]: fc: history functions not available
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="builtin-history.test.html#L272">HISTSIZE shrinks the in-memory history when changed</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '10\n5\n'
+Got      '0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre>sh: history: No such file or directory
+sh: history: No such file or directory
+sh: history: No such file or directory
+sh: history: No such file or directory
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="builtin-history.test.html#L272">HISTSIZE shrinks the in-memory history when changed</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '10\n5\n'
+Got      '10\n10\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>10
+10
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: history: -r: invalid option
+</pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="builtin-history.test.html#L272">HISTSIZE shrinks the in-memory history when changed</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '10\n5\n'
+Got      '0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre>history: history not available in this shell
+history: history not available in this shell
+history: history not available in this shell
+history: history not available in this shell
+</pre></td></tr><tr><td><a name="details-12-osh"></a><b>osh</b></td><td>12 <a href="builtin-history.test.html#L272">HISTSIZE shrinks the in-memory history when changed</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected '10\n5\n'
+Got      '10\n10\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>10
+10
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="builtin-history.test.html#L289">HISTFILESIZE shrinks the history file when changed</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '5\n'
+Got      '1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="builtin-history.test.html#L289">HISTFILESIZE shrinks the history file when changed</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '5\n'
+Got      '1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="builtin-history.test.html#L289">HISTFILESIZE shrinks the history file when changed</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '5\n'
+Got      '10\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>10
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="builtin-history.test.html#L289">HISTFILESIZE shrinks the history file when changed</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '5\n'
+Got      '1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-ksh"></a><b>ksh</b></td><td>13 <a href="builtin-history.test.html#L289">HISTFILESIZE shrinks the history file when changed</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '5\n'
+Got      '1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="builtin-history.test.html#L289">HISTFILESIZE shrinks the history file when changed</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '5\n'
+Got      '10\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>10
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="builtin-history.test.html#L289">HISTFILESIZE shrinks the history file when changed</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '5\n'
+Got      '10\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>10
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="builtin-history.test.html#L289">HISTFILESIZE shrinks the history file when changed</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '5\n'
+Got      '10\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>10
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-osh"></a><b>osh</b></td><td>13 <a href="builtin-history.test.html#L289">HISTFILESIZE shrinks the history file when changed</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected '5\n'
+Got      '10\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>10
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="builtin-history.test.html#L302">recording history can be toggled with set -o/+o history</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '^D\nstatus=1\nstatus=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>$ set: bad -o history
+$ $ set: bad -o history
+$ $ munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="builtin-history.test.html#L302">recording history can be toggled with set -o/+o history</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '^D\nstatus=1\nstatus=0\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>: line : set: -i: invalid option
+</pre></td></tr><tr><td><a name="details-14-brush"></a><b>brush</b></td><td>14 <a href="builtin-history.test.html#L302">recording history can be toggled with set -o/+o history</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '^D\nstatus=1\nstatus=0\n'
+Got      'status=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>exit
+</pre></td></tr><tr><td><a name="details-14-osh"></a><b>osh</b></td><td>14 <a href="builtin-history.test.html#L302">recording history can be toggled with set -o/+o history</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected '^D\nstatus=1\nstatus=0\n'
+Got      '^D\nstatus=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>^D
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>  shopt -s globstar  # long overdue, try out wc -l **/*.py
+  ^~~~~
+/home/andy/git/dotfiles//interactive.bash:23: 'shopt' got invalid option 'globstar'
+[osh] hoover /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-history.test.sh/14-osh$   set +o history
+  ^~~
+[ stdin -i ]:1: 'set' got invalid option 'history'
+[osh] hoover /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-history.test.sh/14-osh$ [osh] hoover /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-history.test.sh/14-osh$   set -o history
+  ^~~
+[ stdin -i ]:3: 'set' got invalid option 'history'
+[osh] hoover /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-history.test.sh/14-osh$ [osh] hoover /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-history.test.sh/14-osh$ </pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="builtin-history.test.html#L327">shopt histappend toggle check</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'status=0\nshopt -s histappend\nstatus=0\nshopt -u histappend\n^D\n'
+Got      'status=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 3: shopt: not found
+dash: 4: shopt: not found
+dash: 6: shopt: not found
+</pre></td></tr><tr><td><a name="details-15-ash"></a><b>ash</b></td><td>15 <a href="builtin-history.test.html#L327">shopt histappend toggle check</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=0\nshopt -s histappend\nstatus=0\nshopt -u histappend\n^D\n'
+Got      'status=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-15-zsh"></a><b>zsh</b></td><td>15 <a href="builtin-history.test.html#L327">shopt histappend toggle check</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=0\nshopt -s histappend\nstatus=0\nshopt -u histappend\n^D\n'
+Got      'status=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-15-mksh"></a><b>mksh</b></td><td>15 <a href="builtin-history.test.html#L327">shopt histappend toggle check</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'status=0\nshopt -s histappend\nstatus=0\nshopt -u histappend\n^D\n'
+Got      'status=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+mksh: &lt;stdin&gt;[3]: shopt: not found
+mksh: &lt;stdin&gt;[4]: shopt: not found
+mksh: &lt;stdin&gt;[6]: shopt: not found
+</pre></td></tr><tr><td><a name="details-15-ksh"></a><b>ksh</b></td><td>15 <a href="builtin-history.test.html#L327">shopt histappend toggle check</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=0\nshopt -s histappend\nstatus=0\nshopt -u histappend\n^D\n'
+Got      'status=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[4]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[6]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="builtin-history.test.html#L327">shopt histappend toggle check</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nshopt -s histappend\nstatus=0\nshopt -u histappend\n^D\n'
+Got      'status=127\nstatus=127\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="builtin-history.test.html#L327">shopt histappend toggle check</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\nshopt -s histappend\nstatus=0\nshopt -u histappend\n^D\n'
+Got      'status=1\nhistappend      off\nstatus=0\nhistappend      off\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+histappend      off
+status=0
+histappend      off
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: shopt: histappend: not supported yet
+</pre></td></tr><tr><td><a name="details-15-brush"></a><b>brush</b></td><td>15 <a href="builtin-history.test.html#L327">shopt histappend toggle check</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=0\nshopt -s histappend\nstatus=0\nshopt -u histappend\n^D\n'
+Got      'status=0\nshopt -s histappend\nstatus=0\nshopt -u histappend\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+shopt -s histappend
+status=0
+shopt -u histappend
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-osh"></a><b>osh</b></td><td>15 <a href="builtin-history.test.html#L327">shopt histappend toggle check</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'status=0\nshopt -s histappend\nstatus=0\nshopt -u histappend\n^D\n'
+Got      'status=2\nstatus=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>  shopt -s histappend
+  ^~~~~
+[ stdin ]:1: 'shopt' got invalid option 'histappend'
+  shopt -p histappend
+  ^~~~~
+[ stdin ]:3: 'shopt' got invalid option 'histappend'
+  shopt -u histappend
+  ^~~~~
+[ stdin ]:4: 'shopt' got invalid option 'histappend'
+  shopt -p histappend
+  ^~~~~
+[ stdin ]:6: 'shopt' got invalid option 'histappend'
+</pre></td></tr><tr><td><a name="details-16-dash"></a><b>dash</b></td><td>16 <a href="builtin-history.test.html#L348">shopt histappend - osh ignores shopt and appends, bash sometimes overwrites</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '^D\nstatus=0\n^D\nstatus=1\n'
+Got      'status=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 9: [[: not found
+dash: 0: Illegal option --
+dash: 9: [[: not found
+dash: 0: Illegal option --
+</pre></td></tr><tr><td><a name="details-16-zsh"></a><b>zsh</b></td><td>16 <a href="builtin-history.test.html#L348">shopt histappend - osh ignores shopt and appends, bash sometimes overwrites</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '^D\nstatus=0\n^D\nstatus=1\n'
+Got      'status=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>zsh: no such option: norc
+zsh: no such option: norc
+</pre></td></tr><tr><td><a name="details-16-mksh"></a><b>mksh</b></td><td>16 <a href="builtin-history.test.html#L348">shopt histappend - osh ignores shopt and appends, bash sometimes overwrites</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '^D\nstatus=0\n^D\nstatus=1\n'
+Got      'status=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: mksh: --: unknown option
+mksh: mksh: --: unknown option
+</pre></td></tr><tr><td><a name="details-16-ksh"></a><b>ksh</b></td><td>16 <a href="builtin-history.test.html#L348">shopt histappend - osh ignores shopt and appends, bash sometimes overwrites</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '^D\nstatus=0\n^D\nstatus=1\n'
+Got      'status=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: --: unknown option
+E: ksh: --: unknown option
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="builtin-history.test.html#L348">shopt histappend - osh ignores shopt and appends, bash sometimes overwrites</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '^D\nstatus=0\n^D\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>$ $ sh: shopt: No such file or directory
+$ $ $ $ munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-16-sush"></a><b>sush</b></td><td>16 <a href="builtin-history.test.html#L348">shopt histappend - osh ignores shopt and appends, bash sometimes overwrites</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '^D\nstatus=0\n^D\nstatus=1\n'
+Got      'status=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>: line : set: --norc: invalid option
+: line : set: --norc: invalid option
+</pre></td></tr><tr><td><a name="details-16-brush"></a><b>brush</b></td><td>16 <a href="builtin-history.test.html#L348">shopt histappend - osh ignores shopt and appends, bash sometimes overwrites</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '^D\nstatus=0\n^D\nstatus=1\n'
+Got      'status=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>exit
+exit
+</pre></td></tr><tr><td><a name="details-16-osh"></a><b>osh</b></td><td>16 <a href="builtin-history.test.html#L348">shopt histappend - osh ignores shopt and appends, bash sometimes overwrites</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>^D
+status=0
+^D
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>osh-0.36$ osh-0.36$     shopt -s histappend
+    ^~~~~
+[ stdin -i ]:2: 'shopt' got invalid option 'histappend'
+osh-0.36$ osh-0.36$ osh-0.36$ osh-0.36$ osh-0.36$ osh-0.36$     shopt -u histappend
+    ^~~~~
+[ stdin -i ]:2: 'shopt' got invalid option 'histappend'
+osh-0.36$ osh-0.36$ osh-0.36$ osh-0.36$ </pre></td></tr></table></body></html>

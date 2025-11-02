@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>array-assign: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for array-assign.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>9</td><td>0</td><td>0</td><td>2</td><td>7</td><td>7</td><td>1</td><td>9</td><td>1</td><td>1</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>0</td><td>1</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>0</td><td>10</td><td>8</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug-2">BUG-2</td> <td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>11</td><td>0</td><td>0</td><td>0</td><td>4</td><td>10</td><td>2</td><td>10</td><td>9</td><td></td></tr>
+<tr><td>total</td><td>11</td><td>11</td><td>11</td><td>11</td><td>11</td><td>11</td><td>11</td><td>11</td><td>11</td><td>11</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="array-assign.test.html#L6">Indexed LHS without spaces, and +=</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"><a href="#details-0-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="array-assign.test.html#L31">Indexed LHS with spaces</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"><a href="#details-1-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="array-assign.test.html#L46">Nested a[i[0]]=0</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"><a href="#details-2-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="array-assign.test.html#L64">Multiple LHS array words</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"><a href="#details-3-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="array-assign.test.html#L122">LHS array is protected with shopt -s eval_unsafe_arith, e.g. 'a[$(echo 2)]'</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"><a href="#details-4-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="array-assign.test.html#L161">file named a[ is  not executed</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"><a href="#details-5-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="bug-2">BUG-2</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="array-assign.test.html#L189">More fragments like a[  a[5  a[5 +  a[5 + 3]</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-6-bash">details</a></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"><a href="#details-6-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="array-assign.test.html#L267">Are quotes allowed?</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-7-bash">details</a></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"><a href="#details-7-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="array-assign.test.html#L299">Tricky parsing - a[ a[0]=1 ]=X  a[ a[0]+=1 ]+=X</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"><a href="#details-8-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="array-assign.test.html#L328">argv.py a[1 + 2]=</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"><a href="#details-9-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"><a href="#details-9-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="array-assign.test.html#L355">declare builtin doesn't allow spaces</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"><a href="#details-10-osh">details</a></td><td class="details-row"></td></tr>
+</table>
+<pre>37 passed, 4 OK, 20 not implemented, 3 BUG, 46 failed, 0 timeouts, 0 cases skipped
+9 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="array-assign.test.html#L6">Indexed LHS without spaces, and +=</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "status=0\n['x']\n['x', 'y']\n['x', 'yz']\n"
+Got      'status=127\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: a[1]=x: not found
+dash: 3: Bad substitution
+</pre></td></tr><tr><td><a name="details-0-ash"></a><b>ash</b></td><td>0 <a href="array-assign.test.html#L6">Indexed LHS without spaces, and +=</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>ash: a[1]=x: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="array-assign.test.html#L6">Indexed LHS without spaces, and +=</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "status=0\n['x']\n['x', 'y']\n['x', 'yz']\n"
+Got      "status=127\n['']\n['']\n['']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+['']
+['']
+['']
+</pre><i>stderr:</i> <br/>
+<pre>sh: a[1]=x: No such file or directory
+sh: a[0+2]=y: No such file or directory
+sh: a[0+2]+=z: No such file or directory
+</pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="array-assign.test.html#L31">Indexed LHS with spaces</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "status=0\n['x', 'z']\n"
+Got      'status=127\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: a[1: not found
+dash: 4: a[: not found
+dash: 7: Bad substitution
+</pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="array-assign.test.html#L31">Indexed LHS with spaces</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="array-assign.test.html#L31">Indexed LHS with spaces</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="array-assign.test.html#L31">Indexed LHS with spaces</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "status=0\n['x', 'z']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="array-assign.test.html#L31">Indexed LHS with spaces</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "status=0\n['x', 'z']\n"
+Got      'status=127\n[]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+[]
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m command not found: a[1
+[31merror:[39m command not found: a[
+</pre></td></tr><tr><td><a name="details-1-osh"></a><b>osh</b></td><td>1 <a href="array-assign.test.html#L31">Indexed LHS with spaces</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected "status=0\n['x', 'z']\n"
+Got      'status=127\n[]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+[]
+</pre><i>stderr:</i> <br/>
+<pre>  a[1 * 1]=x
+  ^~
+[ stdin ]:3: Command 'a[1' not found (OILS-ERR-100)
+  a[ 1 + 2 ]=z
+  ^~
+[ stdin ]:4: Command 'a[' not found (OILS-ERR-100)
+</pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="array-assign.test.html#L46">Nested a[i[0]]=0</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['0', '1', '2', '3']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="array-assign.test.html#L46">Nested a[i[0]]=0</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="array-assign.test.html#L46">Nested a[i[0]]=0</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="array-assign.test.html#L46">Nested a[i[0]]=0</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['0', '1', '2', '3']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="array-assign.test.html#L46">Nested a[i[0]]=0</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['0', '1', '2', '3']\n"
+Got      '[]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m command not found: a[i[0]]=0
+[31merror:[39m command not found: a[
+[31merror:[39m command not found: a[
+[31merror:[39m command not found: a[
+</pre></td></tr><tr><td><a name="details-2-osh"></a><b>osh</b></td><td>2 <a href="array-assign.test.html#L46">Nested a[i[0]]=0</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected "['0', '1', '2', '3']\n"
+Got      "['0']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['0']
+</pre><i>stderr:</i> <br/>
+<pre>  a[ i[1] ]=1
+  ^~
+[ stdin ]:6: Command 'a[' not found (OILS-ERR-100)
+  a[ i[2] ]=2
+  ^~
+[ stdin ]:7: Command 'a[' not found (OILS-ERR-100)
+  a[ i[1]+i[2] ]=3
+  ^~
+[ stdin ]:8: Command 'a[' not found (OILS-ERR-100)
+</pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="array-assign.test.html#L64">Multiple LHS array words</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'declare -a a=([0]="0" [1]="" [2]="2")\ndeclare -a b=([0]="3" [1]="4" [2]="/home/spec-test/src")\n---\n[\'b[2\', \'+\', \'0]=bar\']\nstatus=0\ndeclare -a a=([0]="0" [1]="" [2]="2")\ndeclare -a b=([0]="3" [1]="4" [2]="/home/spec-test/src")\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="array-assign.test.html#L64">Multiple LHS array words</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="array-assign.test.html#L64">Multiple LHS array words</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="array-assign.test.html#L64">Multiple LHS array words</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>set -A a
+typeset a[0]=0
+typeset a[1]=
+typeset a[2]=2
+set -A b
+typeset b[0]=3
+typeset b[1]=4
+typeset b[2]=/home/spec-test/src
+---
+['b[2', '+', '0]=bar']
+status=0
+set -A a
+typeset a[0]=0
+typeset a[1]=
+typeset a[2]=2
+set -A b
+typeset b[0]=3
+typeset b[1]=4
+typeset b[2]=/home/spec-test/src
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="array-assign.test.html#L64">Multiple LHS array words</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'declare -a a=([0]="0" [1]="" [2]="2")\ndeclare -a b=([0]="3" [1]="4" [2]="/home/spec-test/src")\n---\n[\'b[2\', \'+\', \'0]=bar\']\nstatus=0\ndeclare -a a=([0]="0" [1]="" [2]="2")\ndeclare -a b=([0]="3" [1]="4" [2]="/home/spec-test/src")\n'
+Got      "set -A a\ntypeset a[0]=0\ntypeset a[1]=''\ntypeset a[2]=2\nset -A b\ntypeset b[0]=3\ntypeset b[1]=4\ntypeset b[2]=/home/spec-test/src\n---\n['b[2', '+', '0]=bar']\nstatus=0\nset -A a\ntypeset a[0]=0\ntypeset a[1]=''\ntypeset a[2]=2\nset -A b\ntypeset b[0]=3\ntypeset b[1]=4\ntypeset b[2]=/home/spec-test/src\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>set -A a
+typeset a[0]=0
+typeset a[1]=''
+typeset a[2]=2
+set -A b
+typeset b[0]=3
+typeset b[1]=4
+typeset b[2]=/home/spec-test/src
+---
+['b[2', '+', '0]=bar']
+status=0
+set -A a
+typeset a[0]=0
+typeset a[1]=''
+typeset a[2]=2
+set -A b
+typeset b[0]=3
+typeset b[1]=4
+typeset b[2]=/home/spec-test/src
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="array-assign.test.html#L64">Multiple LHS array words</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'declare -a a=([0]="0" [1]="" [2]="2")\ndeclare -a b=([0]="3" [1]="4" [2]="/home/spec-test/src")\n---\n[\'b[2\', \'+\', \'0]=bar\']\nstatus=0\ndeclare -a a=([0]="0" [1]="" [2]="2")\ndeclare -a b=([0]="3" [1]="4" [2]="/home/spec-test/src")\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="array-assign.test.html#L64">Multiple LHS array words</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'declare -a a=([0]="0" [1]="" [2]="2")\ndeclare -a b=([0]="3" [1]="4" [2]="/home/spec-test/src")\n---\n[\'b[2\', \'+\', \'0]=bar\']\nstatus=0\ndeclare -a a=([0]="0" [1]="" [2]="2")\ndeclare -a b=([0]="3" [1]="4" [2]="/home/spec-test/src")\n'
+Got      'declare -a a=([0]="0" [1]="1" [2]="2")\ndeclare -a b=([0]="3" [1]="4" [2]="5")\n---\nstatus=127\ndeclare -a a=([0]="0" [1]="1" [2]="2")\ndeclare -a b=([0]="3" [1]="4" [2]="5")\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>declare -a a=([0]="0" [1]="1" [2]="2")
+declare -a b=([0]="3" [1]="4" [2]="5")
+---
+status=127
+declare -a a=([0]="0" [1]="1" [2]="2")
+declare -a b=([0]="3" [1]="4" [2]="5")
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m command not found: a[0
+[31merror:[39m command not found: a[0
+</pre></td></tr><tr><td><a name="details-3-osh"></a><b>osh</b></td><td>3 <a href="array-assign.test.html#L64">Multiple LHS array words</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'declare -a a=([0]="0" [1]="" [2]="2")\ndeclare -a b=([0]="3" [1]="4" [2]="/home/spec-test/src")\n---\n[\'b[2\', \'+\', \'0]=bar\']\nstatus=0\ndeclare -a a=([0]="0" [1]="" [2]="2")\ndeclare -a b=([0]="3" [1]="4" [2]="/home/spec-test/src")\n'
+Got      'declare -a a=(0 1 2)\ndeclare -a b=(3 4 5)\n---\nstatus=127\ndeclare -a a=(0 1 2)\ndeclare -a b=(3 4 5)\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>declare -a a=(0 1 2)
+declare -a b=(3 4 5)
+---
+status=127
+declare -a a=(0 1 2)
+declare -a b=(3 4 5)
+</pre><i>stderr:</i> <br/>
+<pre>  a[0 + 1]=  b[2 + 0]=~/src
+  ^~
+[ stdin ]:9: Command 'a[0' not found (OILS-ERR-100)
+  a[0 + 1]='foo' argv.py b[2 + 0]='bar'
+  ^~
+[ stdin ]:15: Command 'a[0' not found (OILS-ERR-100)
+</pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="array-assign.test.html#L122">LHS array is protected with shopt -s eval_unsafe_arith, e.g. 'a[$(echo 2)]'</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'declare -a b=([0]="3" [1]="4" [2]="5")\nget 5\nset zzz\ndeclare -a b=([0]="3" [1]="4" [2]="zzz")\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="array-assign.test.html#L122">LHS array is protected with shopt -s eval_unsafe_arith, e.g. 'a[$(echo 2)]'</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="array-assign.test.html#L122">LHS array is protected with shopt -s eval_unsafe_arith, e.g. 'a[$(echo 2)]'</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="array-assign.test.html#L122">LHS array is protected with shopt -s eval_unsafe_arith, e.g. 'a[$(echo 2)]'</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>set -A b
+typeset b[0]=3
+typeset b[1]=4
+typeset b[2]=5
+get 5
+set zzz
+set -A b
+typeset b[0]=3
+typeset b[1]=4
+typeset b[2]=zzz
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="array-assign.test.html#L122">LHS array is protected with shopt -s eval_unsafe_arith, e.g. 'a[$(echo 2)]'</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'declare -a b=([0]="3" [1]="4" [2]="5")\nget 5\nset zzz\ndeclare -a b=([0]="3" [1]="4" [2]="zzz")\n'
+Got      'set -A b\ntypeset b[0]=3\ntypeset b[1]=4\ntypeset b[2]=5\nget 5\nset zzz\nset -A b\ntypeset b[0]=3\ntypeset b[1]=4\ntypeset b[2]=zzz\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>set -A b
+typeset b[0]=3
+typeset b[1]=4
+typeset b[2]=5
+get 5
+set zzz
+set -A b
+typeset b[0]=3
+typeset b[1]=4
+typeset b[2]=zzz
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="array-assign.test.html#L122">LHS array is protected with shopt -s eval_unsafe_arith, e.g. 'a[$(echo 2)]'</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'declare -a b=([0]="3" [1]="4" [2]="5")\nget 5\nset zzz\ndeclare -a b=([0]="3" [1]="4" [2]="zzz")\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="array-assign.test.html#L122">LHS array is protected with shopt -s eval_unsafe_arith, e.g. 'a[$(echo 2)]'</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'declare -a b=([0]="3" [1]="4" [2]="5")\nget 5\nset zzz\ndeclare -a b=([0]="3" [1]="4" [2]="zzz")\n'
+Got      'declare -a b=([0]="3" [1]="4" [2]="5")\ndeclare -a b=([0]="3" [1]="4" [2]="5")\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>declare -a b=([0]="3" [1]="4" [2]="5")
+declare -a b=([0]="3" [1]="4" [2]="5")
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m arithmetic evaluation error: failed to parse expression: 'a[$(echo 2)]'
+[31merror:[39m arithmetic evaluation error: failed to parse expression: 'a[$(echo 2)]'
+[31merror:[39m arithmetic evaluation error: failed to parse expression: 'a[$(echo 2)]'
+</pre></td></tr><tr><td><a name="details-4-osh"></a><b>osh</b></td><td>4 <a href="array-assign.test.html#L122">LHS array is protected with shopt -s eval_unsafe_arith, e.g. 'a[$(echo 2)]'</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'declare -a b=([0]="3" [1]="4" [2]="5")\nget 5\nset zzz\ndeclare -a b=([0]="3" [1]="4" [2]="zzz")\n'
+Got      'declare -a b=(3 4 5)\n'
+</span><br/>
+<span class="assertion">
+[osh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>declare -a b=(3 4 5)
+</pre><i>stderr:</i> <br/>
+<pre>  a[$(echo 2)]
+    ^~
+[ sh arith expr at ? ]:1
+
+[??? no location ???] fatal: Command subs not allowed here because eval_unsafe_arith is off
+</pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="array-assign.test.html#L161">file named a[ is  not executed</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'len=2\n'
+Got      'hi from a[5: 2 args: + 1]=\nhi from a[5: 2 args: / 1]=y\nlen=0\nhi from a[5: 0 args:\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi from a[5: 2 args: + 1]=
+hi from a[5: 2 args: / 1]=y
+len=0
+hi from a[5: 0 args:
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="array-assign.test.html#L161">file named a[ is  not executed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="array-assign.test.html#L161">file named a[ is  not executed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="array-assign.test.html#L161">file named a[ is  not executed</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'len=2\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="array-assign.test.html#L161">file named a[ is  not executed</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'len=2\n'
+Got      'hi from a[5: 2 args: + 1]=\nhi from a[5: 2 args: / 1]=y\nlen=0\nhi from a[5: 0 args:\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi from a[5: 2 args: + 1]=
+hi from a[5: 2 args: / 1]=y
+len=0
+hi from a[5: 0 args:
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-osh"></a><b>osh</b></td><td>5 <a href="array-assign.test.html#L161">file named a[ is  not executed</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'len=2\n'
+Got      'hi from a[5: 2 args: + 1]=\nhi from a[5: 2 args: / 1]=y\nlen=0\nhi from a[5: 0 args:\n'
+</span><br/>
+<span class="assertion">
+[osh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi from a[5: 2 args: + 1]=
+hi from a[5: 2 args: / 1]=y
+len=0
+hi from a[5: 0 args:
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-bash"></a><b>bash</b></td><td>6 <a href="array-assign.test.html#L189">More fragments like a[  a[5  a[5 +  a[5 + 3]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a[ status=2
+a[5 status=2
+a[5 + status=2
+a[5 + 3] status=127
+a[5 + 3]= status=0
+a[5 + 3]+ status=127
+a[5 + 3]+= status=0
+</pre><i>stderr:</i> <br/>
+<pre>bash: -c: line 1: unexpected EOF while looking for matching `]'
+bash: -c: line 1: unexpected EOF while looking for matching `]'
+bash: -c: line 1: unexpected EOF while looking for matching `]'
+bash: line 1: a[5 + 3]: command not found
+bash: line 1: a[5 + 3]+: command not found
+</pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="array-assign.test.html#L189">More fragments like a[  a[5  a[5 +  a[5 + 3]</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'a[ status=127\na[5 status=127\na[5 + status=127\na[5 + 3] status=127\na[5 + 3]= status=0\na[5 + 3]+ status=127\na[5 + 3]+= status=0\n'
+Got      'a[ status=127\na[5 status=127\na[5 + status=127\na[5 + 3] status=127\na[5 + 3]= status=127\na[5 + 3]+ status=127\na[5 + 3]+= status=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a[ status=127
+a[5 status=127
+a[5 + status=127
+a[5 + 3] status=127
+a[5 + 3]= status=127
+a[5 + 3]+ status=127
+a[5 + 3]+= status=127
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: a[: not found
+dash: 1: a[5: not found
+dash: 1: a[5: not found
+dash: 1: a[5: not found
+dash: 1: a[5: not found
+dash: 1: a[5: not found
+dash: 1: a[5: not found
+</pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="array-assign.test.html#L189">More fragments like a[  a[5  a[5 +  a[5 + 3]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a[ status=127
+a[5 status=127
+a[5 + status=127
+a[5 + 3] status=127
+a[5 + 3]= status=127
+a[5 + 3]+ status=127
+a[5 + 3]+= status=127
+</pre><i>stderr:</i> <br/>
+<pre>ash: a[: not found
+ash: a[5: not found
+ash: a[5: not found
+ash: a[5: not found
+ash: a[5: not found
+ash: a[5: not found
+ash: a[5: not found
+</pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="array-assign.test.html#L189">More fragments like a[  a[5  a[5 +  a[5 + 3]</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a[ status=1
+a[5 status=1
+a[5 + status=1
+a[5 + 3] status=1
+a[5 + 3]= status=1
+a[5 + 3]+ status=1
+a[5 + 3]+= status=1
+</pre><i>stderr:</i> <br/>
+<pre>zsh:1: bad pattern: a[
+zsh:1: bad pattern: a[5
+zsh:1: bad pattern: a[5
+zsh:1: bad pattern: a[5
+zsh:1: bad pattern: a[5
+zsh:1: bad pattern: a[5
+zsh:1: bad pattern: a[5
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="array-assign.test.html#L189">More fragments like a[  a[5  a[5 +  a[5 + 3]</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'a[ status=127\na[5 status=127\na[5 + status=127\na[5 + 3] status=127\na[5 + 3]= status=0\na[5 + 3]+ status=127\na[5 + 3]+= status=0\n'
+Got      'a[ status=127\na[5 status=127\na[5 + status=127\na[5 + 3] status=127\na[5 + 3]= status=127\na[5 + 3]+ status=127\na[5 + 3]+= status=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a[ status=127
+a[5 status=127
+a[5 + status=127
+a[5 + 3] status=127
+a[5 + 3]= status=127
+a[5 + 3]+ status=127
+a[5 + 3]+= status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: a[: No such file or directory
+sh: a[5: No such file or directory
+sh: a[5: No such file or directory
+sh: a[5: No such file or directory
+sh: a[5: No such file or directory
+sh: a[5: No such file or directory
+sh: a[5: No such file or directory
+</pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="array-assign.test.html#L189">More fragments like a[  a[5  a[5 +  a[5 + 3]</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'a[ status=127\na[5 status=127\na[5 + status=127\na[5 + 3] status=127\na[5 + 3]= status=0\na[5 + 3]+ status=127\na[5 + 3]+= status=0\n'
+Got      'a[ status=127\na[5 status=127\na[5 + status=127\na[5 + 3] status=127\na[5 + 3]= status=127\na[5 + 3]+ status=127\na[5 + 3]+= status=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a[ status=127
+a[5 status=127
+a[5 + status=127
+a[5 + 3] status=127
+a[5 + 3]= status=127
+a[5 + 3]+ status=127
+a[5 + 3]+= status=127
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m command not found: a[
+[31merror:[39m command not found: a[5
+[31merror:[39m command not found: a[5
+[31merror:[39m command not found: a[5
+[31merror:[39m command not found: a[5
+[31merror:[39m command not found: a[5
+[31merror:[39m command not found: a[5
+</pre></td></tr><tr><td><a name="details-6-osh"></a><b>osh</b></td><td>6 <a href="array-assign.test.html#L189">More fragments like a[  a[5  a[5 +  a[5 + 3]</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'a[ status=127\na[5 status=127\na[5 + status=127\na[5 + 3] status=127\na[5 + 3]= status=0\na[5 + 3]+ status=127\na[5 + 3]+= status=0\n'
+Got      'a[ status=127\na[5 status=127\na[5 + status=127\na[5 + 3] status=127\na[5 + 3]= status=127\na[5 + 3]+ status=127\na[5 + 3]+= status=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a[ status=127
+a[5 status=127
+a[5 + status=127
+a[5 + 3] status=127
+a[5 + 3]= status=127
+a[5 + 3]+ status=127
+a[5 + 3]+= status=127
+</pre><i>stderr:</i> <br/>
+<pre>  a[
+  ^~
+[ -c flag ]:1: Command 'a[' not found (OILS-ERR-100)
+  a[5
+  ^~
+[ -c flag ]:1: Command 'a[5' not found (OILS-ERR-100)
+  a[5 +
+  ^~
+[ -c flag ]:1: Command 'a[5' not found (OILS-ERR-100)
+  a[5 + 3]
+  ^~
+[ -c flag ]:1: Command 'a[5' not found (OILS-ERR-100)
+  a[5 + 3]=
+  ^~
+[ -c flag ]:1: Command 'a[5' not found (OILS-ERR-100)
+  a[5 + 3]+
+  ^~
+[ -c flag ]:1: Command 'a[5' not found (OILS-ERR-100)
+  a[5 + 3]+=
+  ^~
+[ -c flag ]:1: Command 'a[5' not found (OILS-ERR-100)
+</pre></td></tr><tr><td><a name="details-7-bash"></a><b>bash</b></td><td>7 <a href="array-assign.test.html#L267">Are quotes allowed?</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0 len=1
+status=1 len=1
+status=0 len=2
+status=1 len=2
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 4: '2': syntax error: operand expected (error token is "'2'")
+bash: line 10: 3 + '4': syntax error: operand expected (error token is "'4'")
+</pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="array-assign.test.html#L267">Are quotes allowed?</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected ''
+Got      'status=127 len=0\nstatus=127 len=0\nstatus=127 len=0\nstatus=127 len=0\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127 len=0
+status=127 len=0
+status=127 len=0
+status=127 len=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: a[1]=2: not found
+dash: 4: a[2]=3: not found
+dash: 7: a[2: not found
+dash: 10: a[3: not found
+</pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="array-assign.test.html#L267">Are quotes allowed?</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: a[1]=2: not found
+ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="array-assign.test.html#L267">Are quotes allowed?</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected ''
+Got      'status=0 len=1\nstatus=1 len=1\nstatus=0 len=2\nstatus=1 len=2\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0 len=1
+status=1 len=1
+status=0 len=2
+status=1 len=2
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: '2': syntax error: operand expected (error token is "'2'")
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 10: 3 + '4': syntax error: operand expected (error token is "'4'")
+</pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="array-assign.test.html#L267">Are quotes allowed?</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected ''
+Got      'status=0 len=1\nstatus=0 len=2\nstatus=127 len=2\nstatus=127 len=2\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0 len=1
+status=0 len=2
+status=127 len=2
+status=127 len=2
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m command not found: a[2
+[31merror:[39m command not found: a[3
+</pre></td></tr><tr><td><a name="details-7-osh"></a><b>osh</b></td><td>7 <a href="array-assign.test.html#L267">Are quotes allowed?</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected ''
+Got      'status=0 len=1\nstatus=0 len=2\nstatus=127 len=2\nstatus=127 len=2\n'
+</span><br/>
+<span class="assertion">
+[osh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0 len=1
+status=0 len=2
+status=127 len=2
+status=127 len=2
+</pre><i>stderr:</i> <br/>
+<pre>  a[2 + "3"]=5
+  ^~
+[ stdin ]:7: Command 'a[2' not found (OILS-ERR-100)
+  a[3 + '4']=5
+  ^~
+[ stdin ]:10: Command 'a[3' not found (OILS-ERR-100)
+</pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="array-assign.test.html#L299">Tricky parsing - a[ a[0]=1 ]=X  a[ a[0]+=1 ]+=X</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'assign=42\ndeclare -a a=([0]="1" [1]="X")\ndeclare -a a=([0]="1" [1]="X" [2]="3" [3]="Y")\n---\ndeclare -a a=([0]="2" [1]="X" [2]="3X" [3]="Y")\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 4: arithmetic expression: expecting EOF: " z[0] = 42 "
+</pre></td></tr><tr><td><a name="details-8-ash"></a><b>ash</b></td><td>8 <a href="array-assign.test.html#L299">Tricky parsing - a[ a[0]=1 ]=X  a[ a[0]+=1 ]+=X</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="array-assign.test.html#L299">Tricky parsing - a[ a[0]=1 ]=X  a[ a[0]+=1 ]+=X</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-mksh"></a><b>mksh</b></td><td>8 <a href="array-assign.test.html#L299">Tricky parsing - a[ a[0]=1 ]=X  a[ a[0]+=1 ]+=X</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-ksh"></a><b>ksh</b></td><td>8 <a href="array-assign.test.html#L299">Tricky parsing - a[ a[0]=1 ]=X  a[ a[0]+=1 ]+=X</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'assign=42\ndeclare -a a=([0]="1" [1]="X")\ndeclare -a a=([0]="1" [1]="X" [2]="3" [3]="Y")\n---\ndeclare -a a=([0]="2" [1]="X" [2]="3X" [3]="Y")\n'
+Got      'assign=42\n---\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>assign=42
+---
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[7]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[10]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[15]: declare: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="array-assign.test.html#L299">Tricky parsing - a[ a[0]=1 ]=X  a[ a[0]+=1 ]+=X</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'assign=42\ndeclare -a a=([0]="1" [1]="X")\ndeclare -a a=([0]="1" [1]="X" [2]="3" [3]="Y")\n---\ndeclare -a a=([0]="2" [1]="X" [2]="3X" [3]="Y")\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="array-assign.test.html#L299">Tricky parsing - a[ a[0]=1 ]=X  a[ a[0]+=1 ]+=X</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'assign=42\ndeclare -a a=([0]="1" [1]="X")\ndeclare -a a=([0]="1" [1]="X" [2]="3" [3]="Y")\n---\ndeclare -a a=([0]="2" [1]="X" [2]="3X" [3]="Y")\n'
+Got      'assign=42\n---\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>assign=42
+---
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m arithmetic evaluation error: failed to parse expression: 'a[0'
+declare: a: not found
+[31merror:[39m command not found: a[
+declare: a: not found
+[31merror:[39m command not found: a[
+declare: a: not found
+</pre></td></tr><tr><td><a name="details-8-osh"></a><b>osh</b></td><td>8 <a href="array-assign.test.html#L299">Tricky parsing - a[ a[0]=1 ]=X  a[ a[0]+=1 ]+=X</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'assign=42\ndeclare -a a=([0]="1" [1]="X")\ndeclare -a a=([0]="1" [1]="X" [2]="3" [3]="Y")\n---\ndeclare -a a=([0]="2" [1]="X" [2]="3X" [3]="Y")\n'
+Got      'assign=42\n'
+</span><br/>
+<span class="assertion">
+[osh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>assign=42
+</pre><i>stderr:</i> <br/>
+<pre>  a[0
+     ^
+[ sh arith expr at line 6 of [ stdin ] ]:1
+
+  a[a[0]=1]=X
+  ^~
+[ stdin ]:6: Parser expected Id.Arith_RBracket, got Id.Eof_Real
+</pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="array-assign.test.html#L328">argv.py a[1 + 2]=</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected "['a[1', '+', '2]=']\nstatus=0\n['a[1', '+', '2]+=']\nstatus=0\n['a[3', '+', '4]=']\n['a[3', '+', '4]+=']\n"
+Got      "status=127\nstatus=127\n['a[3', '+', '4]=']\n['a[3', '+', '4]+=']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+['a[3', '+', '4]=']
+['a[3', '+', '4]+=']
+</pre><i>stderr:</i> <br/>
+<pre>dash: 4: a[1: not found
+dash: 7: a[1: not found
+</pre></td></tr><tr><td><a name="details-9-ash"></a><b>ash</b></td><td>9 <a href="array-assign.test.html#L328">argv.py a[1 + 2]=</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-zsh"></a><b>zsh</b></td><td>9 <a href="array-assign.test.html#L328">argv.py a[1 + 2]=</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="array-assign.test.html#L328">argv.py a[1 + 2]=</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['a[1', '+', '2]=']\nstatus=0\n['a[1', '+', '2]+=']\nstatus=0\n['a[3', '+', '4]=']\n['a[3', '+', '4]+=']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="array-assign.test.html#L328">argv.py a[1 + 2]=</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "['a[1', '+', '2]=']\nstatus=0\n['a[1', '+', '2]+=']\nstatus=0\n['a[3', '+', '4]=']\n['a[3', '+', '4]+=']\n"
+Got      "status=127\nstatus=127\n['a[3', '+', '4]=']\n['a[3', '+', '4]+=']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+['a[3', '+', '4]=']
+['a[3', '+', '4]+=']
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m command not found: a[1
+[31merror:[39m command not found: a[1
+</pre></td></tr><tr><td><a name="details-9-osh"></a><b>osh</b></td><td>9 <a href="array-assign.test.html#L328">argv.py a[1 + 2]=</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected "['a[1', '+', '2]=']\nstatus=0\n['a[1', '+', '2]+=']\nstatus=0\n['a[3', '+', '4]=']\n['a[3', '+', '4]+=']\n"
+Got      "status=127\nstatus=127\n['a[3', '+', '4]=']\n['a[3', '+', '4]+=']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+['a[3', '+', '4]=']
+['a[3', '+', '4]+=']
+</pre><i>stderr:</i> <br/>
+<pre>  a[1 + 2]= argv.py a[1 + 2]=
+  ^~
+[ stdin ]:4: Command 'a[1' not found (OILS-ERR-100)
+  a[1 + 2]+= argv.py a[1 + 2]+=
+  ^~
+[ stdin ]:7: Command 'a[1' not found (OILS-ERR-100)
+</pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="array-assign.test.html#L355">declare builtin doesn't allow spaces</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'declare -a a=([0]="1" [1]="X")\ndeclare -a a=([0]="1" [1]="X" [2]="3")\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: declare: not found
+dash: 4: declare: not found
+dash: 6: declare: not found
+dash: 7: declare: not found
+</pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="array-assign.test.html#L355">declare builtin doesn't allow spaces</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-zsh"></a><b>zsh</b></td><td>10 <a href="array-assign.test.html#L355">declare builtin doesn't allow spaces</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="array-assign.test.html#L355">declare builtin doesn't allow spaces</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="array-assign.test.html#L355">declare builtin doesn't allow spaces</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'declare -a a=([0]="1" [1]="X")\ndeclare -a a=([0]="1" [1]="X" [2]="3")\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[4]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[6]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[7]: declare: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="array-assign.test.html#L355">declare builtin doesn't allow spaces</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'declare -a a=([0]="1" [1]="X")\ndeclare -a a=([0]="1" [1]="X" [2]="3")\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="array-assign.test.html#L355">declare builtin doesn't allow spaces</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'declare -a a=([0]="1" [1]="X")\ndeclare -a a=([0]="1" [1]="X" [2]="3")\n'
+Got      'declare -a a=([0]="1" [1]="X")\ndeclare -a a=([0]="1" [1]="X" [2]="3" [3]="Y")\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>declare -a a=([0]="1" [1]="X")
+declare -a a=([0]="1" [1]="X" [2]="3" [3]="Y")
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="array-assign.test.html#L355">declare builtin doesn't allow spaces</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'declare -a a=([0]="1" [1]="X")\ndeclare -a a=([0]="1" [1]="X" [2]="3")\n'
+Got      'declare -a a=([0]="1]=X")\ndeclare -a a=([0]="1]=X" [2]="3")\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>declare -a a=([0]="1]=X")
+declare -a a=([0]="1]=X" [2]="3")
+</pre><i>stderr:</i> <br/>
+<pre>declare: a[: not a valid variable name
+declare: ]=Y: not a valid variable name
+</pre></td></tr><tr><td><a name="details-10-osh"></a><b>osh</b></td><td>10 <a href="array-assign.test.html#L355">declare builtin doesn't allow spaces</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  declare a[a[0]=1]=X
+          ^~
+[ stdin ]:3: fatal: Assignment builtin expected NAME=value, got 'a[a[0]=1]=X'
+</pre></td></tr></table></body></html>

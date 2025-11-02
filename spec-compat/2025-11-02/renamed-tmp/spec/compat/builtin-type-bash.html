@@ -1,0 +1,2814 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-type-bash: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-type-bash.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>29</td><td>0</td><td>1</td><td>8</td><td>5</td><td>5</td><td>0</td><td>12</td><td>29</td><td>29</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>31</td><td>29</td><td>23</td><td>26</td><td>26</td><td>31</td><td>19</td><td>2</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L5">type -t -&gt; function</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"><a href="#details-0-ash">details</a></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L10">type -t -&gt; alias</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L16">type -t -&gt; builtin</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"><a href="#details-2-ash">details</a></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"><a href="#details-2-mksh">details</a></td><td class="details-row"><a href="#details-2-ksh">details</a></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L27">type -t -&gt; keyword</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L38">type -t control flow</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L60">type -t -&gt; file</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L67">type -t doesn't find non-executable (like command -v)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-6-bash">details</a></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L79">type -t -&gt; not found</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L90">type -p and -P builtin -&gt; file</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L108">type -a -P gives multiple files</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"><a href="#details-9-zsh">details</a></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L121">type -p builtin -&gt; not found</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"><a href="#details-10-mksh">details</a></td><td class="details-row"><a href="#details-10-ksh">details</a></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L127">type -p builtin -&gt; not a file</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-dash">details</a></td><td class="details-row"><a href="#details-11-ash">details</a></td><td class="details-row"><a href="#details-11-zsh">details</a></td><td class="details-row"><a href="#details-11-mksh">details</a></td><td class="details-row"><a href="#details-11-ksh">details</a></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L132">type -P builtin -&gt; not found</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-dash">details</a></td><td class="details-row"><a href="#details-12-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L138">type -P builtin -&gt; not a file</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L144">type -P builtin -&gt; not a file but file found</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"><a href="#details-14-ash">details</a></td><td class="details-row"><a href="#details-14-zsh">details</a></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L160">type -f builtin -&gt; not found</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"><a href="#details-15-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L164">type -f builtin -&gt; function and file exists</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-dash">details</a></td><td class="details-row"><a href="#details-16-ash">details</a></td><td class="details-row"><a href="#details-16-zsh">details</a></td><td class="details-row"><a href="#details-16-mksh">details</a></td><td class="details-row"><a href="#details-16-ksh">details</a></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"><a href="#details-16-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L179">type prints function source code</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-dash">details</a></td><td class="details-row"><a href="#details-17-ash">details</a></td><td class="details-row"><a href="#details-17-zsh">details</a></td><td class="details-row"><a href="#details-17-mksh">details</a></td><td class="details-row"><a href="#details-17-ksh">details</a></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L207">type -ap -&gt; function</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-dash">details</a></td><td class="details-row"><a href="#details-18-ash">details</a></td><td class="details-row"><a href="#details-18-zsh">details</a></td><td class="details-row"><a href="#details-18-mksh">details</a></td><td class="details-row"><a href="#details-18-ksh">details</a></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L213">type -a -&gt; alias; prints alias definition</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-19-bash">details</a></td><td class="details-row"><a href="#details-19-dash">details</a></td><td class="details-row"><a href="#details-19-ash">details</a></td><td class="details-row"><a href="#details-19-zsh">details</a></td><td class="details-row"><a href="#details-19-mksh">details</a></td><td class="details-row"><a href="#details-19-ksh">details</a></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"><a href="#details-19-sush">details</a></td><td class="details-row"><a href="#details-19-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L220">type -ap -&gt; alias</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-dash">details</a></td><td class="details-row"><a href="#details-20-ash">details</a></td><td class="details-row"><a href="#details-20-zsh">details</a></td><td class="details-row"><a href="#details-20-mksh">details</a></td><td class="details-row"><a href="#details-20-ksh">details</a></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"><a href="#details-20-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L227">type -a -&gt; builtin</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-dash">details</a></td><td class="details-row"><a href="#details-21-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-21-mksh">details</a></td><td class="details-row"><a href="#details-21-ksh">details</a></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L231">type -ap -&gt; builtin</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-dash">details</a></td><td class="details-row"><a href="#details-22-ash">details</a></td><td class="details-row"><a href="#details-22-zsh">details</a></td><td class="details-row"><a href="#details-22-mksh">details</a></td><td class="details-row"><a href="#details-22-ksh">details</a></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L236">type -a -&gt; keyword</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-dash">details</a></td><td class="details-row"><a href="#details-23-ash">details</a></td><td class="details-row"><a href="#details-23-zsh">details</a></td><td class="details-row"><a href="#details-23-mksh">details</a></td><td class="details-row"><a href="#details-23-ksh">details</a></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"><a href="#details-23-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L240">type -a -&gt; file</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-dash">details</a></td><td class="details-row"><a href="#details-24-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-24-mksh">details</a></td><td class="details-row"><a href="#details-24-ksh">details</a></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"><a href="#details-24-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L252">type -ap -&gt; file; abbreviated</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-dash">details</a></td><td class="details-row"><a href="#details-25-ash">details</a></td><td class="details-row"><a href="#details-25-zsh">details</a></td><td class="details-row"><a href="#details-25-mksh">details</a></td><td class="details-row"><a href="#details-25-ksh">details</a></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"><a href="#details-25-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L263">type -a -&gt; builtin and file</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-dash">details</a></td><td class="details-row"><a href="#details-26-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-26-mksh">details</a></td><td class="details-row"><a href="#details-26-ksh">details</a></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"><a href="#details-26-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L275">type -a -&gt; builtin and file and shell function</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-dash">details</a></td><td class="details-row"><a href="#details-27-ash">details</a></td><td class="details-row"><a href="#details-27-zsh">details</a></td><td class="details-row"><a href="#details-27-mksh">details</a></td><td class="details-row"><a href="#details-27-ksh">details</a></td><td class="details-row"><a href="#details-27-toysh">details</a></td><td class="details-row"><a href="#details-27-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L316">type -ap -&gt; builtin and file; doesn't print builtin or function</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-dash">details</a></td><td class="details-row"><a href="#details-28-ash">details</a></td><td class="details-row"><a href="#details-28-zsh">details</a></td><td class="details-row"><a href="#details-28-mksh">details</a></td><td class="details-row"><a href="#details-28-ksh">details</a></td><td class="details-row"><a href="#details-28-toysh">details</a></td><td class="details-row"><a href="#details-28-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L335">type -a -&gt; executable not in PATH</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-dash">details</a></td><td class="details-row"><a href="#details-29-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 30</td><td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-type-bash.test.html#L341">type -P does not find directories (regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-dash">details</a></td><td class="details-row"><a href="#details-30-ash">details</a></td><td class="details-row"><a href="#details-30-zsh">details</a></td><td class="details-row"><a href="#details-30-mksh">details</a></td><td class="details-row"><a href="#details-30-ksh">details</a></td><td class="details-row"><a href="#details-30-toysh">details</a></td><td class="details-row"><a href="#details-30-sush">details</a></td><td class="details-row"><a href="#details-30-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>118 passed, 3 OK, 0 not implemented, 2 BUG, 187 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="builtin-type-bash.test.html#L5">type -t -&gt; function</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'function\n'
+Got      '-t: not found\nf is a shell function\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-t: not found
+f is a shell function
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-ash"></a><b>ash</b></td><td>0 <a href="builtin-type-bash.test.html#L5">type -t -&gt; function</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'function\n'
+Got      'f\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>f
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="builtin-type-bash.test.html#L5">type -t -&gt; function</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'function\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad option: -t
+</pre></td></tr><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="builtin-type-bash.test.html#L5">type -t -&gt; function</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'function\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: whence: -t: unknown option
+</pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="builtin-type-bash.test.html#L5">type -t -&gt; function</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'function\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: whence: -t: unknown option
+</pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="builtin-type-bash.test.html#L5">type -t -&gt; function</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'function\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="builtin-type-bash.test.html#L10">type -t -&gt; alias</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'alias\n'
+Got      '-t: not found\nfoo is an alias for bar\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-t: not found
+foo is an alias for bar
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+</pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="builtin-type-bash.test.html#L10">type -t -&gt; alias</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'alias\n'
+Got      "alias foo='bar'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>alias foo='bar'
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="builtin-type-bash.test.html#L10">type -t -&gt; alias</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'alias\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: bad option: -t
+</pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="builtin-type-bash.test.html#L10">type -t -&gt; alias</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'alias\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+mksh: &lt;stdin&gt;[3]: whence: -t: unknown option
+</pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="builtin-type-bash.test.html#L10">type -t -&gt; alias</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'alias\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[3]: whence: -t: unknown option
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-type-bash.test.html#L10">type -t -&gt; alias</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'alias\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+sh: alias: No such file or directory
+sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="builtin-type-bash.test.html#L16">type -t -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'builtin\nbuiltin\nbuiltin\nbuiltin\nbuiltin\nbuiltin\n'
+Got      '-t: not found\necho is a shell builtin\nread is a shell builtin\n: is a special shell builtin\n[ is a shell builtin\ndeclare: not found\nlocal is a special shell builtin\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-t: not found
+echo is a shell builtin
+read is a shell builtin
+: is a special shell builtin
+[ is a shell builtin
+declare: not found
+local is a special shell builtin
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-ash"></a><b>ash</b></td><td>2 <a href="builtin-type-bash.test.html#L16">type -t -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'builtin\nbuiltin\nbuiltin\nbuiltin\nbuiltin\nbuiltin\n'
+Got      'echo\nread\n:\n[\nlocal\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>echo
+read
+:
+[
+local
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="builtin-type-bash.test.html#L16">type -t -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'builtin\nbuiltin\nbuiltin\nbuiltin\nbuiltin\nbuiltin\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad option: -t
+</pre></td></tr><tr><td><a name="details-2-mksh"></a><b>mksh</b></td><td>2 <a href="builtin-type-bash.test.html#L16">type -t -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'builtin\nbuiltin\nbuiltin\nbuiltin\nbuiltin\nbuiltin\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: whence: -t: unknown option
+</pre></td></tr><tr><td><a name="details-2-ksh"></a><b>ksh</b></td><td>2 <a href="builtin-type-bash.test.html#L16">type -t -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'builtin\nbuiltin\nbuiltin\nbuiltin\nbuiltin\nbuiltin\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: whence: -t: unknown option
+</pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="builtin-type-bash.test.html#L16">type -t -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'builtin\nbuiltin\nbuiltin\nbuiltin\nbuiltin\nbuiltin\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="builtin-type-bash.test.html#L16">type -t -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'builtin\nbuiltin\nbuiltin\nbuiltin\nbuiltin\nbuiltin\n'
+Got      'builtin\nbuiltin\nbuiltin\nfile\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>builtin
+builtin
+builtin
+file
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="builtin-type-bash.test.html#L27">type -t -&gt; keyword</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'keyword\nkeyword\nkeyword\nkeyword\nkeyword\nkeyword\n'
+Got      '-t: not found\nfor is a shell keyword\ntime is /usr/bin/time\n! is a shell keyword\nfi is a shell keyword\ndo is a shell keyword\n{ is a shell keyword\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-t: not found
+for is a shell keyword
+time is /usr/bin/time
+! is a shell keyword
+fi is a shell keyword
+do is a shell keyword
+{ is a shell keyword
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-ash"></a><b>ash</b></td><td>3 <a href="builtin-type-bash.test.html#L27">type -t -&gt; keyword</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'keyword\nkeyword\nkeyword\nkeyword\nkeyword\nkeyword\n'
+Got      'for\n/usr/bin/time\n!\nfi\ndo\n{\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>for
+/usr/bin/time
+!
+fi
+do
+{
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="builtin-type-bash.test.html#L27">type -t -&gt; keyword</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'keyword\nkeyword\nkeyword\nkeyword\nkeyword\nkeyword\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad option: -t
+</pre></td></tr><tr><td><a name="details-3-mksh"></a><b>mksh</b></td><td>3 <a href="builtin-type-bash.test.html#L27">type -t -&gt; keyword</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'keyword\nkeyword\nkeyword\nkeyword\nkeyword\nkeyword\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: whence: -t: unknown option
+</pre></td></tr><tr><td><a name="details-3-ksh"></a><b>ksh</b></td><td>3 <a href="builtin-type-bash.test.html#L27">type -t -&gt; keyword</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'keyword\nkeyword\nkeyword\nkeyword\nkeyword\nkeyword\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: whence: -t: unknown option
+</pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="builtin-type-bash.test.html#L27">type -t -&gt; keyword</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'keyword\nkeyword\nkeyword\nkeyword\nkeyword\nkeyword\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="builtin-type-bash.test.html#L27">type -t -&gt; keyword</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'keyword\nkeyword\nkeyword\nkeyword\nkeyword\nkeyword\n'
+Got      'keyword\nfile\nkeyword\nkeyword\nkeyword\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>keyword
+file
+keyword
+keyword
+keyword
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="builtin-type-bash.test.html#L38">type -t control flow</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'builtin\nbuiltin\nbuiltin\nbuiltin\n'
+Got      '-t: not found\nbreak is a special shell builtin\ncontinue is a special shell builtin\nreturn is a special shell builtin\nexit is a special shell builtin\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-t: not found
+break is a special shell builtin
+continue is a special shell builtin
+return is a special shell builtin
+exit is a special shell builtin
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="builtin-type-bash.test.html#L38">type -t control flow</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'builtin\nbuiltin\nbuiltin\nbuiltin\n'
+Got      'break\ncontinue\nreturn\nexit\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>break
+continue
+return
+exit
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="builtin-type-bash.test.html#L38">type -t control flow</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'builtin\nbuiltin\nbuiltin\nbuiltin\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad option: -t
+</pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="builtin-type-bash.test.html#L38">type -t control flow</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'builtin\nbuiltin\nbuiltin\nbuiltin\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: whence: -t: unknown option
+</pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="builtin-type-bash.test.html#L38">type -t control flow</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'builtin\nbuiltin\nbuiltin\nbuiltin\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: whence: -t: unknown option
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="builtin-type-bash.test.html#L38">type -t control flow</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'builtin\nbuiltin\nbuiltin\nbuiltin\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-4-osh"></a><b>osh</b></td><td>4 <a href="builtin-type-bash.test.html#L38">type -t control flow</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>keyword
+keyword
+keyword
+keyword
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="builtin-type-bash.test.html#L60">type -t -&gt; file</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'file\nfile\n'
+Got      '-t: not found\nfind is /usr/bin/find\nxargs is /usr/bin/xargs\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-t: not found
+find is /usr/bin/find
+xargs is /usr/bin/xargs
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="builtin-type-bash.test.html#L60">type -t -&gt; file</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'file\nfile\n'
+Got      '/usr/bin/find\n/usr/bin/xargs\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/usr/bin/find
+/usr/bin/xargs
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="builtin-type-bash.test.html#L60">type -t -&gt; file</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'file\nfile\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad option: -t
+</pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="builtin-type-bash.test.html#L60">type -t -&gt; file</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'file\nfile\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: whence: -t: unknown option
+</pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="builtin-type-bash.test.html#L60">type -t -&gt; file</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'file\nfile\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: whence: -t: unknown option
+</pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="builtin-type-bash.test.html#L60">type -t -&gt; file</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'file\nfile\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-6-bash"></a><b>bash</b></td><td>6 <a href="builtin-type-bash.test.html#L67">type -t doesn't find non-executable (like command -v)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>file
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="builtin-type-bash.test.html#L67">type -t doesn't find non-executable (like command -v)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected ''
+Got      '-t: not found\nnon-executable is /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-type-bash.test.sh/06-dash/non-executable\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-t: not found
+non-executable is /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-type-bash.test.sh/06-dash/non-executable
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="builtin-type-bash.test.html#L67">type -t doesn't find non-executable (like command -v)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected ''
+Got      '/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-type-bash.test.sh/06-ash/non-executable\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-type-bash.test.sh/06-ash/non-executable
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="builtin-type-bash.test.html#L67">type -t doesn't find non-executable (like command -v)</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="builtin-type-bash.test.html#L67">type -t doesn't find non-executable (like command -v)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected ''
+Got      'file\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>file
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="builtin-type-bash.test.html#L79">type -t -&gt; not found</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'builtin\nfile\nstatus=1\n'
+Got      '-t: not found\necho is a shell builtin\nZZZ: not found\nfind is /usr/bin/find\n==: not found\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-t: not found
+echo is a shell builtin
+ZZZ: not found
+find is /usr/bin/find
+==: not found
+status=127
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="builtin-type-bash.test.html#L79">type -t -&gt; not found</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'builtin\nfile\nstatus=1\n'
+Got      'echo\n/usr/bin/find\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>echo
+/usr/bin/find
+status=127
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="builtin-type-bash.test.html#L79">type -t -&gt; not found</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'builtin\nfile\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh stderr]
+Expected ''
+Got      'zsh: = not found\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: = not found
+</pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="builtin-type-bash.test.html#L79">type -t -&gt; not found</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'builtin\nfile\nstatus=1\n'
+Got      'status=1\n'
+</span><br/>
+<span class="assertion">
+[mksh stderr]
+Expected ''
+Got      'mksh: &lt;stdin&gt;[1]: whence: -t: unknown option\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: whence: -t: unknown option
+</pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="builtin-type-bash.test.html#L79">type -t -&gt; not found</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'builtin\nfile\nstatus=1\n'
+Got      'status=1\n'
+</span><br/>
+<span class="assertion">
+[ksh stderr]
+Expected ''
+Got      'E: ksh: &lt;stdin&gt;[1]: whence: -t: unknown option\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: whence: -t: unknown option
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="builtin-type-bash.test.html#L79">type -t -&gt; not found</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'builtin\nfile\nstatus=1\n'
+Got      'status=127\n'
+</span><br/>
+<span class="assertion">
+[toysh stderr]
+Expected ''
+Got      'sh: type: No such file or directory\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="builtin-type-bash.test.html#L90">type -p and -P builtin -&gt; file</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '/tmp/mv\n/tmp/tar\n/tmp/grep\n--\n/tmp/mv\n/tmp/tar\n/tmp/grep\n'
+Got      '-p: not found\nmv is /tmp/mv\ntar is /tmp/tar\ngrep is /tmp/grep\n--\n-P: not found\nmv is a tracked alias for /tmp/mv\ntar is a tracked alias for /tmp/tar\ngrep is a tracked alias for /tmp/grep\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-p: not found
+mv is /tmp/mv
+tar is /tmp/tar
+grep is /tmp/grep
+--
+-P: not found
+mv is a tracked alias for /tmp/mv
+tar is a tracked alias for /tmp/tar
+grep is a tracked alias for /tmp/grep
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="builtin-type-bash.test.html#L90">type -p and -P builtin -&gt; file</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '/tmp/mv\n/tmp/tar\n/tmp/grep\n--\n/tmp/mv\n/tmp/tar\n/tmp/grep\n'
+Got      'mv is /tmp/mv\ntar is /tmp/tar\ngrep is /tmp/grep\n--\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>mv is /tmp/mv
+tar is /tmp/tar
+grep is /tmp/grep
+--
+</pre><i>stderr:</i> <br/>
+<pre>zsh: bad option: -P
+</pre></td></tr><tr><td><a name="details-8-mksh"></a><b>mksh</b></td><td>8 <a href="builtin-type-bash.test.html#L90">type -p and -P builtin -&gt; file</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '/tmp/mv\n/tmp/tar\n/tmp/grep\n--\n/tmp/mv\n/tmp/tar\n/tmp/grep\n'
+Got      'mv is a tracked alias for /tmp/mv\ntar is a tracked alias for /tmp/tar\ngrep is a tracked alias for /tmp/grep\n--\n'
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>mv is a tracked alias for /tmp/mv
+tar is a tracked alias for /tmp/tar
+grep is a tracked alias for /tmp/grep
+--
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[7]: whence: -P: unknown option
+</pre></td></tr><tr><td><a name="details-8-ksh"></a><b>ksh</b></td><td>8 <a href="builtin-type-bash.test.html#L90">type -p and -P builtin -&gt; file</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '/tmp/mv\n/tmp/tar\n/tmp/grep\n--\n/tmp/mv\n/tmp/tar\n/tmp/grep\n'
+Got      'mv is a tracked alias for /tmp/mv\ntar is a tracked alias for /tmp/tar\ngrep is a tracked alias for /tmp/grep\n--\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>mv is a tracked alias for /tmp/mv
+tar is a tracked alias for /tmp/tar
+grep is a tracked alias for /tmp/grep
+--
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[7]: whence: -P: unknown option
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="builtin-type-bash.test.html#L90">type -p and -P builtin -&gt; file</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '/tmp/mv\n/tmp/tar\n/tmp/grep\n--\n/tmp/mv\n/tmp/tar\n/tmp/grep\n'
+Got      '\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="builtin-type-bash.test.html#L108">type -a -P gives multiple files</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '_tmp/pwd\n/bin/pwd\n'
+Got      '-a: not found\n-P: not found\npwd is a shell builtin\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-a: not found
+-P: not found
+pwd is a shell builtin
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-ash"></a><b>ash</b></td><td>9 <a href="builtin-type-bash.test.html#L108">type -a -P gives multiple files</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '_tmp/pwd\n/bin/pwd\n'
+Got      'pwd\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pwd
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-zsh"></a><b>zsh</b></td><td>9 <a href="builtin-type-bash.test.html#L108">type -a -P gives multiple files</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '_tmp/pwd\n/bin/pwd\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad option: -P
+</pre></td></tr><tr><td><a name="details-9-mksh"></a><b>mksh</b></td><td>9 <a href="builtin-type-bash.test.html#L108">type -a -P gives multiple files</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '_tmp/pwd\n/bin/pwd\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-9-ksh"></a><b>ksh</b></td><td>9 <a href="builtin-type-bash.test.html#L108">type -a -P gives multiple files</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '_tmp/pwd\n/bin/pwd\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="builtin-type-bash.test.html#L108">type -a -P gives multiple files</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '_tmp/pwd\n/bin/pwd\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="builtin-type-bash.test.html#L108">type -a -P gives multiple files</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '_tmp/pwd\n/bin/pwd\n'
+Got      '_tmp/pwd\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/pwd
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="builtin-type-bash.test.html#L121">type -p builtin -&gt; not found</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected ''
+Got      '-p: not found\nFOO: not found\nBAR: not found\nNOT_FOUND: not found\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-p: not found
+FOO: not found
+BAR: not found
+NOT_FOUND: not found
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="builtin-type-bash.test.html#L121">type -p builtin -&gt; not found</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-zsh"></a><b>zsh</b></td><td>10 <a href="builtin-type-bash.test.html#L121">type -p builtin -&gt; not found</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected ''
+Got      'FOO not found\nBAR not found\nNOT_FOUND not found\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FOO not found
+BAR not found
+NOT_FOUND not found
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-mksh"></a><b>mksh</b></td><td>10 <a href="builtin-type-bash.test.html#L121">type -p builtin -&gt; not found</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected ''
+Got      'FOO not found\nBAR not found\nNOT_FOUND not found\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FOO not found
+BAR not found
+NOT_FOUND not found
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-ksh"></a><b>ksh</b></td><td>10 <a href="builtin-type-bash.test.html#L121">type -p builtin -&gt; not found</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected ''
+Got      'FOO not found\nBAR not found\nNOT_FOUND not found\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FOO not found
+BAR not found
+NOT_FOUND not found
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="builtin-type-bash.test.html#L121">type -p builtin -&gt; not found</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-11-dash"></a><b>dash</b></td><td>11 <a href="builtin-type-bash.test.html#L127">type -p builtin -&gt; not a file</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected ''
+Got      '-p: not found\ncd is a shell builtin\ntype is a shell builtin\nbuiltin: not found\ncommand is a shell builtin\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-p: not found
+cd is a shell builtin
+type is a shell builtin
+builtin: not found
+command is a shell builtin
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-ash"></a><b>ash</b></td><td>11 <a href="builtin-type-bash.test.html#L127">type -p builtin -&gt; not a file</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected ''
+Got      'cd\ntype\ncommand\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>cd
+type
+command
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-zsh"></a><b>zsh</b></td><td>11 <a href="builtin-type-bash.test.html#L127">type -p builtin -&gt; not a file</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected ''
+Got      'cd not found\ntype not found\nbuiltin not found\ncommand not found\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>cd not found
+type not found
+builtin not found
+command not found
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-mksh"></a><b>mksh</b></td><td>11 <a href="builtin-type-bash.test.html#L127">type -p builtin -&gt; not a file</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected ''
+Got      'cd not found\ntype not found\nbuiltin not found\ncommand not found\n'
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>cd not found
+type not found
+builtin not found
+command not found
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-ksh"></a><b>ksh</b></td><td>11 <a href="builtin-type-bash.test.html#L127">type -p builtin -&gt; not a file</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected ''
+Got      'cd not found\ntype not found\nbuiltin not found\ncommand not found\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>cd not found
+type not found
+builtin not found
+command not found
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="builtin-type-bash.test.html#L127">type -p builtin -&gt; not a file</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-12-dash"></a><b>dash</b></td><td>12 <a href="builtin-type-bash.test.html#L132">type -P builtin -&gt; not found</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected ''
+Got      '-P: not found\nFOO: not found\nBAR: not found\nNOT_FOUND: not found\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-P: not found
+FOO: not found
+BAR: not found
+NOT_FOUND: not found
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-ash"></a><b>ash</b></td><td>12 <a href="builtin-type-bash.test.html#L132">type -P builtin -&gt; not found</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="builtin-type-bash.test.html#L132">type -P builtin -&gt; not found</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="builtin-type-bash.test.html#L138">type -P builtin -&gt; not a file</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected ''
+Got      '-P: not found\ncd is a shell builtin\ntype is a shell builtin\nbuiltin: not found\ncommand is a shell builtin\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-P: not found
+cd is a shell builtin
+type is a shell builtin
+builtin: not found
+command is a shell builtin
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="builtin-type-bash.test.html#L138">type -P builtin -&gt; not a file</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected ''
+Got      'cd\ntype\ncommand\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>cd
+type
+command
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="builtin-type-bash.test.html#L138">type -P builtin -&gt; not a file</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="builtin-type-bash.test.html#L138">type -P builtin -&gt; not a file</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="builtin-type-bash.test.html#L144">type -P builtin -&gt; not a file but file found</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '_tmp/mv\n_tmp/tar\n_tmp/grep\n'
+Got      '-P: not found\nmv is a shell function\ntar is a shell function\ngrep is a shell function\ncd is a shell builtin\nbuiltin: not found\ncommand is a shell builtin\ntype is a shell builtin\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-P: not found
+mv is a shell function
+tar is a shell function
+grep is a shell function
+cd is a shell builtin
+builtin: not found
+command is a shell builtin
+type is a shell builtin
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-ash"></a><b>ash</b></td><td>14 <a href="builtin-type-bash.test.html#L144">type -P builtin -&gt; not a file but file found</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '_tmp/mv\n_tmp/tar\n_tmp/grep\n'
+Got      'mv\ntar\ngrep\ncd\ncommand\ntype\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>mv
+tar
+grep
+cd
+command
+type
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-zsh"></a><b>zsh</b></td><td>14 <a href="builtin-type-bash.test.html#L144">type -P builtin -&gt; not a file but file found</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '_tmp/mv\n_tmp/tar\n_tmp/grep\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: bad option: -P
+</pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="builtin-type-bash.test.html#L144">type -P builtin -&gt; not a file but file found</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '_tmp/mv\n_tmp/tar\n_tmp/grep\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[8]: whence: -P: unknown option
+</pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="builtin-type-bash.test.html#L144">type -P builtin -&gt; not a file but file found</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '_tmp/mv\n_tmp/tar\n_tmp/grep\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[8]: whence: -P: unknown option
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="builtin-type-bash.test.html#L144">type -P builtin -&gt; not a file but file found</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '_tmp/mv\n_tmp/tar\n_tmp/grep\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="builtin-type-bash.test.html#L144">type -P builtin -&gt; not a file but file found</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/mv
+_tmp/tar
+_tmp/grep
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="builtin-type-bash.test.html#L160">type -f builtin -&gt; not found</a><br/><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-f: not found
+FOO: not found
+BAR: not found
+NOT: not found
+FOUND: not found
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-ash"></a><b>ash</b></td><td>15 <a href="builtin-type-bash.test.html#L160">type -f builtin -&gt; not found</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="builtin-type-bash.test.html#L160">type -f builtin -&gt; not found</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-16-dash"></a><b>dash</b></td><td>16 <a href="builtin-type-bash.test.html#L164">type -f builtin -&gt; function and file exists</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'mv is /tmp/mv\ntar is /tmp/tar\ngrep is /tmp/grep\n'
+Got      '-f: not found\nmv is a shell function\ntar is a shell function\ngrep is a shell function\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-f: not found
+mv is a shell function
+tar is a shell function
+grep is a shell function
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-ash"></a><b>ash</b></td><td>16 <a href="builtin-type-bash.test.html#L164">type -f builtin -&gt; function and file exists</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'mv is /tmp/mv\ntar is /tmp/tar\ngrep is /tmp/grep\n'
+Got      'mv\ntar\ngrep\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>mv
+tar
+grep
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-zsh"></a><b>zsh</b></td><td>16 <a href="builtin-type-bash.test.html#L164">type -f builtin -&gt; function and file exists</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'mv is /tmp/mv\ntar is /tmp/tar\ngrep is /tmp/grep\n'
+Got      'mv () {\n\tls\n}\ntar () {\n\tls\n}\ngrep () {\n\tls\n}\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>mv () {
+	ls
+}
+tar () {
+	ls
+}
+grep () {
+	ls
+}
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-mksh"></a><b>mksh</b></td><td>16 <a href="builtin-type-bash.test.html#L164">type -f builtin -&gt; function and file exists</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'mv is /tmp/mv\ntar is /tmp/tar\ngrep is /tmp/grep\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[8]: whence: -f: unknown option
+</pre></td></tr><tr><td><a name="details-16-ksh"></a><b>ksh</b></td><td>16 <a href="builtin-type-bash.test.html#L164">type -f builtin -&gt; function and file exists</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'mv is /tmp/mv\ntar is /tmp/tar\ngrep is /tmp/grep\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[8]: whence: -f: unknown option
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="builtin-type-bash.test.html#L164">type -f builtin -&gt; function and file exists</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'mv is /tmp/mv\ntar is /tmp/tar\ngrep is /tmp/grep\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-16-sush"></a><b>sush</b></td><td>16 <a href="builtin-type-bash.test.html#L164">type -f builtin -&gt; function and file exists</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'mv is /tmp/mv\ntar is /tmp/tar\ngrep is /tmp/grep\n'
+Got      'mv is a function\nmv () \n{ \n    ls\n}\ntar is a function\ntar () \n{ \n    ls\n}\ngrep is a function\ngrep () \n{ \n    ls\n}\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>mv is a function
+mv () 
+{ 
+    ls
+}
+tar is a function
+tar () 
+{ 
+    ls
+}
+grep is a function
+grep () 
+{ 
+    ls
+}
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: type: -f: not found
+</pre></td></tr><tr><td><a name="details-17-dash"></a><b>dash</b></td><td>17 <a href="builtin-type-bash.test.html#L179">type prints function source code</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'f is a function\nf () \n{ \n    echo\n}\n\nf is a function\nf () \n{ \n    echo\n}\n'
+Got      '-a: not found\nf is a shell function\n\nf is a shell function\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-a: not found
+f is a shell function
+
+f is a shell function
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-ash"></a><b>ash</b></td><td>17 <a href="builtin-type-bash.test.html#L179">type prints function source code</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'f is a function\nf () \n{ \n    echo\n}\n\nf is a function\nf () \n{ \n    echo\n}\n'
+Got      'f\n\nf is a function\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>f
+
+f is a function
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-zsh"></a><b>zsh</b></td><td>17 <a href="builtin-type-bash.test.html#L179">type prints function source code</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'f is a function\nf () \n{ \n    echo\n}\n\nf is a function\nf () \n{ \n    echo\n}\n'
+Got      'f is a shell function\n\nf is a shell function\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>f is a shell function
+
+f is a shell function
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-mksh"></a><b>mksh</b></td><td>17 <a href="builtin-type-bash.test.html#L179">type prints function source code</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'f is a function\nf () \n{ \n    echo\n}\n\nf is a function\nf () \n{ \n    echo\n}\n'
+Got      '\nf is a function\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+f is a function
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-17-ksh"></a><b>ksh</b></td><td>17 <a href="builtin-type-bash.test.html#L179">type prints function source code</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'f is a function\nf () \n{ \n    echo\n}\n\nf is a function\nf () \n{ \n    echo\n}\n'
+Got      '\nf is a function\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+f is a function
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="builtin-type-bash.test.html#L179">type prints function source code</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'f is a function\nf () \n{ \n    echo\n}\n\nf is a function\nf () \n{ \n    echo\n}\n'
+Got      '\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-17-osh"></a><b>osh</b></td><td>17 <a href="builtin-type-bash.test.html#L179">type prints function source code</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>f is a shell function
+f () { echo; }
+
+f is a shell function
+f () { echo; }
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-dash"></a><b>dash</b></td><td>18 <a href="builtin-type-bash.test.html#L207">type -ap -&gt; function</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected ''
+Got      '-ap: not found\nf is a shell function\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-ap: not found
+f is a shell function
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-ash"></a><b>ash</b></td><td>18 <a href="builtin-type-bash.test.html#L207">type -ap -&gt; function</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected ''
+Got      'f\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>f
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-zsh"></a><b>zsh</b></td><td>18 <a href="builtin-type-bash.test.html#L207">type -ap -&gt; function</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected ''
+Got      'f not found\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>f not found
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-mksh"></a><b>mksh</b></td><td>18 <a href="builtin-type-bash.test.html#L207">type -ap -&gt; function</a><br/><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-18-ksh"></a><b>ksh</b></td><td>18 <a href="builtin-type-bash.test.html#L207">type -ap -&gt; function</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="builtin-type-bash.test.html#L207">type -ap -&gt; function</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="builtin-type-bash.test.html#L207">type -ap -&gt; function</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-bash"></a><b>bash</b></td><td>19 <a href="builtin-type-bash.test.html#L213">type -a -&gt; alias; prints alias definition</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ll is aliased to `ls -lha'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-dash"></a><b>dash</b></td><td>19 <a href="builtin-type-bash.test.html#L213">type -a -&gt; alias; prints alias definition</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'll is an alias for "ls -lha"\n'
+Got      '-a: not found\nll is an alias for ls -lha\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-a: not found
+ll is an alias for ls -lha
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+</pre></td></tr><tr><td><a name="details-19-ash"></a><b>ash</b></td><td>19 <a href="builtin-type-bash.test.html#L213">type -a -&gt; alias; prints alias definition</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'll is an alias for "ls -lha"\n'
+Got      "alias ll='ls -lha'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>alias ll='ls -lha'
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-19-zsh"></a><b>zsh</b></td><td>19 <a href="builtin-type-bash.test.html#L213">type -a -&gt; alias; prints alias definition</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'll is an alias for "ls -lha"\n'
+Got      'll is an alias for ls -lha\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ll is an alias for ls -lha
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-19-mksh"></a><b>mksh</b></td><td>19 <a href="builtin-type-bash.test.html#L213">type -a -&gt; alias; prints alias definition</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'll is an alias for "ls -lha"\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+mksh: &lt;stdin&gt;[3]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-19-ksh"></a><b>ksh</b></td><td>19 <a href="builtin-type-bash.test.html#L213">type -a -&gt; alias; prints alias definition</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'll is an alias for "ls -lha"\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[3]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="builtin-type-bash.test.html#L213">type -a -&gt; alias; prints alias definition</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'll is an alias for "ls -lha"\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+sh: alias: No such file or directory
+sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-19-sush"></a><b>sush</b></td><td>19 <a href="builtin-type-bash.test.html#L213">type -a -&gt; alias; prints alias definition</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'll is an alias for "ls -lha"\n'
+Got      "ll is aliased to `ls -lha'\n"
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ll is aliased to `ls -lha'
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: type: -a: not found
+</pre></td></tr><tr><td><a name="details-19-brush"></a><b>brush</b></td><td>19 <a href="builtin-type-bash.test.html#L213">type -a -&gt; alias; prints alias definition</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'll is an alias for "ls -lha"\n'
+Got      "ll is aliased to 'ls -lha'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ll is aliased to 'ls -lha'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-dash"></a><b>dash</b></td><td>20 <a href="builtin-type-bash.test.html#L220">type -ap -&gt; alias</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected ''
+Got      '-ap: not found\nll is an alias for ls -lha\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-ap: not found
+ll is an alias for ls -lha
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+</pre></td></tr><tr><td><a name="details-20-ash"></a><b>ash</b></td><td>20 <a href="builtin-type-bash.test.html#L220">type -ap -&gt; alias</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected ''
+Got      "alias ll='ls -lha'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>alias ll='ls -lha'
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-20-zsh"></a><b>zsh</b></td><td>20 <a href="builtin-type-bash.test.html#L220">type -ap -&gt; alias</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected ''
+Got      'll not found\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ll not found
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-20-mksh"></a><b>mksh</b></td><td>20 <a href="builtin-type-bash.test.html#L220">type -ap -&gt; alias</a><br/><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+mksh: &lt;stdin&gt;[3]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-20-ksh"></a><b>ksh</b></td><td>20 <a href="builtin-type-bash.test.html#L220">type -ap -&gt; alias</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[3]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="builtin-type-bash.test.html#L220">type -ap -&gt; alias</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+sh: alias: No such file or directory
+sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-20-sush"></a><b>sush</b></td><td>20 <a href="builtin-type-bash.test.html#L220">type -ap -&gt; alias</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-dash"></a><b>dash</b></td><td>21 <a href="builtin-type-bash.test.html#L227">type -a -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'cd is a shell builtin\n'
+Got      '-a: not found\ncd is a shell builtin\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-a: not found
+cd is a shell builtin
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-ash"></a><b>ash</b></td><td>21 <a href="builtin-type-bash.test.html#L227">type -a -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'cd is a shell builtin\n'
+Got      'cd\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>cd
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-mksh"></a><b>mksh</b></td><td>21 <a href="builtin-type-bash.test.html#L227">type -a -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'cd is a shell builtin\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-21-ksh"></a><b>ksh</b></td><td>21 <a href="builtin-type-bash.test.html#L227">type -a -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'cd is a shell builtin\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="builtin-type-bash.test.html#L227">type -a -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'cd is a shell builtin\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="builtin-type-bash.test.html#L227">type -a -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>cd is a shell builtin
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: type: -a: not found
+</pre></td></tr><tr><td><a name="details-22-dash"></a><b>dash</b></td><td>22 <a href="builtin-type-bash.test.html#L231">type -ap -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected ''
+Got      '-ap: not found\ncd is a shell builtin\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-ap: not found
+cd is a shell builtin
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-ash"></a><b>ash</b></td><td>22 <a href="builtin-type-bash.test.html#L231">type -ap -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected ''
+Got      'cd\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>cd
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-zsh"></a><b>zsh</b></td><td>22 <a href="builtin-type-bash.test.html#L231">type -ap -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected ''
+Got      'cd not found\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>cd not found
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-mksh"></a><b>mksh</b></td><td>22 <a href="builtin-type-bash.test.html#L231">type -ap -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-22-ksh"></a><b>ksh</b></td><td>22 <a href="builtin-type-bash.test.html#L231">type -ap -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="builtin-type-bash.test.html#L231">type -ap -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="builtin-type-bash.test.html#L231">type -ap -&gt; builtin</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-dash"></a><b>dash</b></td><td>23 <a href="builtin-type-bash.test.html#L236">type -a -&gt; keyword</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'while is a shell keyword\n'
+Got      '-a: not found\nwhile is a shell keyword\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-a: not found
+while is a shell keyword
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-ash"></a><b>ash</b></td><td>23 <a href="builtin-type-bash.test.html#L236">type -a -&gt; keyword</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'while is a shell keyword\n'
+Got      'while\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>while
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-zsh"></a><b>zsh</b></td><td>23 <a href="builtin-type-bash.test.html#L236">type -a -&gt; keyword</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'while is a shell keyword\n'
+Got      'while is a reserved word\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>while is a reserved word
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-mksh"></a><b>mksh</b></td><td>23 <a href="builtin-type-bash.test.html#L236">type -a -&gt; keyword</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'while is a shell keyword\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-23-ksh"></a><b>ksh</b></td><td>23 <a href="builtin-type-bash.test.html#L236">type -a -&gt; keyword</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'while is a shell keyword\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="builtin-type-bash.test.html#L236">type -a -&gt; keyword</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'while is a shell keyword\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-23-sush"></a><b>sush</b></td><td>23 <a href="builtin-type-bash.test.html#L236">type -a -&gt; keyword</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>while is a shell keyword
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: type: -a: not found
+</pre></td></tr><tr><td><a name="details-24-dash"></a><b>dash</b></td><td>24 <a href="builtin-type-bash.test.html#L240">type -a -&gt; file</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'date is /bin/date\ndate is _tmp/date\n'
+Got      '-a: not found\ndate is /bin/date\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-a: not found
+date is /bin/date
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-ash"></a><b>ash</b></td><td>24 <a href="builtin-type-bash.test.html#L240">type -a -&gt; file</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'date is /bin/date\ndate is _tmp/date\n'
+Got      '/bin/date\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/bin/date
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-mksh"></a><b>mksh</b></td><td>24 <a href="builtin-type-bash.test.html#L240">type -a -&gt; file</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'date is /bin/date\ndate is _tmp/date\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-24-ksh"></a><b>ksh</b></td><td>24 <a href="builtin-type-bash.test.html#L240">type -a -&gt; file</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'date is /bin/date\ndate is _tmp/date\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="builtin-type-bash.test.html#L240">type -a -&gt; file</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'date is /bin/date\ndate is _tmp/date\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-24-sush"></a><b>sush</b></td><td>24 <a href="builtin-type-bash.test.html#L240">type -a -&gt; file</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'date is /bin/date\ndate is _tmp/date\n'
+Got      'date is /bin/date\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>date is /bin/date
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: type: -a: not found
+</pre></td></tr><tr><td><a name="details-25-dash"></a><b>dash</b></td><td>25 <a href="builtin-type-bash.test.html#L252">type -ap -&gt; file; abbreviated</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '/bin/date\n_tmp/date\n'
+Got      '-ap: not found\ndate is /bin/date\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-ap: not found
+date is /bin/date
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-ash"></a><b>ash</b></td><td>25 <a href="builtin-type-bash.test.html#L252">type -ap -&gt; file; abbreviated</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '/bin/date\n_tmp/date\n'
+Got      '/bin/date\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/bin/date
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-zsh"></a><b>zsh</b></td><td>25 <a href="builtin-type-bash.test.html#L252">type -ap -&gt; file; abbreviated</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '/bin/date\n_tmp/date\n'
+Got      'date is /bin/date\ndate is _tmp/date\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>date is /bin/date
+date is _tmp/date
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-mksh"></a><b>mksh</b></td><td>25 <a href="builtin-type-bash.test.html#L252">type -ap -&gt; file; abbreviated</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '/bin/date\n_tmp/date\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-25-ksh"></a><b>ksh</b></td><td>25 <a href="builtin-type-bash.test.html#L252">type -ap -&gt; file; abbreviated</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '/bin/date\n_tmp/date\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="builtin-type-bash.test.html#L252">type -ap -&gt; file; abbreviated</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '/bin/date\n_tmp/date\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-25-sush"></a><b>sush</b></td><td>25 <a href="builtin-type-bash.test.html#L252">type -ap -&gt; file; abbreviated</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '/bin/date\n_tmp/date\n'
+Got      '/bin/date\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>/bin/date
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-dash"></a><b>dash</b></td><td>26 <a href="builtin-type-bash.test.html#L263">type -a -&gt; builtin and file</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'pwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n'
+Got      '-a: not found\npwd is a shell builtin\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-a: not found
+pwd is a shell builtin
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-ash"></a><b>ash</b></td><td>26 <a href="builtin-type-bash.test.html#L263">type -a -&gt; builtin and file</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'pwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n'
+Got      'pwd\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pwd
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-mksh"></a><b>mksh</b></td><td>26 <a href="builtin-type-bash.test.html#L263">type -a -&gt; builtin and file</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'pwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[mksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-26-ksh"></a><b>ksh</b></td><td>26 <a href="builtin-type-bash.test.html#L263">type -a -&gt; builtin and file</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'pwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="builtin-type-bash.test.html#L263">type -a -&gt; builtin and file</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'pwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-26-sush"></a><b>sush</b></td><td>26 <a href="builtin-type-bash.test.html#L263">type -a -&gt; builtin and file</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'pwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n'
+Got      'pwd is a shell builtin\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pwd is a shell builtin
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: type: -a: not found
+</pre></td></tr><tr><td><a name="details-27-dash"></a><b>dash</b></td><td>27 <a href="builtin-type-bash.test.html#L275">type -a -&gt; builtin and file and shell function</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected 'pwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n---\npwd is a function\npwd () \n{ \n    echo function-too\n}\npwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n---\npwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n'
+Got      '-a: not found\npwd is a shell builtin\n---\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-a: not found
+pwd is a shell builtin
+---
+</pre><i>stderr:</i> <br/>
+<pre>dash: 13: Syntax error: Bad function name
+</pre></td></tr><tr><td><a name="details-27-ash"></a><b>ash</b></td><td>27 <a href="builtin-type-bash.test.html#L275">type -a -&gt; builtin and file and shell function</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'pwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n---\npwd is a function\npwd () \n{ \n    echo function-too\n}\npwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n---\npwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n'
+Got      'pwd\n---\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pwd
+---
+</pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad function name
+</pre></td></tr><tr><td><a name="details-27-zsh"></a><b>zsh</b></td><td>27 <a href="builtin-type-bash.test.html#L275">type -a -&gt; builtin and file and shell function</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'pwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n---\npwd is a function\npwd () \n{ \n    echo function-too\n}\npwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n---\npwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n'
+Got      'pwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n---\npwd is a function\npwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n---\npwd () {\n\techo function-too\n}\npwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pwd is a shell builtin
+pwd is /bin/pwd
+pwd is _tmp/pwd
+---
+pwd is a function
+pwd is a shell builtin
+pwd is /bin/pwd
+pwd is _tmp/pwd
+---
+pwd () {
+	echo function-too
+}
+pwd is a shell builtin
+pwd is /bin/pwd
+pwd is _tmp/pwd
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-mksh"></a><b>mksh</b></td><td>27 <a href="builtin-type-bash.test.html#L275">type -a -&gt; builtin and file and shell function</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'pwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n---\npwd is a function\npwd () \n{ \n    echo function-too\n}\npwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n---\npwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n'
+Got      '---\n---\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>---
+---
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: whence: -a: unknown option
+mksh: &lt;stdin&gt;[17]: whence: -a: unknown option
+mksh: &lt;stdin&gt;[20]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-27-ksh"></a><b>ksh</b></td><td>27 <a href="builtin-type-bash.test.html#L275">type -a -&gt; builtin and file and shell function</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'pwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n---\npwd is a function\npwd () \n{ \n    echo function-too\n}\npwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n---\npwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n'
+Got      '---\n---\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>---
+---
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: whence: -a: unknown option
+E: ksh: &lt;stdin&gt;[17]: whence: -a: unknown option
+E: ksh: &lt;stdin&gt;[20]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-27-toysh"></a><b>toysh</b></td><td>27 <a href="builtin-type-bash.test.html#L275">type -a -&gt; builtin and file and shell function</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'pwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n---\npwd is a function\npwd () \n{ \n    echo function-too\n}\npwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n---\npwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n'
+Got      '---\n---\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>---
+---
+</pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+sh: type: No such file or directory
+sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-27-sush"></a><b>sush</b></td><td>27 <a href="builtin-type-bash.test.html#L275">type -a -&gt; builtin and file and shell function</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'pwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n---\npwd is a function\npwd () \n{ \n    echo function-too\n}\npwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n---\npwd is a shell builtin\npwd is /bin/pwd\npwd is _tmp/pwd\n'
+Got      'pwd is a shell builtin\n---\n}\n\ntype -a pwd | osh-normalize\necho ---\n\ntype -a -f pwd | osh-normalize\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pwd is a shell builtin
+---
+}
+
+type -a pwd | osh-normalize
+echo ---
+
+type -a -f pwd | osh-normalize
+
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: type: -a: not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 14: syntax error near unexpected token: ()
+</pre></td></tr><tr><td><a name="details-28-dash"></a><b>dash</b></td><td>28 <a href="builtin-type-bash.test.html#L316">type -ap -&gt; builtin and file; doesn't print builtin or function</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '/bin/pwd\n_tmp/pwd\n---\n'
+Got      '-ap: not found\npwd is a shell function\n---\n-p: not found\npwd is a shell function\n'
+</span><br/>
+<span class="assertion">
+[dash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-ap: not found
+pwd is a shell function
+---
+-p: not found
+pwd is a shell function
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-ash"></a><b>ash</b></td><td>28 <a href="builtin-type-bash.test.html#L316">type -ap -&gt; builtin and file; doesn't print builtin or function</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '/bin/pwd\n_tmp/pwd\n---\n'
+Got      'pwd\n---\npwd\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pwd
+---
+pwd
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-zsh"></a><b>zsh</b></td><td>28 <a href="builtin-type-bash.test.html#L316">type -ap -&gt; builtin and file; doesn't print builtin or function</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '/bin/pwd\n_tmp/pwd\n---\n'
+Got      'pwd is /bin/pwd\npwd is _tmp/pwd\n---\npwd is /bin/pwd\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pwd is /bin/pwd
+pwd is _tmp/pwd
+---
+pwd is /bin/pwd
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-mksh"></a><b>mksh</b></td><td>28 <a href="builtin-type-bash.test.html#L316">type -ap -&gt; builtin and file; doesn't print builtin or function</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected '/bin/pwd\n_tmp/pwd\n---\n'
+Got      '---\npwd is a tracked alias for /bin/pwd\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>---
+pwd is a tracked alias for /bin/pwd
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[7]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-28-ksh"></a><b>ksh</b></td><td>28 <a href="builtin-type-bash.test.html#L316">type -ap -&gt; builtin and file; doesn't print builtin or function</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '/bin/pwd\n_tmp/pwd\n---\n'
+Got      '---\npwd is a tracked alias for /bin/pwd\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>---
+pwd is a tracked alias for /bin/pwd
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[7]: whence: -a: unknown option
+</pre></td></tr><tr><td><a name="details-28-toysh"></a><b>toysh</b></td><td>28 <a href="builtin-type-bash.test.html#L316">type -ap -&gt; builtin and file; doesn't print builtin or function</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '/bin/pwd\n_tmp/pwd\n---\n'
+Got      '---\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>---
+</pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-28-sush"></a><b>sush</b></td><td>28 <a href="builtin-type-bash.test.html#L316">type -ap -&gt; builtin and file; doesn't print builtin or function</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '/bin/pwd\n_tmp/pwd\n---\n'
+Got      '---\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>---
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-dash"></a><b>dash</b></td><td>29 <a href="builtin-type-bash.test.html#L335">type -a -&gt; executable not in PATH</a><br/><br/>
+<span class="assertion">
+[dash status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-a: not found
+executable: not found
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-ash"></a><b>ash</b></td><td>29 <a href="builtin-type-bash.test.html#L335">type -a -&gt; executable not in PATH</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-toysh"></a><b>toysh</b></td><td>29 <a href="builtin-type-bash.test.html#L335">type -a -&gt; executable not in PATH</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-30-dash"></a><b>dash</b></td><td>30 <a href="builtin-type-bash.test.html#L341">type -P does not find directories (regression)</a><br/><br/>
+<span class="assertion">
+[dash stdout]
+Expected '_tmp/cat\nstatus=0\n/usr/bin/cat\nstatus=0\n'
+Got      '-P: not found\n_tmp/cat is _tmp/cat\nstatus=127\n-P: not found\ncat is /usr/bin/cat\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-P: not found
+_tmp/cat is _tmp/cat
+status=127
+-P: not found
+cat is /usr/bin/cat
+status=127
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-ash"></a><b>ash</b></td><td>30 <a href="builtin-type-bash.test.html#L341">type -P does not find directories (regression)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/cat
+status=0
+/usr/bin/cat
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-zsh"></a><b>zsh</b></td><td>30 <a href="builtin-type-bash.test.html#L341">type -P does not find directories (regression)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=1\n/usr/bin/cat\nstatus=0\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>zsh: bad option: -P
+zsh: bad option: -P
+</pre></td></tr><tr><td><a name="details-30-mksh"></a><b>mksh</b></td><td>30 <a href="builtin-type-bash.test.html#L341">type -P does not find directories (regression)</a><br/><br/>
+<span class="assertion">
+[mksh stdout]
+Expected 'status=1\ncat\nstatus=0\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: whence: -P: unknown option
+mksh: &lt;stdin&gt;[7]: whence: -P: unknown option
+</pre></td></tr><tr><td><a name="details-30-ksh"></a><b>ksh</b></td><td>30 <a href="builtin-type-bash.test.html#L341">type -P does not find directories (regression)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=1\n/usr/bin/cat\nstatus=0\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: whence: -P: unknown option
+E: ksh: &lt;stdin&gt;[7]: whence: -P: unknown option
+</pre></td></tr><tr><td><a name="details-30-toysh"></a><b>toysh</b></td><td>30 <a href="builtin-type-bash.test.html#L341">type -P does not find directories (regression)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=1\n/usr/bin/cat\nstatus=0\n'
+Got      'status=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: type: No such file or directory
+sh: type: No such file or directory
+</pre></td></tr><tr><td><a name="details-30-sush"></a><b>sush</b></td><td>30 <a href="builtin-type-bash.test.html#L341">type -P does not find directories (regression)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=1\n/usr/bin/cat\nstatus=0\n'
+Got      '_tmp/cat\nstatus=0\n_tmp/cat\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/cat
+status=0
+_tmp/cat
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-brush"></a><b>brush</b></td><td>30 <a href="builtin-type-bash.test.html#L341">type -P does not find directories (regression)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=1\n/usr/bin/cat\nstatus=0\n'
+Got      '_tmp/cat\nstatus=0\n/usr/bin/cat\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>_tmp/cat
+status=0
+/usr/bin/cat
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

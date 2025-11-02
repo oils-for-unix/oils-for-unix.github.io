@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-process: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-process.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>21</td><td>17</td><td>20</td><td>20</td><td>19</td><td>19</td><td>6</td><td>8</td><td>18</td><td>25</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>1</td><td>2</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>1</td><td>2</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>5</td><td>7</td><td>0</td><td>7</td><td>7</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>8</td><td>0</td><td>0</td><td>9</td><td>22</td><td>20</td><td>10</td><td>3</td><td></td></tr>
+<tr><td>total</td><td>28</td><td>28</td><td>28</td><td>28</td><td>28</td><td>28</td><td>28</td><td>28</td><td>28</td><td>28</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L7">exec builtin</a></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L11">exec builtin with redirects</a></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L17">exec builtin with here doc</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L27">exec builtin accepts --</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L35">exec -- 2&gt;&amp;1</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L46">Exit out of function</a></td></tr>
+<tr><td>  6</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L52">Exit builtin with invalid arg</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-6-bash">details</a></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L59">Exit builtin with too many args</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-7-bash">details</a></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"><a href="#details-7-mksh">details</a></td><td class="details-row"><a href="#details-7-ksh">details</a></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L72">time with brace group argument</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L113">get umask</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L117">set umask in octal</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-process.test.html#L131">set umask symbolically</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"><a href="#details-11-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L145">ulimit with no flags is like -f</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L166">ulimit too many args</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-13-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L186">ulimit negative flag</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L203">ulimit negative arg</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-15-mksh">details</a></td><td class="details-row"><a href="#details-15-ksh">details</a></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L226">ulimit -a doesn't take arg</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-16-bash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-16-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"><a href="#details-16-sush">details</a></td><td class="details-row"><a href="#details-16-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L241">ulimit doesn't accept multiple flags - reduce confusion between shells</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-17-bash">details</a></td><td class="details-row"><a href="#details-17-dash">details</a></td><td class="details-row"><a href="#details-17-ash">details</a></td><td class="details-row"><a href="#details-17-zsh">details</a></td><td class="details-row"><a href="#details-17-mksh">details</a></td><td class="details-row"><a href="#details-17-ksh">details</a></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"><a href="#details-17-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L284">YSH readability: ulimit --all the same as ulimit -a</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-18-bash">details</a></td><td class="details-row"><a href="#details-18-dash">details</a></td><td class="details-row"><a href="#details-18-ash">details</a></td><td class="details-row"><a href="#details-18-zsh">details</a></td><td class="details-row"><a href="#details-18-mksh">details</a></td><td class="details-row"><a href="#details-18-ksh">details</a></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"><a href="#details-18-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L306">ulimit accepts 'unlimited'</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"><a href="#details-19-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L331">ulimit of 2**32, 2**31 (int overflow)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-mksh">details</a></td><td class="details-row"><a href="#details-20-ksh">details</a></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"><a href="#details-20-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L358">ulimit that is 64 bits</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-mksh">details</a></td><td class="details-row"><a href="#details-21-ksh">details</a></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"><a href="#details-21-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L386">arg that would overflow 64 bits is detected</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-dash">details</a></td><td class="details-row"><a href="#details-22-ash">details</a></td><td class="details-row"><a href="#details-22-zsh">details</a></td><td class="details-row"><a href="#details-22-mksh">details</a></td><td class="details-row"><a href="#details-22-ksh">details</a></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"><a href="#details-22-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L418">ulimit -f 1 prevents files larger 512 bytes</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-23-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"><a href="#details-23-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-process.test.html#L478">write big file with ulimit</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L503">ulimit -S for soft limit (default), -H for hard limit</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-25-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"><a href="#details-25-sush">details</a></td><td class="details-row"><a href="#details-25-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-process.test.html#L561">Changing resource limit is denied</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-mksh">details</a></td><td class="details-row"><a href="#details-26-ksh">details</a></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-26-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-process.test.html#L603">ulimit -n limits file descriptors</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-toysh">details</a></td><td class="details-row"><a href="#details-27-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-27-osh">details</a></td><td class="details-row"></td></tr>
+</table>
+<pre>173 passed, 4 OK, 5 not implemented, 26 BUG, 72 failed, 0 timeouts, 0 cases skipped
+3 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="builtin-process.test.html#L17">exec builtin with here doc</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'x=one\ny=two\nDONE\n'
+Got      'x=\ny=\nDONE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=
+y=
+DONE
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="builtin-process.test.html#L17">exec builtin with here doc</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'x=one\ny=two\nDONE\n'
+Got      'x=\ny=\nDONE\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>x=
+y=
+DONE
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-dash"></a><b>dash</b></td><td>3 <a href="builtin-process.test.html#L27">exec builtin accepts --</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: exec: --: not found
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="builtin-process.test.html#L27">exec builtin accepts --</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'hi\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: --: command not found
+</pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="builtin-process.test.html#L35">exec -- 2&gt;&amp;1</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: exec: --: not found
+</pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="builtin-process.test.html#L35">exec -- 2&gt;&amp;1</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="builtin-process.test.html#L35">exec -- 2&gt;&amp;1</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'stdout\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      -11
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="builtin-process.test.html#L35">exec -- 2&gt;&amp;1</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'stdout\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: --: command not found
+</pre></td></tr><tr><td><a name="details-6-bash"></a><b>bash</b></td><td>6 <a href="builtin-process.test.html#L52">Exit builtin with invalid arg</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>bash: line 1: exit: invalid: numeric argument required
+</pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="builtin-process.test.html#L52">Exit builtin with invalid arg</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: exit: Illegal number: invalid
+</pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="builtin-process.test.html#L52">Exit builtin with invalid arg</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: exit: line 1: Illegal number: invalid
+</pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="builtin-process.test.html#L52">Exit builtin with invalid arg</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="builtin-process.test.html#L52">Exit builtin with invalid arg</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="builtin-process.test.html#L52">Exit builtin with invalid arg</a><br/><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>error: invalid value 'invalid' for '[CODE]': invalid digit found in string
+
+For more information, try '--help'.
+
+</pre></td></tr><tr><td><a name="details-7-bash"></a><b>bash</b></td><td>7 <a href="builtin-process.test.html#L59">Exit builtin with too many args</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: exit: too many arguments
+</pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="builtin-process.test.html#L59">Exit builtin with too many args</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="builtin-process.test.html#L59">Exit builtin with too many args</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 2
+Got      7
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="builtin-process.test.html#L59">Exit builtin with too many args</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>exit: too many arguments
+</pre></td></tr><tr><td><a name="details-7-mksh"></a><b>mksh</b></td><td>7 <a href="builtin-process.test.html#L59">Exit builtin with too many args</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: exit: too many arguments
+</pre></td></tr><tr><td><a name="details-7-ksh"></a><b>ksh</b></td><td>7 <a href="builtin-process.test.html#L59">Exit builtin with too many args</a><br/><br/>
+<span class="assertion">
+[ksh status]
+Expected 2
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: exit: too many arguments
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="builtin-process.test.html#L59">Exit builtin with too many args</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 2
+Got      7
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="builtin-process.test.html#L59">Exit builtin with too many args</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 2
+Got      7
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="builtin-process.test.html#L59">Exit builtin with too many args</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected u''
+Got      'status=2\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=2
+</pre><i>stderr:</i> <br/>
+<pre>error: unexpected argument '8' found
+
+Usage: exit [CODE]
+
+For more information, try '--help'.
+
+</pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="builtin-process.test.html#L72">time with brace group argument</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>time: cannot run {: No such file or directory
+Command exited with non-zero status 127
+0.00user 0.00system 0:00.00elapsed 81%CPU (0avgtext+0avgdata 1308maxresident)k
+0inputs+0outputs (0major+57minor)pagefaults 0swaps
+dash: 7: Syntax error: "}" unexpected
+</pre></td></tr><tr><td><a name="details-8-ash"></a><b>ash</b></td><td>8 <a href="builtin-process.test.html#L72">time with brace group argument</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'user\nresult=0\nnon-zero\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>time: cannot run {: No such file or directory
+Command exited with non-zero status 127
+0.00user 0.00system 0:00.00elapsed 51%CPU (0avgtext+0avgdata 1300maxresident)k
+0inputs+0outputs (0major+54minor)pagefaults 0swaps
+ash: syntax error: unexpected "}"
+</pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="builtin-process.test.html#L72">time with brace group argument</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>result=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="builtin-process.test.html#L72">time with brace group argument</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'user\nresult=0\nnon-zero\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>time: exec {: No such file or directory
+
+real	0.000
+user	0.156
+sys	0.000
+main: line 7: sh: syntax error: }
+</pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="builtin-process.test.html#L113">get umask</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: umask: No such file or directory
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="builtin-process.test.html#L113">get umask</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: umask: command not found
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="builtin-process.test.html#L117">set umask in octal</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '664\n644\n'
+Got      '644\n644\n'
+</span><br/>
+<span class="assertion">
+[toysh stderr]
+Expected u''
+Got      'sh: umask: No such file or directory\nsh: umask: No such file or directory\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>644
+644
+</pre><i>stderr:</i> <br/>
+<pre>sh: umask: No such file or directory
+sh: umask: No such file or directory
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="builtin-process.test.html#L117">set umask in octal</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '664\n644\n'
+Got      '644\n644\n'
+</span><br/>
+<span class="assertion">
+[sush stderr]
+Expected u''
+Got      '/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: umask: command not found\n/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: umask: command not found\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>644
+644
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: umask: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: umask: command not found
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="builtin-process.test.html#L131">set umask symbolically</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '664\n644\n'
+Got      '644\n644\n'
+</span><br/>
+<span class="assertion">
+[toysh stderr]
+Expected u''
+Got      'sh: umask: No such file or directory\nsh: umask: No such file or directory\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>644
+644
+</pre><i>stderr:</i> <br/>
+<pre>sh: umask: No such file or directory
+sh: umask: No such file or directory
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="builtin-process.test.html#L131">set umask symbolically</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '664\n644\n'
+Got      '644\n644\n'
+</span><br/>
+<span class="assertion">
+[sush stderr]
+Expected u''
+Got      '/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: umask: command not found\n/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: umask: command not found\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>644
+644
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: umask: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: umask: command not found
+</pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="builtin-process.test.html#L131">set umask symbolically</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '664\n644\n'
+Got      '664\n664\n'
+</span><br/>
+<span class="assertion">
+[brush stderr]
+Expected u''
+Got      '\x1b[31merror:\x1b[39m umask: not yet implemented: umask setting mode from symbolic value\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>664
+664
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m umask: not yet implemented: umask setting mode from symbolic value
+</pre></td></tr><tr><td><a name="details-11-osh"></a><b>osh</b></td><td>11 <a href="builtin-process.test.html#L131">set umask symbolically</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected '664\n644\n'
+Got      '664\n664\n'
+</span><br/>
+<span class="assertion">
+[osh stderr]
+Expected u''
+Got      "oils warning: umask with symbolic input isn't implemented\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>664
+664
+</pre><i>stderr:</i> <br/>
+<pre>oils warning: umask with symbolic input isn't implemented
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="builtin-process.test.html#L145">ulimit with no flags is like -f</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nstatus=0\ndiff=0\n'
+Got      'status=127\nstatus=127\ndiff=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+diff=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: ulimit: No such file or directory
+sh: ulimit: No such file or directory
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="builtin-process.test.html#L145">ulimit with no flags is like -f</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\nstatus=0\ndiff=0\n'
+Got      'status=0\nstatus=0\n--- no-flags.txt\t2025-11-02 14:48:48.230420297 -0500\n+++ f.txt\t2025-11-02 14:48:48.230420297 -0500\n@@ -0,0 +1 @@\n+file size                   (blocks, -f) unlimited\ndiff=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+--- no-flags.txt	2025-11-02 14:48:48.230420297 -0500
++++ f.txt	2025-11-02 14:48:48.230420297 -0500
+@@ -0,0 +1 @@
++file size                   (blocks, -f) unlimited
+diff=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-bash"></a><b>bash</b></td><td>13 <a href="builtin-process.test.html#L166">ulimit too many args</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>fail
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="builtin-process.test.html#L166">ulimit too many args</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>fail
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="builtin-process.test.html#L166">ulimit too many args</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'pass\n'
+Got      'fail\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>fail
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="builtin-process.test.html#L186">ulimit negative flag</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'unlimited\npass\n'
+Got      'pass\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pass
+</pre><i>stderr:</i> <br/>
+<pre>sh: ulimit: No such file or directory
+sh: ulimit: No such file or directory
+</pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="builtin-process.test.html#L186">ulimit negative flag</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'unlimited\npass\n'
+Got      'file size                   (blocks, -f) unlimited\nfile size                   (blocks, -f) unlimited\nfail\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>file size                   (blocks, -f) unlimited
+file size                   (blocks, -f) unlimited
+fail
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-ash"></a><b>ash</b></td><td>15 <a href="builtin-process.test.html#L203">ulimit negative arg</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'unlimited\npass\n'
+Got      'unlimited\nunlimited\nfail\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>unlimited
+unlimited
+fail
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-mksh"></a><b>mksh</b></td><td>15 <a href="builtin-process.test.html#L203">ulimit negative arg</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>unlimited
+fail
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-ksh"></a><b>ksh</b></td><td>15 <a href="builtin-process.test.html#L203">ulimit negative arg</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'unlimited\npass\n'
+Got      'unlimited\nfail\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>unlimited
+fail
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="builtin-process.test.html#L203">ulimit negative arg</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'unlimited\npass\n'
+Got      'pass\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>pass
+</pre><i>stderr:</i> <br/>
+<pre>sh: ulimit: No such file or directory
+sh: ulimit: No such file or directory
+</pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="builtin-process.test.html#L203">ulimit negative arg</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'unlimited\npass\n'
+Got      'file size                   (blocks, -f) unlimited\nfile size                   (blocks, -f) unlimited\nfail\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>file size                   (blocks, -f) unlimited
+file size                   (blocks, -f) unlimited
+fail
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-bash"></a><b>bash</b></td><td>16 <a href="builtin-process.test.html#L226">ulimit -a doesn't take arg</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-ash"></a><b>ash</b></td><td>16 <a href="builtin-process.test.html#L226">ulimit -a doesn't take arg</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'failure that was expected\n'
+Got      'core file size (blocks)         (-c) 0\ndata seg size (kb)              (-d) unlimited\nscheduling priority             (-e) 0\nfile size (blocks)              (-f) unlimited\npending signals                 (-i) 62293\nmax locked memory (kb)          (-l) 2001828\nmax memory size (kb)            (-m) unlimited\nopen files                      (-n) 1024\nPOSIX message queues (bytes)    (-q) 819200\nreal-time priority              (-r) 0\nstack size (kb)                 (-s) 8192\ncpu time (seconds)              (-t) unlimited\nmax user processes              (-u) 62293\nvirtual memory (kb)             (-v) unlimited\nfile locks                      (-x) unlimited\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>core file size (blocks)         (-c) 0
+data seg size (kb)              (-d) unlimited
+scheduling priority             (-e) 0
+file size (blocks)              (-f) unlimited
+pending signals                 (-i) 62293
+max locked memory (kb)          (-l) 2001828
+max memory size (kb)            (-m) unlimited
+open files                      (-n) 1024
+POSIX message queues (bytes)    (-q) 819200
+real-time priority              (-r) 0
+stack size (kb)                 (-s) 8192
+cpu time (seconds)              (-t) unlimited
+max user processes              (-u) 62293
+virtual memory (kb)             (-v) unlimited
+file locks                      (-x) unlimited
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="builtin-process.test.html#L226">ulimit -a doesn't take arg</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'failure that was expected\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-16-sush"></a><b>sush</b></td><td>16 <a href="builtin-process.test.html#L226">ulimit -a doesn't take arg</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'failure that was expected\n'
+Got      'real-time non-blocking time  (microseconds, -R) unlimited\ncore file size              (blocks, -c) 0\ndata seg size               (kbytes, -d) unlimited\nscheduling priority                 (-e) 0\nfile size                   (blocks, -f) unlimited\npending signals                     (-i) 62293\nmax locked memory           (kbytes, -l) 2001828\nmax memory size             (kbytes, -m) unlimited\nopen files                          (-n) 1024\npipe size                (512 bytes, -p) 8\nPOSIX message queues         (bytes, -q) 819200\nreal-time priority                  (-r) 0\nstack size                  (kbytes, -s) 8192\ncpu time                   (seconds, -t) unlimited\nmax user processes                  (-u) 62293\nvirtual memory              (kbytes, -v) unlimited\nfile locks                          (-x) unlimited\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) 0
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 62293
+max locked memory           (kbytes, -l) 2001828
+max memory size             (kbytes, -m) unlimited
+open files                          (-n) 1024
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) 8192
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 62293
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-brush"></a><b>brush</b></td><td>16 <a href="builtin-process.test.html#L226">ulimit -a doesn't take arg</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'failure that was expected\n'
+Got      'core file size                 (block, -c) 0\ndata seg size                 (kbytes, -d) unlimited\nfile size                      (block, -f) unlimited\npending signals                       (-i) 62293\nmax locked memory             (kbytes, -l) 2001828\nmax memory size               (kbytes, -m) unlimited\nfile locks                            (-x) unlimited\nopen files                            (-n) 1024\npipe size                  (512 bytes, -p) 5\nscheduling priority                   (-e) 0\nPOSIX message queues           (bytes, -q) 819200\nreal-time priority                    (-r) 0\nreal-time non-blocking time(microseconds, -R) unlimited\nstack size                    (kbytes, -s) 8192\ncpu time                     (seconds, -t) unlimited\nmax user processes                    (-u) 62293\nvirtual memory                (kbytes, -v) unlimited\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>core file size                 (block, -c) 0
+data seg size                 (kbytes, -d) unlimited
+file size                      (block, -f) unlimited
+pending signals                       (-i) 62293
+max locked memory             (kbytes, -l) 2001828
+max memory size               (kbytes, -m) unlimited
+file locks                            (-x) unlimited
+open files                            (-n) 1024
+pipe size                  (512 bytes, -p) 5
+scheduling priority                   (-e) 0
+POSIX message queues           (bytes, -q) 819200
+real-time priority                    (-r) 0
+real-time non-blocking time(microseconds, -R) unlimited
+stack size                    (kbytes, -s) 8192
+cpu time                     (seconds, -t) unlimited
+max user processes                    (-u) 62293
+virtual memory                (kbytes, -v) unlimited
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-bash"></a><b>bash</b></td><td>17 <a href="builtin-process.test.html#L241">ulimit doesn't accept multiple flags - reduce confusion between shells</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-dash"></a><b>dash</b></td><td>17 <a href="builtin-process.test.html#L241">ulimit doesn't accept multiple flags - reduce confusion between shells</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-ash"></a><b>ash</b></td><td>17 <a href="builtin-process.test.html#L241">ulimit doesn't accept multiple flags - reduce confusion between shells</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=2\nstatus=2\nstatus=2\n'
+Got      'status=0\nstatus=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-zsh"></a><b>zsh</b></td><td>17 <a href="builtin-process.test.html#L241">ulimit doesn't accept multiple flags - reduce confusion between shells</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>ulimit: no limits allowed with -a
+</pre></td></tr><tr><td><a name="details-17-mksh"></a><b>mksh</b></td><td>17 <a href="builtin-process.test.html#L241">ulimit doesn't accept multiple flags - reduce confusion between shells</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-ksh"></a><b>ksh</b></td><td>17 <a href="builtin-process.test.html#L241">ulimit doesn't accept multiple flags - reduce confusion between shells</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=2\nstatus=2\nstatus=2\n'
+Got      'status=0\nstatus=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="builtin-process.test.html#L241">ulimit doesn't accept multiple flags - reduce confusion between shells</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=2\nstatus=2\nstatus=2\n'
+Got      'status=127\nstatus=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: ulimit: No such file or directory
+sh: ulimit: No such file or directory
+sh: ulimit: No such file or directory
+</pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="builtin-process.test.html#L241">ulimit doesn't accept multiple flags - reduce confusion between shells</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=2\nstatus=2\nstatus=2\n'
+Got      'status=0\nstatus=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-brush"></a><b>brush</b></td><td>17 <a href="builtin-process.test.html#L241">ulimit doesn't accept multiple flags - reduce confusion between shells</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=2\nstatus=2\nstatus=2\n'
+Got      'status=0\nstatus=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-bash"></a><b>bash</b></td><td>18 <a href="builtin-process.test.html#L284">YSH readability: ulimit --all the same as ulimit -a</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-dash"></a><b>dash</b></td><td>18 <a href="builtin-process.test.html#L284">YSH readability: ulimit --all the same as ulimit -a</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-ash"></a><b>ash</b></td><td>18 <a href="builtin-process.test.html#L284">YSH readability: ulimit --all the same as ulimit -a</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '  8 short.txt\n  8 long.txt\n 16 total\nstatus=0\n'
+Got      ' 15 short.txt\n  0 long.txt\n 15 total\n--- short.txt\t2025-11-02 14:48:48.546423769 -0500\n+++ long.txt\t2025-11-02 14:48:48.546423769 -0500\n@@ -1,15 +0,0 @@\n-core file size (blocks)         (-c) 0\n-data seg size (kb)              (-d) unlimited\n-scheduling priority             (-e) 0\n-file size (blocks)              (-f) unlimited\n-pending signals                 (-i) 62293\n-max locked memory (kb)          (-l) 2001828\n-max memory size (kb)            (-m) unlimited\n-open files                      (-n) 1024\n-POSIX message queues (bytes)    (-q) 819200\n-real-time priority              (-r) 0\n-stack size (kb)                 (-s) 8192\n-cpu time (seconds)              (-t) unlimited\n-max user processes              (-u) 62293\n-virtual memory (kb)             (-v) unlimited\n-file locks                      (-x) unlimited\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre> 15 short.txt
+  0 long.txt
+ 15 total
+--- short.txt	2025-11-02 14:48:48.546423769 -0500
++++ long.txt	2025-11-02 14:48:48.546423769 -0500
+@@ -1,15 +0,0 @@
+-core file size (blocks)         (-c) 0
+-data seg size (kb)              (-d) unlimited
+-scheduling priority             (-e) 0
+-file size (blocks)              (-f) unlimited
+-pending signals                 (-i) 62293
+-max locked memory (kb)          (-l) 2001828
+-max memory size (kb)            (-m) unlimited
+-open files                      (-n) 1024
+-POSIX message queues (bytes)    (-q) 819200
+-real-time priority              (-r) 0
+-stack size (kb)                 (-s) 8192
+-cpu time (seconds)              (-t) unlimited
+-max user processes              (-u) 62293
+-virtual memory (kb)             (-v) unlimited
+-file locks                      (-x) unlimited
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>ulimit: invalid option -- '-'
+</pre></td></tr><tr><td><a name="details-18-zsh"></a><b>zsh</b></td><td>18 <a href="builtin-process.test.html#L284">YSH readability: ulimit --all the same as ulimit -a</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-mksh"></a><b>mksh</b></td><td>18 <a href="builtin-process.test.html#L284">YSH readability: ulimit --all the same as ulimit -a</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-ksh"></a><b>ksh</b></td><td>18 <a href="builtin-process.test.html#L284">YSH readability: ulimit --all the same as ulimit -a</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '  8 short.txt\n  8 long.txt\n 16 total\nstatus=0\n'
+Got      ' 15 short.txt\n  0 long.txt\n 15 total\n--- short.txt\t2025-11-02 14:48:48.558423900 -0500\n+++ long.txt\t2025-11-02 14:48:48.558423900 -0500\n@@ -1,15 +0,0 @@\n--t: time(cpu-seconds)     unlimited\n--f: file(blocks)          unlimited\n--c: coredump(blocks)      0\n--d: data(KiB)             unlimited\n--s: stack(KiB)            8192\n--l: lockedmem(KiB)        2001828\n--n: nofiles(descriptors)  1024\n--p: processes             62293\n--i: sigpending            62293\n--q: msgqueue(bytes)       819200\n--e: maxnice               0\n--R: rttime(ms)            unlimited\n--r: maxrtprio             0\n--v: address-space(KiB)    unlimited\n--x: filelocks             unlimited\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre> 15 short.txt
+  0 long.txt
+ 15 total
+--- short.txt	2025-11-02 14:48:48.558423900 -0500
++++ long.txt	2025-11-02 14:48:48.558423900 -0500
+@@ -1,15 +0,0 @@
+--t: time(cpu-seconds)     unlimited
+--f: file(blocks)          unlimited
+--c: coredump(blocks)      0
+--d: data(KiB)             unlimited
+--s: stack(KiB)            8192
+--l: lockedmem(KiB)        2001828
+--n: nofiles(descriptors)  1024
+--p: processes             62293
+--i: sigpending            62293
+--q: msgqueue(bytes)       819200
+--e: maxnice               0
+--R: rttime(ms)            unlimited
+--r: maxrtprio             0
+--v: address-space(KiB)    unlimited
+--x: filelocks             unlimited
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[4]: ulimit: --: unknown option
+E: ksh: &lt;stdin&gt;[4]: ulimit: usage: ulimit [-acdefHilnpqRrSstvx] [value]
+</pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="builtin-process.test.html#L284">YSH readability: ulimit --all the same as ulimit -a</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '  8 short.txt\n  8 long.txt\n 16 total\nstatus=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="builtin-process.test.html#L284">YSH readability: ulimit --all the same as ulimit -a</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '  8 short.txt\n  8 long.txt\n 16 total\nstatus=0\n'
+Got      ' 17 short.txt\n  0 long.txt\n 17 total\n--- short.txt\t2025-11-02 14:48:48.566423988 -0500\n+++ long.txt\t2025-11-02 14:48:48.566423988 -0500\n@@ -1,17 +0,0 @@\n-real-time non-blocking time  (microseconds, -R) unlimited\n-core file size              (blocks, -c) 0\n-data seg size               (kbytes, -d) unlimited\n-scheduling priority                 (-e) 0\n-file size                   (blocks, -f) unlimited\n-pending signals                     (-i) 62293\n-max locked memory           (kbytes, -l) 2001828\n-max memory size             (kbytes, -m) unlimited\n-open files                          (-n) 1024\n-pipe size                (512 bytes, -p) 8\n-POSIX message queues         (bytes, -q) 819200\n-real-time priority                  (-r) 0\n-stack size                  (kbytes, -s) 8192\n-cpu time                   (seconds, -t) unlimited\n-max user processes                  (-u) 62293\n-virtual memory              (kbytes, -v) unlimited\n-file locks                          (-x) unlimited\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre> 17 short.txt
+  0 long.txt
+ 17 total
+--- short.txt	2025-11-02 14:48:48.566423988 -0500
++++ long.txt	2025-11-02 14:48:48.566423988 -0500
+@@ -1,17 +0,0 @@
+-real-time non-blocking time  (microseconds, -R) unlimited
+-core file size              (blocks, -c) 0
+-data seg size               (kbytes, -d) unlimited
+-scheduling priority                 (-e) 0
+-file size                   (blocks, -f) unlimited
+-pending signals                     (-i) 62293
+-max locked memory           (kbytes, -l) 2001828
+-max memory size             (kbytes, -m) unlimited
+-open files                          (-n) 1024
+-pipe size                (512 bytes, -p) 8
+-POSIX message queues         (bytes, -q) 819200
+-real-time priority                  (-r) 0
+-stack size                  (kbytes, -s) 8192
+-cpu time                   (seconds, -t) unlimited
+-max user processes                  (-u) 62293
+-virtual memory              (kbytes, -v) unlimited
+-file locks                          (-x) unlimited
+status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-brush"></a><b>brush</b></td><td>18 <a href="builtin-process.test.html#L284">YSH readability: ulimit --all the same as ulimit -a</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '  8 short.txt\n  8 long.txt\n 16 total\nstatus=0\n'
+Got      ' 17 short.txt\n  0 long.txt\n 17 total\n--- short.txt\t2025-11-02 14:48:48.578424120 -0500\n+++ long.txt\t2025-11-02 14:48:48.578424120 -0500\n@@ -1,17 +0,0 @@\n-core file size                 (block, -c) 0\n-data seg size                 (kbytes, -d) unlimited\n-file size                      (block, -f) unlimited\n-pending signals                       (-i) 62293\n-max locked memory             (kbytes, -l) 2001828\n-max memory size               (kbytes, -m) unlimited\n-file locks                            (-x) unlimited\n-open files                            (-n) 1024\n-pipe size                  (512 bytes, -p) 5\n-scheduling priority                   (-e) 0\n-POSIX message queues           (bytes, -q) 819200\n-real-time priority                    (-r) 0\n-real-time non-blocking time(microseconds, -R) unlimited\n-stack size                    (kbytes, -s) 8192\n-cpu time                     (seconds, -t) unlimited\n-max user processes                    (-u) 62293\n-virtual memory                (kbytes, -v) unlimited\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre> 17 short.txt
+  0 long.txt
+ 17 total
+--- short.txt	2025-11-02 14:48:48.578424120 -0500
++++ long.txt	2025-11-02 14:48:48.578424120 -0500
+@@ -1,17 +0,0 @@
+-core file size                 (block, -c) 0
+-data seg size                 (kbytes, -d) unlimited
+-file size                      (block, -f) unlimited
+-pending signals                       (-i) 62293
+-max locked memory             (kbytes, -l) 2001828
+-max memory size               (kbytes, -m) unlimited
+-file locks                            (-x) unlimited
+-open files                            (-n) 1024
+-pipe size                  (512 bytes, -p) 5
+-scheduling priority                   (-e) 0
+-POSIX message queues           (bytes, -q) 819200
+-real-time priority                    (-r) 0
+-real-time non-blocking time(microseconds, -R) unlimited
+-stack size                    (kbytes, -s) 8192
+-cpu time                     (seconds, -t) unlimited
+-max user processes                    (-u) 62293
+-virtual memory                (kbytes, -v) unlimited
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>error: unexpected argument '--all' found
+
+  tip: to pass '--all' as a value, use '-- --all'
+
+Usage: ulimit [OPTIONS] [LIMIT]
+
+For more information, try '--help'.
+
+</pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="builtin-process.test.html#L306">ulimit accepts 'unlimited'</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '  arg zz\nunlimited\nstatus=0\nFAILED\n\n  arg unlimited\nunlimited\nstatus=0\n\n'
+Got      '  arg zz\nstatus=127\nFAILED\n\n  arg unlimited\nstatus=127\nFAILED\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  arg zz
+status=127
+FAILED
+
+  arg unlimited
+status=127
+FAILED
+
+</pre><i>stderr:</i> <br/>
+<pre>sh: ulimit: No such file or directory
+sh: ulimit: No such file or directory
+sh: ulimit: No such file or directory
+sh: ulimit: No such file or directory
+</pre></td></tr><tr><td><a name="details-19-sush"></a><b>sush</b></td><td>19 <a href="builtin-process.test.html#L306">ulimit accepts 'unlimited'</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '  arg zz\nunlimited\nstatus=0\nFAILED\n\n  arg unlimited\nunlimited\nstatus=0\n\n'
+Got      '  arg zz\nfile size                   (blocks, -f) unlimited\nstatus=0\nfile size                   (blocks, -f) unlimited\n\n  arg unlimited\nfile size                   (blocks, -f) unlimited\nstatus=0\nfile size                   (blocks, -f) unlimited\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>  arg zz
+file size                   (blocks, -f) unlimited
+status=0
+file size                   (blocks, -f) unlimited
+
+  arg unlimited
+file size                   (blocks, -f) unlimited
+status=0
+file size                   (blocks, -f) unlimited
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-mksh"></a><b>mksh</b></td><td>20 <a href="builtin-process.test.html#L331">ulimit of 2**32, 2**31 (int overflow)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one unlimited
+two 1
+three 1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[9]: ulimit: -2: unknown option
+mksh: &lt;stdin&gt;[9]: ulimit: usage: ulimit [-acdefHilnpqrSstv] [value]
+</pre></td></tr><tr><td><a name="details-20-ksh"></a><b>ksh</b></td><td>20 <a href="builtin-process.test.html#L331">ulimit of 2**32, 2**31 (int overflow)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'one unlimited\ntwo 4294967296\nthree 2147483648\n'
+Got      'one unlimited\ntwo 1\nthree 1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one unlimited
+two 1
+three 1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[9]: ulimit: -2: unknown option
+E: ksh: &lt;stdin&gt;[9]: ulimit: usage: ulimit [-acdefHilnpqRrSstvx] [value]
+</pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="builtin-process.test.html#L331">ulimit of 2**32, 2**31 (int overflow)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'one unlimited\ntwo 4294967296\nthree 2147483648\n'
+Got      'one two three '
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one two three </pre><i>stderr:</i> <br/>
+<pre>sh: ulimit: No such file or directory
+sh: ulimit: No such file or directory
+sh: ulimit: No such file or directory
+sh: ulimit: No such file or directory
+sh: ulimit: No such file or directory
+</pre></td></tr><tr><td><a name="details-20-sush"></a><b>sush</b></td><td>20 <a href="builtin-process.test.html#L331">ulimit of 2**32, 2**31 (int overflow)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'one unlimited\ntwo 4294967296\nthree 2147483648\n'
+Got      'one file size                   (blocks, -f) unlimited\ntwo file size                   (blocks, -f) 4294967296\nthree file size                   (blocks, -f) 2147483648\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one file size                   (blocks, -f) unlimited
+two file size                   (blocks, -f) 4294967296
+three file size                   (blocks, -f) 2147483648
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-mksh"></a><b>mksh</b></td><td>21 <a href="builtin-process.test.html#L358">ulimit that is 64 bits</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-ksh"></a><b>ksh</b></td><td>21 <a href="builtin-process.test.html#L358">ulimit that is 64 bits</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'before unlimited\nafter 9007199254740992\n'
+Got      'before unlimited\nafter 2097152\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before unlimited
+after 2097152
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="builtin-process.test.html#L358">ulimit that is 64 bits</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'before unlimited\nafter 9007199254740992\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-21-sush"></a><b>sush</b></td><td>21 <a href="builtin-process.test.html#L358">ulimit that is 64 bits</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'before unlimited\nafter 9007199254740992\n'
+Got      'before file size                   (blocks, -f) unlimited\nafter file size                   (blocks, -f) 9007199254740992\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before file size                   (blocks, -f) unlimited
+after file size                   (blocks, -f) 9007199254740992
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-dash"></a><b>dash</b></td><td>22 <a href="builtin-process.test.html#L386">arg that would overflow 64 bits is detected</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>before unlimited
+after 1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-ash"></a><b>ash</b></td><td>22 <a href="builtin-process.test.html#L386">arg that would overflow 64 bits is detected</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'before unlimited\nafter unlimited\n'
+Got      'before unlimited\nafter 1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before unlimited
+after 1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-zsh"></a><b>zsh</b></td><td>22 <a href="builtin-process.test.html#L386">arg that would overflow 64 bits is detected</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>before unlimited
+after 1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-mksh"></a><b>mksh</b></td><td>22 <a href="builtin-process.test.html#L386">arg that would overflow 64 bits is detected</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-ksh"></a><b>ksh</b></td><td>22 <a href="builtin-process.test.html#L386">arg that would overflow 64 bits is detected</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'before unlimited\nafter unlimited\n'
+Got      'before unlimited\nafter 1073741825\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before unlimited
+after 1073741825
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="builtin-process.test.html#L386">arg that would overflow 64 bits is detected</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'before unlimited\nafter unlimited\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="builtin-process.test.html#L386">arg that would overflow 64 bits is detected</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'before unlimited\nafter unlimited\n'
+Got      'before file size                   (blocks, -f) unlimited\nafter file size                   (blocks, -f) 4611686018427387905\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before file size                   (blocks, -f) unlimited
+after file size                   (blocks, -f) 4611686018427387905
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-brush"></a><b>brush</b></td><td>22 <a href="builtin-process.test.html#L386">arg that would overflow 64 bits is detected</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'before unlimited\nafter unlimited\n'
+Got      'before unlimited\nafter 1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>before unlimited
+after 1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-bash"></a><b>bash</b></td><td>23 <a href="builtin-process.test.html#L418">ulimit -f 1 prevents files larger 512 bytes</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>512 status=0
+513 status=0
+
+ 512 ok.txt
+ 513 too-big.txt
+1025 total
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="builtin-process.test.html#L418">ulimit -f 1 prevents files larger 512 bytes</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '512 status=0\n'
+Got      '512 status=0\n513 status=0\n\n 512 ok.txt\n 513 too-big.txt\n1025 total\n\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected -25
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>512 status=0
+513 status=0
+
+ 512 ok.txt
+ 513 too-big.txt
+1025 total
+
+</pre><i>stderr:</i> <br/>
+<pre>sh: trap: No such file or directory
+sh: ulimit: No such file or directory
+</pre></td></tr><tr><td><a name="details-23-sush"></a><b>sush</b></td><td>23 <a href="builtin-process.test.html#L418">ulimit -f 1 prevents files larger 512 bytes</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '512 status=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected -25
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>
+thread 'main' panicked at src/core/builtins/echo.rs:75:22:
+called `Result::unwrap()` on an `Err` value: Os { code: 27, kind: FileTooLarge, message: "File too large" }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+</pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="builtin-process.test.html#L478">write big file with ulimit</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'outer=153\n'
+Got      'inner=0\nouter=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>inner=0
+outer=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: ulimit: No such file or directory
+</pre></td></tr><tr><td><a name="details-24-osh"></a><b>osh</b></td><td>24 <a href="builtin-process.test.html#L478">write big file with ulimit</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'inner=1\nouter=0\n'
+Got      'outer=153\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>outer=153
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-dash"></a><b>dash</b></td><td>25 <a href="builtin-process.test.html#L503">ulimit -S for soft limit (default), -H for hard limit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-zsh"></a><b>zsh</b></td><td>25 <a href="builtin-process.test.html#L503">ulimit -S for soft limit (default), -H for hard limit</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="builtin-process.test.html#L503">ulimit -S for soft limit (default), -H for hard limit</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'init\n  unlimited\n  unlimited\n\n-S\n  123456\n  unlimited\n\n-H\n  123456\n  123457\n\nno flag\n  123455\n  123455\n\nGET\n  123454\n  123454\n  123455\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-25-sush"></a><b>sush</b></td><td>25 <a href="builtin-process.test.html#L503">ulimit -S for soft limit (default), -H for hard limit</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'init\n  unlimited\n  unlimited\n\n-S\n  123456\n  unlimited\n\n-H\n  123456\n  123457\n\nno flag\n  123455\n  123455\n\nGET\n  123454\n  123454\n  123455\n'
+Got      'init\n  cpu time                   (seconds, -t) unlimited\n  cpu time                   (seconds, -t) unlimited\n\n-S\n  cpu time                   (seconds, -t) 123456\n  cpu time                   (seconds, -t) unlimited\n\n-H\n  cpu time                   (seconds, -t) 123456\n  cpu time                   (seconds, -t) 123457\n\nno flag\n  cpu time                   (seconds, -t) 123455\n  cpu time                   (seconds, -t) 123455\n\nGET\n  cpu time                   (seconds, -t) 123454\n  cpu time                   (seconds, -t) 123454\n  cpu time                   (seconds, -t) 123455\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>init
+  cpu time                   (seconds, -t) unlimited
+  cpu time                   (seconds, -t) unlimited
+
+-S
+  cpu time                   (seconds, -t) 123456
+  cpu time                   (seconds, -t) unlimited
+
+-H
+  cpu time                   (seconds, -t) 123456
+  cpu time                   (seconds, -t) 123457
+
+no flag
+  cpu time                   (seconds, -t) 123455
+  cpu time                   (seconds, -t) 123455
+
+GET
+  cpu time                   (seconds, -t) 123454
+  cpu time                   (seconds, -t) 123454
+  cpu time                   (seconds, -t) 123455
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-brush"></a><b>brush</b></td><td>25 <a href="builtin-process.test.html#L503">ulimit -S for soft limit (default), -H for hard limit</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'init\n  unlimited\n  unlimited\n\n-S\n  123456\n  unlimited\n\n-H\n  123456\n  123457\n\nno flag\n  123455\n  123455\n\nGET\n  123454\n  123454\n  123455\n'
+Got      'init\n  unlimited\n  unlimited\n\n-S\n  123456\n  unlimited\n\n-H\n  123456\n  123457\n\nno flag\n  123455\n  123457\n\nGET\n  123454\n  123454\n  123457\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>init
+  unlimited
+  unlimited
+
+-S
+  123456
+  unlimited
+
+-H
+  123456
+  123457
+
+no flag
+  123455
+  123457
+
+GET
+  123454
+  123454
+  123457
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-dash"></a><b>dash</b></td><td>26 <a href="builtin-process.test.html#L561">Changing resource limit is denied</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-mksh"></a><b>mksh</b></td><td>26 <a href="builtin-process.test.html#L561">Changing resource limit is denied</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-ksh"></a><b>ksh</b></td><td>26 <a href="builtin-process.test.html#L561">Changing resource limit is denied</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'both=0\nsoft=0\nsoft=0\nsoft OK\nhard OK\n'
+Got      'both=1\nsoft=0\nsoft=0\nsoft fail\nhard fail\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>both=1
+soft=0
+soft=0
+soft fail
+hard fail
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[6]: ulimit: bad time(cpu-seconds) limit: Invalid argument
+</pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="builtin-process.test.html#L561">Changing resource limit is denied</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'both=0\nsoft=0\nsoft=0\nsoft OK\nhard OK\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-26-brush"></a><b>brush</b></td><td>26 <a href="builtin-process.test.html#L561">Changing resource limit is denied</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'both=0\nsoft=0\nsoft=0\nsoft OK\nhard OK\n'
+Got      'both=1\nsoft=0\nsoft=0\nsoft fail\nhard fail\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>both=1
+soft=0
+soft=0
+soft fail
+hard fail
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m ulimit: i/o error: Invalid argument (os error 22)
+</pre></td></tr><tr><td><a name="details-27-dash"></a><b>dash</b></td><td>27 <a href="builtin-process.test.html#L603">ulimit -n limits file descriptors</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: cannot create out: Too many open files
+</pre></td></tr><tr><td><a name="details-27-toysh"></a><b>toysh</b></td><td>27 <a href="builtin-process.test.html#L603">ulimit -n limits file descriptors</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nstatus=1\n'
+Got      'status=0\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>sh: ulimit: No such file or directory
+sh: ulimit: No such file or directory
+</pre></td></tr><tr><td><a name="details-27-sush"></a><b>sush</b></td><td>27 <a href="builtin-process.test.html#L603">ulimit -n limits file descriptors</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\nstatus=1\n'
+Got      'status=0\nstatus=134\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+status=134
+</pre><i>stderr:</i> <br/>
+<pre>
+thread 'main' panicked at src/elements/io.rs:58:52:
+Can't allocate fd for backup: EINVAL
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+Pid: Pid(704660), Signal: SIGABRT
+</pre></td></tr><tr><td><a name="details-27-osh"></a><b>osh</b></td><td>27 <a href="builtin-process.test.html#L603">ulimit -n limits file descriptors</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'status=0\nstatus=1\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>[ -c flag ]:1: I/O error applying redirect: Invalid argument
+  ulimit -n 0; echo hi &gt;out
+                       ^
+[ -c flag ]:1: Can't open 'out': Too many open files
+[ -c flag ]:1: I/O error applying redirect: Too many open files
+==704778==Can't open /proc/704761/task for reading.
+==704761==LeakSanitizer has encountered a fatal error.
+==704761==HINT: For debugging, try setting environment variable LSAN_OPTIONS=verbosity=1:log_threads=1
+==704761==HINT: LeakSanitizer does not work under ptrace (strace, gdb, etc)
+</pre></td></tr></table></body></html>

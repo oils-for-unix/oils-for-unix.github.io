@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-set: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-set.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>21</td><td>18</td><td>18</td><td>14</td><td>16</td><td>16</td><td>4</td><td>12</td><td>16</td><td>20</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>1</td><td>0</td><td>2</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>1</td><td>0</td><td>4</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>3</td><td>0</td><td>0</td><td>5</td><td>17</td><td>9</td><td>5</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>21</td><td>21</td><td>21</td><td>21</td><td>21</td><td>21</td><td>21</td><td>21</td><td>21</td><td>21</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L4">can continue after unknown option</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L18">set with both options and argv</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L26">nounset with "$@"</a></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L32">set -u -- clears argv</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L38">set -u -- x y z</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L44">reset option with long flag</a></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L51">reset option with short flag</a></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L58">set -eu (flag parsing)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-dash">details</a></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L66">set -o lists options</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L73">'set' and 'eval' round trip</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"><a href="#details-9-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L116">set - - and so forth</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L155">set - leading single dash is ignored, turns off xtrace verbose (#2364)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L199">set - stops option processing like set --</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L223">A single + is an ignored flag; not an argument</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"><a href="#details-13-ksh">details</a></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="builtin-set.test.html#L258">set - + and + -</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-zsh">details</a></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-14-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L280">set -a exports variables</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L290">set +a stops exporting</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L301">set -o allexport (long form)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L312">variables set before set -a are not exported</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L322">set -a exports local variables</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-mksh">details</a></td><td class="details-row"><a href="#details-19-ksh">details</a></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-set.test.html#L334">set -a exports declare variables</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-dash">details</a></td><td class="details-row"><a href="#details-20-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-20-mksh">details</a></td><td class="details-row"><a href="#details-20-ksh">details</a></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>155 passed, 3 OK, 4 not implemented, 9 BUG, 39 failed, 0 timeouts, 0 cases skipped
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-dash"></a><b>dash</b></td><td>0 <a href="builtin-set.test.html#L4">can continue after unknown option</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: set: Illegal option -o STRICT
+</pre></td></tr><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="builtin-set.test.html#L4">can continue after unknown option</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>set: no such option: STRICT
+</pre></td></tr><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="builtin-set.test.html#L4">can continue after unknown option</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: set: STRICT: bad option
+</pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="builtin-set.test.html#L4">can continue after unknown option</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'hello\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: set: STRICT: unknown option
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-set.test.html#L18">set with both options and argv</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'a b c\n'
+Got      '\ndone\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+done
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="builtin-set.test.html#L18">set with both options and argv</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'a b c\n'
+Got      '\ndone\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+done
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="builtin-set.test.html#L18">set with both options and argv</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'a b c\n'
+Got      'a b c\ndone\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a b c
+done
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="builtin-set.test.html#L32">set -u -- clears argv</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '\n'
+Got      'a b c\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a b c
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="builtin-set.test.html#L38">set -u -- x y z</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'x y z\n'
+Got      'a b c\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a b c
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-7-dash"></a><b>dash</b></td><td>7 <a href="builtin-set.test.html#L58">set -eu (flag parsing)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: unset: parameter not set
+</pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="builtin-set.test.html#L58">set -eu (flag parsing)</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: unset: parameter not set
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="builtin-set.test.html#L58">set -eu (flag parsing)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected u''
+Got      '[]\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -e
+</pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="builtin-set.test.html#L58">set -eu (flag parsing)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected u''
+Got      '[]\nstatus=0\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="builtin-set.test.html#L66">set -o lists options</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'noexec\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="builtin-set.test.html#L66">set -o lists options</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'noexec\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-ash"></a><b>ash</b></td><td>9 <a href="builtin-set.test.html#L73">'set' and 'eval' round trip</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '[ ]\nOK\nOK\nOK\nOK\nOK\n'
+Got      '[ ]\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[ ]
+</pre><i>stderr:</i> <br/>
+<pre>ash: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-set.test.sh/09-ash/vars-ash.txt: line 6: syntax error: unterminated quoted string
+</pre></td></tr><tr><td><a name="details-9-zsh"></a><b>zsh</b></td><td>9 <a href="builtin-set.test.html#L73">'set' and 'eval' round trip</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[ ]
+</pre><i>stderr:</i> <br/>
+<pre>grep: (standard input): binary file matches
+Code saved to /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-set.test.sh/09-zsh/vars-zsh.txt
+</pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="builtin-set.test.html#L73">'set' and 'eval' round trip</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '[ ]\nOK\nOK\nOK\nOK\nOK\n'
+Got      '[ ]\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[ ]
+</pre><i>stderr:</i> <br/>
+<pre>.: Needs 1 argument (see ". --help")
+Code saved to 
+free(): double free detected in tcache 2
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="builtin-set.test.html#L73">'set' and 'eval' round trip</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[ ]\nOK\nOK\nOK\nOK\nOK\n'
+Got      '[ ]\nOK\nOK\nOK\nOK\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[ ]
+OK
+OK
+OK
+OK
+</pre><i>stderr:</i> <br/>
+<pre>Code saved to /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-set.test.sh/09-sush/vars-sush.txt
+</pre></td></tr><tr><td><a name="details-10-zsh"></a><b>zsh</b></td><td>10 <a href="builtin-set.test.html#L116">set - - and so forth</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a b
+a b
+a b
+
+--
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="builtin-set.test.html#L116">set - - and so forth</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'a b\na b\na b\n-\n--\n'
+Got      'a b\na b\na b\na b\na b\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a b
+a b
+a b
+a b
+a b
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+set: bad --
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="builtin-set.test.html#L116">set - - and so forth</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'a b\na b\na b\n-\n--\n'
+Got      'a b\na b\na b\na b\n--\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a b
+a b
+a b
+a b
+--
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: set: -: invalid option
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 10: set: -: invalid option
+</pre></td></tr><tr><td><a name="details-11-zsh"></a><b>zsh</b></td><td>11 <a href="builtin-set.test.html#L155">set - leading single dash is ignored, turns off xtrace verbose (#2364)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>verbose-on
+xtrace-on
+
+a b c
+verbose-on
+xtrace-on
+
+x - y z
+</pre><i>stderr:</i> <br/>
+<pre>show_options
++zsh:11&gt; show_options
++show_options:1&gt; case 569Xsvx (*v*)
++show_options:2&gt; echo verbose-on
++show_options:4&gt; case 569Xsvx (*x*)
++show_options:5&gt; echo xtrace-on
+echo
++zsh:12&gt; echo
+
+set - a b c
++zsh:14&gt; set - a b c
+echo "$@"
++zsh:15&gt; echo a b c
+show_options
++zsh:16&gt; show_options
++show_options:1&gt; case 569Xsvx (*v*)
++show_options:2&gt; echo verbose-on
++show_options:4&gt; case 569Xsvx (*x*)
++show_options:5&gt; echo xtrace-on
+echo
++zsh:17&gt; echo
+
+set x - y z
++zsh:19&gt; set x - y z
+echo "$@"
++zsh:20&gt; echo x - y z
+
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="builtin-set.test.html#L155">set - leading single dash is ignored, turns off xtrace verbose (#2364)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'verbose-on\nxtrace-on\n\na b c\n\nx - y z\n'
+Got      '\na b c\n\nx - y z\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+a b c
+
+x - y z
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -v
+ show_options 
+ { 
+ case $- in 
+ case $- in 
+ echo 
+ set - a b c 
+ echo "$@" 
+ show_options 
+ { 
+ case $- in 
+ case $- in 
+ echo 
+ set x - y z 
+ echo "$@" 
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="builtin-set.test.html#L155">set - leading single dash is ignored, turns off xtrace verbose (#2364)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'verbose-on\nxtrace-on\n\na b c\n\nx - y z\n'
+Got      'verbose-on\nxtrace-on\n\n\nverbose-on\nxtrace-on\n\nx - y z\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>verbose-on
+xtrace-on
+
+
+verbose-on
+xtrace-on
+
+x - y z
+</pre><i>stderr:</i> <br/>
+<pre>show_options
++ show_options
++ case $- in
++ echo verbose-on
++ case $- in
++ echo xtrace-on
+echo
++ echo
+
+set - a b c
++ set - a b c
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 14: set: -: invalid option
+echo "$@"
++ echo
+show_options
++ show_options
++ case $- in
++ echo verbose-on
++ case $- in
++ echo xtrace-on
+echo
++ echo
+
+set x - y z
++ set x - y z
+echo "$@"
++ echo x - y z
+
+</pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="builtin-set.test.html#L155">set - leading single dash is ignored, turns off xtrace verbose (#2364)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'verbose-on\nxtrace-on\n\na b c\n\nx - y z\n'
+Got      'verbose-on\nxtrace-on\n\na b c\nverbose-on\nxtrace-on\n\nx - y z\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>verbose-on
+xtrace-on
+
+a b c
+verbose-on
+xtrace-on
+
+x - y z
+</pre><i>stderr:</i> <br/>
+<pre>+ show_options
++ case $- in
++ echo verbose-on
++ case $- in
++ echo xtrace-on
++ echo
++ set - a b c
++ echo a b c
++ show_options
++ case $- in
++ echo verbose-on
++ case $- in
++ echo xtrace-on
++ echo
++ set x - y z
++ echo x - y z
+</pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="builtin-set.test.html#L199">set - stops option processing like set --</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="builtin-set.test.html#L199">set - stops option processing like set --</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'argv -v\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="builtin-set.test.html#L199">set - stops option processing like set --</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'argv -v\n'
+Got      'verbose-on\nxtrace-on\nargv\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>verbose-on
+xtrace-on
+argv
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 12: set: -: invalid option
+
+show_options
++ show_options
++ case $- in
++ echo verbose-on
++ case $- in
++ echo xtrace-on
+echo argv "$@"
++ echo argv
+
+</pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="builtin-set.test.html#L199">set - stops option processing like set --</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'argv -v\n'
+Got      'xtrace-on\nargv -v\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>xtrace-on
+argv -v
+</pre><i>stderr:</i> <br/>
+<pre>+ show_options
++ case $- in
++ case $- in
++ echo xtrace-on
++ echo argv -v
+</pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="builtin-set.test.html#L223">A single + is an ignored flag; not an argument</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="builtin-set.test.html#L223">A single + is an ignored flag; not an argument</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>plus
+xtrace-on
+plus -v x y
+</pre><i>stderr:</i> <br/>
+<pre>+ show_options
++ echo xtrace-on
++ echo plus -v x y
+</pre></td></tr><tr><td><a name="details-13-ksh"></a><b>ksh</b></td><td>13 <a href="builtin-set.test.html#L223">A single + is an ignored flag; not an argument</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'plus\nverbose-on\nxtrace-on\nplus x y\n'
+Got      'plus\nxtrace-on\nplus -v x y\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>plus
+xtrace-on
+plus -v x y
+</pre><i>stderr:</i> <br/>
+<pre>+ show_options
++ echo xtrace-on
++ echo plus -v x y
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="builtin-set.test.html#L223">A single + is an ignored flag; not an argument</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'plus\nverbose-on\nxtrace-on\nplus x y\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="builtin-set.test.html#L223">A single + is an ignored flag; not an argument</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'plus\nverbose-on\nxtrace-on\nplus x y\n'
+Got      'plus\nverbose-on\nxtrace-on\nplus\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>plus
+verbose-on
+xtrace-on
+plus
+</pre><i>stderr:</i> <br/>
+<pre>show_options
++ show_options
++ case $- in
++ echo verbose-on
++ case $- in
++ echo xtrace-on
+echo plus "$@"
++ echo plus
+
+</pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="builtin-set.test.html#L223">A single + is an ignored flag; not an argument</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'plus\nverbose-on\nxtrace-on\nplus x y\n'
+Got      'BASH=/home/andy/git/oils-for-unix/oils/../../shells/brush/target/release/brush\nBASHPID=704712\nBASH_VERSINFO=([0]="5" [1]="2" [2]="15" [3]="1" [4]="release" [5]="unknown")\nBASH_VERSION=\'5.2.15(1)-release\'\nBRUSH_VERSION=0.2.23\nCOMP_WORDBREAKS=$\' \\t\\n"\\\'@&gt;&lt;=;|&amp;(:\'\nEUID=1000\nHISTFILE=/home/andy/.brush_history\nHOSTNAME=hoover\nHOSTTYPE=x86_64\nIFS=$\' \\t\\n\'\nLC_ALL=C.UTF-8\nLOCALE_ARCHIVE=\'\'\nMACHTYPE=unknown\nOILS_GC_ON_EXIT=\'\'\nOLDPWD=\nOPTERR=1\nOPTIND=1\nOSTYPE=linux-gnu\nPATH=/home/andy/git/oils-for-unix/oils/spec/bin:/home/andy/git/oils-for-unix/oils/../oils.DEPS/bin:/home/andy/git/oils-for-unix/oils/../oil_DEPS/spec-bin:/home/andy/git/oils-for-unix/oils/_tmp/shells:/home/andy/git/oils-for-unix/oils/../oils.DEPS/bin:/home/andy/git/oils-for-unix/oils/../oil_DEPS/spec-bin:/home/andy/git/oils-for-unix/oils/_tmp/shells:/home/andy/git/oils-for-unix/oils/../oils.DEPS/bin:/home/andy/git/oils-for-unix/oils/../oil_DEPS/spec-bin:/home/andy/git/oils-for-unix/oils/_tmp/shells:/home/andy/git/oils-for-unix/oils/../oils.DEPS/bin:/home/andy/git/oils-for-unix/oils/../oil_DEPS/spec-bin:/home/andy/git/oils-for-unix/oils/_tmp/shells:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/andy/bin:/home/andy/git/oils-for-unix/oils.DEPS/wedge/python2/2.7.18/bin\nPPID=704703\nPS4=\'+ \'\nPWD=/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-set.test.sh/13-brush\nREPO_ROOT=/home/andy/git/oils-for-unix/oils\nSH=/home/andy/git/oils-for-unix/oils/../../shells/brush/target/release/brush\nSHELL=/home/andy/git/shells/brush/target/release/brush\nSHLVL=1\nTMP=/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-set.test.sh/13-brush\nUID=1000\nshow_options () \n{ \n    case $- in\n        *v*)\n            echo verbose-on\n        ;;\n    esac;\n    case $- in\n        *x*)\n            echo xtrace-on\n        ;;\n    esac\n}\nplus\nverbose-on\nxtrace-on\nplus x y\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>BASH=/home/andy/git/oils-for-unix/oils/../../shells/brush/target/release/brush
+BASHPID=704712
+BASH_VERSINFO=([0]="5" [1]="2" [2]="15" [3]="1" [4]="release" [5]="unknown")
+BASH_VERSION='5.2.15(1)-release'
+BRUSH_VERSION=0.2.23
+COMP_WORDBREAKS=$' \t\n"\'@&gt;&lt;=;|&amp;(:'
+EUID=1000
+HISTFILE=/home/andy/.brush_history
+HOSTNAME=hoover
+HOSTTYPE=x86_64
+IFS=$' \t\n'
+LC_ALL=C.UTF-8
+LOCALE_ARCHIVE=''
+MACHTYPE=unknown
+OILS_GC_ON_EXIT=''
+OLDPWD=
+OPTERR=1
+OPTIND=1
+OSTYPE=linux-gnu
+PATH=/home/andy/git/oils-for-unix/oils/spec/bin:/home/andy/git/oils-for-unix/oils/../oils.DEPS/bin:/home/andy/git/oils-for-unix/oils/../oil_DEPS/spec-bin:/home/andy/git/oils-for-unix/oils/_tmp/shells:/home/andy/git/oils-for-unix/oils/../oils.DEPS/bin:/home/andy/git/oils-for-unix/oils/../oil_DEPS/spec-bin:/home/andy/git/oils-for-unix/oils/_tmp/shells:/home/andy/git/oils-for-unix/oils/../oils.DEPS/bin:/home/andy/git/oils-for-unix/oils/../oil_DEPS/spec-bin:/home/andy/git/oils-for-unix/oils/_tmp/shells:/home/andy/git/oils-for-unix/oils/../oils.DEPS/bin:/home/andy/git/oils-for-unix/oils/../oil_DEPS/spec-bin:/home/andy/git/oils-for-unix/oils/_tmp/shells:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/andy/bin:/home/andy/git/oils-for-unix/oils.DEPS/wedge/python2/2.7.18/bin
+PPID=704703
+PS4='+ '
+PWD=/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-set.test.sh/13-brush
+REPO_ROOT=/home/andy/git/oils-for-unix/oils
+SH=/home/andy/git/oils-for-unix/oils/../../shells/brush/target/release/brush
+SHELL=/home/andy/git/shells/brush/target/release/brush
+SHLVL=1
+TMP=/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/builtin-set.test.sh/13-brush
+UID=1000
+show_options () 
+{ 
+    case $- in
+        *v*)
+            echo verbose-on
+        ;;
+    esac;
+    case $- in
+        *x*)
+            echo xtrace-on
+        ;;
+    esac
+}
+plus
+verbose-on
+xtrace-on
+plus x y
+</pre><i>stderr:</i> <br/>
+<pre>+ show_options
++ case $- in
++ echo verbose-on
++ case $- in
++ echo xtrace-on
++ echo plus x y
+</pre></td></tr><tr><td><a name="details-14-zsh"></a><b>zsh</b></td><td>14 <a href="builtin-set.test.html#L258">set - + and + -</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>+
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="builtin-set.test.html#L258">set - + and + -</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>+
+-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="builtin-set.test.html#L258">set - + and + -</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '+\n+\n'
+Got      '+\n-\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>+
+-
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="builtin-set.test.html#L258">set - + and + -</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '+\n+\n'
+Got      '\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="builtin-set.test.html#L258">set - + and + -</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '+\n+\n'
+Got      '\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: -: invalid option
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: set: -: invalid option
+</pre></td></tr><tr><td><a name="details-14-osh"></a><b>osh</b></td><td>14 <a href="builtin-set.test.html#L258">set - + and + -</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>+
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="builtin-set.test.html#L280">set -a exports variables</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'bar\nqux\n'
+Got      'None\nNone\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>None
+None
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -a
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="builtin-set.test.html#L290">set +a stops exporting</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'exported\nNone\n'
+Got      'None\nNone\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>None
+None
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -a
+set: bad -a
+</pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="builtin-set.test.html#L301">set -o allexport (long form)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'value1\nNone\n'
+Got      'None\nNone\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>None
+None
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o allexport
+set: bad -o allexport
+</pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="builtin-set.test.html#L301">set -o allexport (long form)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'value1\nNone\n'
+Got      'None\nNone\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>None
+None
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: allexport: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: set: allexport: invalid option name
+</pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="builtin-set.test.html#L312">variables set before set -a are not exported</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'None\nafter_value\n'
+Got      'None\nNone\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>None
+None
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -a
+</pre></td></tr><tr><td><a name="details-19-mksh"></a><b>mksh</b></td><td>19 <a href="builtin-set.test.html#L322">set -a exports local variables</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>None
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-ksh"></a><b>ksh</b></td><td>19 <a href="builtin-set.test.html#L322">set -a exports local variables</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'zzz\n'
+Got      'None\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>None
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="builtin-set.test.html#L322">set -a exports local variables</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'zzz\n'
+Got      'None\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>None
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -a
+</pre></td></tr><tr><td><a name="details-20-dash"></a><b>dash</b></td><td>20 <a href="builtin-set.test.html#L334">set -a exports declare variables</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>None
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: declare: not found
+</pre></td></tr><tr><td><a name="details-20-ash"></a><b>ash</b></td><td>20 <a href="builtin-set.test.html#L334">set -a exports declare variables</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'zzz\n'
+Got      'None\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>None
+</pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+</pre></td></tr><tr><td><a name="details-20-mksh"></a><b>mksh</b></td><td>20 <a href="builtin-set.test.html#L334">set -a exports declare variables</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>None
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: declare: not found
+</pre></td></tr><tr><td><a name="details-20-ksh"></a><b>ksh</b></td><td>20 <a href="builtin-set.test.html#L334">set -a exports declare variables</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'zzz\n'
+Got      'None\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>None
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: declare: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="builtin-set.test.html#L334">set -a exports declare variables</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'zzz\n'
+Got      'None\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>None
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -a
+</pre></td></tr></table></body></html>

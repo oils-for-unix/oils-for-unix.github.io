@@ -1,0 +1,2773 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sh-options: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for sh-options.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>26</td><td>8</td><td>11</td><td>12</td><td>15</td><td>15</td><td>6</td><td>7</td><td>21</td><td>37</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>10</td><td>5</td><td>0</td><td>0</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>1</td><td>23</td><td>0</td><td>0</td><td>17</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>26</td><td>25</td><td>0</td><td>22</td><td>33</td><td>32</td><td>18</td><td>1</td><td></td></tr>
+<tr><td class="timeout">TIME</td> <td>2</td><td>1</td><td>2</td><td>2</td><td>2</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>39</td><td>39</td><td>39</td><td>39</td><td>39</td><td>39</td><td>39</td><td>39</td><td>39</td><td>39</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="ok">ok</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L7">$- with -c</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-0-bash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-0-ash">details</a></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"><a href="#details-0-mksh">details</a></td><td class="details-row"><a href="#details-0-ksh">details</a></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"><a href="#details-0-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L15">$- with pipefail</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-1-bash">details</a></td><td class="details-row"><a href="#details-1-dash">details</a></td><td class="details-row"><a href="#details-1-ash">details</a></td><td class="details-row"><a href="#details-1-zsh">details</a></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L25">$- and more options</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L41">$- with interactive shell</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-3-bash">details</a></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L48">pass short options like sh -e</a></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L53">pass long options like sh -o errexit</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L58">pass shopt options like sh -O nullglob</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L69">set -o vi/emacs</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L79">vi and emacs are mutually exclusive</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-dash">details</a></td><td class="details-row"><a href="#details-8-ash">details</a></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"><a href="#details-8-mksh">details</a></td><td class="details-row"><a href="#details-8-ksh">details</a></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="timeout">TIME</td>	<td class="n-i">N-I</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L109">interactive shell starts with emacs mode on</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-9-bash">details</a></td><td class="details-row"><a href="#details-9-dash">details</a></td><td class="details-row"><a href="#details-9-ash">details</a></td><td class="details-row"><a href="#details-9-zsh">details</a></td><td class="details-row"><a href="#details-9-mksh">details</a></td><td class="details-row"><a href="#details-9-ksh">details</a></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"><a href="#details-9-sush">details</a></td><td class="details-row"><a href="#details-9-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L139">nounset</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-dash">details</a></td><td class="details-row"><a href="#details-10-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"><a href="#details-10-sush">details</a></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L148">-u is nounset</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-dash">details</a></td><td class="details-row"><a href="#details-11-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"><a href="#details-11-sush">details</a></td><td class="details-row"><a href="#details-11-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="sh-options.test.html#L157">-n for no execution (useful with --ast-output)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-12-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L170">pipefail</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L188">shopt -p -o prints 'set' options</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-dash">details</a></td><td class="details-row"><a href="#details-14-ash">details</a></td><td class="details-row"><a href="#details-14-zsh">details</a></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L210">shopt -o prints 'set' options</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-dash">details</a></td><td class="details-row"><a href="#details-15-ash">details</a></td><td class="details-row"><a href="#details-15-zsh">details</a></td><td class="details-row"><a href="#details-15-mksh">details</a></td><td class="details-row"><a href="#details-15-ksh">details</a></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L224">shopt -p prints 'shopt' options</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-dash">details</a></td><td class="details-row"><a href="#details-16-ash">details</a></td><td class="details-row"><a href="#details-16-zsh">details</a></td><td class="details-row"><a href="#details-16-mksh">details</a></td><td class="details-row"><a href="#details-16-ksh">details</a></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"><a href="#details-16-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L235">shopt with no flags prints options</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-dash">details</a></td><td class="details-row"><a href="#details-17-ash">details</a></td><td class="details-row"><a href="#details-17-zsh">details</a></td><td class="details-row"><a href="#details-17-mksh">details</a></td><td class="details-row"><a href="#details-17-ksh">details</a></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"><a href="#details-17-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L257">noclobber off</a></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L279">noclobber on</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"><a href="#details-19-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L308">noclobber on &lt;&gt;</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-20-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"><a href="#details-20-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L323">noclobber on &gt;&gt;</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L336">noclobber on &amp;&gt; &gt;</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"><a href="#details-22-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L366">noclobber on &amp;&gt;&gt; &gt;&gt;</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-dash">details</a></td><td class="details-row"><a href="#details-23-ash">details</a></td><td class="details-row"><a href="#details-23-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"><a href="#details-23-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L404">set without args lists variables</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-dash">details</a></td><td class="details-row"><a href="#details-24-ash">details</a></td><td class="details-row"><a href="#details-24-zsh">details</a></td><td class="details-row"><a href="#details-24-mksh">details</a></td><td class="details-row"><a href="#details-24-ksh">details</a></td><td class="details-row"><a href="#details-24-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L437">set without args and array variables</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-25-bash">details</a></td><td class="details-row"><a href="#details-25-dash">details</a></td><td class="details-row"><a href="#details-25-ash">details</a></td><td class="details-row"><a href="#details-25-zsh">details</a></td><td class="details-row"><a href="#details-25-mksh">details</a></td><td class="details-row"><a href="#details-25-ksh">details</a></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"><a href="#details-25-sush">details</a></td><td class="details-row"><a href="#details-25-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="case-desc"><a href="sh-options.test.html#L458">set without args and assoc array variables (not in OSH)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-dash">details</a></td><td class="details-row"><a href="#details-26-ash">details</a></td><td class="details-row"><a href="#details-26-zsh">details</a></td><td class="details-row"><a href="#details-26-mksh">details</a></td><td class="details-row"><a href="#details-26-ksh">details</a></td><td class="details-row"><a href="#details-26-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L473">shopt -q</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-dash">details</a></td><td class="details-row"><a href="#details-27-ash">details</a></td><td class="details-row"><a href="#details-27-zsh">details</a></td><td class="details-row"><a href="#details-27-mksh">details</a></td><td class="details-row"><a href="#details-27-ksh">details</a></td><td class="details-row"><a href="#details-27-toysh">details</a></td><td class="details-row"><a href="#details-27-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L504">shopt -q invalid</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-28-bash">details</a></td><td class="details-row"><a href="#details-28-dash">details</a></td><td class="details-row"><a href="#details-28-ash">details</a></td><td class="details-row"><a href="#details-28-zsh">details</a></td><td class="details-row"><a href="#details-28-mksh">details</a></td><td class="details-row"><a href="#details-28-ksh">details</a></td><td class="details-row"><a href="#details-28-toysh">details</a></td><td class="details-row"><a href="#details-28-sush">details</a></td><td class="details-row"><a href="#details-28-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 29</td><td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L517">shopt -s strict:all</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-29-bash">details</a></td><td class="details-row"><a href="#details-29-dash">details</a></td><td class="details-row"><a href="#details-29-ash">details</a></td><td class="details-row"><a href="#details-29-zsh">details</a></td><td class="details-row"><a href="#details-29-mksh">details</a></td><td class="details-row"><a href="#details-29-ksh">details</a></td><td class="details-row"><a href="#details-29-toysh">details</a></td><td class="details-row"><a href="#details-29-sush">details</a></td><td class="details-row"><a href="#details-29-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 30</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L549">shopt allows for backward compatibility like bash</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-dash">details</a></td><td class="details-row"><a href="#details-30-ash">details</a></td><td class="details-row"><a href="#details-30-zsh">details</a></td><td class="details-row"><a href="#details-30-mksh">details</a></td><td class="details-row"><a href="#details-30-ksh">details</a></td><td class="details-row"><a href="#details-30-toysh">details</a></td><td class="details-row"><a href="#details-30-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 31</td><td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L572">shopt -p validates option names</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-31-bash">details</a></td><td class="details-row"><a href="#details-31-dash">details</a></td><td class="details-row"><a href="#details-31-ash">details</a></td><td class="details-row"><a href="#details-31-zsh">details</a></td><td class="details-row"><a href="#details-31-mksh">details</a></td><td class="details-row"><a href="#details-31-ksh">details</a></td><td class="details-row"><a href="#details-31-toysh">details</a></td><td class="details-row"><a href="#details-31-sush">details</a></td><td class="details-row"><a href="#details-31-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 32</td><td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L597">shopt -p -o validates option names</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-32-bash">details</a></td><td class="details-row"><a href="#details-32-dash">details</a></td><td class="details-row"><a href="#details-32-ash">details</a></td><td class="details-row"><a href="#details-32-zsh">details</a></td><td class="details-row"><a href="#details-32-mksh">details</a></td><td class="details-row"><a href="#details-32-ksh">details</a></td><td class="details-row"><a href="#details-32-toysh">details</a></td><td class="details-row"><a href="#details-32-sush">details</a></td><td class="details-row"><a href="#details-32-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 33</td><td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L613">stubbed out bash options</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-33-bash">details</a></td><td class="details-row"><a href="#details-33-dash">details</a></td><td class="details-row"><a href="#details-33-ash">details</a></td><td class="details-row"><a href="#details-33-zsh">details</a></td><td class="details-row"><a href="#details-33-mksh">details</a></td><td class="details-row"><a href="#details-33-ksh">details</a></td><td class="details-row"><a href="#details-33-toysh">details</a></td><td class="details-row"><a href="#details-33-sush">details</a></td><td class="details-row"><a href="#details-33-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 34</td><td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L638">shopt -s nounset works in YSH, not in bash</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-34-bash">details</a></td><td class="details-row"><a href="#details-34-dash">details</a></td><td class="details-row"><a href="#details-34-ash">details</a></td><td class="details-row"><a href="#details-34-zsh">details</a></td><td class="details-row"><a href="#details-34-mksh">details</a></td><td class="details-row"><a href="#details-34-ksh">details</a></td><td class="details-row"><a href="#details-34-toysh">details</a></td><td class="details-row"><a href="#details-34-sush">details</a></td><td class="details-row"><a href="#details-34-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 35</td><td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L663">Unimplemented options - print, query, set, unset</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-35-bash">details</a></td><td class="details-row"><a href="#details-35-dash">details</a></td><td class="details-row"><a href="#details-35-ash">details</a></td><td class="details-row"><a href="#details-35-zsh">details</a></td><td class="details-row"><a href="#details-35-mksh">details</a></td><td class="details-row"><a href="#details-35-ksh">details</a></td><td class="details-row"><a href="#details-35-toysh">details</a></td><td class="details-row"><a href="#details-35-sush">details</a></td><td class="details-row"><a href="#details-35-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 36</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L704">Unimplemented options - OSH shopt -s ignore_shopt_not_impl</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-36-dash">details</a></td><td class="details-row"><a href="#details-36-ash">details</a></td><td class="details-row"><a href="#details-36-zsh">details</a></td><td class="details-row"><a href="#details-36-mksh">details</a></td><td class="details-row"><a href="#details-36-ksh">details</a></td><td class="details-row"><a href="#details-36-toysh">details</a></td><td class="details-row"><a href="#details-36-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 37</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L740">shopt -p exit code (regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-37-dash">details</a></td><td class="details-row"><a href="#details-37-ash">details</a></td><td class="details-row"><a href="#details-37-zsh">details</a></td><td class="details-row"><a href="#details-37-mksh">details</a></td><td class="details-row"><a href="#details-37-ksh">details</a></td><td class="details-row"><a href="#details-37-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 38</td><td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="sh-options.test.html#L753">no-ops not shown by shopt -p</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-38-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-38-toysh">details</a></td><td class="details-row"><a href="#details-38-sush">details</a></td><td class="details-row"><a href="#details-38-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>158 passed, 20 OK, 42 not implemented, 2 BUG, 157 failed, 11 timeouts, 0 cases skipped
+1 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-bash"></a><b>bash</b></td><td>0 <a href="sh-options.test.html#L7">$- with -c</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>huBc
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-ash"></a><b>ash</b></td><td>0 <a href="sh-options.test.html#L7">$- with -c</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'u\n'
+Got      'uc\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>uc
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="sh-options.test.html#L7">$- with -c</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'u\n'
+Got      '569Xu\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>569Xu
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-mksh"></a><b>mksh</b></td><td>0 <a href="sh-options.test.html#L7">$- with -c</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>uhc
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-ksh"></a><b>ksh</b></td><td>0 <a href="sh-options.test.html#L7">$- with -c</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'u\n'
+Got      'uhUc\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>uhUc
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="sh-options.test.html#L7">$- with -c</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'u\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: Unknown option 'o' (see "sh --help")
+</pre></td></tr><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="sh-options.test.html#L7">$- with -c</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'u\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>: line : nounset: invalid option name
+</pre></td></tr><tr><td><a name="details-0-brush"></a><b>brush</b></td><td>0 <a href="sh-options.test.html#L7">$- with -c</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'u\n'
+Got      'huB\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>huB
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-bash"></a><b>bash</b></td><td>1 <a href="sh-options.test.html#L15">$- with pipefail</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>huBs
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-dash"></a><b>dash</b></td><td>1 <a href="sh-options.test.html#L15">$- with pipefail</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: set: Illegal option -o pipefail
+</pre></td></tr><tr><td><a name="details-1-ash"></a><b>ash</b></td><td>1 <a href="sh-options.test.html#L15">$- with pipefail</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'u\n'
+Got      'us\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>us
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-zsh"></a><b>zsh</b></td><td>1 <a href="sh-options.test.html#L15">$- with pipefail</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'u\n'
+Got      '569Xsu\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>569Xsu
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="sh-options.test.html#L15">$- with pipefail</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>ush
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="sh-options.test.html#L15">$- with pipefail</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'u\n'
+Got      'ushU\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ushU
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="sh-options.test.html#L15">$- with pipefail</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'u\n'
+Got      'Bs\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>Bs
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o pipefail
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="sh-options.test.html#L15">$- with pipefail</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'u\n'
+Got      'Bh\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>Bh
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="sh-options.test.html#L15">$- with pipefail</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'u\n'
+Got      'huBs\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>huBs
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-dash"></a><b>dash</b></td><td>2 <a href="sh-options.test.html#L25">$- and more options</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: [[: not found
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="sh-options.test.html#L25">$- and more options</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'yes\nyes\nyes\nyes\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: -f: invalid option
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="sh-options.test.html#L41">$- with interactive shell</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'FALSE\nTRUE\n'
+Got      'FALSE\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>FALSE
+</pre><i>stderr:</i> <br/>
+<pre>: line : set: -i: invalid option
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="sh-options.test.html#L53">pass long options like sh -o errexit</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>: line : errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="sh-options.test.html#L53">pass long options like sh -o errexit</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected u''
+Got      'status=1\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="sh-options.test.html#L58">pass shopt options like sh -O nullglob</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 0: Illegal option -O
+dash: 0: Illegal option -O
+</pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="sh-options.test.html#L58">pass shopt options like sh -O nullglob</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'foo *.nonexistent bar\nfoo bar\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: illegal option +O
+ash: illegal option -O
+</pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="sh-options.test.html#L58">pass shopt options like sh -O nullglob</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'foo *.nonexistent bar\nfoo bar\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: can't open input file: nullglob
+zsh: can't open input file: nullglob
+</pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="sh-options.test.html#L58">pass shopt options like sh -O nullglob</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: mksh: -O: unknown option
+mksh: mksh: -O: unknown option
+</pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="sh-options.test.html#L58">pass shopt options like sh -O nullglob</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'foo *.nonexistent bar\nfoo bar\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: -O: unknown option
+E: ksh: -O: unknown option
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="sh-options.test.html#L58">pass shopt options like sh -O nullglob</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'foo *.nonexistent bar\nfoo bar\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: +O: No such file or directory
+sh: Unknown option 'O' (see "sh --help")
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="sh-options.test.html#L58">pass shopt options like sh -O nullglob</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'foo *.nonexistent bar\nfoo bar\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: nullglob: No such file or directory
+: line : set: -O: invalid option
+</pre></td></tr><tr><td><a name="details-7-ash"></a><b>ash</b></td><td>7 <a href="sh-options.test.html#L69">set -o vi/emacs</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '0\n0\n'
+Got      '0\n1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+1
+</pre><i>stderr:</i> <br/>
+<pre>ash: set: line 3: illegal option -o emacs
+</pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="sh-options.test.html#L69">set -o vi/emacs</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '0\n0\n'
+Got      '1\n1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+1
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o vi
+set: bad -o emacs
+</pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="sh-options.test.html#L69">set -o vi/emacs</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '0\n0\n'
+Got      '2\n2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>2
+2
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: vi: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: set: emacs: invalid option name
+</pre></td></tr><tr><td><a name="details-8-dash"></a><b>dash</b></td><td>8 <a href="sh-options.test.html#L79">vi and emacs are mutually exclusive</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>___
+___
+___
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: shopt: not found
+dash: 2: shopt: not found
+dash: 2: shopt: not found
+</pre></td></tr><tr><td><a name="details-8-ash"></a><b>ash</b></td><td>8 <a href="sh-options.test.html#L79">vi and emacs are mutually exclusive</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'set +o emacs\nset +o vi\n___\nset -o emacs\nset +o vi\n___\nset +o emacs\nset -o vi\n___\n'
+Got      '___\n___\n___\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>___
+___
+___
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: set: line 7: illegal option -o emacs
+ash: shopt: not found
+ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="sh-options.test.html#L79">vi and emacs are mutually exclusive</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'set +o emacs\nset +o vi\n___\nset -o emacs\nset +o vi\n___\nset +o emacs\nset -o vi\n___\n'
+Got      '___\n___\n___\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>___
+___
+___
+</pre><i>stderr:</i> <br/>
+<pre>show:1: command not found: shopt
+show:1: command not found: shopt
+show:1: command not found: shopt
+</pre></td></tr><tr><td><a name="details-8-mksh"></a><b>mksh</b></td><td>8 <a href="sh-options.test.html#L79">vi and emacs are mutually exclusive</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>___
+___
+___
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[5]: shopt: not found
+mksh: &lt;stdin&gt;[8]: shopt: not found
+mksh: &lt;stdin&gt;[11]: shopt: not found
+</pre></td></tr><tr><td><a name="details-8-ksh"></a><b>ksh</b></td><td>8 <a href="sh-options.test.html#L79">vi and emacs are mutually exclusive</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'set +o emacs\nset +o vi\n___\nset -o emacs\nset +o vi\n___\nset +o emacs\nset -o vi\n___\n'
+Got      '___\n___\n___\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>___
+___
+___
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[8]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[11]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="sh-options.test.html#L79">vi and emacs are mutually exclusive</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'set +o emacs\nset +o vi\n___\nset -o emacs\nset +o vi\n___\nset +o emacs\nset -o vi\n___\n'
+Got      '___\n___\n___\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>___
+___
+___
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+set: bad -o emacs
+sh: shopt: No such file or directory
+set: bad -o vi
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="sh-options.test.html#L79">vi and emacs are mutually exclusive</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'set +o emacs\nset +o vi\n___\nset -o emacs\nset +o vi\n___\nset +o emacs\nset -o vi\n___\n'
+Got      '___\n___\n___\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>___
+___
+___
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: set: emacs: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 10: set: vi: invalid option name
+</pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="sh-options.test.html#L79">vi and emacs are mutually exclusive</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'set +o emacs\nset +o vi\n___\nset -o emacs\nset +o vi\n___\nset +o emacs\nset -o vi\n___\n'
+Got      'set +o emacs\nset +o vi\n___\nset -o emacs\nset +o vi\n___\nset -o emacs\nset -o vi\n___\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>set +o emacs
+set +o vi
+___
+set -o emacs
+set +o vi
+___
+set -o emacs
+set -o vi
+___
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-dash"></a><b>dash</b></td><td>9 <a href="sh-options.test.html#L109">interactive shell starts with emacs mode on</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="sh-options.test.html#L109">interactive shell starts with emacs mode on</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'non-interactive\n1\n1\ninteractive\n0\n1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-9-sush"></a><b>sush</b></td><td>9 <a href="sh-options.test.html#L109">interactive shell starts with emacs mode on</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'non-interactive\n1\n1\ninteractive\n0\n1\n'
+Got      'non-interactive\n2\n2\ninteractive\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>non-interactive
+2
+2
+interactive
+</pre><i>stderr:</i> <br/>
+<pre>test: ‘-o’: unary operator expected
+test: ‘-o’: unary operator expected
+: line : set: -i: invalid option
+</pre></td></tr><tr><td><a name="details-9-brush"></a><b>brush</b></td><td>9 <a href="sh-options.test.html#L109">interactive shell starts with emacs mode on</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'non-interactive\n1\n1\ninteractive\n0\n1\n'
+Got      'non-interactive\n1\n1\ninteractive\n0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>non-interactive
+1
+1
+interactive
+0
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-dash"></a><b>dash</b></td><td>10 <a href="sh-options.test.html#L139">nounset</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: unset: parameter not set
+</pre></td></tr><tr><td><a name="details-10-ash"></a><b>ash</b></td><td>10 <a href="sh-options.test.html#L139">nounset</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre>ash: unset: parameter not set
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="sh-options.test.html#L139">nounset</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '[]\n'
+Got      '[]\n[]\nend\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[]
+end
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o nounset
+</pre></td></tr><tr><td><a name="details-10-sush"></a><b>sush</b></td><td>10 <a href="sh-options.test.html#L139">nounset</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[]\n'
+Got      '[]\n[]\nend\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[]
+end
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: set: nounset: invalid option name
+</pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="sh-options.test.html#L139">nounset</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '[]\n'
+Got      '[]\n[]\nend\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[]
+end
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-11-dash"></a><b>dash</b></td><td>11 <a href="sh-options.test.html#L148">-u is nounset</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: unset: parameter not set
+</pre></td></tr><tr><td><a name="details-11-ash"></a><b>ash</b></td><td>11 <a href="sh-options.test.html#L148">-u is nounset</a><br/><br/>
+<span class="assertion">
+[ash status]
+Expected 1
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+</pre><i>stderr:</i> <br/>
+<pre>ash: unset: parameter not set
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="sh-options.test.html#L148">-u is nounset</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '[]\n'
+Got      '[]\nend\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+end
+</pre><i>stderr:</i> <br/>
+<pre>main: line 3: sh: unset]": bad substitution
+</pre></td></tr><tr><td><a name="details-11-sush"></a><b>sush</b></td><td>11 <a href="sh-options.test.html#L148">-u is nounset</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '[]\n'
+Got      '[]\nend\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+end
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: unset: unbound variable
+</pre></td></tr><tr><td><a name="details-11-brush"></a><b>brush</b></td><td>11 <a href="sh-options.test.html#L148">-u is nounset</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '[]\n'
+Got      '[]\n[]\nend\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>[]
+[]
+end
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="sh-options.test.html#L157">-n for no execution (useful with --ast-output)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1\n'
+Got      '1\n2\n3\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -n
+set: bad -n
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="sh-options.test.html#L157">-n for no execution (useful with --ast-output)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '1\n'
+Got      '1\n2\n3\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: set: -n: invalid option
+</pre></td></tr><tr><td><a name="details-12-osh"></a><b>osh</b></td><td>12 <a href="sh-options.test.html#L157">-n for no execution (useful with --ast-output)</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected '1\n'
+Got      '1\n2\n3\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+2
+3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="sh-options.test.html#L170">pipefail</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: set: Illegal option -o pipefail
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="sh-options.test.html#L170">pipefail</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '0\n2\n'
+Got      '0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o pipefail
+</pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="sh-options.test.html#L170">pipefail</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '0\n2\n'
+Got      '0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-dash"></a><b>dash</b></td><td>14 <a href="sh-options.test.html#L188">shopt -p -o prints 'set' options</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-ash"></a><b>ash</b></td><td>14 <a href="sh-options.test.html#L188">shopt -p -o prints 'set' options</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'set +o nounset\nset -o nounset\n--\nerrexit\nnoglob\nnounset\n'
+Got      '--\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-14-zsh"></a><b>zsh</b></td><td>14 <a href="sh-options.test.html#L188">shopt -p -o prints 'set' options</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'set +o nounset\nset -o nounset\n--\nerrexit\nnoglob\nnounset\n'
+Got      '--\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="sh-options.test.html#L188">shopt -p -o prints 'set' options</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="sh-options.test.html#L188">shopt -p -o prints 'set' options</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'set +o nounset\nset -o nounset\n--\nerrexit\nnoglob\nnounset\n'
+Got      '--\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[5]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[9]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="sh-options.test.html#L188">shopt -p -o prints 'set' options</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'set +o nounset\nset -o nounset\n--\nerrexit\nnoglob\nnounset\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="sh-options.test.html#L188">shopt -p -o prints 'set' options</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'set +o nounset\nset -o nounset\n--\nerrexit\nnoglob\nnounset\n'
+Got      '--\nnoglob\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+noglob
+</pre><i>stderr:</i> <br/>
+<pre>sush: shopt: nounset: invalid shell option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: set: nounset: invalid option name
+sush: shopt: nounset: invalid shell option name
+</pre></td></tr><tr><td><a name="details-15-dash"></a><b>dash</b></td><td>15 <a href="sh-options.test.html#L210">shopt -o prints 'set' options</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-ash"></a><b>ash</b></td><td>15 <a href="sh-options.test.html#L210">shopt -o prints 'set' options</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'errexit\nnoglob\nnounset\n--\n'
+Got      '--\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-15-zsh"></a><b>zsh</b></td><td>15 <a href="sh-options.test.html#L210">shopt -o prints 'set' options</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'errexit\nnoglob\nnounset\n--\n'
+Got      '--\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-15-mksh"></a><b>mksh</b></td><td>15 <a href="sh-options.test.html#L210">shopt -o prints 'set' options</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-ksh"></a><b>ksh</b></td><td>15 <a href="sh-options.test.html#L210">shopt -o prints 'set' options</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'errexit\nnoglob\nnounset\n--\n'
+Got      '--\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="sh-options.test.html#L210">shopt -o prints 'set' options</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'errexit\nnoglob\nnounset\n--\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="sh-options.test.html#L210">shopt -o prints 'set' options</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'errexit\nnoglob\nnounset\n--\n'
+Got      '--\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>--
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-dash"></a><b>dash</b></td><td>16 <a href="sh-options.test.html#L224">shopt -p prints 'shopt' options</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 2: shopt: not found
+dash: 3: shopt: not found
+</pre></td></tr><tr><td><a name="details-16-ash"></a><b>ash</b></td><td>16 <a href="sh-options.test.html#L224">shopt -p prints 'shopt' options</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'shopt -u nullglob\nshopt -s nullglob\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-16-zsh"></a><b>zsh</b></td><td>16 <a href="sh-options.test.html#L224">shopt -p prints 'shopt' options</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'shopt -u nullglob\nshopt -s nullglob\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-16-mksh"></a><b>mksh</b></td><td>16 <a href="sh-options.test.html#L224">shopt -p prints 'shopt' options</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+mksh: &lt;stdin&gt;[2]: shopt: not found
+mksh: &lt;stdin&gt;[3]: shopt: not found
+</pre></td></tr><tr><td><a name="details-16-ksh"></a><b>ksh</b></td><td>16 <a href="sh-options.test.html#L224">shopt -p prints 'shopt' options</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'shopt -u nullglob\nshopt -s nullglob\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[2]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="sh-options.test.html#L224">shopt -p prints 'shopt' options</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'shopt -u nullglob\nshopt -s nullglob\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-16-sush"></a><b>sush</b></td><td>16 <a href="sh-options.test.html#L224">shopt -p prints 'shopt' options</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'shopt -u nullglob\nshopt -s nullglob\n'
+Got      'nullglob        off\nnullglob        on\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>nullglob        off
+nullglob        on
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-dash"></a><b>dash</b></td><td>17 <a href="sh-options.test.html#L235">shopt with no flags prints options</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>0 one.txt
+0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: shopt: not found
+dash: 8: shopt: not found
+</pre></td></tr><tr><td><a name="details-17-ash"></a><b>ash</b></td><td>17 <a href="sh-options.test.html#L235">shopt with no flags prints options</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '2 one.txt\nnullglob\nfailglob\n1\n'
+Got      '0 one.txt\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0 one.txt
+0
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-17-zsh"></a><b>zsh</b></td><td>17 <a href="sh-options.test.html#L235">shopt with no flags prints options</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '2 one.txt\nnullglob\nfailglob\n1\n'
+Got      '0 one.txt\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0 one.txt
+0
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-17-mksh"></a><b>mksh</b></td><td>17 <a href="sh-options.test.html#L235">shopt with no flags prints options</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>0 one.txt
+0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: shopt: not found
+mksh: &lt;stdin&gt;[8]: shopt: not found
+</pre></td></tr><tr><td><a name="details-17-ksh"></a><b>ksh</b></td><td>17 <a href="sh-options.test.html#L235">shopt with no flags prints options</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '2 one.txt\nnullglob\nfailglob\n1\n'
+Got      '0 one.txt\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0 one.txt
+0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[8]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="sh-options.test.html#L235">shopt with no flags prints options</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '2 one.txt\nnullglob\nfailglob\n1\n'
+Got      '0 one.txt\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0 one.txt
+0
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-17-sush"></a><b>sush</b></td><td>17 <a href="sh-options.test.html#L235">shopt with no flags prints options</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '2 one.txt\nnullglob\nfailglob\n1\n'
+Got      '0 one.txt\n1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0 one.txt
+1
+</pre><i>stderr:</i> <br/>
+<pre>sush: shopt: nullglob: invalid shell option name
+shopt: usage: shopt [-su] [optname ...]
+</pre></td></tr><tr><td><a name="details-19-dash"></a><b>dash</b></td><td>19 <a href="sh-options.test.html#L279">noclobber on</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>create=0
+overwrite=2
+force=0
+force
+</pre><i>stderr:</i> <br/>
+<pre>dash: 7: cannot create no-clobber: File exists
+</pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="sh-options.test.html#L279">noclobber on</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'create=0\noverwrite=1\nforce=0\nforce\n'
+Got      'create=0\noverwrite=0\nforce=0\nforce\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>create=0
+overwrite=0
+force=0
+force
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-sush"></a><b>sush</b></td><td>19 <a href="sh-options.test.html#L279">noclobber on</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'create=0\noverwrite=1\nforce=0\nforce\n'
+Got      'create=0\noverwrite=1\nforce=2\nfoo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>create=0
+overwrite=1
+force=2
+foo
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: no-clobber: cannot overwrite existing file
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: syntax error near unexpected token: &gt;|
+</pre></td></tr><tr><td><a name="details-20-dash"></a><b>dash</b></td><td>20 <a href="sh-options.test.html#L308">noclobber on &lt;&gt;</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>.oo
+</pre><i>stderr:</i> <br/>
+<pre>dash: 4: read: Illegal option -n
+</pre></td></tr><tr><td><a name="details-20-zsh"></a><b>zsh</b></td><td>20 <a href="sh-options.test.html#L308">noclobber on &lt;&gt;</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'f.o\n'
+Got      'foo\n.'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>foo
+.</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="sh-options.test.html#L308">noclobber on &lt;&gt;</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'f.o\n'
+Got      '.oo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>.oo
+</pre><i>stderr:</i> <br/>
+<pre>sh: read: No such file or directory
+</pre></td></tr><tr><td><a name="details-20-sush"></a><b>sush</b></td><td>20 <a href="sh-options.test.html#L308">noclobber on &lt;&gt;</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'f.o\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: syntax error near unexpected token: &gt;|
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: syntax error near unexpected token: &lt;&gt;
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: 0: bad file descriptor
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 5: 1: bad file descriptor
+
+thread 'main' panicked at src/elements/io.rs:17:27:
+cannot close: EBADF
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+</pre></td></tr><tr><td><a name="details-21-zsh"></a><b>zsh</b></td><td>21 <a href="sh-options.test.html#L323">noclobber on &gt;&gt;</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=0\nfoo\n'
+Got      'status=1\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>zsh: no such file or directory: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/sh-options.test.sh/21-zsh/no-clobber
+cat: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/sh-options.test.sh/21-zsh/no-clobber: No such file or directory
+</pre></td></tr><tr><td><a name="details-22-dash"></a><b>dash</b></td><td>22 <a href="sh-options.test.html#L336">noclobber on &amp;&gt; &gt;</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="sh-options.test.html#L336">noclobber on &amp;&gt; &gt;</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'stdout=0\nagain=1\nfoo\nboth=0\nagain=1\nbaz\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="sh-options.test.html#L336">noclobber on &amp;&gt; &gt;</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'stdout=0\nagain=1\nfoo\nboth=0\nagain=1\nbaz\n'
+Got      'stdout=0\nagain=1\nfoo\nboth=0\nagain=0\nfoo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>stdout=0
+again=1
+foo
+both=0
+again=0
+foo
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/sh-options.test.sh/22-sush/no-clobber: cannot overwrite existing file
+</pre></td></tr><tr><td><a name="details-22-brush"></a><b>brush</b></td><td>22 <a href="sh-options.test.html#L336">noclobber on &amp;&gt; &gt;</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'stdout=0\nagain=1\nfoo\nboth=0\nagain=1\nbaz\n'
+Got      'stdout=0\nagain=1\nfoo\nboth=0\nagain=0\nfoo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>stdout=0
+again=1
+foo
+both=0
+again=0
+foo
+</pre><i>stderr:</i> <br/>
+<pre>error: failed to redirect to /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/sh-options.test.sh/22-brush/no-clobber: File exists (os error 17)
+</pre></td></tr><tr><td><a name="details-23-dash"></a><b>dash</b></td><td>23 <a href="sh-options.test.html#L366">noclobber on &amp;&gt;&gt; &gt;&gt;</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>stdout=0
+again=0
+foo
+bar
+both=0
+baz
+again=0
+foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-ash"></a><b>ash</b></td><td>23 <a href="sh-options.test.html#L366">noclobber on &amp;&gt;&gt; &gt;&gt;</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'stdout=0\nagain=0\nfoo\nbar\nboth=0\nagain=0\nbaz\nfoo\n'
+Got      'stdout=0\nagain=0\nfoo\nbar\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>stdout=0
+again=0
+foo
+bar
+</pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: unexpected redirection
+</pre></td></tr><tr><td><a name="details-23-zsh"></a><b>zsh</b></td><td>23 <a href="sh-options.test.html#L366">noclobber on &amp;&gt;&gt; &gt;&gt;</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'stdout=0\nagain=0\nfoo\nbar\nboth=0\nagain=0\nbaz\nfoo\n'
+Got      'stdout=1\nagain=1\nboth=1\nagain=1\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>stdout=1
+again=1
+both=1
+again=1
+</pre><i>stderr:</i> <br/>
+<pre>zsh: no such file or directory: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/sh-options.test.sh/23-zsh/no-clobber
+zsh: no such file or directory: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/sh-options.test.sh/23-zsh/no-clobber
+cat: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/sh-options.test.sh/23-zsh/no-clobber: No such file or directory
+zsh: no such file or directory: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/sh-options.test.sh/23-zsh/no-clobber
+zsh: no such file or directory: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/sh-options.test.sh/23-zsh/no-clobber
+cat: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/sh-options.test.sh/23-zsh/no-clobber: No such file or directory
+</pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="sh-options.test.html#L366">noclobber on &amp;&gt;&gt; &gt;&gt;</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'stdout=0\nagain=0\nfoo\nbar\nboth=0\nagain=0\nbaz\nfoo\n'
+Got      'stdout=0\nagain=0\nfoo\nbar\nboth=0\nagain=0\nfoo\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>stdout=0
+again=0
+foo
+bar
+both=0
+again=0
+foo
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-sush"></a><b>sush</b></td><td>23 <a href="sh-options.test.html#L366">noclobber on &amp;&gt;&gt; &gt;&gt;</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'stdout=0\nagain=0\nfoo\nbar\nboth=0\nagain=0\nbaz\nfoo\n'
+Got      'stdout=0\nagain=1\nfoo\nbaz\nboth=0\nfoo\nagain=0\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>stdout=0
+again=1
+foo
+baz
+both=0
+foo
+again=0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 6: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/sh-options.test.sh/23-sush/no-clobber: cannot overwrite existing file
+793638
+793643
+cat: /home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/sh-options.test.sh/23-sush/no-clobber: No such file or directory
+</pre></td></tr><tr><td><a name="details-24-dash"></a><b>dash</b></td><td>24 <a href="sh-options.test.html#L404">set without args lists variables</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>__GLOBAL='mutated'
+__OTHERLOCAL='L'
+__mylocal='L'
+__var_in_parent_scope='D'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-ash"></a><b>ash</b></td><td>24 <a href="sh-options.test.html#L404">set without args lists variables</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '__GLOBAL=mutated\n__OTHERLOCAL=L\n__mylocal=L\n__var_in_parent_scope=D\n'
+Got      "__GLOBAL='mutated'\n__OTHERLOCAL='L'\n__mylocal='L'\n__var_in_parent_scope='D'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>__GLOBAL='mutated'
+__OTHERLOCAL='L'
+__mylocal='L'
+__var_in_parent_scope='D'
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-zsh"></a><b>zsh</b></td><td>24 <a href="sh-options.test.html#L404">set without args lists variables</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '__GLOBAL=mutated\n__OTHERLOCAL=L\n__mylocal=L\n__var_in_parent_scope=D\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>grep: (standard input): binary file matches
+</pre></td></tr><tr><td><a name="details-24-mksh"></a><b>mksh</b></td><td>24 <a href="sh-options.test.html#L404">set without args lists variables</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>__GLOBAL=mutated
+__var_in_parent_scope=D
+__OTHERLOCAL=L
+__mylocal=L
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-ksh"></a><b>ksh</b></td><td>24 <a href="sh-options.test.html#L404">set without args lists variables</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '__GLOBAL=mutated\n__OTHERLOCAL=L\n__mylocal=L\n__var_in_parent_scope=D\n'
+Got      '__GLOBAL=mutated\n__var_in_parent_scope=D\n__OTHERLOCAL=L\n__mylocal=L\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>__GLOBAL=mutated
+__var_in_parent_scope=D
+__OTHERLOCAL=L
+__mylocal=L
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-toysh"></a><b>toysh</b></td><td>24 <a href="sh-options.test.html#L404">set without args lists variables</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '__GLOBAL=mutated\n__OTHERLOCAL=L\n__mylocal=L\n__var_in_parent_scope=D\n'
+Got      '__OTHERLOCAL=L\n__mylocal=L\n__var_in_parent_scope=D\n__GLOBAL=mutated\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>__OTHERLOCAL=L
+__mylocal=L
+__var_in_parent_scope=D
+__GLOBAL=mutated
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-bash"></a><b>bash</b></td><td>25 <a href="sh-options.test.html#L437">set without args and array variables</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>__array=([0]="1" [1]="2" [2]="3 4")
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-dash"></a><b>dash</b></td><td>25 <a href="sh-options.test.html#L437">set without args and array variables</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: declare: not found
+dash: 2: Syntax error: "(" unexpected
+</pre></td></tr><tr><td><a name="details-25-ash"></a><b>ash</b></td><td>25 <a href="sh-options.test.html#L437">set without args and array variables</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "__array=(1 2 '3 4')\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-25-zsh"></a><b>zsh</b></td><td>25 <a href="sh-options.test.html#L437">set without args and array variables</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'a=( 1 2 3 )\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>grep: (standard input): binary file matches
+</pre></td></tr><tr><td><a name="details-25-mksh"></a><b>mksh</b></td><td>25 <a href="sh-options.test.html#L437">set without args and array variables</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>__array[0]=1
+__array[1]=2
+__array[2]='3 4'
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: declare: not found
+</pre></td></tr><tr><td><a name="details-25-ksh"></a><b>ksh</b></td><td>25 <a href="sh-options.test.html#L437">set without args and array variables</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected "__array=(1 2 '3 4')\n"
+Got      "__array[0]=1\n__array[1]=2\n__array[2]='3 4'\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>__array[0]=1
+__array[1]=2
+__array[2]='3 4'
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: declare: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="sh-options.test.html#L437">set without args and array variables</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "__array=(1 2 '3 4')\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: 1
+</pre></td></tr><tr><td><a name="details-25-sush"></a><b>sush</b></td><td>25 <a href="sh-options.test.html#L437">set without args and array variables</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected "__array=(1 2 '3 4')\n"
+Got      '__array=([0]="1" [1]="2" [2]="3 4")\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>__array=([0]="1" [1]="2" [2]="3 4")
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-brush"></a><b>brush</b></td><td>25 <a href="sh-options.test.html#L437">set without args and array variables</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "__array=(1 2 '3 4')\n"
+Got      '__array=([0]="1" [1]="2" [2]="3 4")\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>__array=([0]="1" [1]="2" [2]="3 4")
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-dash"></a><b>dash</b></td><td>26 <a href="sh-options.test.html#L458">set without args and assoc array variables (not in OSH)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: typeset: not found
+dash: 2: __assoc[k e y]=v a l: not found
+dash: 3: __assoc[a]=b: not found
+</pre></td></tr><tr><td><a name="details-26-ash"></a><b>ash</b></td><td>26 <a href="sh-options.test.html#L458">set without args and assoc array variables (not in OSH)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '__assoc=([a]="b" ["k e y"]="v a l" )\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: typeset: not found
+ash: __assoc[k e y]=v a l: not found
+ash: __assoc[a]=b: not found
+</pre></td></tr><tr><td><a name="details-26-zsh"></a><b>zsh</b></td><td>26 <a href="sh-options.test.html#L458">set without args and assoc array variables (not in OSH)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '__assoc=([a]="b" ["k e y"]="v a l" )\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>grep: (standard input): binary file matches
+</pre></td></tr><tr><td><a name="details-26-mksh"></a><b>mksh</b></td><td>26 <a href="sh-options.test.html#L458">set without args and assoc array variables (not in OSH)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: typeset: -A: unknown option
+mksh: &lt;stdin&gt;[2]: 'k e y': multi-character character constant
+</pre></td></tr><tr><td><a name="details-26-ksh"></a><b>ksh</b></td><td>26 <a href="sh-options.test.html#L458">set without args and assoc array variables (not in OSH)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '__assoc=([a]="b" ["k e y"]="v a l" )\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: typeset: -A: unknown option
+W: ksh: &lt;stdin&gt;[2]: 'k e y': multi-character character constant
+</pre></td></tr><tr><td><a name="details-26-toysh"></a><b>toysh</b></td><td>26 <a href="sh-options.test.html#L458">set without args and assoc array variables (not in OSH)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '__assoc=([a]="b" ["k e y"]="v a l" )\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: typeset: No such file or directory
+sh: __assoc[k e y]=v a l: No such file or directory
+sh: __assoc[a]=b: No such file or directory
+</pre></td></tr><tr><td><a name="details-26-osh"></a><b>osh</b></td><td>26 <a href="sh-options.test.html#L458">set without args and assoc array variables (not in OSH)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>  __assoc[a]=b
+  ^~~~~~~~
+[ stdin ]:3: fatal: Assoc array keys must be strings: $x 'x' "$x" etc. (OILS-ERR-101)
+</pre></td></tr><tr><td><a name="details-27-dash"></a><b>dash</b></td><td>27 <a href="sh-options.test.html#L473">shopt -q</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>nullglob=127
+nullglob=127
+nullglob,failglob=127
+nullglob,failglob=127
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 4: shopt: not found
+dash: 6: shopt: not found
+dash: 9: shopt: not found
+dash: 12: shopt: not found
+dash: 13: shopt: not found
+</pre></td></tr><tr><td><a name="details-27-ash"></a><b>ash</b></td><td>27 <a href="sh-options.test.html#L473">shopt -q</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'nullglob=1\nnullglob=0\nnullglob,failglob=1\nnullglob,failglob=0\n'
+Got      'nullglob=127\nnullglob=127\nnullglob,failglob=127\nnullglob,failglob=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>nullglob=127
+nullglob=127
+nullglob,failglob=127
+nullglob,failglob=127
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-27-zsh"></a><b>zsh</b></td><td>27 <a href="sh-options.test.html#L473">shopt -q</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'nullglob=1\nnullglob=0\nnullglob,failglob=1\nnullglob,failglob=0\n'
+Got      'nullglob=127\nnullglob=127\nnullglob,failglob=127\nnullglob,failglob=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>nullglob=127
+nullglob=127
+nullglob,failglob=127
+nullglob,failglob=127
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-27-mksh"></a><b>mksh</b></td><td>27 <a href="sh-options.test.html#L473">shopt -q</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>nullglob=127
+nullglob=127
+nullglob,failglob=127
+nullglob,failglob=127
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+mksh: &lt;stdin&gt;[4]: shopt: not found
+mksh: &lt;stdin&gt;[6]: shopt: not found
+mksh: &lt;stdin&gt;[9]: shopt: not found
+mksh: &lt;stdin&gt;[12]: shopt: not found
+mksh: &lt;stdin&gt;[13]: shopt: not found
+</pre></td></tr><tr><td><a name="details-27-ksh"></a><b>ksh</b></td><td>27 <a href="sh-options.test.html#L473">shopt -q</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'nullglob=1\nnullglob=0\nnullglob,failglob=1\nnullglob,failglob=0\n'
+Got      'nullglob=127\nnullglob=127\nnullglob,failglob=127\nnullglob,failglob=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>nullglob=127
+nullglob=127
+nullglob,failglob=127
+nullglob,failglob=127
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[4]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[6]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[9]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[12]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[13]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-27-toysh"></a><b>toysh</b></td><td>27 <a href="sh-options.test.html#L473">shopt -q</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'nullglob=1\nnullglob=0\nnullglob,failglob=1\nnullglob,failglob=0\n'
+Got      'nullglob=127\nnullglob=127\nnullglob,failglob=127\nnullglob,failglob=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>nullglob=127
+nullglob=127
+nullglob,failglob=127
+nullglob,failglob=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-27-sush"></a><b>sush</b></td><td>27 <a href="sh-options.test.html#L473">shopt -q</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'nullglob=1\nnullglob=0\nnullglob,failglob=1\nnullglob,failglob=0\n'
+Got      'nullglob=0\nnullglob=0\nnullglob,failglob=1\nnullglob,failglob=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>nullglob=0
+nullglob=0
+nullglob,failglob=1
+nullglob,failglob=1
+</pre><i>stderr:</i> <br/>
+<pre>sush: shopt: nullglob: invalid shell option name
+shopt: usage: shopt [-su] [optname ...]
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 12: shopt: failglob: not supported yet
+sush: shopt: nullglob: invalid shell option name
+shopt: usage: shopt [-su] [optname ...]
+</pre></td></tr><tr><td><a name="details-28-bash"></a><b>bash</b></td><td>28 <a href="sh-options.test.html#L504">shopt -q invalid</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>invalidZZ=1
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: shopt: invalidZZ: invalid shell option name
+</pre></td></tr><tr><td><a name="details-28-dash"></a><b>dash</b></td><td>28 <a href="sh-options.test.html#L504">shopt -q invalid</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>invalidZZ=127
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+</pre></td></tr><tr><td><a name="details-28-ash"></a><b>ash</b></td><td>28 <a href="sh-options.test.html#L504">shopt -q invalid</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'invalidZZ=2\n'
+Got      'invalidZZ=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>invalidZZ=127
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-28-zsh"></a><b>zsh</b></td><td>28 <a href="sh-options.test.html#L504">shopt -q invalid</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'invalidZZ=2\n'
+Got      'invalidZZ=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>invalidZZ=127
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-28-mksh"></a><b>mksh</b></td><td>28 <a href="sh-options.test.html#L504">shopt -q invalid</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>invalidZZ=127
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-28-ksh"></a><b>ksh</b></td><td>28 <a href="sh-options.test.html#L504">shopt -q invalid</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'invalidZZ=2\n'
+Got      'invalidZZ=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>invalidZZ=127
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-28-toysh"></a><b>toysh</b></td><td>28 <a href="sh-options.test.html#L504">shopt -q invalid</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'invalidZZ=2\n'
+Got      'invalidZZ=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>invalidZZ=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-28-sush"></a><b>sush</b></td><td>28 <a href="sh-options.test.html#L504">shopt -q invalid</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'invalidZZ=2\n'
+Got      'invalidZZ=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>invalidZZ=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-brush"></a><b>brush</b></td><td>28 <a href="sh-options.test.html#L504">shopt -q invalid</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'invalidZZ=2\n'
+Got      'invalidZZ=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>invalidZZ=1
+</pre><i>stderr:</i> <br/>
+<pre>shopt: invalidZZ: invalid shell option name
+</pre></td></tr><tr><td><a name="details-29-bash"></a><b>bash</b></td><td>29 <a href="sh-options.test.html#L517">shopt -s strict:all</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-
+-
+-
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 9: shopt: strict:all: invalid shell option name
+bash: line 11: shopt: strict_argv: invalid shell option name
+</pre></td></tr><tr><td><a name="details-29-dash"></a><b>dash</b></td><td>29 <a href="sh-options.test.html#L517">shopt -s strict:all</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 3: Syntax error: Bad function name
+</pre></td></tr><tr><td><a name="details-29-ash"></a><b>ash</b></td><td>29 <a href="sh-options.test.html#L517">shopt -s strict:all</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'shopt -u strict_arg_parse\nshopt -u strict_argv\n-\nshopt -s strict_arg_parse\nshopt -s strict_argv\n-\nshopt -s strict_arg_parse\nshopt -u strict_argv\n-\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad function name
+</pre></td></tr><tr><td><a name="details-29-zsh"></a><b>zsh</b></td><td>29 <a href="sh-options.test.html#L517">shopt -s strict:all</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'shopt -u strict_arg_parse\nshopt -u strict_argv\n-\nshopt -s strict_arg_parse\nshopt -s strict_argv\n-\nshopt -s strict_arg_parse\nshopt -u strict_argv\n-\n'
+Got      '\n\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+
+
+</pre><i>stderr:</i> <br/>
+<pre>show-strict:1: command not found: shopt
+zsh: command not found: shopt
+show-strict:1: command not found: shopt
+zsh: command not found: shopt
+show-strict:1: command not found: shopt
+</pre></td></tr><tr><td><a name="details-29-mksh"></a><b>mksh</b></td><td>29 <a href="sh-options.test.html#L517">shopt -s strict:all</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>-
+-
+-
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[8]: shopt: not found
+mksh: &lt;stdin&gt;[9]: shopt: not found
+mksh: &lt;stdin&gt;[10]: shopt: not found
+mksh: &lt;stdin&gt;[11]: shopt: not found
+mksh: &lt;stdin&gt;[12]: shopt: not found
+</pre></td></tr><tr><td><a name="details-29-ksh"></a><b>ksh</b></td><td>29 <a href="sh-options.test.html#L517">shopt -s strict:all</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'shopt -u strict_arg_parse\nshopt -u strict_argv\n-\nshopt -s strict_arg_parse\nshopt -s strict_argv\n-\nshopt -s strict_arg_parse\nshopt -u strict_argv\n-\n'
+Got      '-\n-\n-\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-
+-
+-
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[8]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[9]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[10]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[11]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[12]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-29-toysh"></a><b>toysh</b></td><td>29 <a href="sh-options.test.html#L517">shopt -s strict:all</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'shopt -u strict_arg_parse\nshopt -u strict_argv\n-\nshopt -s strict_arg_parse\nshopt -s strict_argv\n-\nshopt -s strict_arg_parse\nshopt -u strict_argv\n-\n'
+Got      '-\n-\n-\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-
+-
+-
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-29-sush"></a><b>sush</b></td><td>29 <a href="sh-options.test.html#L517">shopt -s strict:all</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'shopt -u strict_arg_parse\nshopt -u strict_argv\n-\nshopt -s strict_arg_parse\nshopt -s strict_argv\n-\nshopt -s strict_arg_parse\nshopt -u strict_argv\n-\n'
+Got      '-\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      127
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 4: syntax error near unexpected token: ()
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: syntax error near unexpected token: }
+
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 8: show-strict: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 9: shopt: strict:all: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 10: show-strict: command not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 11: strict_argv: invalid option name
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 12: show-strict: command not found
+</pre></td></tr><tr><td><a name="details-29-brush"></a><b>brush</b></td><td>29 <a href="sh-options.test.html#L517">shopt -s strict:all</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'shopt -u strict_arg_parse\nshopt -u strict_argv\n-\nshopt -s strict_arg_parse\nshopt -s strict_argv\n-\nshopt -s strict_arg_parse\nshopt -u strict_argv\n-\n'
+Got      '-\n-\n-\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>-
+-
+-
+</pre><i>stderr:</i> <br/>
+<pre>shopt: strict:all: invalid shell option name
+shopt: strict_argv: invalid shell option name
+</pre></td></tr><tr><td><a name="details-30-dash"></a><b>dash</b></td><td>30 <a href="sh-options.test.html#L549">shopt allows for backward compatibility like bash</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>dash: 3: shopt: not found
+dash: 8: shopt: not found
+</pre></td></tr><tr><td><a name="details-30-ash"></a><b>ash</b></td><td>30 <a href="sh-options.test.html#L549">shopt allows for backward compatibility like bash</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'shopt -u nullglob\nstatus=0\nshopt -s nullglob\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-30-zsh"></a><b>zsh</b></td><td>30 <a href="sh-options.test.html#L549">shopt allows for backward compatibility like bash</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'shopt -u nullglob\nstatus=0\nshopt -s nullglob\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-30-mksh"></a><b>mksh</b></td><td>30 <a href="sh-options.test.html#L549">shopt allows for backward compatibility like bash</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[3]: shopt: not found
+mksh: &lt;stdin&gt;[8]: shopt: not found
+</pre></td></tr><tr><td><a name="details-30-ksh"></a><b>ksh</b></td><td>30 <a href="sh-options.test.html#L549">shopt allows for backward compatibility like bash</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'shopt -u nullglob\nstatus=0\nshopt -s nullglob\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[8]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-30-toysh"></a><b>toysh</b></td><td>30 <a href="sh-options.test.html#L549">shopt allows for backward compatibility like bash</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'shopt -u nullglob\nstatus=0\nshopt -s nullglob\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>set: bad -o errexit
+sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-30-sush"></a><b>sush</b></td><td>30 <a href="sh-options.test.html#L549">shopt allows for backward compatibility like bash</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'shopt -u nullglob\nstatus=0\nshopt -s nullglob\n'
+Got      'nullglob        off\nstatus=0\nnullglob        on\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>nullglob        off
+status=0
+nullglob        on
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-31-bash"></a><b>bash</b></td><td>31 <a href="sh-options.test.html#L572">shopt -p validates option names</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>shopt -u nullglob
+shopt -u failglob
+status=1
+nullglob off
+failglob off
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: shopt: invalid: invalid shell option name
+bash: line 3: shopt: invalid: invalid shell option name
+</pre></td></tr><tr><td><a name="details-31-dash"></a><b>dash</b></td><td>31 <a href="sh-options.test.html#L572">shopt -p validates option names</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 3: shopt: not found
+</pre></td></tr><tr><td><a name="details-31-ash"></a><b>ash</b></td><td>31 <a href="sh-options.test.html#L572">shopt -p validates option names</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=2\nstatus=2\n'
+Got      'status=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-31-zsh"></a><b>zsh</b></td><td>31 <a href="sh-options.test.html#L572">shopt -p validates option names</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=2\nstatus=2\n'
+Got      'status=127\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: read-only variable: status
+</pre></td></tr><tr><td><a name="details-31-mksh"></a><b>mksh</b></td><td>31 <a href="sh-options.test.html#L572">shopt -p validates option names</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+mksh: &lt;stdin&gt;[3]: shopt: not found
+</pre></td></tr><tr><td><a name="details-31-ksh"></a><b>ksh</b></td><td>31 <a href="sh-options.test.html#L572">shopt -p validates option names</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=2\nstatus=2\n'
+Got      'status=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-31-toysh"></a><b>toysh</b></td><td>31 <a href="sh-options.test.html#L572">shopt -p validates option names</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=2\nstatus=2\n'
+Got      'status=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-31-sush"></a><b>sush</b></td><td>31 <a href="sh-options.test.html#L572">shopt -p validates option names</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=2\nstatus=2\n'
+Got      'status=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>sush: shopt: nullglob: invalid shell option name
+shopt: usage: shopt [-su] [optname ...]
+sush: shopt: nullglob: invalid shell option name
+shopt: usage: shopt [-su] [optname ...]
+</pre></td></tr><tr><td><a name="details-31-brush"></a><b>brush</b></td><td>31 <a href="sh-options.test.html#L572">shopt -p validates option names</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=2\nstatus=2\n'
+Got      'shopt -u nullglob\nshopt -u failglob\nstatus=1\nnullglob off\nfailglob off\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>shopt -u nullglob
+shopt -u failglob
+status=1
+nullglob off
+failglob off
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>shopt: invalid: invalid shell option name
+shopt: invalid: invalid shell option name
+</pre></td></tr><tr><td><a name="details-32-bash"></a><b>bash</b></td><td>32 <a href="sh-options.test.html#L597">shopt -p -o validates option names</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>set +o errexit
+set +o nounset
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: shopt: invalid: invalid option name
+</pre></td></tr><tr><td><a name="details-32-dash"></a><b>dash</b></td><td>32 <a href="sh-options.test.html#L597">shopt -p -o validates option names</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+</pre></td></tr><tr><td><a name="details-32-ash"></a><b>ash</b></td><td>32 <a href="sh-options.test.html#L597">shopt -p -o validates option names</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'set +o errexit\nstatus=2\n'
+Got      'status=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-32-zsh"></a><b>zsh</b></td><td>32 <a href="sh-options.test.html#L597">shopt -p -o validates option names</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'set +o errexit\nstatus=2\n'
+Got      'status=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-32-mksh"></a><b>mksh</b></td><td>32 <a href="sh-options.test.html#L597">shopt -p -o validates option names</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+</pre></td></tr><tr><td><a name="details-32-ksh"></a><b>ksh</b></td><td>32 <a href="sh-options.test.html#L597">shopt -p -o validates option names</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'set +o errexit\nstatus=2\n'
+Got      'status=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-32-toysh"></a><b>toysh</b></td><td>32 <a href="sh-options.test.html#L597">shopt -p -o validates option names</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'set +o errexit\nstatus=2\n'
+Got      'status=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-32-sush"></a><b>sush</b></td><td>32 <a href="sh-options.test.html#L597">shopt -p -o validates option names</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'set +o errexit\nstatus=2\n'
+Got      'status=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>sush: shopt: errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-32-brush"></a><b>brush</b></td><td>32 <a href="sh-options.test.html#L597">shopt -p -o validates option names</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'set +o errexit\nstatus=2\n'
+Got      'set +o errexit\nset +o nounset\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>set +o errexit
+set +o nounset
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>shopt: invalid: invalid shell option name
+</pre></td></tr><tr><td><a name="details-33-bash"></a><b>bash</b></td><td>33 <a href="sh-options.test.html#L613">stubbed out bash options</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+0
+0
+0
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 1: shopt: ignore_shopt_not_impl: invalid shell option name
+bash: line 3: shopt: foo: invalid shell option name
+</pre></td></tr><tr><td><a name="details-33-dash"></a><b>dash</b></td><td>33 <a href="sh-options.test.html#L613">stubbed out bash options</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>127
+127
+127
+127
+</pre><i>stderr:</i> <br/>
+<pre>dash: 1: shopt: not found
+dash: 3: shopt: not found
+dash: 3: shopt: not found
+dash: 3: shopt: not found
+dash: 3: shopt: not found
+</pre></td></tr><tr><td><a name="details-33-ash"></a><b>ash</b></td><td>33 <a href="sh-options.test.html#L613">stubbed out bash options</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '2\n0\n0\n0\n'
+Got      '127\n127\n127\n127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>127
+127
+127
+127
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-33-zsh"></a><b>zsh</b></td><td>33 <a href="sh-options.test.html#L613">stubbed out bash options</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '2\n0\n0\n0\n'
+Got      '127\n127\n127\n127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>127
+127
+127
+127
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-33-mksh"></a><b>mksh</b></td><td>33 <a href="sh-options.test.html#L613">stubbed out bash options</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>127
+127
+127
+127
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[1]: shopt: not found
+mksh: &lt;stdin&gt;[5]: shopt: not found
+mksh: &lt;stdin&gt;[5]: shopt: not found
+mksh: &lt;stdin&gt;[5]: shopt: not found
+mksh: &lt;stdin&gt;[5]: shopt: not found
+</pre></td></tr><tr><td><a name="details-33-ksh"></a><b>ksh</b></td><td>33 <a href="sh-options.test.html#L613">stubbed out bash options</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '2\n0\n0\n0\n'
+Got      '127\n127\n127\n127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>127
+127
+127
+127
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[1]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[5]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[5]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[5]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[5]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-33-toysh"></a><b>toysh</b></td><td>33 <a href="sh-options.test.html#L613">stubbed out bash options</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '2\n0\n0\n0\n'
+Got      '127\n127\n127\n127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>127
+127
+127
+127
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-33-sush"></a><b>sush</b></td><td>33 <a href="sh-options.test.html#L613">stubbed out bash options</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '2\n0\n0\n0\n'
+Got      '1\n1\n1\n1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+1
+1
+1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: shopt: ignore_shopt_not_impl: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: shopt: foo: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: shopt: autocd: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: shopt: cdable_vars: not supported yet
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: shopt: checkwinsize: not supported yet
+</pre></td></tr><tr><td><a name="details-33-brush"></a><b>brush</b></td><td>33 <a href="sh-options.test.html#L613">stubbed out bash options</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '2\n0\n0\n0\n'
+Got      '1\n0\n0\n0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+0
+0
+0
+</pre><i>stderr:</i> <br/>
+<pre>shopt: ignore_shopt_not_impl: invalid shell option name
+shopt: foo: invalid shell option name
+</pre></td></tr><tr><td><a name="details-34-bash"></a><b>bash</b></td><td>34 <a href="sh-options.test.html#L638">shopt -s nounset works in YSH, not in bash</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+nounset off
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 7: shopt: nounset: invalid shell option name
+</pre></td></tr><tr><td><a name="details-34-dash"></a><b>dash</b></td><td>34 <a href="sh-options.test.html#L638">shopt -s nounset works in YSH, not in bash</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>N-I
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-ash"></a><b>ash</b></td><td>34 <a href="sh-options.test.html#L638">shopt -s nounset works in YSH, not in bash</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=0\nset -o nounset\n'
+Got      'status=127\nnounset off\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+nounset off
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-34-zsh"></a><b>zsh</b></td><td>34 <a href="sh-options.test.html#L638">shopt -s nounset works in YSH, not in bash</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=0\nset -o nounset\n'
+Got      'status=127\nnounset off\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+nounset off
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-34-mksh"></a><b>mksh</b></td><td>34 <a href="sh-options.test.html#L638">shopt -s nounset works in YSH, not in bash</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>N-I
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-ksh"></a><b>ksh</b></td><td>34 <a href="sh-options.test.html#L638">shopt -s nounset works in YSH, not in bash</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=0\nset -o nounset\n'
+Got      'status=127\nbgnice off inherit-xtrace on noclobber off nounset off sh off vi-esccomplete off\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+bgnice off inherit-xtrace on noclobber off nounset off sh off vi-esccomplete off
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[7]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-34-toysh"></a><b>toysh</b></td><td>34 <a href="sh-options.test.html#L638">shopt -s nounset works in YSH, not in bash</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nset -o nounset\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-34-sush"></a><b>sush</b></td><td>34 <a href="sh-options.test.html#L638">shopt -s nounset works in YSH, not in bash</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\nset -o nounset\n'
+Got      'status=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 7: shopt: nounset: not supported yet
+</pre></td></tr><tr><td><a name="details-34-brush"></a><b>brush</b></td><td>34 <a href="sh-options.test.html#L638">shopt -s nounset works in YSH, not in bash</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=0\nset -o nounset\n'
+Got      'status=1\nnounset off\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+nounset off
+</pre><i>stderr:</i> <br/>
+<pre>shopt: nounset: invalid shell option name
+</pre></td></tr><tr><td><a name="details-35-bash"></a><b>bash</b></td><td>35 <a href="sh-options.test.html#L663">Unimplemented options - print, query, set, unset</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>shopt -u xpg_echo
+q=1
+shopt -s xpg_echo
+shopt -u xpg_echo
+p=1
+noflag=1
+set=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-dash"></a><b>dash</b></td><td>35 <a href="sh-options.test.html#L663">Unimplemented options - print, query, set, unset</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-ash"></a><b>ash</b></td><td>35 <a href="sh-options.test.html#L663">Unimplemented options - print, query, set, unset</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'q=2\np=2\nnoflag=2\nset=1\n'
+Got      'q=127\np=127\nnoflag=127\nset=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>q=127
+p=127
+noflag=127
+set=127
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-35-zsh"></a><b>zsh</b></td><td>35 <a href="sh-options.test.html#L663">Unimplemented options - print, query, set, unset</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'q=2\np=2\nnoflag=2\nset=1\n'
+Got      'q=127\np=127\nnoflag=127\nset=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>q=127
+p=127
+noflag=127
+set=127
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-35-mksh"></a><b>mksh</b></td><td>35 <a href="sh-options.test.html#L663">Unimplemented options - print, query, set, unset</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-ksh"></a><b>ksh</b></td><td>35 <a href="sh-options.test.html#L663">Unimplemented options - print, query, set, unset</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'q=2\np=2\nnoflag=2\nset=1\n'
+Got      'q=127\np=127\nnoflag=127\nset=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>q=127
+p=127
+noflag=127
+set=127
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[5]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[6]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[8]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[9]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[11]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[12]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[15]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[18]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-35-toysh"></a><b>toysh</b></td><td>35 <a href="sh-options.test.html#L663">Unimplemented options - print, query, set, unset</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'q=2\np=2\nnoflag=2\nset=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-35-sush"></a><b>sush</b></td><td>35 <a href="sh-options.test.html#L663">Unimplemented options - print, query, set, unset</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'q=2\np=2\nnoflag=2\nset=1\n'
+Got      'xpg_echo        off\nq=0\nxpg_echo        on\nxpg_echo        off\np=0\nnoflag=0\nset=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>xpg_echo        off
+q=0
+xpg_echo        on
+xpg_echo        off
+p=0
+noflag=0
+set=1
+</pre><i>stderr:</i> <br/>
+<pre>sush: shopt: errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-35-brush"></a><b>brush</b></td><td>35 <a href="sh-options.test.html#L663">Unimplemented options - print, query, set, unset</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'q=2\np=2\nnoflag=2\nset=1\n'
+Got      'shopt -u xpg_echo\nq=1\nshopt -s xpg_echo\nshopt -u xpg_echo\np=1\nnoflag=1\nset=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>shopt -u xpg_echo
+q=1
+shopt -s xpg_echo
+shopt -u xpg_echo
+p=1
+noflag=1
+set=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-dash"></a><b>dash</b></td><td>36 <a href="sh-options.test.html#L704">Unimplemented options - OSH shopt -s ignore_shopt_not_impl</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-ash"></a><b>ash</b></td><td>36 <a href="sh-options.test.html#L704">Unimplemented options - OSH shopt -s ignore_shopt_not_impl</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'shopt -u xpg_echo\nq=1\nshopt -s xpg_echo\nshopt -u xpg_echo\np=1\nnoflag=1\nset=1\n'
+Got      'q=127\np=127\nnoflag=127\nset=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>q=127
+p=127
+noflag=127
+set=127
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-36-zsh"></a><b>zsh</b></td><td>36 <a href="sh-options.test.html#L704">Unimplemented options - OSH shopt -s ignore_shopt_not_impl</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'shopt -u xpg_echo\nq=1\nshopt -s xpg_echo\nshopt -u xpg_echo\np=1\nnoflag=1\nset=1\n'
+Got      'q=127\np=127\nnoflag=127\nset=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>q=127
+p=127
+noflag=127
+set=127
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-36-mksh"></a><b>mksh</b></td><td>36 <a href="sh-options.test.html#L704">Unimplemented options - OSH shopt -s ignore_shopt_not_impl</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-ksh"></a><b>ksh</b></td><td>36 <a href="sh-options.test.html#L704">Unimplemented options - OSH shopt -s ignore_shopt_not_impl</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'shopt -u xpg_echo\nq=1\nshopt -s xpg_echo\nshopt -u xpg_echo\np=1\nnoflag=1\nset=1\n'
+Got      'q=127\np=127\nnoflag=127\nset=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>q=127
+p=127
+noflag=127
+set=127
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[7]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[8]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[10]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[11]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[13]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[14]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[17]: shopt: inaccessible or not found
+E: ksh: &lt;stdin&gt;[20]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-36-toysh"></a><b>toysh</b></td><td>36 <a href="sh-options.test.html#L704">Unimplemented options - OSH shopt -s ignore_shopt_not_impl</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'shopt -u xpg_echo\nq=1\nshopt -s xpg_echo\nshopt -u xpg_echo\np=1\nnoflag=1\nset=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-36-sush"></a><b>sush</b></td><td>36 <a href="sh-options.test.html#L704">Unimplemented options - OSH shopt -s ignore_shopt_not_impl</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'shopt -u xpg_echo\nq=1\nshopt -s xpg_echo\nshopt -u xpg_echo\np=1\nnoflag=1\nset=1\n'
+Got      'xpg_echo        off\nq=0\nxpg_echo        on\nxpg_echo        off\np=0\nnoflag=0\nset=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>xpg_echo        off
+q=0
+xpg_echo        on
+xpg_echo        off
+p=0
+noflag=0
+set=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 3: shopt: ignore_shopt_not_impl: not supported yet
+sush: shopt: errexit: invalid shell option name
+</pre></td></tr><tr><td><a name="details-37-dash"></a><b>dash</b></td><td>37 <a href="sh-options.test.html#L740">shopt -p exit code (regression)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-37-ash"></a><b>ash</b></td><td>37 <a href="sh-options.test.html#L740">shopt -p exit code (regression)</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=0\n'
+Got      'status=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-37-zsh"></a><b>zsh</b></td><td>37 <a href="sh-options.test.html#L740">shopt -p exit code (regression)</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=0\n'
+Got      'status=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-37-mksh"></a><b>mksh</b></td><td>37 <a href="sh-options.test.html#L740">shopt -p exit code (regression)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-37-ksh"></a><b>ksh</b></td><td>37 <a href="sh-options.test.html#L740">shopt -p exit code (regression)</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=0\n'
+Got      'status=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-37-toysh"></a><b>toysh</b></td><td>37 <a href="sh-options.test.html#L740">shopt -p exit code (regression)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-38-bash"></a><b>bash</b></td><td>38 <a href="sh-options.test.html#L753">no-ops not shown by shopt -p</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>shopt -u xpg_echo
+--
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-toysh"></a><b>toysh</b></td><td>38 <a href="sh-options.test.html#L753">no-ops not shown by shopt -p</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '--\n'
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>sh: shopt: No such file or directory
+</pre></td></tr><tr><td><a name="details-38-sush"></a><b>sush</b></td><td>38 <a href="sh-options.test.html#L753">no-ops not shown by shopt -p</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '--\n'
+Got      'xpg_echo        off\n--\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>xpg_echo        off
+--
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-brush"></a><b>brush</b></td><td>38 <a href="sh-options.test.html#L753">no-ops not shown by shopt -p</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '--\n'
+Got      'shopt -u xpg_echo\n--\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>shopt -u xpg_echo
+--
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

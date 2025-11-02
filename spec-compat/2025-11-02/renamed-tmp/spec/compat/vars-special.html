@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>vars-special: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for vars-special.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>38</td><td>17</td><td>21</td><td>28</td><td>21</td><td>21</td><td>20</td><td>25</td><td>25</td><td>38</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>0</td><td>0</td><td>0</td><td>4</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td></td></tr>
+<tr><td class="n-i">N-I</td> <td>0</td><td>22</td><td>0</td><td>5</td><td>14</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>0</td><td>2</td><td>0</td><td>5</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>2</td><td>0</td><td>20</td><td>0</td><td>0</td><td>20</td><td>22</td><td>17</td><td>17</td><td>3</td><td></td></tr>
+<tr><td class="timeout">TIME</td> <td>2</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td>total</td><td>42</td><td>42</td><td>42</td><td>42</td><td>42</td><td>42</td><td>42</td><td>42</td><td>42</td><td>42</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L17">$PWD is set</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L25">$PWD is not only set, but exported</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-mksh">details</a></td><td class="details-row"><a href="#details-1-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L31">$PATH is set if unset at startup</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"><a href="#details-2-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="bug">BUG</td>	<td class="timeout">TIME</td>	<td class="timeout">TIME</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L73">$HOME is NOT set</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-3-bash">details</a></td><td class="details-row"><a href="#details-3-dash">details</a></td><td class="details-row"><a href="#details-3-ash">details</a></td><td class="details-row"><a href="#details-3-zsh">details</a></td><td class="details-row"><a href="#details-3-mksh">details</a></td><td class="details-row"><a href="#details-3-ksh">details</a></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"><a href="#details-3-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="timeout">TIME</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L96">Vars set interactively only: $HISTFILE</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-4-bash">details</a></td><td class="details-row"><a href="#details-4-dash">details</a></td><td class="details-row"><a href="#details-4-ash">details</a></td><td class="details-row"><a href="#details-4-zsh">details</a></td><td class="details-row"><a href="#details-4-mksh">details</a></td><td class="details-row"><a href="#details-4-ksh">details</a></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"><a href="#details-4-sush">details</a></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L110">Some vars are set, even without startup file, or env: PATH, PWD</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-dash">details</a></td><td class="details-row"><a href="#details-5-ash">details</a></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="vars-special.test.html#L180">UID EUID PPID can't be changed</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-dash">details</a></td><td class="details-row"><a href="#details-6-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-6-mksh">details</a></td><td class="details-row"><a href="#details-6-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-6-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L209">HOSTNAME OSTYPE can be changed</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"><a href="#details-7-sush">details</a></td><td class="details-row"><a href="#details-7-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L234">$1 .. $9 are scoped, while $0 is not</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L257">$?</a></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L267">$#</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L273">$$ looks like a PID</a></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L280">$$ doesn't change with subshell or command sub</a></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L305">$BASHPID DOES change with subshell and command sub</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L335">Background PID $! looks like a PID</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-14-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L343">$PPID</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L349">$PIPESTATUS</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-dash">details</a></td><td class="details-row"><a href="#details-16-ash">details</a></td><td class="details-row"><a href="#details-16-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="vars-special.test.html#L362">$RANDOM</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L368">$UID and $EUID</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-dash">details</a></td><td class="details-row"><a href="#details-18-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-18-mksh">details</a></td><td class="details-row"><a href="#details-18-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L378">$OSTYPE is non-empty</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-dash">details</a></td><td class="details-row"><a href="#details-19-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-19-mksh">details</a></td><td class="details-row"><a href="#details-19-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L388">$HOSTNAME</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-20-zsh">details</a></td><td class="details-row"><a href="#details-20-mksh">details</a></td><td class="details-row"><a href="#details-20-ksh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-20-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L398">$LINENO is the current line, not line of function call</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-21-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L428">$LINENO in "bare" redirect arg (bug regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L441">$LINENO in redirect arg (bug regression)</a></td></tr>
+<tr><td> 24</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L452">$LINENO in [[</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-24-mksh">details</a></td><td class="details-row"><a href="#details-24-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 25</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L464">$LINENO in ((</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-dash">details</a></td><td class="details-row"><a href="#details-25-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-25-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 26</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L477">$LINENO in for loop</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-26-mksh">details</a></td><td class="details-row"><a href="#details-26-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 27</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L495">$LINENO in other for loops</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-27-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-27-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 28</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="vars-special.test.html#L506">$LINENO in for (( loop</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-28-dash">details</a></td><td class="details-row"><a href="#details-28-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-28-mksh">details</a></td><td class="details-row"><a href="#details-28-ksh">details</a></td><td class="details-row"><a href="#details-28-toysh">details</a></td><td class="details-row"><a href="#details-28-sush">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-28-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 29</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L523">$LINENO for assignment</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-29-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 30</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L533">$LINENO in case</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-30-mksh">details</a></td><td class="details-row"><a href="#details-30-ksh">details</a></td><td class="details-row"><a href="#details-30-toysh">details</a></td><td class="details-row"><a href="#details-30-sush">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 31</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L545">$_ with simple command and evaluation</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-dash">details</a></td><td class="details-row"><a href="#details-31-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-31-mksh">details</a></td><td class="details-row"><a href="#details-31-ksh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-31-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 32</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L559">$_ and ${_}</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-32-dash">details</a></td><td class="details-row"><a href="#details-32-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-32-mksh">details</a></td><td class="details-row"><a href="#details-32-ksh">details</a></td><td class="details-row"><a href="#details-32-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-32-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 33</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L576">$_ with word splitting</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-33-dash">details</a></td><td class="details-row"><a href="#details-33-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-33-mksh">details</a></td><td class="details-row"><a href="#details-33-ksh">details</a></td><td class="details-row"><a href="#details-33-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-33-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 34</td><td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L590">$_ with pipeline and subshell</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-34-bash">details</a></td><td class="details-row"><a href="#details-34-dash">details</a></td><td class="details-row"><a href="#details-34-ash">details</a></td><td class="details-row"><a href="#details-34-zsh">details</a></td><td class="details-row"><a href="#details-34-mksh">details</a></td><td class="details-row"><a href="#details-34-ksh">details</a></td><td class="details-row"><a href="#details-34-toysh">details</a></td><td class="details-row"><a href="#details-34-sush">details</a></td><td class="details-row"><a href="#details-34-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 35</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L620">$_ with &amp;&amp; and ||</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-35-dash">details</a></td><td class="details-row"><a href="#details-35-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-35-mksh">details</a></td><td class="details-row"><a href="#details-35-ksh">details</a></td><td class="details-row"><a href="#details-35-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-35-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 36</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L639">$_ is not reset with (( and [[</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-36-dash">details</a></td><td class="details-row"><a href="#details-36-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-36-mksh">details</a></td><td class="details-row"><a href="#details-36-ksh">details</a></td><td class="details-row"><a href="#details-36-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-36-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 37</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="case-desc"><a href="vars-special.test.html#L662">$_ with assignments, arrays, etc.</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-37-dash">details</a></td><td class="details-row"><a href="#details-37-ash">details</a></td><td class="details-row"><a href="#details-37-zsh">details</a></td><td class="details-row"><a href="#details-37-mksh">details</a></td><td class="details-row"><a href="#details-37-ksh">details</a></td><td class="details-row"><a href="#details-37-toysh">details</a></td><td class="details-row"><a href="#details-37-sush">details</a></td><td class="details-row"><a href="#details-37-brush">details</a></td><td class="details-row"><a href="#details-37-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 38</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L715">$_ with loop</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-38-dash">details</a></td><td class="details-row"><a href="#details-38-ash">details</a></td><td class="details-row"><a href="#details-38-zsh">details</a></td><td class="details-row"><a href="#details-38-mksh">details</a></td><td class="details-row"><a href="#details-38-ksh">details</a></td><td class="details-row"><a href="#details-38-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-38-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 39</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L745">$_ is not undefined on first use</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-39-dash">details</a></td><td class="details-row"><a href="#details-39-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-39-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 40</td><td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="n-i">N-I</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L761">BASH_VERSION / OILS_VERSION</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-40-bash">details</a></td><td class="details-row"><a href="#details-40-dash">details</a></td><td class="details-row"><a href="#details-40-ash">details</a></td><td class="details-row"><a href="#details-40-zsh">details</a></td><td class="details-row"><a href="#details-40-mksh">details</a></td><td class="details-row"><a href="#details-40-ksh">details</a></td><td class="details-row"><a href="#details-40-toysh">details</a></td><td class="details-row"><a href="#details-40-sush">details</a></td><td class="details-row"><a href="#details-40-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 41</td><td class="pass">pass</td>	<td class="n-i">N-I</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="vars-special.test.html#L787">$SECONDS</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-41-dash">details</a></td><td class="details-row"><a href="#details-41-ash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>254 passed, 7 OK, 41 not implemented, 11 BUG, 101 failed, 6 timeouts, 0 cases skipped
+3 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-sush"></a><b>sush</b></td><td>0 <a href="vars-special.test.html#L17">$PWD is set</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\n'
+Got      'status=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-mksh"></a><b>mksh</b></td><td>1 <a href="vars-special.test.html#L25">$PWD is not only set, but exported</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-ksh"></a><b>ksh</b></td><td>1 <a href="vars-special.test.html#L25">$PWD is not only set, but exported</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=0\n'
+Got      'status=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="vars-special.test.html#L25">$PWD is not only set, but exported</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\n'
+Got      'status=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="vars-special.test.html#L31">$PATH is set if unset at startup</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'yes\nyes\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-2-sush"></a><b>sush</b></td><td>2 <a href="vars-special.test.html#L31">$PATH is set if unset at startup</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'yes\nyes\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-zsh"></a><b>zsh</b></td><td>3 <a href="vars-special.test.html#L73">$HOME is NOT set</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>zsh sets HOME
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="vars-special.test.html#L73">$HOME is NOT set</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\nstatus=1\nstatus=1\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-3-sush"></a><b>sush</b></td><td>3 <a href="vars-special.test.html#L73">$HOME is NOT set</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\nstatus=1\nstatus=1\n'
+Got      'status=1\nstatus=1\nstatus=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=1
+status=1
+</pre><i>stderr:</i> <br/>
+<pre>: line : set: -i: invalid option
+</pre></td></tr><tr><td><a name="details-4-dash"></a><b>dash</b></td><td>4 <a href="vars-special.test.html#L96">Vars set interactively only: $HISTFILE</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-ash"></a><b>ash</b></td><td>4 <a href="vars-special.test.html#L96">Vars set interactively only: $HISTFILE</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'histfile=\nhistfile=yes\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-zsh"></a><b>zsh</b></td><td>4 <a href="vars-special.test.html#L96">Vars set interactively only: $HISTFILE</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-mksh"></a><b>mksh</b></td><td>4 <a href="vars-special.test.html#L96">Vars set interactively only: $HISTFILE</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-ksh"></a><b>ksh</b></td><td>4 <a href="vars-special.test.html#L96">Vars set interactively only: $HISTFILE</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'histfile=\nhistfile=yes\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>E: ksh: --: unknown option
+E: ksh: --: unknown option
+</pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="vars-special.test.html#L96">Vars set interactively only: $HISTFILE</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'histfile=\nhistfile=yes\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-4-sush"></a><b>sush</b></td><td>4 <a href="vars-special.test.html#L96">Vars set interactively only: $HISTFILE</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'histfile=\nhistfile=yes\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>: line : set: --norc: invalid option
+: line : set: --norc: invalid option
+</pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="vars-special.test.html#L96">Vars set interactively only: $HISTFILE</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'histfile=\nhistfile=yes\n'
+Got      'histfile=yes\nhistfile=yes\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>histfile=yes
+histfile=yes
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-dash"></a><b>dash</b></td><td>5 <a href="vars-special.test.html#L110">Some vars are set, even without startup file, or env: PATH, PWD</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-ash"></a><b>ash</b></td><td>5 <a href="vars-special.test.html#L110">Some vars are set, even without startup file, or env: PATH, PWD</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'path pwd ps4 0\nshellopts 0\nhome ps1 1\nifs 0\n'
+Got      'path pwd ps4 127\nshellopts 127\nhome ps1 127\nifs 127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>path pwd ps4 127
+shellopts 127
+home ps1 127
+ifs 127
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../oils.DEPS/bin/ash: typeset: not found
+/home/andy/git/oils-for-unix/oils/../oils.DEPS/bin/ash: typeset: not found
+/home/andy/git/oils-for-unix/oils/../oils.DEPS/bin/ash: typeset: not found
+/home/andy/git/oils-for-unix/oils/../oils.DEPS/bin/ash: typeset: not found
+</pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="vars-special.test.html#L110">Some vars are set, even without startup file, or env: PATH, PWD</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>path pwd ps4 0
+shellopts 1
+home ps1 0
+ifs 0
+</pre><i>stderr:</i> <br/>
+<pre>typeset PATH=/bin:/usr/bin:/usr/ucb:/usr/local/bin
+typeset PWD=/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/vars-special.test.sh/05-zsh
+typeset PS4='+%N:%i&gt; '
+zsh:typeset:1: no such variable: SHELLOPTS
+typeset HOME=/home/andy
+typeset PS1=''
+typeset IFS=' 	
+ '
+</pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="vars-special.test.html#L110">Some vars are set, even without startup file, or env: PATH, PWD</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>path pwd ps4 0
+shellopts 0
+home ps1 0
+ifs 0
+</pre><i>stderr:</i> <br/>
+<pre>typeset -x PATH=/usr/bin:/bin
+typeset PWD=/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/vars-special.test.sh/05-mksh
+typeset PS4='+ '
+typeset -x HOME=
+typeset PS1='$ '
+typeset IFS=$' \t\n'
+</pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="vars-special.test.html#L110">Some vars are set, even without startup file, or env: PATH, PWD</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'path pwd ps4 0\nshellopts 0\nhome ps1 1\nifs 0\n'
+Got      'path pwd ps4 0\nshellopts 0\nhome ps1 0\nifs 0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>path pwd ps4 0
+shellopts 0
+home ps1 0
+ifs 0
+</pre><i>stderr:</i> <br/>
+<pre>typeset -x PATH=/usr/bin:/bin
+typeset PWD=/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/vars-special.test.sh/05-ksh
+typeset PS4='+ '
+typeset -x HOME
+typeset PS1='$ '
+typeset IFS=$' \t\n'
+</pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="vars-special.test.html#L110">Some vars are set, even without startup file, or env: PATH, PWD</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'path pwd ps4 0\nshellopts 0\nhome ps1 1\nifs 0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="vars-special.test.html#L110">Some vars are set, even without startup file, or env: PATH, PWD</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'path pwd ps4 0\nshellopts 0\nhome ps1 1\nifs 0\n'
+Got      'path pwd ps4 1\nshellopts 1\nhome ps1 1\nifs 0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>path pwd ps4 1
+shellopts 1
+home ps1 1
+ifs 0
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: PATH: not found
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: SHELLOPTS: not found
+declare -- HOME="/"
+/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: PS1: not found
+declare -- IFS="$' \t\n'"
+</pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="vars-special.test.html#L110">Some vars are set, even without startup file, or env: PATH, PWD</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'path pwd ps4 0\nshellopts 0\nhome ps1 1\nifs 0\n'
+Got      'declare -- PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"\ndeclare -x PWD="/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/vars-special.test.sh/05-brush"\ndeclare -- PS4="+ "\npath pwd ps4 0\ndeclare -r SHELLOPTS="braceexpand:hashall:interactive-comments"\nshellopts 0\nhome ps1 1\ndeclare -- IFS=$\' \\t\\n\'\nifs 0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>declare -- PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+declare -x PWD="/home/andy/git/oils-for-unix/oils/_tmp/spec-tmp/vars-special.test.sh/05-brush"
+declare -- PS4="+ "
+path pwd ps4 0
+declare -r SHELLOPTS="braceexpand:hashall:interactive-comments"
+shellopts 0
+home ps1 1
+declare -- IFS=$' \t\n'
+ifs 0
+</pre><i>stderr:</i> <br/>
+<pre>declare: HOME: not found
+declare: PS1: not found
+</pre></td></tr><tr><td><a name="details-6-dash"></a><b>dash</b></td><td>6 <a href="vars-special.test.html#L180">UID EUID PPID can't be changed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>uid=xx
+euid=xx
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-ash"></a><b>ash</b></td><td>6 <a href="vars-special.test.html#L180">UID EUID PPID can't be changed</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=1\n'
+Got      'uid=xx\neuid=xx\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>uid=xx
+euid=xx
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-mksh"></a><b>mksh</b></td><td>6 <a href="vars-special.test.html#L180">UID EUID PPID can't be changed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>uid=xx
+euid=xx
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-ksh"></a><b>ksh</b></td><td>6 <a href="vars-special.test.html#L180">UID EUID PPID can't be changed</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=1\n'
+Got      'uid=xx\neuid=xx\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>uid=xx
+euid=xx
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="vars-special.test.html#L180">UID EUID PPID can't be changed</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=1\n'
+Got      'euid=xx\nppid=xx\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>euid=xx
+ppid=xx
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-osh"></a><b>osh</b></td><td>6 <a href="vars-special.test.html#L180">UID EUID PPID can't be changed</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'status=1\n'
+Got      'uid=xx\neuid=xx\nppid=xx\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>uid=xx
+euid=xx
+ppid=xx
+status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-zsh"></a><b>zsh</b></td><td>7 <a href="vars-special.test.html#L209">HOSTNAME OSTYPE can be changed</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="vars-special.test.html#L209">HOSTNAME OSTYPE can be changed</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'hostname=x\nostype=x\n\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-7-sush"></a><b>sush</b></td><td>7 <a href="vars-special.test.html#L209">HOSTNAME OSTYPE can be changed</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'hostname=x\nostype=x\n\n'
+Got      'hostname=x\nostype=linux\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hostname=x
+ostype=linux
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-brush"></a><b>brush</b></td><td>7 <a href="vars-special.test.html#L209">HOSTNAME OSTYPE can be changed</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'hostname=x\nostype=x\n\n'
+Got      'hostname=hoover\nostype=linux-gnu\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hostname=hoover
+ostype=linux-gnu
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="vars-special.test.html#L234">$1 .. $9 are scoped, while $0 is not</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a b
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="vars-special.test.html#L234">$1 .. $9 are scoped, while $0 is not</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'sh\na b\n'
+Got      'a b\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a b
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="vars-special.test.html#L267">$#</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '4\n'
+Got      '0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+</pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="vars-special.test.html#L305">$BASHPID DOES change with subshell and command sub</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>empty BASHPID in parent
+</pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="vars-special.test.html#L305">$BASHPID DOES change with subshell and command sub</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'subshell OK\ncommand sub OK\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 3
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>empty BASHPID in parent
+</pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="vars-special.test.html#L305">$BASHPID DOES change with subshell and command sub</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>empty BASHPID in parent
+</pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="vars-special.test.html#L305">$BASHPID DOES change with subshell and command sub</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'subshell OK\ncommand sub OK\n'
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>should not be equal: 797360 = 797360
+should not be equal: 797360 = 797360
+</pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="vars-special.test.html#L335">Background PID $! looks like a PID</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0\n'
+Got      'status=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-brush"></a><b>brush</b></td><td>14 <a href="vars-special.test.html#L335">Background PID $! looks like a PID</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=0\n'
+Got      'status=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-sush"></a><b>sush</b></td><td>15 <a href="vars-special.test.html#L343">$PPID</a><br/><br/>
+<span class="assertion">
+[sush status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-dash"></a><b>dash</b></td><td>16 <a href="vars-special.test.html#L349">$PIPESTATUS</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 2: Bad substitution
+</pre></td></tr><tr><td><a name="details-16-ash"></a><b>ash</b></td><td>16 <a href="vars-special.test.html#L349">$PIPESTATUS</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected "['0', '33', '0']\n"
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad substitution
+</pre></td></tr><tr><td><a name="details-16-zsh"></a><b>zsh</b></td><td>16 <a href="vars-special.test.html#L349">$PIPESTATUS</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="vars-special.test.html#L349">$PIPESTATUS</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected "['0', '33', '0']\n"
+Got      "['']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>['']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-dash"></a><b>dash</b></td><td>17 <a href="vars-special.test.html#L362">$RANDOM</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-osh"></a><b>osh</b></td><td>17 <a href="vars-special.test.html#L362">$RANDOM</a><br/><br/>
+<span class="assertion">
+[osh status]
+Expected 0
+Got      99
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>51
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-dash"></a><b>dash</b></td><td>18 <a href="vars-special.test.html#L368">$UID and $EUID</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-ash"></a><b>ash</b></td><td>18 <a href="vars-special.test.html#L368">$UID and $EUID</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-mksh"></a><b>mksh</b></td><td>18 <a href="vars-special.test.html#L368">$UID and $EUID</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-ksh"></a><b>ksh</b></td><td>18 <a href="vars-special.test.html#L368">$UID and $EUID</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="vars-special.test.html#L368">$UID and $EUID</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\n'
+Got      'status=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 1: set: errexit: invalid option name
+</pre></td></tr><tr><td><a name="details-19-dash"></a><b>dash</b></td><td>19 <a href="vars-special.test.html#L378">$OSTYPE is non-empty</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-ash"></a><b>ash</b></td><td>19 <a href="vars-special.test.html#L378">$OSTYPE is non-empty</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=0\n'
+Got      'status=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-mksh"></a><b>mksh</b></td><td>19 <a href="vars-special.test.html#L378">$OSTYPE is non-empty</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-ksh"></a><b>ksh</b></td><td>19 <a href="vars-special.test.html#L378">$OSTYPE is non-empty</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=0\n'
+Got      'status=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-dash"></a><b>dash</b></td><td>20 <a href="vars-special.test.html#L388">$HOSTNAME</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-zsh"></a><b>zsh</b></td><td>20 <a href="vars-special.test.html#L388">$HOSTNAME</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-mksh"></a><b>mksh</b></td><td>20 <a href="vars-special.test.html#L388">$HOSTNAME</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-ksh"></a><b>ksh</b></td><td>20 <a href="vars-special.test.html#L388">$HOSTNAME</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=0\n'
+Got      'status=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-sush"></a><b>sush</b></td><td>20 <a href="vars-special.test.html#L388">$HOSTNAME</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0\n'
+Got      'status=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-dash"></a><b>dash</b></td><td>21 <a href="vars-special.test.html#L398">$LINENO is the current line, not line of function call</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+['2']
+['2']
+['4']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-zsh"></a><b>zsh</b></td><td>21 <a href="vars-special.test.html#L398">$LINENO is the current line, not line of function call</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>1
+['1']
+['1']
+['3']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-21-brush"></a><b>brush</b></td><td>21 <a href="vars-special.test.html#L398">$LINENO is the current line, not line of function call</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected "1\n['6']\n['3']\n['8']\n"
+Got      "1\n['4']\n['4']\n['4']\n"
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>1
+['4']
+['4']
+['4']
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-zsh"></a><b>zsh</b></td><td>22 <a href="vars-special.test.html#L428">$LINENO in "bare" redirect arg (bug regression)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="vars-special.test.html#L428">$LINENO in "bare" redirect arg (bug regression)</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'written\n5\n'
+Got      '5\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>5
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-dash"></a><b>dash</b></td><td>24 <a href="vars-special.test.html#L452">$LINENO in [[</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: [[: not found
+</pre></td></tr><tr><td><a name="details-24-mksh"></a><b>mksh</b></td><td>24 <a href="vars-special.test.html#L452">$LINENO in [[</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-24-ksh"></a><b>ksh</b></td><td>24 <a href="vars-special.test.html#L452">$LINENO in [[</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'one\nOK\n'
+Got      'one\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-25-dash"></a><b>dash</b></td><td>25 <a href="vars-special.test.html#L464">$LINENO in ((</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one
+
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: x: not found
+</pre></td></tr><tr><td><a name="details-25-ash"></a><b>ash</b></td><td>25 <a href="vars-special.test.html#L464">$LINENO in ((</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'one\n2\n'
+Got      'one\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+
+</pre><i>stderr:</i> <br/>
+<pre>ash: x: not found
+</pre></td></tr><tr><td><a name="details-25-toysh"></a><b>toysh</b></td><td>25 <a href="vars-special.test.html#L464">$LINENO in ((</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'one\n2\n'
+Got      'one\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -11
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-mksh"></a><b>mksh</b></td><td>26 <a href="vars-special.test.html#L477">$LINENO in for loop</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one
+1
+zzz
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-26-ksh"></a><b>ksh</b></td><td>26 <a href="vars-special.test.html#L477">$LINENO in for loop</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'one\n2\nzzz\n'
+Got      'one\n1\nzzz\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+1
+zzz
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-27-toysh"></a><b>toysh</b></td><td>27 <a href="vars-special.test.html#L495">$LINENO in other for loops</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '3 a\n3 b\n3 c\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>set: bad --
+main: line 2: sh: syntax error: ;
+</pre></td></tr><tr><td><a name="details-27-brush"></a><b>brush</b></td><td>27 <a href="vars-special.test.html#L495">$LINENO in other for loops</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '3 a\n3 b\n3 c\n'
+Got      '2 a\n2 b\n2 c\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>2 a
+2 b
+2 c
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-dash"></a><b>dash</b></td><td>28 <a href="vars-special.test.html#L506">$LINENO in for (( loop</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one
+</pre><i>stderr:</i> <br/>
+<pre>dash: 2: Syntax error: Bad for loop variable
+</pre></td></tr><tr><td><a name="details-28-ash"></a><b>ash</b></td><td>28 <a href="vars-special.test.html#L506">$LINENO in for (( loop</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'one\n0\n1\n'
+Got      'one\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+</pre><i>stderr:</i> <br/>
+<pre>ash: syntax error: bad for loop variable
+</pre></td></tr><tr><td><a name="details-28-mksh"></a><b>mksh</b></td><td>28 <a href="vars-special.test.html#L506">$LINENO in for (( loop</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>one
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: syntax error: '((' unexpected
+</pre></td></tr><tr><td><a name="details-28-ksh"></a><b>ksh</b></td><td>28 <a href="vars-special.test.html#L506">$LINENO in for (( loop</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'one\n0\n1\n'
+Got      'one\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: syntax error: unexpected '(('
+</pre></td></tr><tr><td><a name="details-28-toysh"></a><b>toysh</b></td><td>28 <a href="vars-special.test.html#L506">$LINENO in for (( loop</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'one\n0\n1\n'
+Got      'one\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+</pre><i>stderr:</i> <br/>
+<pre>main: line 2: sh: syntax error: ;
+</pre></td></tr><tr><td><a name="details-28-sush"></a><b>sush</b></td><td>28 <a href="vars-special.test.html#L506">$LINENO in for (( loop</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'one\n0\n1\n'
+Got      'one\n0\n1\n2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+0
+1
+2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-28-osh"></a><b>osh</b></td><td>28 <a href="vars-special.test.html#L506">$LINENO in for (( loop</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'one\n0\n1\n'
+Got      'one\n0\n1\n2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>one
+0
+1
+2
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-29-toysh"></a><b>toysh</b></td><td>29 <a href="vars-special.test.html#L523">$LINENO for assignment</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1 1\n2 2\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -11
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-mksh"></a><b>mksh</b></td><td>30 <a href="vars-special.test.html#L533">$LINENO in case</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>line=3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-ksh"></a><b>ksh</b></td><td>30 <a href="vars-special.test.html#L533">$LINENO in case</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'got line 1\n'
+Got      'line=3\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line=3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-30-toysh"></a><b>toysh</b></td><td>30 <a href="vars-special.test.html#L533">$LINENO in case</a><br/><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>got line 1
+</pre><i>stderr:</i> <br/>
+<pre>free(): invalid pointer
+</pre></td></tr><tr><td><a name="details-30-sush"></a><b>sush</b></td><td>30 <a href="vars-special.test.html#L533">$LINENO in case</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'got line 1\n'
+Got      'line=3\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>line=3
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-dash"></a><b>dash</b></td><td>31 <a href="vars-special.test.html#L545">$_ with simple command and evaluation</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hi world
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-ash"></a><b>ash</b></td><td>31 <a href="vars-special.test.html#L545">$_ with simple command and evaluation</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'hi world\nhi world\n'
+Got      'hi world\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi world
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-mksh"></a><b>mksh</b></td><td>31 <a href="vars-special.test.html#L545">$_ with simple command and evaluation</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>hi world
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-ksh"></a><b>ksh</b></td><td>31 <a href="vars-special.test.html#L545">$_ with simple command and evaluation</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'hi world\nhi world\n'
+Got      'hi world\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi world
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-31-brush"></a><b>brush</b></td><td>31 <a href="vars-special.test.html#L545">$_ with simple command and evaluation</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'hi world\nhi world\n'
+Got      'hi world\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi world
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-dash"></a><b>dash</b></td><td>32 <a href="vars-special.test.html#L559">$_ and ${_}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-ash"></a><b>ash</b></td><td>32 <a href="vars-special.test.html#L559">$_ and ${_}</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected '42 value 42var\nfoobar\n'
+Got      'value var\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>value var
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-mksh"></a><b>mksh</b></td><td>32 <a href="vars-special.test.html#L559">$_ and ${_}</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-ksh"></a><b>ksh</b></td><td>32 <a href="vars-special.test.html#L559">$_ and ${_}</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '42 value 42var\nfoobar\n'
+Got      'value var\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>value var
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-32-toysh"></a><b>toysh</b></td><td>32 <a href="vars-special.test.html#L559">$_ and ${_}</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '42 value 42var\nfoobar\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-32-brush"></a><b>brush</b></td><td>32 <a href="vars-special.test.html#L559">$_ and ${_}</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '42 value 42var\nfoobar\n'
+Got      'value var\n\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>value var
+
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-dash"></a><b>dash</b></td><td>33 <a href="vars-special.test.html#L576">$_ with word splitting</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-ash"></a><b>ash</b></td><td>33 <a href="vars-special.test.html#L576">$_ with word splitting</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'spaces\n'
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>ash: setopt: not found
+</pre></td></tr><tr><td><a name="details-33-mksh"></a><b>mksh</b></td><td>33 <a href="vars-special.test.html#L576">$_ with word splitting</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-33-ksh"></a><b>ksh</b></td><td>33 <a href="vars-special.test.html#L576">$_ with word splitting</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'spaces\n'
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: setopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-33-toysh"></a><b>toysh</b></td><td>33 <a href="vars-special.test.html#L576">$_ with word splitting</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'spaces\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-33-brush"></a><b>brush</b></td><td>33 <a href="vars-special.test.html#L576">$_ with word splitting</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'spaces\n'
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m command not found: setopt
+</pre></td></tr><tr><td><a name="details-34-bash"></a><b>bash</b></td><td>34 <a href="vars-special.test.html#L590">$_ with pipeline and subshell</a><br/><br/>
+<span class="assertion">
+[bash stdout]
+Expected 'last=\npipeline=last=\nsubshell=pipeline=last=\ndone=pipeline=last=\n'
+Got      'last=lastpipe\npipeline=last=lastpipe\nsubshell=pipeline=last=lastpipe\ndone=pipeline=last=lastpipe\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>last=lastpipe
+pipeline=last=lastpipe
+subshell=pipeline=last=lastpipe
+done=pipeline=last=lastpipe
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-dash"></a><b>dash</b></td><td>34 <a href="vars-special.test.html#L590">$_ with pipeline and subshell</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-ash"></a><b>ash</b></td><td>34 <a href="vars-special.test.html#L590">$_ with pipeline and subshell</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'last=\npipeline=last=\nsubshell=pipeline=last=\ndone=pipeline=last=\n'
+Got      'last=\npipeline=\nsubshell=\ndone=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>last=
+pipeline=
+subshell=
+done=
+</pre><i>stderr:</i> <br/>
+<pre>ash: shopt: not found
+</pre></td></tr><tr><td><a name="details-34-zsh"></a><b>zsh</b></td><td>34 <a href="vars-special.test.html#L590">$_ with pipeline and subshell</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>last=3
+pipeline=last=3
+subshell=
+done=
+</pre><i>stderr:</i> <br/>
+<pre>zsh: command not found: shopt
+</pre></td></tr><tr><td><a name="details-34-mksh"></a><b>mksh</b></td><td>34 <a href="vars-special.test.html#L590">$_ with pipeline and subshell</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-34-ksh"></a><b>ksh</b></td><td>34 <a href="vars-special.test.html#L590">$_ with pipeline and subshell</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'last=\npipeline=last=\nsubshell=pipeline=last=\ndone=pipeline=last=\n'
+Got      'last=\npipeline=\nsubshell=\ndone=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>last=
+pipeline=
+subshell=
+done=
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[3]: shopt: inaccessible or not found
+</pre></td></tr><tr><td><a name="details-34-toysh"></a><b>toysh</b></td><td>34 <a href="vars-special.test.html#L590">$_ with pipeline and subshell</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'last=\npipeline=last=\nsubshell=pipeline=last=\ndone=pipeline=last=\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-34-sush"></a><b>sush</b></td><td>34 <a href="vars-special.test.html#L590">$_ with pipeline and subshell</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'last=\npipeline=last=\nsubshell=pipeline=last=\ndone=pipeline=last=\n'
+Got      'last=3\npipeline=last=3\nsubshell=pipeline=last=3\ndone=pipeline=last=3\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>last=3
+pipeline=last=3
+subshell=pipeline=last=3
+done=pipeline=last=3
+</pre><i>stderr:</i> <br/>
+<pre>Pid: Pid(798791), Signal: SIGPIPE
+</pre></td></tr><tr><td><a name="details-34-brush"></a><b>brush</b></td><td>34 <a href="vars-special.test.html#L590">$_ with pipeline and subshell</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'last=\npipeline=last=\nsubshell=pipeline=last=\ndone=pipeline=last=\n'
+Got      'last=\npipeline=\nsubshell=\ndone=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>last=
+pipeline=
+subshell=
+done=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-dash"></a><b>dash</b></td><td>35 <a href="vars-special.test.html#L620">$_ with &amp;&amp; and ||</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-ash"></a><b>ash</b></td><td>35 <a href="vars-special.test.html#L620">$_ with &amp;&amp; and ||</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'hi\nlast=hi\nand=last=hi\nhi\nor=hi\n'
+Got      'hi\nlast=\nand=\nhi\nor=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+last=
+and=
+hi
+or=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-mksh"></a><b>mksh</b></td><td>35 <a href="vars-special.test.html#L620">$_ with &amp;&amp; and ||</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-ksh"></a><b>ksh</b></td><td>35 <a href="vars-special.test.html#L620">$_ with &amp;&amp; and ||</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'hi\nlast=hi\nand=last=hi\nhi\nor=hi\n'
+Got      'hi\nlast=\nand=\nhi\nor=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+last=
+and=
+hi
+or=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-35-toysh"></a><b>toysh</b></td><td>35 <a href="vars-special.test.html#L620">$_ with &amp;&amp; and ||</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'hi\nlast=hi\nand=last=hi\nhi\nor=hi\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-35-brush"></a><b>brush</b></td><td>35 <a href="vars-special.test.html#L620">$_ with &amp;&amp; and ||</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'hi\nlast=hi\nand=last=hi\nhi\nor=hi\n'
+Got      'hi\nlast=\nand=\nhi\nor=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>hi
+last=
+and=
+hi
+or=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-dash"></a><b>dash</b></td><td>36 <a href="vars-special.test.html#L639">$_ is not reset with (( and [[</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-ash"></a><b>ash</b></td><td>36 <a href="vars-special.test.html#L639">$_ is not reset with (( and [[</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'simple\n(( simple\n[[ (( simple\n'
+Got      'simple\n(( \n[[ \n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>simple
+(( 
+[[ 
+</pre><i>stderr:</i> <br/>
+<pre>ash: a: not found
+</pre></td></tr><tr><td><a name="details-36-mksh"></a><b>mksh</b></td><td>36 <a href="vars-special.test.html#L639">$_ is not reset with (( and [[</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-ksh"></a><b>ksh</b></td><td>36 <a href="vars-special.test.html#L639">$_ is not reset with (( and [[</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'simple\n(( simple\n[[ (( simple\n'
+Got      'simple\n(( \n[[ \n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>simple
+(( 
+[[ 
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-36-toysh"></a><b>toysh</b></td><td>36 <a href="vars-special.test.html#L639">$_ is not reset with (( and [[</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'simple\n(( simple\n[[ (( simple\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-36-brush"></a><b>brush</b></td><td>36 <a href="vars-special.test.html#L639">$_ is not reset with (( and [[</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'simple\n(( simple\n[[ (( simple\n'
+Got      'simple\n(( \n[[ \n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>simple
+(( 
+[[ 
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-37-dash"></a><b>dash</b></td><td>37 <a href="vars-special.test.html#L662">$_ with assignments, arrays, etc.</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-37-ash"></a><b>ash</b></td><td>37 <a href="vars-special.test.html#L662">$_ with assignments, arrays, etc.</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'colon [foo]\nbare assign []\ndeclare [s=bar]\narray []\ndeclare array [a]\ndeclare flag [d]\n'
+Got      'colon []\nbare assign []\ndeclare []\n'
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>colon []
+bare assign []
+declare []
+</pre><i>stderr:</i> <br/>
+<pre>ash: declare: not found
+ash: syntax error: unexpected "("
+</pre></td></tr><tr><td><a name="details-37-zsh"></a><b>zsh</b></td><td>37 <a href="vars-special.test.html#L662">$_ with assignments, arrays, etc.</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>colon [foo]
+bare assign []
+declare [declare]
+array [declare [declare]]
+declare array [declare]
+declare flag [-g]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-37-mksh"></a><b>mksh</b></td><td>37 <a href="vars-special.test.html#L662">$_ with assignments, arrays, etc.</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-37-ksh"></a><b>ksh</b></td><td>37 <a href="vars-special.test.html#L662">$_ with assignments, arrays, etc.</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'colon [foo]\nbare assign []\ndeclare [s=bar]\narray []\ndeclare array [a]\ndeclare flag [d]\n'
+Got      'colon []\nbare assign []\ndeclare []\narray []\n'
+</span><br/>
+<span class="assertion">
+[ksh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>colon []
+bare assign []
+declare []
+array []
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[9]: declare: inaccessible or not found
+E: ksh: &lt;stdin&gt;[15]: syntax error: unexpected '('
+</pre></td></tr><tr><td><a name="details-37-toysh"></a><b>toysh</b></td><td>37 <a href="vars-special.test.html#L662">$_ with assignments, arrays, etc.</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'colon [foo]\nbare assign []\ndeclare [s=bar]\narray []\ndeclare array [a]\ndeclare flag [d]\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-37-sush"></a><b>sush</b></td><td>37 <a href="vars-special.test.html#L662">$_ with assignments, arrays, etc.</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'colon [foo]\nbare assign []\ndeclare [s=bar]\narray []\ndeclare array [a]\ndeclare flag [d]\n'
+Got      'colon [foo]\nbare assign []\ndeclare [declare]\narray []\ndeclare array [declare]\ndeclare flag [declare]\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>colon [foo]
+bare assign []
+declare [declare]
+array []
+declare array [declare]
+declare flag [declare]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-37-brush"></a><b>brush</b></td><td>37 <a href="vars-special.test.html#L662">$_ with assignments, arrays, etc.</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'colon [foo]\nbare assign []\ndeclare [s=bar]\narray []\ndeclare array [a]\ndeclare flag [d]\n'
+Got      'colon []\nbare assign []\ndeclare []\narray []\ndeclare array []\ndeclare flag []\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>colon []
+bare assign []
+declare []
+array []
+declare array []
+declare flag []
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-37-osh"></a><b>osh</b></td><td>37 <a href="vars-special.test.html#L662">$_ with assignments, arrays, etc.</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>colon [foo]
+bare assign [colon [foo]]
+declare [bare assign [colon [foo]]]
+array [declare [bare assign [colon [foo]]]]
+declare array [array [declare [bare assign [colon [foo]]]]]
+declare flag [declare array [array [declare [bare assign [colon [foo]]]]]]
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-dash"></a><b>dash</b></td><td>38 <a href="vars-special.test.html#L715">$_ with loop</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-ash"></a><b>ash</b></td><td>38 <a href="vars-special.test.html#L715">$_ with loop</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'init\nbegin=init\nprev=begin=init\nprev=prev=begin=init\nprev=prev=prev=begin=init\n'
+Got      'init\nbegin=\nprev=\nprev=\nprev=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>init
+begin=
+prev=
+prev=
+prev=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-zsh"></a><b>zsh</b></td><td>38 <a href="vars-special.test.html#L715">$_ with loop</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>init
+begin=init
+prev=
+prev=prev=
+prev=prev=prev=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-mksh"></a><b>mksh</b></td><td>38 <a href="vars-special.test.html#L715">$_ with loop</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-ksh"></a><b>ksh</b></td><td>38 <a href="vars-special.test.html#L715">$_ with loop</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'init\nbegin=init\nprev=begin=init\nprev=prev=begin=init\nprev=prev=prev=begin=init\n'
+Got      'init\nbegin=\nprev=\nprev=\nprev=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>init
+begin=
+prev=
+prev=
+prev=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-38-toysh"></a><b>toysh</b></td><td>38 <a href="vars-special.test.html#L715">$_ with loop</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'init\nbegin=init\nprev=begin=init\nprev=prev=begin=init\nprev=prev=prev=begin=init\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-38-brush"></a><b>brush</b></td><td>38 <a href="vars-special.test.html#L715">$_ with loop</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'init\nbegin=init\nprev=begin=init\nprev=prev=begin=init\nprev=prev=prev=begin=init\n'
+Got      'init\nbegin=\nprev=\nprev=\nprev=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>init
+begin=
+prev=
+prev=
+prev=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-39-dash"></a><b>dash</b></td><td>39 <a href="vars-special.test.html#L745">$_ is not undefined on first use</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: _: parameter not set
+</pre></td></tr><tr><td><a name="details-39-ash"></a><b>ash</b></td><td>39 <a href="vars-special.test.html#L745">$_ is not undefined on first use</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'status=0\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[ash status]
+Expected 0
+Got      2
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>ash: _: parameter not set
+</pre></td></tr><tr><td><a name="details-39-brush"></a><b>brush</b></td><td>39 <a href="vars-special.test.html#L745">$_ is not undefined on first use</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=0\n'
+Got      'status=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+</pre><i>stderr:</i> <br/>
+<pre>error: unexpected argument '-u' found
+
+  tip: to pass '-u' as a value, use '-- -u'
+
+Usage: brush [OPTIONS]... [SCRIPT_PATH [SCRIPT_ARGS]...]
+
+For more information, try '--help'.
+</pre></td></tr><tr><td><a name="details-40-bash"></a><b>bash</b></td><td>40 <a href="vars-special.test.html#L761">BASH_VERSION / OILS_VERSION</a><br/><br/>
+<span class="assertion">
+[bash stdout]
+Expected 'matched=0\n'
+Got      'matched=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>matched=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-dash"></a><b>dash</b></td><td>40 <a href="vars-special.test.html#L761">BASH_VERSION / OILS_VERSION</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>no version
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-ash"></a><b>ash</b></td><td>40 <a href="vars-special.test.html#L761">BASH_VERSION / OILS_VERSION</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'matched=0\n'
+Got      'no version\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>no version
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-zsh"></a><b>zsh</b></td><td>40 <a href="vars-special.test.html#L761">BASH_VERSION / OILS_VERSION</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>no version
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-mksh"></a><b>mksh</b></td><td>40 <a href="vars-special.test.html#L761">BASH_VERSION / OILS_VERSION</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>no version
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-ksh"></a><b>ksh</b></td><td>40 <a href="vars-special.test.html#L761">BASH_VERSION / OILS_VERSION</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'matched=0\n'
+Got      'no version\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>no version
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-toysh"></a><b>toysh</b></td><td>40 <a href="vars-special.test.html#L761">BASH_VERSION / OILS_VERSION</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'matched=0\n'
+Got      'no version\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 0
+Got      -6
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>no version
+</pre><i>stderr:</i> <br/>
+<pre>munmap_chunk(): invalid pointer
+</pre></td></tr><tr><td><a name="details-40-sush"></a><b>sush</b></td><td>40 <a href="vars-special.test.html#L761">BASH_VERSION / OILS_VERSION</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'matched=0\n'
+Got      'no version\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>no version
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-40-brush"></a><b>brush</b></td><td>40 <a href="vars-special.test.html#L761">BASH_VERSION / OILS_VERSION</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'matched=0\n'
+Got      'no version\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>no version
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-41-dash"></a><b>dash</b></td><td>41 <a href="vars-special.test.html#L787">$SECONDS</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-41-ash"></a><b>ash</b></td><td>41 <a href="vars-special.test.html#L787">$SECONDS</a><br/><br/>
+<span class="assertion">
+[ash stdout]
+Expected 'ok\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>

@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>builtin-getopts: spec test case results</title>
+<link rel="stylesheet" type="text/css" href="../../../web/base.css" />
+<link rel="stylesheet" type="text/css" href="../../../web/spec-tests.css" />
+  </head>
+  <body class="width60">
+    <p id="home-link">
+      <a href=".">spec test index</a>
+      /
+      <a href="/">oils.pub</a>
+    </p>
+    <h1>Results for builtin-getopts.test.sh</h1>
+    <table>
+    
+<thead>
+  <tr class="table-header">
+  <td>status</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td></td>
+  </tr>
+</thead>
+<tr><td class="pass">pass</td> <td>22</td><td>18</td><td>20</td><td>12</td><td>17</td><td>17</td><td>0</td><td>13</td><td>7</td><td>21</td><td></td></tr>
+<tr><td class="ok">ok</td> <td>1</td><td>4</td><td>3</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="bug">BUG</td> <td>1</td><td>2</td><td>1</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td></td></tr>
+<tr><td class="fail">FAIL</td> <td>0</td><td>0</td><td>0</td><td>12</td><td>0</td><td>7</td><td>24</td><td>11</td><td>17</td><td>3</td><td></td></tr>
+<tr><td>total</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td>24</td><td></td></tr>
+<tr><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td><td style="height: 2em"></td></tr>
+
+<thead>
+  <tr class="table-header">
+  <td>case</td><td>bash</td><td>dash</td><td>ash</td><td>zsh</td><td>mksh</td><td>ksh</td><td>toysh</td><td>sush</td><td>brush</td><td>osh</td><td class="case-desc">description</td>
+  </tr>
+</thead>
+<tr><td>  0</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L4">getopts empty</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-0-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  1</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L10">getopts sees unknown arg</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-1-toysh">details</a></td><td class="details-row"><a href="#details-1-sush">details</a></td><td class="details-row"><a href="#details-1-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  2</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L16">getopts three invocations</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-2-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-2-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  3</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L30">getopts resets OPTARG</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-3-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-3-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  4</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L41">Basic getopts invocation</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-4-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-4-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  5</td><td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L55">getopts with invalid variable name</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-5-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-5-zsh">details</a></td><td class="details-row"><a href="#details-5-mksh">details</a></td><td class="details-row"><a href="#details-5-ksh">details</a></td><td class="details-row"><a href="#details-5-toysh">details</a></td><td class="details-row"><a href="#details-5-sush">details</a></td><td class="details-row"><a href="#details-5-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  6</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L63">getopts with invalid flag</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-6-toysh">details</a></td><td class="details-row"><a href="#details-6-sush">details</a></td><td class="details-row"><a href="#details-6-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  7</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L76">getopts with with -</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-7-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  8</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L92">getopts missing required argument</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-8-toysh">details</a></td><td class="details-row"><a href="#details-8-sush">details</a></td><td class="details-row"><a href="#details-8-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td>  9</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L105">getopts doesn't look for flags after args</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-9-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 10</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L119">getopts with explicit args</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-10-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-10-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 11</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L136">OPTIND</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-11-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 12</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L140">OPTIND after multiple getopts with same spec</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-12-zsh">details</a></td><td class="details-row"><a href="#details-12-mksh">details</a></td><td class="details-row"><a href="#details-12-ksh">details</a></td><td class="details-row"><a href="#details-12-toysh">details</a></td><td class="details-row"><a href="#details-12-sush">details</a></td><td class="details-row"><a href="#details-12-brush">details</a></td><td class="details-row"><a href="#details-12-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 13</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L173">OPTIND after multiple getopts with different spec</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-13-dash">details</a></td><td class="details-row"><a href="#details-13-ash">details</a></td><td class="details-row"><a href="#details-13-zsh">details</a></td><td class="details-row"><a href="#details-13-mksh">details</a></td><td class="details-row"><a href="#details-13-ksh">details</a></td><td class="details-row"><a href="#details-13-toysh">details</a></td><td class="details-row"><a href="#details-13-sush">details</a></td><td class="details-row"><a href="#details-13-brush">details</a></td><td class="details-row"><a href="#details-13-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 14</td><td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="bug">BUG</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L221">OPTIND narrowed down</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"><a href="#details-14-bash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-14-zsh">details</a></td><td class="details-row"><a href="#details-14-mksh">details</a></td><td class="details-row"><a href="#details-14-ksh">details</a></td><td class="details-row"><a href="#details-14-toysh">details</a></td><td class="details-row"><a href="#details-14-sush">details</a></td><td class="details-row"><a href="#details-14-brush">details</a></td><td class="details-row"><a href="#details-14-osh">details</a></td><td class="details-row"></td></tr>
+<tr><td> 15</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L257">Getopts parses the function's arguments</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-15-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-15-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 16</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L273">Local OPTIND</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-16-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 17</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L285">two flags: -ab</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-17-dash">details</a></td><td class="details-row"><a href="#details-17-ash">details</a></td><td class="details-row"><a href="#details-17-zsh">details</a></td><td class="details-row"><a href="#details-17-mksh">details</a></td><td class="details-row"><a href="#details-17-ksh">details</a></td><td class="details-row"><a href="#details-17-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 18</td><td class="pass">pass</td>	<td class="bug">BUG</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L299">flag and arg: -c10</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-dash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-18-zsh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-18-toysh">details</a></td><td class="details-row"><a href="#details-18-sush">details</a></td><td class="details-row"><a href="#details-18-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 19</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L313">More Smooshing 1</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-19-dash">details</a></td><td class="details-row"><a href="#details-19-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-19-mksh">details</a></td><td class="details-row"><a href="#details-19-ksh">details</a></td><td class="details-row"><a href="#details-19-toysh">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 20</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="ok">ok</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L331">More Smooshing 2</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-20-dash">details</a></td><td class="details-row"><a href="#details-20-ash">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-20-mksh">details</a></td><td class="details-row"><a href="#details-20-ksh">details</a></td><td class="details-row"><a href="#details-20-toysh">details</a></td><td class="details-row"><a href="#details-20-sush">details</a></td><td class="details-row"><a href="#details-20-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 21</td><td class="pass">pass</td>	<td class="ok">ok</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L349">OPTIND should be &gt;= 1 (regression)</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-dash">details</a></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-21-toysh">details</a></td><td class="details-row"></td><td class="details-row"><a href="#details-21-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 22</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L365">getopts bug #1523</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-22-toysh">details</a></td><td class="details-row"><a href="#details-22-sush">details</a></td><td class="details-row"><a href="#details-22-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+<tr><td> 23</td><td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="pass">pass</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="fail">FAIL</td>	<td class="pass">pass</td>	<td class="case-desc"><a href="builtin-getopts.test.html#L379">More regression for #1523</a></td></tr>
+<tr><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"></td><td class="details-row"><a href="#details-23-toysh">details</a></td><td class="details-row"><a href="#details-23-sush">details</a></td><td class="details-row"><a href="#details-23-brush">details</a></td><td class="details-row"></td><td class="details-row"></td></tr>
+</table>
+<pre>147 passed, 12 OK, 0 not implemented, 7 BUG, 74 failed, 0 timeouts, 0 cases skipped
+3 failed under osh
+</pre><h2>Details on runs that didn't PASS</h2><table id="details"><tr><td><a name="details-0-zsh"></a><b>zsh</b></td><td>0 <a href="builtin-getopts.test.html#L4">getopts empty</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=1 opt=? OPTARG=\n'
+Got      'status=1 opt= OPTARG=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1 opt= OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-0-toysh"></a><b>toysh</b></td><td>0 <a href="builtin-getopts.test.html#L4">getopts empty</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=1 opt=? OPTARG=\n'
+Got      'status=127 opt= OPTARG=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127 opt= OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-1-toysh"></a><b>toysh</b></td><td>1 <a href="builtin-getopts.test.html#L10">getopts sees unknown arg</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0 opt=? OPTARG=\n'
+Got      'status=127 opt= OPTARG=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127 opt= OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-1-sush"></a><b>sush</b></td><td>1 <a href="builtin-getopts.test.html#L10">getopts sees unknown arg</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=0 opt=? OPTARG=\n'
+Got      'status=1 opt=? OPTARG=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1 opt=? OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-1-brush"></a><b>brush</b></td><td>1 <a href="builtin-getopts.test.html#L10">getopts sees unknown arg</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=0 opt=? OPTARG=\n'
+Got      'status=1 opt=? OPTARG=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1 opt=? OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-zsh"></a><b>zsh</b></td><td>2 <a href="builtin-getopts.test.html#L16">getopts three invocations</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=0 opt=h\nstatus=0 opt=c\nstatus=1 opt=?\n'
+Got      'status=0 opt=h\nstatus=0 opt=c\nstatus=1 opt=c\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0 opt=h
+status=0 opt=c
+status=1 opt=c
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-2-toysh"></a><b>toysh</b></td><td>2 <a href="builtin-getopts.test.html#L16">getopts three invocations</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0 opt=h\nstatus=0 opt=c\nstatus=1 opt=?\n'
+Got      'status=127 opt=\nstatus=127 opt=\nstatus=127 opt=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127 opt=
+status=127 opt=
+status=127 opt=
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+sh: getopts: No such file or directory
+sh: getopts: No such file or directory
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-2-brush"></a><b>brush</b></td><td>2 <a href="builtin-getopts.test.html#L16">getopts three invocations</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=0 opt=h\nstatus=0 opt=c\nstatus=1 opt=?\n'
+Got      'status=1 opt=?\nstatus=1 opt=?\nstatus=1 opt=?\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1 opt=?
+status=1 opt=?
+status=1 opt=?
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-3-toysh"></a><b>toysh</b></td><td>3 <a href="builtin-getopts.test.html#L30">getopts resets OPTARG</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=0 opt=c OPTARG=foo\nstatus=0 opt=h OPTARG=\n'
+Got      'status=127 opt= OPTARG=\nstatus=127 opt= OPTARG=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127 opt= OPTARG=
+status=127 opt= OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+sh: getopts: No such file or directory
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-3-brush"></a><b>brush</b></td><td>3 <a href="builtin-getopts.test.html#L30">getopts resets OPTARG</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=0 opt=c OPTARG=foo\nstatus=0 opt=h OPTARG=\n'
+Got      'status=1 opt=? OPTARG=\nstatus=1 opt=? OPTARG=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1 opt=? OPTARG=
+status=1 opt=? OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-4-toysh"></a><b>toysh</b></td><td>4 <a href="builtin-getopts.test.html#L41">Basic getopts invocation</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'h=1 c=foo optind=4 argv=x y z\n'
+Got      'h=0 c= optind= argv=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>h=0 c= optind= argv=
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-4-brush"></a><b>brush</b></td><td>4 <a href="builtin-getopts.test.html#L41">Basic getopts invocation</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'h=1 c=foo optind=4 argv=x y z\n'
+Got      'h=0 c= optind=1 argv=-h -c foo x y z\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>h=0 c= optind=1 argv=-h -c foo x y z
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-5-bash"></a><b>bash</b></td><td>5 <a href="builtin-getopts.test.html#L55">getopts with invalid variable name</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1 opt= OPTARG=foo OPTIND=3
+</pre><i>stderr:</i> <br/>
+<pre>bash: line 2: getopts: `opt-': not a valid identifier
+</pre></td></tr><tr><td><a name="details-5-zsh"></a><b>zsh</b></td><td>5 <a href="builtin-getopts.test.html#L55">getopts with invalid variable name</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'status=2 opt= OPTARG=foo OPTIND=3\n'
+Got      ''
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 0
+Got      1
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>zsh: not an identifier: opt-
+</pre></td></tr><tr><td><a name="details-5-mksh"></a><b>mksh</b></td><td>5 <a href="builtin-getopts.test.html#L55">getopts with invalid variable name</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>status=1 opt= OPTARG= OPTIND=1
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[2]: getopts: opt-: is not an identifier
+</pre></td></tr><tr><td><a name="details-5-ksh"></a><b>ksh</b></td><td>5 <a href="builtin-getopts.test.html#L55">getopts with invalid variable name</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'status=2 opt= OPTARG=foo OPTIND=3\n'
+Got      'status=1 opt= OPTARG= OPTIND=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1 opt= OPTARG= OPTIND=1
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[2]: getopts: opt-: not an identifier
+</pre></td></tr><tr><td><a name="details-5-toysh"></a><b>toysh</b></td><td>5 <a href="builtin-getopts.test.html#L55">getopts with invalid variable name</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=2 opt= OPTARG=foo OPTIND=3\n'
+Got      'status=127 opt= OPTARG= OPTIND=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127 opt= OPTARG= OPTIND=
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-5-sush"></a><b>sush</b></td><td>5 <a href="builtin-getopts.test.html#L55">getopts with invalid variable name</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'status=2 opt= OPTARG=foo OPTIND=3\n'
+Got      'status=1 opt= OPTARG=foo OPTIND=3\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1 opt= OPTARG=foo OPTIND=3
+</pre><i>stderr:</i> <br/>
+<pre>/home/andy/git/oils-for-unix/oils/../../shells/rusty_bash/target/release/sush: line 2: getopts: VariableInvalid("opt-")
+</pre></td></tr><tr><td><a name="details-5-brush"></a><b>brush</b></td><td>5 <a href="builtin-getopts.test.html#L55">getopts with invalid variable name</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=2 opt= OPTARG=foo OPTIND=3\n'
+Got      'status=1 opt= OPTARG= OPTIND=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1 opt= OPTARG= OPTIND=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-zsh"></a><b>zsh</b></td><td>6 <a href="builtin-getopts.test.html#L63">getopts with invalid flag</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'ERROR 3\n'
+Got      'ERROR 2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>ERROR 2
+</pre><i>stderr:</i> <br/>
+<pre>zsh: bad option: -x
+</pre></td></tr><tr><td><a name="details-6-toysh"></a><b>toysh</b></td><td>6 <a href="builtin-getopts.test.html#L63">getopts with invalid flag</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'ERROR 3\n'
+Got      'status=0\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-6-sush"></a><b>sush</b></td><td>6 <a href="builtin-getopts.test.html#L63">getopts with invalid flag</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'ERROR 3\n'
+Got      'status=0\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-6-brush"></a><b>brush</b></td><td>6 <a href="builtin-getopts.test.html#L63">getopts with invalid flag</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'ERROR 3\n'
+Got      'status=0\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-7-toysh"></a><b>toysh</b></td><td>7 <a href="builtin-getopts.test.html#L76">getopts with with -</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '-h -\nstatus=0\n'
+Got      '\nstatus=0\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+status=0
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-8-zsh"></a><b>zsh</b></td><td>8 <a href="builtin-getopts.test.html#L92">getopts missing required argument</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'ERROR 3\n'
+Got      'status=0\n'
+</span><br/>
+<span class="assertion">
+[zsh status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>zsh: argument expected after -c option
+</pre></td></tr><tr><td><a name="details-8-toysh"></a><b>toysh</b></td><td>8 <a href="builtin-getopts.test.html#L92">getopts missing required argument</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'ERROR 3\n'
+Got      'status=0\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-8-sush"></a><b>sush</b></td><td>8 <a href="builtin-getopts.test.html#L92">getopts missing required argument</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'ERROR 3\n'
+Got      'status=0\n'
+</span><br/>
+<span class="assertion">
+[sush status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-8-brush"></a><b>brush</b></td><td>8 <a href="builtin-getopts.test.html#L92">getopts missing required argument</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'ERROR 3\n'
+Got      'status=0\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 2
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=0
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-9-toysh"></a><b>toysh</b></td><td>9 <a href="builtin-getopts.test.html#L105">getopts doesn't look for flags after args</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'h=0 c= optind=1 argv=x -h -c y\n'
+Got      'h=0 c= optind= argv=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>h=0 c= optind= argv=
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-10-toysh"></a><b>toysh</b></td><td>10 <a href="builtin-getopts.test.html#L119">getopts with explicit args</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'h=1 c=foo optind=4 argv=A B C\n'
+Got      'h=0 c= optind= argv=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>h=0 c= optind= argv=
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-10-brush"></a><b>brush</b></td><td>10 <a href="builtin-getopts.test.html#L119">getopts with explicit args</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'h=1 c=foo optind=4 argv=A B C\n'
+Got      'h=0 c= optind=1 argv=A B C\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>h=0 c= optind=1 argv=A B C
+</pre><i>stderr:</i> <br/>
+<pre>Parse command options
+
+Usage: getopts &lt;OPTIONS_STRING&gt; &lt;VARIABLE_NAME&gt; [ARGS]...
+
+Arguments:
+  &lt;OPTIONS_STRING&gt;  Specification for options
+  &lt;VARIABLE_NAME&gt;   Name of variable to receive next option
+  [ARGS]...         Arguments to parse
+
+Options:
+  -h, --help  Print help
+
+</pre></td></tr><tr><td><a name="details-11-toysh"></a><b>toysh</b></td><td>11 <a href="builtin-getopts.test.html#L136">OPTIND</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '1\n'
+Got      '\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-zsh"></a><b>zsh</b></td><td>12 <a href="builtin-getopts.test.html#L140">OPTIND after multiple getopts with same spec</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'OPTIND=1\n-\n-\nOPTIND=4\nOPTIND=1\n'
+Got      'OPTIND=1\n\n\nOPTIND=4\nOPTIND=4\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=1
+
+
+OPTIND=4
+OPTIND=4
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-mksh"></a><b>mksh</b></td><td>12 <a href="builtin-getopts.test.html#L140">OPTIND after multiple getopts with same spec</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=1
+-
+-
+OPTIND=4
+OPTIND=4
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[15]: getopts: arguments changed since last call
+</pre></td></tr><tr><td><a name="details-12-ksh"></a><b>ksh</b></td><td>12 <a href="builtin-getopts.test.html#L140">OPTIND after multiple getopts with same spec</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'OPTIND=1\n-\n-\nOPTIND=4\nOPTIND=1\n'
+Got      'OPTIND=1\n-\n-\nOPTIND=4\nOPTIND=4\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=1
+-
+-
+OPTIND=4
+OPTIND=4
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[15]: getopts: arguments changed since last call
+</pre></td></tr><tr><td><a name="details-12-toysh"></a><b>toysh</b></td><td>12 <a href="builtin-getopts.test.html#L140">OPTIND after multiple getopts with same spec</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'OPTIND=1\n-\n-\nOPTIND=4\nOPTIND=1\n'
+Got      'OPTIND=\nOPTIND=\nOPTIND=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=
+OPTIND=
+OPTIND=
+</pre><i>stderr:</i> <br/>
+<pre>sh: getopts: No such file or directory
+set: bad --
+sh: getopts: No such file or directory
+set: bad --
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-12-sush"></a><b>sush</b></td><td>12 <a href="builtin-getopts.test.html#L140">OPTIND after multiple getopts with same spec</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'OPTIND=1\n-\n-\nOPTIND=4\nOPTIND=1\n'
+Got      'OPTIND=1\n-\n-\nOPTIND=4\nOPTIND=4\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=1
+-
+-
+OPTIND=4
+OPTIND=4
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-brush"></a><b>brush</b></td><td>12 <a href="builtin-getopts.test.html#L140">OPTIND after multiple getopts with same spec</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'OPTIND=1\n-\n-\nOPTIND=4\nOPTIND=1\n'
+Got      'OPTIND=1\nOPTIND=1\nOPTIND=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=1
+OPTIND=1
+OPTIND=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-12-osh"></a><b>osh</b></td><td>12 <a href="builtin-getopts.test.html#L140">OPTIND after multiple getopts with same spec</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'OPTIND=1\n-\n-\nOPTIND=4\nOPTIND=1\n'
+Got      'OPTIND=1\n-\n-\nOPTIND=4\nOPTIND=4\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=1
+-
+-
+OPTIND=4
+OPTIND=4
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-dash"></a><b>dash</b></td><td>13 <a href="builtin-getopts.test.html#L173">OPTIND after multiple getopts with different spec</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>.
+OPTIND=2
+-
+-
+-
+OPTIND=5
+_
+OPTIND=2
+</pre><i>stderr:</i> <br/>
+<pre>No arg for -f option
+</pre></td></tr><tr><td><a name="details-13-ash"></a><b>ash</b></td><td>13 <a href="builtin-getopts.test.html#L173">OPTIND after multiple getopts with different spec</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>.
+OPTIND=2
+-
+-
+-
+OPTIND=5
+_
+OPTIND=2
+</pre><i>stderr:</i> <br/>
+<pre>No arg for -f option
+</pre></td></tr><tr><td><a name="details-13-zsh"></a><b>zsh</b></td><td>13 <a href="builtin-getopts.test.html#L173">OPTIND after multiple getopts with different spec</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected '.\nOPTIND=2\n-\n-\nOPTIND=5\nOPTIND=2\n'
+Got      '.\nOPTIND=2\n\n\nOPTIND=5\nOPTIND=5\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>.
+OPTIND=2
+
+
+OPTIND=5
+OPTIND=5
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-mksh"></a><b>mksh</b></td><td>13 <a href="builtin-getopts.test.html#L173">OPTIND after multiple getopts with different spec</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>.
+OPTIND=2
+-
+-
+OPTIND=5
+OPTIND=5
+</pre><i>stderr:</i> <br/>
+<pre>mksh: &lt;stdin&gt;[16]: getopts: arguments changed since last call
+</pre></td></tr><tr><td><a name="details-13-ksh"></a><b>ksh</b></td><td>13 <a href="builtin-getopts.test.html#L173">OPTIND after multiple getopts with different spec</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected '.\nOPTIND=2\n-\n-\nOPTIND=5\nOPTIND=2\n'
+Got      '.\nOPTIND=2\n-\n-\nOPTIND=5\nOPTIND=5\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>.
+OPTIND=2
+-
+-
+OPTIND=5
+OPTIND=5
+</pre><i>stderr:</i> <br/>
+<pre>E: ksh: &lt;stdin&gt;[16]: getopts: arguments changed since last call
+</pre></td></tr><tr><td><a name="details-13-toysh"></a><b>toysh</b></td><td>13 <a href="builtin-getopts.test.html#L173">OPTIND after multiple getopts with different spec</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected '.\nOPTIND=2\n-\n-\nOPTIND=5\nOPTIND=2\n'
+Got      'OPTIND=\nOPTIND=\nOPTIND=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=
+OPTIND=
+OPTIND=
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+sh: getopts: No such file or directory
+set: bad --
+sh: getopts: No such file or directory
+set: bad --
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-13-sush"></a><b>sush</b></td><td>13 <a href="builtin-getopts.test.html#L173">OPTIND after multiple getopts with different spec</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected '.\nOPTIND=2\n-\n-\nOPTIND=5\nOPTIND=2\n'
+Got      '.\nOPTIND=2\n-\n-\nOPTIND=5\nOPTIND=5\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>.
+OPTIND=2
+-
+-
+OPTIND=5
+OPTIND=5
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-brush"></a><b>brush</b></td><td>13 <a href="builtin-getopts.test.html#L173">OPTIND after multiple getopts with different spec</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected '.\nOPTIND=2\n-\n-\nOPTIND=5\nOPTIND=2\n'
+Got      'OPTIND=1\nOPTIND=1\nOPTIND=1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=1
+OPTIND=1
+OPTIND=1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-13-osh"></a><b>osh</b></td><td>13 <a href="builtin-getopts.test.html#L173">OPTIND after multiple getopts with different spec</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected '.\nOPTIND=2\n-\n-\nOPTIND=5\nOPTIND=2\n'
+Got      '.\nOPTIND=2\n-\n-\nOPTIND=5\nOPTIND=5\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>.
+OPTIND=2
+-
+-
+OPTIND=5
+OPTIND=5
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-bash"></a><b>bash</b></td><td>14 <a href="builtin-getopts.test.html#L221">OPTIND narrowed down</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a=1 b= c= d=1 e=E
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-zsh"></a><b>zsh</b></td><td>14 <a href="builtin-getopts.test.html#L221">OPTIND narrowed down</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'a=1 b= c=1 d=1 e=E\n'
+Got      'a=1 b= c= d=1 e=E\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a=1 b= c= d=1 e=E
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-mksh"></a><b>mksh</b></td><td>14 <a href="builtin-getopts.test.html#L221">OPTIND narrowed down</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>a=1 b= c= d=1 e=E
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-ksh"></a><b>ksh</b></td><td>14 <a href="builtin-getopts.test.html#L221">OPTIND narrowed down</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'a=1 b= c=1 d=1 e=E\n'
+Got      'a=1 b= c= d=1 e=E\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a=1 b= c= d=1 e=E
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-toysh"></a><b>toysh</b></td><td>14 <a href="builtin-getopts.test.html#L221">OPTIND narrowed down</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'a=1 b= c=1 d=1 e=E\n'
+Got      'a= b= c= d= e=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a= b= c= d= e=
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+sh: getopts: No such file or directory
+set: bad --
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-14-sush"></a><b>sush</b></td><td>14 <a href="builtin-getopts.test.html#L221">OPTIND narrowed down</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'a=1 b= c=1 d=1 e=E\n'
+Got      'a=1 b= c= d=1 e=E\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a=1 b= c= d=1 e=E
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-brush"></a><b>brush</b></td><td>14 <a href="builtin-getopts.test.html#L221">OPTIND narrowed down</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'a=1 b= c=1 d=1 e=E\n'
+Got      'a= b= c= d= e=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a= b= c= d= e=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-14-osh"></a><b>osh</b></td><td>14 <a href="builtin-getopts.test.html#L221">OPTIND narrowed down</a><br/><br/>
+<span class="assertion">
+[osh stdout]
+Expected 'a=1 b= c=1 d=1 e=E\n'
+Got      'a=1 b= c= d=1 e=E\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>a=1 b= c= d=1 e=E
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-zsh"></a><b>zsh</b></td><td>15 <a href="builtin-getopts.test.html#L257">Getopts parses the function's arguments</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'h=0 c=bar opt=? optind=3 argv=-h -c foo x y z\n'
+Got      'h=0 c=bar opt=c optind=1 argv=-h -c foo x y z\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>h=0 c=bar opt=c optind=1 argv=-h -c foo x y z
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-15-toysh"></a><b>toysh</b></td><td>15 <a href="builtin-getopts.test.html#L257">Getopts parses the function's arguments</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'h=0 c=bar opt=? optind=3 argv=-h -c foo x y z\n'
+Got      'h=0 c= opt= optind= argv=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>h=0 c= opt= optind= argv=
+</pre><i>stderr:</i> <br/>
+<pre>set: bad --
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-15-brush"></a><b>brush</b></td><td>15 <a href="builtin-getopts.test.html#L257">Getopts parses the function's arguments</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'h=0 c=bar opt=? optind=3 argv=-h -c foo x y z\n'
+Got      'h=0 c= opt=? optind=1 argv=-h -c foo x y z\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>h=0 c= opt=? optind=1 argv=-h -c foo x y z
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-zsh"></a><b>zsh</b></td><td>16 <a href="builtin-getopts.test.html#L273">Local OPTIND</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'loop 2\n'
+Got      'loop 1\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>loop 1
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-16-toysh"></a><b>toysh</b></td><td>16 <a href="builtin-getopts.test.html#L273">Local OPTIND</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'loop 2\n'
+Got      ''
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-17-dash"></a><b>dash</b></td><td>17 <a href="builtin-getopts.test.html#L285">two flags: -ab</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=2 opt=a OPTARG=
+OPTIND=2 opt=b OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-ash"></a><b>ash</b></td><td>17 <a href="builtin-getopts.test.html#L285">two flags: -ab</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=2 opt=a OPTARG=
+OPTIND=2 opt=b OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-zsh"></a><b>zsh</b></td><td>17 <a href="builtin-getopts.test.html#L285">two flags: -ab</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'OPTIND=1 opt=a OPTARG=\nOPTIND=2 opt=b OPTARG=\n'
+Got      'OPTIND=1 opt=a OPTARG=\nOPTIND=1 opt=b OPTARG=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=1 opt=a OPTARG=
+OPTIND=1 opt=b OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-mksh"></a><b>mksh</b></td><td>17 <a href="builtin-getopts.test.html#L285">two flags: -ab</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=2 opt=a OPTARG=
+OPTIND=2 opt=b OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-ksh"></a><b>ksh</b></td><td>17 <a href="builtin-getopts.test.html#L285">two flags: -ab</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'OPTIND=1 opt=a OPTARG=\nOPTIND=2 opt=b OPTARG=\n'
+Got      'OPTIND=2 opt=a OPTARG=\nOPTIND=2 opt=b OPTARG=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=2 opt=a OPTARG=
+OPTIND=2 opt=b OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-17-toysh"></a><b>toysh</b></td><td>17 <a href="builtin-getopts.test.html#L285">two flags: -ab</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'OPTIND=1 opt=a OPTARG=\nOPTIND=2 opt=b OPTARG=\n'
+Got      'OPTIND= opt= OPTARG=\nOPTIND= opt= OPTARG=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND= opt= OPTARG=
+OPTIND= opt= OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre>sh: getopts: No such file or directory
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-18-dash"></a><b>dash</b></td><td>18 <a href="builtin-getopts.test.html#L299">flag and arg: -c10</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=2 opt=c OPTARG=10
+OPTIND=2 opt=? OPTARG=10
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-zsh"></a><b>zsh</b></td><td>18 <a href="builtin-getopts.test.html#L299">flag and arg: -c10</a><br/><br/>
+<span class="assertion">
+[zsh stdout]
+Expected 'OPTIND=2 opt=c OPTARG=10\nOPTIND=2 opt=? OPTARG=\n'
+Got      'OPTIND=2 opt=c OPTARG=10\nOPTIND=2 opt=c OPTARG=10\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=2 opt=c OPTARG=10
+OPTIND=2 opt=c OPTARG=10
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-toysh"></a><b>toysh</b></td><td>18 <a href="builtin-getopts.test.html#L299">flag and arg: -c10</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'OPTIND=2 opt=c OPTARG=10\nOPTIND=2 opt=? OPTARG=\n'
+Got      'OPTIND= opt= OPTARG=\nOPTIND= opt= OPTARG=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND= opt= OPTARG=
+OPTIND= opt= OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre>sh: getopts: No such file or directory
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-18-sush"></a><b>sush</b></td><td>18 <a href="builtin-getopts.test.html#L299">flag and arg: -c10</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'OPTIND=2 opt=c OPTARG=10\nOPTIND=2 opt=? OPTARG=\n'
+Got      'OPTIND=1 opt=? OPTARG=\nOPTIND=1 opt=? OPTARG=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=1 opt=? OPTARG=
+OPTIND=1 opt=? OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-18-brush"></a><b>brush</b></td><td>18 <a href="builtin-getopts.test.html#L299">flag and arg: -c10</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'OPTIND=2 opt=c OPTARG=10\nOPTIND=2 opt=? OPTARG=\n'
+Got      'OPTIND=1 opt=? OPTARG=\nOPTIND=1 opt=? OPTARG=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=1 opt=? OPTARG=
+OPTIND=1 opt=? OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre>getopts: illegal option -- c
+getopts: illegal option -- 1
+</pre></td></tr><tr><td><a name="details-19-dash"></a><b>dash</b></td><td>19 <a href="builtin-getopts.test.html#L313">More Smooshing 1</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=2 opt=a OPTARG=
+OPTIND=3 opt=b OPTARG=hi
+OPTIND=5 opt=c OPTARG=hello
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-ash"></a><b>ash</b></td><td>19 <a href="builtin-getopts.test.html#L313">More Smooshing 1</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=2 opt=a OPTARG=
+OPTIND=3 opt=b OPTARG=hi
+OPTIND=5 opt=c OPTARG=hello
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-mksh"></a><b>mksh</b></td><td>19 <a href="builtin-getopts.test.html#L313">More Smooshing 1</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=2 opt=a OPTARG=
+OPTIND=3 opt=b OPTARG=hi
+OPTIND=5 opt=c OPTARG=hello
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-ksh"></a><b>ksh</b></td><td>19 <a href="builtin-getopts.test.html#L313">More Smooshing 1</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'OPTIND=1 opt=a OPTARG=\nOPTIND=3 opt=b OPTARG=hi\nOPTIND=5 opt=c OPTARG=hello\n'
+Got      'OPTIND=2 opt=a OPTARG=\nOPTIND=3 opt=b OPTARG=hi\nOPTIND=5 opt=c OPTARG=hello\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=2 opt=a OPTARG=
+OPTIND=3 opt=b OPTARG=hi
+OPTIND=5 opt=c OPTARG=hello
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-19-toysh"></a><b>toysh</b></td><td>19 <a href="builtin-getopts.test.html#L313">More Smooshing 1</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'OPTIND=1 opt=a OPTARG=\nOPTIND=3 opt=b OPTARG=hi\nOPTIND=5 opt=c OPTARG=hello\n'
+Got      'OPTIND= opt= OPTARG=\nOPTIND= opt= OPTARG=\nOPTIND= opt= OPTARG=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND= opt= OPTARG=
+OPTIND= opt= OPTARG=
+OPTIND= opt= OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre>sh: getopts: No such file or directory
+sh: getopts: No such file or directory
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-20-dash"></a><b>dash</b></td><td>20 <a href="builtin-getopts.test.html#L331">More Smooshing 2</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=2 opt=a OPTARG=
+OPTIND=2 opt=b OPTARG=
+OPTIND=2 opt=c OPTARG=10
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-ash"></a><b>ash</b></td><td>20 <a href="builtin-getopts.test.html#L331">More Smooshing 2</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=2 opt=a OPTARG=
+OPTIND=2 opt=b OPTARG=
+OPTIND=2 opt=c OPTARG=10
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-mksh"></a><b>mksh</b></td><td>20 <a href="builtin-getopts.test.html#L331">More Smooshing 2</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=2 opt=a OPTARG=
+OPTIND=2 opt=b OPTARG=
+OPTIND=2 opt=c OPTARG=10
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-ksh"></a><b>ksh</b></td><td>20 <a href="builtin-getopts.test.html#L331">More Smooshing 2</a><br/><br/>
+<span class="assertion">
+[ksh stdout]
+Expected 'OPTIND=1 opt=a OPTARG=\nOPTIND=1 opt=b OPTARG=\nOPTIND=2 opt=c OPTARG=10\n'
+Got      'OPTIND=2 opt=a OPTARG=\nOPTIND=2 opt=b OPTARG=\nOPTIND=2 opt=c OPTARG=10\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=2 opt=a OPTARG=
+OPTIND=2 opt=b OPTARG=
+OPTIND=2 opt=c OPTARG=10
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-toysh"></a><b>toysh</b></td><td>20 <a href="builtin-getopts.test.html#L331">More Smooshing 2</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'OPTIND=1 opt=a OPTARG=\nOPTIND=1 opt=b OPTARG=\nOPTIND=2 opt=c OPTARG=10\n'
+Got      'OPTIND= opt= OPTARG=\nOPTIND= opt= OPTARG=\nOPTIND= opt= OPTARG=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND= opt= OPTARG=
+OPTIND= opt= OPTARG=
+OPTIND= opt= OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre>sh: getopts: No such file or directory
+sh: getopts: No such file or directory
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-20-sush"></a><b>sush</b></td><td>20 <a href="builtin-getopts.test.html#L331">More Smooshing 2</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'OPTIND=1 opt=a OPTARG=\nOPTIND=1 opt=b OPTARG=\nOPTIND=2 opt=c OPTARG=10\n'
+Got      'OPTIND=1 opt=a OPTARG=\nOPTIND=1 opt=b OPTARG=\nOPTIND=1 opt=? OPTARG=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=1 opt=a OPTARG=
+OPTIND=1 opt=b OPTARG=
+OPTIND=1 opt=? OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-20-brush"></a><b>brush</b></td><td>20 <a href="builtin-getopts.test.html#L331">More Smooshing 2</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'OPTIND=1 opt=a OPTARG=\nOPTIND=1 opt=b OPTARG=\nOPTIND=2 opt=c OPTARG=10\n'
+Got      'OPTIND=1 opt=a OPTARG=\nOPTIND=1 opt=b OPTARG=\nOPTIND=1 opt=? OPTARG=\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>OPTIND=1 opt=a OPTARG=
+OPTIND=1 opt=b OPTARG=
+OPTIND=1 opt=? OPTARG=
+</pre><i>stderr:</i> <br/>
+<pre>getopts: illegal option -- c
+</pre></td></tr><tr><td><a name="details-21-dash"></a><b>dash</b></td><td>21 <a href="builtin-getopts.test.html#L349">OPTIND should be &gt;= 1 (regression)</a><br/><br/>
+<i>stdout:</i> <br/>
+<pre></pre><i>stderr:</i> <br/>
+<pre>dash: 1: Illegal number: -1
+</pre></td></tr><tr><td><a name="details-21-toysh"></a><b>toysh</b></td><td>21 <a href="builtin-getopts.test.html#L349">OPTIND should be &gt;= 1 (regression)</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'status=1\nstatus=1\n'
+Got      'status=127\nstatus=127\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=127
+status=127
+</pre><i>stderr:</i> <br/>
+<pre>sh: getopts: No such file or directory
+sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-21-brush"></a><b>brush</b></td><td>21 <a href="builtin-getopts.test.html#L349">OPTIND should be &gt;= 1 (regression)</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'status=1\nstatus=1\n'
+Got      'status=1\nstatus=2\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>status=1
+status=2
+</pre><i>stderr:</i> <br/>
+<pre>[31merror:[39m getopts: failed to parse integer
+</pre></td></tr><tr><td><a name="details-22-toysh"></a><b>toysh</b></td><td>22 <a href="builtin-getopts.test.html#L365">getopts bug #1523</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'opt:a\nopt:b\nopt:c arg:def\nopt:a\nopt:b\nopt:c arg:de\n'
+Got      'arg:-abcdef\narg:-abcde\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>arg:-abcdef
+arg:-abcde
+</pre><i>stderr:</i> <br/>
+<pre>sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-22-sush"></a><b>sush</b></td><td>22 <a href="builtin-getopts.test.html#L365">getopts bug #1523</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'opt:a\nopt:b\nopt:c arg:def\nopt:a\nopt:b\nopt:c arg:de\n'
+Got      'opt:a\nopt:b\nopt:c arg:-abcde\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>opt:a
+opt:b
+opt:c arg:-abcde
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-22-brush"></a><b>brush</b></td><td>22 <a href="builtin-getopts.test.html#L365">getopts bug #1523</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'opt:a\nopt:b\nopt:c arg:def\nopt:a\nopt:b\nopt:c arg:de\n'
+Got      'arg:-abcdef\narg:-abcde\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>arg:-abcdef
+arg:-abcde
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-toysh"></a><b>toysh</b></td><td>23 <a href="builtin-getopts.test.html#L379">More regression for #1523</a><br/><br/>
+<span class="assertion">
+[toysh stdout]
+Expected 'opt:a\nopt:b\nopt:c arg:def\nerr:?\nerr:?\nerr:?\n'
+Got      'arg:-abcdef\narg:-xyz\n'
+</span><br/>
+<span class="assertion">
+[toysh status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>arg:-abcdef
+arg:-xyz
+</pre><i>stderr:</i> <br/>
+<pre>sh: getopts: No such file or directory
+</pre></td></tr><tr><td><a name="details-23-sush"></a><b>sush</b></td><td>23 <a href="builtin-getopts.test.html#L379">More regression for #1523</a><br/><br/>
+<span class="assertion">
+[sush stdout]
+Expected 'opt:a\nopt:b\nopt:c arg:def\nerr:?\nerr:?\nerr:?\n'
+Got      'opt:a\nopt:b\nopt:c arg:-xyz\n'
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>opt:a
+opt:b
+opt:c arg:-xyz
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr><tr><td><a name="details-23-brush"></a><b>brush</b></td><td>23 <a href="builtin-getopts.test.html#L379">More regression for #1523</a><br/><br/>
+<span class="assertion">
+[brush stdout]
+Expected 'opt:a\nopt:b\nopt:c arg:def\nerr:?\nerr:?\nerr:?\n'
+Got      'arg:-abcdef\narg:-xyz\n'
+</span><br/>
+<span class="assertion">
+[brush status]
+Expected 1
+Got      0
+</span><br/>
+<br/>
+<i>stdout:</i> <br/>
+<pre>arg:-abcdef
+arg:-xyz
+</pre><i>stderr:</i> <br/>
+<pre></pre></td></tr></table></body></html>
