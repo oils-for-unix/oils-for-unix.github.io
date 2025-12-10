@@ -1,0 +1,90 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Alternative Regex Syntax</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>This page lists projects that provide an alternative to traditional regex syntax, e.g. POSIX <code>[:digit:](:digit:.html)+</code> or Perl <code>\d+</code>.</p>
+<p><strong>It's freely editable</strong>, so please add your projects here.</p>
+<p>Related: <a href="Alternative-Shells.html">Alternative Shells</a></p>
+<h2>Regex / Regular Language Projects</h2>
+<h3>Languages That Compile to Regex</h3>
+<p>Little languages with their own syntax that compile to common regular expressions like POSIX or PCRE.</p>
+<ul>
+<li><a href="https://www.oilshell.org/release/latest/doc/eggex.html">Oil's Egg Expressions</a>
+<ul>
+<li>Translates to POSIX ERE for use with grep, awk, sed</li>
+<li>Literal strings are quoted; operators are unquoted / unescaped</li>
+<li>Reuse and composition of of patterns</li>
+</ul>
+</li>
+<li><a href="https://github.com/SonOfLilit/kleenexp">kleenexp</a> - <em>modern regular expression syntax everywhere with a painless upgrade path</em></li>
+<li><a href="https://web.archive.org/web/20231227033711/https://simple-regex.com//">SRL - Simple Regex Language</a>.  <em>Regular Expressions Made Simple</em> (<a href="https://news.ycombinator.com/item?id=12384862">Hacker News Comments</a>)</li>
+<li><a href="https://github.com/yoav-lavi/melody">Melody</a> - <em>Melody is a language that compiles to regular expressions and aims to be more easily readable and maintainable</em> (<a href="https://news.ycombinator.com/item?id=30358554">Hacker News Comments</a>)</li>
+<li><a href="https://pomsky-lang.org/">Pomsky</a> (formerly Rulex) - <em>A new, portable, regular expression language.</em> Hacker News comments in <a href="https://news.ycombinator.com/item?id=31690878">June 2022</a> and <a href="https://news.ycombinator.com/item?id=34183944">December 2022</a>, <a href="https://lobste.rs/s/7siipy/pomsky_portable_modern_regular">Lobster</a></li>
+<li><a href="https://github.com/ethanpailes/remake">Remake</a> - <em>A Rust library and programming language for composing regular expressions</em></li>
+<li><a href="https://github.com/uellenberg/REXS">REXS</a> - a language that compiles to regular expressions, and a JavaScript library as the compiler.</li>
+</ul>
+<h3>Builders</h3>
+<p>Libraries for creating regular expressions using the syntax of their parent language.</p>
+<ul>
+<li><a href="http://verbalexpressions.github.io/JSVerbalExpressions/">Verbal Expressions</a> - <em>A JavaScript library that helps to construct difficult regular expressions</em>. <a href="https://github.com/VerbalExpressions">Also ported to many languages</a>.</li>
+<li><a href="https://github.com/hedhyw/rex">Rex</a> - <em>Flexible regular expressions constructor for Golang.</em></li>
+<li><a href="https://github.com/francisrstokes/super-expressive">Super Expressive</a> - <em>A zero-dependency JavaScript library for building regular expressions in (almost) natural language</em> (<a href="https://news.ycombinator.com/item?id=25857753">Hacker News Comments</a>)</li>
+<li><a href="https://github.com/ocaml/ocaml-re">Re</a> - <em>An OCaml regular expression library, in addition to Perl, Posix, Emacs, Shell and PCRE syntax, it supports writing regexps using declarative higher level combinators</em></li>
+<li><a href="https://github.com/Drup/tyre">Tyre</a> - <em>A set of combinators to write type-safe regular expressions, allowing automatic extraction and modification of matched groups. In Ocaml, bidirectional</em></li>
+<li><a href="https://github.com/luciferreeves/edify">Edify</a> - A Python library that allows you to easily create regular expressions for matching text in a programmatically-friendly way. It also allows you to verify a string quickly by providing commonly used regex patterns in its extensive set of built-in patterns.</li>
+<li><a href="https://github.com/mbasso/natural-regex">natural-regex</a> - a JavaScript library to compose regular expression</li>
+</ul>
+<h4>Lisp-Like Syntax</h4>
+<ul>
+<li><a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Rx-Notation.html">Emacs' Rx Expressions</a> - <em>Structured regex notation based on s-expressions built into Emacs</em></li>
+<li><a href="https://srfi.schemers.org/srfi-115/srfi-115.html">Scheme Regular Expressions</a> - first introduced in <a href="https://scsh.net">SCSH</a> as an s-expression based alternative to the more common string based description.</li>
+<li><a href="https://github.com/AbhinavOmprakash/luna">luna</a> - <em>A Clojure DSL That Translates to Regex</em> (<a href="https://news.ycombinator.com/item?id=29217755">Hacker News Comments</a>)</li>
+</ul>
+<h3>Alternative Approaches</h3>
+<p>Alternatives to POSIX regular expressions, PCRE, etc. that differ significantly and don't normally compile to them.</p>
+<ul>
+<li><a href="https://doc.cat-v.org/bell_labs/structural_regexps/">Structural Regular Expressions</a> - <em>The current UNIX text processing tools are weakened by the built-in concept of a line. There is a simple notation that can describe the `shape' of files when the typical array-of-lines picture is inadequate. When operations using these expressions are composed, the result is reminiscent of shell pipelines.</em> Structural expressions were originally implemented in the command language for Plan 9's <a href="http://sam.cat-v.org/">sam</a> text editor, and later in <a href="http://acme.cat-v.org/">acme</a>. More recently it has been used in <a href="https://github.com/martanne/vis">vis</a>.</li>
+<li><a href="https://www.perl.com/article/perl-6-grammers-part-1/">Raku Grammars</a>
+<ul>
+<li>Literal strings are quoted; operators are unquoted / unescaped</li>
+</ul>
+</li>
+<li><a href="https://www.lua.org/manual/5.4/manual.html#6.4.1">Lua's Patterns</a> - Lua's pattern-matching is a (deliberate) subset of what POSIX regular expressions can do. As Roberto Ierusalimschy writes in <em>Programming in Lua</em>: &quot;The main reason for this decision is size: a typical implementation of POSIX regular expressions takes more than 4000 lines of code, which is more than half the size of all Lua standard libraries together. In comparison, the implementation of pattern matching in Lua has less than 600 lines&quot; (77, 4th edition).</li>
+<li><a href="https://reference.wolfram.com/language/guide/StringPatterns.html">Wolfram String Patterns</a> -- <em>The Wolfram Language's symbolic string patterns provide a compact yet readable basis for sophisticated string operations. Included directly in programs, or symbolically generated on the fly, ...</em></li>
+<li><a href="http://71.174.62.16/Demo/AnnoStd?Frame=Main&amp;Page=a901017">MUMPS Pattern Match Operator</a> - Circa 1967, present in the 1977 ANSI MUMPS language standard.</li>
+<li><a href="https://www.cs.helsinki.fi/u/jjaakkol/sgrep.html">sgrep</a> - structured grep is a tool for searching and indexing text, SGML, XML and HTML files and filtering text streams using structural criteria. The data model of sgrep is based on regions, which are nonempty substrings of text. See <a href="https://www.cs.helsinki.fi/u/jjaakkol/sgrepman.html#ss0.7">Region Expressions</a></li>
+</ul>
+<h2>Parsing Libraries</h2>
+<p>Parsing Expression Grammars</p>
+<ul>
+<li><a href="https://www.inf.puc-rio.br/~roberto/lpeg/">LPeg</a></li>
+<li><a href="https://rosie-lang.org/">Rosie Pattern Language</a></li>
+</ul>
+<p>Parser Combinators</p>
+<ul>
+<li>Haskell
+<ul>
+<li><a href="https://hackage.haskell.org/package/parsec">Parsec</a></li>
+<li><a href="https://hackage.haskell.org/package/attoparsec">Attoparsec</a></li>
+<li><a href="https://hackage.haskell.org/package/regex-applicative">regex-applicative</a> - Regex-based parsing with applicative interface</li>
+</ul>
+</li>
+<li>Rust
+<ul>
+<li>Combine (<a href="https://lib.rs/crates/combine">Lib.rs</a>, <a href="https://docs.rs/combine">Docs.rs</a>)</li>
+<li>Nom (<a href="https://lib.rs/crates/nom">Lib.rs</a>, <a href="https://docs.rs/nom">Docs.rs</a>)</li>
+</ul>
+</li>
+</ul>
+<h2>Links</h2>
+<ul>
+<li><a href="https://wiki.c2.com/?AlternativesToRegularExpressions">https://wiki.c2.com/?AlternativesToRegularExpressions</a> (as of 2022, last edited in 2014)</li>
+</ul>
+  </body>
+</html>
+

@@ -1,0 +1,72 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Implementations of Shell Autocompletion</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Back to <a href="Shell-Autocompletion.html">Shell Autocompletion</a></p>
+<h2>bash</h2>
+<ul>
+<li>GNU readline does ad hoc tokenization of the shell command.  Does not use its parser.</li>
+<li>builtins: <code>complete</code>, <code>compopt</code>, <code>compgen</code></li>
+<li>global variables: <code>COMP_WORDS</code>, <code>COMPREPLY</code> (out)</li>
+</ul>
+<ul>
+<li>completions maintained out of tree in <code>bash-completion</code></li>
+</ul>
+<h2>yash</h2>
+<ul>
+<li><code>lineedit/compparse.{c,h}</code> (~1300 lines) is a &quot;simple parser for command line completion&quot; that duplicates knowledge of the shell language.  It doesn't use its own parser much, if at all.</li>
+<li><code>help complete</code> shows help for the extensive completion builtin.  Doesn't seem to understand the flags of its own builtins.</li>
+<li>completions maintained in-tree in <code>share/completion</code></li>
+</ul>
+<p>As usual, <code>git</code> is one of the biggest completions!</p>
+<pre><code>~/src/languages/yash-2.46/share/completion$ wc -l *|sort -n
+...
+   497 git-config
+   541 tar
+   554 find
+   597 git-svn
+   657 INIT
+   759 git
+   850 svn
+ 19921 total
+
+</code></pre>
+<h2>zsh</h2>
+<p>TODO</p>
+<ul>
+<li>completions maintained in-tree</li>
+</ul>
+<h2>fish</h2>
+<ul>
+<li>has a <code>complete</code> builtin</li>
+<li>completions maintained in-tree</li>
+</ul>
+<h2>Oil</h2>
+<p>Oil reuses its parser for autocompletion.</p>
+<p>I haven't documented this fully, but here's one blog post:</p>
+<ul>
+<li>http://www.oilshell.org/blog/2020/01/history-and-completion.html#how-it-works</li>
+</ul>
+<p>Notes:</p>
+<ul>
+<li>The parser drives the lexer, and most decisions are made from the tokens saved in the &quot;trail&quot;.  You can examine these tokens even if the parser <strong>fails</strong>.</li>
+<li>Code is in <code>core/completion.py</code>.  <code>RootCompleter::Matches()</code> is the core logic, which is somewhat hairy, but much simpler and more compact than the equivalent other shells.  See <code>trail.tokens</code>.</li>
+<li>Other things to search for in the code:
+<ul>
+<li><code>Id.Expr_Dummy</code>.  This is a dummy token that helps parse incomplete code (I honestly don't remember the details, but I recall that a lot of things fell out nicely with this little mechanism.)</li>
+</ul>
+</li>
+<li>We don't have to solve the &quot;incremental parsing&quot; problem, because we just reparse/re-lex the entire line every time you hit tab.  The parser runs at ~800 lines/ms, so it should take a few microseconds to re-parse.   So the parsing time will be dwarfed by running shell completion plugins (which are arbitrary shell), and especially shell plugins that do I/O.</li>
+</ul>
+<p>Bugs</p>
+<ul>
+<li>https://github.com/oilshell/oil/issues/227 -- I think this is relatively easily handled by our scheme, but I haven't thought about it in awhile.</li>
+</ul>
+  </body>
+</html>
+

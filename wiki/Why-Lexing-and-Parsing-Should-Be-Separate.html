@@ -1,0 +1,87 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Why Lexing and Parsing Should Be Separate</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p><strong>Summary: Do the easy thing with the fast algorithm, and the hard thing with the slow algorithm.  Lexing and parsing are different things.</strong></p>
+<p>Note: the arguments here are more important for big languages/parsers.  For small languages, these issues don't matter as much.</p>
+<ul>
+<li><strong>Code Clarity</strong>: Lexing and parsing are fundamentally different.  While in practice there isn't a precise line between lexing and parsing (for a given language, or across languages), here's a clear way to organize it:
+<ul>
+<li>A lexer recognizes the <strong>non-recursive</strong> structure of a language. Its output is a <strong>token stream</strong>.</li>
+<li>A parser recognizes the <strong>recursive</strong> structure of a language. Its output is a <strong>tree</strong>.</li>
+</ul>
+</li>
+<li><strong>Code and language stability</strong>.  Lexing is straightforward and &quot;solved&quot;, but parsing isn't.  The best parsing model isn't clear up front, since it depends on the details of the language.  At some point, you may want to change the parsing model, while keeping the lexer the same.
+<ul>
+<li>Example: Rust changed parsing models early in its life.  <a href="https://old.reddit.com/r/ProgrammingLanguages/comments/brhdt2/notes_on_rusts_grammar_ll_vs_lr/">Graydon Hoare said</a>: <em>IMO Rust isn’t ideally thought of as LL(k) anymore; I tried to keep it that way for a long time, but it’s grown a lot of bits that work better in LR-family. I highly recommend just deleting anything ANTLR-related and focusing on LR(k) or LALR(k) grammars.</em></li>
+<li>Example: CPython is doing this in Python 3.9 after 30 years.  It's moving from pgen LL(1) to PEG over tokens.  The lexer is kept the same.</li>
+<li>Note: If you're parsing an existing language, the safest option is to the same parsing model that the original parser used, and the same definition of tokens to divide the lexer and parser.</li>
+</ul>
+</li>
+<li><strong>Performance</strong>.  Any lexer you write is likely to fast.  On the other hand, parsing is more complex, and can be slow.
+<ul>
+<li>Lexing with regular languages (expressions) is nice because it can be done in <code>O(n)</code> time and <code>O(1)</code> space (using automata-based techniques).  Many lexers are also straightforward to write by hand.
+<ul>
+<li>There is essentially <strong>one algorithm</strong> for lexing -- march forward through the input exactly once.</li>
+</ul>
+</li>
+<li>Parsing CFGs is <code>O(n^3)</code> in general, and parsing PEGs either takes <code>O(n)</code> space (packrat parsing) or exponential time (backtracking)
+<ul>
+<li>There are <strong>many algorithms</strong> for parsing, each with a complex set of tradeoffs.  Also see <a href="Parsing-Models-Cheatsheet.html">Parsing Models Cheatsheet</a>.</li>
+</ul>
+</li>
+<li>Important point: separating lexing and parsing <strong>reduces the n</strong> in your <code>O(n^3)</code>.  In any real program, there are many more characters than tokens.</li>
+<li>Case study: <a href="https://ollef.github.io/blog/posts/speeding-up-sixty.html">Speeding up the Sixty compiler</a>.  This is a compiler written in Haskell with a front end that used parser combinators.  Parsing took 45% of the time at first.  After other optimizations, it took 30% of the time.  <em>Optimization 7: Separate Lexer: So the change I made here is to write a faster lexer that's separate from the parser, and then make the parser work on the list of tokens that the lexer spits out.</em>  This sped up the program by 37%, which was one of the bigger wins for the whole compiler.</li>
+<li>Case study: <a href="https://www.vidarholen.net/contents/blog/?p=859">Lessons learned from writing ShellCheck, GitHub’s now most starred Haskell project</a> -- This part is an argument for a <strong>separate lexer</strong>, which Oil has: <em>Be careful if your parser framework makes it too easy to backtrack. Look up good parser design. I naively wrote a character based parser function for each construct like ${..}, $(..), $'..', etc, and now the parser has to backtrack a dozen times to try every possibility when it hits a $. With a tokenizer or a parser that read $ followed by {..}, (..) etc, it would have been much faster</em></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Easier <strong>composition of sublanguages</strong> with modal lexers.  On <a href="https://old.reddit.com/r/ProgrammingLanguages/comments/gdt3xd/why_lexing_and_parsing_should_be_separate/">this thread</a>, there seemed to be the misconception that lexers inhibit language composition.  In fact it's just the opposite -- the lexer can take a mode parameter, and each mode corresponds to the different lexical structure of a sublanguage (templated strings, etc.)
+<ul>
+<li><a href="http://www.oilshell.org/blog/2016/10/19.html">How OSH Uses Lexer Modes</a></li>
+<li><a href="http://www.oilshell.org/blog/2017/12/17.html">When Are Lexer Modes Useful?</a> -- note the appendix on <a href="https://www.oilshell.org/blog/2017/12/17.html#lexing-versus-parsing">Lexing vs. Parsing</a></li>
+<li><a href="http://www.oilshell.org/blog/2019/02/07.html#list-of-sublanguages">List of Sublanguages</a> -- there are main 4 composed sublanguages, as well as 5 minor ones, all of which have recursive structure.</li>
+<li>More posts tagged <a href="http://www.oilshell.org/blog/tags.html?tag=lexing#lexing">#lexing</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>Ease of Development / Debugging</strong> -- In my experience, it is hard to debug PEGs for large grammars, because lexing and parsing are intermingled.  The gibes with comments here and below:
+<ul>
+<li>https://www.reddit.com/r/ProgrammingLanguages/comments/9plvqa/question_about_language_creation_tools/e82wqb4/</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>I used to use a PEG for my language, but I had to move away because the error messages were so bad I couldn't iterate on the parser because I couldn't understand what was going wrong.</p>
+</blockquote>
+<p>Threads/comments:</p>
+<ul>
+<li>https://www.reddit.com/r/ProgrammingLanguages/comments/a80stl/are_there_any_languages_that_use_a_peg_in_their/ec9lvko/</li>
+<li>https://www.reddit.com/r/ProgrammingLanguages/comments/9plvqa/question_about_language_creation_tools/e82yvvy/?context=8&amp;depth=9</li>
+</ul>
+<p>Not a strawman:</p>
+<p>https://fosdem.org/2019/schedule/event/perl6newtool/ - <em>The great part is that you no longer need to split your language implementation in traditional phases: lexer, parser, etc.</em> -- IMO this is a mistake, at least for medium/large languages.</p>
+<ul>
+<li>
+<p>Consistent handling of <strong>Location Info</strong> -- You will likely want to attach filename/line/column information to  tokens in the <strong>lexer</strong>.  If you follow the style that tokens are leaves to AST nodes, then the parser can be ignorant of this concern.</p>
+<ul>
+<li>Slightly related: <a href="https://old.reddit.com/r/ProgrammingLanguages/comments/gavu8z/what_i_wish_compiler_books_would_cover/fp4upru/">one method of handling location info in a modular fashion</a></li>
+</ul>
+</li>
+<li>
+<p>IDE support likely favors separate lexers.  According to this <a href="https://www.youtube.com/watch?v=zDP9uUMYrvs">video about an IDE for Raku</a>, the IntelliJ platform inherently separates the notion of lexing and parsing.  The leaves of the AST are tokens, and the lexer is responsible for generating tokens.</p>
+</li>
+<li>
+<p><a href="https://old.reddit.com/r/ProgrammingLanguages/comments/gdt3xd/why_lexing_and_parsing_should_be_separate/fw94qs8/">from matklad</a> -- Lexers are easy to make incremental, but parsers aren't.  This matters for IDE support.</p>
+</li>
+</ul>
+  </body>
+</html>
+

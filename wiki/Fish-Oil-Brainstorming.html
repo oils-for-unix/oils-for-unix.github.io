@@ -1,0 +1,44 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Fish Oil Brainstorming</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Notes from https://gitter.im/fish-shell/fish-oil   so I don't forget</p>
+<h2>Problems with Global State</h2>
+<h3>File Descriptors</h3>
+<ul>
+<li>Solutions:
+<ul>
+<li>fish can do the dup() dance on all its open files, to move it above FD 100</li>
+<li>Oil could disallow <code>echo 1&gt;&amp;3</code></li>
+</ul>
+</li>
+</ul>
+<h3>Signal Handlers</h3>
+<ul>
+<li>Oil still needs this ported to C++</li>
+</ul>
+<h3>Threads</h3>
+<blockquote>
+<p>fish shell uses threads to support interactive features, like syntax highlighting, and also when writing output. For example in a command like echo $var | cat fish will spawn a thread to write the output of echo to cat.</p>
+</blockquote>
+<ul>
+<li>The fish &quot;front end&quot; uses threads for multiple things.  Its backend could use <code>fork()</code> instead of threads (the original strategy)</li>
+<li>The Oil backend doesn't use any threads.</li>
+</ul>
+<h2>C++ API</h2>
+<p>We need to interface Oil's garbage collected code with non-GC code.  Working on it with <code>Local&lt;T&gt;</code> etc.</p>
+<p>We could also do some kind of binary in-process API to avoid exposing that detail.  (And for C programs that want to embed Oil)</p>
+<h2>Completion API</h2>
+<p>These posts explain how Oil's completion (prototyped in Python) works, and how it's integrated with the parser:</p>
+<p><a href="http://www.oilshell.org/blog/tags.html?tag=interactive-shell#interactive-shell">http://www.oilshell.org/blog/tags.html?tag=interactive-shell#interactive-shell</a></p>
+<h2>Notes on Subinterpreters</h2>
+<p>https://github.com/oilshell/oil/issues/704</p>
+<p>In addition to the config file and <code>ble.sh</code> use cases, Oil could &quot;virtually fork&quot; its heap with <code>memcpy()</code> and <code>pipe()</code> between threads.</p>
+  </body>
+</html>
+

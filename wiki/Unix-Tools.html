@@ -1,0 +1,151 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Unix Tools</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>The shell interacts with a set of Unix tools in <code>/bin</code> and so forth.  However, in many cases, those tools have grown functionality that overlaps with shell.</p>
+<p>Unix Tools ...</p>
+<p>Related: <a href="Ad-Hoc-Protocols-in-Unix.html">Ad Hoc Protocols in Unix</a></p>
+<h3>That Start Processes (in parallel)</h3>
+<ul>
+<li><code>make</code> and other build tools.  <code>make -j</code> for parallel builds.</li>
+<li><code>xargs</code>, <code>-P</code> for parallel execution, <code>-I {}</code> for substitution
+<ul>
+<li>Also GNU Parallel, which is mentioned in the bash manual.</li>
+</ul>
+</li>
+<li><code>find -exec</code> and <code>-exec +</code></li>
+</ul>
+<h3>That Have Expression Languages</h3>
+<p>Expression languages must be fully recursive to count here.</p>
+<p>With no lexer:</p>
+<ul>
+<li><code>find</code> -- <code>-a -o ! ( )</code></li>
+<li><code>test</code> -- <code>-a -o ! ( )</code></li>
+<li><code>expr</code> -- arithmetic, subsumed by <code>$(())</code></li>
+</ul>
+<p>Languages with lexers:</p>
+<ul>
+<li><code>awk</code></li>
+<li><code>dtrace</code> -- modelled after awk.</li>
+</ul>
+<p>Honorable mention:</p>
+<ul>
+<li><code>strace</code> also has a little expression language, but it's not fully recursive.</li>
+</ul>
+<h4>That Use Regexes</h4>
+<ul>
+<li><code>grep</code>, <code>grep -E</code></li>
+<li><code>sed</code>, <code>sed --regexp-extended</code> in GNU sed</li>
+<li><code>awk</code> (extended only)</li>
+<li><code>expr</code></li>
+<li><code>find -regex</code></li>
+<li><code>bash</code> itself.</li>
+</ul>
+<h3>That Receive Code Snippets (Remote Evaluation)</h3>
+<ul>
+<li><code>tar</code> has a --sed option.</li>
+</ul>
+<h3>That Have Printf-Style Formatting</h3>
+<p>See Appendix A: <a href="How-to-Quickly-and-Correctly*-Generate-a-Git-Log-in-HTML%7Chttp://www.oilshell.org/blog/2017/09/19.html.html">How to Quickly and Correctly* Generate a Git Log in HTML|http://www.oilshell.org/blog/2017/09/19.html</a></p>
+<ul>
+<li><code>find -printf</code> (arbitrary filenames)</li>
+<li><code>stat -c</code> (arbitrary filenames)</li>
+<li><code>curl --write-out %{response_code}</code> -- URLs can't have arbitrary characters?</li>
+<li><code>printf</code> itself (coreutils)</li>
+<li><code>time</code> (<code>/usr/bin/time</code>) -- mostly numbers</li>
+<li><code>date</code> -- mostly numbers</li>
+<li><code>bash</code>
+<ul>
+<li>the <code>printf</code> builtin</li>
+<li>the <code>time</code> builtin and the <code>TIMEFORMAT</code> string -- mostly numbers</li>
+<li>the prompt string: <code>\h \W</code></li>
+</ul>
+</li>
+<li><code>ps --format</code></li>
+</ul>
+<h3>That Have Backslash Escaping</h3>
+<ul>
+<li><code>awk -F '\t'</code> -- same as <code>awk -F $'\t'</code></li>
+<li><code>xargs -d '\t'</code></li>
+<li>(GNU cut -d doesn't understand tabs)</li>
+<li><code>find -printf</code></li>
+</ul>
+<p>Non-standard tools:</p>
+<ul>
+<li><code>git log --pretty=format:</code> (arbitrary descriptions)</li>
+<li><code>hg log --template</code> -- http://hgbook.red-bean.com/read/customizing-the-output-of-mercurial.html (doesn't have <code>\0</code> as far as I can tell.)  Mercurial has its own template language like <code>date: {date|isodate}\n\n</code> (no <code>$</code>).</li>
+</ul>
+<p>NOTE: <code>grep</code> should have a syntax for captures, like <code>$1 $2 name: $name age: $age</code>.  <code>sed</code> just has <code>&amp;</code> for the matched group.</p>
+<h3>With Quoting/Escaping Algorithms</h3>
+<ul>
+<li><code>ls -q -b</code> for unprintable chars in filenames</li>
+<li><code>printf %q</code> for spaces in args</li>
+<li><code> ${var@Q}</code> which is different than <code>printf %q</code>!!!  See <code>help-bash@</code> thread.</li>
+</ul>
+<h3>Arg Substitution</h3>
+<p>These are like <code>&quot;$@&quot;</code> in shell.</p>
+<ul>
+<li><code>xargs -I {} -- echo {}</code></li>
+<li><code>find -exec {} +</code></li>
+</ul>
+<p>Could be replaced with <code>$_</code> or <code>@_</code> (&quot;it&quot;).</p>
+<h3>With Tabular Output</h3>
+<ul>
+<li><code>find</code> / <code>ls</code></li>
+<li><code>ps</code></li>
+<li><code>df</code> (has <code>-h</code> and <code>-H</code> human-readable option, <code>--output[=FIELD_LIST]</code> but no format string)</li>
+<li><code>du</code> -- has <code>-0</code> for <code>NUL</code> output</li>
+<li>TODO: look at netstat, iostat, lsof, etc.  Brendan Gregg's pages.</li>
+</ul>
+<h3>With File System Path Matching</h3>
+<ul>
+<li><code>du --exclude</code></li>
+<li><code>rsync --include --exclude</code></li>
+<li><code>find -name</code>, <code>-regex</code>, <code>-wholename</code>, etc.</li>
+</ul>
+<h3>That Format Binary Data</h3>
+<ul>
+<li>od</li>
+<li>xxd</li>
+<li>hexdump  -- has a % format language.</li>
+</ul>
+<p>Honestly I don't understand the difference between these!</p>
+<h3>Misc Expression Languages</h3>
+<ul>
+<li><code>getopts</code>  builtin spec, and <code>/usr/bin/getopt</code>
+<ul>
+<li>leading <code>:</code> means to do different error handling!  Instead of the arg.  Gah.</li>
+</ul>
+</li>
+</ul>
+<h3>The Worst Offender</h3>
+<p><code>find</code> starts processes (with <code>-exec</code>), has a recursive boolean expression language, regexes, globs, has <code>%</code> and backslash escapes (in <code>-printf</code>), and arg substitution (<code>{}</code> is like <code>&quot;$@&quot;</code>).  It should be part of the shell!</p>
+<p>It also doesn't give good parse error messages.  Sometimes it just says &quot;find: invalid expression&quot; with no location information.</p>
+<p>Wow this is crazy too:</p>
+<pre><code>The regular expressions understood by find are by default Emacs Regular Expressions, but this can be changed with the -regextype option.
+
+$ find -regextype -help
+find: Unknown regular expression type ‘-help’; valid types are ‘findutils-default’, ‘awk’, ‘egrep’, ‘ed’, ‘emacs’, ‘gnu-awk’, ‘grep’, ‘posix-awk’, ‘posix-basic’, ‘posix-egrep’, ‘posix-extended’, ‘posix-minimal-basic’, ‘sed’.
+</code></pre>
+<p>I didn't know there were that many regex types!  And emacs is a really bad default!</p>
+<h2>Families of Unix Tools</h2>
+<ul>
+<li>CSV, JSON, HTML, XML, recfile, 1991 paper!
+<ul>
+<li>https://www.reddit.com/r/oilshell/comments/719p6c/how_to_quickly_and_correctly_generate_a_git_log/dndp9uq/</li>
+</ul>
+</li>
+</ul>
+<h3>Misc Problems</h3>
+<ul>
+<li>coreutils <code>time</code> doesn't have millisecond resolution!  https://stackoverflow.com/questions/16959337/usr-bin-time-format-output-elapsed-time-in-milliseconds.  It's hard-coded right in time.c --- usecs/10000.  very arbitrary.</li>
+<li>bash TIMEFORMAT has precision like <code>%3R</code>, but it doesn't have the exit code!  Annoying.</li>
+</ul>
+  </body>
+</html>
+

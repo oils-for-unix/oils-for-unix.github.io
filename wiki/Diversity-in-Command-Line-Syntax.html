@@ -1,0 +1,40 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Diversity in Command Line Syntax</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>(Back to <a href="Shell-Autocompletion.html">Shell Autocompletion</a>)</p>
+<p>Here I'm picking the worst cases. My point is not that we have to handle them -- it's that a  grammar shouldn't <strong>prevent</strong> you from handling these cases.</p>
+<h3>bash itself has two options parsers</h3>
+<p>The long options have to appear BEFORE the short options.</p>
+<pre><code>Usage:  bash [GNU long option] [option] ...
+</code></pre>
+<p><code>bash --posix -x --&lt;TAB&gt;</code>  -- This should not complete any long options!</p>
+<h3>set builtin has +x, and -o / +o take &quot;distant&quot; arguments</h3>
+<p><code>set +oeu pipefail</code> is equivalent to</p>
+<p><code>set +o pipefail +e +u</code> (try it in bash)</p>
+<p>When I type <code>set +oeu &lt;TAB&gt;</code> -- I should complete <code>pipefail</code> and not an arg.</p>
+<h3>declare -p is a flag, but declare -r +x is an option</h3>
+<p>That is, some flags can be prefixed with <code>+</code> in addition to <code>-</code>.</p>
+<h3>find command is a recursive language</h3>
+<p><code>find . -type f -&lt;TAB&gt;</code> -- what is valid in that case? How do you write a grammar for it?</p>
+<h3>expr and test are also recursive languages</h3>
+<p>In  <code>expr</code>, <code>+</code> can be the binary arithmetic operator, or it can be <strong>escaping</strong> !!</p>
+<p>NOTE: If the standard is bash-style completions, then you don't really need to complete anything for <code>expr</code>.  However, <code>test</code> should know where filenames are valid.</p>
+<p>See also: <a href="http://www.oilshell.org/blog/2017/08/31.html">Problems With the test Builtin: What Does -a Mean?</a></p>
+<h3>Go flags package</h3>
+<p><code>-strflag str</code> is allowed, but <code>-boolflag 0</code> isn't allowed.  Must be <code>-boolflag=0</code> for negation, or <code>-boolflag</code> / <code>-boolflag=1</code> when it's true.</p>
+<h3>python -c terminates flag processing</h3>
+<p><code>python -c -s &lt;TAB&gt;</code> --</p>
+<p><code>python -c x -s &lt;TAB&gt;</code> --</p>
+<p><code>-s</code> is not a flag; it's an argument, because <code>-c</code> terminates flag parsing.</p>
+<p>zsh seems to get this right.  (bash doesn't complete flags at all, so it doesn't apply.)</p>
+<h3>echo builtin</h3>
+<p>It doesn't respect <code>--</code> according to POSIX.  Maybe this is easy to express?</p>
+  </body>
+</html>
+

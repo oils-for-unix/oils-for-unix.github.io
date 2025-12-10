@@ -1,0 +1,157 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Compiler Engineer Job</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<h2>Summary</h2>
+<p>The <a href="https://www.oilshell.org/">Oil project</a> needs a compiler engineer with experience in <strong>C++ and garbage collection</strong> to help &quot;finish&quot; the project!  As of April 2022, we have a 50K euro grant from <a href="https://nlnet.nl">NLnet</a> to pay someone, and I'm also collecting donations with <a href="https://github.com/sponsors/oilshell">Github Sponsors</a>.</p>
+<h2>Overview</h2>
+<ul>
+<li>What is it?
+<ul>
+<li><em>Oil is a new Unix shell.  It's our upgrade path from bash to a better shell and runtime!  It's also for Python and JavaScript users who avoid shell.</em></li>
+</ul>
+</li>
+<li>What do we need done?
+<ul>
+<li>Work on a <strong>4K-8K line translator in Python</strong>, and a <strong>3K-10K line garbage-collected runtime in C++</strong>, with an eye toward making it run the Oil interpreter.  (For each component, we have code that passes significant tests, including many end-to-end tests.  It's a proof of concept and some of it may need to be rewritten.  Let's talk about it!)</li>
+<li>This is a job very much in need of solid <strong>engineering</strong>!  (i.e. it's not a research project)</li>
+</ul>
+</li>
+<li>Why are you doing it this way?  What progress have you made?
+<ul>
+<li>See <a href="https://www.oilshell.org/blog/2022/03/middle-out.html">Oil is Being Implemented &quot;Middle Out&quot;</a>, which includes a plot of progress.</li>
+</ul>
+</li>
+<li>How do I apply?
+<ul>
+<li>Please send me a mail at andy@oilshell.org.  Let me know how you heard about the project, and what your interest and experience is.   We can also chat on <a href="https://oilshell.zulipchat.com/">https://oilshell.zulipchat.com/</a> or have a video call.</li>
+<li>It may make sense to have some kind of &quot;paid intro period&quot;, which could involve making a few failing test pass in Oil.  The idea is that after a short period of work, you should know if it's something you want to do more of.</li>
+</ul>
+</li>
+<li>How long does it last?
+<ul>
+<li>At least 3 months, but I can easily imagine 12 - 24 months of work.  See &quot;Flexibility&quot; below -- it is OK to take on <strong>part</strong> of the project.</li>
+</ul>
+</li>
+<li>How much does it pay?
+<ul>
+<li>If you're interested in the work, I will do everything I can to meet your compensation requirements!  It's funded by a grant, and I hope that if we show that concrete results arise, we can get another grant.</li>
+</ul>
+</li>
+</ul>
+<h3>Code Overview</h3>
+<p>I made an HTML page that lists the code you'll be working with and working near: <a href="https://www.oilshell.org/release/latest/pub/metrics.wwz/line-counts/for-translation.html">https://www.oilshell.org/release/latest/pub/metrics.wwz/line-counts/for-translation.html</a>.</p>
+<p>Note the line counts are quite small!  This is not a 100K line project; it's more like 10K lines.  (The big components are inputs and outputs to the compiler, <strong>not</strong> code we need to write.)</p>
+<h2>Skills Sought</h2>
+<p>In order of importance:</p>
+<ol>
+<li>Hard-won <strong>C++</strong> experience and knowledge
+<ul>
+<li>Generating correct C++ code with a translator (i.e. C++ that works with all compilers)</li>
+<li>Debugging it, analyzing its performance, and optimizing it</li>
+<li>Comfortable using standard tools like gdb / CLion, ASAN, etc.</li>
+</ul>
+</li>
+<li>Understanding of <strong>Garbage Collection</strong>
+<ul>
+<li>We have a working garbage collector, but I found this to be one of the most difficult parts of the project!</li>
+</ul>
+</li>
+<li><strong>Test-driven and terminal-based workflow</strong> (on some kind of Unix)
+<ul>
+<li>A large part of the job is very metrics-driven; the idea is to &quot;make more tests pass&quot;.  I've found that this strategy enables a lot of creativity and productivity!</li>
+</ul>
+</li>
+<li><strong>Type systems</strong>, and the relationship between types and garbage collection.
+<ul>
+<li>We may want to write our own type checker rather than relying on MyPy, but we can discuss it.</li>
+<li>If you understand this Mozilla blog post, that's a good sign: <a href="https://blog.mozilla.org/javascript/2013/07/18/clawing-our-way-back-to-precision/">Clawing Our Way Back to Precision</a> (2013)</li>
+</ul>
+</li>
+<li><strong>Python</strong>
+<ul>
+<li>Most of the code is written in Python.  However I think this can be learned on the job, whereas the C++ parts can't.</li>
+</ul>
+</li>
+</ol>
+<p>General attributes desired:</p>
+<ol>
+<li>You should consider yourself a <strong>&quot;finisher&quot;</strong>.  You should be able to prioritize work and not get lost in micro-optimization (although I hope to get to the point where we can do some fun micro-optimizations!).  Again, this is not a research project; the goal is to make a production quality shell.</li>
+<li>You should have good <strong>communication skills</strong>, and be able to explain your work.  (I encourage applicants in any country, though English is used for all docs and communication.)
+<ul>
+<li>Bonus: if like writing blog posts.  I frequently do this, e.g. with posts tagged #<a href="http://www.oilshell.org/blog/tags.html?tag=project-updates#project-updates">project-updates</a>, and I find it helps me organize work and attract new contributors.</li>
+</ul>
+</li>
+<li>Generally speaking, you should be excited about the high level <strong>goals of the Oil project</strong>.  The blog should not be boring to you :-)</li>
+</ol>
+<h2>Good Signs ...</h2>
+<ul>
+<li>If you think <strong>our C++ is ugly</strong>!  That means you have ideas on how to make it better.  What exists is a proof of concept, designed to show the strategy will work and can perform well.  There are many improvements that can be made, and certain parts that must be rewritten.  If you're convinced a complete rewrite is necessary, then maybe you can make an argument it's feasible, justified by a survey of the code?</li>
+<li>If you enjoy debugging C++ code!  And then writing tests to make sure the bug never comes back.</li>
+<li>If you like using ASAN, profilers, and other such tools (uftrace).  Maybe you have a nice debugger configuration.
+<ul>
+<li>(note: Oil has a GDB pretty printer for ASDL data structures)</li>
+</ul>
+</li>
+<li>If you can read the existing code in <code>oil-native</code>!  If not, the job isn't probably a good fit.</li>
+<li>If you understand how Rust is influenced by C++ (positively and negatively) and ML, that's a good sign.  In a similar way, Oil is written with algebraic data types at the core, but we also want it to be efficient.</li>
+<li>Understanding the Mozilla blog post above -- or better, pointing to even more relevant references!
+<ul>
+<li>This post is relevant since we also have a precise collector.  I didn't find that many documents describing such issues on real world, deployed language projects.  Our GC is also meant to be 100% portable C++.</li>
+</ul>
+</li>
+</ul>
+<h2>Flexibility</h2>
+<p>I don't want to &quot;overspecify&quot; the job.  I can see it going a few ways.</p>
+<ol>
+<li>One person could <strong>&quot;own&quot; the whole task</strong> of translating Oil to C++.  That means you can totally rewrite it if you don't like the solutions I've come up with!  I would like to learn some things from you!</li>
+<li>We could split the project <strong>in half</strong>, and have someone work on the Python front end, and someone work on the runtime.  I would act as the coordinator.
+<ul>
+<li>This might lose some opportunity for creative, holistic solutions.  I like to solve problems end-to-end.</li>
+</ul>
+</li>
+<li>Or any other division of labor that makes sense, and moves the project forward.</li>
+</ol>
+<p>So when I talk to people about this job, I'd like to know what kind of role you're interested in.</p>
+<h3>Subprojects</h3>
+<p>There are a few different starting points / approaches I can imagine.</p>
+<ul>
+<li>Continue making the spec tests go up <strong>without</strong> garbage collection.  This is useful for dipping your toes in, and I think easier than working with the garbage collector.</li>
+<li>Enhance the existing <code>mycpp</code> codebase to translate <code>oil-native</code> with  garbage collection.  This work should be guided by spec tests.  (As mentioned on the blog, it currently works only on <code>mycpp/examples</code>.  It still needs to be hooked up to the <code>oil-native</code> translation.)</li>
+<li>Rewrite the Python front end with Python 3.10 pattern matching.
+<ul>
+<li>At first, this should be guided by the tests in <code>mycpp/examples</code>.</li>
+</ul>
+</li>
+</ul>
+<h3>Trial Period</h3>
+<p>I understand that most people have never &quot;worked for&quot; an open source project!  I've tried to reduce and explain the risk by documenting everything on the blog (see below).</p>
+<p>But if you want to jump in, but aren't sure if you'll like it, I think a one- or two- week <strong>trial period for both sides</strong> makes sense.  You would still get paid for your work, but you wouldn't be under the obligation to finish &quot;everything&quot;.</p>
+<p>I also understand that many people qualified for this job are likely employed!</p>
+<h2>Background Knowledge / Links</h2>
+<ul>
+<li>Blog
+<ul>
+<li><a href="https://www.oilshell.org/blog/2022/03/middle-out.html">Oil is Being Implemented &quot;Middle Out&quot;</a></li>
+<li><a href="https://www.oilshell.org/blog/2022/05/mycpp.html">Brief Descriptions of a Python to C++ Translator</a></li>
+</ul>
+</li>
+<li>Wiki
+<ul>
+<li><a href="Oil-Native-Quick-Start.html">Oil Native Quick Start</a></li>
+<li><a href="Where-Contributors-Have-Problems.html">Where Contributors Have Problems</a> -- in the name of transparency!</li>
+<li><a href="Oil-Dev-Cheat-Sheet.html">Oil Dev Cheat Sheet</a></li>
+<li><a href="Tasks-Under-NLNet-Grant.html">Tasks Under NLNet Grant</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><a href="Compiler-Engineer-Notes.html">Compiler Engineer Notes</a></p>
+  </body>
+</html>
+

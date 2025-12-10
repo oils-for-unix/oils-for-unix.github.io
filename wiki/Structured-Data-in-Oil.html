@@ -1,0 +1,127 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Structured Data in Oil</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Oil will parse text so you don't have to!</p>
+<h3>Links / Use Cases</h3>
+<ul>
+<li><a href="https://www.oilshell.org/blog/2018/11/30.html">What is a Data Frame?  (In Python, R, and SQL)</a> (blog)</li>
+<li><a href="http://www.oilshell.org/blog/2017/09/29.html">Git Log in HTML</a> (blog)
+<ul>
+<li>After that I wrote <a href="Structured-Data-Over-Pipes.html">Structured Data Over Pipes</a></li>
+<li>And <a href="Unix-Tools.html">Unix Tools</a></li>
+</ul>
+</li>
+<li><a href="Oil-and-the-R-Language.html">Oil and the R Language</a></li>
+<li>Other Oil Use Cases:
+<ul>
+<li><a href="https://github.com/oilshell/oil/blob/master/devtools/release.sh#L649">release.sh</a> generates <a href="http://www.oilshell.org/releases.html">releases.html</a></li>
+<li><a href="https://github.com/oilshell/oil/tree/master/benchmarks">benchmarks/*.{sh,R}</a> generates <a href="http://www.oilshell.org/release/0.6.pre18/benchmarks.wwz/osh-parser/">osh-parser report</a>, etc.</li>
+</ul>
+</li>
+<li><a href="https://lobste.rs/s/k10sfa/why_did_i_write_my_programming_projects#c_fjorni">lobste.rs comment on Oil philosophy for structured data</a> (2019)</li>
+<li><a href="https://news.ycombinator.com/item?id=24083931">Hacker News comment on the philosophy for structured data</a> (September 2020)</li>
+<li><a href="https://lobste.rs/s/j6j1ej/relations_as_first_class_citizen#c_zcaddi">Oil's Table Type vs. Relations</a> (lobste.rs, July 2021)</li>
+</ul>
+<h3>Design Docs</h3>
+<ul>
+<li><a href="https://www.oilshell.org/release/latest/doc/qsn.html">QSN: A Familiar String Interchange Format</a> -- spec done, encoder done, still need decoder</li>
+<li><a href="https://www.oilshell.org/release/latest/doc/qtt.html">QTT</a> -- An extension to TSV that builds on top of QSN.
+<ul>
+<li>older: <a href="TSV2-Proposal.html">TSV2 Proposal</a></li>
+</ul>
+</li>
+<li><a href="each-Keyword-in-Oil.html">each Keyword in Oil</a> -- augments xargs, uses TSV2</li>
+<li><a href="Explicit-Framing-Protocol-Proposal.html">Explicit Framing Protocol Proposal</a></li>
+</ul>
+<h3>Curiosities</h3>
+<ul>
+<li><a href="Shell-Almost-Has-a-JSON-Analogue.html">Shell Almost Has a JSON Analogue</a></li>
+</ul>
+<h3>Projects</h3>
+<p>All of these are obviously supported because Oil is a shell!   But there are advantages to a built-in expression language.  (It's deferred for 2020.)</p>
+<p><a href="https://github.com/dbohdan/structured-text-tools">dbohdan/structured-text-tools</a> - <em>A list of command line tools for manipulating structured text data</em></p>
+<ul>
+<li>
+<p>CSV / TSV / etc.</p>
+<ul>
+<li><a href="https://github.com/johnkerl/miller">https://github.com/johnkerl/miller</a> -- <em>Miller is like awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON</em>
+<ul>
+<li>GNU flex lexer for its language: <a href="https://github.com/johnkerl/miller/blob/master/c/parsing/mlr_dsl_lexer.l">https://github.com/johnkerl/miller/blob/master/c/parsing/mlr_dsl_lexer.l</a></li>
+<li>Lemon parser (like sqlite!): <a href="https://github.com/johnkerl/miller/blob/master/c/parsing/mlr_dsl_parse.y">https://github.com/johnkerl/miller/blob/master/c/parsing/mlr_dsl_parse.y</a></li>
+</ul>
+</li>
+<li><a href="https://csvkit.readthedocs.io/en/1.0.3/">https://csvkit.readthedocs.io/en/1.0.3/</a></li>
+<li><a href="https://github.com/BurntSushi/xsv">https://github.com/BurntSushi/xsv</a> -- <em>A fast CSV command line toolkit written in Rust</em></li>
+<li><a href="https://github.com/sustrik/uxy">https://github.com/sustrik/uxy</a> -- parses output of ls and ps into a table-like format, written in Python</li>
+</ul>
+</li>
+<li>
+<p>JSON</p>
+<ul>
+<li><a href="https://github.com/benbernard/RecordStream">https://github.com/benbernard/RecordStream</a> -- <em>commandline tools for slicing and dicing JSON records</em></li>
+<li><a href="https://github.com/aanastasiou/pyjunix">https://github.com/aanastasiou/pyjunix</a></li>
+<li><a href="http://jsonlines.org/">http://jsonlines.org/</a> and <a href="http://ndjson.org/">http://ndjson.org/</a> -- what's the difference?</li>
+<li><a href="https://github.com/kellyjonbrazil/jc">https://github.com/kellyjonbrazil/jc</a> from <a href="https://news.ycombinator.com/item?id=22366638">https://news.ycombinator.com/item?id=22366638</a>
+<ul>
+<li>parses output of netstat etc. and outputs JSON.  Similar to uxy above.</li>
+<li><a href="https://lobste.rs/s/ovregk/bringing_unix_philosophy_21st_century">Bringing the Unix Philosophy into the 21st Century</a> (2019, discussed 8/2021)</li>
+</ul>
+</li>
+<li><a href="https://github.com/tomnomnom/gron">https://github.com/tomnomnom/gron</a> -- convert JSON to <code>grep</code>able and <code>sed</code>able form, and back.</li>
+<li><a href="https://news.ycombinator.com/item?id=24470715">query-json thread</a> with many links -- <em>For everyone pining for a Jq with a different syntax: I have a bunch of links to alternatives collected, you might want to try some of them (some may be for different things than JSON)</em></li>
+<li><a href="https://github.com/tomnomnom/gron">https://github.com/tomnomnom/gron</a> -- Make JSON Greppable</li>
+</ul>
+</li>
+<li>
+<p>HTML</p>
+<ul>
+<li><a href="https://lobste.rs/s/m4nhpb/danburzo_hred_reduce_html_json_from">https://lobste.rs/s/m4nhpb/danburzo_hred_reduce_html_json_from</a></li>
+</ul>
+</li>
+<li>
+<p>Other Text</p>
+<ul>
+<li><a href="https://www.gnu.org/software/recutils/">https://www.gnu.org/software/recutils/</a></li>
+</ul>
+</li>
+<li>
+<p>Binary</p>
+<ul>
+<li><a href="https://relational-pipes.globalcode.info/v_0/index.xhtml">https://relational-pipes.globalcode.info/v_0/index.xhtml</a> -- binary format</li>
+</ul>
+</li>
+<li>
+<p>Common Output Format for unix-like tools: <a href="https://github.com/aniou/cof/wiki/Draft">https://github.com/aniou/cof/wiki/Draft</a> (draft rather than code)</p>
+<ul>
+<li>netstat example, etc.</li>
+</ul>
+</li>
+<li>
+<p>More links/projects: <a href="https://lobste.rs/s/zvallq/pretty_csv_viewing_on_command_line">https://lobste.rs/s/zvallq/pretty_csv_viewing_on_command_line</a></p>
+<ul>
+<li>VisiData looks like an interesting UI.</li>
+</ul>
+</li>
+<li>
+<p>glib GVariants: <a href="https://blogs.gnome.org/alexl/2012/08/10/rethinking-the-shell-pipeline/">https://blogs.gnome.org/alexl/2012/08/10/rethinking-the-shell-pipeline/</a></p>
+<ul>
+<li>links to <a href="https://code.google.com/archive/p/hotwire-shell/">https://code.google.com/archive/p/hotwire-shell/</a></li>
+</ul>
+</li>
+</ul>
+<h3>Examples</h3>
+<p>Miller:</p>
+<pre><code>$ mlr --icsv --opprint --barred \
+  put '$tiv_delta = $tiv_2012 - $tiv_2011; unset $tiv_2011, $tiv_2012' \
+  then sort -nr tiv_delta flins.csv 
+</code></pre>
+<p>It has a nice expression language.  You compute new columns as a function of older ones, then drop them.</p>
+  </body>
+</html>
+

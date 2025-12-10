@@ -1,0 +1,176 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Oils Dev Cheat Sheet</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Here is a list of commands <strong>I often run</strong>.</p>
+<p><strong>The <a href="Contributing.html">Contributing</a> page walks you through the setup</strong>.</p>
+<h2>3 Step Build</h2>
+<p>First you have to get dependencies, which is described on the <a href="Contributing.html">Contributing</a> page.</p>
+<p>Do this every time you <code>git pull</code>, or switch branches:</p>
+<pre><code>. build/dev-shell.sh      # put our build of python2 in your $PATH
+build/py.sh all           # now interpreted bin/osh and bin/ysh are ready
+./NINJA-config.sh         # crawl Python deps and write build.ninja
+</code></pre>
+<p>Build:</p>
+<pre><code>ninja _bin/cxx-dbg/osh    # or any other Ninja target
+</code></pre>
+<p><a href="Oil-Ninja-Build.html">Oil Ninja Build</a></p>
+<h2>Shell Completion</h2>
+<ul>
+<li><code>source devtools/completion.bash</code> gives you completion for the &quot;two level structure&quot; of shell files and functions.  You can hit tab and then it will complete function names.  (TODO: There is some flakiness if you hit tab in the wrong place, but it generally works.  <a href="https://github.com/oilshell/oil/issues/797">#797</a>).</li>
+</ul>
+<p>TODO(andy): replace with &quot;BYO completion&quot;</p>
+<h2>Details</h2>
+<h3>Oils in Python - quick development!</h3>
+<pre><code>build/py.sh all  # create the Python dev build
+
+bin/osh -c 'echo hi'  # directly run dev build
+
+bin/ysh -c 'cd /tmp { echo hi }'  # dev build of YSH
+
+
+test/unit.sh all  # run all Python unit tests
+
+test/spec.sh smoke  # run a single test suite
+
+test/spec.sh smoke -r 0 -v  # run a single test 
+
+test/spec-py.sh osh-all  # run all OSH spec tests
+
+test/spec-py.sh ysh-all  # run all YSH spec tests
+
+build/clean.sh  # remove files created by build/py.sh all
+</code></pre>
+<p>Related: <a href="Spec-Tests.html">Spec Tests</a></p>
+<h2>Static Checks</h2>
+<pre><code>devtools/types.sh check-oils  # check the Oils codebase
+
+test/lint.sh soil-run  # or 'all-py' for speed
+</code></pre>
+<p>Reformatting Python:</p>
+<pre><code>devtools/format.sh install-yapf  # install a specific version that we need to agree on
+
+devtools/format.sh yapf-known  # format all files we care about - SLOW
+
+devtools/format.sh yapf-changed  # better: make sure everything is committed on your branch,
+                                 # it only auto formats what's changed
+
+devtools/format.sh yapf-files osh/cmd_eval.py  # select specific files
+
+</code></pre>
+<p>Reformatting C++</p>
+<pre><code># download and extract Clang (used for coverage and auto-formatting)
+deps/from-binary.sh download-clang
+deps/from-binary.sh extract-clang
+
+devtools/format.sh all-cpp  # reformat the C++ code.  'git diff' to see the result.
+
+</code></pre>
+<h2>oils-for-unix (C++)</h2>
+<pre><code>build/py.sh all  # must build Python before building C++
+
+./NINJA-config.sh  # generate build.ninja
+
+ninja _bin/cxx-dbg/osh
+
+_bin/cxx-dbg/osh -c 'echo hi'  # directly run oil-native
+
+ninja _bin/cxx-opt/osh  # optimized version
+
+# run unit tests in these dirs
+asdl/TEST.sh unit
+cpp/TEST.sh unit
+
+# Run all C++ unit tests
+test/cpp-unit.sh all-tests
+
+# run individual tests with a specific build variant
+
+ninja _bin/cxx-asan/cpp/core_test &amp;&amp; $_
+ninja _bin/cxx-ubsan/cpp/core_test &amp;&amp; $_
+ninja _bin/cxx-gcverbose/cpp/core_test &amp;&amp; $_
+
+
+test/spec-cpp.sh run-file smoke  # run a single suite against oil-native
+
+test/spec-cpp.sh run-file smoke -r 0 -v  # as above
+
+test/spec-cpp.sh run-file smoke -r 0 -p &gt; _tmp/0.sh  # print code to file
+_bin/cxx-dbg/osh _tmp/0.sh                               # run it directly
+gdb --args _bin/cxx-dbg/osh _tmp/0.sh                    # debug it directly
+
+test/spec-cpp.sh osh-all  # run all OSH tests with C++
+
+
+build/clean.sh  # cleans the C++ build too
+</code></pre>
+<h2>mycpp</h2>
+<pre><code>mycpp/TEST.sh test-runtime   # run the unit tests
+
+mycpp/TEST.sh test-translator  # compare mycpp/examples, includes &quot;ninja mycpp-logs-equal&quot;
+
+ninja -j 1 mycpp-logs-equal  # sometimes useful to run serially and isolate failure
+
+ninja -t targets all | sort  # list hundreds of targets (variants).  Use with grep.
+
+
+PYTHONPATH=.:mycpp mycpp/examples/parse.py           # run python example directly
+ninja _bin/cxx-asan/mycpp/examples/parse.mycpp       # make sure C++ translation is up to date
+_bin/cxx-asan/mycpp/examples/parse.mycpp             # run C++ translation 
+
+# shell trick I use to automate the above
+ninja _bin/cxx-asan/mycpp/examples/parse.mycpp &amp;&amp; $_   # $_ runs last arg as command
+
+BENCHMARK=1 _bin/cxx-opt/mycpp/examples/parse.mycpp  # run optimized binary in benchmark mode
+
+_bin/cxx-testgc/mycpp/gc_stress_test               # run an individual test
+_bin/cxx-testgc/mycpp/gc_stress_test -t test_foo   # run an individual case (greatest.h supports -t)
+
+
+# Run a Ninja task.  The task file is &quot;demanded&quot; to run the examples/length.py file.
+# TODO: the dependencies are a little weird here
+
+rm _test/tasks/test/length.py.task.txt
+ninja _test/tasks/test/length.py.task.txt
+</code></pre>
+<h2>Updating Docs</h2>
+<pre><code>build/doc.sh split-and-render doc/json.md  # create HTML
+
+build/doc.sh split-and-render doc/ref/chap-errors.md '' ../../web   # quirk: must pass relative URL
+
+build/doc.sh run-code-in-doc ref/chap-type-method  # check whether the code is valid
+
+build/doc.sh run-code-all  # check that all code is valid
+
+build/doc.sh all-ref       # create HTML for all of doc/ref
+build/doc.sh all-markdown
+
+</code></pre>
+<h2>Wedges</h2>
+<p>Wedges are used for dependencies in two places</p>
+<ol>
+<li>local dev, e.g. shells for spec test</li>
+<li>Soil CI</li>
+</ol>
+<p>The idea is to maintain the CI and dev environments exactly in sync.</p>
+<pre><code>build/deps.sh wedge-deps-debian   # dependencies to build the tarball dependencies!
+
+build/deps.sh install-wedges  # install what you typically need, as above
+
+</code></pre>
+<p>Related:</p>
+<ul>
+<li><a href="https://github.com/oilshell/oil/blob/master/mycpp/README.md">mycpp/README.md</a></li>
+<li><a href="Oil-Native-Quick-Start.html">Oil Native Quick Start</a></li>
+<li><a href="Oil-Dev-Tips.html">Oil Dev Tips</a></li>
+<li><a href="Compiler-Engineer-Job.html">Compiler Engineer Job</a></li>
+<li><a href="Where-Contributors-Have-Problems.html">Where Contributors Have Problems</a></li>
+</ul>
+  </body>
+</html>
+

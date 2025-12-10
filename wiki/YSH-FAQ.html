@@ -1,0 +1,44 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>YSH FAQ</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>This is an initial cut of FAQ based on <a href="https://lobste.rs/s/9dcsmn/tour_oil_language#c_vdakjz">questions from lobste.rs</a>.</p>
+<p>You may want to read <a href="https://oils.pub/release/latest/doc/ysh-tour.html">A Tour of YSH</a> <strong>before</strong> this FAQ.</p>
+<h2>Comparisons</h2>
+<h3>What's the difference between YSH and nushell?</h3>
+<p>One way to look at it is in this table: <a href="https://www.oilshell.org/blog/2023/06/ysh-design.html#survey-of-alternative-shells">Oils is Exterior-First &gt; Survey of alternative shells</a></p>
+<p>That is, the design of YSH is what we call <strong>&quot;exterior&quot;</strong>,  like POSIX shell and OSH.  It's based on <strong>operating system</strong> processes and pipes.</p>
+<p>In contrast, PowerShell, nushell, and Elvish are <strong>&quot;interior&quot;</strong>: they have language- or VM-specific notions of processes and pipes.  They can use the OS primitives, but they are not the  &quot;primary&quot; mechanisms.</p>
+<p>This affects how easy it is to write certain programs.</p>
+<p>It's a tradeoff, but for the scripts I write, &quot;exterior&quot; is generally more powerful because it's closer to the OS.  For Windows, the &quot;interior&quot; design might be more convenient, since Windows exposes functionality as shared libraries, which the PowerShell VM can access.</p>
+<p>But PowerShell is still not &quot;universal glue&quot;.</p>
+<p>I view &quot;interior&quot; designs as &quot;one level up&quot;.  For example, you may use a shell script to glue together a PowerShell script and a nushell script!</p>
+<h2>Design of the Syntax</h2>
+<h3>Why is there an explicit <code>setvar</code> keyword?</h3>
+<p>It's more consistent to parse and explain if we say that expressions are introduced to the right of <code>var</code>, <code>const</code>, and <code>setvar</code>.  Recall that Oil has both expression mode and command mode.</p>
+<p>The syntax is intended to be &quot;huffman coded&quot;: mutation with <code>setvar</code> is less common than <code>const</code>, IMO.</p>
+<p>Note that a bare <code>x = 42</code> does work for config files in Oil, but that requires <code>shopt --set parse_equals</code> (because <code>x = 42</code> in shell runs a <strong>command</strong> named <code>x</code> with arguments <code>=</code> and <code>42</code>!).</p>
+<p>But we want a syntax for mutation that does <strong>not</strong> change between <code>oil:basic</code> and <code>oil:all</code>.  That is, we want <strong>two</strong> languages (OSH and Oil), not three!</p>
+<p>In shell/OSH it's <code>x=mystr</code> (no spaces); in Oil it's <code>setvar x = 'mystr'</code> (quotes required).</p>
+<h3>Why is the keyword called <code>proc</code> ?</h3>
+<p>It's an abstraction that can be thought of as <strong>either</strong> a &quot;procedure&quot; or &quot;process&quot;.  Like an external binary, it can serve both purposes.</p>
+<p>July 2021: The <code>func</code> construct will likely be built <strong>on top of</strong> <code>proc</code>, but it isn't done yet.</p>
+<h3>What's the difference between <code>d.key</code> and <code>d['key']</code> ?</h3>
+<p>The former is syntactic sugar for the latter.  You could <code>d['key']</code> everywhere, and the program would still work.</p>
+<p>If you have a key like <code>d['with spaces']</code>, you have to use the bracketed form.  Something like <code>d-&gt;with spaces</code> is a syntax error because of the space.</p>
+<h3>Why is there both <code>!</code> and <code>not</code> ?</h3>
+<p>The <code>!</code> inverts an exit code; while the <code>not</code> operator inverts a Python- / JS- like boolean.</p>
+<p>The <code>!</code> is only accepted in command mode; and <code>not</code> is only accepted in expression mode.</p>
+<h3>More</h3>
+<ul>
+<li><a href="https://oils.pub/release/latest/doc/warts.html">YSH Language Warts</a></li>
+<li><a href="https://oils.pub/release/latest/doc/ysh-faq.html">YSH Language FAQ</a></li>
+</ul>
+  </body>
+</html>
+

@@ -1,0 +1,358 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Shell WTFs</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Blogged about many of these:</p>
+<ul>
+<li>parsing bash is undecideable -- arrays vs. associative arrays with <code>&quot;${a[i+1]}&quot;</code></li>
+<li>word splitting as a hack for lack of arrays</li>
+<li><code>${}</code> language ambiguity with <code>${####}</code> and <code>${x///}</code>, etc.</li>
+<li><code>exec {fd}&lt; input.txt</code> is a terrible syntax for <code>fd = open('input.txt')</code></li>
+<li><code>test</code> builtin ambiguity</li>
+</ul>
+<p>Other:</p>
+<ul>
+<li>programming errors are confused with runtime errors:
+<ul>
+<li>trying to assign to or <code>unset</code>  a readonly variable just causes a status 1, which can be ignored.  Need <code>errexit</code>
+to make it a hard failure.</li>
+<li>if you pass too many arguments to <code>continue</code>, it prints an error, but might continue anyway (dash/mksh/zsh) or exit the shell (bash)</li>
+</ul>
+</li>
+<li>dynamic scope</li>
+<li><code>errexit</code> problems -- subshell/command sub, local -- two different issues</li>
+<li><code>getopts</code> builtin is implemented in all shells, but <code>OPTIND</code> is a global variable with wildly diverging behavior.  There's no reliable way to tell when it should be reset, because <code>getopts</code> is called in a loop.  This is a fundamental design flaw.
+<ul>
+<li>it also sets globals <code>OPTARG</code> and the second <code>opt</code> argument</li>
+</ul>
+</li>
+<li>issue #3, arithmetic parsing at runtime
+<ul>
+<li>this is actually ShellShock-like behavior in not just bash, but bash and all ksh derivatives!</li>
+</ul>
+</li>
+<li><code>eval</code> and <code>echo</code> shouldn't implicitly join multiple args -- this is a confusion of strings and arrays
+<ul>
+<li>someone at RC was confused about this</li>
+</ul>
+</li>
+<li><code>trap</code> shouldn't take a string to be eval'd?  Why not the name of a function?</li>
+<li>multiple expression languages per type, leads to WTFs
+<ul>
+<li><code>(( a = b ))</code> is assignment of variable names</li>
+<li><code>(( a == b ))</code> is equality of variable names</li>
+<li><code>[ a = b ](-a-=-b-.html)</code> is equality of strings, like <code>[ 'a' == 'b' ](-'a'-==-'b'-.html)</code></li>
+<li><code>[ a == b ](-a-==-b-.html)</code> is equality of strings, like <code>[ 'a' == 'b' ](-'a'-==-'b'-.html)</code></li>
+</ul>
+</li>
+<li>undefined variables <code>0</code> in the arithmetic context</li>
+<li>multiple += operators
+<ul>
+<li><code>a+=b</code> vs. <code>(( a += b ))</code></li>
+</ul>
+</li>
+<li><code>type-compat.test.sh</code> -- horrible runtime parsing of array declarations pointed out by Nix devs
+<ul>
+<li>there is a fundamental redundancy between literals like <code>a=()</code> and <code>declare +a myarray=()</code></li>
+</ul>
+</li>
+<li>runtime globbing -- it shouldn't happen after variable substitution.  Then you can end up globbing untrusted data?  <code>shopt -s simple_word_eval</code> fixes this in Oil.</li>
+<li><code>$* &quot;$*&quot; $@ &quot;$@&quot;</code> are not orthogonal.  You never need <code>$*</code> and <code>$@</code>.  <code>&quot;$*&quot;</code> joins by IFS?</li>
+<li>hacky syntax rules
+<ul>
+<li>here doc <code>EOF</code> vs <code>'EOF'</code> / <code>&quot;EOF&quot;</code> / <code>\EOF</code> -- this is a very hacky rule.  The thing that's easiest to implement.</li>
+<li><code>getopts</code> leading <code>:</code> for error handling is hacky</li>
+</ul>
+</li>
+<li><code>read</code> shouldn't return 1 on lack of newline -- it still modified the variable</li>
+<li><code>[ foo.py == *.py ](-foo.py-==-*.py-.html)</code> shouldn't do globbing, should be a different operator</li>
+<li>bash WTF: a different lex state for <code>[ foo =~ (.*) ](-foo-=~-(.*)-.html)</code> -- no quotes needed, in fact no quotes allowed!
+<ul>
+<li>the <code>( ) |</code> chars are special</li>
+</ul>
+</li>
+<li>arrays:
+<ul>
+<li><code>${myarray}</code> is the same as <code>${myarray[0]}</code></li>
+<li><code>${mystr[@]}</code> is silently allowed</li>
+<li>decay to strings on equality -- <code>[[ &quot;${a[@]}&quot; == &quot;${b[@]}&quot; ]]</code> doesn't work</li>
+<li>until bash 4.4, lack of ability to use empty arrays and set -u
+<ul>
+<li>fundamental confusion between unset variables and empty arrays.  present in <code>mksh</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>extended glob
+<ul>
+<li>overloading of <code>*</code> in <code>*(a*|b)</code></li>
+<li>bash specific: 'shopt -s extglob; echo @(a|b)` gives a syntax error, but if you change the ; to a newline, it
+doesn't.  It does dynamic parsing!!!</li>
+<li>ambiguity of <code>[ !(a == a) ](-!(a-==-a)-.html)</code> -- is it a negation of an equality test, or an extended glob?  See <a href="../blob/master/doc/osh-manual.md">doc/osh-manual.md</a>.</li>
+<li>use case: matching  <code>*.py</code> without <code>*_test.py</code> with extended glob: <code>echo */!(*_test).py</code>
+<ul>
+<li>this syntax is confusing!  not at all like regexes!</li>
+<li>I guess <code>!(*_test)</code> is like a negative lookahead and then <code>.*</code> ?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>var ref
+<ul>
+<li><code>${!ref}</code> quirks: <code>set -u</code> is respected with strings, but not <strong>arrays</strong></li>
+</ul>
+</li>
+<li>Overloaded <code>!</code> and <code>@</code> syntax:
+<ul>
+<li><code>${!ref}</code> is a var ref, <code>${a[@]}</code> is an array, but <code>${!a[@]}</code> is not a ref to an array!  It means something totally different.</li>
+<li>this means that when substituting var refs, it's hard to know how many args will be generated</li>
+</ul>
+</li>
+<li>argumenting parsing: <code>set -eou pipefail</code> is a very confusing syntax to parse.  <code>set -oo</code> or <code>set -ee</code>.</li>
+<li>Too many sublanguages, most of them fully recursive:
+<ul>
+<li>command</li>
+<li>word</li>
+<li>arithmetic</li>
+<li><code>[[</code>, and then at runtime <code>test</code> / <code>[</code></li>
+<li>brace expansion -- this is recursive</li>
+<li>glob -- non-recursive, but extended glob is recursive</li>
+<li>regular expressions -- recursive</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>IFS</code> is used with two different algorithms: splitting a line for <code>read</code>, and &quot;splicing&quot; an unquoted word into
+an argv array.  POSIX says thay are related, but in practice they seem different?  At the very least, one supports
+backslash escaping and the other doesn't (<code>read -r</code>).  Or you can look at it a different way: one supports
+quotes AND backslashes; the other supports just backslashes.</li>
+<li>two different syntaxes for octal C escapes: <code>echo -e '\0377' and echo $'\377'</code>.  FWIW C is the latter -- don't need
+a leading zero, and Python uses it.</li>
+<li>string variables with hidden structure
+<ul>
+<li>the first char of <code>$PS4</code> is treated differently</li>
+<li>characters in <code>$IFS</code> are treated differently, depending on whether they're whitespace or not.</li>
+</ul>
+</li>
+</ul>
+<h2>Command Language</h2>
+<ul>
+<li><code>break</code> or <code>continue</code> in a subshell in a loop is syntactically valid, but doesn't do what it looks like because of the process boundary.  (from Connor at RC, see <code>spec/loop.test.sh</code>)</li>
+<li>Assignments can have redirects:
+<ul>
+<li><code>FOO=$(ls /OOPS 2&gt;/dev/null)</code> vs.</li>
+<li><code>FOO=$(ls /OOPS) 2&gt;/dev/null</code></li>
+<li>assignment builtins can also have redirects</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Prefix bindings on special builtins mean two differnt things
+<ul>
+<li>e.g. <code>FOO=bar cd</code> and <code>FOO=bar eval</code> (special)</li>
+<li>and <code>exec</code> even appears to be a special case</li>
+</ul>
+</li>
+<li>Semicolon vs. newline can be significant !!!  Sometimes it doesn't behave the same as newlines.
+<ul>
+<li>Sometimes shells miss optimizations (<code>test/syscall</code>)</li>
+<li>Bash's failglob behaves differently.  It aborts everything on the same line, even if there's a <code>;</code>.  But it doesn't abort across lines.</li>
+</ul>
+</li>
+</ul>
+<h2>Word Language</h2>
+<ul>
+<li>word elision is confusing and can result in command elision, e.g. <code>$(true)</code>.  From <code>help-bash@</code>.</li>
+<li>Double quotes within double quotes is an awkward syntax, but sometimes necessary: <code>echo &quot;${x:-&quot;a*b&quot;}&quot;</code></li>
+<li>single quoted arg to double quoted brace sub  is treated differently based on operator
+<ul>
+<li><code>&quot;${x:-'default'}&quot;</code> -- single quotes are literals</li>
+<li><code>&quot;${x#'glob'}&quot;</code> and <code>&quot;${x//'glob'}&quot;</code> -- single quotes are processed by the shell</li>
+</ul>
+</li>
+<li>Brace expansion: ascending/descending ranges and positive/negative steps gives too many degrees of freedom.
+The semantics are inconsistent and confusing.  In bash, <code>{1..7..2}</code> and <code>{1..7..-2}</code> are the same thing, but not
+in <code>zsh</code>.</li>
+<li>The same <strong>syntax</strong> is reused for different <strong>semantics</strong>
+<ul>
+<li>sometimes a word is in a context where you need a sequence of strings (<code>EvalWordSequence()</code>):
+<ul>
+<li>SimpleCommand</li>
+<li>for loops</li>
+<li>arrays</li>
+</ul>
+</li>
+<li>sometimes a word is in a context where you need a single string (<code>EvalWordToString()</code>)
+<ul>
+<li><code>x=$word</code></li>
+<li><code>case $word in $pat) ...</code></li>
+<li><code>echo hi &gt; $word</code></li>
+</ul>
+</li>
+<li>&quot;$@&quot; decays in one case but not the other.  shopt -s strict-array eliminates this.</li>
+<li>Oil fixes this by only allowing allowing <code>@words</code> in the &quot;sequence of strings&quot; context, but not in the &quot;string&quot; context</li>
+</ul>
+</li>
+</ul>
+<h2>Builtins</h2>
+<ul>
+<li><code>set</code> without args shows VARIABLES, even though the <code>set</code> builtin sets shell options, not variables!
+<ul>
+<li><code>set -o</code> shows the options, with confusing/inconsistent syntax</li>
+</ul>
+</li>
+<li><code>printf</code>
+<ul>
+<li><code>%c</code> to get a char doesn't respect unicode; it will slice a UTF-8 character, producing binary garbage</li>
+<li><code>%6.4s</code> is overspecified -- <code>%6s</code> is the same</li>
+<li><code>%6.4d</code> does something weird -- it pads with zeros AND spaces.  It doesn't mean &quot;width&quot; and &quot;precision&quot;.</li>
+</ul>
+</li>
+</ul>
+<h2>Glob WTFs</h2>
+<ul>
+<li><code>[[]</code> is a single left bracket.  Conflicts with <code>[:alpha:](:alpha:.html)</code>.  User should write <code>[\[]</code> instead.
+<ul>
+<li>Likewise, <code>[]]</code> should be <code>[\]]</code>.</li>
+</ul>
+</li>
+</ul>
+<h2>Bash-Specific</h2>
+<ul>
+<li>With <code>${#s}</code> or <code>${s:1:3}</code>, invalid utf-8 causes nonsensical results to be returned.  No errors are reported.</li>
+<li>The stack doesn't line up!  <code>BASH_SOURCE</code> is off by one from <code>FUNCNAME</code> and <code>BASH_LINENO</code>  This is documented but makes no sense!  Sort of like the parsing of regexes after <code>=~</code>.</li>
+<li>History substitution syntax is ill-defined, with hacks to avoid conflict with <code>${!indirect}</code>, <code>!(foo|bar)</code>, etc.
+<ul>
+<li>there is a horrible code snippet in <code>bashline.c</code> I believe</li>
+<li>https://github.com/oilshell/oil/commit/22ea84e43289c5ea3e26917b171a8016a88cff26</li>
+</ul>
+</li>
+<li><code>${arr[@]::}</code> means length zero, while <code>${arr[@]: }</code> means length N -- empty expression is zero, unset expression is N
+<ul>
+<li>UNDOCUMENTED: <a href="https://oilshell.zulipchat.com/#narrow/stream/121540-oil-discuss/topic/.24.7Barr.5B.40.5D.3A.3A.7D.20in.20bash.20-.20is.20it.20documented.3F/near/447229187">#oil-discuss &gt; ${arr[@]::} in bash - is it documented?</a></li>
+</ul>
+</li>
+</ul>
+<h2>Categories</h2>
+<p>TODO: organize the criticisms in these categories:</p>
+<ul>
+<li>syntactic puns: the same character is used to mean different things</li>
+<li>opposite problem: different characters/conventions are used to mean the same thing (negation, etc.)
+<ul>
+<li><code>(( a == b ))</code> vs <code>[ a == b ](-a-==-b-.html)</code> (although they differ slightly)</li>
+</ul>
+</li>
+<li>sloppiness with types: string, array, undefined vs. empty</li>
+<li>dynamic parsing -- confusing data and code.
+<ul>
+<li>arithmetic inside strings: <code>s=1+2; [ $s -eq 3 ](-$s--eq-3-.html)</code></li>
+<li><code>echo -e '\n'</code> and <code>printf '\n' &quot;\n&quot;</code> vs. <code>$'\n'</code></li>
+<li>local, declare, etc. and array syntax (<code>type-compat.test.sh</code>)</li>
+<li><code>shopt -s extglob</code> changes the parsing algorithm, and it doesn't work on the same line!!!
+<ul>
+<li><code>bash -c 'shopt -s extglob; echo @(a|b)'</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>macro processing / word expansion <strong>confuses code and data</strong></li>
+<li>the &quot;else-whatever&quot; pattern <strong>confuses code and data</strong>
+<ul>
+<li>globs that don't match evaluate to themselves (fixed by <code>nullglob</code> and <code>simple-word-eval</code>)</li>
+<li>syntax errors in brace expansion evaluate to themselves</li>
+<li>tilde expansion evaluates to itself if it doesn't exist</li>
+</ul>
+</li>
+<li>lack of error checking / invalid input.
+<ul>
+<li><code>echo -e \x</code> is <code>NUL</code> in mksh and zsh, but <code>\x</code> in bash.  It's a syntax error in C.  Shell generally has
+the &quot;keep going&quot; mindset of JavaScript/PHP/Perl, which makes it hard to use.</li>
+<li>likewise with <code>\1</code> -- should be a syntax error.  Or even <code>\d</code> should be <code>\\d</code>.</li>
+<li>TODO: maybe strict-backslash can handle this?</li>
+</ul>
+</li>
+</ul>
+<h1>Too Many Escaping Algorithms</h1>
+<p>Escaping constructs: <code>\</code>, <code>'single quotes'</code>, <code>&quot;double quotes&quot;</code>, and <code>$'C-style strings'</code></p>
+<ul>
+<li>arbitrary <code>CompoundWord</code> to <code>glob()</code> or <code>fnmatch()</code> input, which allows <code>\</code> escaping but not double quoting.</li>
+<li>arbitrary <code>CompoundWord</code> to <code>regcomp()</code> input, where characters like <code>[</code> are special too</li>
+<li>respect <code>\</code> escape in <code>read</code> without <code>-r</code></li>
+</ul>
+<ul>
+<li><code>\n</code> outside of double quotes evalutes to <code>n</code>.  Inside double quotes, it's <code>\n</code> (which is the same as the behavior inside single quotes).  Note that neither evalutes to a newline!  That only happens with <code>$'\n'</code>.</li>
+<li>The quoting of <code>$(command subs)</code> is different than that of <code>backticks</code>, e.g. with respect to double quotes and other backticks.  This is very confusing and shell behaviors diverge once you have 2 or 3 levels of quoting.</li>
+</ul>
+<h1>Too Many Lexer Modes</h1>
+<ul>
+<li><code>BASH_REGEX</code> and <code>REGEX_CHARS</code> lexer modes.  This is orthogonal to the <code>regcomp()</code> algorithm
+<ul>
+<li>Pathological example: <code>[[ foo =~ [ab]&lt;&gt;(foo|bar) ]]</code>  ???</li>
+</ul>
+</li>
+</ul>
+<h1>Too Many Methods of Negation</h1>
+<ul>
+<li>Different leading char for flag: <code>set -e</code> vs <code>set +e</code>, <code>declare -a</code> vs. <code>declare +a</code></li>
+<li>Different flags: <code>shopt -s</code> vs <code>shopt -u</code></li>
+<li>An Extra Flag:
+<ul>
+<li><code>export</code> vs. <code>export -n</code> -- remove the export bit</li>
+</ul>
+</li>
+<li>Different builtin: <code>alias</code> and <code>unalias</code> are opposites
+<ul>
+<li><code>set</code> and <code>unset</code> aren't opposites!  One sets options and argv.  The other unsets variables.</li>
+</ul>
+</li>
+<li>capitalization: <code>echo -e</code> vs <code>echo -E</code></li>
+</ul>
+<h1>Too Many Methods of Showing Internal State</h1>
+<ul>
+<li>No args: <code>set</code> -- prints functions
+<ul>
+<li><code>readonly</code>, <code>export</code> -- prints vars with those properties</li>
+</ul>
+</li>
+<li><code>-p</code> arg:
+<ul>
+<li><code>declare -p</code></li>
+<li><code>shopt -p</code> -- prints both <code>set</code> and <code>shopt</code> options</li>
+<li><code>alias -p</code></li>
+</ul>
+</li>
+</ul>
+<h1>Duplicated External Builtins</h1>
+<ul>
+<li><code>test</code> -- no reason for this other than speed?</li>
+<li><code>time</code> -- because it should be a block?  But you could do this with a more general mechanism</li>
+<li><code>kill</code> -- for job specs</li>
+<li><code>printf</code> -- don't see a reason for this</li>
+<li><code>getopts</code> -- tighter integration, because we want to mutate shell variables.  Doesn't behave like a builtin, but has the syntax of one.</li>
+</ul>
+<h3>Too many Single Letters</h3>
+<ul>
+<li>all the flags: <code>read -n</code>, <code>echo -n</code>, etc.</li>
+<li>not shell, but a common pattern: <code>date +%m</code> vs <code>date +%M</code> -- I can never remember which.  I don't know what <code>+</code> means either.</li>
+<li><code>tar xvzf foo.tar.gz</code> can just be <code>tar -x -v -z &lt; foo.tar.gz</code>
+<ul>
+<li>or <code>tar --verbose --extract --gzip &lt; foo.tar.gz</code></li>
+</ul>
+</li>
+</ul>
+<p>See <a href="Unix-Tools.html">Unix Tools</a></p>
+<h1>Builtins that Take Variable Names</h1>
+<p>A questionable Pattern?  These builtins don't behave like external commands because they can mutate memory.</p>
+<ul>
+<li><code>read varname</code></li>
+<li><code>getopts SPEC varname</code></li>
+<li><code>printf -v name '%s' value</code></li>
+</ul>
+  </body>
+</html>
+

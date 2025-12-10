@@ -1,0 +1,209 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Survey of Config Languages</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<h2>What is a &quot;Config Language&quot;?  What Belongs on this Page?</h2>
+<p>Config languages let you provide parameters to software, usually at runtime.  For example:</p>
+<ul>
+<li>What flags should we pass to an executable?
+<ul>
+<li><code>--port 80</code> to a web server, or <code>--port 8080</code>?</li>
+<li><code>-O0</code> to a compiler for debug builds, or <code>-O2</code> for release builds?</li>
+</ul>
+</li>
+<li>What environment variables?  <code>PATH</code>, <code>PYTHONPATH</code>, etc.</li>
+<li>What kind of container or VM should a program run in?</li>
+<li>How should a program be scheduled?  (both locally and remotely)</li>
+</ul>
+<p>This page is organized by <strong>least</strong> expressive to <strong>most</strong> expressive:</p>
+<ol>
+<li>Languages for String Data</li>
+<li>Languages for Typed Data</li>
+<li>Programmable String-ish Languages</li>
+<li>Programmable Typed Data</li>
+<li>Internal DSLs in General Purpose Languages</li>
+</ol>
+<p>This doesn't imply anything about what solution you should use!</p>
+<p>Oils is on the right of that spectrum: <a href="https://www.oilshell.org/release/latest/doc/hay.html">Hay Ain't YAML - Custom Languages for Unix Systems</a>.  It's the only config language embedded in a shell!  It uses a staged evaluation model.</p>
+<p>This page is <strong>editable</strong>, so feel free to add links below.  And feel free to add notable usages, especially under <em>Who Uses it?</em></p>
+<h2>Languages For String Data</h2>
+<ul>
+<li>The informal <a href="https://en.wikipedia.org/wiki/INI_file">INI file format</a> expresses key-value pairs in sections.
+<ul>
+<li>It's used by git for <code>.git/config</code>, and I believe Mercurial.</li>
+<li>the <a href="https://specifications.freedesktop.org/desktop-entry-spec/latest/value-types.html">Desktop Entry Specification</a> is a widely used formal extension; particularly note <a href="https://specifications.freedesktop.org/desktop-entry-spec/latest/localized-keys.html">locale strings</a>.</li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/XML">XML</a> started as a document language
+<ul>
+<li>But it's often used in IDE &quot;project files&quot;, like Eclipse and Visual Studio.</li>
+<li>It has a model of tags and attributes, but no arrays, integers, booleans, etc.
+<ul>
+<li>But if an <a href="https://en.wikipedia.org/wiki/XML_Schema_(W3C)">XML schema</a> is specified, it may provide such features.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://yaml.org/">YAML</a> is (surprisingly) the de facto control plane language of the cloud!
+<ul>
+<li>Since it also supports object serialization, unsafe deserialization is possible.</li>
+<li>Although it has JSON-like types, it's arguably string-ish because it has type confusion, e.g. the boolean <code>no</code> vs the string <code>&quot;no&quot;</code>.</li>
+<li>Almost all continuous integration / build services use it: sourcehut, Gitlab CI, Github Actions, Circle CI, Travis CI, etc.</li>
+<li>Google App Engine uses it for <code>app.yaml</code></li>
+<li>Kubernetes uses it, often with Go Templates (e.g. Helm)</li>
+<li>One of the original creators wrote a <a href="https://yaml.com/blog/2020-12/in-the-beginning/">blog post in 2020</a> with some of YAML's early history.</li>
+</ul>
+</li>
+<li><a href="https://nestedtext.org/">NestedText</a> is visually similar to YAML, but &quot;it only supports one scalar type: strings.&quot;
+<ul>
+<li>&quot;As such, quoting strings is unnecessary, and without quoting there is no need for escaping.&quot;</li>
+<li>It's one of a few formats used by <a href="https://github.com/kalekundert/parametrize_from_file">Parametrize From File</a>.</li>
+</ul>
+</li>
+<li>Some languages support a limited subset of shell variable syntax. Assignments can refer to previously-defined variables simply, or perhaps with limited extensions.
+<ul>
+<li><a href="https://www.freedesktop.org/software/systemd/man/environment.d.html">environment.d files</a> support <code>:+</code> and <code>:-</code></li>
+</ul>
+</li>
+</ul>
+<h2>Languages For Typed Data</h2>
+<p>These languages allow you to express structured and dynamically typed data, but they aren't programmable.</p>
+<ul>
+<li><a href="https://www.json.org/json-en.html">JSON</a> is derived from JavaScript, but it's now available in almost every language.  It's used by node.js in <code>package.json</code>.
+<ul>
+<li><em>JavaScript Object Notation is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate.</em></li>
+<li><a href="https://json5.org/">JSON5</a> is an extension of JSON that allows trailing commas and comments, among other things. Used by Chromium, Next.js, WebStorm, etc.</li>
+<li><a href="https://github.com/microsoft/node-jsonc-parser">JSONC</a> a more minimal extension which only adds comments. Used by VS Code and Deno.</li>
+</ul>
+</li>
+<li><a href="https://toml.io/en/">TOML</a> looks like an .INI file, but it has JSON-like types.  It's used by Rust in <code>Cargo.toml</code>.
+<ul>
+<li><em>A config file format for humans.  TOML aims to be a minimal configuration file format that's easy to read due to obvious semantics.</em></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Property_list">p-list</a> is a family of formats used to store serialized objects on [NeXTSTEP]-derived systems. In particular, Apple tools widely use it for configuration.</li>
+<li><a href="https://sdlang.org/">sdlang</a> -- appears to be used by Oracle, Bank of America, etc.?
+<ul>
+<li><em>SDLang is a simple and concise way to textually represent data. It has an XML-like structure – tags, values and attributes – which makes it a versatile choice for data serialization, configuration files, or declarative languages. Its syntax was inspired by the C family of languages</em></li>
+</ul>
+</li>
+<li><a href="https://kdl.dev/">kdl</a> -- a close relative of SDLang with a specification and a nice looking website.</li>
+<li><a href="https://github.com/ron-rs/ron">ron</a> -- simple readable data serialization format that looks similar to Rust syntax</li>
+</ul>
+<h2>Programmable String-ish Languages</h2>
+<ul>
+<li><a href="https://pkg.go.dev/text/template">Go templates</a> are for arbitrary text and HTML.
+<ul>
+<li>They are often used to generate variants of a <a href="https://yaml.org/">YAML</a> file.</li>
+</ul>
+</li>
+<li>M4 is used by autotools to generate shell and Make.</li>
+<li>CMake generates Make and Ninja files.</li>
+</ul>
+<h2>Programmable Typed Data</h2>
+<ul>
+<li><a href="https://cuelang.org/">Cue</a>
+<ul>
+<li><em>Validate, define, and use dynamic and text-based data</em></li>
+<li><a href="https://cuelang.org/docs/concepts/logic/">The Logic of CUE</a> -- <em>Types are Values; The Value Lattice</em></li>
+<li><a href="https://cuelang.org/docs/about/#history">CUE History</a> -- <em>Although it is a very different language, the roots of CUE lie in GCL, the dominant configuration language in use at Google. It was originally designed to configure Borg, the predecessor of Kubernetes.</em></li>
+<li>Who uses it?</li>
+</ul>
+</li>
+<li><a href="https://dhall-lang.org/">Dhall</a>
+<ul>
+<li><em>Dhall is a <a href="https://docs.dhall-lang.org/discussions/Programmable-configuration-files.html#">programmable configuration language</a> that you can think of as: JSON + functions + types + imports</em></li>
+<li>Note: <a href="https://lobste.rs/s/gcfdnn/why_dhall_advertises_absence_turing">Dhall isn't turing complete, but this restriction has no useful engineering properties</a>.
+<ul>
+<li>Unconstrained side effects are the thing that matter for configuration, not computation.</li>
+</ul>
+</li>
+<li>Who uses it?</li>
+</ul>
+</li>
+<li><a href="https://github.com/hashicorp/hcl">HCL</a> (Hashicorp Configuration Language) is used by Terraform for AWS.  Similar to UCL.
+<ul>
+<li>*HCL is a toolkit for creating structured configuration languages that are both human- and machine-friendly, for use with command-line tools. Although intended to be generally useful, it is</li>
+</ul>
+</li>
+<li><a href="https://jsonnet.org/">Jsonnet</a> - <em>The Data Templating Language</em>.
+<ul>
+<li><em>Generate config data; Side-effect free; Organize, simplify, unify; Manage sprawling config</em></li>
+</ul>
+</li>
+<li><a href="https://nickel-lang.org/">Nickel</a> -- influenced by Nix, but it's independent of an application.
+<ul>
+<li><em>Write complex configurations. Modular, correct and boilerplate-free</em></li>
+<li><em>Merge; Verify &amp; Validate; Reuse</em></li>
+</ul>
+</li>
+<li><a href="https://nixos.wiki/wiki/Nix_Expression_Language">Nix Expression Language</a> is used to write Nix package definitions.</li>
+<li><a href="https://pkl-lang.org/">Pkl</a> – &quot;An embeddable configuration language which provides rich support for data templating and validation. It can be used from the command line, integrated in a build pipeline, or embedded in a program.&quot;</li>
+<li><a href="https://github.com/bazelbuild/starlark">Starlark</a>
+<ul>
+<li><em>Starlark is a [dialect of Python] intended for use as a configuration language. It was designed for the <a href="https://bazel.build/">Bazel</a> build system</em></li>
+</ul>
+</li>
+<li><a href="https://ucg.marzhillstudios.com/">UCG</a> (Universal Grammar for Configuration) is designed to solve the &quot;templating&quot; problem for JSON, YAML, etc.
+<ul>
+<li><em>Templates can be difficult to manage without introducing hard to see errors in the serialization format they are generating. Most templating engines aren't aware of the format they are templating</em></li>
+<li>Who uses it?</li>
+</ul>
+</li>
+<li><a href="https://github.com/vstakhov/libucl">UCL</a> (Universal Configuration Language)
+<ul>
+<li><em>UCL is heavily infused by <a href="https://en.wikipedia.org/wiki/Nginx">nginx</a> configuration as the example of a convenient configuration system. However, UCL is fully compatible with JSON format and is able to parse json files.</em></li>
+<li>Who uses it?
+primarily targeted towards devops tools, servers, etc.*</li>
+</ul>
+</li>
+<li><a href="https://carvel.dev/ytt">ytt</a> (YAML Templating Tool)
+<ul>
+<li>template and patch YAML and text files using Starlark for flow control</li>
+<li>modular, hermetic, deterministic, side-effect free</li>
+<li>guaranteed valid YAML output (handles value escaping and indentation); aware of YAML structure</li>
+<li>Who uses it?
+<ul>
+<li>originally designed by VMware for Carvel — packaging, distribution, and deployment for Kubernetes</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Proprietary / non-open-source: Google's BCL</p>
+<h2>Internal DSLs in General Purpose Languages</h2>
+<ul>
+<li><a href="https://www.oilshell.org/release/latest/doc/hay.html">Hay Ain't YAML - Custom Languages for Unix Systems</a>.  The only config language that's embedded in a shell!  It uses a staged evaluation model.
+<ul>
+<li><em>Oil adds the missing declarative part to shell.</em></li>
+<li><em>We need a better control plane language for the cloud.</em></li>
+<li><em>Distributed systems are just code and data / processes and files</em>.  We avoid introducing concepts that don't compose.</li>
+</ul>
+</li>
+<li><a href="https://guix.gnu.org/manual/en/html_node/G_002dExpressions.html">G-Expressions</a> in Guile Scheme are used by the <a href="https://guix.gnu.org/">Guix</a> distro</li>
+<li><a href="https://www.ruby-lang.org/en/">Ruby</a> blocks in Vagrant, Rake, etc.</li>
+<li><a href="https://en.wikipedia.org/wiki/Tcl">Tcl</a> commands can also be used to define data.
+<ul>
+<li><a href="https://www.tcl-lang.org/community/tcl2004/Tcl2003papers/duquette.pdf">Data Definition and Code Generation in Tcl</a> (2003, PDF)</li>
+</ul>
+</li>
+</ul>
+<h2>Links</h2>
+<ul>
+<li>Related surveys
+<ul>
+<li><a href="Alternative-Shells.html">Alternative Shells</a></li>
+<li><a href="Alternative-Regex-Syntax.html">Alternative Regex Syntax</a></li>
+</ul>
+</li>
+<li>Notes on Oil: <a href="Config-Dialect.html">Config Dialect</a> / <a href="Hay.html">Hay</a></li>
+<li><a href="https://lobste.rs/s/phqsxk/hay_ain_t_yaml_custom_languages_for_unix">lobste.rs thread on Hay, with more comparisons</a></li>
+</ul>
+  </body>
+</html>
+

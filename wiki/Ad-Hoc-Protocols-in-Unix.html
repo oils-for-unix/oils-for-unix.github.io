@@ -1,0 +1,38 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Ad Hoc Protocols in Unix</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Related: <a href="Unix-Tools.html">Unix Tools</a></p>
+<h3>Data / &quot;microformats&quot;</h3>
+<ul>
+<li>shebang lines: recognized by the kernel</li>
+<li>gF in Vim recognizes filename and line number!</li>
+<li>/* vim */ options</li>
+<li>yacc, in y.tab.c output:
+<ul>
+<li><code>#line 407 &quot;/usr/homes/chet/src/bash/src/parse.y&quot; /* yacc.c:1646  */</code></li>
+<li>this appears to be recognized by code coverage reporting tools?  They show parse.y output.
+<ul>
+<li>This actually <a href="https://gcc.gnu.org/onlinedocs/cpp/Line-Control.html">affects the C compiler's idea of &quot;current file and line&quot;</a>.
+It affects error messages from C compiler, and debug info that goes into/alongside the executable.
+Code coverage tools probably read the debug info.
+I think it was invented as an <em>internal protocol between C preprocessor -&gt; C compiler</em>, but proved useful for public use by code generation tools like yacc...</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>various &quot;text files&quot; in <code>/proc</code> on Linux</li>
+</ul>
+<h3>Code over Pipes</h3>
+<ul>
+<li><code>eval &quot;$(ssh-agent)&quot;</code></li>
+<li><code>gcc -M</code> sends a Makefile fragment</li>
+</ul>
+  </body>
+</html>
+

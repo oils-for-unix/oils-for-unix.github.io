@@ -1,0 +1,154 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Where Contributors Have Problems</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Back to <a href="Contributing.html">Contributing</a></p>
+<p>This page documents where Oils contributors typically have problems.  As of May 2022, the project has existed for 6 years, and Github says there have been 51 contributors.  I would say at least 30 of them contributed code (as opposed to fixing typos, which is welcome).</p>
+<p>Thank you for all the help!</p>
+<p>The goal of this page is to attract the <strong>right</strong> kind of contributor, by being up front about what to expect.</p>
+<h2>1. Trying to use OS X to develop Oils.</h2>
+<p>I've noticed that many contributors try to work on OS X.  I tried this at first too, but now I use a Linux VM under VirtualBox when I'm on OS X.</p>
+<p>A primary reason is that <a href="Spec-Tests.html">Spec Tests</a> run against many shells, some of which aren't built for OS X.  A secondary reason is that it's not clear what version of bash and Python are installed on OS X (although this is also an issue on Linux).</p>
+<p>Follow-ups from comments on this:</p>
+<ul>
+<li><a href="Can-Oil-Use-Nix?.html">Can Oil Use Nix?</a></li>
+<li><a href="https://github.com/oilshell/oil/issues/1153">Issue 1153: Run some CI tasks on FreeBSD / OS X</a></li>
+<li>We now have <a href="https://github.com/oilshell/oil/pull/1156">Gitpod support</a>, so you can change some of Oil's code in the browser!</li>
+</ul>
+<h2>2. We Have a Shell-Based Workflow and Development Environment</h2>
+<p>I use vim, grep, and tmux to navigate the code.  Everything is highly automated with shell scripts.</p>
+<p>However I've noticed that some people don't feel productive with this shell-based workflow.  There is a lot of code generation done by custom tools, which means that it is somewhat fundamental.  (That is, IDEs often don't work well with code generation.)</p>
+<p>However:</p>
+<ul>
+<li>There were times when the build scripts got messy.  And I fixed them in response to contributor feedback.  If you're having problems please complain about it! :)</li>
+<li>I'm not a zealot about this: I also use JetBrains CLion to debug C++, because I need a GUI to debug productively!
+<ul>
+<li>In a distant utopia, there will be a GUI that is complementary to shell ... I just don't want to lose language-oriented composition and low latency with that evolution.</li>
+</ul>
+</li>
+</ul>
+<p>I wrote <a href="Oil-Dev-Cheat-Sheet.html">Oil Dev Cheat Sheet</a> to help with this problem.  Let me know if you are confused by it!</p>
+<h3>Hint: The Code Mostly Has a 2-Level Structure</h3>
+<p>When I need to find something, I simply use grep commands like this:</p>
+<pre><code>$ grep 'oil:basic' */*.py
+
+$ grep CommandParser */*.sh
+</code></pre>
+<p><code>ctags</code> and <code>vim</code> also work well on the codebase, although I often forget to set it up!  <code>devtools/ctags.sh</code> has some shell functions.  And I use <code>grep -n pattern */*.py &gt; out.txt</code>, then open up <code>out.txt</code> in Vim and jump directly to locations.  (<code>Ctrl-]</code>)</p>
+<h2>3. A Very Test-Driven Workflow</h2>
+<p>The shell workflow is also test-driven.  Interpreters and compilers are very intricate, so it's useful to isolate a specific piece of code with a failing test (often <a href="Spec-Tests.html">Spec Tests</a>), and then make it go green.</p>
+<p>Then make sure that nothing regressed in <a href="Soil.html">Soil</a>, our CI system.  These tests run on every commit, and they're published with every release on <a href="https://www.oilshell.org/release/latest/quality.html">the quality.html page</a>.</p>
+<p>I find that this type of workflow makes collaboration easier, and progress very objective.  However, I've noticed that not every contributor is comfortable with it.</p>
+<p>I should add that I think it's valuable for any programmer to learn!  It might seem slower in the short term, but it's faster in the long run.</p>
+<h2>4. C and C++</h2>
+<p>There are no &quot;guard rails&quot; for <code>oils-native</code>!  I had a lot of problems with the garbage collector and mysterious seg faults.</p>
+<p>I spent a lot of time in the debugger.</p>
+<p>I learned not to ignore certain compiler warnings!  (e.g. <a href="https://github.com/oilshell/oil/issues/1128">issue 1128: -Wreturn-type</a>)</p>
+<p>A garbage collector is inherently unsafe code.  The point of writing it is so that the <strong>rest</strong> of our code can be safe Python!</p>
+<ul>
+<li>
+<p><strong>BUT</strong> for the initial stage of the NLNet grant project, I suggest we work on pushing the <strong>1496</strong> <code>test/spec-cpp</code> number up to the <strong>1775</strong> <code>test/spec.sh</code> number, <strong>without garbage collection</strong> (as I've been doing).  This will move the project forward, and prevent us from getting stuck in the mud.</p>
+</li>
+<li>
+<p><strong>Update 2022-10</strong>: We now have less than 7,000 lines of C++ code in the whole project!  This is compared to bash's 140,000+ lines of C.  The goal was to keep the &quot;unsafe core&quot; of the project to a minimum, and I'm happy with the result!  (e.g. compare with every Rust program using jemalloc -- more than 30K lines of hand-written C -- prior to 2018)</p>
+</li>
+</ul>
+<h2>5. Abstraction and Metalanguages</h2>
+<p>This is a little fuzzy, but I've noticed that it can be a stretch for some programmers to view <strong>Python syntax</strong> as something other than Python.</p>
+<p>We are thinking of it differently.  It's a subset of statically typed Python, used as a <strong>metalanguage</strong> for Oils.  This is so it can be translated to fast C++.</p>
+<p><a href="https://www.oilshell.org/blog/2022/03/middle-out.html">Oil Is Being Implemented &quot;Middle Out&quot;</a> (March 2022)</p>
+<ul>
+<li>However, if you make something cool work in Oils, in Python, <strong>you don't have to translate it to C++</strong>!  (It often works with no effort, though this is not guaranteed.)  You should send it to us <strong>first</strong>, and then we'll talk about the translation.  I feel like not enough contributors have taken advantage of this nice property!</li>
+</ul>
+<h2>6. The Git Repo and Release Tarball Are Different</h2>
+<p>Several contributors had issues with this difference.  We have both a &quot;dev build&quot; and &quot;release build&quot;, which is explained on <a href="Contributing.html">Contributing</a>.</p>
+<ul>
+<li>The <strong>dev build</strong> is very easy to make.  You should be able to get <code>bin/osh -c 'echo hi'</code> running on a Linux machine in less than a minute.</li>
+<li>Making the <strong>release build</strong> involves a big build process.  It transforms the git repo into the release tarball.  It's mostly automated in the <a href="Soil.html">Soil</a> continuous build.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>If none of that fazes you, then you might be a great person to work on Oils!  I'm still engaged with this project after many years because it's allowed for an extremely high <strong>pace of learning</strong>.  I have become a much better programmer by working on it.</p>
+<p>And of course the reason I started the project is that I became a much better programmer by <strong>automating everything with shell</strong>!  I'm able to tackle many subprojects at once because everything is automated and written down.</p>
+<p>When I stop working, my mind is able to forget the details of what I did that day.   When I start working, my shell scripts show me where I left off.  They tell me what to do next.</p>
+<p>Related:</p>
+<ul>
+<li><a href="https://www.oilshell.org/blog/2020/01/simplest-explanation.html">The Simplest Explanation of Oil</a></li>
+<li><a href="Compiler-Engineer-Job.html">Compiler Engineer Job</a></li>
+<li><a href="Oil-Native-Quick-Start.html">Oil Native Quick Start</a></li>
+<li><a href="Oil-Dev-Cheat-Sheet.html">Oil Dev Cheat Sheet</a></li>
+</ul>
+<h2>2022-09-06 Update</h2>
+<p>Our first &quot;grant contributor&quot; Jesse had problems with the build system and <a href="Soil.html">Soil</a> CI.  Some of that was due to needing to &quot;unify&quot; two separate C++ GC runtime experiments, which is inherently messy.</p>
+<p>I made over dozen fixes to each of them, see <code>#oil-dev</code> on Zulip.</p>
+<ul>
+<li><code>#include</code> paths are all relative and consistent, e.g. <code>mycpp/common.h</code> and <code>_gen/frontend/syntax.asdl.h</code></li>
+<li>Likewise, Python scripts run with  <code>PYTHONPATH=.</code>  from the root</li>
+<li><a href="Oil-Ninja-Build.html">Oil Ninja Build</a> was greatly overhauled and is very incremental / parallel / fast
+<ul>
+<li>consistent <code>_gen/</code> dir structure</li>
+</ul>
+</li>
+<li><code>{asdl,cpp,mycpp}/TEST.sh</code> is more consistent (but could still use improvement)</li>
+<li>Soil CI
+<ul>
+<li>Merge to <code>master</code> only on green from <code>soil-staging</code>.  The <code>master</code> branch should not be broken!</li>
+<li>It's more consistently containerized, and the UI is better.  It points you to the command to reproduce locally.</li>
+<li>Flakiness drastically reduced</li>
+</ul>
+</li>
+</ul>
+<h2>2022-10 Update</h2>
+<p>The improved build system and CI seem to be working great for Melvin, who got up to speed very quickly.</p>
+<p>The C++ unit test harnesses in <code>*/TEST.sh</code> also run very quickly now -- under a second for an incremental run.</p>
+<ul>
+<li>We practice thorough (and friendly) pull request review.  We can do it over video conference if contributors prefer higher-bandwidth communication (and we've done it this way, although Github PRs are still the default)
+<ul>
+<li>Some contributors haven't worked this way before, and aren't used to &quot;talking&quot; so much about code.  My view is that we should be able to &quot;explain the code with a straight face&quot; :-)  If we can't, then it probably isn't right.</li>
+<li>The goals are to improve the project, spread knowledge, and learn from one another!</li>
+</ul>
+</li>
+<li>We do a lot of code reading of other projects (bash, dash, CPython), and try to learn from their scars (e.g. race conditions in signal handlers)
+<ul>
+<li>I often post design ideas, references to code, and references to papers on <code>#oil-dev</code> on Zulip.</li>
+</ul>
+</li>
+</ul>
+<h2>2023-04 Update</h2>
+<h3>&quot;There's Too Much to Read&quot; / Zulip is Hard to Understand</h3>
+<p>I've gotten the feedback that keeping up with the project is difficult.  There are many parts, and they touch many areas (the kernel, signals, terminals, parsing, data structures, GC, a boatload of test harnesses, a boatload of performance tools, etc.)</p>
+<p>And there are many inter-related threads on Zulip about these things.</p>
+<p>I agree this is a problem, but I would say a few things:</p>
+<ol>
+<li>
+<p>We have ongoing lists of self-contained tasks that for people to get started.  I just put some on <a href="https://oilshell.zulipchat.com/#narrow/stream/121539-oil-dev/topic/More.20Places.20to.20Get.20Started">#oil-dev &gt; More Places to Get Started</a>.  So if a specific piece of work seems interesting, it's OK to just focus on that.  Asking questions on Zulip is very welcome, and I might often point you to another thread about it!</p>
+</li>
+<li>
+<p>We're trying to achieve a coherent design, not one where things are bolted on haphazardly, and Zulip is actually useful in that regard.  It allows deep linking and history.  I sometimes dig up old threads from 2020, and they help with the project!  I also get valuable feedback on Zulip.</p>
+</li>
+<li>
+<p>I think this problem is fundamental to many open source projects.  If I were to try to follow everything going on in CPython or Rust, I would get very confused too!</p>
+</li>
+</ol>
+<h3>Not Knowing Shell / Not Being Able to &quot;Reverse Engineer&quot; It</h3>
+<p>Many people agree with the idea of a new shell YSH.  We are trying to design a small and consistent language that has all the functionality of shell.  It shares the same runtime as OSH, so this is possible.</p>
+<p>But to work on the project, you'll have to know / learn some POSIX shell / bash, and be able to reverse engineer it.  Many small details are not documented in the bash manual, for example.  (FWIW I use a pretty restricted subset of bash myself, but I had to learn a lot more for this project.  Only a few more things made it into my subset :) )</p>
+<hr />
+<p>So even the experienced contributors have had problems with this.  They've remarked that there are <strong>so many</strong> bash scripts in our repo!</p>
+<p>But they also remarked that these scripts <strong>do a lot</strong>, often things that aren't available in other projects:</p>
+<ul>
+<li>Keep the master branch green.  We merge from <code>soil-staging</code> only when 12 different CI tasks pass -- see <a href="http://travis-ci.oilshell.org/github-actions">http://travis-ci.oilshell.org/github-actions</a></li>
+<li>Run C++ unit tests with ASAN (memory safety), UBSAN (undefined behavior), 32-bit, etc.</li>
+<li>Extensive spec tests against other shells</li>
+<li>Being able to write typed Python, and getting C++ performance for free!</li>
+</ul>
+<h3>Recent Dev Friction</h3>
+<p>I keep track of the places where people have problems: <a href="https://oilshell.zulipchat.com/#narrow/stream/121539-oil-dev/topic/Dev.20Friction.20.2F.20Smells">#oil-dev &gt; Dev Friction / Smells</a></p>
+<p>And I summarized a few issues here: <a href="Recent-Dev-Friction.html">Recent Dev Friction</a></p>
+  </body>
+</html>
+

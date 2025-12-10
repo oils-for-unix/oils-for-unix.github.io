@@ -1,0 +1,61 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Running Package Builds with OSH</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>This document describes issues and notes on running OSH as Shell replacement in package building (either as /bin/bash and/or /bin/sh)</p>
+<h2>Nixpkgs</h2>
+<p><a href="https://github.com/Melkor333/oily-nixpkgs">Oily Nixpkgs</a> is an attempt at replacing <code>bash</code> with Oils in the <code>stdenv</code>.</p>
+<h3>Bugs/incompatibilities with nixpkgs (closed means it's fixed. TODO means there is a workaround in place)</h3>
+<ul>
+<li>[x] <a href="https://oilshell.zulipchat.com/#narrow/channel/307442-nix/topic/Replacing.20bash.20with.20osh.20in.20Nixpkgs.20stdenv/near/424259110">zulip</a>, <a href="https://github.com/oils-for-unix/oils/issues/1884">PR</a> - <code>&quot;${a[@]+default}&quot;</code> doesn't properly expand as bash</li>
+<li>[x] <a href="https://oilshell.zulipchat.com/#narrow/channel/307442-nix/topic/Replacing.20bash.20with.20osh.20in.20Nixpkgs.20stdenv/near/430210973">zulip</a>, <a href="https://github.com/oils-for-unix/oils/commit/efd5f56fcb7a5c0820db6eeac28001764e1d0cc1">commit</a> -  <code>${mystr[@]}</code> errors (e.g. it's a string) are often silent in bash</li>
+<li>[x] <a href="https://oilshell.zulipchat.com/#narrow/channel/307442-nix/topic/Replacing.20bash.20with.20osh.20in.20Nixpkgs.20stdenv/near/430274617">zulip</a>, <a href="https://github.com/oils-for-unix/oils/commit/7842a6be6405614d8ff378bc158c87ad47260a4c">commit</a> - <code>:&amp;</code> and <code>;;&amp;</code> in a <code>case</code> statement are missing in Oils</li>
+<li>[x] <a href="https://oilshell.zulipchat.com/#narrow/channel/307442-nix/topic/Replacing.20bash.20with.20osh.20in.20Nixpkgs.20stdenv/near/430308529">zulip</a>, <a href="https://github.com/oils-for-unix/oils/commit/fb0252162f6a72ac853987e4390de158f9195c9b">commit</a> - <code>export x; x=(a b c)</code> fails as only strings can be exported</li>
+<li>[ ] <a href="https://oilshell.zulipchat.com/#narrow/channel/307442-nix/topic/Replacing.20bash.20with.20osh.20in.20Nixpkgs.20stdenv/near/431453896">zulip</a> - <code>let</code> is not implemented
+<ul>
+<li>[ ] Workaround <code>(( EXPR )) | true</code>, path in oily-nixpkgs</li>
+</ul>
+</li>
+<li>[ ] <a href="https://oilshell.zulipchat.com/#narrow/channel/307442-nix/topic/Replacing.20bash.20with.20osh.20in.20Nixpkgs.20stdenv/near/431455011">zulip</a>, <a href="https://oilshell.zulipchat.com/#narrow/channel/307442-nix/topic/Assoc.20Array.20Quoting">zulip thread</a> - Oils requires quotes in certain assoc array expansions, e.g. <code>${myarr[a]-}</code> needs to be <code>${myarr['a']}</code> in Osh. See also <a href="https://www.oilshell.org/blog/2016/10/20.html">blog post</a>
+<ul>
+<li>[ ] patch in oily-nixpkgs</li>
+</ul>
+</li>
+<li>[ ] <code>[[ -v assoc[arr] ]]</code> failed silently. Fixed but need to find link in zulip</li>
+<li>[x] <a href="https://oilshell.zulipchat.com/#narrow/channel/307442-nix/topic/Expected.20.29.2C.20got.20word.2ECompound">zulip</a>, <a href="https://github.com/oils-for-unix/oils/issues/1906">gh issue</a>, certain <code>[ ... =~ ... ](-...-=~-...-.html)</code> are a syntax err in Oils</li>
+<li>[x] <a href="https://oilshell.zulipchat.com/#narrow/channel/307442-nix/topic/if.20.28.28.20.29.29.3B.20then.20token.20can&#x27;t.20be.20used.20in.20prefix.20position">zulip</a>, <a href="https://github.com/oils-for-unix/oils/commit/b8ec0f726c96cc34d696fcc0660e5b3138c87bc4">commit</a> <code>if (( )); then</code> doesn't work on bash
+<ul>
+<li>sane alternative: <code>if (( 0 ));</code></li>
+</ul>
+</li>
+<li>[ ] <a href="https://oilshell.zulipchat.com/#narrow/channel/307442-nix/topic/.28.28.28.20not.20parsed.20like.20bash">zulip</a> - <code>(( a ) b )</code> is parsed as arithmetic in Osh
+ending in a syntax err instead of as nested subshells
+<ul>
+<li>Wontfix. <a href="https://github.com/oils-for-unix/oils/commit/ed2e2ac0731158f32c346c0a7a6d28b36ca442db">added to known differences</a></li>
+<li>[ ] patch in oily-nixpkgs</li>
+</ul>
+</li>
+<li><a href="https://oilshell.zulipchat.com/#narrow/channel/307442-nix/topic/mpfr.20package.20build.20failure.20-.20DLT_OBJDIR">zulip</a> Bug with <code>IFS=\</code>
+<ul>
+<li>[ ] TODO (fixed with <code>check_ifs_backshlash_broken=:</code></li>
+</ul>
+</li>
+<li>[ ] <a href="https://oilshell.zulipchat.com/#narrow/channel/307442-nix/topic/read.20-u.20FD">zulip</a> <code>read -u $FD</code> is not implemented (fix: <code>read &lt;&amp;$FD</code>)</li>
+<li>[x] <a href="https://oilshell.zulipchat.com/#narrow/channel/502349-osh/topic/Perl.20package.20build.20failure.20-.20Nix/with/508274956">zulip</a>  <a href="https://github.com/oils-for-unix/oils/commit/5fce0cee993d1bf10307c2f261a1e49e728dd9da">commit</a> nested <code>make</code> in different directory fails with <code>Directory not found</code></li>
+</ul>
+<h2>Alpine</h2>
+<p><a href="https://github.com/Melkor333/oily-pine">Oily Pine</a> is an attempt at replacing <code>/bin/sh</code> and <code>/bin/bash</code> with Oils using the <a href="https://gitlab.alpinelinux.org/alpine/aports/-/blob/master/testing/oils-for-unix/APKBUILD?ref_type=heads">package in testing</a> which provides packages <code>oils-for-unix-binsh</code> and <code>oils-for-unix-bash</code>.</p>
+<h3>Bugs/incompatibilities with nixpkgs (closed means it's fixed. TODO means there is a workaround in place)</h3>
+<ul>
+<li>[x] <a href="https://oilshell.zulipchat.com/#narrow/channel/502349-osh/topic/Perl.20package.20build.20failure.20-.20Nix/with/508274956">zulip</a>  <a href="https://github.com/oils-for-unix/oils/commit/5fce0cee993d1bf10307c2f261a1e49e728dd9da">commit</a> Repro of nested <code>make</code> in different directory fails with <code>Directory not found</code> found in nixpkgs</li>
+<li>[ ] <a href="https://oilshell.zulipchat.com/#narrow/channel/502349-osh/topic/alpine.20build.20failures.20-.20.3Dword.20is.20not.20allowed/with/518837526">zulip</a> <code>=word</code> is a parsing error in OSH (should return <code>=word command not found</code> when executed - <code>shopt -s strict_eval</code> should be ysh only)</li>
+</ul>
+<p>Related: <a href="Running-ble.sh-with-OSH.html">Running ble.sh with OSH</a></p>
+  </body>
+</html>
+

@@ -1,0 +1,61 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Structured Data Over Pipes</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Up: <a href="Structured-Data-in-Oil.html">Structured Data in Oil</a></p>
+<p>Takeaway from http://www.oilshell.org/blog/2017/09/19.html</p>
+<h2>Minimal Solution, That Basically Exists</h2>
+<ul>
+<li>Use <code>%</code> format strings, as is a common convention.</li>
+<li>Implement a way to output the <code>NUL</code> byte.   <code>git log</code> uses <code>%x00</code>, and <code>find -printf</code> uses <code>\0</code>.</li>
+<li>Use UTF-8 encoding for strings.  <code>\0</code> can't appear in UTF-8 strings, except as a terminator.</li>
+</ul>
+<p>Advantages:</p>
+<ul>
+<li>It's already a common practice.  See <a href="Unix-Tools.html">Unix Tools</a>.
+<ul>
+<li>Works with <code>xargs -0</code> (which was meant for <code>find -print0</code>)</li>
+<li><code>%x00</code> is a trivial patch if it exists.</li>
+</ul>
+</li>
+<li>You can save serialization cost by selecting the fields you want.</li>
+<li>In an escaping context, you can make this safe against against adversarial input.</li>
+</ul>
+<p>Disadvantages:</p>
+<ul>
+<li><code>%s</code> is not that readable.  But this can be mitigated by Oil <a href="Metaprogramming.html">Metaprogramming</a>.  That is, turning it into <code>&quot;hash: $hash commit: $commit&quot;</code>.</li>
+</ul>
+<h2>Other Solutions</h2>
+<ul>
+<li>JSON for structured (and proper escaping)</li>
+<li>CSV for tabular data (and proper escaping)
+<ul>
+<li>Also need a foo.csv_schema for the types.  JSON has types in the data encoding, but CSV doesn't.</li>
+</ul>
+</li>
+<li>Provide <code>%#s</code> for a length prefix, for truly binary data.  What use cases exist?
+<ul>
+<li>Alternative: base64 encode</li>
+<li>Alternative: pass the file system path of the file (could be in memory on <code>tmpfs</code>).</li>
+</ul>
+</li>
+<li>Netstrings -- for fixed formats</li>
+</ul>
+<h2>Languages with Pipe-Like Features</h2>
+<ul>
+<li>Elm: <a href="https://www.dailydrip.com/blog/understanding-pipes-in-elm.html">Understanding Pipes in Elm</a> -- <em>In Elm we have the pipe operator (&lt;| or |&gt;). The pipes can be |&gt; (pipe forward) and &lt;|(pipe backward). It represents how the data is being passed.</em></li>
+<li>Elixir</li>
+<li>R -- with <code>%&gt;%</code> and <code>-&gt;</code> and magritter</li>
+<li><a href="https://gitlab.com/tulip-lang/tulip/blob/master/doc/intro.md">Tulip</a> shell-like / Haskell-like language</li>
+<li>Clojure ?</li>
+<li>Haskell ?</li>
+</ul>
+<p>I don't think Julia has it.</p>
+  </body>
+</html>
+

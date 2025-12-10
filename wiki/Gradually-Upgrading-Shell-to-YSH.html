@@ -1,0 +1,78 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Gradually Upgrading Shell to YSH</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>The slogan of Oils is that it's <em>our upgrade path from bash to a better language and runtime</em>.</p>
+<p>How exactly does that work?  This page will give you an idea.  Written in response to <a href="https://lobste.rs/s/d9xics/bourne_shell_bash_aren_t_right_languages">this lobste.rs thread</a>.</p>
+<h2>Step 1: Run <code>osh myscript.sh</code></h2>
+<p>Most shell scripts should run as is.  The biggest difference may be better error messages when the script fails.  (If you want gory details, see the <a href="https://www.oilshell.org/release/latest/doc/known-differences.html">Known Differences doc</a>, but again these differences are small and rare.)</p>
+<p>Optional: change the shebang line to something like <code>#!/usr/local/bin/osh</code>.</p>
+<h3>New Features</h3>
+<p>You can now start using features like <code>var</code>, <code>const</code>, <code>setvar</code>, and <code>proc</code>.  You can just write them anywhere in the middle of your shell program!</p>
+<pre><code>: ${x=default}   # old-style shell code
+
+const name = 'World'
+var x = {greeting: &quot;Hello $name&quot;}  # A Python/JavaScript-like dictionary, with shell strings!
+
+proc mycopy(src, dest) {        # named parameters!
+  cp --verbose &quot;$src&quot; &quot;$dest&quot;   # You still need this quoting, which is ugly
+                                # The next step allows you to get rid of it.
+}
+
+mycopy mytest /tmp              # a proc is just like a shell function
+
+</code></pre>
+<p>(Note: early in Oils' life, the project was aiming for automatic translation from bash to Oils.  This is no longer a goal, although the work could be revived by an interested party.)</p>
+<h2>Run Tests If You Have Them</h2>
+<p>If you have a test suite for your program, run it with OSH, e.g. <code>osh foo_test.sh</code>.</p>
+<p>Oils is currently able to run the git test framework, and it may run others.  TODO: Add more to <a href="Shell-Programs-That-Run-Under-OSH.html">Shell Programs That Run Under OSH</a>.  (Oils should also have its own test framework in the future.)</p>
+<h2>Step 2: Add <code>shopt --set ysh:upgrade</code> To the Top of Your Program</h2>
+<p>This breaks a few things, but opens up more features.</p>
+<p>See <a href="http://www.oilshell.org/release/latest/doc/deprecations.html">Shell Language Deprecations</a></p>
+<p>The most common one is probably subshell:</p>
+<pre><code># No longer valid
+(cd /tmp; ls -l) 
+
+shopt --set ysh:upgrade  # enable new YSH behavior (parsing and runtime)
+
+# The new way to write subshells
+forkwait { cd /tmp; ls -l }  
+
+# Better for the cd case.  Saving and restoring state is done with blocks, not processes!
+cd /tmp { ls -l }            
+
+</code></pre>
+<p>In exchange for changing your subshell syntax, you get Python-like expressions in <code>if</code> and <code>while</code>:</p>
+<pre><code>if (x &gt; 0) {
+  echo &quot;$x is positive&quot;
+}
+</code></pre>
+<p>You don't have to remember how to type <code>[ &quot;$x&quot; -gt 0 ]</code> or <code>[ $x -gt 0 ](-$x--gt-0-.html)</code> or <code>test &quot;$x&quot; -gt 0</code>, or the differences between them.  Oils has Python-like expressions.</p>
+<p>Other changes:</p>
+<ul>
+<li>One of the biggest changes is <a href="http://www.oilshell.org/release/latest/doc/simple-word-eval.html">Simple Word Evaluation</a>.  This means you can now write <code>cp --verbose $src $dest</code> without the quotes.
+<ul>
+<li>You can also splice an array with <code>cp --verbose @list_of_files $dest</code>.  This doesn't mangle your filenames!</li>
+</ul>
+</li>
+<li>If you had something like <code>echo @mylabel</code> in your shell script, you should change it to <code>echo '@mylabel'</code>  (with quotes) to avoid invoking splicing.  The <code>@</code> is only special at the beginning of a word.</li>
+</ul>
+<h2>Step 3: Run with <code>bin/ysh</code></h2>
+<p>This breaks more things, and is still subject to change.  That said, I encourage you to try it and tell me what happens!  Dozens of people have given feedback on the language and improved it.</p>
+<p><a href="Where-To-Send-Feedback.html">Where To Send Feedback</a></p>
+<h2>Related</h2>
+<ul>
+<li><a href="OSH-versus-Oil.html">OSH versus Oil</a></li>
+<li>More motivation for upgrading: <a href="https://www.oilshell.org/why.html">Why Use Oils?</a></li>
+<li><a href="http://www.oilshell.org/release/latest/doc/idioms.html">Oils Language Idioms</a>: nicer ways to write code</li>
+<li><a href="What-Is-Expected-To-Run-Under-OSH.html">What Is Expected To Run Under OSH</a></li>
+<li>Older: <a href="Migration-Guide.html">Migration Guide</a> (Is there anything on this page we should rescue?  Probably <code>strict:all</code>)</li>
+</ul>
+  </body>
+</html>
+

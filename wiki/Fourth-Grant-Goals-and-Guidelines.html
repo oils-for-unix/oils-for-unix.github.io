@@ -1,0 +1,100 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Fourth Grant Goals and Guidelines</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Thank you for participating in the 4th NLnet grant for Oils !</p>
+<p>This page is a reminder of my ideas for</p>
+<ol>
+<li>Reaching our <strong>project</strong> goals</li>
+<li>Ensuring a good / rewarding experience for <strong>contributors</strong>
+<ul>
+<li>It shouldn't be a chore to stick around in the years to come!</li>
+</ul>
+</li>
+</ol>
+<p>My feeling is that people work on Oils for some combination of:</p>
+<ol>
+<li>Building a better shell in the future (OSH and YSH)</li>
+<li>The challenge</li>
+<li>Improving debugging, testing, and coding skills</li>
+<li>Improving writing skills</li>
+<li>Having a public record of concrete accomplishments</li>
+</ol>
+<p>(and feel free to let me know if there is something else you're getting, or <strong>not</strong> getting, from this work)</p>
+<p>I know it's <strong>a lot</strong> of difficult work, for not that much monetary reward!</p>
+<p>I wrote this after writing <a href="October-2025-Posting.html">October 2025 Posting</a></p>
+<h2>Main Project Goals</h2>
+<h3>Prove That We Can Build Real Distros with OSH</h3>
+<p>That's the title of the Kanban board: https://github.com/orgs/oils-for-unix/projects/1/views/1</p>
+<p>The general idea is to move bugs from <strong>left</strong> to <strong>right</strong>.</p>
+<p><strong>Any</strong> movement is a good thing -- we purposely set it up so you don't have to take on the whole problem!  This project is necessarily <strong>collaborative</strong></p>
+<p>(For some color, Samuel's work on <a href="https://yosemitesam.ch/oily-pine-01/">oily-pine</a> inspired this work.  He found many good bugs, that our other work wasn't finding.  And  I know nobody  besides us will fix these bugs.  We need funding and a concerted effort to fix these bugs.)</p>
+<h3>But Also Provide a Stable OSH Language Definition</h3>
+<p>We <strong>don't</strong> necessarily have to fix every bug -- our goal is to <strong>either</strong> fix each issue explain / <strong>provide a patch</strong> for it.</p>
+<p>This is why documentation and writing are important.  A language has to be explained to its users!</p>
+<h3>Social Goal / Help Others Help Us</h3>
+<p>But actually that goal might be secondary to the social goal.</p>
+<p>Since we're on our 4th NLnet grant, and most of the project is &quot;in shape&quot;, I really want <strong>others</strong> to be able to apply for NLnet grants in the future!</p>
+<p>This work is pretty <strong>legible</strong> and <strong>objective</strong>, so I think it's a good candidate for funding.</p>
+<p>In contrast, work on <strong>YSH</strong> is hard to explain, and hard to plan / estimate.  Some of it is <strong>research</strong>.</p>
+<p>You could call it <strong>illegible</strong> or less legible, from the POV of funders.</p>
+<p>And that's OK, because I will continue to work on YSH anyway.</p>
+<h2>Tactics for Moving Forward</h2>
+<h3>Any Movement on the Kanban Board is Progress</h3>
+<p>As mentioned, you don't have to take on the whole problem!  Different people are good at different things</p>
+<h3>I Do Things Step-Wise</h3>
+<p>This is a <strong>corrolary</strong> of the above.  You might want to take on &quot;a whole problem&quot;, but it still helps to do things in steps.</p>
+<p>That is, the kanban board refelcts how I <strong>actually</strong> do things:</p>
+<ol>
+<li>Reproducing a bug is the first step.</li>
+<li>Reducing a bug to a small test case is a <strong>separate</strong> step.  You need a &quot;blank mind&quot;.</li>
+<li>Fixing the bug -- <strong>any fix</strong> is progress, no matter how ugly it is.
+<ul>
+<li>I often <strong>lean on the CI</strong> -- if I change this, <strong>what breaks?</strong></li>
+<li>That's also the reason I will ask you to write comprehensive tests for new features -- so we can lean on the CI on the future.</li>
+</ul>
+</li>
+<li>Refactoring afterward is important
+<ul>
+<li>To keep the codebase clean.  It's over <strong>9 years</strong> old now!  And IMO still fun and productive to work with.</li>
+</ul>
+</li>
+<li>Removing legacy OSH features from YSH is important
+<ul>
+<li>Examples: empty <code>argv</code> semantics, <code>set -</code> semantics, <code>trap</code> quirks, ...</li>
+</ul>
+</li>
+<li>Writing is important
+<ul>
+<li>It can be a <strong>harsh test</strong> of your ideas, which is good!</li>
+<li>Do you really understand a topic?  Do new ideas stand up to scrutiny?  Can you explain yourself well?</li>
+</ul>
+</li>
+</ol>
+<h3>Writing is Encouraged (and it's hard)</h3>
+<p>It spreads knowledge, and you can even teach yourself about a problem by writing about it.</p>
+<p>Writing about a bug often takes <strong>longer</strong> than fixing a bug -- that's normal.  But actually I think a good goal is to be able to write more quickly.  That should come with repetitions.</p>
+<h3>Taking a Break is Good</h3>
+<p>One of the good things about this project is that it's not a &quot;real job&quot;!  Everyone is working on it part time (except me), so it should fit into your schedule.</p>
+<p>(Probably the biggest risk is that if you don't read Zulip for awhile, the &quot;story&quot; can get lost ...  i.e. are we going to achieve our goals?)</p>
+<h2>Caveat: Clang Didn't Replace GCC</h2>
+<ul>
+<li>OSH is probably  better for <strong>new</strong> distros ... unless a large group of people does a large amount of work</li>
+<li>my experience is that many distro maintainers don't know shell well
+<ul>
+<li>(although this can also be precisely because shell is so hard to learn)</li>
+</ul>
+</li>
+</ul>
+<h2>Related</h2>
+<ul>
+<li><a href="October-2025-Posting.html">October 2025 Posting</a></li>
+</ul>
+  </body>
+</html>
+

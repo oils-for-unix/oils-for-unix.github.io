@@ -1,0 +1,95 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Completion Chat November 2019</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Back to <a href="Shell-Autocompletion.html">Shell Autocompletion</a></p>
+<p>Notes from discussion:</p>
+<h2>Philosophy / Problem</h2>
+<ul>
+<li>I think there are two different problems: one for &quot;legacy&quot; code, and another if you're going to make the user rewrite the flag parser in a different language
+<ul>
+<li>symbolic execution probably makes sense to try to extract completion from legacy C code.
+<ul>
+<li>although it's possible that some information necessary for completion doesn't exist in the code</li>
+</ul>
+</li>
+<li>But if I was to design some subset of sh or Oil to allow &quot;dual purpose&quot; flag parsers and completion functions, then maybe some easier algorithm is possible.   Or it would be more like an API than an algorithm</li>
+</ul>
+</li>
+<li>my view (Andy) is that if you want to be general you should support a language that's closer to what the original program is written in, not a declarative language</li>
+<li>I wanted Oil to obey some basic invariants like &quot;there should be some suffix of the suggested completion that will NOT result in a syntax error&quot; :)
+<ul>
+<li>although I guess that doesn't quite cover it, because <code>grep myfile.c</code> doesn't result in a syntax error, but it's not a good completion IMO</li>
+</ul>
+</li>
+<li>opt-in vs. opt-out -- browsers have you opt OUT by backspace, shells generally have you opt in with TAB
+<ul>
+<li>I think suggestions should be automatic, but modifying the user's buffer should be opt in (unlike chrome)</li>
+</ul>
+</li>
+<li>http://tenex.opost.com/hbook.html -- talks about a completion system in the OS.  <code>esc</code> for completion and <code>?</code> to display options.
+<ul>
+<li>I think moving completion into the binary itself, using an API provided by the shell, can accomplish something
+similar</li>
+</ul>
+</li>
+</ul>
+<h2>Observations About Existing Systems</h2>
+<ul>
+<li>fish tries to complete <em>filenames</em> for the pattern arg to <code>grep</code>, which is incorrect
+<ul>
+<li>For example you can see here it doesn't know anything about the command structure, only flags: https://github.com/fish-shell/fish-shell/blob/master/share/completions/grep.fish</li>
+<li>bash-completion doesn't appear to know that either</li>
+<li>however zsh <em>does</em> know that the first arg to <code>grep</code> isn't a file</li>
+</ul>
+</li>
+<li><code>ls | grep</code> and <code>ls | wc -l</code> make sense because the second commands read from stdin, but <code>ls | ls</code>  doesn't.  But none of bash/zsh/fish understand that.</li>
+</ul>
+<h2>API</h2>
+<p>I think it can be as simple as an API to throw exceptions for command errors, e.g. consider:</p>
+<pre><code>grep --no-filename
+grep --max-count
+grep --max-count=
+</code></pre>
+<p>These all result in syntax errors, and some of them are different.  Right now most commands aren't consistent about how they report errors.</p>
+<p>But the &quot;carrot&quot; is if they are consistent and use an Oil API, then they will completion for free, and it will be correct.</p>
+<hr />
+<p>Of course you also need to display completions when there are no syntax errors, like</p>
+<pre><code>grep pattern file1.c &lt;TAB&gt;
+</code></pre>
+<p>should complete another file, even though the prefix is a valid command</p>
+<p>only the command knows</p>
+<ol>
+<li>if an flag takes an argument</li>
+<li>If so, what kind of argument it is</li>
+</ol>
+<p>So the syntax error can include a completion type, like</p>
+<pre><code>raise SyntaxError('FILE', 'file expected')
+raise SyntaxError('HOST', 'host expected')
+
+raise SyntaxError('arg expected')  # a command arg, not flag arg
+</code></pre>
+<p>You could implement such a parser/API in any language but I would start with Oil.  I guess you could do it in <code>sh</code> with global variables since it doesn't have rich return values/exceptions.</p>
+<p>That is another instance of the problem where the sh language isn't expressive enough to express basic things about its problem domain.</p>
+<hr />
+<ul>
+<li>the success case is a problem, you might have to force the user to return a &quot;completion hint&quot; as well as parsed options, e.g.</li>
+</ul>
+<pre><code>def Parse(argv):
+  # maybe raise syntax error
+  return opts, CompletionHint('FILE')  # success, but could be more args
+</code></pre>
+<h2>IR Approach</h2>
+<p>And I mentioned there also another approach that's more like information retrieval -- parse all the successful commands from history, and complete based on that.  That eliminates some of the &quot;boiling the ocean&quot; problem, and can also be used for ranking.</p>
+<p>i.e. bash on Ubuntu will complete something 500 commands by default from an empty state (and it's slow).  but obviously it would be better if it ranks it by the commands you actually use.</p>
+<p>I think that's pretty powerful but I haven't explored it yet</p>
+<p>I think if you were to really evaluate it from an HCI perspective, it would basically force you to do ranking, because it would be such a big win</p>
+<p>bash does no ranking / priority but I think fish does some.  zsh doesn't appear to either</p>
+  </body>
+</html>
+

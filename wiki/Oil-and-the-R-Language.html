@@ -1,0 +1,92 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Oil and the R Language</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Up: <a href="Structured-Data-in-Oil.html">Structured Data in Oil</a></p>
+<p>I've mentioned to several people that Oil will have a <strong>table data structure</strong> influenced by the <a href="R-language%7Chttps://www.r-project.org/about.html.html">R language|https://www.r-project.org/about.html</a> for statistical computing.</p>
+<p>Why add tables to Oil?  The slogan I'm using is that <strong>the output of &quot;ls&quot; and &quot;ps&quot; are both tables</strong> (<a href="https://www.oilshell.org/blog/2018/11/30.html#why-write-about-data-frames">blog post</a>).  It would be nice to have a uniform way of selecting columns, filtering rows with boolean expression, sorting by a columns, making histograms, etc.</p>
+<p>Why will they be influenced by R?  Because R is a language built around tables (<strong>data frames</strong> in R terminology).  That is, it uses the data model of <strong>heterogeneous typed columns</strong> (contrast with Matlab, which is based on homogeneous vectors/matrices, and Mathematica, which is based on Lisp-like symbols).</p>
+<p>Although data frames have a scientific metaphor (rows are observations and columns are variables), they're still applicable to the shell.  Oil won't have advanced statistical functions, but it will be very good at manipulating data.</p>
+<p>Another way to think about it is that the Unix [cut, join, paste, etc.|https://code.snipcademy.com/tutorials/linux-command-line/text-processing/cut-paste-join](cut -join -paste -etc.|https://code.snipcademy.com/tutorials/linux-command-line/text-processing/cut-paste-join.html) tools are <strong>annoying hacks</strong> that we'll subsume with a proper table data structure.</p>
+<h3>Examples</h3>
+<p><a href="Data-Frames-Cheat-Sheet%7Chttps://github.com/ajkl/dataframes-cheatsheet.html">Data Frames Cheat Sheet|https://github.com/ajkl/dataframes-cheatsheet</a></p>
+<p>It's not clear exactly what syntax I'll use.  R has at least 3 different syntaxes:</p>
+<ol>
+<li>base R data frames: <code>df[df$age &gt; 30,]</code></li>
+<li><a href="data.table%7Chttps://cran.r-project.org/web/packages/data.table/index.html.html">data.table|https://cran.r-project.org/web/packages/data.table/index.html</a> package: <code>dt[age &gt; 30,]</code> (I like this better)</li>
+</ol>
+<ul>
+<li><code>dt[row_expr, col_expr, by=...]</code></li>
+</ul>
+<ol>
+<li><a href="dplyr%7Chttp://genomicsclass.github.io/book/pages/dplyr_tutorial.html.html">dplyr|http://genomicsclass.github.io/book/pages/dplyr_tutorial.html</a> package: explicit <code>select()</code>, <code>filter()</code> composed using the <code>%&gt;%</code> pipeline operator.</li>
+</ol>
+<ul>
+<li><a href="dplyr-backends%7Chttps://gist.github.com/piccolbo/3d8ac40291f4eaee644b.html">dplyr backends|https://gist.github.com/piccolbo/3d8ac40291f4eaee644b</a></li>
+</ul>
+<h2>SQL?</h2>
+<p>Data frames are just like SQL tables, but they're in memory, and the query language is more like a mathematical expression than English (<code>SELECT * FROM ... WHERE ... GROUP BY</code>).</p>
+<p>Another way I think of it is that <strong>R is the only language without the ORM problem.</strong>.  In many languages, it's common to map SQL tables, which use the relational model, to native objects in the language.</p>
+<p>In R there is no impedance mismatch.  There's even a popular R package called <a href="sqldf%7Chttps://cran.r-project.org/web/packages/sqldf/index.html.html">sqldf|https://cran.r-project.org/web/packages/sqldf/index.html</a> that lets you use SQL syntax on data frames.</p>
+<p>SQL syntax doesn't compose.  Syntax like this is supported, but ugly:</p>
+<pre><code>SELECT name, age from (SELECT name, age from (SELECT name, age, from inner_table) where ...) where ...)
+</code></pre>
+<p>It would be nicer to write this in a left-to-right fashion, like a pipeline.</p>
+<h2>Interactivity</h2>
+<p>Another interesting thing about R is that it's primarily an interactive language, much like shell.  This is in contrast to Python/Perl/Ruby/JavaScript.</p>
+<p>R has good completion of function names, function arguments, and path names in its default REPL, unlike Python.</p>
+<h2>Related Links</h2>
+<ul>
+<li>
+<p><a href="tidyverse%7Chttps://blog.rstudio.org/2016/09/15/tidyverse-1-0-0/.html">tidyverse|https://blog.rstudio.org/2016/09/15/tidyverse-1-0-0/</a> by Hadley Wickham (sometimes Hadleyverse)</p>
+<ul>
+<li><a href="Tidy-Data%7Chttp://vita.had.co.nz/papers/tidy-data.html.html">Tidy Data|http://vita.had.co.nz/papers/tidy-data.html</a> -- A good paper explaining the philosophy.  It's basically an algebra of tables, similar to the relational algebra,
+but geared toward data analysis and numerical data.</li>
+<li>ggplot2 -- most powerful and concise plotting library by a mile, using the Grammar of Graphics, although it's quite abstract.</li>
+<li>ggvis is the newer interactive version.</li>
+<li>plyr, dplyr .  dplyr reads left-to-right like shell pipelines.   It has the <strong>pipe operator</strong> <code>%&gt;%</code>.  Oil
+should just use <code>|</code>.</li>
+</ul>
+</li>
+<li>
+<p><a href="Pandas%7Chttp://pandas.pydata.org/.html">Pandas|http://pandas.pydata.org/</a> imports the R model of data frames in to Python.</p>
+</li>
+</ul>
+<h2>Serialization</h2>
+<p>Design idea: have a convention of <code>foo_data.csv</code> and <code>foo_metadata.csv</code> / <code>foo_schema.csv</code>.  This gets around the R problem where it has to guess about the data type of a CSV column.  It often does a bad job (e.g. <code>stringsAsFactors=FALSE</code> should be the default).</p>
+<p>Are there any other serialization formats?  TODO: Link to new ones.</p>
+<h2>Comparison to Shell</h2>
+<p>R is like shell in that it's a somewhat crappy language, but <strong>a lot of work gets done with it</strong>.  They're both interactive languages for non-programmers.</p>
+<p>The syntax of R is pretty good, but has semantics can be surprising and cause bugs.  The lack of distinction between scalars and vectors is a big problem.</p>
+<p>The implementation is also slow, memory-hungry, and otherwise naive (lots of globals).</p>
+<h2>Language Design</h2>
+<p>[Evaluating the design of the R language|https://scholar.google.com/scholar?cluster=7289073113769360932&amp;hl=en&amp;as_sdt=0,5&amp;sciodt=0,5](Evaluating-the-design-of-the-R-language|https://scholar.google.com/scholar?cluster=7289073113769360932&amp;hl=en&amp;as_sdt=0 5&amp;sciodt=0 5.html) -- fantastic paper</p>
+<ul>
+<li>Scheme / JavaScript-like, with lazy evaluation, so it has the potential for <a href="Metaprogramming.html">Metaprogramming</a> everywhere.  Instead of evaluating expression, you can compute on it.</li>
+</ul>
+<h2>Appendix: Silly ways to select fields</h2>
+<ul>
+<li>
+<p><code>sort -k 1,1</code></p>
+</li>
+<li>
+<p><code>cut -f 1 -d ','</code></p>
+</li>
+<li>
+<p><code>awk '{print $1}'</code></p>
+</li>
+<li>
+<p>ps, ls -- have lots of flags for controlling the fields</p>
+</li>
+<li>
+<p><code>find</code>, <code>stat</code>, <code>time</code>, etc. have printf-style format strings.  This is similar to selecting columns and formatting them.  <code>xargs</code> is missing <code>--format</code>.</p>
+</li>
+</ul>
+  </body>
+</html>
+

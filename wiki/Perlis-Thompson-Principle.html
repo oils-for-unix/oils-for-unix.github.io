@@ -1,0 +1,236 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Perlis Thompson Principle</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p><strong>UNDER CONSTRUCTION</strong></p>
+<p>The Perlis-Thompson Principle is an idea in software architecture.  It's arguably the most important one, because it explains the evolution and scaling of the largest and longest-lived software systems, like Unix and the Web.  It also suggests where they fall short.</p>
+<p>I wrote many blog posts that mention it, starting in July 2021.</p>
+<p>Eventually it converged more on <strong>narrow waists</strong>, a very related concept.  These are the two best posts:</p>
+<ul>
+<li><a href="//www.oilshell.org/blog/2022/02/diagrams.html">The Internet Was Designed With a Narrow Waist</a> (February 2022)</li>
+<li><a href="//www.oilshell.org/blog/2022/03/backlog-arch.html">A Sketch of the Biggest Idea in Software Architecture</a> (March 2022)</li>
+</ul>
+<p>and this is a survey post:</p>
+<ul>
+<li><a href="http://www.oilshell.org/blog/2021/12/review-arch.html">Retrospective: Software Architecture</a> (December 2021)</li>
+</ul>
+<p>More Background:</p>
+<ul>
+<li><a href="https://www.oilshell.org/blog/2021/07/blog-backlog-1.html">Summer Blog Backlog: Understanding and Using Shell</a>.  This post gives <a href="https://www.oilshell.org/blog/2021/07/blog-backlog-1.html#concepts">a short outline of the principle</a> and its motivation.</li>
+<li><a href="https://www.oilshell.org/blog/2021/07/blog-backlog-2.html">Summer Blog Backlog: Distributed Systems</a>.  This was widely discussed as <a href="https://news.ycombinator.com/item?id=27903720">Kubernetes Is Our Generation's Multics</a>.  Claim: In the future, we'll use a distributed OS that adheres to the Perlis-Thompson Principle.  It will have fewer concepts and compose naturally.  It should use Unix-style language-oriented composition.</li>
+<li><a href="https://www.oilshell.org/blog/2021/07/cloud-review.html">Blog Review: Distributed Systems</a> (July 2021)</li>
+<li><a href="https://www.oilshell.org/blog/2021/08/history-trivia.html">Unix Shell: History and Trivia</a> (August 2021)
+<ul>
+<li><a href="https://lobste.rs/s/ww7fw4/unix_shell_history_trivia">My comments on this article</a> explaining the narrow waist idea from various angles</li>
+<li><a href="https://lobste.rs/s/pdpjvo/google_zx_3_0_release#c_wbt31y">Similar Debate on Google/zx Release</a> with author of Rash shell (related to lowest common denominator)</li>
+</ul>
+</li>
+</ul>
+<h2>Definitions</h2>
+<p>Here's a literal summary of what Perlis and Thompson said:</p>
+<blockquote>
+<p>Write software where everything is an X (e.g. a string, pointer, cons cell, table, vector, window, etc.)</p>
+</blockquote>
+<p>They say to use a <em>single</em> data structure, or <em>single</em> notion.  However I think that is too absolute, and there are caveats.</p>
+<p>Here's a <strong>revised, short definition</strong> of the principle:</p>
+<blockquote>
+<p>Software with fewer concepts composes, scales, and evolves more easily.</p>
+</blockquote>
+<p>Here's a long definition:</p>
+<blockquote>
+<p>Consider using fewer concepts, data structures, and types in foundational software like programming languages and operating systems.</p>
+<p>This style allows for more composition and ad hoc reuse.  It scales in multiple dimensions.  It evolves gracefully (and messily) over decades.</p>
+<p>When introducing a new concept, define a way to reduce it to an existing concept.</p>
+</blockquote>
+<h2>Key Concepts / Terms / Slogans</h2>
+<ul>
+<li>&quot;Everything is an X&quot;</li>
+<li>Writing <code>O(M + N)</code> code instead of <code>O(M * N)</code>.  Huge difference!</li>
+<li>Coding the Perimeter vs. Coding the Area (from the Unix vs. Google video)</li>
+</ul>
+<h2>The &quot;Narrow Waist&quot;: A Special Case of the Perlis-Thompson Principle</h2>
+<h3>What Is it?  What are other names for it?</h3>
+<p>A software ecosystem that uses a narrow waist is following the Perlis-Thompson Principle in a particular way.  The narrow waist idea relates to <strong>data</strong>: data structures, interchange formats, and network protocols.  The Perlis-Thompson principle is arguably more general and refers to &quot;concepts&quot; like Unix processes and Emacs buffers that aren't quite data.</p>
+<p>It's also known as:</p>
+<ul>
+<li>Thin Waist</li>
+<li>Hourglass Model</li>
+<li>Lowest Common Denominator</li>
+<li>Networking Terms: &quot;Distinguished Layer&quot; or &quot;Spanning Layer&quot;</li>
+</ul>
+<h3>Prominent Examples of Narrow Waists</h3>
+<p>This idea spans operating systems, networking, and programming languages.</p>
+<ul>
+<li>TCP/IP is a narrow waist between physical issues like wired/wireless and application protocols like the web, e-mail, IRC, Usenet, etc.
+<ul>
+<li>The narrow waist of the Internet has arguably moved to HTTP over time, with e-mail, chat, Usenet-style discussions all migrating to web apps</li>
+</ul>
+</li>
+<li>An operating system API like POSIX is a narrow waist between
+applications and hardware
+<ul>
+<li>Win32.  Related: WINE is the most stable ABI for Linux games!</li>
+</ul>
+</li>
+<li>LLVM is a narrow waist between programming languages and computer architectures</li>
+<li>Byte streams / Unix-style text are a narrow waist between storage/networking abstractions and application-specific schemas</li>
+<li>Pandoc is a narrow waist between document formats.  Instead of writing <code>O(N^2)</code> document converters, you design an IR, and write N translators <strong>to</strong> the IR, and N translators <strong>from</strong> the IR.</li>
+<li><a href="https://lobste.rs/s/snflhf/why_is_sql_so_successful#c_4wuqbi">SQL is a Narrow Waist</a> (Jamie Brandon)</li>
+</ul>
+<h3>Unix Philosophy and Narrow Waists</h3>
+<p>Unix and shell are centered around:</p>
+<ul>
+<li>Byte streams / Files</li>
+<li>File Descriptors</li>
+<li>File Systems</li>
+<li>Processes</li>
+<li>New: OCI Containers (derived from Docker).  This is a new narrow waist.
+<ul>
+<li>It is a live concept!  Just like the narrow waist of the Internet moved from TCP/IP to HTTP.</li>
+</ul>
+</li>
+</ul>
+<h3>What Isn't a Narrow Waist?</h3>
+<p>Just to show the the concept isn't vacuous, here are things that are not narrow waists:</p>
+<ul>
+<li><strong>No</strong>: MS Word files or Excel spreadsheets.  These formats are too complicated, to the point that they're tied to specific applications.  On the other hand, a CSV file <strong>is</strong> a narrow waist -- you export it from Excel so you can read it into other applications.
+<ul>
+<li>CSV is also an example of a <strong>bad</strong> narrow waist.  Not all narrow waists are well designed!  Sometimes they just evolve.  JSON is a better one that was explicitly designed.</li>
+</ul>
+</li>
+<li><strong>No</strong>: JPEG.  It's optimized for small size and display.  To support other operations, like various kinds of editing, it's converted to a format that's easier to work with.</li>
+<li><strong>No</strong>: the monolithic &quot;Docker&quot;.  But OCI images (derived from Docker) are.</li>
+</ul>
+<h3>Examples of &quot;Projection&quot; Onto a Narrow Waist</h3>
+<ul>
+<li>If your website is served as JavaScript code that executes and renders a page, then it can't be indexed by a search engine.  So what webmasters do is render it as text, &quot;projecting&quot; it on to the narrow waist that search engines understand.</li>
+<li><a href="https://github.com/mgree/ffs">Greenberg's FFS</a> (file file system)
+<ul>
+<li>And most software that uses FUSE.  It borrows the Unix command toolset for a different data structure.</li>
+</ul>
+</li>
+</ul>
+<p>Related</p>
+<ul>
+<li>&quot;Desugaring&quot; in compilers.  Design an IR that has fewer concepts that your language reduces to.  This simplifies the back end of the compiler and aids reasoning about correectness.  (I recall Walter Bright of D saying that Andrei Alexandrescu really pushed for more desugaring in the semantics of in D 2.0, the second version of the D language.)</li>
+<li>UTF-8!  UTF-8 cleverly uses the 8th bit and &quot;reduces&quot; to ASCII.  Go has a single string type because it's based on UTF-8, while Python has both str and unicode types.  The latter design causes composition issues, like when interfacing with OS paths.
+<ul>
+<li>Ken Thompson invented UTF-8 so it's no coincidence that it obeys the Perlis-Thompson principle :)</li>
+</ul>
+</li>
+</ul>
+<h3>Examples of M x N Code Explosions</h3>
+<p>See <a href="M-by-N-Code-Explosions.html">M by N Code Explosions</a></p>
+<h3>Textbook References (TODO)</h3>
+<ul>
+<li>TODO: There should be a networking textbook that talks about narrow waists / hourglass</li>
+<li>TODO: There should also be a compiler textbook.  I know I've seen a diagram of IRs as a waist between programming languages and CPU architectures.</li>
+</ul>
+<p>Not sure about OS textbooks, but the concept definitely applies there too.</p>
+<h3>Links on Narrow Waists</h3>
+<ul>
+<li><a href="https://www2.eecs.berkeley.edu/Pubs/TechRpts/2012/EECS-2012-5.pdf">HTTP: An Evolvable Narrow Waist For a Future Internet</a> (PDF, 2010).  This and Van Jacobsen's Named Data Networking introduced me to the concept of a narrow waist.  (Even though it's in both networking and compiler textbooks.)</li>
+<li><a href="https://news.ycombinator.com/item?id=27914632">My HN Comment on the Kubernetes-Multics analogy</a> (2021): I trace the narrow waist to Kleinrock via Brewer, but there might be a more original reference</li>
+<li><a href="https://www.youtube.com/watch?v=3Ea3pkTCYx4">Unix vs. Google</a> (2016): a video by Kevin Greer.  Has visualizations of Unix vs. Multics: coding the area vs. coding the perimeter.  <code>O(M * N)</code> problems.</li>
+<li><a href="https://graydon2.dreamwidth.org/193447.html">Always Bet on Text</a> (Graydon Hoare, 2014).  <a href="https://news.ycombinator.com/item?id=8451271">196 HN Comments</a>.
+<ul>
+<li><em>Text is everything. My thoughts on this are quite absolute: text is the most powerful, useful, effective communication technology ever, period.</em></li>
+<li><em>It can be indexed and searched efficiently, even by hand. It can be translated. It can be produced and consumed at variable speeds. It is asynchronous. It can be compared, diffed, clustered, corrected, summarized and filtered algorithmically. It permits multiparty editing.</em></li>
+<li>This is a restatement of what Perlis said: <em>It's better to have 100 functions on 1 data structure than 10 functions and 10 data structures</em>.</li>
+</ul>
+</li>
+<li><a href="https://cacm.acm.org/magazines/2019/7/237714-on-the-hourglass-model/fulltext">On the Hourglass Model</a> CACM July 2019.  An attempt at formalizing (&quot;Hourglass lemma&quot;, &quot;Hourglass theorem&quot;, &quot;deployment scalability&quot; i.e. Unix and Internet becoming ubiquitous).  Talks about supporting layers on the bottom and supported applications on the top.  Talks about Unix process creation (which I think is true but could be better explained).  Good to see people thinking about this but I think a &quot;literary&quot; treatment will generate more insights.</li>
+</ul>
+<h3>The Networking Community Explicitly Thinks In Terms of the Narrow Waist / Hourglass</h3>
+<p>It doesn't appear that the operating systems community does!  And definitely not the &quot;cloud&quot; operating system vendors.</p>
+<ul>
+<li>https://www.iab.org/wp-content/IAB-uploads/2010/11/hourglass-london-ietf.pdf (2001)</li>
+<li>https://arxiv.org/ftp/arxiv/papers/1607/1607.07183.pdf</li>
+<li>https://rh.gatech.edu/news/69297/study-shows-how-internets-architecture-got-its-hourglass-shape</li>
+<li>https://people.eecs.berkeley.edu/~kubitron/cs262/lectures/lec02-E2E-SystemR.pdf</li>
+</ul>
+<h2>Links on The Perlis-Thompson Principle in General</h2>
+<p>Common threads here: either &quot;everything is an X&quot;, or explicit nonlinear codebase scaling problems -- <code>O(M * N)</code> or <code>O(N^2)</code>.</p>
+<ul>
+<li><a href="http://blog.ezyang.com/2012/11/extremist-programming/">Extremist Programming</a> (2012).  <em>What if everything were a function?  What if everything were an object?</em></li>
+<li><a href="https://lukeplant.me.uk/blog/posts/everything-is-an-x-pattern/">Everything is an X</a> by Luke Plant (11/2020).  Talks about programming languages and user interfaces like Emacs.
+<ul>
+<li>https://news.ycombinator.com/item?id=25078209</li>
+<li>https://lobste.rs/s/g7c661/everything_is_x</li>
+</ul>
+</li>
+<li><a href="https://old.reddit.com/r/ProgrammingLanguages/comments/lliyuo/are_there_any_interesting_programming_languages/">Are There Any Interesting Programming Languages Based on Particular Data Structures?</a> (2021) -- My comment with 70 upvotes.  <strong>Most</strong> good programming languages have this flavor!
+<ul>
+<li>C has an equivalence between arrays and pointers: <code>a[i] == *(a + i) == *(i + a) == i[a]</code> !  Doug McIlroy mentioned this in regard to Dennis Ritchie's genius.</li>
+</ul>
+</li>
+<li><a href="https://news.ycombinator.com/item?id=29735298">Table-Oriented Programming</a> (2002).  This page advocates &quot;Everything is an X, where X == Table&quot;!  The explicit goal is to reduce the complexity of programming.  Tables admit generic operations.  An array is the &quot;goto&quot; of the collections world.</li>
+<li><a href="https://lobste.rs/s/mjo19d/unix_microservice_platforms">Unix and Microservice Platforms</a> (2021) by Brandon Bloom.  Refers to the Unix vs. Google video.  Good example of microservices vs. auth/monitoring/metrics/etc.</li>
+<li><a href="https://lobste.rs/s/wprseq/on_unix_composability#c_wjyjwq">My Comment on &quot;On Unix Composability&quot;</a> (2021) -- SSH transport solves an O(M * N * K) problem: (apps like ssh, scp, git, rsync) X (auth methods like password or public key) X method of encryption</li>
+<li><a href="https://lobste.rs/s/euswuc/glue_dark_matter_software">Glue: The Dark Matter of Software</a> (2021).  Makes an explicit claim that N features requires O(N^2) glue code.  References the Unix vs. Google video.
+<ul>
+<li>Author is working on a programming language Objective S.</li>
+</ul>
+</li>
+<li><a href="https://programmingisterrible.com/post/67568917018/why-filesystems-have-loose-coupling-and-your-protocol">Why file systems have loose coupling and your protocol doesn't</a> (2013)
+<ul>
+<li>RPC style vs. File system style.  Plan 9 uses the latter.</li>
+<li><em>This design is often called the “Uniform Interface Constraint”, and is present in one of the more popular protocols, HTTP.</em>.  This has a bearing on whether you can write transparent middleboxes, e.g. a cache.   You can write a generic HTTP cache, but not a generic RPC cache (because you don't know what the methods are and if they're idempotent, etc.)</li>
+<li>Fielding's REST dissertation has a fairly clear description of the Uniform Interface Constraint and the resulting tradeoffs: <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm">https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm</a></li>
+</ul>
+</li>
+<li>Concrete Example: <a href="https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/">What Color Is Your Function?</a> is actually a Perlis-Thompson argument.  It's a problem of composition.</li>
+</ul>
+<p>I've been thinking about this for a long time!</p>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=6131335">Comment echoing an objection to Bret Victor's work</a> (2013).  I make an explicit <code>O(M * N)</code> argument.
+<ul>
+<li><em>I was waiting for him to mention what I think of as the Unix/Plan 9/REST principle the whole time</em> -- that is what I was calling the Perlis-Thompson principle in my head in 2013</li>
+</ul>
+</li>
+<li><a href="https://news.ycombinator.com/item?id=11875040">Comment on Doug McIlroy's Unix Taste Comments</a> (2016).  <em>Everything is a file</em>, etc.</li>
+<li><a href="https://news.ycombinator.com/item?id=26861751">The web was a modest and humble (and thus brilliant) extension of Unix</a> (2021).  Unlike Kubernetes and Unix, the new concepts compose with the old ones!  It doesn't &quot;shit all over&quot; OS abstractions.</li>
+</ul>
+<h2>Special Cases</h2>
+<ul>
+<li>Uniform Interface Constraint of REST is arguably an instance of the Perlis-Thompson principle.  Instead of many different styles of API, your system can use one kind of API with generic operations.  (Google's architectural guidance to its engineers moved toward REST in later years.)</li>
+<li>What Color Is your Function?  Is a Perlis-Thompson Argument.  If you have two different kinds of function, then you have the problem of composing them.</li>
+</ul>
+<h2>Counterpoints / Fallacies</h2>
+<p>The Perlis-Thompson Principle goes against the intuition of many programmers.  They are weighing the tradeoffs from a <strong>code</strong> perspective, not a <strong>systems</strong> perspective.  Those perspectives can lead to opposite conclusions.</p>
+<ul>
+<li><a href="https://lobste.rs/s/vl9o4z/case_against_text_protocols#c_wsdhsm">A Case Against Text Protocols</a> (2020).  My &quot;Unix text as a narrow waist&quot; comment argues against a common misunderstanding.  Text is the reason we have good tools.  As an example, it doesn't make sense to make an WASM editor and WASM version control system.  Instead the binary WASM format is projected on to text, and we use text editors and SCMs like git.</li>
+<li><a href="https://lobste.rs/s/izpz2n/on_missed_opportunities_static_types">On the Missed Opportunities of Static Types</a> (2021).  There is a tradeoff: more types give you some easy safety checks, but can inhibit composition!</li>
+<li><a href="https://news.ycombinator.com/item?id=25162706">FFI Fallacy on the Vale Programming Language</a> (2020)
+<ul>
+<li>People who advocate &quot;standardized&quot; RPC systems are often attached to a similar fallacy.</li>
+<li>A function in C is not a function in Python is not a function in Rust.  You need a lowest common denominator, or you require O(N^2) glue.  I remember someone actually writing to write a specific R-Java bridge rather than using IPC.</li>
+</ul>
+</li>
+<li><a href="https://blog.rfox.eu/en/Programming/Programmers_critique_of_missing_structure_of_operating_systems.html">Programmer's Critique of Missing Structure of Operating Systems</a> (2020).  A long article lamenting the repetitiveness of parsing a plethora of data formats.  It's reaching toward ideas like a single-level store.
+<ul>
+<li>My response: This could be done in an &quot;application framework&quot;.  The problem is nobody can agree on the lowest common denominator.  There's no reason to think that putting more code in the kernel will solve this problem.</li>
+<li>An operating system has two &quot;sides&quot;: one part faces the hardware, and one part faces applications.  He wants the OS to do more work for applications.  I think a tighter goal for the operating system is to proivde a minimal abstraction to virtualize and share hardware, while providing safety and isolation.  It should make applications &quot;possible&quot;; making applications &quot;easy&quot; and factoring into
+shared libraries is a separate job.</li>
+</ul>
+</li>
+<li><a href="https://www.oilshell.org/blog/2021/01/philosophy-design.html#shells-should-shell-out">Shells Should Shell Out</a> (2021).  I question the two-tiered design of PowerShell, Elvish, and nushell.  cmdlets aren't processes.  They need semantic rules to convert between internal and external representations.
+<ul>
+<li>Argument: The lowest common denominator between a PowerShell script and an Elvish script is a Bourne shell script :)  Byte streams are the lowest common denominator.</li>
+</ul>
+</li>
+</ul>
+<h2>Related Pages</h2>
+<ul>
+<li>[Slogans, Fallacies, and Concepts](Slogans -Fallacies -and-Concepts.html) -- Understanding shell.</li>
+<li><a href="Patterns-and-Anti-Patterns.html">Patterns and Anti-Patterns</a> -- Using shell.</li>
+<li><a href="Composable-Distributed-OS.html">Composable Distributed OS</a> -- Applying the Perlis-Thompson Principle</li>
+</ul>
+  </body>
+</html>
+

@@ -1,0 +1,46 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Using OSH as a Default Shell</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>At some point, you may want to change your default login shell to OSH from
+another shell. To do this:</p>
+<ol>
+<li>
+<p>You must add your Oils executables to your system's list of available shell
+programs (typically in <code>/etc/shells</code>).</p>
+</li>
+<li>
+<p>You must tell your system to use an Oils executable as the default shell. On
+Linux and macOS you can use <code>chsh</code> to do this:</p>
+<pre><code class="language-sh">chsh -s /absolute/path/to/osh
+</code></pre>
+</li>
+</ol>
+<h2>In Terminal Emulators</h2>
+<p>Many terminal emulators let you specify a startup command to run when the
+program opens. In <a href="https://sw.kovidgoyal.net/kitty/">Kitty</a>, for example, you
+set the <code>shell</code> setting in your Kitty configuration file:</p>
+<pre><code># ~/.config/kitty/kitty.conf
+
+shell    osh -i
+</code></pre>
+<p>The <code>-c</code> (command) flag is described in <code>man osh</code>, but other available flags are
+not: Oils inherits many of its flags from the POSIX shell. See <a href="https://man7.org/linux/man-pages/man1/sh.1p.html">its man
+page</a> for information about
+them. If you want to do special stuff on startup, other than run <code>osh</code>, you may
+need some of these options. You may need to add <code>-i</code> to force interactive mode.</p>
+<pre><code># ~/.config/kitty/kitty.conf
+
+# On startup, open OSH interactively and start a new Tmux session called &quot;main&quot;
+# or attach to the existing &quot;main&quot; session.
+#
+shell    osh -ic &quot;tmux new-session -s main -A&quot;
+</code></pre>
+  </body>
+</html>
+

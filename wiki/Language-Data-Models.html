@@ -1,0 +1,50 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Language Data Models</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Based on &quot;The Memory Models That Underlie Programming Languages&quot; and my comments there.</p>
+<p>https://news.ycombinator.com/item?id=13293290</p>
+<h3>The Models Each Language Uses</h3>
+<ul>
+<li>C and C++: typed object graph, COBOL records, homogeneous arrays -- hm this is the fullest model.</li>
+<li>Go: like C and C++ but with GC</li>
+<li>Java: typed object graph + homogeneous arrays (people sort of viewed this as a &quot;wart&quot;, but it looks good in retrospect)</li>
+<li>JavaScript: untyped object graph.  ES5 or ES6 added homogeneous arrays!</li>
+<li>Python: untyped object graph only!  Pandas adds homogeneous arrays.  (Values have types, but the composites don't have types)</li>
+<li>Lua: same as Python, but no Pandas</li>
+<li>Perl: same as Python</li>
+<li>shell: POSIX shell has no model -- just strings.  Bash has half an array type and an associative array type which are sort of like an untyped COBOL records system.  (He mentions the hierarchical file system as a model, which is shell's answer for more structured data, but that proves it doesn't belong in the taxonomy)</li>
+<li>OCaml: typed object graph.  It might have arrays, but typed linked lists are more central (and same with SML)</li>
+<li>Scientific Languages
+<ul>
+<li>R: untyped object graph + homogeneous arrays, tables of heterogeneous columns</li>
+<li>Julia/Matlab: matrices (multidimensional homogeneous arrays) are the core.</li>
+<li>Wolfram/Mathematica: symbols?</li>
+</ul>
+</li>
+<li>Jai language: like C, but has array-of-structures and structure-of-arrays flexibility.  Logical vs. Physical data model.</li>
+</ul>
+<h3>Data Formats</h3>
+<ul>
+<li>JSON</li>
+<li>Protocol Buffers.  NOTE: Added both maps and unions (could be mapped to sum types)</li>
+<li>ASDL</li>
+</ul>
+<h2>Systems that Persist Data</h2>
+<ul>
+<li>SQL: relational model persisted
+<ul>
+<li>concrete storage: could be row-oriented or column oriented</li>
+</ul>
+</li>
+<li>File system</li>
+<li>Redis: dicts, lists, sets, counters (I think)</li>
+</ul>
+  </body>
+</html>
+

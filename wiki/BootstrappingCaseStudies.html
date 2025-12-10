@@ -1,0 +1,67 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>BootstrappingCaseStudies</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<h2>Bootstrapped Compilers (written in the same language it compiles)</h2>
+<ul>
+<li>Rust: first compiler written in OCaml; then bootstrapped in Rust
+<ul>
+<li><a href="https://github.com/graydon/rust-prehistory">graydon/rust-prehistory</a></li>
+</ul>
+</li>
+<li>Go: first compiler written in C; then bootstrapped in Go
+<ul>
+<li>the Go C compilers in C weren't written written from scratch; they were derived from Ken Thompson's C compilers for Plan 9</li>
+<li>Used <a href="https://github.com/rsc/c2go">c2go</a> and <a href="https://github.com/rsc/grind">grind</a> tool to convert C to Go</li>
+</ul>
+</li>
+<li>D: C++; then bootstrapped in D (only recently)</li>
+<li>CoffeeScript: Ruby; then bootstrapped CoffeeScript</li>
+<li>Nim: Free Pascal; then bootstrapped Nim</li>
+</ul>
+<h2>Bootstrapped But Not Sure About the Original</h2>
+<ul>
+<li>TypeScript: currently written in TypeScript; not sure what it started with</li>
+<li>Haskell: currently written in Haskell</li>
+<li>OCaml: currently written in OCaml
+<ul>
+<li>Maybe LeLisp, according to <a href="https://old.reddit.com/r/ProgrammingLanguages/comments/kkrmm9/bootstrapping_case_studies/">Reddit Comments</a></li>
+</ul>
+</li>
+</ul>
+<h2>Not Bootstrapped</h2>
+<ul>
+<li>Elm: Written in Haskell</li>
+<li>Haxe: Written in OCaml</li>
+<li>Swift: I think it's mostly written in C++ (?)</li>
+</ul>
+<h2>Self Hosted Subsets</h2>
+<ul>
+<li><a href="https://github.com/rswier/c4">C4: C in Four Functions</a> compiles itself</li>
+<li>tinypy's bytecode compiler: The compiler is written in the subset of Python that tinypy accepts, so it was bootstrapped with CPython, but now it runs itself.</li>
+</ul>
+<h2>Other</h2>
+<ul>
+<li>Raku (formerly Perl 6): Uses the subset NQP (Not Quite Perl)</li>
+</ul>
+<h2>Links</h2>
+<ul>
+<li><a href="https://bootstrapping.miraheze.org/wiki/Main_Page">https://bootstrapping.miraheze.org/wiki/Main_Page</a> - Wiki about building up compilers from nothing</li>
+</ul>
+<h2>Contributions Welcome</h2>
+<ul>
+<li>Feel free to add any other case studies, e.g. Crystal, etc.
+<ul>
+<li>What about C?  Was the first compiler in B, BCPL, etc.?</li>
+</ul>
+</li>
+<li>Or add links to justify the existing entries (mostly done off the top of my head, after looking at repos for a few years)</li>
+</ul>
+  </body>
+</html>
+

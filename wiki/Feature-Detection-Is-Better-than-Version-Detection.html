@@ -1,0 +1,74 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Feature Detection Is Better than Version Detection</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Summary: Version Detection like checking <code>$BASH_VERSION == &quot;4.4&quot;</code> or <code>User-Agent == &quot;Mozilla&quot;</code> is bad for portability.</p>
+<p>Instead, it's better to test if the feature exists:</p>
+<ul>
+<li>with <code>eval()</code>, in JavaScript, shell, Python, etc.</li>
+<li>by writing a <code>./configure</code> script, for C, C++, etc.
+<ul>
+<li>(preferably without autoconf, although autoconf does follow the philosohpy of feature detection)</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=19278608">Comment on Hacker News Thread: Bash Completion in JSON Fields</a>
+<ul>
+<li>An unnecessary <code>$BASH_VERSION</code> check -- <code>eval 'complete ...'</code> would suffice.</li>
+</ul>
+</li>
+<li>All browsers pretend they're Mozilla because web servers detect it</li>
+<li><a href="https://news.ycombinator.com/item?id=15195370">LLVM Has to Pretend It's GCC</a> to compile code in the wild</li>
+<li>Despite its flaws, GNU autoconf (<code>./configure</code>) works because it uses <em>feature detection</em>.  If it had used version detection, it would have collapsed from complexity a long time ago, and been a lot less reliable.</li>
+</ul>
+<p>NOTE: OSH won't pretend it's bash!  It is largely compatible with bash, but not identical.</p>
+<h2>How Do I Use Feature Detection?</h2>
+<p>In shell (or JavaScript), an easy and effective way is to use <code>eval</code>.  (This is perhaps the best reason to use <code>eval</code>!)</p>
+<p>For example, you can test if a shell has <code>declare</code> with something like</p>
+<pre><code>if eval 'declare myvar'; then
+  have_declare=yes
+else
+  have_declare=''
+fi
+
+# usage:
+
+if test -n &quot;$have_declare&quot;; then
+  ...
+fi
+</code></pre>
+<h2>Observation: eval() and running the C compiler in <code>./configure</code> are the same thing</h2>
+<p>In JavaScript, Python, or shell, you might do</p>
+<pre><code>eval('await foo()')  # newer JS feature
+</code></pre>
+<p>to probe for a language feature.</p>
+<p>In a <code>./configure</code> script, you might try to compile a file like:</p>
+<pre><code>int main() {
+  co_yield &quot;foo&quot;;   // newer C++ feature
+}
+</code></pre>
+<h2>2024</h2>
+<p>This seems like evidence that Rust should support feature detection, not just version detection.</p>
+<p><a href="https://fishshell.com/blog/rustport/">Fish 4.0: The Fish Of Theseus</a></p>
+<blockquote>
+<p>We have some gripes with [Rust].</p>
+</blockquote>
+<blockquote>
+<p>Chief among them is how Rust handles portability. While it offers many abstractions over systems, allowing you to target a variety of systems with the same code, when it comes to adapting your code to systems at a lower-level, it’s all based on enumerating systems by hand, using checks like <code>#[cfg(any(target_os = &quot;freebsd&quot;, target_os = &quot;netbsd&quot;, target_os = &quot;openbsd&quot;))]</code>.</p>
+</blockquote>
+<blockquote>
+<p>This is an imperfect solution, allowing you to miss systems and ignoring version differences entirely. From what we can tell, if FreeBSD 12 gains a function that we want to use, libc would add it, but calling it would then fail on FreeBSD 11 without a good way to check, at the moment.</p>
+</blockquote>
+<blockquote>
+<p>But listing targets in our code is also fundamentally duplicating work that the libc crate (in our case) has already done.</p>
+</blockquote>
+  </body>
+</html>
+

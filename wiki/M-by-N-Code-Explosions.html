@@ -1,0 +1,71 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>M by N Code Explosions</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Back to <a href="Perlis-Thompson-Principle.html">Perlis-Thompson Principle</a></p>
+<p>Some concrete examples:</p>
+<ul>
+<li>Linux distros!
+<ul>
+<li>I know this from Oil.  It is annoying to have 10 different distros!  You have M applications and N packaging tasks.  There
+are some tools that try to ameliorate this.</li>
+</ul>
+</li>
+<li>Language package managers {Python pip, JavaScript npm, Rust cargo, ...} x {Linux, Windows, OS X, ...}.  This partly explains the XKCD comic -- Python packaging is messy and hard to test.</li>
+<li>Build systems likewise have a (M languages) x (N operating systems) problem, e.g. Zig https://lobste.rs/s/cykija/zig_build_system#c_eizab2</li>
+<li>Shell Completion
+<ul>
+<li>M applications to write completions for, and N shells.</li>
+<li>This is what <strong>Shellac</strong> (<a href="Shell-Autocompletion.html">Shell Autocompletion</a>) was supposed to solve!   However I think most shells including bash are too weak to support it at the &quot;user level&quot;</li>
+</ul>
+</li>
+<li>NUL terminated vs lines of text
+<ul>
+<li>2 formats x N operations</li>
+<li><code>xargs -0</code> and <code>grep -z</code>, <code>sort -z</code>, <code>head -z</code></li>
+<li>compare with <a href="QSN.html">QSN</a></li>
+</ul>
+</li>
+<li>Google's cluster management: You're using 3.5 distributed operating systems / cluster managers when you use Kubernetes</li>
+<li>Google service turnup (Broccoli Man, etc.)
+<ul>
+<li><a href="https://lobste.rs/s/mjo19d/unix_microservice_platforms">Unix and Microservice Platforms</a> by Brandom Bloom</li>
+<li>auth/metrics/config/monitoring are M things you have to do for every service.</li>
+</ul>
+</li>
+<li>Protobuf generated code.
+<ul>
+<li>{types ... } x {copy, assign, serialize, deserialize, DebugPrint, ...}</li>
+</ul>
+</li>
+<li>Some parts of Windows?  Well COM reduces the code explosion, just like Unix pipes do.  It's dynamic / <strong>runtime software composition</strong>, not static / compile time.</li>
+<li>Docker
+<ul>
+<li>duplicates push and pull</li>
+<li>duplicates remote storage -- i.e. with the registry</li>
+</ul>
+</li>
+</ul>
+<p>Non-open source</p>
+<ul>
+<li>The &quot;Send To&quot; functionality in iOS and Android operating systems.</li>
+</ul>
+<h2>Perlis-Thompson Problems</h2>
+<p>These are like Mx N code explosions, but it's often 2x2  or 2x N.  There are 2 things instead of 1.</p>
+<ul>
+<li>Three Perlis-Thompson Problems in Docker/K8s: https://oilshell.zulipchat.com/#narrow/stream/266575-blog-ideas/topic/Perlis-Thompson.20Problems.20in.20Docker.2FK8s
+<ol>
+<li>Separate storage for code and data with Docker registry.  Should just be git.  Although arguably git is only good for source code!</li>
+<li>multistage builds -- should be 2 stages of the same thing!</li>
+<li>persistent processes vs. batch processes -- should be one mechanism</li>
+</ol>
+</li>
+</ul>
+  </body>
+</html>
+

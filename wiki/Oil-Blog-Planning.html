@@ -1,0 +1,56 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Oil Blog Planning</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Blog planning:</p>
+<ul>
+<li>
+<p>Leadup: syntactic puns.  List a bunch of examples.</p>
+</li>
+<li>
+<p>Recap:</p>
+<ul>
+<li>shell the good parts.</li>
+<li>Shell the bad parts (everyone agreed on this.)</li>
+</ul>
+</li>
+<li>
+<p>There is no more room to add features to shell: bash 4.4.  The Literal Anti-Pattern.</p>
+</li>
+<li>
+<p>Why add tables to Oil?  Because the output of &quot;ls&quot; and &quot;ps&quot; are both tables.</p>
+</li>
+<li>
+<p>Why add ADTs to Oil?  Because we want to actually parse things rather than relying on regexes and macro processing.  Sometimes that approach is good enough, but sometimes it isn't.</p>
+<ul>
+<li>Related: <a href="Oil-and-the-R-Language.html">Oil and the R Language</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Why Awk?  Because once you add hash tables and regexes to shell, which bash/zsh have already done, then it's almost an Awk already.  The only difference is the implicit outer loop of awk (for each file, for each line, for each field).</li>
+<li>Why Make?  Because 90% of the lines in a Makefile are either variable assignments or <strong>literal</strong> shell.</li>
+</ul>
+<h2>Other</h2>
+<ul>
+<li>
+<p>Interesting facts about other language implementations:</p>
+<ul>
+<li>Clang AST, TypeScript external visitors with &quot;switch&quot;, TableGen language in LLVM, sh/awk/C code gen in most shells.</li>
+</ul>
+</li>
+<li>
+<p>Breaking abstractions -- the <code>git log | python</code> pipeline is like the Go-style of unicode handling with utf-8.  You don't always have to parse, operate, serialize.  Sometimes you can just massage the input.</p>
+</li>
+<li>
+<p>Remote evaluation.  <code>ssh user@host find -type f -a -executable</code> sends an expression over the wire, just like SQL does.  Or <code>sh</code>, <code>awk</code>, etc.</p>
+</li>
+</ul>
+  </body>
+</html>
+

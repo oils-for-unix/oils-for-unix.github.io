@@ -1,0 +1,36 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Migration Guide</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>(work in progress)</p>
+<p>NEWER: <a href="Gradually-Upgrading-Shell-to-YSH.html">Gradually Upgrading Shell to YSH</a> (TODO: Consolidate these)</p>
+<h3>Test Whether Your Scripts Parse</h3>
+<p>If you have a big repo of shell scripts, a quick and easy test for &quot;smoke test&quot; for compatibility is:</p>
+<pre><code>find . -name '*.sh' | xargs -- osh -n
+</code></pre>
+<p>This will attempt to parse all the files.  (TODO: handle failure, etc.)</p>
+<h3>Run your scripts</h3>
+<p><code>osh</code> behaves like any other shell, so this is as simple as</p>
+<pre><code>osh myscript.sh
+</code></pre>
+<h3>Enable Strict Mode</h3>
+<p>If you want more errors out of OSH, put this at the top of your shell scripts:</p>
+<pre><code>shopt -s strict:all
+</code></pre>
+<p>To remain compatible with other shells, suppress stderr and ignore failure if this option doesn't exist:</p>
+<pre><code>shopt -s strict:all 2&gt;/dev/null || true
+</code></pre>
+<h3>Do You Have Tests?</h3>
+<p>In some settings, you can just change your shebang lines from <code>#!/bin/bash</code> to <code>#!/usr/bin/env osh</code>, and &quot;see what happens&quot;.</p>
+<p>In other settings, you might want to write tests first.  Then run the tests with both bash and osh.</p>
+<p>I filed issue #297 <a href="https://github.com/oilshell/oil/issues/297">Runs the bats test framework</a> because bats appears to be pretty popular.  (Although I'd also like OSH to have some simpler test framework builtin.  That is, some simple &quot;batteries&quot; should be included.)</p>
+<h3>Having Problems?</h3>
+<p>Start a thread on <code>#oil-discuss</code> on https://oilshell.zulipchat.com/ (log in with Github).</p>
+  </body>
+</html>
+

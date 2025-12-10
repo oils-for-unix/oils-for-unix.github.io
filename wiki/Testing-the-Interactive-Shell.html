@@ -1,0 +1,53 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Testing the Interactive Shell</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p><a href="Interactive-Shell.html">Interactive Shell</a></p>
+<p>It would be nice to automate this, but for now we should do basic manual testing upon release:</p>
+<ul>
+<li>Hit Tab for completions</li>
+<li>Hit tab in the middle of the line</li>
+<li>Hit tab on second line</li>
+<li>Change the window size and hit tab again</li>
+</ul>
+<p>Signals:</p>
+<ul>
+<li>Ctrl-C, Ctrl-\ in the shell</li>
+<li><code>sleep 5</code>, Ctrl-Z, then <code>fg</code></li>
+<li>Start <code>cat</code> and run Ctrl-C, Ctrl-Z, Ctrl-\</li>
+<li>Start <code>cat | head</code> and run Ctrl-C, Ctrl-Z, Ctrl-\</li>
+<li>Start a builtin <code>read</code> and run Ctrl-C, Ctrl-Z, Ctrl-\</li>
+<li><code>sleep 5 &amp;</code>, then <code>wait</code>
+<ul>
+<li>then Ctrl-C</li>
+</ul>
+</li>
+<li><code>time for i in $(seq 1000000); do true; done</code> and Ctrl-C -- busy loop should be cancellable.  (zsh has problems here.)</li>
+<li>Test signal in NON-interactive shell:
+<ul>
+<li>osh -c 'sleep 5' and then Ctrl-C</li>
+<li><code>demo/ctrl-c.sh loop</code>, then Ctrl-C</li>
+</ul>
+</li>
+<li>User handlers: <code>trap 'echo hi' INT</code>, and then hit Ctrl-C
+<ul>
+<li><code>demo/trap.sh sigint-batch</code>, <code>sigterm-batch</code></li>
+</ul>
+</li>
+</ul>
+<p>SIGWINCH:</p>
+<ul>
+<li>Resize window and hit tab in a directory with many entries</li>
+</ul>
+<p>Other:</p>
+<ul>
+<li>Ctrl-D to exit shell</li>
+</ul>
+  </body>
+</html>
+

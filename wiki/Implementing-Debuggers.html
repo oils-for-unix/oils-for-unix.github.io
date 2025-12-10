@@ -1,0 +1,53 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Implementing Debuggers</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<blockquote>
+<p>What is a trepanning debugger?</p>
+</blockquote>
+<p>Reply from Rocky Bernstein:</p>
+<p><em>This is a term I made up to mean the class of gdb-like debuggers that I've written.</em></p>
+<p><em>[I rewrote Python's pydb more or less from scratch] and called it Python pydbgr.  When I got to Poland to give a talk on doing the same for Ruby, the Poles told me that my name pydbgr was totally unpronouncable and doesn't have enough vowels!</em></p>
+<p><em>Ouch! When a Pole tells you this, you know you've done something wrong!</em></p>
+<p><em>At that point, I asked for help from a friend, Mike Welles. He came up with the term &quot;Trepanning&quot;. It is an old medical practice of drilling a hole in your head to release the bad vapors.</em></p>
+<ul>
+<li>
+<p><a href="http://bergel.eu/download/Dyla2010/dyla10_submission_1.pdf">Debuggers in Dynamic Languages</a> (pdf) at <a href="http://scg.unibe.ch/wiki/events/dyla2010">DYLA 2010</a></p>
+<ul>
+<li><em>I suggest a modular program structure for a debugger that I have been using. However first,
+I describe some of the support features which are commonly missing. These are: (1) better position
+information for dynamically generated code, e.g., from a method defined by a string variable in a program
+or coming from a data structure representing some code; (2) verification that source code matches the
+object code; and (3) better, faster support for breakpoints, “step over” and “step into.”</em></li>
+</ul>
+</li>
+<li>
+<p><a href="http://bashdb.sourceforge.net/bashdb.html#History-and-Acknowledgments">Bash Debugger: History and Acknowledgements</a>.  Interesting story behind getting the hooks into bash!  bash 2.05 was released in 2002.</p>
+<ul>
+<li><em>In version 2.04 of BASH, Rocky Bernstein started hacking on BASH to add call-stack information, source file information, allow for debugging into functions and for reporting line numbers in functions as relative to the file rather than the beginning of a function whose origin line number was not accessible from BASH. He started changing the user commands in bashdb to be like other more-advanced debuggers, in particular perl5db and gdb. However he gave up on this project when realizing that stopping before a line was crucial. A patch for this was nontrivial and wildly changed semantics. Furthermore the chance of getting his other patches into BASH was was not going to happen in version 2.04.</em></li>
+<li><em>In version 2.05, the fundamental necessary change to the semantics of SIGDEBUG trap handling (suggested at least two years earlier) was made. Also, version 2.05 changed the line-number reporting in a function to be relative to the beginning of the file rather than the beginning of a function—sometimes. Rocky then picked up where he left off and this then became this debugger. A complete rewrite of the debugger, some of which started in 2.04 was undertaken. Debugger internals were changed to support multiple file names, save and restore the calling environment (such as variables $1 and $?) and install debugger signal handlers. Work was also done on the BASH in conjunction with the debugger to save stack trace information, provide a means for stopping after a routine finished, debugging into a subshell and so on. And a number of changes were made to BASH just to improve the accuracy of the line number reporting which is crucial in a debugger.</em></li>
+</ul>
+</li>
+<li>
+<p><a href="https://wiki.ubuntu.com/DebuggerTalk">https://wiki.ubuntu.com/DebuggerTalk</a> - by Rocky Bernstein</p>
+</li>
+</ul>
+<h3>Projects</h3>
+<ul>
+<li>https://www.bashsupport.com/news/bashsupport-future/ -- IntelliJ plugin for bash debugging?</li>
+<li>bashdb</li>
+<li>vscode extension, etc.</li>
+<li><a href="https://github.com/kjkuan/tbd">tbd</a> -- The Tmux Bash Debugger. A much simpler and leaner (compared to <code>bashdb</code>) debugger for Bash.</li>
+</ul>
+<h3>CPython</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=sAvOZlbh9mQ">Debugging in Python 3.6: Better, Faster, Stronger</a> -- EuroPython video.  Using the frame evaluation API.</li>
+</ul>
+  </body>
+</html>
+

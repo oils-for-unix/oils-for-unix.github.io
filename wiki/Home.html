@@ -1,0 +1,181 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Home</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Welcome to the Oils wiki!</p>
+<p>Note: older pages still refer to &quot;Oil&quot;, <a href="https://www.oilshell.org/blog/2023/03/rename.html">which is now called YSH</a></p>
+<p>The project is &quot;Oils&quot;, and it contains OSH (compatible), YSH (new), and JSON-based data languages.</p>
+<h2>Popular</h2>
+<p><a href="Surveys-and-Comparisons.html">Surveys and Comparisons</a></p>
+<h2>For Users</h2>
+<ul>
+<li><a href="Where-To-Send-Feedback.html">Where To Send Feedback</a></li>
+<li><a href="Oils-Deployments.html">Oils Deployments</a>
+<ul>
+<li><a href="Oils-Packaging-Guidelines.html">Oils Packaging Guidelines</a></li>
+</ul>
+</li>
+<li>OSH
+<ul>
+<li><a href="Shell-Programs-That-Run-Under-OSH.html">Shell Programs That Run Under OSH</a></li>
+<li><a href="Using-OSH-as-a-Default-Shell.html">Using OSH as a Default Shell</a></li>
+<li><a href="OSH-Compatibility-Tips.html">OSH Compatibility Tips</a></li>
+<li><a href="How-To-Test-OSH.html">How To Test OSH</a></li>
+</ul>
+</li>
+<li>OSH to YSH
+<ul>
+<li><a href="Migration-Guide.html">Migration Guide</a> / <a href="Gradually-Upgrading-Shell-to-YSH.html">Gradually Upgrading Shell to YSH</a></li>
+</ul>
+</li>
+<li>YSH
+<ul>
+<li><a href="YSH-Editor-Support.html">YSH Editor Support</a></li>
+<li><a href="OSH-versus-Oil.html">OSH versus Oil</a> (TODO: rename to YSH)</li>
+<li><a href="YSH-FAQ.html">YSH FAQ</a></li>
+</ul>
+</li>
+<li><a href="The-Oils-Repo-Is-Different-From-the-Tarball-Releases.html">The Oils Repo Is Different From the Tarball Releases</a></li>
+</ul>
+<p>More:</p>
+<ul>
+<li>Drafts
+<ul>
+<li><a href="Why-Use-Oil?.html">Why Use Oil?</a> / <a href="Carrots.html">Carrots</a></li>
+</ul>
+</li>
+<li>Shell Advocacy
+<ul>
+<li>How to understand shell:  [Slogans, Fallacies, and Concepts](Slogans -Fallacies -and-Concepts.html) (under construction)</li>
+<li>How to use shell: <a href="Patterns-and-Anti-Patterns.html">Patterns and Anti-Patterns</a> (under construction)</li>
+</ul>
+</li>
+<li>Software Architecture
+<ul>
+<li><a href="Perlis-Thompson-Principle.html">Perlis-Thompson Principle</a></li>
+</ul>
+</li>
+</ul>
+<h2>For Developers</h2>
+<p>See the <a href="Dev-Guide.html">Dev Guide</a></p>
+<h3>More</h3>
+<ul>
+<li><a href="FAQ:-Why-Not-Write-Oil-in-X?.html">FAQ: Why Not Write Oil in X?</a></li>
+<li>Oils Everywhere
+<ul>
+<li><a href="Oil-for-Windows.html">Oil for Windows</a></li>
+<li><a href="Translating-Oils-to-Rust.html">Translating Oils to Rust</a></li>
+<li><a href="Rewriting-YSH-Only-in-Rust.html">Rewriting YSH Only in Rust</a></li>
+</ul>
+</li>
+</ul>
+<h3>Docs and Writing:</h3>
+<ul>
+<li><code>#documentation</code> channel on Zulip</li>
+<li><a href="Documentation-Strategy.html">Documentation Strategy</a></li>
+<li><a href="Technical-Writing.html">Technical Writing</a></li>
+<li><a href="Oil-Language-Docs.html">Oil Language Docs</a></li>
+</ul>
+<h2>Implementation Details</h2>
+<ul>
+<li><a href="Signal-Handling-in-Oil.html">Signal Handling in Oil</a></li>
+<li><a href="OSH-Word-Evaluation-Algorithm.html">OSH Word Evaluation Algorithm</a> -- <code>shopt -s simple_word_eval</code> (obsolete)</li>
+</ul>
+<h2>Protocol Designs (old)</h2>
+<ul>
+<li><a href="Coprocess-Protocol-Proposal.html">Coprocess Protocol Proposal</a></li>
+<li><a href="Shellac-Protocol-Proposal.html">Shellac Protocol Proposal</a> -- for shell-independent command-line completion.</li>
+<li><a href="QTT.html">QTT</a> (old: <a href="TSV2-Proposal.html">TSV2 Proposal</a>)</li>
+<li><a href="QSN.html">QSN</a> (old: <a href="CSTR-Proposal.html">CSTR Proposal</a>)</li>
+</ul>
+<h2>Other Designs</h2>
+<ul>
+<li><a href="Language-Design-Principles.html">Language Design Principles</a></li>
+<li><a href="Structured-Data-in-Oil.html">Structured Data in Oil</a>
+<ul>
+<li><a href="Structured-Data-Over-Pipes.html">Structured Data Over Pipes</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="Interactive-Shell.html">Interactive Shell</a> -- Ideas about the interactive shell and possibly graphical shell.
+<ul>
+<li><a href="Shell-Autocompletion.html">Shell Autocompletion</a></li>
+<li><a href="Headless-Mode.html">Headless Mode</a> (2021)</li>
+<li><a href="Headless-Shell-Protocol.html">Headless Shell Protocol</a></li>
+</ul>
+</li>
+<li><a href="Distributed-Shell.html">Distributed Shell</a></li>
+<li><a href="Config-Dialect.html">Config Dialect</a></li>
+</ul>
+<h2>Analysis of Previous Work and Solutions (Existing Warts to Fix)</h2>
+<ul>
+<li><a href="Shell-Security-Problems.html">Shell Security Problems</a></li>
+<li><a href="Shell-WTFs.html">Shell WTFs</a></li>
+<li><a href="Unix-Tools.html">Unix Tools</a> -- notes on the things that a shell interacts with.  The shell &quot;standard library&quot;.</li>
+<li><a href="Little-Languages.html">Little Languages</a></li>
+<li><a href="https://docs.python-guide.org/writing/gotchas/">Python Gotchas</a></li>
+<li><a href="https://towardsdatascience.com/five-python-gotchas-3073145fe083">Python Gotchas (Dataframes)</a></li>
+<li>(Broken Link: <code>#language-design &gt; Things Oils Shipped Without</code> found in <a href="Language-Design-Principles.html">Language Design Principles</a>)</li>
+</ul>
+<h2>Programming Language Implementation</h2>
+<ul>
+<li><a href="Parsing-Case-Studies%7CParsingCaseStudies.html">Parsing Case Studies|ParsingCaseStudies</a> -- What algorithms and tools do production-quality languages use for parsing?</li>
+<li><a href="Bootstrapping-Case-Studies%7CBootstrappingCaseStudies.html">Bootstrapping Case Studies|BootstrappingCaseStudies</a> -- How are languages bootstrapped?</li>
+<li><a href="Lossless-Syntax-Tree-Pattern.html">Lossless Syntax Tree Pattern</a></li>
+<li><a href="Language-Subsets.html">Language Subsets</a> -- an abstract but practical way of specifying a language</li>
+<li><a href="Compact-AST-Representation.html">Compact AST Representation</a></li>
+<li><a href="Architecture-of-Various-Interpreters.html">Architecture of Various Interpreters</a></li>
+<li><a href="Implementing-Debuggers.html">Implementing Debuggers</a></li>
+<li><a href="Implementer-Lore-About-Garbage-Collection.html">Implementer Lore About Garbage Collection</a></li>
+</ul>
+<h2>Programming Language Design</h2>
+<ul>
+<li><a href="Language-Data-Models.html">Language Data Models</a></li>
+<li><a href="Language-Design-and-Theory-of-Computation.html">Language Design and Theory of Computation</a></li>
+<li><a href="Metaprogramming.html">Metaprogramming</a>
+<ul>
+<li><a href="Metaprogramming-Use-Cases.html">Metaprogramming Use Cases</a></li>
+</ul>
+</li>
+<li><a href="Partial-Evaluation.html">Partial Evaluation</a></li>
+</ul>
+<h2>Systems Design</h2>
+<ul>
+<li><a href="Recommended-Reading.html">Recommended Reading</a></li>
+</ul>
+<h2>Programming Patterns</h2>
+<ul>
+<li><a href="Feature-Detection-Is-Better-than-Version-Detection.html">Feature Detection Is Better than Version Detection</a></li>
+<li><a href="Language-Composition-Bestiary.html">Language Composition Bestiary</a>
+<ul>
+<li><a href="Ad-Hoc-Protocols-in-Unix.html">Ad Hoc Protocols in Unix</a></li>
+</ul>
+</li>
+<li><a href="Exhaustive-Test-Suite.html">Exhaustive Test Suite</a></li>
+</ul>
+<h2>Blog Themes / Post Ideas</h2>
+<ul>
+<li><a href="Oil-Blog-Planning.html">Oil Blog Planning</a></li>
+<li><a href="Parsing-is-Difficult.html">Parsing is Difficult</a></li>
+</ul>
+<h2>Old</h2>
+<ul>
+<li><a href="OSH-Parser.html">OSH Parser</a> (mostly obsolete)</li>
+<li><a href="OSH-Optimization-Log.html">OSH Optimization Log</a> (already blogged about stuff after this</li>
+<li><a href="Project-Goals.html">Project Goals</a></li>
+<li><a href="Travis-CI-for-Oil.html">Travis CI for Oil</a></li>
+<li><a href="Compiler-Engineer-Job.html">Compiler Engineer Job</a> (2022)</li>
+</ul>
+<h2>Doc Languages</h2>
+<ul>
+<li><a href="Markdown-Tables.html">Markdown Tables</a></li>
+</ul>
+  </body>
+</html>
+

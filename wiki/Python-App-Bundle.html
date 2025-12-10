@@ -1,0 +1,35 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Python App Bundle</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Back to <a href="Contributing.html">Contributing</a></p>
+<h2>Background: Python App Bundle Releases</h2>
+<p>You can look at the Python build this way:</p>
+<p>(1) What I've documented above, i.e. running <code>bin/osh</code>, can be called the <strong>developer build</strong>.  This builds <code>native/libc.c</code> and uses the <strong>system</strong> Python interpreter <code>/usr/bin/env python2</code> to run Oil.</p>
+<p>(2) The &quot;production&quot; build is split into two steps: (a) git repo -&gt; release tarball, and (b) release tarball -&gt; Oil app bundle.</p>
+<p>2a. <strong>Release tarball</strong>.  This step is architecture-<strong>independent</strong> and occurs on the developer machine.  This process may change, but it's roughly as follows:</p>
+<pre><code># First we need to build a raw Python interpreter, in order to dynamically discover Python dependencies.
+build/dev.sh ubuntu-deps        # or equivalent for other distros
+build/dev.sh yajl-release       # build the git submodule (TODO: perhaps remove this)
+deps/from-tar.sh layer-cmark
+deps/from-tar.sh layer-re2c
+deps/from-tar.sh layer-cpython
+build/py.sh all
+devtools/release.sh quick-oil-tarball      # build _release/oil.tar with the Makefile and build/*.{sh,py}
+devtools/release.sh test-oil-tar           # test that you can build the tarball
+</code></pre>
+<p>Notes:</p>
+<ul>
+<li>This step is likely to be Linux-centric for awhile.  The end-user build, step 2b, should not be Linux-centric.  Ideally it would only require a POSIX environment.</li>
+<li>The full release process is documented at the top of <code>devtools/release.sh</code>.  Those comments are kept up-to-date.</li>
+<li>After you've done the steps above, you can also try <code>devtools/release.sh quick-oil-tarball</code> to quickly make tarballs for testing on other machines.  (It doesn't run any tests, so make sure the code works on Linux first.)</li>
+</ul>
+<p>2b. <strong>Oil app bundle build</strong>.  This step is architecture-<strong>dependent</strong> and occurs on the machine of the system packager or end user.  To perform this step, follow the instructions in the <code>INSTALL.txt</code> file at the root of the tarball.</p>
+  </body>
+</html>
+

@@ -1,0 +1,184 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>mycpp draft</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<h1>Translating Python to C++: Don't Lose the Stack</h1>
+<p><code>mycpp</code> is the MyPy-based Python-to-C++ translator for the Oils shell project. In contrast to other performance-focused Python compilers and interpreters (<a href="https://antocuni.eu/2025/10/29/inside-spy-part-1-motivations-and-goals/">SPy</a>, CPython, PyPy), it trades off generality for speed in an extreme manner - we only ever intend to compile a single project with it, and are willing to change the source code to simplify the translation.</p>
+<p><code>mycpp</code> is practically feature-complete - it runs the same suite of tests as the Python version of oils. It is extremely small:</p>
+<ul>
+<li>The translator itself (written in Python) is 6KLOC</li>
+<li>The garbage-collected runtime (written in C++) is 5KLOC</li>
+<li>Hand-written C++ code for the stdlib, OS bindings and more amounts to ~3KLOC</li>
+</ul>
+<p>(Line counts for additional stubs, build system, and more are available in the <a href="https://oils.pub/release/latest/pub/metrics.wwz/line-counts/for-translation.html">complete report</a>)</p>
+<p><code>mycpp</code> produces code vastly faster than Python (which allowed us to reach and surpass Bash in speed, see <a href="https://op.oilshell.org/uuu/github-jobs/10773/benchmarks3.wwz/_tmp/osh-runtime/index.html">recent benchmarks</a> for an example).</p>
+<p>All of this means that we are able to generate safe and fast C++ code while (mostly) only ever writing Python (in oils itself and in the translator). This unlocks quick iteration. New features and bug fixes, especially from new contributors, usually start with getting the Python version working. Once the architecture has been decided upon, the code is polished up to translate into C++ as well (which only involves type annotating the Python code and occasionally modifying the bindings if a feature requires something new).</p>
+<p>The other side of this translation trade-off so far has been the ill-defined nature of the Python input. Oils used a limited subset of Python so <code>mycpp</code> never had to handle particular features (like <code>finally/else</code> in <code>try</code>, or <code>else</code> in <code>for</code> loops). Some other constructs would cause the translator to fail in non-intuitive ways, with a few common enough to be documented in the <a href="https://oils.pub/release/latest/doc/oils-repo/mycpp/README.html#limitations-requiring-source-rewrites">developer guide</a>. While these are known to long-time contributors (familiar with the style of the project or with the translator itself), an opaque translator requiring a long dev guide conflicts with the goal of making it easy to to write C++ in Python.</p>
+<p>With a lot of new contributors working on the goals of the 2025 NLNet grant (it's focused on real-world compatibility - we are very close to building all of Alpine Linux packages involving thousands of complicated shell scripts, more on this later), some of the more obvious issues have come to the fore. A few of the errors hit by different contributors required digging into the translator to understand and fix. And even worse: one of the errors slipped past MyPy, <code>mycpp</code>, and the C++ compiler, producing incorrect code that was luckily caught with sanitizers at runtime!</p>
+<p>We took this as a definite sign to improve <code>mycpp</code> - and discovered some of the limitations of our naïve approach to translation along the way. For the purposes of this blog post, &quot;naïve&quot; translation is a convenient stand-in for &quot;context-less&quot; translation, where an identical Python statement in different contexts results in an identical C++ statement.</p>
+<p>Let's take a look at two examples showcasing why C++ is often a more ambiguous language than Python, with context defining the meaning of syntactically identical statements; and why MyPy is ill-fitted to provide this context during translation.</p>
+<h2>Conflicting free functions and methods</h2>
+<p>Though following similar object-oriented models, Python and C++ disagree in the details. The following snippet illustrates a divergence that caught us off guard:</p>
+<pre><code class="language-python">def a():
+    return
+
+class A:
+    def a():
+        return
+
+    def b():
+        self.a()  # Will call the method
+        a()       # Will call the free function
+</code></pre>
+<p>After naïvely translating to C++, the second call will now invoke the method shadowing the free function:</p>
+<pre><code class="language-cpp">void a() {
+  return;
+}
+
+void A::a() {
+  return;
+}
+
+void A::b() {
+  this-&gt;a();  // Will call the method
+  a();        // BAD: Will also call the method!
+}
+</code></pre>
+<p>If the free function and the method have the same types, then this will not be caught by MyPy or the C++ compiler!</p>
+<p>C++ requires using <code>::free_function()</code> or <code>namespace::free_function()</code> to avoid calling the shadowing method. Let's take a look at these solutions in turn.</p>
+<p>First of all, <code>::free_function()</code> is the C++ way of calling a function in the global namespace. But <code>mycpp</code> lays out all the definitions from a Python file into its own namespace - none of the translated free functions are global!</p>
+<p>To avoid calling the shadowing method, the translator thus needs to:</p>
+<ol>
+<li>Recognize that there is a method with the same name in the current class when calling a free function</li>
+<li>Either disallow such a call, or prefix the call with the name of the current Python file (C++ namespace)</li>
+</ol>
+<p>This is where the limitations of the visitor architecture of MyPy started to show up.</p>
+<h3>What's the visitor pattern for?</h3>
+<p><code>mycpp</code> at its core is about traversing Python's Abstract Syntax Tree. It is structured according to the <a href="https://en.wikipedia.org/wiki/Visitor_pattern">&quot;visitor pattern&quot;</a>, which is intended to separate the structure an algorithm operates on from the algorithm itself. As an example, let's consider a hypothetical pattern matching-based implementation of a Python-to-C++ translator:</p>
+<pre><code class="language-python">def translator_pass(parent_node):
+    match parent_node:
+        case mypy.nodes.ForStmt:
+            write('for (')
+            translator_pass(parent_node.condition)
+            write(') {')
+            translator_pass(parent_node.body)
+            write('}')
+        case mypy.nodes.BreakStmt:
+            write('break;')
+        ...
+</code></pre>
+<p>This pass needs to consider every single type of a Python expression, and if their structure is changed or more are added, every pass needs to be modified as well.</p>
+<p>Taking the smallest of <code>mycpp</code> passes as an example, Const pass (which collects all strings into a global table to be turned into static constants) is structured as follows:</p>
+<pre><code class="language-python">class ConstPass(GenericVisitor):
+    # visitor method for StrExpr
+    def visit_str_expr(self, node: mypy.nodes.StrExpr):
+        self.const_strings.append(node.value)
+</code></pre>
+<p>Particular passes inherit generic &quot;visitors&quot; from a parent generic class, and only implement the methods they provide custom handlers for.</p>
+<p>The generic visitor simply walks over the entire tree:</p>
+<pre><code class="language-python">class GenericVisitor:
+    # Compound expressions need to be broken down
+    def visit_for_stmt(self, node: mypy.nodes.ForStmt):
+        self.accept(node.condition)
+        self.accept(node.body)
+        if node.else_body:
+            raise AssertionError(&quot;can't translate for-else&quot;)
+
+    # Simple expressions are handled by inheriting classes
+    def visit_str_expr(self, node: mypy.nodes.StrExpr): 
+        pass
+</code></pre>
+<p>With <code>accept</code> methods on expressions defined in <code>MyPy</code> in a generic manner:</p>
+<pre><code class="language-python">class StrExpr(Expression):
+    def accept(self, visitor):
+        return visitor.visit_str_expr(self)
+
+class AbstractVisitor:
+    @abstractmethod
+    def visit_str_expr(self, node: mypy.nodes.StrExpr) -&gt; T:
+        pass
+</code></pre>
+<p>This way, if MyPy adds a new expression, the visitor classes will not need to be modified. In case of any modifications to <code>StrExpr</code>, it's MyPy's task to change its <code>accept()</code> method accordingly.</p>
+<p>This allows handling trees of arbitrary depths and complexity with relative ease, and APIs can change without requiring clients to adapt.</p>
+<h3>Limitations of the visitor pattern</h3>
+<p>On the other hand, the visitor architecture means that any individual visitor method doesn't have any of the context of its particular expression - or, in other terms, it &quot;loses the stack&quot;. Visitor method's only input is the immediate expression it is operating on, as seen in the parameters <code>node</code> above. Thus, when handling a function call, the visitor on its own does not know the name of the method it's a part of, or the class that the method belongs to! Nor does the visitor know which methods are present in the current class - hence the &quot;naïve&quot; term for this context-less translation.</p>
+<p>Solving this problem requires adding global state to the pass - it needs to accumulate the list of all classes and their methods (to check for name conflicts), and it needs to indicate the current class. Simplifying a lot, a new &quot;conflict&quot; pass resolving conflicting method and free function names would look like this:</p>
+<pre><code class="language-python">class ConflictPass(MyPyVisitor):
+    def visit_class_def(self, node: mypy.nodes.ClassDef):
+        self.current_class = node.name
+        self.methods[node.name] = node.methods
+        # handle everything inside the class
+        self.current_class = None
+
+    def oils_visit_mypy_file(self, node: MypyFile):
+        self.current_file_name = node.name
+
+class CppPass(MyPyVisitor):
+    def visit_call_expr(self, node: mypy.nodes.CallExpr):
+        if node.name in self.methods[self.current_class]:
+            write('{self.current_file_name}::{node.name}')
+</code></pre>
+<p>We've opted to handle this issue by improving the translation instead of disallowing it, since detecting the conflict is already a lot of work that could just as well be done to fix the issue. All the conflicting calls to free functions are now prefixed with the correct namespace (luckily, no such conflicts slipped into the codebase so far).</p>
+<p>Note: Rust does not have this problem - to refer to a method or an associated function, a callsite needs to use <code>Class::</code> or <code>self.</code> explicitly, hence the visitor resolving the conflict being located in <code>CppPass</code> above - future <code>RustPass</code> will not need it. On the other hand, <code>RustPass</code> will have to know the name of the class to refer to it in callsites, so this additional context will help the <code>RustPass</code> as well.</p>
+<h2><code>break</code> inside <code>switch</code></h2>
+<p>C++ uses <code>break</code> ambiguously: either to denote the end of a particular case in a <code>switch</code> (its absence, in turn, means that the case will &quot;fall-through&quot; to the next one), or to break out of a loop.</p>
+<p>Python's <code>match</code>, however, identifies case body with identation, and a <code>break</code> thus leaves the outer loop, not the <code>match</code> case in the following example:</p>
+<pre><code class="language-python">for i in range(10):
+    match i:
+        case 7:
+            break # Break here -----
+        case 3:                    |
+            special_function()     |
+        case _:                    |
+            function()             |
+# Continues here &lt;------------------
+</code></pre>
+<p>When translated to C++, the <code>break</code> will only leave the <code>case</code> body, continuing the loop further:</p>
+<pre><code class="language-cpp">for (int i = 0; i &lt; 10; i++) {
+  // Continues here &lt;-----------
+  switch (i) {                 |
+    case 7: {                  |
+      break; // Break here -----
+      break; // Unreachable duplicate break
+    }
+    case 3: {
+      special_function();
+      break;
+    }
+    default: {
+      function();
+    }
+  }
+}
+</code></pre>
+<p>Once again, the visitor for <code>break</code> lacks context to determine if it's a legal unambiguous <code>break</code> or not:</p>
+<pre><code class="language-python">class ControlFlowPass(MyPyVisitor):
+    def visit_break_stmt(self, o: mypy.nodes.BreakStmt):
+        # Handle break
+</code></pre>
+<p>It requires more global state to be able to detect incorrect usage:</p>
+<pre><code class="language-python">def visit_switch(self, o: mypy.nodes.WithStmt):
+    self.inside_switch = True
+    # Handle switch
+    self.inside_switch = False
+
+def visit_for_stmt(self, o: mypy.nodes.ForStmt):
+    self.inside_loop = True
+    # Handle loop
+    self.inside_loop = False
+
+def visit_break_stmt(self, o: mypy.nodes.BreakStmt):
+    if self.inside_switch and not self.inside_loop:
+        # NOT ALLOWED!
+</code></pre>
+<p>Adding this check uncovered a single example of <code>break</code> being used incorrectly in the codebase!</p>
+<h2>Conclusions?</h2>
+<p>As <code>mycpp</code> matures, we're uncovering more and more edge cases that are awkward to handle with MyPy, leading to more of such global state tracked in and across passes. While the visitor pattern served us well, as we encounter the limits of naïve translation, its abstraction becomes increasingly &quot;leaky.&quot;</p>
+  </body>
+</html>
+

@@ -1,0 +1,88 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>OSH Optimization Log</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p><a href="OSH-Parser.html">OSH Parser</a></p>
+<h3>Log</h3>
+<p>This section is a record of how OSH was optimized.</p>
+<ul>
+<li>0.2.alpha1 -- fake release to measure parsing speed</li>
+<li>0.2
+<ul>
+<li>here doc optimization</li>
+</ul>
+</li>
+<li>0.3
+<ul>
+<li>Optimization
+<ul>
+<li>generate C code with <code>core/lexer_gen.py</code> and re2c (double code generation)</li>
+<li>generate Python code with <code>asdl/gen_python.py</code> (rather than Python metaprogramming)</li>
+<li>TODO:
+<ul>
+<li>Id equality optimization</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Benchmarks
+<ul>
+<li>added virtual memory benchmarks.  NOTE: This caught a regression due to making new Id instances!!!</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>(release notes: my somewhat risky style of metaprogramming feels like it's working.  I'm trading off this risk for the risk of having &quot;a huge pile of C code that nobody can modify&quot;)</p>
+<h3>Performance Regressions</h3>
+<ul>
+<li>For some reason, CPython on Ubuntu is faster than my OVM build.  I'm compiling with <code>-O3</code>. Is this because of profile-guided optimization?</li>
+<li>Probably will regress: when switching to OPy bytecode.  The compiler doesn't generate exactly the same bytecode.</li>
+</ul>
+<h3>Discarded Ideas</h3>
+<p>Because these are FAQs:</p>
+<ul>
+<li>PyPy (measured)</li>
+<li>Cython (not measured, but discarded in principle)</li>
+</ul>
+<h3>Optimization Ideas</h3>
+<ul>
+<li>ASDL could be C extension instead of Python.  Inline integers instead of having PyObject pointers for them.</li>
+<li>Coalescing tokens more aggressively -- will save space.</li>
+<li>combine span and token structs.</li>
+<li>later: rewrite LineLexer/Lexer so <code>Read()</code> isn't so hot?</li>
+<li>OHeap size optimization Ideas:
+<ul>
+<li>empty array can be encoded as <code>Ref(0)</code> rather than a Ref to something with length 0.</li>
+</ul>
+</li>
+</ul>
+<h3>Benchmark Ideas</h3>
+<ul>
+<li>Size benchmarks for parser / LST
+<ul>
+<li>Python heap stats (revive &quot;pry&quot;)</li>
+<li>More oheap benchmarks.  Including compressed files.</li>
+<li>Compressed address space!!!</li>
+</ul>
+</li>
+<li>Runtime Benchmarks
+<ul>
+<li>abuild -h -- easy</li>
+<li>find a configure script that executes in like 10 seconds?  dash?
+<ul>
+<li>OCaml's hand-written configure.  3.5 seconds with OSH.  2.7 seconds with bash.  same with dash.</li>
+<li>OK so OSH is sort of usable.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </body>
+</html>
+

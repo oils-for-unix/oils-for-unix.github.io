@@ -1,0 +1,154 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Language Design and Theory of Computation</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<h3>Undecidable Parsing</h3>
+<p>Deciding whether to print &quot;syntax error&quot; shouldn't require simulating a Turing machine.</p>
+<ul>
+<li><a href="Parsing-Bash-is-Undecidable%7Chttp://www.oilshell.org/blog/2016/10/20.html.html">Parsing Bash is Undecidable|http://www.oilshell.org/blog/2016/10/20.html</a>
+<ul>
+<li>Bash, Perl, and Make can't be statically parsed because they interleave parsing and execution.</li>
+<li>C++ can't be statically parsed because it has two Turing complete computation mechanisms -- templates at compile time and normal code at runtime -- and parsing sits in between them.</li>
+</ul>
+</li>
+</ul>
+<h3>Accidentally Turing Complete</h3>
+<ul>
+<li>
+<p>Shell wasn't Turing complete when first designed.</p>
+</li>
+<li>
+<p>Make wasn't Turing complete when first designed.  See [Example Code in Shell, Awk, and Make|http://www.oilshell.org/blog/2016/11/14.html](Example-Code-in-Shell -Awk -and-Make|http://www.oilshell.org/blog/2016/11/14.html.html).</p>
+<ul>
+<li><a href="makelisp%7Chttps://github.com/shinh/makelisp.html">makelisp|https://github.com/shinh/makelisp</a></li>
+</ul>
+</li>
+<li>
+<p><a href="sedlisp%7Chttps://github.com/shinh/sedlisp.html">sedlisp|https://github.com/shinh/sedlisp</a> is proof that sed is Turing complete.  Not sure what constructs are used.</p>
+</li>
+<li>
+<p><a href="Accidentally-Turing-Complete%7Chttp://beza1e1.tuxen.de/articles/accidentally_turing_complete.html.html">Accidentally Turing Complete|http://beza1e1.tuxen.de/articles/accidentally_turing_complete.html</a> -- nice comprehensive list, including some games which we don't care about here</p>
+<ul>
+<li>SQL
+<ul>
+<li><em>However, with the features Common Table Expressions and Windowing, SQL is Turing Complete.</em></li>
+<li>https://wiki.postgresql.org/wiki/Cyclic_Tag_System</li>
+</ul>
+</li>
+<li>Apache rewrite rules</li>
+<li>sendmail</li>
+<li>MediaWiki templates</li>
+</ul>
+</li>
+<li>
+<p>What about TeX and PostScript?  I suspect those were both intended to be Turing Complete, although the syntax is odd.</p>
+</li>
+<li>
+<p><a href="CSS3-proven-to-be-Turing-Complete%7Chttp://my-codeworks.com/blog/2015/css3-proven-to-be-turing-complete.html">CSS3 proven to be Turing Complete|http://my-codeworks.com/blog/2015/css3-proven-to-be-turing-complete</a> --</p>
+<ul>
+<li>https://github.com/elitheeli/stupid-machines</li>
+<li>http://eli.fox-epste.in/rule110/</li>
+</ul>
+</li>
+<li>
+<p>printf is Turing complete.  <code>%n</code> specifier writes to memory?</p>
+<ul>
+<li><a href="printbf%7Chttps://github.com/HexHive/printbf.html">printbf|https://github.com/HexHive/printbf</a> -- Brainfuck interpreter in printf</li>
+<li>Section 6.2.1 of http://nebelwelt.net/publications/files/15SEC.pdf</li>
+</ul>
+<blockquote>
+<p>When we control the arguments to printf(), it is possible to obtain Turing-complete computation.  We show this
+formally in Appendix B by giving calls to printf() which create logic gates.</p>
+</blockquote>
+</li>
+<li>
+<p>x86 MMU Fault Handling</p>
+<ul>
+<li><a href="trapcc%7Chttps://github.com/jbangert/trapcc.html">trapcc|https://github.com/jbangert/trapcc</a> -- Compute with 0 instructions on Intel!</li>
+</ul>
+<blockquote>
+<p>This is a proof by construction that the Intel MMU's fault handling mechanism is Turing complete. We have
+constructed an assembler that translates 'Move, Branch if Zero, Decrement' instructions to C source that sets up
+various processor control tables. After this code has executed, the CPU computes by attempting to fault without
+ever executing a single instruction.</p>
+</blockquote>
+</li>
+</ul>
+<h3>Context-Free Grammars are not Powerful Enough in Practice</h3>
+<p><a href="Parsing-is-Difficult.html">Parsing is Difficult</a></p>
+<p>TODO: Move to <a href="Parsing-Is-Difficult.html">Parsing Is Difficult</a> page?</p>
+<p>Humans are better than computers at parsing programming languages.</p>
+<p>To-do: collect instances of people arguing for grammars .  For tools, IDEs?</p>
+<ul>
+<li>Nice series by Trevor Jim
+<ul>
+<li><a href="http://trevorjim.com/python-is-not-context-free/">Python is not context-free?</a> by Trevor Jim
+<ul>
+<li>https://news.ycombinator.com/item?id=5184022</li>
+<li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/7gvdje/any_advice_on_how_to_implement_the_pythonindent/drd47q9/">My Reddit Comments</a></li>
+</ul>
+</li>
+<li><a href="http://trevorjim.com/is-java-context-free/">Is Java context-free?</a> by Trevor Jim.
+<ul>
+<li>two grammars is a sign that context-free</li>
+</ul>
+</li>
+<li>about 4 or 5 other posts</li>
+</ul>
+</li>
+<li>[The Context-Sensitivity of C's Grammar](http://eli.thegreenplace.net/2007/11/24/the-context-sensitivity-of-cs grammar)
+<ul>
+<li><a href="http://eli.thegreenplace.net/2011/05/02/the-context-sensitivity-of-cs-grammar-revisited">Revisited</a></li>
+</ul>
+</li>
+<li>Perl/C++/Make : not really on the table because they're not statically parseable.</li>
+<li>Ruby: experience with writing a full Ruby parser in Ruby https://news.ycombinator.com/item?id=13041646</li>
+</ul>
+<h4>Yacc isn't Powerful Enough in Practice</h4>
+<ul>
+<li>
+<p>Zinc Abstract Machine paper for CamlLight: the yacc parser had ~50 reduce/reduce conflicts  and ~500 shift/reduce conflicts, or it had to be written in a convoluted style.  Problem: Caml doesn't have closing delimiters.</p>
+</li>
+<li>
+<p>CoffeeScript video: &quot;Rise of Transpilers&quot;: &quot;cheating&quot; by adding fake tokens in the input</p>
+</li>
+<li>
+<p>JRuby: cheating by massaging output</p>
+</li>
+<li>
+<p><a href="How-Clang-handles-the-type/variable-name-ambiguity-of-C++%7Chttp://eli.thegreenplace.net/2012/07/05/how-clang-handles-the-type-variable-name-ambiguity-of-cc.html">How Clang handles the type/variable name ambiguity of C++|http://eli.thegreenplace.net/2012/07/05/how-clang-handles-the-type-variable-name-ambiguity-of-cc</a> -- <em>My gripe is not with the grammar itself (although I admit it's needlessly complex), it's with the inability of Yacc-generated LALR(1) parsers to parse it without considerable hacks. As I've mentioned numerous times before, industrial-strength compilers for C/C++ exist after all, so they do manage to somehow parse these languages.</em></p>
+</li>
+</ul>
+<p>Alternative idea: parsers should be architected as pure functions from tokens to AST... (Doesn't matter what computational model)  And then you can instrument them and  empirically determine backtracking/efficiency ?</p>
+<ul>
+<li>TODO Review/Summarize papers
+<ul>
+<li>Yakker -- scannerless, code available in OCaml</li>
+<li>Niall -- for data formats, length prefixes and checksums, etc.</li>
+<li>Pure Declarative Syntax Lost and Regained (GLR).  From Nix authors.</li>
+<li>Langsec: this is a different but related issue.  CFG is the wrong model.  Models should be based on reality.
+<ul>
+<li>finite vs infinite languages.  Length prefixes.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Sweet spot?  Context-sensitive / Turing complete, linear time lexing, and statically parseable</p>
+<h3>Lexing and Parsing should be Separate.</h3>
+<p>PEGs combine them, only for reasons of presentation.</p>
+<p>Had this discussion twice: at work about GLR, and maybe about Gazelle.  And on HN: https://news.ycombinator.com/item?id=13042835</p>
+<p>Wrote up a wiki page that was popular: <a href="Why-Lexing-and-Parsing-Should-Be-Separate.html">Why Lexing and Parsing Should Be Separate</a></p>
+<h3>Related Issues</h3>
+<ul>
+<li>Turing completeness vs. side effects/capabilities.  Both of these are design issues and shouldn't be conflated.</li>
+<li>Whether there is abstraction power like functions.  I think Awk was Turing complete at first, but it didn't have functions.  <a href="Related-lobsters-thread%7Chttps://lobste.rs/s/bqjhuv/fac_build_system/comments/yozbxt#c_yozbxt.html">Related lobsters thread|https://lobste.rs/s/bqjhuv/fac_build_system/comments/yozbxt#c_yozbxt</a>.</li>
+</ul>
+  </body>
+</html>
+

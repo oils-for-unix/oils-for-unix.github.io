@@ -1,0 +1,27 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Startup Time Measurements</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>(Back to <a href="Coprocess-Protocol-V2.html">Coprocess Protocol V2</a>)</p>
+<p>Timings on my fast  machine:</p>
+<ul>
+<li>bash is about 26 ms</li>
+<li>fish is about 15-16 ms</li>
+<li>zsh is about 60 ms, but I saw 300+ ms on a &quot;cold&quot; start.</li>
+</ul>
+<p>From Closh: https://github.com/dundalek/closh/tree/master/scripts/completion</p>
+<pre><code>$ time ./completion.bash &quot;ls -&quot;
+--help
+
+real    0m0.026s
+user    0m0.027s
+sys     0m0.000s
+</code></pre>
+  </body>
+</html>
+

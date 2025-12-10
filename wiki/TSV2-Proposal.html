@@ -1,0 +1,144 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>TSV2 Proposal</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Up: <a href="Structured-Data-in-Oil.html">Structured Data in Oil</a></p>
+<p>Now named <strong><a href="QTT.html">QTT</a>: Quoted, Typed Tables</strong></p>
+<p>QTT is an interchange format for tables that's a graceful upgrade of TSV.  A TSV file is a valid QTT file.</p>
+<p>It uses <a href="QSN.html">QSN</a> (Quoted String Notation) as a building block.</p>
+<h3>Short Description</h3>
+<p>TSV2 is a textual interchange format for tables, like JSON is for nested data.  It's most easily described as a <a href="https://en.wikipedia.org/wiki/Tab-separated_values">TSV file</a> with some nice properties:</p>
+<ul>
+<li>The header row is required.  It may or may not have type annotations.</li>
+<li>Every row is exactly one line (unlike CSV and TSV).</li>
+<li>It can represent any byte or character in a field.  This is done with single quoted strings like <code>'foo\n'</code> and <code>'nul byte: \x00 !'</code>  and <code>'\u1234'</code>.  Most fields should not be quoted.</li>
+</ul>
+<p>In canonical form, a TSV2 file is a valid UTF-8 text file.  There may be reasons to use non-canonical forms (e.g. for  compatibility with old TSV readers).</p>
+<h3>Example</h3>
+<p>NOTE: → are tab characters (written in HTML as <!-- raw HTML omitted -->&amp;rarr;<!-- raw HTML omitted -->).</p>
+<!-- raw HTML omitted -->
+<p>The default column type is <code>string</code>.</p>
+<p>This example is inconsistent to illustrate the principle that <strong>single quotes</strong> are optional in some cases but required in others.  They're recommended when a field contains spaces, but <strong>required</strong> when a field contains newlines or tabs.</p>
+<h3>What consumes it?</h3>
+<ul>
+<li>Oil's xargs &quot;dialect&quot; (<a href="each-Keyword-in-Oil.html">each Keyword in Oil</a>)
+<ul>
+<li>It provides xargs with <code>rows</code>, rather than faking it with <code>-n 4</code> for a row of 4 items.
+<ul>
+<li>xargs can similarly use the names.  We could provide some alternative to the <code>-I {}</code> string.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>awk &quot;dialect&quot; (See http://www.oilshell.org/blog/tags.html?tag=awk#awk)
+<ul>
+<li>It provides awk with named columns instead of <code>$1 $2 $3</code>.</li>
+<li>It provides awk with <em>types</em>.</li>
+</ul>
+</li>
+</ul>
+<h3>What emits it?</h3>
+<ul>
+<li>Scripts that scrape coreutils.  The output of <code>ps</code> and <code>ls</code> can be massaged into Tables.</li>
+<li>Oil's augmentation of the <code>find</code> command (TBD)</li>
+<li>Oil's history mechanism (TODO: <a href="https://github.com/oilshell/oil/issues/323">issue #320</a>)</li>
+<li>... any other tool that can write text to stdout :)</li>
+</ul>
+<h3>Why not CSV?</h3>
+<p>A line is not a record in CSV, e.g.</p>
+<pre><code>&quot;record
+with
+spaces&quot;,10
+</code></pre>
+<p>is a single record.  This doesn't work well with line-oriented shell tools.</p>
+<p>Also, CSV in practice tends to be ill-specified.  (e.g. hardware outputs really broken CSV files.)</p>
+<h3>Why not TSV?</h3>
+<ul>
+<li>You can't have tabs in TSV fields.</li>
+<li>If you have newlines, you no longer have the property that a record is a line (i.e. the same problem that CSV has).</li>
+<li>TSV has no printable representation for <code>NUL</code> bytes like <code>'\x00'</code>.</li>
+</ul>
+<h3>Why Single Quotes instead of Double Quotes?</h3>
+<p>Because JSON uses double quotes, and JSON represents unicode strings.  TSV2 represents byte strings, which can be utf-8 encoded.</p>
+<h3>Is it compatible with TSV?</h3>
+<p>Strictly speaking, no.  Hence the &quot;major version number bump&quot;.  However:</p>
+<ul>
+<li>A TSV2 reader can always read a TSV file correctly.  Spaces are allowed in raw TSV2 fields, even though a more canonical representation is:
+<ul>
+<li><code>'spaces and single quotes'&lt;TAB&gt;'another field'</code>, rather than</li>
+<li><code>no single quotes&lt;TAB&gt;another field</code>.</li>
+</ul>
+</li>
+<li>If a TSV reader consumes a TSV2 file, then it will &quot;work&quot;, except some fields may have leading <code>'</code> characters.  This only happens for &quot;unprintable&quot; characters and tabs, so in the common case there are NO corrections necessary.</li>
+</ul>
+<h3>Types</h3>
+<p>Based on JSON primitive types, but less tied to JavaScript:</p>
+<ul>
+<li><code>string</code> (default)</li>
+<li><code>bytes</code> (can represent arbitrary bytes like invalid UTF-8)</li>
+<li>&quot;number&quot; is split into <code>int</code> and <code>float</code>, because most languages have that distinction</li>
+<li><code>boolean</code></li>
+</ul>
+<h3>What's the difference between string and bytes columns?</h3>
+<p>Nothing as far as the TSV2 format is concerned.  <code>string</code> is an indication to the language's library to try to decode utf-8 and escape sequences into a string data structure, if applicable.  (e.g. Python, Java, and JavaScript provide random code point access; Go and Rust use UTF-8 internally.)</p>
+<h3>Columns Other than String / Bytes Follow JSON Format</h3>
+<p>See the &quot;regular expressions&quot; at <a href="http://json.org/">json.org</a>.  We use <code>true</code>, <code>false</code>, and <code>null</code>.</p>
+<h3>Required Validations</h3>
+<ul>
+<li>The file must have valid header.
+<ul>
+<li>Column names should match <code>[a-zA-Z_][a-zA-Z0-9_]+</code>.  (Should we allow spaces?  Language can convert to _ ?)</li>
+</ul>
+</li>
+<li>The number of columns in the TSV2 stream is determined the header.  If any row has an invalid number of cells, a fatal error must be raised.</li>
+<li>Invalid string syntax, e.g.
+<ul>
+<li>a field starts with <code>'</code> but doesn't end with one.</li>
+<li>invalid escape sequences</li>
+</ul>
+</li>
+<li>Invalid syntax in any other column:
+<ul>
+<li>int</li>
+<li>float</li>
+<li>boolean</li>
+</ul>
+</li>
+</ul>
+<h3>Canonicalization</h3>
+<ul>
+<li>The TSV2 file is valid UTF-8.
+<ul>
+<li><code>NUL</code> bytes are written <code>'\x00'</code> (only allow <code>\xAB</code> in <code>bytes</code> columns?)</li>
+</ul>
+</li>
+<li><code>'fields with spaces have single quotes'</code> -- this makes TSV readers less likely to work on TSV2 files, but that's OK.  You have the option to emit non-canonical TSV2.</li>
+<li>empty strings should be <code>''</code> !</li>
+</ul>
+<h3>Relationship to Programming Languages</h3>
+<ul>
+<li>Python: if you do repr() and the string does <strong>not</strong> contain a single quote, Python will use single quotes.  And then it will be a valid TSV2 string.</li>
+<li>Oil: TODO</li>
+<li>JavaScript: if it doesn't contain <code>\xFF</code> codes, it should work?  Well there's also the &quot;bell&quot; character and such.</li>
+</ul>
+<h3>Links</h3>
+<ul>
+<li><a href="https://github.com/sustrik/uxy">uxy</a>, very similar, and scrapes existing tools.  <a href="https://lobste.rs/s/k10sfa/why_did_i_write_my_programming_projects">Discussed on lobste.rs</a>.  <code>align</code> and <code>trim</code> are useful.</li>
+</ul>
+<h3>Issues / Notes</h3>
+<ul>
+<li>String and Bytes columns can't contain <code>null</code>
+<ul>
+<li><code>int</code> and <code>boolean</code> columns can't either</li>
+</ul>
+</li>
+<li>What about <code>float</code> columns?  <code>null</code> could be useful for <code>NA</code>.  It can be represented by IEEE floats.</li>
+</ul>
+  </body>
+</html>
+

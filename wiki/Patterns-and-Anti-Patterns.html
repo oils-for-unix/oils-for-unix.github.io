@@ -1,0 +1,97 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Patterns and Anti Patterns</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p><strong>UNDER CONSTRUCTION</strong></p>
+<p>This page is about <strong>how to use shell</strong>.</p>
+<p>Related: [Slogans, Fallacies, and Concepts](Slogans -Fallacies -and-Concepts.html)</p>
+<h2>Terms</h2>
+<ul>
+<li>procs</li>
+<li>&quot;first word&quot; -- external binary, builtin, or proc.  (No alias in Oil)</li>
+</ul>
+<h2>Shell Programming Patterns</h2>
+<ul>
+<li>Shell Functions / procs
+<ul>
+<li>Bernstein Chaining / Chain Loading</li>
+<li>$0 Dispatch Pattern (sudo, xargs -P, find -exec)</li>
+<li>&quot;Task file&quot; pattern -- with <code>runproc</code>
+<ul>
+<li>no data dependencies?</li>
+<li>TODO: <em>Shell Scripts Are Executable Documentation</em></li>
+<li>Same pattern as https://github.blog/2015-06-30-scripts-to-rule-them-all/ , except they use a DIRECTORY, not a single file</li>
+</ul>
+</li>
+<li>Proc-like: argv -&gt; status, and stdin/stdout/stderr
+<ul>
+<li>command annotations can tame this generality, but we want proc-like</li>
+</ul>
+</li>
+<li>Proc as function: stdout is the &quot;return value&quot; (like Elvish).  Return value
+is for errors.</li>
+</ul>
+</li>
+<li>PPPT: Parameterized Parallel Process Table
+<ul>
+<li>you can add a column to a table in parallel</li>
+</ul>
+</li>
+<li>data dependencies: shell vs. make/Ninja</li>
+<li>Software Evolution
+<ul>
+<li>Versionless Interchange Format
+<ul>
+<li>lines of text, JSON</li>
+<li>Oil: <a href="QSN.html">QSN</a>, <a href="QTT.html">QTT</a></li>
+</ul>
+</li>
+<li>Feature Detection, not Version Detection</li>
+</ul>
+</li>
+<li>Avoid Mini-Languages in Other Tools
+<ul>
+<li><code>xargs -I {}</code> can be replaced with a shell function and <code>$1</code></li>
+<li><code>'\n'</code> in cut, xargs, etc. can be replaced with <code>$'\n'</code></li>
+<li><code>xargs -L</code> special tokenization rules should just be <code>-n</code></li>
+<li><code>find -exec foo +</code> (for batching args) can also be replaced with <code>find -print0 | xargs -0</code> (avoiding weird <code>;</code> vs. <code>+</code>)</li>
+</ul>
+</li>
+</ul>
+<h2>Anti-Patterns</h2>
+<ul>
+<li>The YAML problem.  The sh-in-{yaml,docker,systemd,chef,vagrant,python} problem.
+<ul>
+<li>actually 2 variants of this: sh-in-YAML, and YAML-based languages like Github Actions (and Gitlab)</li>
+</ul>
+</li>
+<li>Whitespace Joining Antipattern
+<ul>
+<li>SSH quoting</li>
+<li>eval builtin</li>
+<li>echo builtin</li>
+</ul>
+</li>
+<li><a href="http://www.oilshell.org/blog/2021/04/find-test.html">I'm Too Lazy to Write a Lexer</a>.  Instead I'll just use the <code>argv</code> array.  Used by <code>find</code>, <code>test</code>, and <code>expr</code>.</li>
+<li>Deserialize a huge blob -&gt; trivial in-memory operation -&gt; Serialize huge blob.  This is bad for performance.
+<ul>
+<li>instead use lazy deserialization</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Distributed OS Design: The Inner Platform Anti-Pattern
+<ul>
+<li>Kubernetes suffers from this</li>
+</ul>
+</li>
+</ul>
+  </body>
+</html>
+

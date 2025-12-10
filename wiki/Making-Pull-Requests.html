@@ -1,0 +1,53 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Making Pull Requests</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Back to <a href="Contributing.html">Contributing</a> / <a href="Dev-Guide.html">Dev Guide</a></p>
+<p>These guidelines will help me review PRs more quickly:</p>
+<ol>
+<li>Please use Github's UI to <strong>request review</strong>, so I know when I should look at a PR.
+<ul>
+<li>Add <code>andychu</code> as reviewer in the upper right.</li>
+<li>(This is a new thing as of 2025-11)</li>
+</ul>
+</li>
+<li>Please write a good <strong>commit description</strong>:
+<ul>
+<li>What changed?  This can be written for a <strong>user</strong> to read.  (TODO: we should come up with an automated release notes system)</li>
+<li>How did you <strong>test</strong> it?  Often this is via spec tests, but not always.</li>
+</ul>
+</li>
+<li>Do docs need to be updated?
+<ul>
+<li>Feel free to ask for help / tips on this.</li>
+</ul>
+</li>
+<li>I will use Github's system to make comments.  After addressing them, please:
+<ul>
+<li>Push the commits so I can see them</li>
+<li>Reply with a message, like &quot;All done&quot;, or &quot;I disagree because ...&quot;</li>
+<li>Click on the upper right to <strong>re-request review</strong>, so it appears in my list of things to review</li>
+</ul>
+</li>
+</ol>
+<p>If you only push commits, I won't look at the PR again, because I'll assume it's in progress.</p>
+<p>Also, please feel free to <strong>ask questions</strong> even if the PR isn't ready for review yet!  There are often many different files to modify.</p>
+<p>I aim for a <strong>initial response in 24 hours</strong>, so feel free to ping me after that.  (As of 2025-11, the delay has been a bit longer on occasion.  But still feel free to ping me.)</p>
+<h2>TODO</h2>
+<ul>
+<li>Instructions on using the CI</li>
+<li>Types of tests and our standards for testing</li>
+</ul>
+<p>Note: Send PRs from <code>oils-for-unix/oils</code> and not your own fork, so that Github Actions can get our $TOIL_KEY, and publish HTML results to https://op.oilshell.org/</p>
+<h2>Link</h2>
+<ul>
+<li>This is what I use to find pull requests to review: <a href="https://github.com/oils-for-unix/oils/pulls?q=is%3Apr+is%3Aopen+user-review-requested%3A%40me">https://github.com/oils-for-unix/oils/pulls?q=is%3Apr+is%3Aopen+user-review-requested%3A%40me</a></li>
+</ul>
+  </body>
+</html>
+

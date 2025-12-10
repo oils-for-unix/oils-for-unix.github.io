@@ -1,0 +1,20 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Tips on Using pgen2</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Back: <a href="Implementing-the-Oil-Expression-Language.html">Implementing the Oil Expression Language</a></p>
+<p>pgen2 is the LL parser generator borrowed from Python, used for recognizing the Oil expression language (which is based on Python).  Caveat: it's a bit hard to use!!!</p>
+<p>Tips:</p>
+<ol>
+<li>Print out the parse tree with <code>print_parse_tree</code> in <code>frontend/parse_lib.py</code>.  The structured of the parse tree depends on the exact structure of the grammar's rules.</li>
+<li>In <code>oil_lang/expr_to_ast.py</code>, make sure you copy the relevant productions into comments.  That will make it easier to write the &quot;transformer&quot;.</li>
+<li>See <code>opy/compiler2/transformer.py</code> for &quot;tips&quot; on transforming rules to AST nodes.  However, note that we have the &quot;singleton-collapse&quot; rule which OPy doesn't have.  Ping me for details if you don't understand this.</li>
+</ol>
+  </body>
+</html>
+

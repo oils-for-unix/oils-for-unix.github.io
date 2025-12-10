@@ -1,0 +1,252 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Shellac Protocol Proposal</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>(Back to <a href="Shell-Autocompletion.html">Shell Autocompletion</a>)</p>
+<p>This is a DRAFT.  Don't circulate yet!</p>
+<p>May 2019: <a href="Shellac-Protocol-Proposal-V2.html">Shellac Protocol Proposal V2</a></p>
+<h2>Shellac Protocol</h2>
+<p>Shellac is a protocol for <strong>shell-agnostic autocompletion</strong>.  Shells and command line tools written in any language can communicate with each other.</p>
+<h3>Motivation</h3>
+<p>The status quo is that you can only expect upstream authors to maintain autocompletions for <code>bash</code>, the most popular shell in the world.</p>
+<p>Shellac is a simple protocol aims to change this dynamic.  The author of a CLI tool can easily implement it, and their completions will work in all shells that are Shellac clients.</p>
+<p>The author of a shell can implement Shellac and get many common completions &quot;for free&quot;.  (These may be basic bash-style completions, or more elaborate zsh/fish style ones.).</p>
+<p>In addition, existing corpuses of completion logic like the <code>bash-completion</code> project, the <code>zsh</code> core, and <code>zsh-completions</code> can be wrapped in this protocol, and reused by alternative shells like Oil or Elvish.</p>
+<h3>Overview</h3>
+<p>Roughly speaking, Shellac plays the same role for shells as the <a href="https://langserver.org/">Language Server Protocol</a> does for editors, but it looks more like CGI or FastCGI.</p>
+<p>Shellac clients request completions, and Shellac servers provide them.</p>
+<ul>
+<li>A <strong>client</strong> is typically a shell like Elvish, ZSH, Oil.
+<ul>
+<li>It could also be an editor that's editing a shell script!  (Vim, EMacs, VS Code, etc.)</li>
+<li>Clients knows how to find server binaries, send them requests, and parse their replies.</li>
+</ul>
+</li>
+<li>A <strong>server</strong> could be the binary itself (<code>git</code>, <code>npm</code>, <code>clang</code>) <strong>OR</strong> a shell!
+<ul>
+<li>That is, the completion logic could be written in C, JavaScript, or Python -- or it could be written in Elvish, ZSH, or Oil (or a <code>compleat</code>-like DSL).</li>
+<li>So note that shells are <strong>both</strong> clients and servers.  They may request completions or they may provide them.</li>
+<li>Servers have logic about the syntax of specific commands.  They may shell out to additional binaries.</li>
+<li>(You can also call a server that runs in single-shot &quot;batch&quot; mode a <em>provider</em>.)</li>
+</ul>
+</li>
+</ul>
+<h3>Rough Example 1</h3>
+<p>Let's use the example of busybox ash, which is derived from the dash code.  I've heard some people complain that you have to use bash on Alpine Linux to get completions, because ash/dash have no support for it.  The Shellac protocol potentially provides a migration path out of that situation.</p>
+<p>Type this in ash:</p>
+<pre><code>$ git --git-dir . a&lt;TAB&gt;
+</code></pre>
+<p>ash will act as a Shellac client.  It forms a request that looks something like this (encoding to be discussed):</p>
+<pre><code>{ &quot;SHELLAC_ARGV&quot;: [&quot;git&quot;, &quot;--git-dir&quot;, &quot;.&quot;, &quot;a&quot;]
+  &quot;SHELLAC_ARGV_INDEX&quot;: 3,
+  &quot;SHELLAC_CHAR_INDEX&quot;: 1,
+}
+</code></pre>
+<p>ash just needs way of associating a command with a binary that supports the Shellac protocol.  It doesn't need its own completion API.</p>
+<p>It invokes the Shellac server/provider.   Servers come in two flavors: <code>SHELLAC_MODE=batch</code> and <code>SHELLAC_MODE=coprocess</code>:</p>
+<ul>
+<li><code>batch</code> starts and stops a process every time you hit <code>&lt;TAB&gt;</code>, like <code>complete -C</code> in bash.</li>
+<li><code>coprocess</code> maintains a persistent process that reads and writes from pipes.</li>
+</ul>
+<p>In this case, let's say we have a <code>batch</code> provider.  It can just be the <code>bash</code> interpreter itself running <code>git-completion.bash</code>!   We should be able to write a tiny wrapper <code>shcomp_provider.bash</code> that adapts between the bash completionAPI and the Shellac protocol.</p>
+<p>The response is:</p>
+<pre><code>{ &quot;candidates&quot;: [&quot;add&quot;, &quot;am&quot;, &quot;annotate&quot;, &quot;apply&quot;, &quot;archive&quot;] }
+</code></pre>
+<p>ash displays these alternatives to the user.</p>
+<p>NOTE: I've written the protocol like JSON, but the encoding will most likely not be JSON.</p>
+<h3>Rough Example 2</h3>
+<p>Like the above, but perhaps Clang decides to implement Shellac.  Then you have ash invoking Clang itself, not ash invoking bash.</p>
+<h3>Request format</h3>
+<p><code>SHELLAC_*</code> environment prefix.  <code>SHELLAC_</code></p>
+<p><code>SHELLAC_ARGV@</code>, <code>SHELLAC_ARG_INDEX</code>, <code>SHELLAC_CHAR_INDEX</code> ?</p>
+<p>problem: you can't have NUL bytes for arrays?  Maybe the request comes on stdin then?  Can bash deal with that?</p>
+<ul>
+<li>
+<p>read -d $'' ?</p>
+</li>
+<li>
+<p><code>$SHELLAC_VERSION</code> environment variable for detection.</p>
+</li>
+<li>
+<p><code>$SHELLAC_MODE=batch</code>, or <code>coprocess</code>, or even <code>JSON-RPC</code>.  Perhaps text editors that already use the Language Server Protocol will want to use JSON-RPC.  I think the <code>xi-editor</code> uses JSON-RPC.</p>
+</li>
+</ul>
+<h3>Response format</h3>
+<p>Types of responses:</p>
+<ul>
+<li><code>{&quot;candidates&quot;: [&quot;doc&quot;, &quot;doc2&quot;]}</code></li>
+<li><code>{&quot;candidates&quot;: [ {&quot;value&quot;: &quot;--all&quot;, &quot;description&quot;: &quot;list all&quot;}, ... ]}</code></li>
+<li>candidate stream</li>
+<li><code>{&quot;compgen&quot;: {&quot;what&quot;: &quot;file&quot;, &quot;prefix&quot;: &quot;w&quot;}}</code> -- delegate back</li>
+</ul>
+<h4>Status/Progress communication</h4>
+<p>(from Ilya Sher)</p>
+<p>There must be a status/progress communication. During the response building phase, imagine the completion server needs to talk to all AWS regions (even if it is in parallel, it is not fast). It would be nice to have something like &quot;Listing instances. Found X instances in R out of RR regions&quot;. Why all regions? It's a real use case. There is an <code>ec2din.ngs</code> with <code>--allreg</code> switch.</p>
+<p>We can go further into semantic level. Status - an arbitrary string. Progress can be more defined, such as X out of Y items done. This more defined approach will let shells to display the information in a meaningful way, maybe a progress bar.</p>
+<p>The server should also be able to communicate ETA (I think this is less important).</p>
+<p>Needs thinking and discussion.</p>
+<h4>Response Encoding</h4>
+<ul>
+<li>netstrings are out because bash can't generate the length of a bytestring!</li>
+<li>Don't want newlines, because newlines can appear in filenames!  <code>touch $'\n'</code>.</li>
+<li>So we use NUL delimited strings.  Maybe we have a length prefix for the array count.  <code>${#COMPREPLY[@]}</code>.</li>
+</ul>
+<h4>Rich Completions</h4>
+<p>The request and response format have a JSON-like data model, so ZSH-like descriptions can also be returned:</p>
+<pre><code>ls --a
+--all                                      -- list entries starting with .
+--almost-all                               -- list all except . and ..
+--author                                   -- print the author of each file
+</code></pre>
+<pre><code>{ &quot;candidates&quot;: [
+  {&quot;value&quot;: &quot;--all&quot;, &quot;desc&quot;: &quot;list entires starting with .&quot; }, 
+   ...
+  ]
+}
+</code></pre>
+<p>This kind of structured data should handle the following:</p>
+<ul>
+<li>Per- match descriptions</li>
+<li>Grouping of matches</li>
+<li>Per-group descriptions</li>
+<li>Sorted/unsorted groups</li>
+</ul>
+<h3>Delegating Back to the Shell For Rich Completions</h3>
+<p>Filename completion could be fuzzy or case-insensitive.  Instead of returning candidates, the completion server can specify a type of completion</p>
+<pre><code>{ &quot;compgen&quot;: { &quot;what&quot;: &quot;files&quot;, &quot;prefix&quot;: &quot;RE&quot; }}  # complete files beginning with RE
+
+{ &quot;compgen&quot;: { &quot;what&quot;: &quot;dirs&quot;, &quot;prefix&quot;: &quot;foo/testdata/c&quot; }}  # complete dirs
+</code></pre>
+<p>This is similar to a bash completion function invoking <code>compgen</code>.  It's user-defined code delegating back to the shell.</p>
+<h3>Other ZSH Like Features</h3>
+<p>(from Oliver Kiddle)</p>
+<ul>
+<li>
+<p>auto-remove: <code>diff --col</code> gets completed to <code>diff --color=</code>, but you might want to press space and remove the =.</p>
+<ul>
+<li>this might also remove commas and trailing slashes</li>
+<li>hm not sure I like this feature.  problem: bash redraws the prompt a lot.</li>
+</ul>
+</li>
+<li>
+<p>completion of part of a word:</p>
+<ul>
+<li>for <code>diff --color=a&lt;TAB&gt; -C1</code>, <code>auto</code> is a suggestion that replaces <code>a</code>, not the whole word.</li>
+<li>but why not just complete <code>--color=auto</code> then?</li>
+<li>TODO: how does this relate to the fact that <code>readline</code> redraws the entire command line?
+<ul>
+<li>if we send over an argv array and not a shell string, how does this get handled?</li>
+</ul>
+</li>
+<li>how about we just say that only a whole word is completed?</li>
+</ul>
+</li>
+<li>
+<p>color highlighting: I think anything that happens on every keypress is out of scope for Shellac ?</p>
+<ul>
+<li>we mostly care about things that happen when you hit TAB.</li>
+</ul>
+</li>
+</ul>
+<h3>Modes</h3>
+<ul>
+<li>CLI providers - stdin, environment variables, stdout</li>
+<li>Coprocess providers</li>
+<li>Maybe later: JSON-RPC like the language server protocol.  I don't necessarily see the need for multi-threaded
+servers, but we'll see.</li>
+</ul>
+<h3>Character Encodings</h3>
+<p>Shellac clients and servers should prefer UTF-8 where possible.  But file system paths are often the things being completed, and they are just byte strings.  So technically most of the strings in the request and response format are NUL-terminated byte sterings, and UTF-8 is a special case of that.</p>
+<h3>Dispatch</h3>
+<ul>
+<li>Should this be done with the file system?  Or It can be done in the shell itself with registration functions.
+<ul>
+<li><code>complete -C git_completion_command git</code> already registers a command.  It could be <code>complete -S</code> for Shellac.</li>
+</ul>
+</li>
+</ul>
+<h3>Typical Client Algorithm</h3>
+<ul>
+<li><strong>Partially parse</strong> the shell language to <code>argv</code>.  Perhaps to variable and tilde subsitution.  The last <code>argv</code> entry may be incomplete or empty.  (TODO: does it make sense to complete in the middle?)</li>
+<li><strong>Dispatch</strong> to the right binary that implements Shellac</li>
+<li>Start it up with <code>SHELLAC_VERSION=0.1</code> to make sure it supports the protocol.</li>
+<li>Send over <code>ARGV</code>, as NUL-terminated strings.  Maybe an array length prefix.</li>
+<li>Receive a response.</li>
+<li>Dequote them into shell syntax -- e.g. <code>${x@Q}</code> in bash -- and then display to the user.</li>
+</ul>
+<h3>Typical Server Algorithm</h3>
+<ul>
+<li>Check if you were started with <code>SHELLAC_VERSION=&lt;non-empty&gt;</code>.</li>
+<li>Check if you were started with <code>SHELLAC_MODE=batch</code> or <code>SHELLAC_MODE=coprocess</code> and behave as appropriate.</li>
+<li>Receive <code>ARGV</code>.</li>
+<li>Determine completions.  Example strategies:
+<ul>
+<li>Run an existing command line parser or use its data structures to figure out what we need to complete</li>
+<li>dynamically grep <code>--help</code> (or a cached copy of it).  <code>bash-completion</code> does this grepping.</li>
+</ul>
+</li>
+<li>Send back a response header?</li>
+<li>Send back <code>REPLY</code></li>
+</ul>
+<h3>Design and Implementation Issues</h3>
+<ul>
+<li>Shells should NOT consult a Shellac completion server for <code>$&lt;TAB&gt;</code> and <code>${&lt;TAB&gt;</code>.  They should complete their own
+variables!</li>
+<li>If you have something <code>ls $(echo long-time; sleep 100) --ref=&lt;TAB&gt;</code>, then the <code>$(echo)</code> can be replaced with <code>DUMMY</code>  before sending it to the completion server.</li>
+<li>What about tilde expansion?  That can be done beforehand?  Or the completion provider has to know about it?</li>
+<li>Are the key-value pairs in arbitrary order?</li>
+</ul>
+<h3>Streaming Responses</h3>
+<ul>
+<li>
+<p>Low latency for shells is important.  A user might want to accept a completion before all candidates are generated (e.g. from a distributed file system or cloud storage service).  So we need to support streaming.</p>
+</li>
+<li>
+<p>Instead of length-prefixed arrays, we can have arrays terminated by <strong>sentinels</strong>.  The sentinel could just be an additional <code>\0</code> byte?  That is like the empty string.</p>
+</li>
+</ul>
+<h3>Security</h3>
+<ul>
+<li>To prevent resource exhaustion attacks, shells may truncate long strings.</li>
+<li>Completion servers can be sandboxed since they only communicate over stdin and stdout.</li>
+</ul>
+<h4>Why Coprocesses?</h4>
+<p>For low latency responses.  Startup time of processes is large, especially for Python, Ruby, JVM, Julia, etc.</p>
+<h4>Why not Multithreaded Servers?</h4>
+<ul>
+<li>Because most CLI tools use global variables, making this difficult.</li>
+<li>Because shells need to modify global process state, like the descriptor state, calling <code>wait()</code>, etc.  It would very difficult to have two threads each running a shell interpreter, both calling <code>wait()</code>.  Single-threaded is more robust and easier to implement.</li>
+</ul>
+<h4>Why not put one completion per line?</h4>
+<p>Because <code>touch $'\n'</code> breaks that protocol.</p>
+<h3>Risks</h3>
+<ul>
+<li>
+<p>If there are N different completion servers, does that lead to an inconsistent user experience?</p>
+<ul>
+<li>This can be somewhat mitigated somewhat by delegating back to the shell for more behavior (completion of filenames).</li>
+</ul>
+</li>
+<li>
+<p>What about deployment of completions?  Instead of zsh or bash scripts, they're now arbitrary code in other languages.  This could lead to greater requirements for sandboxing.</p>
+<ul>
+<li>On the other hand, if the completion is packaged with the binary, it leads to FEWER deployment problems and
+fewer versioning problems.</li>
+</ul>
+</li>
+<li>
+<p>Maybe we can have a Shellac option for a <strong>static descriptions</strong>, like a <code>--help</code> or <code>--helpxml</code>.</p>
+</li>
+</ul>
+<h3>Related</h3>
+<ul>
+<li><a href="Coprocess-Protocol-Proposal.html">Coprocess Protocol Proposal</a> -- This lives underneath.</li>
+</ul>
+  </body>
+</html>
+

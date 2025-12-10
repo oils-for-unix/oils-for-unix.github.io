@@ -1,0 +1,58 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Oils Deployments</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>This page is for linking to places where Oils is used, e.g. its packages on Linux Distros. Feel free to edit it!</p>
+<h2>Warning: Two Tarballs</h2>
+<p>As of 2024, there is awkwardness related to the Python -&gt; C++ transition. The Python tarball is packaged in more places, but the long term plan is for it to go away.</p>
+<p>Eventually, we will only distribute the C++ tarball.</p>
+<ul>
+<li>The C++ tarball is <code>oils-for-unix-$VERSION</code>.</li>
+<li>The Python tarball is <code>oil-$VERSION</code>.</li>
+</ul>
+<h2>Packages</h2>
+<p>Please package Oils!</p>
+<h3>New &quot;Oils for Unix&quot; C++ Tarball</h3>
+<ul>
+<li>DNF (Fedora/RHEL): <a href="https://copr.fedorainfracloud.org/coprs/tkbcopr/oils-for-unix/"><code>dnf copr enable tkbcopr/oils-for-unix &amp;&amp; dnf in oils-for-unix</code></a></li>
+<li>Homebrew: <a href="https://formulae.brew.sh/formula/oils-for-unix"><code>brew install oils-for-unix</code></a></li>
+<li>Nix: <a href="https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/oi/oils-for-unix/package.nix"><code>pkgs.oils-for-unix</code></a></li>
+<li>Arch User Repository: <a href="https://aur.archlinux.org/packages/oils-for-unix"><code>pacman -U oils-for-unix-&lt;version&gt;-&lt;architecture&gt;.pkg.tar.zst</code></a>
+<ul>
+<li>Arch Wiki: <a href="https://wiki.archlinux.org/title/Oil_Shell">https://wiki.archlinux.org/title/Oil_Shell</a> (Outdated)</li>
+</ul>
+</li>
+<li>Alpine Linux: <a href="https://gitlab.alpinelinux.org/alpine/aports/-/tree/master/testing/oils-for-unix/?ref_type=heads"><code>echo https://dl-cdn.alpinelinux.org/alpine/edge/testing &gt;&gt; /etc/apk/repositories &amp;&amp; apk add oils-for-unix</code></a>
+<ul>
+<li>Optionally replace <code>/bin/sh</code>: <code>apk add oils-for-unix-binsh</code></li>
+<li>Optionally replace <code>/bin/bash</code>: <code>apk add oils-for-unix-bash</code></li>
+</ul>
+</li>
+</ul>
+<h3>Old &quot;Oil&quot; Tarball (which includes CPython code)</h3>
+<p>This tarball is going away at some point. If you maintain these, please migrate to the &quot;Oils for Unix&quot; tarball!</p>
+<ul>
+<li>~~Homebrew: <a href="https://formulae.brew.sh/formula/oil"><code>brew install oil</code></a>~~</li>
+<li>~~Nix: <a href="https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/oi/oil/package.nix"><code>pkgs.oil</code></a>~~</li>
+<li>Pacstall (Debian/Ubuntu): <a href="https://github.com/pacstall/pacstall-programs/blob/master/packages/oil/oil.pacscript"><code>pacstall -I oil</code></a></li>
+<li>Void Linux: <a href="https://github.com/void-linux/void-packages/blob/master/srcpkgs/oil"><code>xbps-install oil</code></a></li>
+</ul>
+<h2>Build-from-source</h2>
+<p>You can only build from source on these platforms:</p>
+<ul>
+<li>Windows via <a href="https://learn.microsoft.com/en-us/windows/wsl/about">WSL</a></li>
+</ul>
+<h2>Meta</h2>
+<ul>
+<li>https://repology.org/project/oil-shell/versions</li>
+</ul>
+<h2>Packaging Guidelines</h2>
+<p>See <a href="Oils-Packaging-Guidelines.html">Oils Packaging Guidelines</a></p>
+  </body>
+</html>
+

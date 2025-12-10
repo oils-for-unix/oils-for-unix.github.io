@@ -1,0 +1,62 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Difficulties With Unix Signals</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>This is a list of problems with Unix signals.  Some of them are semantic problems (e.g. with threading), but some are just issues with a bad API and unclear ideas about what is portable.</p>
+<ul>
+<li>Signals and multithreading
+<ul>
+<li>This blog post and related comments are show much confusion there are: <a href="https://news.ycombinator.com/item?id=9564975">signalfd is useless</a>.  The author retracted his main point, saying that signalfd can still save you a thread.</li>
+<li>After PEP 475, the Python interpreter special cases EINTR (ignores it) on dup2() and close()
+<ul>
+<li>The basic reason is that those two system calls change the descriptor table, and in a multi-threaded
+context that leads to a race condition if you have a while (1) retry loop.</li>
+<li>https://lwn.net/Articles/576478/</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Job Control: Interaction between signals and terminals (??)
+<ul>
+<li>There are a whole bunch of special syscalls for job control that I don't fully understand.</li>
+<li><a href="https://www.gnu.org/software/libc/manual/html_node/Implementing-a-Shell.html">libc: Implementing a Job Control Shell</a></li>
+</ul>
+</li>
+<li>In Interpreters: Signal Handling Can Be Arbitrarily Delayed
+<ul>
+<li>Any nontrivial logic must be run on the main thread, not in the signal handler.  So interpreters queue signal
+handlers for running on the main loop.  (I think bash only changed this recently, but Python has always done this.)</li>
+<li>A single Python bytecode can take arbitrarily long (i.e. running a long computation in C). This means that signal handling can get arbitrarily delayed.  Is it a problem in practice?</li>
+</ul>
+</li>
+<li>API Usability Issues
+<ul>
+<li>Signals can be coalesced.  e.g. When you get <code>SIGCHLD</code>, you have to call <code>os.wait()</code> multiple times to get multiple   notifications.  What about other signals?
+<ul>
+<li>Signals are coalesced for interpreters as well</li>
+</ul>
+</li>
+<li>Simultaneously waiting for both a signal and an event on a file descriptor.  Solution: &quot;the self-pipe trick&quot;.  (Although there are some possible drawbacks listed on the &quot;signalfd is useless&quot; thread.)</li>
+<li>When a program starts to handle signals, now it must explicitly handle EINTR (in C, Python 2.7, although PEP 475 changed this).</li>
+</ul>
+</li>
+<li>Signals don't <strong>compose</strong> !
+<ul>
+<li>Can I run <code>xargs</code> as a builtin inside shell (i.e. in the same process)?  It has to deal with signals.  Maybe a bigger issue is that the wait() logic is complicated?</li>
+<li>Similar issue: Do I need a &quot;dummy process&quot; for the <a href="Coprocess-Protocol-Proposal.html">Coprocess-Protocol-Proposal</a> ?  This is related to the self-pipe trick, because with a coprocess, a &quot;process exit&quot; turns into a file descriptor event.</li>
+<li>What about <code>timeout</code> as a builtin?</li>
+</ul>
+</li>
+</ul>
+<h3>Related</h3>
+<ul>
+<li><a href="Signal-Handling-in-Oil.html">Signal Handling in Oil</a></li>
+</ul>
+  </body>
+</html>
+

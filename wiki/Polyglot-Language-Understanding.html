@@ -1,0 +1,195 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Polyglot Language Understanding</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>This is a survey of projects/research that try to <strong>understand multiple programming languages</strong> in a &quot;unified&quot; way.</p>
+<p>There are many lexing / syntax-highlighting-only projects toward the end of the page.  The more interesting ones attempt something closer to parsing, and even semantic analysis.</p>
+<p>But the simpler projects are naturally the most comprehensive in terms of the number of languages supported.  They're valuable &quot;corpuses&quot; of language info.</p>
+<p>This page is <strong>editable</strong> -- feel free to add other projects, with links, a description, and why they're interesting.</p>
+<hr />
+<p>I made a rough categorization by <strong>light</strong> vs. <strong>heavy</strong>.  It refers to how much code is shared between language &quot;back ends&quot;.  If no code is shared, it's &quot;heavy&quot;.</p>
+<p>That is, you could &quot;simply&quot; import entire compiler front ends and output protobufs, which is what Google Kythe did I believe.  That would be heavy.  Or you could rewrite lightweight lexers/parsers for every language in your own DSL.</p>
+<p>(Note: light is not necessarily better than heavy!)</p>
+<hr />
+<p>Note that finding patterns for syntax highlighting kind of &quot;bleeds in&quot; to the problem of finding patterns that indicate bugs and security issues.</p>
+<h2>Related Links</h2>
+<ul>
+<li><a href="https://codeberg.org/oils/oils.vim/src/branch/main/doc/algorithms.md">Three Algorithms for YSH Syntax Highlighting</a>
+<ul>
+<li><a href="https://lobste.rs/s/n8gpfg/three_algorithms_for_ysh_syntax">lobste.rs comments</a></li>
+</ul>
+</li>
+<li><a href="https://lobste.rs/s/fvxd9q/my_text_editor_is_not_open_source">My Text Editor Isn't Open Source</a> - Story About SublimeText
+<ul>
+<li>comment: <em>[coarse semantic info] is a VERY interesting point in the IDE design space which is under explored by open source tools</em></li>
+</ul>
+</li>
+</ul>
+<p>Quote from above:</p>
+<pre><code>Ok parsing, great indexing: sublime text
+horrible parsing, bad indexing: tags
+good parsing, no indexing: any editor out there using tree sitter
+good parsing, good indexing: an area in the design space waiting to be occupied!
+</code></pre>
+<h2>Lightweight Implementations</h2>
+<ul>
+<li>uchex / microchex (Stanford paper, 2016)
+<ul>
+<li>implemented with Haskell Parsec, original implementation was Python</li>
+<li><a href="https://mlfbrown.com/paper.pdf">How To Build Static Analyzers in Orders of Magnitude Less Code</a> (PDF)</li>
+<li><a href="https://blog.acolyer.org/2016/05/31/how-to-build-static-checking-systems-using-orders-of-magnitude-less-code/">Morning Paper Writeup</a></li>
+<li>micro-grammars, parser combinators</li>
+<li>&quot;belief-style checkers&quot; (not the only supported technique)</li>
+</ul>
+</li>
+<li><a href="https://comby.dev/">Comby</a>
+<ul>
+<li>Implemented in OCaml</li>
+<li><a href="https://comby.dev/en/projects">https://comby.dev/en/projects</a> - CMU paper</li>
+<li>Strange Loop 2019 - <a href="https://www.youtube.com/watch?v=JMZLBB_BFNg">&quot;Parser Parser Combinators for Program Transformation&quot; by Rijnard van Tonder</a></li>
+</ul>
+</li>
+<li><a href="https://docs.sylver.dev/">sylver</a>
+<ul>
+<li>not open source?</li>
+<li><em>Sylver is a language-agnostic tool for source code exploration and analysis.</em></li>
+<li>*Using the <a href="https://docs.sylver.dev/docs/dsl/sylq">SYLQ</a> query language REPL, you can perform syntax-aware search on your codebase to find</li>
+</ul>
+</li>
+</ul>
+<p>Concept: <a href="https://www.program-transformation.org/Transform/IslandGrammars.html">Island Grammars</a>.   <em>An island grammar only precisely defines small portions of the syntax of a language. The rest of the syntax is defined <strong>imprecisely</strong>, for instance as a list of characters, or a list of tokens.</em></p>
+<h2>Heavyweight Implementations</h2>
+<ul>
+<li>
+<p>semgrep / coccinelle (OCaml)</p>
+<ul>
+<li><a href="https://lobste.rs/s/lxa416/semgrep_static_analysis_journey">Semgrep: a static analysis journey (2021)</a> - <em>How an academic project for the Linux kernel evolved into a multilingual security tool</em></li>
+<li>INRIA -&gt; Facebook -&gt; r2c</li>
+<li>facebook/pfff repo (OCaml)
+style issues and potential bugs.*</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/github/semantic">https://github.com/github/semantic</a> -- appears inactive</p>
+<ul>
+<li>Haskell</li>
+</ul>
+</li>
+<li>
+<p><a href="https://kythe.io/">Google Kythe</a> - open source version of code search project started by Steve Yegge</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=KTJs-0EInW8">Stanford Seminar - Google's Steve Yegge on GROK</a> (2012)</li>
+</ul>
+</li>
+<li>
+<p><a href="http://rosecompiler.org/ROSE_HTML_Reference/index.html">ROSE</a></p>
+<ul>
+<li><em>Developed at <a href="https://llnl.gov/">Lawrence Livermore National Laboratory</a> (LLNL), ROSE is an open source compiler infrastructure to build source-to-source program transformation and analysis tools for large-scale C (C89 and C98), C++ (C++98 and C++11), UPC, Fortran (77, 95, 2003), OpenMP, Java, Python, PHP, and Binary applications.</em></li>
+<li><em>ROSE is particularly well suited for building custom tools for static analysis, program optimization, arbitrary program transformation, domain-specific optimizations, complex loop optimizations, performance analysis, and cyber-security</em></li>
+<li>Written in C++ - <a href="https://github.com/rose-compiler/rose/tree/weekly/src/AstNodes/Expression">https://github.com/rose-compiler/rose/tree/weekly/src/AstNodes/Expression</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.doxygen.nl">Doxygen</a></p>
+<ul>
+<li><em>[Doxygen] automates the generation of documentation from source code comments, parsing information about classes, functions, and variables to produce output in formats like HTML and PDF</em></li>
+<li><em>Doxygen provides robust support for documenting C++ code, recognizing the intricacies of the language and generating comprehensive documentation.</em></li>
+<li><em>Next to C++, Doxygen also supports C, Python, PHP, Java, C#, Objective-C, Fortran, VHDL, Splice, IDL, and Lex.</em></li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/AppThreat/atom">Atom</a></p>
+<ul>
+<li>[Atom] is a novel intermediate representation and a cli tool for parsing and slicing codebases in multiple programming languages</li>
+<li>Generate usages, data flows, and reachable flow slices for codebases in json format</li>
+<li>Export the various representations including data flows to graphml and dot format for advanced visualization and analysis</li>
+<li>Written in Scala and distributed as a container image and npm package.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/openrewrite">OpenRewrite by Modern</a></p>
+<ul>
+<li><em><a href="https://www.moderne.ai/community">OpenRewrite</a> (founded and managed by <a href="https://www.moderne.ai/">Moderne</a>) is a community-driven open source project that enables developers to effectively eliminate technical debt within their repositories. It consists of an auto-refactoring engine that runs prepackaged, open source refactoring recipes for common framework migrations, security fixes, and stylistic consistency tasks.</em></li>
+<li><em>OpenRewrite is Apache2 licensed and maintained by Moderne, the company that scales the use of OpenRewrite recipes across large codebases and multiple repositories.</em></li>
+</ul>
+</li>
+</ul>
+<h2>Polyglot Interfaces</h2>
+<ul>
+<li>
+<p><a href="https://about.sourcegraph.com/blog/announcing-scip">SCIP - a better code indexing format than LSIF</a> (Sourcegraph, 2022)</p>
+<ul>
+<li><em>Sourcegraph code navigation such as “Go to definition” comes in two flavors: search-based and precise. Search-based code navigation is available out-of-the-box. It is fast and always available, but it can occasionally return false-positive and false-negative results. Precise code navigation, on the other hand, requires custom configuration to set up, but the results are compiler-accurate and work across repositories. Both search-based and precise code navigation are useful in their own ways. While search-based is less powerful, it is a quick and convenient solution. Precise is more powerful, but it also requires more upfront investment to configure.</em></li>
+<li><a href="https://about.sourcegraph.com/blog/announcing-scip-typescript">scip-typescript: a new TypeScript and JavaScript indexer</a>
+<ul>
+<li><a href="https://github.com/sourcegraph/scip-typescript">https://github.com/sourcegraph/scip-typescript</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/sourcegraph/scip-java">https://github.com/sourcegraph/scip-java</a></li>
+</ul>
+</li>
+<li>
+<p>Language Server Protocol</p>
+</li>
+</ul>
+<h2>Syntax Highlighting</h2>
+<ul>
+<li>
+<p>TODO: link to these</p>
+<ul>
+<li>TextMate Grammars - <a href="https://macromates.com/manual/en/language_grammars">Manual</a></li>
+<li>Vim grammars - <a href="https://vimdoc.sourceforge.net/htmldoc/syntax.html">vimdoc Manual</a></li>
+<li><a href="https://github.com/googlearchive/code-prettify">https://github.com/googlearchive/code-prettify</a> (archived JavaScript syntax highlighting library)</li>
+</ul>
+</li>
+<li>
+<p><a href="https://en.wikipedia.org/wiki/Ctags">ctags</a> (Universal, Exuberant) -- Integrated with vim.  Very approximate, text-only analysis of languages.</p>
+<ul>
+<li>See FAQ on &quot;what happens when it's wrong?&quot; <a href="https://ctags.sourceforge.net/faq.html#10">https://ctags.sourceforge.net/faq.html#10</a></li>
+<li>Although it's not clear how much sharing there is</li>
+<li>Used by the <a href="https://oracle.github.io/opengrok/">OpenGrok</a> source browser (written in Java)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Highlight, by Andre Simon
+<ul>
+<li><a href="https://gitlab.com/saalen/highlight">https://gitlab.com/saalen/highlight</a></li>
+<li>Used by cgit (as a source filter)</li>
+<li>C++ Boost Regexes in Lua Config Files</li>
+<li>250+ languages</li>
+<li>Shell - https://gitlab.com/saalen/highlight/-/blob/master/langDefs/shellscript.lang?ref_type=heads
+<ul>
+<li>some here doc support -- as a Lua function plugin</li>
+<li>does it have nested strings support?  I'm very curious to test many implementations
+<ul>
+<li>this one is a command line tool, so it should be easy to test</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Other Surveys</h2>
+<ul>
+<li><a href="Alternative-Shells.html">Alternative Shells</a></li>
+<li><a href="Alternative-Regex-Syntax.html">Alternative Regex Syntax</a></li>
+</ul>
+<h2>More motivation</h2>
+<ul>
+<li>2025-08: There are too many incomplete SQL formatters, supporting different dialects of SQL
+<ul>
+<li>https://github.com/oils-for-unix/oils/commit/6cc219744cd573532c47f559d02d89cce498a8fb</li>
+</ul>
+</li>
+<li><a href="https://oilshell.zulipchat.com/#narrow/channel/121539-oil-dev">oil-dev</a> &gt; <a href="https://oilshell.zulipchat.com/#narrow/channel/121539-oil-dev/topic/Looking.20for.20sqlite.20auto-formatter/with/532465774">Looking for sqlite auto-formatter</a></li>
+</ul>
+  </body>
+</html>
+

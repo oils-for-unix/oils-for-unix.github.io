@@ -1,0 +1,132 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>How Interactive Shells Work</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<ul>
+<li>Back to <a href="Interactive-Shell.html">Interactive Shell</a> (a page of ideas)</li>
+<li>Related: <a href="How-Terminals-Work.html">How Terminals Work</a></li>
+</ul>
+<p>Let's figure out how interactive shells work!  bash, zsh, fish, and Oil are significantly different.  The goal is to figure out:</p>
+<ul>
+<li>What interactive features Oil should have.  (Right now, it's mostly bash-like)</li>
+<li>What hooks/APIs it should have so that others can implement nice interactive experiences (like zsh plugins and <code>ble.sh</code> on top of bash)</li>
+</ul>
+<p>Please add <strong>links or hand-written descriptions</strong> in the sections below, or talk to us on <code>#oil-discuss</code> at <a href="https://oilshell.zulipchat.com/">https://oilshell.zulipchat.com/</a> (log in with Github)</p>
+<p>And if there are too many details, feel free to create <strong>new pages</strong> and add links to them.</p>
+<h2>Parts of the Interactive Shell</h2>
+<ul>
+<li>The prompt.
+<ul>
+<li>In POSIX shell this is <code>$PS1</code> and <code>$PS2</code>.</li>
+<li>bash has extensions.</li>
+<li>Does a shell have to know how <strong>wide</strong> the prompt is to draw correctly?  (note: this depends on unicode chars in the propmt)</li>
+</ul>
+</li>
+<li><a href="Shell-Autocompletion.html">Shell Autocompletion</a> -- when you hit TAB, what happens</li>
+<li>Autosuggestions -- does it display suggestions <strong>on</strong> the prompt line automatically?  That is, there is no prompting.</li>
+<li>Spell correct?  zsh has this I think.</li>
+<li>History.  What format is the history stored in?
+<ul>
+<li>in bash it's a text file, which gives it an odd &quot;two level store&quot; behavior: see <a href="https://github.com/oilshell/oil/issues/324">issue 324</a></li>
+</ul>
+</li>
+</ul>
+<h2>Research</h2>
+<p>note: feel free to split this into more wiki pages</p>
+<h3>How Bash Works</h3>
+<ul>
+<li>It uses GNU Readline.  bash and readline are maintained together.</li>
+<li>It provides <code>$LINES</code>, <code>$COLUMNS</code>, and <code>trap SIGWINCH</code> hooks</li>
+<li><code>$PS1</code> and <code>$PS2</code> for prompt</li>
+<li>many options and vars for history, like <code>$HISTFILE</code>, etc.</li>
+<li>it has a <code>command_not_found</code> hook</li>
+</ul>
+<h3>How Zsh Works</h3>
+<ul>
+<li>TODO: What are the common plugins and what do they expect from the shell?</li>
+</ul>
+<h3>How Fish Works</h3>
+<p>Features</p>
+<ul>
+<li>autosuggestions</li>
+</ul>
+<h3>How ble.sh Works</h3>
+<p>(Related: <a href="Running-ble.sh-With-Oil.html">Running ble.sh With Oil</a>)</p>
+<h4>1. Processing user inputs</h4>
+<blockquote>
+<p>is there a &quot;main loop&quot; ?</p>
+</blockquote>
+<p><code>ble.sh</code> makes abuse of <code>bind -x</code> which can be used to bind a user-provided command to a user input sequence. <code>ble.sh</code> steals all the user inputs from GNU Readline by binding a shell function to all possible byte values 0-255. The essential idea can be illustrated by the following code (although there are many workarounds for old Bash bugs in actual <code>ble.sh</code>. See <code>lib/init-bind.sh</code>).</p>
+<pre><code class="language-bash">declare i
+for i in {0..255}; do
+  declare keyseq=$(untranslate-keyseq &quot;$i&quot;)
+  bind -x &quot;\&quot;$keyseq\&quot;: process-byte $i&quot;
+done
+</code></pre>
+<p>There is no explicit <em>main loop</em> in <code>ble.sh</code>. <code>ble.sh</code> processes received bytes asynchronously one-by-one. In other words, it borrows the main loop of GNU Readline in which Readline calls the shell functions bounded by <code>bind -x</code>. The <em>input byte stream</em> is decoded into the <em>character stream</em> by the specified input encoding (default: UTF-8). The character stream is translated into the <em>key stream</em> by processing special escape sequences that represents cursor keys, function keys, key modifiers, etc. Finally <em>key sequences</em> are constructed from keys in the key stream based on the current <em>keymaps</em> and are dispatched for various operations. All of these input processing is implemented by Bash programs (See <code>src/decode.sh</code>).</p>
+<p>Another important Bash feature that <code>ble.sh</code> utilizes is <code>read -t 0</code> which can be used to test if the next byte in standard input is already available or not. <code>ble.sh</code> uses <code>read -t 0</code> for polling. For example, <code>ble.sh</code> implements costly operations (e.g. history load, autosuggestions, filtering of menu items, history search) in a kind of coroutines/fibers and perform them in backgrounds while there is no user inputs. When <code>ble.sh</code> detects user inputs by <code>read -t 0</code>, it suspends the fiber and resume it after finishing the processing of the user inputs. Also <code>ble.sh</code> uses <code>read -t 0</code> to detect the pasting from clipboard (assuming that many inputs in a short time is pasting), etc. (cf the fiber system is implemented by functions <code>ble/util/idle.*</code> in <code>src/util.sh</code>).</p>
+<p><strong>API Requirements</strong>: To summarize, <code>ble.sh</code> only requires primitive I/O operations <strong>receive byte</strong> (<code>bind -x</code>) and <strong>poll</strong> (<code>read -t 0</code>) for its essential part. In other words, Bash/Readline doesn't provide any satisfactory high-level APIs for user-input processing (Bash/Readline provides <code>bind</code> for key bindings but it has tight limitations). If a shell provides some high-level support, a customizable key-binding system and a coroutine system would help users to develop interactive interfaces.</p>
+<h4>2. Layout and rendering of command line</h4>
+<p><code>ble.sh</code> directly constructs the terminal control sequences (escape sequences) by itself. First it determines the graphic attributes (highlighting color, etc.) of each character in the command line (this is another long story, so I'll skip the details). Next, it calculates the width of each Unicode character (it doesn't support combining characters currently) and determine the display position of each character. Then it constructs the control sequences to update the changed part (the characters which has colors or positions different from those in the previous rendering). Finally it outputs the constructed sequences to <code>stderr</code> (See <code>src/canvas.sh</code> for primitive layout/rendering functions, and <code>ble/textarea#*</code> in <code>src/edit.sh</code> for command line rendering).</p>
+<p>When <code>ble.sh</code> calculates the layout, it uses the terminal sizes which is available through the special Bash variables <code>LINES</code> and <code>COLUMNS</code> (Of course <code>shopt -s checkwinsize</code> is turned on by <code>ble.sh</code>). Also <code>ble.sh</code> traps <code>SIGWINCH</code> to update the layout and redraw the command line on the size change of terminals. It should also be noted that prompts are also calculated by <code>ble.sh</code> by analyzing <code>PS1</code> so that <code>ble.sh</code> knows the size and cursor movement of the prompt (See <code>ble-edit/prompt/*</code> in <code>src/edit.sh</code>). When constructing the control sequences, <code>ble.sh</code> also refers to terminfo/termcap by <code>tput</code> command if available (See <code>lib/init-term.sh</code>).</p>
+<p>Also, when <code>ble.sh</code> is activated, all the outputs from Bash/Readline should be suppressed. To achive this, <code>ble.sh</code> performs redirection of file descriptors of Bash process using <code>exec &gt;... &lt;...</code>.</p>
+<p><strong>API Requirements</strong>: <code>ble.sh</code> requires a primitive I/O operation <strong>output string</strong> (<code>printf</code>). In addition, the means to get the current terminal size (<code>LINES</code> and <code>COLUMNS</code>) is needed. The same information can be obtained by external commands such as <code>tput lines</code> and <code>tput cols</code> (ncurses) or <code>resize</code> (xterm utility), yet it is useful to provide them as builtin features (as these commands might not be available in the system). If a shell provides high-level support for this, layout and rendering can be performed by the shell but not by the shell scripts so that the shell scripts only have to specify the characters and their graphic attributes. If the shell provides the prompt calculation, it should also provide the cursor position information after the prompt is printed. The means to suppress/control the I/O of the original shell is also needed.</p>
+<h4>3. Command execution</h4>
+<blockquote>
+<p>how does it execute commands?</p>
+</blockquote>
+<p><code>ble.sh</code> uses <code>eval</code>. The commands must be executed in the top-level context (i.e., not in the function scope), so <code>ble.sh</code> uses a form of <code>bind -x</code> slightly modified from that described in the above section (<em>1. Processing user inputs</em>):</p>
+<pre><code class="language-bash">bind -x &quot;\&quot;$keyseq\&quot;: process-byte $i; eval -- \&quot;\$_toplevel_commands\&quot;&quot;
+</code></pre>
+<p>Here the shell variable <code>_toplevel_commands</code> is usually empty but contains commands only when some commands should be executed in the top-level context.</p>
+<p>Also <code>ble.sh</code> needs to adjust the state of terminals and pty handlers using special terminal sequences and also the external command <code>stty</code> before and after the command execution. Those adjustments are also included in <code>_toplevel_commands</code></p>
+<p><strong>API Requirements</strong>: The <code>ble.sh</code> requires a means to execute commands in the top-level context (direct <code>eval</code> in <code>bind -x</code>). Also <code>ble.sh</code> uses the external command <code>stty</code> to adjust the pty handler state which might be better to be built in the shell.</p>
+<h4>4. Summary</h4>
+<blockquote>
+<p>What does it expect from bash?</p>
+</blockquote>
+<ul>
+<li><code>bind -x</code> (read), <code>read -t 0</code> (select/poll), <code>printf</code> (write), <code>exec redirection</code> (dup2, fcntl, etc.), <code>eval</code></li>
+<li><code>$LINES</code>, <code>$COLUMNS</code></li>
+<li>it needs to trap <code>SIGWINCH</code> (todo: test this signal in Oil)</li>
+</ul>
+<h3>How Oil Works</h3>
+<p>Oil is mostly bash-like now.  I added a zsh-like completion interface that doesn't scroll every time you hit TAB, but it has some bugs, like <a href="https://github.com/oilshell/oil/issues/257">#257</a>.</p>
+<ul>
+<li>Search for <code>\x1b</code> to see all the escape codes Oil uses: <a href="https://github.com/oilshell/oil/blob/master/core/comp_ui.py">https://github.com/oilshell/oil/blob/master/core/comp_ui.py</a></li>
+<li>blog
+<ul>
+<li><a href="http://www.oilshell.org/blog/2020/01/history-and-completion.html">Oil Uses Its Parser For History And Completion</a></li>
+<li><a href="http://www.oilshell.org/blog/2020/01/alias-and-prompt.html">Oil's Parser Doesn't Worry About Aliases and Prompts</a></li>
+</ul>
+</li>
+</ul>
+<h2>Source Code</h2>
+<ul>
+<li><code>zsh-$VERSION/Src/Zle/zle_*</code> -- 20K lines of C code</li>
+<li>GNU readline: ~38K lines of C code</li>
+<li><code>ble.sh</code>: 30K+ lines of bash code</li>
+<li>yash: has its own line editor that does what we want!  It doesn't scroll the prompt!
+<ul>
+<li>but it doesn't support Ctrl-R, etc.</li>
+</ul>
+</li>
+</ul>
+<h2>Drawing Models</h2>
+<ul>
+<li>vim/emacs: draw on the &quot;alternate screen&quot; ?</li>
+<li>bash: this is just a normal app</li>
+<li>fish/zsh/ble.sh?  Some kind of hybrid
+<ul>
+<li>ble.sh predicts the location though.  I'm not sure if fish/zsh do though.  I guess fish must.</li>
+</ul>
+</li>
+</ul>
+  </body>
+</html>
+

@@ -1,0 +1,104 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>ParsingCaseStudies</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>What algorithms and tools do production-quality languages use for parsing?</p>
+<ul>
+<li>lexing</li>
+<li>parsing, including operator precedence parsing</li>
+<li>AST representation</li>
+</ul>
+<p>TODO: Add links</p>
+<h2>POSIX Shells</h2>
+<ul>
+<li>bash: multiple parsers.
+<ul>
+<li>yacc is used for the command language (judged to be a mistake in retrospect).</li>
+<li>recursive descent (Wirth-style) is used for arithmetic, i.e. <code>$(( ))</code></li>
+<li>recursive descent for boolean language <a href="-.html"> </a> (in parse.y)</li>
+<li>ad hoc parser for variable/word language</li>
+</ul>
+</li>
+<li>dash: hand-written lexer, recursive descent parser, generated AST nodes</li>
+<li>mksh: stateful lexer</li>
+<li>zsh:</li>
+</ul>
+<h2>Alternative Shells</h2>
+<p>See <a href="ExternalResources.html">ExternalResources</a></p>
+<p>PowerShell?</p>
+<h2>Build Tools</h2>
+<ul>
+<li>Ninja: re2c for lexer (for speed, used to be hand-coded), recursive descent for parser.</li>
+<li>Bazel: hand-coded lexer and recursive descent parser</li>
+</ul>
+<h2>Domain-Specific Languages</h2>
+<ul>
+<li>sqlite: uses bespoke Lemon parser generator (bottom up).</li>
+<li>protobuf compiler: hand-written lexer and recursive descent parser.  (What about other schema languages?)</li>
+</ul>
+<h2>Other Programming Languages</h2>
+<ul>
+<li>Python
+<ul>
+<li>hand-coded lexer with indentation stack</li>
+<li>parser generated with bespoke pgen.c</li>
+<li>generated AST, with Zephyr ASDL</li>
+</ul>
+</li>
+<li>Ruby
+<ul>
+<li>big yacc grammar</li>
+<li>JRuby: Jay, yacc for Java</li>
+</ul>
+</li>
+<li>Perl</li>
+<li>PHP</li>
+<li>Lua: hand-coded lexer and recursive descent parser in C.  There is no AST because it generates code while parsing!</li>
+<li>Wren: hand-coded lexer, recursive descent with Pratt parsing.</li>
+<li>Dart</li>
+<li>CoffeeScript: hand-coded lexer with regexes, token &quot;fixups&quot;, JISON bottom up parser</li>
+<li>Java</li>
+<li>C#</li>
+<li>Clang -- hand-written parser, enormous hand-written AST with C++ classes</li>
+<li>Go: hand-written C that was automatically converted to Go</li>
+<li>Rust</li>
+<li>Swift</li>
+<li>OCaml</li>
+<li>Haskell</li>
+<li>Awk: sort of a poster child for yacc.</li>
+<li>Scientific languages
+<ul>
+<li>Julia: lexer and parser are hand-written in femtolisp!  Enables Julia macros.</li>
+<li>R: <code>src/main/gram.y</code> is 3500 lines</li>
+<li>Mathematica?</li>
+</ul>
+</li>
+<li>JavaScript
+<ul>
+<li>v8</li>
+<li>duktape</li>
+<li>mujs</li>
+<li>narcissus (JS )</li>
+</ul>
+</li>
+</ul>
+<p>Tiny Languages</p>
+<ul>
+<li>TCC</li>
+<li>tinypy -- Pratt parsing in Python.</li>
+</ul>
+<h2>Parser Generator Success Stories</h2>
+<p>As counter point:</p>
+<ul>
+<li>R uses yacc</li>
+<li>Ruby uses yacc.  JRuby uses it too.</li>
+</ul>
+<p>(bash uses yacc, but it's not a success story.)</p>
+  </body>
+</html>
+

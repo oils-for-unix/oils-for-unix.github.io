@@ -1,0 +1,74 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Carrots</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Related: <a href="Why-Use-Oil?.html">Why Use Oil?</a></p>
+<h3>Why should anyone use OSH over bash?</h3>
+<ul>
+<li><strong>Removed many bash warts</strong> (e.g. with arrays and arithmetic) while still maintaining high compatibility
+<ul>
+<li>Added options like <code>set -o strict-array</code> for even better behavior (for situations where you don't need bash compatibility)</li>
+</ul>
+</li>
+<li>Better parse time and runtime <strong>error messages</strong>.  The infrastructure is there, but it needs more polish.
+<ul>
+<li>errors have column information!</li>
+<li><code>-e</code> / <code>errexit</code> failure isn't silent (TODO: show this in a post)</li>
+</ul>
+</li>
+<li>More accurate <strong>interactive completion</strong> (TODO: link to blog post: <em>The Interactive Shell Needs a Principled Parser</em>)</li>
+<li>Better UI for interactive completion.  (It's better than bash, but less fancy than zsh or fish.)
+<ul>
+<li>conserves vertical space</li>
+<li>allows showing descriptions of flags (still TODO)</li>
+</ul>
+</li>
+<li>Simpler <strong>configuration</strong>: a single <code>~/.config/oil/oshrc</code> file.
+<ul>
+<li>No rat's nest of startup files.  Easier to put in a <code>dotfiles</code> repo.</li>
+</ul>
+</li>
+<li>Easier to debug
+<ul>
+<li>Shell <strong>crash dumps</strong>.  Implemented with <code>OSH_CRASH_DUMP_DIR</code> but not documented / deployed.</li>
+<li><code>--debug-file</code> flag
+<ul>
+<li>TODO: Add <code>debug</code> or <code>debug-file</code> builtin for completion scripts.  Or <code>log DEBUG</code> ?</li>
+</ul>
+</li>
+<li><code>repr</code> builtin</li>
+</ul>
+</li>
+<li>Future: Lower latency with <strong>coprocesses</strong>.  <a href="https://github.com/oilshell/shell-protocols/tree/master/coprocess">Prototyped</a>, but not yet in OSH.</li>
+</ul>
+<h3>Devtools Ideas</h3>
+<ul>
+<li>In addition to crash dumps, potentially better <strong>tracing</strong> (<code>set -x</code> and <code>$PS4</code>).</li>
+<li>Allow docstrings for functions ?
+<ul>
+<li>show in the autocompletion UI</li>
+<li>generate HTML listings?</li>
+</ul>
+</li>
+<li>Lightweight testing in the same file or a <code>-test.sh</code> file (e.g. Rust has this built in)</li>
+<li>any shell script could be a &quot;go&quot; script, i.e. with a good error message for an invalid action</li>
+</ul>
+<p>Not implemented:</p>
+<ul>
+<li>Portable .rc files?  To solve the admin problem on remote servers.</li>
+<li>Migration path to a better language: Oil!
+<ul>
+<li>Could write inline function calls and expressions, e.g. <code>echo $f(x, y)</code></li>
+</ul>
+</li>
+</ul>
+<h3>Oil Carrots</h3>
+<p>It's too early for this since it isn't implemented :-/   There are some potential benefits listed on <a href="http://www.oilshell.org/blog/2018/01/28.html">Why Create a New Unix Shell?</a></p>
+  </body>
+</html>
+

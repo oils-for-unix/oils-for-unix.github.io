@@ -1,0 +1,72 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Internal DSLs for Shell</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<ul>
+<li>Back: to <a href="ExternalResources.html">ExternalResources</a></li>
+<li>Related: <a href="Alternative-Shells.html">Alternative Shells</a></li>
+</ul>
+<h2>Internal Shell DSLs in Various Languages</h2>
+<p>Every language seems to have an internal DSL for shell commands.  This approach is probably OK for small things, but I haven't seen it in the wild in major pieces of software.</p>
+<h3>Python</h3>
+<p><a href="plumbum-in-Python%7Chttps://github.com/tomerfiliba/plumbum.html">plumbum in Python|https://github.com/tomerfiliba/plumbum</a>  -- <em>The motto of the library is &quot;Never write shell scripts again&quot;, and thus it attempts to mimic the shell syntax (&quot;shell combinators&quot;) where it makes sense, while keeping it all Pythonic and cross-platform.</em></p>
+<p><a href="https://github.com/python-mario/mario">python-mario</a> -- <em>Have you ever wanted to use Python functions directly in your Unix shell? Mario can read and write csv, json, and yaml; traverse trees, and even do xpath queries. Plus, it supports async commands right out of the box.</em>.  This looks a bit like <code>perl -e</code> for Python.  That is, you're using Python from shell, not embedding shell-like code inside Python.</p>
+<p><a href="sh-in-Python%7Chttps://amoffat.github.io/sh/.html">sh in Python|https://amoffat.github.io/sh/</a> -- <em>sh is a full-fledged subprocess replacement for [multiple Python versions] that allows you to call any program as if it were a function</em>.  I wouldn't call this a shell because it doesn't support pipelines and such, but it's an example of programmers preferring the syntax of their language to the syntax of Unix shell.</p>
+<p><a href="pysh%7Chttp://pysh.sourceforge.net/.html">pysh|http://pysh.sourceforge.net/</a> -- Dormant project where the author encountered problems in the approach: <em>I no longer believe this approach to shell scripting to be a good solution. pysh's approach is to modify the syntax of python resulting in an uglier, and confusing, language. Maybe someday I'll stumble upon the ``right way'' to implement a shell language, but for now bash is just fine.</em> (Many years later, I don't agree bash is fine!)</p>
+<p><a href="zxpy%7Chttps://github.com/tusharsadhwani/zxpy.html">zxpy|https://github.com/tusharsadhwani/zxpy</a> zx-inspired shell scripting tool in Python.</p>
+<p><a href="aush%7Chttps://github.com/kbd/aush.html">aush|https://github.com/kbd/aush</a> - <em>aush is a Python library to make calling other programs and getting their output as easy as possible. It's intended to be the best possible melding of shell scripting and Python</em></p>
+<p><a href="duct.py%7Chttps://github.com/oconnor663/duct.py.html">duct.py|https://github.com/oconnor663/duct.py</a> - <em>Duct is a library for running child processes. Duct makes it easy to build pipelines and redirect IO like a shell. At the same time, Duct helps you write correct, portable code</em>.  There's some nice [documentation of gotchas of running processes, and how duct.py avoids them|https://github.com/oconnor663/duct.py/blob/master/gotchas.md](documentation-of-gotchas-of-running-processes -and-how-duct.py-avoids-them|https://github.com/oconnor663/duct.py/blob/master/gotchas.md.html)</p>
+<p>(<a href="https://lobste.rs/s/p1hict/zxpy_tool_for_shell_scripting_python#c_8l5pa3">Feedback on lobste.rs on the differences between these libraries</a>)</p>
+<h3>Lisp-y Languages</h3>
+<p><a href="EShell-in-Emacs-Lisp%7Chttps://www.gnu.org/software/emacs/manual/eshell.html.html">EShell in Emacs Lisp|https://www.gnu.org/software/emacs/manual/eshell.html</a> -- A bash-like shell embedded in Emacs.  <a href="Example-Syntax%7Chttps://www.emacswiki.org/emacs/EshellForLoop.html">Example Syntax|https://www.emacswiki.org/emacs/EshellForLoop</a>, <a href="Mastering-EShell%7Chttps://www.masteringemacs.org/article/complete-guide-mastering-eshell.html">Mastering EShell|https://www.masteringemacs.org/article/complete-guide-mastering-eshell</a>.</p>
+<p><a href="scsh-in-Scheme%7Chttps://scsh.net/.html">scsh in Scheme|https://scsh.net/</a> -- <em>Scsh has two main components: a process notation for running programs and setting up pipelines and redirections, and a complete syscall library for low-level access to the operating system ... Moreover, scsh provides an awk facility for pattern-directed computation over streams of records, a rich facility for matching regular-expression patterns in strings, event-based interrupt handling, user-level threads, a futuristic module system, and an interactive environment.</em></p>
+<p><a href="inferior-shell-in-Common-Lisp%7Chttp://quickdocs.org/inferior-shell/.html">inferior-shell in Common Lisp|http://quickdocs.org/inferior-shell/</a> -- <em>This CL library allows you to spawn local or remote processes and shell pipes. It lets me use CL in many cases where I would previously write shell scripts.</em></p>
+<p><a href="https://github.com/andrewchambers/janet-sh">janet-sh</a>: DSL/library for concisely running shell commands in <a href="https://janet-lang.org/">Janet</a>. Supports pattern matching on the exit codes of each command in a pipeline.</p>
+<p><a href="closh%7Chttps://github.com/dundalek/closh.html">closh|https://github.com/dundalek/closh</a> -- <em>Bash-like shell based on Clojure</em>.  This may have some of its own syntax, but it also uses Clojure syntax.</p>
+<p><a href="rash%7Chttp://rash-lang.org.html">rash|http://rash-lang.org</a> -- Racket #lang for shell scripting and interaction.  Allows pipelines to mix processes and Racket functions, has user-definable pipeline operators, lets you embed normal Racket and shell-style Rash code within each other, and inherits all of Racket's features.</p>
+<p><a href="scsh-process%7Chttp://wiki.call-cc.org/eggref/5/scsh-process.html">scsh-process|http://wiki.call-cc.org/eggref/5/scsh-process</a> -- chicken scheme</p>
+<h3>Other Dynamic Languages</h3>
+<p><a href="https://docs.julialang.org/en/v1/manual/running-external-programs/">Julia</a> —- like Ruby, it has backticks syntax. Unlike Ruby, backticks return a command object, so no escaping of arguments is necessary.</p>
+<p><a href="zx%7Chttps://github.com/google/zx.html">zx|https://github.com/google/zx</a> in node.js, using async/await.  <em>zx package provides useful wrappers around child_process, escapes arguments and gives sensible defaults.</em> JavaScript backticks make it possible to properly escape arguments.</p>
+<p><a href="https://github.com/japiirainen/vl">vl</a> -- <em>shell scripting in typescript. Powered by deno</em>.  Started out as a port of zx.</p>
+<p><a href="Shell-in-Ruby%7Chttp://ruby-doc.org/stdlib-2.3.3/libdoc/shell/rdoc/Shell.html.html">Shell in Ruby|http://ruby-doc.org/stdlib-2.3.3/libdoc/shell/rdoc/Shell.html</a> -- <em>It provides users the ability to execute commands with filters and pipes, like sh/csh by using native facilities of Ruby.</em>  This is in the standard library? Ruby also has build-in backticks syntax for executing shell commands (susceptible to injection vulnerabilities).</p>
+<p><a href="psh-in-Perl%7Chttps://gnp.github.io/psh/.html">psh in Perl|https://gnp.github.io/psh/</a> -- <em>Perl Shell (psh) combines aspects of bash and other shells with the power of Perl scripting</em>.  This one is notable because Perl has a heavy influence from shell, sed, and awk.  It appears it's still not close enough.</p>
+<p><a href="forsh-in-Forth%7Chttps://bitbucket.org/cowile/forsh.html">forsh in Forth|https://bitbucket.org/cowile/forsh</a> -- <em>forsh is a shell built on top of gforth. It allows one to easily operate a unix-like operating system without leaving the gforth environment</em></p>
+<p><a href="https://www.gnu.org/software/grub/manual/grub/grub.html#Shell_002dlike-scripting">grub2</a> -- <em>Shell + bootloader. What could possibly go wrong?</em></p>
+<h3>Haskell</h3>
+<p><a href="https://chrisdone.github.io/hell/">Hell</a> - <em>Shell scripting Haskell dialect</em>. <a href="https://chrisdone.com/posts/hell/">Blog post</a>. Deals with structured data and has built-in functions, similar to PowerShell, but no package/module system in the interest of stability/doneness. 2k-line single file implementation in Haskell. Releases available as a static (musl) amd64 Linux binary. Started in 2023. <a href="https://chrisdone.com/posts/tour-of-hell/">Technical implementation overview</a>.</p>
+<p><a href="HSH-in-Haskell%7Chttps://github.com/jgoerzen/hsh/wiki.html">HSH in Haskell|https://github.com/jgoerzen/hsh/wiki</a> -- <em>HSH is designed to let you mix and match shell expressions with Haskell programs.</em></p>
+<p><a href="shh-in-Haskell%7Chttps://github.com/luke-clifton/shh/tree/master/shh.html">shh in Haskell|https://github.com/luke-clifton/shh/tree/master/shh</a> -- <em>Enables convenient shell-like programming in Haskell. Also wraps GHCi (Haskell's REPL) to act as an alternative shell. The README also discusses other, similar, projects in Haskell</em></p>
+<h3>Rust</h3>
+<p><a href="https://docs.rs/xshell/0.1.8/xshell/">xshell</a> -- <em>xshell makes it easy to write cross-platform &quot;bash&quot; scripts in Rust</em></p>
+<p><a href="https://contextgeneric.dev/blog/hypershell-release/">Hypershell</a> (<a href="https://lobste.rs/s/1swikb/hypershell_type_level_dsl_for_shell">lobste.rs</a>) - <em>A Type-Level DSL for Shell-Scripting in Rust</em></p>
+<h3>OCaml</h3>
+<p><a href="Caml-Shcaml:-an-OCaml-Library-for-Unix-Shell-Programming%7Chttps://scholar.google.com/scholar?cluster=16784460611035264561&amp;hl.html">Caml-Shcaml: an OCaml Library for Unix Shell Programming|https://scholar.google.com/scholar?cluster=16784460611035264561&amp;hl</a></p>
+<p><a href="janestreet/shexp%7Chttps://github.com/janestreet/shexp.html">janestreet/shexp|https://github.com/janestreet/shexp</a> -- <em>Shexp is composed of two parts: a library providing a process monad for shell scripting in OCaml as well as a simple s-expression based shell interpreter. Both provide good debugging support.</em></p>
+<h3>Other Statically Typed Languages</h3>
+<p><a href="Ammonite-Ops-in-Scala%7Chttp://www.lihaoyi.com/Ammonite/#Ammonite-Ops.html">Ammonite-Ops in Scala|http://www.lihaoyi.com/Ammonite/#Ammonite-Ops</a> -- <em>a library to make common filesystem operations in Scala as concise and easy-to-use as from the Bash shell</em></p>
+<p><a href="https://bitfieldconsulting.com/golang/scripting">Scripting With Go</a> -- <em>script is a Go library for doing the kind of tasks that shell scripts are good at: reading files, executing subprocesses, counting lines, matching strings, and so on. The author liked the elegant and concise nature of well-crafted shell pipelines, but liked Go even more.</em></p>
+<h2>Internal Awk DSLs</h2>
+<p><a href="FuncShell-%E2%80%93-A-Haskell-based-alternative-to-awk%7Chttps://news.ycombinator.com/item?id=14236830.html">FuncShell – A Haskell-based alternative to awk|https://news.ycombinator.com/item?id=14236830</a> -- Also has links to <a href="sqawk%7Chttps://github.com/dbohdan/sqawk.html">sqawk|https://github.com/dbohdan/sqawk</a> in SQL, <a href="luawk%7Chttps://github.com/HeinrichHartmann/luawk.html">luawk|https://github.com/HeinrichHartmann/luawk</a> in Lua.</p>
+<p><a href="http://okmij.org/ftp/ML/myawk/index.html">myawk: shell/AWK/Perl-like scripting in OCaml</a> -- by Oleg.  <em>The library myawk is a small OCaml library for quick, rough and ready scripts. It is meant as a lightweight and less idiosyncratic replacement for AWK (let alone Perl) -- and also as an exploration and demonstration of a better alternative to shell pipes.</em> Numerous familiar complaints about shell on this page too!</p>
+<p><a href="https://github.com/hauntsaninja/pyp">pyp</a> -- Awk-like tool leveraging the Python interpreter.  <em>pyp will statically analyse the input code to detect undefined variables. Based on what it finds, it will proceed to transform the AST of the input code as needed. We then compile and execute the result, or if using --explain, unparse the AST back to source code.</em>  Has magic <code>lines</code> variable, etc.</p>
+<h2>Internal Build Tool DSLs</h2>
+<p>As with shells, each language community has explored idea of using their language to express build rules.</p>
+<p><a href="SCons-in-Python%7Chttp://scons.org/.html">SCons in Python|http://scons.org/</a> -- <em>Configuration files are Python scripts--use the power of a real programming language to solve build problems</em></p>
+<p><a href="Rake-in-Ruby%7Chttps://github.com/ruby/rake.html">Rake in Ruby|https://github.com/ruby/rake</a> -- <em>Rakefiles (rake's version of Makefiles) are completely defined in standard Ruby syntax</em>.  The book Beautiful Code has an essay by Matz which discusses why this is possible and nice in Ruby.</p>
+<p><a href="Jake-in-JavaScript%7Chttp://jakejs.com/docs#overview_jakefile_syntax.html">Jake in JavaScript|http://jakejs.com/docs#overview_jakefile_syntax</a> -- <em>A Jakefile is just executable JavaScript. You can include whatever JavaScript you want in it.</em></p>
+<p><a href="Grunt-in-JavaScript%7Chttp://gruntjs.com/sample-gruntfile.html">Grunt in JavaScript|http://gruntjs.com/sample-gruntfile</a> -- This is called a &quot;task runner&quot; rather than a build tool.  A <strong>shell</strong> is also a task runner!  The Gruntfile can execute arbitrary code and do I/O, i.e. read package.json files.</p>
+<p><a href="Shake-in-Haskell%7Chttp://shakebuild.com/why.html">Shake in Haskell|http://shakebuild.com/why</a> -- <em>Shake is implemented as a Haskell library, and Shake build systems are structured as Haskell programs which make heavy use of the Shake library functions</em></p>
+<p><a href="sbt-in-Scala%7Chttp://www.scala-sbt.org/0.13/docs/index.html.html">sbt in Scala|http://www.scala-sbt.org/0.13/docs/index.html</a> -- <em>Scala-based build definition that can use the full flexibility of Scala code</em></p>
+<h2>Related</h2>
+<ul>
+<li><a href="Unifying-Make-and-Shell.html">Unifying Make and Shell</a></li>
+</ul>
+  </body>
+</html>
+

@@ -1,0 +1,84 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Shellac Protocol Proposal V2</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<ul>
+<li>Back to <a href="Shell-Autocompletion.html">Shell Autocompletion</a></li>
+<li>Original <a href="Shellac-Protocol-Proposal.html">Shellac Protocol Proposal</a></li>
+</ul>
+<h3>Requirements</h3>
+<ul>
+<li>Shell-agnostic.  You can't force zsh to parse bash strings!</li>
+<li>Compatible with existing completion scripts.  e.g. <code>_openstack</code> use case.  Most migrations should be a trivial wrapper.</li>
+<li>Probably: Should be implementable in pure bash and zsh.</li>
+</ul>
+<h3>Design Sketch</h3>
+<p>Compared to the original <a href="Shellac-Protocol-Proposal.html">Shellac Protocol Proposal</a></p>
+<ul>
+<li>Remove mention of coprocesses!  That is orthogonal.  It's just a process now.</li>
+<li>Input side:
+<ul>
+<li>shellac-provider -- command --myflag 1 --myflag2 f</li>
+</ul>
+</li>
+<li>Output:
+<ul>
+<li>{ key, value, key, value } in NUL terminated strings</li>
+<li>Arrays are prefixed with length</li>
+</ul>
+</li>
+</ul>
+<p>Example:</p>
+<pre><code>[&quot;candidates&quot;, &quot;2&quot;, &quot;one&quot;, &quot;two&quot;, &quot;descriptions&quot;, &quot;2&quot;, &quot;desc1&quot;, &quot;desc2&quot;]
+</code></pre>
+<p>This is printed on stdout as a series of NUL-terminated strings.</p>
+<ul>
+<li>Read with <code>read -d $'\0'</code> in bash</li>
+</ul>
+<h3>Finding Completions for binaries</h3>
+<p>Look in <code>$SHELLAC_HOME_DIR/plugins/openstack/complete</code> for openstack.</p>
+<p><code>$SHELLAC_HOME</code> = <code>~/.local/shellac</code> on Linux.</p>
+<p>TODO: details.</p>
+<h3>Extensibility</h3>
+<ul>
+<li>Input format is extensible with new flags</li>
+<li>Output format is extensible with new &quot;keys&quot;.
+<ul>
+<li>right now we have <code>&quot;candidates&quot;</code> and <code>&quot;descriptions&quot;</code>, but we can have more.</li>
+</ul>
+</li>
+</ul>
+<h3>Migration</h3>
+<h4>From bash completion</h4>
+<ul>
+<li>Easy, just take COMPREPLY and print as &quot;candidates&quot;.  Descriptions are left blank.</li>
+</ul>
+<h4>From subcommands</h4>
+<ul>
+<li>Easy, just write a shell wrapper:</li>
+</ul>
+<pre><code>#!/bin/sh
+exec npm complete &quot;$@&quot;
+</code></pre>
+<h3>What's Wrong with <code>complete -C</code> in bash?</h3>
+<ul>
+<li>line-oriented protocol</li>
+<li>COMP_CWORDS is wrong</li>
+</ul>
+<p>TODO: Write up more!</p>
+<h3>Test Cases</h3>
+<p>See <a href="Shellac-Test-Cases.html">Shellac Test Cases</a>.</p>
+<h3>Links</h3>
+<ul>
+<li>https://www.redox-os.org/news/rsoc-ion-ux-2/</li>
+<li>https://www.redox-os.org/news/rsoc-ion-ux-3/</li>
+<li>https://www.redox-os.org/news/rsoc-ion-ux-4-5/</li>
+</ul>
+  </body>
+</html>
+

@@ -1,0 +1,109 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>October 2025 Reply</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p><em>October 13, 2025</em></p>
+<p>Hello!  I posted a request for help on October 2nd, and got over <strong>50</strong> responses!  Thank you</p>
+<ul>
+<li><a href="https://lobste.rs/s/a3wcu0/who_s_hiring_q4_2025#c_pwnd05">https://lobste.rs/s/a3wcu0/who_s_hiring_q4_2025#c_pwnd05</a> - <em>Language Engineer / Debugger of Other People’s Cursed Shell Programs / Writer</em></li>
+<li><a href="https://news.ycombinator.com/item?id=45446865">https://news.ycombinator.com/item?id=45446865</a> - The <code>lobste.rs</code> posting has a bit more detail than this one</li>
+</ul>
+<p>I replied to the first few people with <a href="October-2025-Posting.html">October 2025 Posting</a>, but not everybody.  It's worth reading that page, but I intend to make <strong>this reply</strong> a bit shorter, and more to the point.</p>
+<p>What happened is that a few people showed up and just started getting stuff done, which I really appreciate !!!</p>
+<p>Oils is an open source project, so it's a <strong>good sign</strong> that some people can &quot;just start&quot;.</p>
+<h2>FAQ: How do I know if I can contribute?</h2>
+<p>The shortest way to answer this is to give some concrete examples.</p>
+<p>In the job ad, I included these links, so people can <strong>self-select</strong> into the project.</p>
+<ul>
+<li><a href="https://op.oils.pub/aports-build/published.html">https://op.oils.pub/aports-build/published.html</a></li>
+<li><a href="https://github.com/orgs/oils-for-unix/projects/1/views/1">https://github.com/orgs/oils-for-unix/projects/1/views/1</a></li>
+</ul>
+<p>I <strong>don't</strong> really expect those links to make sense to most people!</p>
+<p>But some people have been following the project for a long time, and have worked on similar projects, so they understand it.  (The project is 9.5 years old now!)</p>
+<h3>Teaching me something is a good sign</h3>
+<ul>
+<li>
+<p>Andriy noticed that <a href="https://github.com/oils-for-unix/oils/issues/2335">the ulimit -n bug #2335</a> has the symptom &quot;errno EINVAL Invalid Argument&quot;, and added this information to the linked <strong>Zulip thread</strong>!</p>
+<ul>
+<li>And he additionally taught me that the <code>ulimit -n</code> sets a limit for the maximum descriptor <strong>number</strong> (e.g. 32), not the maximum number of open file descriptors.  That pointed the way toward the <strong>root cause</strong> of the bug.</li>
+</ul>
+</li>
+<li>
+<p>Bram ran into build failures with the <a href="Contributing.html">Contributing</a> instructions</p>
+<ul>
+<li>Then he fixed our build scripts to include <a href="https://github.com/oils-for-unix/oils/commit/0e857c3c3a05777fb611a4ee9e3f620538797910">-std=gnu99</a> and <a href="https://github.com/oils-for-unix/oils/commit/7d6b7ca925ac8429f05cbe233903113f3e5cac1c">other flags</a></li>
+<li>It turns out that this error is related to stricter GCC 15 on Fedora and Arch, compared to GCC 12 on Debian, which I use.  I remember trying to fix this last year, and didn't know this!</li>
+</ul>
+</li>
+</ul>
+<p>Andriy and Bram have also fixed other parts of Oils since then.  The general idea is that <strong>any movement on the Kanban board</strong>, from left to right, is worthwhile progress.  But I also expect that everyone will need to ask questions about  each issue, which is why it's a <strong>collaborative</strong> process.</p>
+<p>(Existing grant contributors Aidan, Koichi, Melvin, and Samuel have all taught me things too -- getting things done in a way that I wouldn't have necessarily done myself!)</p>
+<h3>Quick Test: You should have a personal motivation for shell, and OSH or YSH</h3>
+<p>Some people who responded are not that familiar with the Oils project -- e.g. they're not sure what OSH and YSH are.</p>
+<p>If so, this &quot;job&quot; is probably not right for you.  The project is 9.5 years old now, and I think most good contributors are fans of the project, and want to <strong>use it</strong>.</p>
+<p>(I mentioned some other &quot;signs&quot; in <a href="October-2025-Posting.html">October 2025 Posting</a>.)</p>
+<h2>FAQ: Is work still available?  Will We Run Out of Money?</h2>
+<p>As mentioned in <a href="October-2025-Posting.html">October 2025 Posting</a>, this is <strong>not</strong> a &quot;normal job&quot;.  It's more like an open source project where you happen to get paid.</p>
+<p>The grant is for 50K euros, and so far we've paid out 5K euros.  (We've received 3 grants of 50K euros in the past, so 150K euros.)</p>
+<p>This grant technically lasts until August 2026.  Based on current progress, I believe we could apply for another NLnet grant and receive  more funding in 6 to 9 months.  That is, it's better to get it done in <em>less than a year</em>.</p>
+<p>(We also have Github sponsors money, and a ~$4K <strong>donation</strong> from myself and a former co-worker, which I'll mention on the blog.)</p>
+<hr />
+<p>My <strong>long-term goal</strong> is for <strong>others</strong> to be able to work on OSH and Oils independently, with or without their own funding.</p>
+<p>I also think NLnet would like to receive Oils grant applications from people other than me.  If the projects goals can be achieved, I'd like to help others be funded.</p>
+<p>In contrast, I want to spend more time working on <strong>YSH</strong> and related projects.  (I don't need funding to work on Oils -- I took 5K euros and zero euros on our last 2 grants.)</p>
+<p>YSH requires a lot of <strong>design</strong>, which is not parallelizable.  While OSH is more about compatibility at this point.  (A few bugs &quot;expand&quot; into design issues, and that's why I'm still heavily involved in OSH.)</p>
+<h3>Is the Project Parallelizable?</h3>
+<p>That's what I've been working on since this grant started -- and especially for the last week, after all the interest.  I want everyone to be able to make smooth progress towards the project's goals!</p>
+<p>As noted, our communication style means you may end up digging through large Zulip threads.  This is similar to other open source projects -- e.g. if you try to follow the Rust project, it's easy to become overwhelmed.</p>
+<h2>Corrections / Clarifications</h2>
+<h3>50 Hours</h3>
+<p>I said in the job listing that you can &quot;do as much or as little as you like&quot;.  But this is <strong>not</strong> quite true -- it can create an administrative headache for NLnet if there are too many people to pay.</p>
+<p>So I'm asking people to <strong>self-select into 50 hours of work</strong> = 2500 euros.  I mention this on <a href="October-2025-Posting.html">October 2025 Posting</a>, and I acknowledge that it creates a <strong>dilemma</strong> for some people who are interested: it's hard to tell if you can contribute without putting a bunch of <strong>time</strong> into it.</p>
+<p>(Although as mentioned, at least 2 people &quot;just started&quot;, but I don't expect that to be true for everyone.)</p>
+<hr />
+<p>That basically means reading Zulip and <strong>asking good questions</strong>, and then seeing if you can contribute code / testing / public writing to the project.</p>
+<p>As I wrote, this is necessarily a <strong>collaborative</strong> process, because many bugs are too hard for one person to fix.</p>
+<p>The collaboration happens mostly on Zulip, although we also have video meetings.</p>
+<h3>Language Engineer / C / C++</h3>
+<p>Some people interpreted the job as just &quot;debugging shell scripts&quot;.</p>
+<p>But the &quot;language engineer&quot; part is important too.   See <a href="October-2025-Posting.html">October 2025 Posting</a>.</p>
+<p>It also turns out that C and libc / C++ / Unix background has been important for most bugs.  We don't <strong>write</strong> a lot of C and C++, but it's  very useful if you can read it.</p>
+<h2>Please Join Us!</h2>
+<p>If that didn't scare you away, please join https://oilshell.zulipchat.com/ and <strong>ask questions</strong> about anything!</p>
+<h3>Three Kanban Boards Now</h3>
+<p>I started with one Kanban board:</p>
+<ul>
+<li><strong>Prove We Can Build Distros with OSH</strong> - https://github.com/orgs/oils-for-unix/projects/1</li>
+</ul>
+<p>Now we have two more:</p>
+<ul>
+<li><strong>aports/community - Build More Packages with OSH</strong> - https://github.com/orgs/oils-for-unix/projects/3</li>
+<li><strong>More 4th Grant Work</strong> - https://github.com/orgs/oils-for-unix/projects/2</li>
+</ul>
+<p>Any movement from left to right is progress, and questions are welcome!</p>
+<h2>Links</h2>
+<ul>
+<li>Instructions
+<ul>
+<li><a href="Contributing.html">Contributing</a></li>
+<li><a href="Oils-Dev-Cheat-Sheet.html">Oils Dev Cheat Sheet</a></li>
+<li><a href="https://github.com/oils-for-unix/oils/blob/master/regtest/aports.md">regtest/aports.md</a> - documentation about the test harness we're using</li>
+</ul>
+</li>
+<li>Tips
+<ul>
+<li><a href="Process-Tracing-Tips-and-Tools.html">Process Tracing Tips and Tools</a></li>
+<li><a href="Tips-on-Reducing-Bugs-to-Small-Test-Cases.html">Tips on Reducing Bugs to Small Test Cases</a></li>
+</ul>
+</li>
+<li><a href="Fourth-Grant-Goals-and-Guidelines.html">Fourth Grant Goals and Guidelines</a></li>
+</ul>
+<p>Asking questions on Zulip is always welcome!</p>
+  </body>
+</html>
+

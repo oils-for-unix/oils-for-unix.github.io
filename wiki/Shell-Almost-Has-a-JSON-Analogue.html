@@ -1,0 +1,56 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Shell Almost Has a JSON Analogue</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Up: <a href="Structured-Data-in-Oil.html">Structured Data in Oil</a></p>
+<p>The analogy to JSON is that a serialization format can be defined from a subset of the programming language syntax.</p>
+<p>Since shell essentially only has strings, this is just a format that serializes strings in shell.</p>
+<p>Let's introduce two requirements:</p>
+<ul>
+<li>It shouldn't be line-based, because then you can't store a newline in a string.  We want stream multiple instances of this format over a pipe.</li>
+<li>We are also introducing the additional limitation that you don't want to invoke child processes to do it.  Otherwise base64 would work.  (JSON itself doesn't quite work because it can't represent arbitrary byte strings.  See <a href="TSV2-Proposal.html">TSV2 Proposal</a></li>
+</ul>
+<h3>Summary</h3>
+<p>Serialize with</p>
+<pre><code>printf '%q' &quot;$mystring&quot;
+</code></pre>
+<p>or in bash 4.4</p>
+<pre><code>echo ${mystring@Q}
+</code></pre>
+<p>But this doesn't appear to be  POSIX?  printf is a required shell builtin, but <code>%q</code> isn't mentioned.</p>
+<p>https://pubs.opengroup.org/onlinepubs/9699919799/utilities/printf.html</p>
+<p>Parse with:</p>
+<pre><code>read untrusted_data &lt; $myfile
+printf -v myvar '%b' &quot;$untrusted_data&quot;  # This should just create a string an not evaluate arbitrary code.
+</code></pre>
+<p><strong>2024 Update</strong> - This does <strong>not</strong> work, <code>%q</code> and <code>%b</code> are not inverses.  <code>%b</code> respects <code>\n</code> like <code>echo -e</code>, but it doesn't respect even basic shell quoting like <code>\'</code>.</p>
+<p><code>printf -v</code> is obviously not</p>
+<p>Dynamic assignment is another alternative:</p>
+<pre><code>declare a=&quot;myvar=$untrusted_data&quot;
+declare &quot;$a&quot;
+
+</code></pre>
+<p>Although I'm not sure this works in bash, because <code>()</code> might be special-cased for arrays.  There is probably a hole for code execution, whereas I don't expect that for <code>%b</code>.</p>
+<h3>Example</h3>
+<p>It doesn't work in dash, but works in bash and zsh, as expected.</p>
+<p>Caveat: NUL character are not representable in shell strings!  OSH will fix this.  And <a href="TSV2.html">TSV2</a> will also be able to represent NUL.</p>
+<pre><code>$ echo $'a\x01b' | bash -c 'read x; printf %q &quot;$x&quot;' 
+$'a\001b'$ 
+
+$ echo $'a\x01b' | zsh -c 'read x; printf %q &quot;$x&quot;' 
+a$'\001'b$ 
+
+$ echo $'a\x01b' | dash -c 'read x; printf %q &quot;$x&quot;' 
+dash: 1: printf: %q: invalid directive
+</code></pre>
+<h3>Lesson for Oil</h3>
+<p>Shell needs a serialization format!!!</p>
+<p>Update: This is now <a href="QSN.html">QSN</a>.</p>
+  </body>
+</html>
+

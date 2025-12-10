@@ -1,0 +1,65 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Process Tracing Tips and Tools</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<h2>Tracing Processes You Don't Control</h2>
+<p>e.g. <code>busybox ash</code> on an Alpine machine, for reducing bugs from <code>regtest/aports</code>.   These techniques do NOT require recompilation, debug symbols, or source code modification</p>
+<ul>
+<li>
+<p>Shell interpreter tracing with <code>set -x</code> aka <code>set -o xtrace</code> - show shell statements executed</p>
+<ul>
+<li>Example from Andy: I used this to discover that autotool configure scripts call <code>rm</code> and <code>cat</code> commonly, and then we implemented <code>builtin rm</code> and <code>builtin cat</code></li>
+<li><strong>multi-process tracing</strong> with <code>set -x; export SHELLOPTS</code> - bash and OSH have a feature where you can <code>export SHELLOPTS</code> to <code>set -x</code> on all child processes</li>
+<li>Note: bash also has an <code>XTRACE_FD=</code> env var to send all the traces to the same place; I don't think OSH has this yet</li>
+</ul>
+</li>
+<li>
+<p><code>strace myprog</code> - show syscalls</p>
+<ul>
+<li>Samuel used this for the <code>$PWD</code> bug</li>
+<li>It can be helpful to use <code>-f -o FILE</code> and then start replacing the PIDs with a human name in the file to analyze e.g. races</li>
+<li>use something like <code>-e t=chdir,file,read,write</code>, to limit the shown syscalls (e.g. <code>memory</code> is usually irrelevant)</li>
+<li><code>-v</code> to not abbreviate</li>
+<li><code>-s 1000</code> to abbreviate strings only after 1000 characters (needs to be in addition to <code>-v</code></li>
+<li>the <code>-c</code> flag creates a histogram of syscalls</li>
+<li>the <code>-f</code> flag follows child processes</li>
+<li><strong>multi-process tracing</strong> with <code>strace -ff -o prefix</code> - follow forks, creates <code>prefix.$PID</code> files</li>
+</ul>
+</li>
+<li>
+<p><code>ltrace myprog</code> - show <code>libc</code> calls</p>
+<ul>
+<li>has an <code>-e</code> flag</li>
+<li>Example from Andy: I used this to debug <code>setlocale()</code> calls in bash versus OSH</li>
+</ul>
+</li>
+</ul>
+<h2>Tracing or Debugging Processes You Can Modify</h2>
+<h3>Require Symbols / Recompilation</h3>
+<ul>
+<li><code>gdb --args myprog --flag</code></li>
+<li>ASAN gives nicer stack traces</li>
+<li>We are using <code>uftrace</code> - user space function tracing
+<ul>
+<li>it traces all function call entry and exit, by putting probes in the code</li>
+</ul>
+</li>
+</ul>
+<h3>Require Source Code Instrumentation</h3>
+<ul>
+<li><code>systemtap</code> - we have <code>DTRACE_PROBE()</code> calls in the Oils C++ source code</li>
+</ul>
+<h2>Related</h2>
+<ul>
+<li><a href="Process-Tracing-Projects.html">Process Tracing Projects</a></li>
+<li><a href="Implementing-Debuggers.html">Implementing Debuggers</a></li>
+<li><a href="Tips-on-Reducing-Bugs-to-Small-Test-Cases.html">Tips on Reducing Bugs to Small Test Cases</a> - for <code>regtest/aports</code></li>
+</ul>
+  </body>
+</html>
+

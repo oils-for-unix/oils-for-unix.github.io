@@ -1,0 +1,58 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Oil Native Quick Start</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Context: <a href="Compiler-Engineer-Job.html">Compiler Engineer Job</a></p>
+<p>Related: <a href="Oil-Dev-Cheat-Sheet.html">Oil Dev Cheat Sheet</a></p>
+<h2>1. Get <code>bin/osh -c 'echo hi'</code> Working</h2>
+<p>The <a href="Contributing.html">Contributing</a> page will walk you through it.  You need a Linux machine -- Ubuntu/Debian-ish are most likely to work.</p>
+<p>This often takes less than 1 minute.  If it takes more than 5 or 10 minutes, something has gone wrong!  Paste the command you ran and the error message in <code>#oil-dev</code> at https://oilshell.zulipchat.com/</p>
+<h3>Run the spec tests</h3>
+<p>I usually run this command as a sanity check.</p>
+<pre><code>~/git/oilshell/oil$ test/spec.sh smoke 
+smoke.test.sh
+case    line    dash    bash    mksh    osh
+  0       4     pass    pass    pass    pass    builtin
+  1       8     pass    pass    pass    pass    command sub
+...
+</code></pre>
+<p>The <a href="Contributing.html">Contributing</a> page has more details.  Also see <a href="Spec-Tests.html">Spec Tests</a>.</p>
+<h2>2. Get <code>_bin/cxx-dbg/osh -c 'echo hi'</code> Working</h2>
+<p>This is <code>oil-native</code>, the C++ translation.  This is a bit harder to run.</p>
+<p>Instructions are in <a href="https://github.com/oilshell/oil/blob/master/mycpp/README.md">mycpp/README.md</a>.  This may take slightly longer.</p>
+<p>The basic idea is that we have:</p>
+<ol>
+<li>A Python program that depends on MyPy (called <code>mycpp</code>)</li>
+<li>That <strong>translates</strong> another Python program to C++</li>
+<li>Then we <strong>compile</strong> the C++.</li>
+</ol>
+<p>And the build system uses Python that generates Ninja.</p>
+<p>Again let us know if anything doesn't work!</p>
+<h3>Run the Same Spec Tests Against <code>oil-native</code></h3>
+<pre><code>~/git/oilshell/oil$ test/spec-cpp.sh run-file smoke
+smoke.test.sh
+case    line    osh     osh_.py osh_.cc
+  0       4     pass    pass    pass    builtin
+  1       8     pass    pass    pass    command sub
+...
+</code></pre>
+<h2>Find the Spec Tests in the CI</h2>
+<p>Go to <a href="http://travis-ci.oilshell.org/github-jobs/">http://travis-ci.oilshell.org/github-jobs/</a> → <code>cpp</code> task → <code>spec-cpp</code> RESULTS.</p>
+<p>Example: <a href="http://travis-ci.oilshell.org/github-jobs/2022-05-23__17-34-18.wwz/_tmp/spec/cpp/osh-summary.html">http://travis-ci.oilshell.org/github-jobs/2022-05-23__17-34-18.wwz/_tmp/spec/cpp/osh-summary.html</a></p>
+<h2>Pick a Test To Make Pass</h2>
+<p>TODO: Chat with me on https://oilshell.zulipchat.com/ about this.  Some tests are much easier than others.</p>
+<p>I made ~300 tests pass in 4-5 days back in March!  See <a href="https://www.oilshell.org/blog/2022/03/middle-out.html#oil-099-made-a-big-leap">Oil 0.9.9 Made a Big Leap</a>.</p>
+<p>But it's also possible that 1 test will take 2 weeks!</p>
+<h2>Related</h2>
+<ul>
+<li><a href="Compiler-Engineer-Job.html">Compiler Engineer Job</a></li>
+<li><a href="Where-Contributors-Have-Problems.html">Where Contributors Have Problems</a></li>
+</ul>
+  </body>
+</html>
+

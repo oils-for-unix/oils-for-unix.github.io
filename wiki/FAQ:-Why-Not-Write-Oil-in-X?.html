@@ -1,0 +1,158 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>FAQ: Why Not Write Oil in X?</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>This is a common set of questions, enough so that I'm making a wiki page about it.</p>
+<ul>
+<li>Background: <a href="https://www.oilshell.org/blog/2022/03/middle-out.html">Oil Is Being Implemented &quot;Middle Out&quot;</a> (with language-oriented programming, by translating Python to C++)
+<ul>
+<li>Particularly <a href="https://www.oilshell.org/blog/2022/03/middle-out.html#more-writing-on-middle-out-and-translation">the appendix</a> has links</li>
+</ul>
+</li>
+</ul>
+<p>(2024 update: Renamed Oil -&gt; Oils, though the titles of linked blog posts haven't been changed)</p>
+<h2>First: I Encourage Parallel Experiments in Other Languages</h2>
+<p>I don't claim that Oils' strategy is the only way!  (However I will note that every POSIX-compatible shell is written in C, and there are deeper reasons for that than you might expect.  Shell is a thin layer over the Unix kernel, which has an interface specified in C.  Its major dependency is libc.)</p>
+<p><a href="https://www.oilshell.org/blog/2020/07/blog-roadmap.html#how-to-rewrite-oil-in-nim-c-d-or-rust-or-c">How to Rewrite Oil in Nim, C++, D, or Rust (or C)</a> (Summer 2020)</p>
+<h2>Why Not OCaml?</h2>
+<p>I think OCaml is a &quot;top contender&quot; -- it has algebraic data types, garbage collection, and a predictable native compiler.</p>
+<p>However, a huge part of a shell codebase is lexing and parsing, and I believe those are more naturally done with imperative / stateful languages.  (On the other hand, type checking is probably more natural in OCaml.  I say &quot;probably&quot; because location info and errors tend to drown out attempts at clean, short code.)</p>
+<p>For example, ocamlyacc is no different than a parser generator in C.  There is no real advantage to OCaml there, and C/C++ are faster.  re2c ended up being a perfect code generator for Oils, and I would have to write OCaml bindings for its generated code, which I don't know how to do.</p>
+<ul>
+<li>Related: The Morbig paper parsed POSIX shell with Menhir (similar to yacc), but Menhir required new features in order for this to work.  Oils handles the much larger bash language with &quot;lexer modes&quot;, recursive descent, and algebraic data types.  See <a href="https://www.oilshell.org/blog/2019/02/07.html">How To Parse Shell Like a Programming Language</a> (most work was done in 2016)</li>
+<li><a href="https://old.reddit.com/r/ProgrammingLanguages/comments/puao1v/im_using_python_now_2013/he2syf8/">Good Subthread With Examples of Imperative Programming in OCaml</a> -- to my eyes, writing a simple <code>for</code> loop and <code>continue</code> is awkward (short circuiting).  Shell and parsing are full of such code.</li>
+</ul>
+<h2>Why not D?</h2>
+<p>I think D would be another top contender -- it's a &quot;fast systems language&quot; with garbage collection.  It has builtin dictionaries!  (which are used all over Oils)</p>
+<p>Though I think we would still want something like Zephyr ASDL for algebraic data types.</p>
+<h2>Why Not Go?</h2>
+<p><a href="https://lobste.rs/s/77nu3d/oil_s_parser_is_160x_200x_faster_than_it_was#c_nrd35t">You Can't Write a Portable POSIX Shell in Portable Go</a> due to its threaded runtime, and the fact that it doesn't use libc.</p>
+<p>It doesn't necessarily mean Go is a bad choice, but it will cause more work.</p>
+<p>Related comment and discussion about threads and fork(), which don't mix: https://news.ycombinator.com/item?id=31741222</p>
+<p>Also, as of March 2024, the native Oils binary is a little above 2 MB.  As far as I remember, binaries in other compiled languages may be 10x as big, and I believe that matters for a shell.</p>
+<h2>Why Not Rust?</h2>
+<p>I think Rust is promising in general, and it's obviously possible with enough effort.</p>
+<p>But the shell AST is actually a big graph, and the parser is reused in an unusual way for interactive completion, giving it odd ownership semantics.  I think garbage collection is natural for this problem.</p>
+<p>Also, garbage collection must occur somewhere -- either at the OSH/YSH level or at the host language level (C++ / Rust).  I think having it in the host language is very nice.  You can write garbage collectors in (unsafe) Rust, but I don't know how to do it.</p>
+<ul>
+<li>Another answer here: https://old.reddit.com/r/oilshell/comments/ralaw3/backlog_rough_progress_assessments/hnlksxc/
+<ul>
+<li>GCC and Clang still support many more architectures than the Rust compiler.  I'd like Oils to be built on weird embedded systems with limited compiler support.  That's not a dealbreaker, but it's a consideration.</li>
+</ul>
+</li>
+<li>Note that Zephyr ASDL is more expressive than Rust's algebraic data types in at least one dimension.  (<a href="https://lobste.rs/s/77nu3d/oil_s_parser_is_160x_200x_faster_than_it_was#c_gu4oaj">comment on that</a>)</li>
+</ul>
+<h2>Why Not Write it By Hand in C++?</h2>
+<p>I think you could probably &quot;compress&quot; bash's 142K lines of C into 100K lines of C++ or so.  But then YSH would bring that to perhaps 200K lines.</p>
+<p>I don't think I'm capable of writing 200K lines of C++ from scratch with a good architecture!  (A few people I've worked with probably could, but I can't, and I think even most &quot;good&quot; C++ programmers can't.)</p>
+<p>The 10-40K lines of Python let me <strong>aggressively refactor the code for years</strong>!  And after living with this code for many years, I'm happy with how it turned out.</p>
+<p>Also:</p>
+<ul>
+<li><a href="http://www.oilshell.org/blog/2021/12/backlog-assess.html#php-like-productivity-iterating-50-times-a-minute">Parsing Shell Was Like Black Box Reverse Engineering</a>, and the low latency of an interpreter helps.  C++ is slow to compile.</li>
+<li>Python has garbage collection, and it also turned out to be a rich source of metalanguages:
+<ul>
+<li>Zephyr ASDL for algebraic data types</li>
+<li>pgen2 for LL parsing</li>
+<li>a regex parser, which, along with re2c, produces state machines in pure C</li>
+<li>Gradual typing with MyPy</li>
+</ul>
+</li>
+</ul>
+<h2>Why Not C ?</h2>
+<p>C has the advantage that many kernel and systems programmers are familiar with C.</p>
+<p>It has the same disadvantages as C++ -- you'd have to write a very large C program to implement OSH + YSH (i.e. most of bash, and a lot more), and it would be hard to re-design and refactor.</p>
+<p>In addition, we use fine-grained <strong>static types</strong> to represent shell, which both C++ and MyPy support.  (In the Zephyr ASDL code generator, sum types are implemented with inheritance, which turns out to work just great and be very useful.)</p>
+<p>In contrast, shells generally use a very homogeneous / &quot;untyped&quot; <code>WORD*</code> representation, which makes it hard to reason about parsing, evaluation, and quoting.</p>
+<p>We also use:</p>
+<ul>
+<li>strongly typed containers like <code>List&lt;T&gt;</code> and <code>Dict&lt;K, V&gt;</code></li>
+<li>virtual functions</li>
+<li>exceptions and deterministic cleanup with C++ destructors</li>
+</ul>
+<p>Related FAQ: <a href="https://www.oilshell.org/blog/2022/05/mycpp.html#why-generate-c-and-not-c">Why Generate C++, and Not C?</a></p>
+<p>Features like <code>constexpr</code> also turn out to be pretty nice for the compile-time reflection needed for <a href="https://www.oilshell.org/blog/2023/01/garbage-collector.html">garbage collection</a>.</p>
+<h2>Nim?</h2>
+<p>Note: a <strong>manual</strong> translation to Nim is being attempted: https://forum.nim-lang.org/t/6756#42018</p>
+<h3>Semi-Automatic Translation</h3>
+<p>There seems to be a belief that automatically translating Python to Nim is easier than translating Python to C++, but I don't think that's true.  The similar indentation-based syntax doesn't make translation easier; the semantics and libraries are what matter.</p>
+<p>https://old.reddit.com/r/oilshell/comments/gqrixg/oil_08pre5_progress_in_c/frw0sl7/</p>
+<h3>Writing From Scratch</h3>
+<p>From what I understand, I think Nim could be a good language for writing a shell from scratch.  Although one thing I didn't like is that the generated C code is not readable.</p>
+<p>It is more like a control flow graph serialized into C, from what I remember.</p>
+<p>An explicit goal of Oils' C++ translation is to be able to read, debug, profile the generated code with standard C++ tools, which are  powerful and numerous.  Functions are functions; loops are loops; ifs are ifs; etc.</p>
+<h2>Why Not Use [Dynamic Language With JIT] instead of C++?</h2>
+<ul>
+<li>https://old.reddit.com/r/ProgrammingLanguages/comments/umlo1x/brief_descriptions_of_a_python_to_c_translator/i878m3u/</li>
+</ul>
+<h2>Why Not Run the Oils Interpreter with PyPy?</h2>
+<p>One answer here: https://lobste.rs/s/e6u4zi/garbage_collected_heap_c_shaped_like#c_kgepb7</p>
+<h2>Why Not Rewrite the Oils Interpreter in RPython, and generate C without a JIT?</h2>
+<p>EDIT: It's possible that this would work, we have done an experiment along these lines</p>
+<p>It's less straightforward than what we're doing, since it has to infer types at build time</p>
+<h2>Memory Management Strategies</h2>
+<h3>Why not use Boehm GC?</h3>
+<p>This has become a bit of a FAQ too!   Related: <a href="https://www.oilshell.org/blog/2022/10/garbage-collector.html">Oil 0.12.7 - Garbage Collector Problems</a></p>
+<ul>
+<li>The technique is inherently unportable
+<ul>
+<li>I would like Oil to be able to bootstrap OSes on weird CPU architectures, without writing assembly code.  (recall that one of the first shell programs I ran was &quot;Aboriginal Linux&quot;)</li>
+</ul>
+</li>
+<li>Compared to the shell, it's big and complex
+<ul>
+<li>It's at least 33K lines of C code, and some assembly.</li>
+<li>We have less than 7K lines of hand-written C++ in Oil -- that's the collector + data structures + OS bindings</li>
+</ul>
+</li>
+<li>It's supposed to be &quot;drop in&quot;, but in reality ...
+<ul>
+<li>To make good use of it, you are supposed to give it hints about where pointers may or may not be</li>
+<li>There are many tuning parameters, and they can be tuned incorrectly.  (author of Nix evaluator rewrite commented on this)</li>
+<li>the Nix evaluator appears to be carrying around Boehm GC patches for Darwin.  I don't want to become a Boehm maintainer!</li>
+</ul>
+</li>
+<li>Two anti-recommendations from 2012 here; Boehm was removed from their codebases: https://news.ycombinator.com/item?id=3576396
+<ul>
+<li>It's also true that some people have good experiences</li>
+</ul>
+</li>
+<li>The risk of imprecision is higher on 32-bit systems; a shell has good use cases on 32-bit systems.</li>
+<li>The safety is questionable -- <strong>it changes when compilers change</strong>, and they have changed a lot since Boehm GC was initially developed
+<ul>
+<li>Good perspective from Henderson about this in <em>Accurate Garbage Collection in Uncooperative Environments</em> (2002)</li>
+<li>My summary of that work: https://old.reddit.com/r/ProgrammingLanguages/comments/y93yvv/oil_0127_garbage_collector_problems/it9uv1h/</li>
+<li>2016 Emacs controversy: https://lists.gnu.org/archive/html/emacs-devel/2016-11/msg00551.html
+<ul>
+<li>my point is not to say it's unsafe, but to say it's questionable, which is definitely true!  Oils' philosophy is not to use questionable assumptions about compilers, even if they happen to be true for some compilers.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Some more comments on the blog: https://www.oilshell.org/blog/2023/01/garbage-collector.html</p>
+<h3>What About Reference Counting?</h3>
+<p>Oils is written with an &quot;executable spec&quot;, so in theory any memory management strategy can be plugged in.</p>
+<p>Some comments here: https://lobste.rs/s/de28g8/pictures_working_garbage_collector#c_vc5l9a</p>
+<h3>What About <code>shared_ptr</code> ?</h3>
+<p>Some comments here: https://lobste.rs/s/s2remb/oil_is_being_implemented_middle_out#c_1itid1</p>
+<h2>Links</h2>
+<ul>
+<li><a href="https://oilshell.zulipchat.com/#narrow/stream/266575-blog-ideas/topic/Implementation.20Language.20FAQ">Zulip: Implementation Language FAQ</a>.  (requires login).  Go, Rust, D, Nim, etc.
+<ul>
+<li>I may copy more links here as necessary</li>
+</ul>
+</li>
+<li><a href="https://www.oilshell.org/blog/2018/03/04.html#faq">Why Python 2?</a> (2018) Because our Unicode is UTF-8 based, like Go and Rust, not like Python 2 or 3.   Conceptually, it's similar to PyPy, which also uses Python 2 as the basis for a metalanguage (even the Python 3 version of PyPy).
+<ul>
+<li>Technically, the &quot;executable spec&quot; of Oils is able to run under the Python 2 interpreter.  But I would think of it as being written in a mix of Python-based DSLs (regular languages, Zephyr ASDL, pgen2, a subset of MyPy).</li>
+</ul>
+</li>
+</ul>
+  </body>
+</html>
+

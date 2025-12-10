@@ -1,0 +1,105 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>ExternalResources</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<h2>Links to Unix Shells, Languages, Libraries, Implementations, Research, and More</h2>
+<p> </p>
+<p> </p>
+<p>You probably came here for one of these pages:</p>
+<ul>
+<li><strong>THE BIG LIST</strong> of <a href="Alternative-Shells.html">Alternative Shells</a>: fish, Elvish, NGS, nushell, etc.</li>
+<li>Another big list of <a href="Internal-DSLs-for-Shell.html">Internal DSLs for Shell</a>: libraries in languages like Python, Perl, Ruby, JavaScript, Scheme, Racket, Common Lisp, Scala, OCaml, Haskell, etc.</li>
+<li><a href="Unifying-Make-and-Shell.html">Unifying Make and Shell</a>: Several projects that combine shell and Make.</li>
+</ul>
+<p> </p>
+<p> </p>
+<h3>POSIX Shells</h3>
+<p>See the list starting at <a href="https://www.oilshell.org/cross-ref.html#bash">https://www.oilshell.org/cross-ref.html#bash</a></p>
+<ul>
+<li>GNU bash -- most popular shell in the world, on Linux, Mac, Windows</li>
+<li>ksh / pdksh / mksh -- ksh was a proprietary extension of the original Bourne shell; pdksh was an open source clone of ksh; mksh is a fork of pdksh and used on Android.</li>
+<li>dash / busybox ash (same lineage)</li>
+<li>busybox hush -- shell in one file.</li>
+<li><a href="https://yash.osdn.jp/index.html.en">yash</a> -- <em>Yash, yet another shell, is a POSIX-compliant command line shell written in C99 (ISO/IEC 9899:1999). Yash is intended to be the most POSIX-compliant shell in the world while supporting features for daily interactive and scripting use.</em> -- Has Debian and Fedora packages.</li>
+<li>zsh (not POSIX compatible by default)</li>
+</ul>
+<h3>Shell Parsers</h3>
+<ul>
+<li><a href="ShellCheck%7Chttps://github.com/koalaman/shellcheck.html">ShellCheck|https://github.com/koalaman/shellcheck</a> -- Written in Haskell, using the parser combinator style.  (No seperate lexer).</li>
+<li><a href="shfmt%7Chttps://github.com/mvdan/sh.html">shfmt|https://github.com/mvdan/sh</a> -- Shell auto-formatter like <code>gofmt</code>, written in Go.</li>
+<li><a href="sh-parser%7Chttps://github.com/jirutka/sh-parser.html">sh-parser|https://github.com/jirutka/sh-parser</a> -- parsing POSIX shell with Lua's LPEG</li>
+<li><a href="morbig%7Chttps://github.com/colis-anr/morbig.html">morbig|https://github.com/colis-anr/morbig</a> -- from Colis project, parsing POSIX shell, <a href="FOSDEM-Talk%7Chttps://fosdem.org/2018/schedule/event/code_parsing_posix_s_hell/.html">FOSDEM Talk|https://fosdem.org/2018/schedule/event/code_parsing_posix_s_hell/</a>.  <code>alias</code> makes parsing undecidable too!</li>
+<li><a href="https://github.com/idank/bashlex.html">https://github.com/idank/bashlex</a> -- <em>bashlex is a Python port of the parser used internally by GNU bash.  For the most part it's transliterated from C ... I wrote this library for another project of mine, explainshell which needed a new parsing backend to support complex constructs such as process/command substitutions.</em></li>
+<li><a href="https://github.com/tree-sitter/tree-sitter-bash">tree-sitter-bash</a> -- grammar.js is 512 lines?  There's also C++ code?
+<ul>
+<li>for <a href="https://github.com/mads-hartmann/bash-language-server%5D">bash-language-server</a></li>
+</ul>
+</li>
+</ul>
+<h3>Academic Projects</h3>
+<ul>
+<li>The Colis/Morbig project above</li>
+<li><a href="http://shell.cs.pomona.edu/">Smoosh: The Symbolic, Mechanized, Observable, Operational Shell</a> - Formalizing POSIX shell.  Implementation in OCaml.</li>
+</ul>
+<p>TODO: Add links here.</p>
+<ul>
+<li>Thompson shell papers</li>
+<li>Bourne Shell</li>
+<li>ksh paper (Usenix)</li>
+<li>bash papers</li>
+<li><a href="A-Pipe-Has-Two-Ends.-Using-APL-in-a-multiprocess/multiprocessor-environment.%7Chttps://kar.kent.ac.uk/13447/.html">A Pipe Has Two Ends. Using APL in a multiprocess/multiprocessor environment.|https://kar.kent.ac.uk/13447/</a> -- 1989.  <em>A proposal for a flexible but easy to use syntax.</em>  ... <em>I offer for general consideration a device that allows data to be piped out of APL, through (a series of) shell commands, and back into APL.</em></li>
+<li>dgsh</li>
+</ul>
+<h3>Find-like Languages</h3>
+<ul>
+<li>https://github.com/leahneukirchen/lr -- <em>lr is a new tool for generating file listings, which includes the best features of ls(1), find(1), stat(1) and du(1).</em></li>
+</ul>
+<h3>Awk- and Sed-like Languages</h3>
+<p><a href="Tab-Language%7Chttps://tkatchev.bitbucket.io/tab/.html">Tab Language|https://tkatchev.bitbucket.io/tab/</a> -- An interesting statically-typed, non Turing complete language that apparently fills the niche of Awk.  Written in C++.</p>
+<p><a href="Miller%7Chttp://johnkerl.org/miller/doc/index.html.html">Miller|http://johnkerl.org/miller/doc/index.html</a> (<a href="Language-Reference%7Chttp://johnkerl.org/miller/doc/reference.html.html">Language Reference|http://johnkerl.org/miller/doc/reference.html</a>) -- <em>Miller is like awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON.</em>  Written in C.</p>
+<p><a href="TXR%7Chttp://nongnu.org/txr/.html">TXR|http://nongnu.org/txr/</a> -- <em>TXR is a pragmatic, convenient tool ready to take on your daily hacking challenges with its dual personality: its whole-document pattern matching and extraction language for scraping information from arbitrary text sources, and its powerful data-processing language to slice through problems like a hot knife through butter. Many tasks can be accomplished with TXR &quot;one liners&quot; directly from your system prompt.</em>  There is a TXR Lisp and then it is embedded in a pattern language.  Sort of like the reverse of a template language?</p>
+<p><a href="jq%7Chttps://stedolan.github.io/jq/.html">jq|https://stedolan.github.io/jq/</a> -- <em>jq is like sed for JSON data - you can use it to slice and filter and map and transform structured data with the same ease that sed, awk, grep and friends let you play with text.</em>  Written in C.</p>
+<p>These projects are dormant:</p>
+<p><a href="r17%7Chttp://www.rseventeen.com/.html">r17|http://www.rseventeen.com/</a> (<a href="Github%7Chttps://github.com/matthewnourse/r17.html">Github|https://github.com/matthewnourse/r17</a>, written in C++) -- <em>A flexible, scalable, relational data mining language</em>.  No releases since 2013.</p>
+<ul>
+<li><em>r17's syntax is a cross between UNIX shell and SQL.</em></li>
+<li><em>Built-in concurrency, including cross-machine concurrency.</em></li>
+<li><em>Strong type checking at stream-header-read time.</em></li>
+</ul>
+<p><a href="streem%7Chttps://github.com/matz/streem.html">streem|https://github.com/matz/streem</a> (by Matz, creator of Ruby, written in C with yacc grammar) -- <em>Streem is a stream based concurrent scripting language. It is based on a programming model similar to the shell, with influences from Ruby, Erlang, and other functional programming languages.</em></p>
+<h3>Scientific Workflow Languages</h3>
+<p><a href="https://en.wikipedia.org/wiki/Scientific_workflow_system">Scientific Workflow System</a> on Wikipedia has a huge list.</p>
+<ul>
+<li><a href="https://cuneiform-lang.org/">Cuneiform</a> -- <em>Cuneiform combines the strong points of functional programming languages, distributed databases, and workflow management systems.</em></li>
+<li><a href="https://www.nextflow.io/">Nextflow</a> -- an external DSL, e.g. <code>process { }</code>.  <em>Nextflow enables scalable and reproducible scientific workflows using software containers. It allows the adaptation of pipelines written in the most common scripting languages.</em></li>
+<li><a href="http://www.commonwl.org/">Common Workflow Language</a> -- <em>The Common Workflow Language (CWL) is a specification for describing analysis workflows and tools in a way that makes them portable and scalable across a variety of software and hardware environments, from workstations to cluster, cloud, and high performance computing (HPC) environments. CWL is designed to meet the needs of data-intensive science, such as Bioinformatics, Medical Imaging, Astronomy, Physics, and Chemistry.</em></li>
+<li><a href="https://github.com/scipipe/scipipe">SciPipe</a> -- <em>SciPipe is a library for writing scientific workflows (sometimes also called &quot;pipelines&quot;) of shell commands that depend on each other, in the Go programming language</em></li>
+<li><a href="https://news.ycombinator.com/item?id=13352659">HN thread on dgsh</a> mentions many similar systems.</li>
+</ul>
+<h3>Shell Complements</h3>
+<ul>
+<li><a href="ShellJs%7Chttps://github.com/shelljs/shelljs.html">ShellJs|https://github.com/shelljs/shelljs</a> -- This is the opposite of a shell in JavaScript -- it's all the Unix utilities in JavaScript, and you use JS as your shell language.</li>
+<li><a href="OCamp%7Chttps://github.com/let-def/ocamp.html">OCamp|https://github.com/let-def/ocamp</a> -- <em>OCamp extends unix shells with constructions to express memoization, sharing of computations and reactive programming.</em>  Written in OCaml.</li>
+<li>TODO: There was one about calling C functions from shared libraries.</li>
+<li>asdf -- not really a library, but a language-independent version manager</li>
+</ul>
+<h3>Pages with Collections of Links</h3>
+<ul>
+<li><a href="Unix-Shell-on-Wikipedia%7Chttps://en.wikipedia.org/wiki/Unix_shell.html">Unix Shell on Wikipedia|https://en.wikipedia.org/wiki/Unix_shell</a> -- Some useful links, most of which are on this page.</li>
+<li><a href="List-of-build-automation-software-on-Wikipedia%7Chttps://en.wikipedia.org/wiki/List_of_build_automation_software.html">List of build automation software on Wikipedia|https://en.wikipedia.org/wiki/List_of_build_automation_software</a></li>
+<li><a href="UNIX-Shell-Implementations-on-rosettacode.org%7Chttps://rosettacode.org/wiki/Category:UNIX_Shell_Implementations.html">UNIX Shell Implementations on rosettacode.org|https://rosettacode.org/wiki/Category:UNIX_Shell_Implementations</a></li>
+<li><a href="comp.unix.shell-thread%7Chttp://unix.derkeiler.com/Newsgroups/comp.unix.shell/2009-10/msg00324.html.html">comp.unix.shell thread|http://unix.derkeiler.com/Newsgroups/comp.unix.shell/2009-10/msg00324.html</a> -- A huge list of links to shell implementations.</li>
+</ul>
+<h3>Notes on Shell Implementation</h3>
+<ul>
+<li><a href="libc-manual:-Implementing-a-Job-Control-Shell%7Chttps://www.gnu.org/software/libc/manual/html_node/Implementing-a-Shell.html.html">libc manual: Implementing a Job Control Shell|https://www.gnu.org/software/libc/manual/html_node/Implementing-a-Shell.html</a></li>
+<li><a href="Notes-on-coprocesses%7Chttp://www.ict.griffith.edu.au/anthony/info/co-processing/general_hints.txt.html">Notes on coprocesses|http://www.ict.griffith.edu.au/anthony/info/co-processing/general_hints.txt</a></li>
+</ul>
+  </body>
+</html>
+

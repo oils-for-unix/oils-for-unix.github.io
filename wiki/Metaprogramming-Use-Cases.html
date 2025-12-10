@@ -1,0 +1,57 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Metaprogramming Use Cases</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Back to <a href="Metaprogramming.html">Metaprogramming</a> -- language mechanisms</p>
+<ul>
+<li>
+<p>Matrix of use case vs. metaprogramming technique: https://lobste.rs/s/aqdixr/gentle_introduction_compile_time#c_0cuoc9</p>
+</li>
+<li>
+<p>Notes about metaprogramming use cases, e.g. polyglot type systems and partial evaluation: https://www.reddit.com/r/ProgrammingLanguages/comments/73ldwj/the_lux_programming_language_strange_loop_2017/dnx309q/</p>
+<ul>
+<li>Python 2.7 <code>namedtuple</code>
+<ul>
+<li>uses <code>exec class_definition in namespace</code></li>
+</ul>
+</li>
+<li>Python 3.6 <code>namedtuple</code>
+<ul>
+<li>each field is an <code>operator.itemgetter</code>,</li>
+<li>put on the class dict with with <code>type()</code> constructor</li>
+<li>itemgetter calls:
+<ul>
+<li><code>item = PyTuple_GET_ITEM(ig-&gt;item, i);</code></li>
+<li><code>val = PyObject_GetItem(obj, item);</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>interesting change!!!
+<ul>
+<li>ASDL could use this style.  Since we don't have the parser, we want to use itemgetter. what about setter?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Oil Startup</p>
+<ul>
+<li><code>core/id_kind.py</code> -- every token/entity in OSH/Oil</li>
+<li>Lexer State machine can be frozen</li>
+<li>Lexer regexes can be compiled to gotos (a la re2c)</li>
+<li>OPy parse tables using pgen2 (but not the Oil parser)</li>
+<li>ASDL schema</li>
+<li>Builtin Flags and Help could be frozen</li>
+<li>misc regexes: to validate variable names, etc.</li>
+</ul>
+</li>
+</ul>
+  </body>
+</html>
+

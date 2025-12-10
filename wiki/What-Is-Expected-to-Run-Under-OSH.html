@@ -1,0 +1,34 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>What Is Expected to Run Under OSH</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p><strong>Batch</strong> shell programs generally run under OSH unmodified.  See <a href="Shell-Programs-That-Run-Under-OSH.html">Shell Programs That Run Under OSH</a>.</p>
+<p><strong>Interactive</strong> scripts like <code>.bashrc</code> often don't run without modifications.  However, I <strong>do</strong> share my <code>.bashrc</code> and <code>oshrc</code>, so it can work.  See the last section of <a href="How-To-Test-OSH.html">How To Test OSH</a>.</p>
+<p>Related: <a href="https://www.oilshell.org/release/latest/doc/known-differences.html">Known Differences Between OSH and Other Shells</a></p>
+<h3>Common issues</h3>
+<ul>
+<li><code>BASH_VERSINFO</code> checks should be removed.  We don't emulate a specific version of bash.  Note that
+<a href="Feature-Detection-Is-Better-than-Version-Detection.html">Feature Detection Is Better than Version Detection</a> (if you want to write portable scripts)</li>
+</ul>
+<h3>Sometimes Small Rewrites Are Necessary</h3>
+<p>OSH might not run every script unmodified.  In general OSH is designed so you can make a small rewrite and the code will still run under bash and OSH.  For example, some dynamic  features of bash can usually be replaced with <code>eval</code>, and it will run under both shells.  (This is the &quot;common subset principle&quot;, mentioned on <a href="Language-Design-Principles.html">Language Design Principles</a>.)</p>
+<h3>Compatibility Options</h3>
+<p>TODO: Document these further.</p>
+<ul>
+<li><code>shopt -s eval_unsafe_arith</code> -- for recursive evaluation of expression inside x in <code>$(( x ))</code>, etc.</li>
+<li><code>shopt -s parse_dynamic_arith</code> -- for <code>(( ${prefix}foo = bar ))</code></li>
+<li><code>shopt -s compat_array</code> -- <code>${array}</code> is <code>${array[0]}</code></li>
+</ul>
+<h2>Related</h2>
+<ul>
+<li><a href="Gradually-Upgrading-Shell-to-YSH.html">Gradually Upgrading Shell to YSH</a></li>
+<li><a href="Migration-Guide.html">Migration Guide</a></li>
+</ul>
+  </body>
+</html>
+

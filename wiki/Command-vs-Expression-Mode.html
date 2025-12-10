@@ -1,0 +1,35 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Command vs Expression Mode</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Oil: <a href="http://www.oilshell.org/release/latest/doc/command-vs-expression-mode.html">http://www.oilshell.org/release/latest/doc/command-vs-expression-mode.html</a></p>
+<p>elvish: Prefix syntax for arithmetic.  So there's only one mode?  Code can get lispy because () is command substitution.</p>
+<p><a href="Oh-Syntax-Comparison%7Chttps://htmlpreview.github.io/?https://raw.githubusercontent.com/michaelmacinnis/oh/master/doc/comparison.html.html">Oh Syntax Comparison|https://htmlpreview.github.io/?https://raw.githubusercontent.com/michaelmacinnis/oh/master/doc/comparison.html</a></p>
+<p>The shell language for single commands is almost identical, but the rest is homoiconic syntax?  There is a <code>math</code> command for infix, e.g. <code>math '1.2 + 3.4'</code>.</p>
+<p><a href="NGS-Manual%7Chttps://ilyash.github.io/ngs-doc/ngslang.1.html.html">NGS Manual|https://ilyash.github.io/ngs-doc/ngslang.1.html</a></p>
+<p><em>Switching between syntaxes</em></p>
+<p><em>In command syntax it is possible to switch to code syntax in one of the following ways:</em></p>
+<ul>
+<li>Simple switching (for a lack of better name)</li>
+<li>Single argument substitution switch</li>
+<li>Multiple arguments substitution switch</li>
+</ul>
+<p><em>In code syntax it is possible to switch to command syntax in one of the following ways:</em></p>
+<ul>
+<li>Capture switch</li>
+<li>Capture and parse switch</li>
+<li>Command switch</li>
+</ul>
+<p><a href="Mash-Shell-Quick-Reference%7Chttp://mash-shell.org/quick-reference-guide/.html">Mash Shell Quick Reference|http://mash-shell.org/quick-reference-guide/</a></p>
+<p><em>Mish is a sublanguage within Mash for launching processes, with a similar syntax to a traditional shell.</em></p>
+<p><em>By default, Mash is in &quot;regular Mash&quot; mode. If a command line starts or ends with !, the entire line is interpreted as a Mish command. If ! is issued by itself as a command, then Mash toggles into Mish by default, and the prompt changes from a $ to a !.</em></p>
+<p><a href="Neugram-Shell%7Chttps://github.com/neugram/ng/blob/master/docs/shell.md.html">Neugram Shell|https://github.com/neugram/ng/blob/master/docs/shell.md</a> (Go-based, implemented in Go)</p>
+<p><em>A $$ ... $$ expression in Neugram is a sequence of shell commands. If used as a top-level statement in the interpreter, commands are executed as they are parsed. Otherwise, shell commands are executed when the $$-expression is evaluated according to standard Neugram rules.</em></p>
+  </body>
+</html>
+

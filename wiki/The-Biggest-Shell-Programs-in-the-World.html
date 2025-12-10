@@ -1,0 +1,117 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>The Biggest Shell Programs in the World</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Help me fill out this page!  It's freely editable.</p>
+<p>What programs should be listed?  I'm using &quot;biggest&quot; in the sense of <strong>substantial</strong>, not necessarily the raw number of lines.</p>
+<ul>
+<li><strong>Hand-written</strong> shell scripts.  There are many big autoconf-generated scripts, like the <a href="http://www.oilshell.org/blog/2020/01/parser-benchmarks.html#a-concrete-data-point">70K-line coreutils script</a>, but I don't consider them substantial in this sense.</li>
+<li>Shell programs that use <strong>data structures and algorithms</strong>.
+<ul>
+<li>As a counterexample, <a href="http://www.oilshell.org/cross-ref.html#bash-completion">bash-completion</a> is pretty sophisticated, but it's also repetitive because it has a relatively simple function for every command on a Unix machine.</li>
+</ul>
+</li>
+<li>Shell programs that are over <strong>5K lines</strong> (though there may be exceptions).  The biggest shell programs that aren't repetitive tend to be in the 10K+ line range.  I haven't seen any programs over 100K lines.</li>
+</ul>
+<h3>The List</h3>
+<ul>
+<li><a href="https://github.com/akinomyoga/ble.sh">akinomyoga/ble.sh</a> -- 87K lines (63K LoC w/o comments) in total. Bash Line Editor---fish-like interactive line editor in pure bash!  The main file <code>out/ble.sh</code> has 39K lines (29K LoC), but there are 80K+ lines including module files in total.  There are many comments (in Japanese).
+<ul>
+<li><a href="How-Interactive-Shells-Work.html">How Interactive Shells Work</a> has a nice overview of how ble.sh works.  It's very sophisticated, using <code>bind -x</code> to read raw bytes from the terminal, decoding those itself in multiple explicit state machines, maintaining a drawing buffer, updating the buffer, etc.  It has timing and &quot;fibers&quot;, etc.</li>
+<li><a href="https://github.com/oilshell/oil/issues/663#issuecomment-602147298">This comment on issue 663</a> has details on the shell parser!  I think this is one of the most sophisticated uses of data structures in shell I've seen.</li>
+<li><a href="https://github.com/oilshell/oil/issues/653#issuecomment-599227422">We are trying to run ble.sh</a> under OSH.  It mostly parses.</li>
+<li>First commit in 2015 with 8K lines / 6K loc. The actual development has started in 2013.</li>
+</ul>
+</li>
+<li><a href="https://github.com/bittorf/kalua">kalua</a> - OpenWRT addon ~56K SLoC/lines of POSIX shell</li>
+<li><a href="http://bashdb.sourceforge.net/">bashdb</a>, the bash debugger.  ~14K lines of bash.  Interesting history: <a href="Implementing-Debuggers.html">Implementing Debuggers</a></li>
+<li><a href="https://github.com/drwetter/testssl.sh">drwetter/testssl.sh</a> -- 21K lines of bash in a single file!  Appears to be hand-written.  History: <em>Back in 2006 it started with a few openssl commands...</em>.  (Hit issue #606 parsing it.)</li>
+<li><a href="https://github.com/simplenetes-io/simplenetes">Simplenetes: Kubernetes in 17K lines of Shell</a>.  Amazing!  But seems dormant.  <a href="https://news.ycombinator.com/item?id=26661223">Hacker News Thread</a>.
+<ul>
+<li>Related to <a href="https://www.oilshell.org/blog/2021/07/cloud-review.html#another-bold-claim">my bold claim here</a></li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Rkhunter">rkhunter</a> (<a href="http://rkhunter.sourceforge.net/">official site</a>) -- 21K lines of Bourne shell written from 2003-2018!</li>
+<li><a href="https://github.com/romkatv/powerlevel10k">romkatv/powerlevel10k</a> -- 12K lines of zsh scripts in the directory <code>internal/</code>.  There are other 8K lines of configs and helper scripts.  First commit in 2014.</li>
+<li><a href="https://github.com/dylanaraps/neofetch">dylanaraps/neofetch</a> -- 10K lines of bash 3.2.  Displays system information.  May also do something interesting with images (?)
+<ul>
+<li>first commit 2015</li>
+</ul>
+</li>
+<li><a href="https://github.com/xwmx/nb">xwmx/nb</a> -- 26K lines (22K LoC) of bash in <a href="https://github.com/xwmx/nb/blob/master/nb">nb</a> itself. An additional 91K lines (61K LoC) if we count bats tests as bash.
+<ul>
+<li>First commit in 2014, but active commit history starts in early 2016.</li>
+</ul>
+</li>
+<li><a href="https://github.com/89luca89/distrobox">distrobox</a> -- over 7k lines of bash script. Use any linux distribution inside your terminal.</li>
+<li><a href="https://github.com/acmesh-official/acme.sh">acme.sh</a> -- 8K lines of shell script. Issues and renews certificates.</li>
+<li><a href="https://github.com/smxi/inxi/tree/803a4595658f28decd236c6f8660841abc336cea">inxi 2.3.56</a> [obsolete] -- 16K lines of bash. A fork of <code>infobash</code> in 2008 (889 lines then). <code>infobash</code> has started in 2005. From v2.9, <code>inxi</code> is replaced by the Perl implementation.</li>
+<li><a href="https://github.com/Bushmills/Bashforth/blob/master/bashforth">bashforth</a> -- At ~3800 lines this isn't huge, but it apparently implements a real programming language.  It has a lot of whitespace and comments.</li>
+<li><a href="https://github.com/Bushmills/yoda/blob/main/yoda">yoda</a> -- While only about half the size of the above bashforth, this again is an implementation of a whole interpreter and compiler, while being considerably more feature-packed. Same author, but a 20 years younger implementation. Comment: &quot;What learned you have, unlearn you must!&quot;</li>
+<li><a href="https://github.com/vegardit/bash-funk">vegardit/bash-funk</a> -- 27K lines (24K LoC) in total. A Bash library. The first commit in May, 2017 (with 10K lines / 8K LoC).</li>
+<li><a href="https://github.com/rear/rear">Relax-and-Recover</a> -- 35K lines (24K LoC). Backup and restoration tool. First git commit March, 2009 (with 4K lines / 3K LoC)</li>
+<li><a href="https://abcde.einval.com/wiki/">abcde / A Better CD Encoder</a>, used for ripping CDs, weighs in at around 5.5k LoC.</li>
+<li><a href="https://github.com/hackerschoice/segfault">thc-segfault</a> -- 3.3K LoC. A pubnix server built mostly using Bash</li>
+<li><a href="https://git.ffmpeg.org/gitweb/ffmpeg.git/blob/HEAD:/configure">ffmpeg/configure</a> - 8.4K LoC. FFmpeg's configure script is hand-written</li>
+<li><a href="https://sourceforge.net/projects/ffhevc/">ffhevc</a> -- 4k LoC. Fully hand-written Bash wrapper script for encoding to HEVC video using FFmpeg and libx265.</li>
+<li><a href="https://sourceforge.net/projects/ffx264/">ffx264</a> -- 3.9k LoC. Fully hand-written Bash wrapper script for encoding to H.264/AVC video using FFmpeg and libx264.</li>
+<li><a href="https://sourceforge.net/projects/h264enc/">h264enc</a> -- 9.2k LoC. Fully hand-written Bash wrapper script for MEncoder for encoding to H.264/AVC video.</li>
+<li><a href="https://github.com/aristocratos/bashtop">bashtop</a> -- 5.3k LoC. A resource monitor</li>
+<li><a href="https://github.com/mietek/halcyon">halcyon</a> -- 6.6k LoC. A system for installing Haskell apps; hand-written with careful attention to bash semantics and error-checking, in a peculiar style inspired by functional programming.</li>
+<li><a href="https://github.com/Winetricks/winetricks">winetricks</a> -- 22K lines of shell script. Installs various Windows programs under <a href="https://www.winehq.org">Wine</a></li>
+<li><a href="https://github.com/DavidAnderson684/wordshell/blob/master/wordshell">wordshell</a> -- ~7k lines of code. Manages multiple WordPress sites from the command-line.</li>
+<li><a href="https://chiselapp.com/user/bacon/repository/bacon/home">BaCon</a> -- ~10k lines of code. Converts programs written in BASIC to C. There are two implementations - one written in BASIC and one as a shell script.</li>
+<li><a href="https://firehol.org/">FireHOL</a> -- 9k lines of code for the main script, another 3k for the FireQOS tool. FireHOL is a language (and a program to run it) which builds secure, stateful firewalls from easy to understand, human-readable configurations.</li>
+<li><a href="https://github.com/galaxyproject/gxadmin">gxadmin</a> -- 11kLOC is a collection of templated SQL queries and data processing utilities for managing a scientific workflow engine (Galaxy).</li>
+<li><a href="https://github.com/mulle-nat/mulle-bashfunctions/blob/master/src/mulle-bashfunctions-all.sh">mulle-bashfunctions</a> -- ~6K lines of code. A function library for bash/zsh programs. Used in mulle-sde a command line IDE, which is another 100K lines of shell scripts (https://github.com/mulle-sde)</li>
+<li><a href="https://github.com/mviereck/x11docker">x11docker</a> -- 11.6k lines of code.  Run GUI applications in docker or podman containers.</li>
+</ul>
+<h3>Shell-Like Languages / DSLs</h3>
+<ul>
+<li><a href="https://github.com/modernish/modernish">modernish</a> is a portable shell dialect written in shell</li>
+<li><a href="https://github.com/bats-core/bats-core">bats</a> is a DSL for writing tests.  Generates bash code.</li>
+<li><a href="https://github.com/mig1984/bashible">bashible</a> is an Ansible-like DSL in bash.  <a href="https://news.ycombinator.com/item?id=22669565">comments</a></li>
+<li><a href="https://github.com/lhoursquentin/clash">clash</a> is an object oriented framework compatible with any modern POSIX shell.</li>
+<li><a href="https://github.com/niieani/bash-oo-framework">bash Infinity</a> is a standard library and a boilerplate framework for bash.</li>
+</ul>
+<h3>Smaller Programs</h3>
+<ul>
+<li>Alpine, Aboriginal, Debian scripts -- see <a href="http://www.oilshell.org/blog/2018/01/15.html">blog post</a></li>
+<li>Completion scripts are big, but often repetitive.
+<ul>
+<li><a href="https://github.com/zsh-users/zsh/blob/master/Completion/Unix/Command/_git">_git</a> Zsh completion -- 8.3k lines of code</li>
+<li>git-completion.bash</li>
+<li>Docker completion</li>
+</ul>
+</li>
+<li><a href="https://github.com/dyne/Tomb/blob/master/tomb">dyne/Tomb</a> is a ~3500 line zsh script.</li>
+<li><a href="https://github.com/hyperupcall/basalt">Basalt</a> -- a full-featured package manager in pure Bash (est. ~2021). Although it's only a few thousand lines, there's already a <a href="https://github.com/hyperupcall/awesome-basalt">rich ecosystem</a> (15+ apps/libs) that includes many thousand more lines. Some <em>Bash libraries</em> include (at various stages of development):
+<ul>
+<li><a href="https://github.com/hyperupcall/bash-core">bash-core</a>, a library for enhancing the <code>trap</code> and <code>shopt</code> builtins, adding stacktraces, and many essential amenities</li>
+<li><a href="https://github.com/hyperupcall/bash-object">bash-object</a>, a library for constructing arbitrarily nested data structures in pure Bash (nearly 200 tests)</li>
+<li><a href="https://github.com/hyperupcall/bash-json">bash-json</a>, a library for parsing and printing JSON in pure Bash</li>
+</ul>
+</li>
+<li><a href="https://github.com/tablespoon/fun/blob/master/cli-clock">tablespoon/fun/cli-clock</a> - a clock with multiline characters written in bash.</li>
+<li><a href="https://github.com/h4l/json.bash">json.bash / jb</a> — a command-line tool and bash library that creates JSON (~1700 lines, plus ~3000 lines of tests).</li>
+</ul>
+<h3>Links</h3>
+<ul>
+<li>
+<p><a href="http://www.oilshell.org/release/latest/test/wild.wwz/">OSH &quot;Wild&quot; Tests</a> parse over a million lines of shell.  However most of these are small programs and distro package definitions like Alpine PKGBUILD and Gentoo ebuilds, which are repetitive.</p>
+</li>
+<li>
+<p><a href="Shell-Programs-That-Run-Under-OSH.html">Shell Programs That Run Under OSH</a></p>
+</li>
+<li>
+<p><a href="https://yossarian.net/til/post/some-surprising-code-execution-sources-in-bash/">shell script are dangerous</a> The shell is a program to handle your system internally via an interactive console(or not)... It's feature full and extremely dangerous. it's not done to produce applications.</p>
+</li>
+</ul>
+  </body>
+</html>
+

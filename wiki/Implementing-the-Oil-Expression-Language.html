@@ -1,0 +1,155 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Implementing the Oil Expression Language</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p><a href="https://github.com/oilshell/oil/issues/387">Turn Oil's expression grammar into an AST #387</a></p>
+<p>Related: <a href="Tips-on-Using-pgen2.html">Tips on Using pgen2</a></p>
+<p>Demo:</p>
+<pre><code>bin/osh -n -c 'var x = 1 + 2 * 3;'
+</code></pre>
+<p>This already works.  (Right now semicolon or newline are accepted, we should also add EOF.)</p>
+<h3>Code</h3>
+<ul>
+<li><a href="https://github.com/oilshell/oil/tree/master/oil_lang">https://github.com/oilshell/oil/tree/master/oil_lang</a>
+<ul>
+<li><code>grammar.pgen2</code> is literally Python 3's grammar!!!</li>
+<li><code>expr_parse.py</code> contains the public interface that the rest of the code uses.  It turns a stream of tokens into
+an AST, which is two steps under the hood.  (tokens -&gt; parse tree, then parse tree -&gt; AST)
+<ul>
+<li>Important: it also handles <strong>lexer modes</strong>!  There's an important difference between OSH and Oil.
+In the Oil expression language, lexer modes are decoupled from the parser.  They can be determined just by
+looking at 1 token -- i.e. <code>&quot;</code> starts a double quoted string, and <code>&quot;</code> ends one.  In OSH, the lexer modes
+are dependent on the control flow of the recursive descent parser.</li>
+</ul>
+</li>
+<li><code>expr_to_ast.py</code> -- the &quot;transformer&quot; i.e. parse tree -&gt; AST step</li>
+</ul>
+</li>
+<li><code>frontend/syntax.asdl</code> is the unified OSH and Oil code representation
+<ul>
+<li>Scroll down to <code>OIL LANGUAGE</code>, and then everything we care about is under the <code>expr</code> type.</li>
+<li><code>command.OilAssign</code> is where Oil and OSH are integrated.  That is, <code>ls -l</code> and <code>var x = [1,2,3]</code> are both
+commands in OSH.  The latter is an Oil expression.</li>
+</ul>
+</li>
+<li><code>frontend/lex.py</code> -- the huge unified OSH and Oil lexer.  Lexer modes for Oil are toward the bottom.
+<ul>
+<li><code>lex_mode_e.Expr</code> is the main one for Oil expressions.  But we also have different ones for:
+<ul>
+<li>Double Quoted Strings <code>&quot;string $interp&quot;</code></li>
+<li>regex literals <code>$/ d+ /</code></li>
+<li>array literals <code>@[myprog --foo --bar=1]</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>osh/word_parse.py</code> has the integration point between OSH and Oil
+<ul>
+<li><code>enode, last_token = self.parse_ctx.ParseOilAssign(self.lexer, grammar_nt.oil_var)</code> -- that indicates that
+we're using the <code>oil_var</code> production in <code>grammar.pgen2</code></li>
+</ul>
+</li>
+</ul>
+<h3>Related Code</h3>
+<ul>
+<li><a href="https://github.com/oilshell/oil/blob/master/opy/compiler2/transformer.py">https://github.com/oilshell/oil/blob/master/opy/compiler2/transformer.py</a> is a version of this for Python (forked from the Python 2 standard library)</li>
+<li>drwilly is working on <code>find</code> in <a href="https://github.com/oilshell/oil/pull/386">https://github.com/oilshell/oil/pull/386</a>, which also has a &quot;transformer&quot;</li>
+</ul>
+<h3>Things We Want to Add</h3>
+<ul>
+<li>LHS and RHS of assignments
+<ul>
+<li>~~Python distinguishes LHS and RHS after parsing and before AST construction, i.e. in this &quot;transformer&quot;, and we'll follow the same strategy.  That is, certain <code>expr</code> nodes can appear on both LHS and RHS, and others can only appear on the RHS.~~</li>
+<li>no we want to restrict LHS expressions (and optional type expressions) in the grammar</li>
+</ul>
+</li>
+<li>All the operators
+<ul>
+<li>unary, binary</li>
+<li>ternary operator: <code>a if cond else b</code></li>
+<li>including <code>in</code>, <code>not in</code>, <code>is</code>, <code>is not</code></li>
+<li>subscripting, slicing</li>
+<li>Small changes:
+<ul>
+<li><code>//</code> is <code>div</code></li>
+<li><code>**</code> is <code>^</code> (following R and other mathematical languages)</li>
+<li><code>^</code> is <code>xor</code></li>
+</ul>
+</li>
+<li>lower priority, but we'll probably end up having:
+<ul>
+<li>starred expressions on LHS and RHS for &quot;splatting&quot;.  (Might use <code>@</code> operator instead?)</li>
+<li>chained comparisons like <code>3 &lt; x &lt;= 5</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>function calls <code>f(x, y=3)</code>.  Includes method calls with <code>.</code> operator, e.g. <code>mydict.clear()</code>
+<ul>
+<li>To start, all the functions we will be builtins.  User Function definitions come later!</li>
+</ul>
+</li>
+<li>Literals: the &quot;JSON&quot; subset
+<ul>
+<li>dict -- except keys are &quot;bare words&quot;, like JS</li>
+<li>list</li>
+<li>tuples, although I want to disallow 1-tuples like <code>x,</code></li>
+<li>bool -- <code>true</code> and <code>false</code>, following C, Java, JS, etc.
+<ul>
+<li>not <code>True</code> and <code>False</code> because types are generally capitalized <code>Str</code>, <code>Dict</code>, <code>List</code></li>
+</ul>
+</li>
+<li>integer</li>
+<li>float</li>
+<li>probably sets, although the syntax might be different to allow for dict punning, like <code>{key1, key2}</code> taking
+their values from surrounding scope</li>
+<li>string: single quoted are like Python strings, but double quoted allows interpolation.  This involves lexer
+modes.  (Already implemented to a large extent)</li>
+<li>later: homogeneous arrays
+<ul>
+<li><code>@[ mycommand --flag1 --flag2 ]</code>  -- uses the &quot;command&quot; lexer mode for &quot;bare words&quot;</li>
+<li><code>@[1 2 3]</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Comprehensions (lower priority)
+<ul>
+<li>list, dict, set</li>
+</ul>
+</li>
+<li>Function literals (lower priority)</li>
+</ul>
+<h3>Implementation Details (vs. Python)</h3>
+<ul>
+<li>To save space, the parse tree doesn't follow the derivation of the string from the grammar.  If a node in the parse tree would have only 1 child (a singleton), then it's omitted.  Python doesn't omit it (which seems wasteful.)</li>
+<li>Our syntax tree is more like a &quot;lossless syntax tree&quot;.  The leaves are generally of type <code>token</code> -- I try not to preprocess these too much, to allow more options for downstream tools.  Tokens have location information which makes it easy to generate precise error messages.</li>
+</ul>
+<h3>Testing Strategy</h3>
+<p>Generally I test things very quickly with <code>osh -n -c</code>, or an interactive shell, but we should somehow record those tests.  The simplest thing to do is to write some Python unit tests that take strings and print out the AST.  Maybe they don't even need to make assertions?</p>
+<p>Update: I added a test driver, which you can run like this:</p>
+<pre><code>test/unit.sh unit oil_lang/expr_parse_test.py
+</code></pre>
+<p>It takes lines of code and prints out an AST.</p>
+<p>If you want to print out the <strong>parse tree</strong>, turn on <code>print_parse_tree</code> in <code>frontend/parse_lib.py ParseOilAssign</code>.</p>
+<p>NOTE: The way I hacked everything together was with <code>pgen2/pgen2-test.sh all</code>.  (You can run less with a particular function in that file, like <code>parse-exprs</code> or <code>oil-productions</code>.)  This worked pretty nicely, but I won't be surprised if others don't like this style or get confused by it :-/</p>
+<ul>
+<li>Idea: Can we compare against Python somehow?  That might come into play more in execution, rather than parsing.</li>
+</ul>
+<h3>Typing</h3>
+<p>The whole front end is statically typed with <code>MyPy</code> now.  The <code>types/osh-parse.sh</code> script checks it in Travis.</p>
+<p>I usually the code working, and then add types.  However filling in types first is conceivable.  ASDL types map  to MyPy types in a straightforward way.</p>
+<h3>Building</h3>
+<p>See <a href="Contributing.html">Contributing</a>, but</p>
+<pre><code>build/dev.sh minimal
+</code></pre>
+<p>should be enough (on an Ubuntu/Debian machine).</p>
+<p>Important: make sure to re-run this when changing <code>frontend/syntax.asdl</code>.  The file <code>_devbuild/gen/syntax_asdl.py</code> needs to be regenerated.</p>
+  </body>
+</html>
+

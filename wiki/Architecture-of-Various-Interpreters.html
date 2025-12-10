@@ -1,0 +1,35 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Architecture of Various Interpreters</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<ul>
+<li>
+<p>Bash and all shells I've looked at: lexer/parser -&gt; AST -&gt; tree interpreter.</p>
+<ul>
+<li>(but note that they do dynamic parsing too)</li>
+</ul>
+</li>
+<li>
+<p>CPython: parser -&gt; parse tree -&gt; &quot;transformer&quot; -&gt; AST -&gt; compiler -&gt; graph of bytecode objects -&gt; bytecode assembler -&gt; <code>.pyc</code> files -&gt; bytecode interpreter.</p>
+</li>
+<li>
+<p>Lua: No tree representation!  It constructs bytecode for a register machine <strong>while parsing</strong>.  I believe this style came from Pascal compilers.</p>
+</li>
+<li>
+<p>R: It was a tree interpreter, but they added bytecode around 2011.</p>
+</li>
+<li>
+<p>Ruby: I believe the same is true; it was a tree interpreter, but they added bytecode.</p>
+</li>
+<li>
+<p>Next Generation Shell: PEG parser -&gt; AST -&gt; bytecode</p>
+</li>
+</ul>
+  </body>
+</html>
+

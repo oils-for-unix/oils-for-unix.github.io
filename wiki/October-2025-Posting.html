@@ -1,0 +1,168 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>October 2025 Posting</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Related: <a href="October-2025-Reply.html">October 2025 Reply</a></p>
+<hr />
+<p>Hello!  I posted a request for help yesterday, and got a number of e-mails!</p>
+<ul>
+<li><a href="https://lobste.rs/s/a3wcu0/who_s_hiring_q4_2025#c_pwnd05">https://lobste.rs/s/a3wcu0/who_s_hiring_q4_2025#c_pwnd05</a> - <em>Language Engineer / Debugger of Other People’s Cursed Shell Programs / Writer</em></li>
+<li><a href="https://news.ycombinator.com/item?id=45446865">https://news.ycombinator.com/item?id=45446865</a> - I truncated this posting due to length limits.  The one above has a bit more detail.</li>
+</ul>
+<p>I'm going review each mail and respond.  But I'll also include a link to this page, which includes info relevant to everyone who's interested.</p>
+<p>(Note: this page may be <strong>continually</strong> updated, as I respond to e-mails.)</p>
+<h2>Details</h2>
+<ul>
+<li><strong>Language Engineer</strong>
+<ul>
+<li>A primary goal of our NLnet grants is to get more people involved in the Oils code</li>
+<li>Oils is a traditional AST / tree-walk interpreter in many ways -- I describe it  as <em>Crafting Interpreters Plus ~30 Unix System Calls</em></li>
+<li>It's also pretty elaborate, and some things are specific to the shell</li>
+</ul>
+</li>
+<li><strong>Debugger of Other People’s Cursed Shell Programs</strong>
+<ul>
+<li>A great way to get familiar with the code is to debug cases where OSH behaves differently than other shells, like <code>bash</code> or busybox <code>ash</code>.  This can be <strong>hard</strong>!</li>
+</ul>
+</li>
+<li><strong>Writer</strong>
+<ul>
+<li>We also want to pay people to <strong>tell others</strong> about what they're doing!</li>
+<li>This can help attract contributors, and it also makes the project understandable to funders like NLnet</li>
+<li>We take writing seriously -- it is <strong>normal</strong> for writing about a bug to take longer than finding and fixing it</li>
+<li>Some contributors want to improve their technical writing skills, so this is a nice opportunity to be paid for self-improvement.</li>
+</ul>
+</li>
+</ul>
+<p>Note: not everyone has to wear all these hats.  But if you only wear one hat, you might find that the project doesn't have anything for you to do at a given moment.  Sometimes our progress is bottlenecked on different things</p>
+<p>But we appreciate all contributions!  Even if sporadic</p>
+<h2>Funding</h2>
+<p>We kicked off the 50K euro grant in August, and so far we've paid out 5K euros (10 percent).</p>
+<p>The funding technically lasts a year, until August 2026.</p>
+<p>Based on current progress, we <strong>might be</strong> able to get more funding.  If we get down to the last Alpine bugs in 6 or 9 months, we could apply for another NLnet grant to do the same thing with Debian, so we have more funding.  (There were 3 grants before this, so totaling 150K euros)</p>
+<p>My <strong>long term</strong> goal is for <strong>others</strong> to be able to apply for grants to work on Oils.  I will help on the technical side, but I'd like for contributors to be able to set goals independently, without being blocked or bottlenecked by whatever I happen to be doing at a given moment.</p>
+<h3>Details About Payment</h3>
+<p>As mentioned, for the 4th grant, contributors are being paid 50 euros/hour.  The hours are self-reported, and include meetings, debugging, testing, writing, etc. as well as writing code.</p>
+<p>NLnet pays you directly, in increments of 2500 euros (which would be 50 hours).  But we can also pay out of Github sponsors, and we
+recently received a $4K donation, which I mention in the upcoming blog post.</p>
+<h3>NLnet Prefers to Pay Contributors Outside the USA</h3>
+<p>NLnet has requested that 60% of the funds (30K euros) go to non-US contributors, leaving 20K euros for US contributors.</p>
+<p>(Note: I live in the USA, so I am part of the disfavored group!  That is OK with me)</p>
+<h3>Correction</h3>
+<p>In the ad, I said</p>
+<blockquote>
+<p>Anyone who's not “scared” of these bugs is probably a good fit, and you can do as much or as little as you like.</p>
+</blockquote>
+<p>But &quot;as little as you like&quot; is probably not true :-/</p>
+<p>This is because we don't want to create administrative overhead for NLnet by paying 10 different people 200 euros each.</p>
+<p>We would like to pay each person at least 2500 euros.  So technically, it is a slight issue if you end up doing too little :-)</p>
+<p>So there is perhaps a bit of an issue where we have to &quot;estimate&quot; ahead of time whether a given contributor can put in 50 hours that advance the goals of the project (reducing bugs to test cases, fixing bugs, publishing good writing)</p>
+<h3>Clarification: Debugging is Crucial, But Language Engineering is Too</h3>
+<p>i.e. a language engineer has worked on the internals of a programming language</p>
+<p>I emphasized debugging because some people think that working on a programming language is very fun and exciting :-)</p>
+<p>It is, but it's also grinding through obscure test cases!  And then <strong>generalizing</strong> to a clean solution.</p>
+<p>So it's a good sign if you can think in both ways: in terms of concrete bugs, and in terms of a clean language implementation (there tend to be many trees, graphs, and stacks).  We also have a little compiler and an associated GC runtime: the &quot;mycpp&quot; tool that translates typed Python to C++.</p>
+<h2>Dilemma for Contributors</h2>
+<p>Our funding situation may create a dilemma / risk for contributors.  It's hard to tell if you'll be able to help the project, and advance its  goals, without first spending a bunch of <strong>time</strong> on it!</p>
+<p>And I also get a lot of inbound interest about the project.  It's hard for me to tell if contributors will stick around.</p>
+<p>Though that's one reason I chose these very concrete bug fixes to advertise.  We have mostly the hard bugs left, and if you can fix a bug, or reduce it to a small test case, then you've certainly contributed.</p>
+<p>The sections below may help you <strong>self-select</strong> into working on Oils.</p>
+<!-- raw HTML omitted -->
+<h2>FAQ: How do I know if I can contribute?</h2>
+<h3>The Most Important Criteria</h3>
+<p>You actually want to <strong>use</strong> OSH and/or YSH !!</p>
+<p>That is, part of the motivation should be to solve your own problems.  This isn't a normal job where you commit code and then someone else uses it!</p>
+<p>You should definitely have written a shell script before, probably substantial ones.</p>
+<p>(Context: some people are attracted to the project because we're doing things to a high standard, and applying some good ideas.  But it's also important to have real use cases that motivate your work.)</p>
+<h3>3 Good Signs</h3>
+<p>I mentioned the bugs linked from these pages:</p>
+<ul>
+<li><a href="https://github.com/orgs/oils-for-unix/projects/1/views/1">https://github.com/orgs/oils-for-unix/projects/1/views/1</a></li>
+<li><a href="https://op.oils.pub/aports-build/published.html">https://op.oils.pub/aports-build/published.html</a></li>
+</ul>
+<p>If you want to <strong>ask questions</strong> about these pages, that's a good sign!</p>
+<hr />
+<p>If you join Zulip, and you ask good questions on the many threads, that's also a good sign!</p>
+<ul>
+<li><a href="https://oilshell.zulipchat.com/">https://oilshell.zulipchat.com/</a> - The project is very specialized and dense</li>
+</ul>
+<p>As with other open source projects, it could be that <strong>more than 50% of the time / work</strong> is following different discussions.  And <strong>finding work</strong> yourself.</p>
+<hr />
+<p>Being able to set up a dev env is a good sign too!</p>
+<ul>
+<li><a href="Contributing.html">Contributing</a>
+<ul>
+<li>I get wide reactions -- some people tell me that it is nice and worked the first time.  Other people say: &quot;why do I have to download and compile all this stuff?&quot;  :-)</li>
+<li>But it should take 5-10 minutes on most Debian-ish Linux machines, I believe, and all current contributors have it set up.</li>
+</ul>
+</li>
+</ul>
+<p>Creating a Unix shell seems to require a lot of background knowledge, and there is a lot of it buried in the Oils project.  We would like to spread that knowledge to interested people!</p>
+<h3>Good Sign: The Blog is Interesting</h3>
+<p>If my posts on <code>#parsing-shell</code> are interesting subject matter: <a href="https://www.oilshell.org/blog/tags.html?tag=parsing-shell#parsing-shell">https://www.oilshell.org/blog/tags.html?tag=parsing-shell#parsing-shell</a></p>
+<p>We use a particular style of parsing to &quot;tame&quot; the complexity of shell.</p>
+<h3>Good Sign: Reasoning By Sets</h3>
+<p>We use &quot;exhaustive reasoning&quot; with regular languages and algebraic data types.</p>
+<p>We use some informal mathematical reasoning, again to &quot;tame&quot; the complexity of shell.</p>
+<ul>
+<li><a href="https://oilshell.zulipchat.com/#narrow/channel/266575-blog-ideas/topic/The.20difference.20between.20programming.20and.20math/with/538049715">#blog-ideas &gt; The difference between programming and math</a>
+<ul>
+<li><a href="https://lobste.rs/s/t8fc8a/unexplanations_relational_algebra_is#c_gsdg75">https://lobste.rs/s/t8fc8a/unexplanations_relational_algebra_is#c_gsdg75</a></li>
+</ul>
+</li>
+</ul>
+<h3>Where Contributors Have Problems</h3>
+<p>This older wiki page I mentioned in the posting has more info on self-selecting: <a href="Where-Contributors-Have-Problems.html">Where Contributors Have Problems</a></p>
+<h2>This Job is Unusual / Informal</h2>
+<p>I'm actually  surprised by how many people responded to my ad!  :-)  From both lobste.rs and Hacker News</p>
+<p>Sometimes I describe Oils as a <strong>&quot;luxury&quot;</strong> project :-)  Unlike many software engineering jobs, we have the luxury of doing things to a high standard</p>
+<p>It's definitely a <strong>part time</strong> project, because we don't have a lot of funding, and occasionally things get bottlenecked</p>
+<h2>Problems / Warnings</h2>
+<h3>It's mostly the hard bugs that are left!</h3>
+<p>For example, the discussion on Zulip about <a href="https://github.com/oils-for-unix/oils/issues/2335">bug 2335</a></p>
+<h3>Some Tasks Are Bottlenecked On Me</h3>
+<p>A goal of the NLnet grants is to reduce this problem!  And we have specific milestones for it, like writing a dev guide.</p>
+<h3>There's a ton to read: Zulip, Github Bugs, Blog Posts, ...</h3>
+<p>Many people get overwhelmed by Zulip!</p>
+<p>I regret that this this is the case, but the subject matter is inherently specialized and dense.</p>
+<p>If you try to follow say the Rust project, you will experience a similar or greater amount of overwhelming detail.</p>
+<h2>Concrete Examples of Work</h2>
+<h3>dtc package test failure -&gt; printf %b bug in OSH -&gt; Lexer Fix</h3>
+<p>We start with failures from the <code>regtest/aports</code> harness, which I call <strong>symptoms</strong>.</p>
+<ul>
+<li><a href="https://aolsen.ca/writings/reproducing-dtc-failure">https://aolsen.ca/writings/reproducing-dtc-failure</a>
+<ul>
+<li>Symptom -&gt; Root Cause -&gt; Fix framing</li>
+<li>Moving things from left to right on the Github Project</li>
+</ul>
+</li>
+<li>More from Andriy and Bram on <a href="October-2025-Reply.html">October 2025 Reply</a></li>
+</ul>
+<h2>Blog Post: Links to Explain Oils in 2025</h2>
+<p>TODO: I have a draft, and plan to publish this soon.</p>
+<h2>Links</h2>
+<ul>
+<li>Instructions
+<ul>
+<li><a href="Contributing.html">Contributing</a></li>
+<li><a href="Oils-Dev-Cheat-Sheet.html">Oils Dev Cheat Sheet</a></li>
+<li><a href="https://github.com/oils-for-unix/oils/blob/master/regtest/aports.md">regtest/aports.md</a> - documentation about the test harness we're using</li>
+</ul>
+</li>
+<li>Tips
+<ul>
+<li><a href="Process-Tracing-Tips-and-Tools.html">Process Tracing Tips and Tools</a></li>
+<li><a href="Tips-on-Reducing-Bugs-to-Small-Test-Cases.html">Tips on Reducing Bugs to Small Test Cases</a></li>
+</ul>
+</li>
+<li><a href="Fourth-Grant-Goals-and-Guidelines.html">Fourth Grant Goals and Guidelines</a></li>
+</ul>
+<p>Asking questions on Zulip is always welcome!</p>
+  </body>
+</html>
+

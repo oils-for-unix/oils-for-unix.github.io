@@ -1,0 +1,73 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Ways To Get Feedback Prioritized</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p><a href="Where-To-Send-Feedback.html">Where To Send Feedback</a> gives tips on good feedback.</p>
+<p>If you feel like your feedback isn't being addressed, here are some ways to make it more actionable.</p>
+<h2>OSH Compatibility Feature Requests</h2>
+<p>In theory, we would implement everything!  In practice, we have to prioritize feature requests.</p>
+<p>(Note that bugs/divergences from sh/bash are usually given the highest priority.)</p>
+<h3>Which programs use the missing feature?</h3>
+<p>We are trying to make this list bigger: <a href="Shell-Programs-That-Run-Under-OSH.html">Shell Programs That Run Under OSH</a></p>
+<p>And as of 2024, also run some hairy Nix scripts.</p>
+<p>To get your request prioritized, it's helpful to explain which scripts use a given feature, e.g. <code>exec -a</code></p>
+<h3>Provide Failing Spec Tests</h3>
+<p>This definitely helps -- writing tests is half the battle!</p>
+<p>TODO: show examples of PRs with failing spec tests.</p>
+<p>See <a href="Spec-Tests.html">Spec Tests</a> and <a href="Contributing.html">Contributing</a> for how to write, and run spec test.  Definitely post a message on Zulip if you need help!</p>
+<h3>Provide a Patch, Including Tests!</h3>
+<p>The best possibility!  <strong>It's OK to make it &quot;quick and dirty&quot;</strong>, as long as it works.
+I can help with the style and linting, etc.  See <a href="Contributing.html">Contributing</a></p>
+<h2>YSH Design Feedback</h2>
+<h3>Show Real Code You've Written - What does it look like before, and after?</h3>
+<p>This puts your problem <strong>in context</strong>.</p>
+<p>Ideally, the code should work and have runnable tests.</p>
+<p>Show what the code looks currently, and after the proposed change.</p>
+<h3>Reference the Project's Goals</h3>
+<p>Show how it applies to examples from</p>
+<ul>
+<li><a href="https://www.oilshell.org/blog/2023/06/ysh-sketches.html">Sketches of YSH Features</a></li>
+<li><a href="https://oilshell.zulipchat.com/#narrow/stream/384942-language-design/topic/16.20Use.20Cases.20for.20Blocks.20.2F.20Reflection">#language-design &gt; 16 Use Cases for Blocks / Reflection</a></li>
+</ul>
+<h3>Familiarize yourself with YSH idioms and concepts</h3>
+<p>e.g. Interior vs. Exterior</p>
+<p>(There is often a simpler &quot;exterior&quot; way to solve a problem -- Oils is exterior-first)</p>
+<h3>Provide a Proof of Concept Implementation</h3>
+<p>This is the best way to get feedback prioritized, but the highest effort.</p>
+<p>You may want to start a discussion before doing this.</p>
+<h3>Reference issues that other people have had</h3>
+<p>If there's a problem, you're unlikely to be the <strong>only</strong> one to experience it!</p>
+<p>Looking through the issue tracker or Zulip for similar issues can help support your feedback.</p>
+<h3>Reference Existing Language Designs</h3>
+<p>Compare and contrast</p>
+<ul>
+<li>Other shells</li>
+<li>Python, JS, Ruby</li>
+<li>Perl, PHP</li>
+<li>Lisps</li>
+<li>etc.</li>
+</ul>
+<h3>Reference Existing Literature on Programming Languages</h3>
+<ul>
+<li>(But summarize the relevant parts)</li>
+<li>Define the terms you're using, and use standard terminology where possible</li>
+</ul>
+<h3>Be Familiar with how Oils is Implemented</h3>
+<ul>
+<li>e.g. a <code>value.Place</code> is a (name, stack frame) tuple, and <code>setValue()</code> must occur in a lower stack frame.  It can't occur in a higher one.</li>
+</ul>
+<h3>Write a Clear, Crisp Document</h3>
+<p>This might be the last resort, but could help.</p>
+<p>Crisp code examples are essential.</p>
+<h3>Explain your feedback to a friend, and have them write it up in their own words</h3>
+<p>Does it make sense?</p>
+<p>Is it actionable?</p>
+<p>(The real last resort!)</p>
+  </body>
+</html>
+

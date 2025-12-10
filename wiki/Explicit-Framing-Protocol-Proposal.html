@@ -1,0 +1,78 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Explicit Framing Protocol Proposal</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Key idea: allow Oil / OSH to manipulate chunks of arbitrary data via streams.</p>
+<p>Internally, uses explicit framing format that can handle arbitrary bytes. Something similar to: https://tools.ietf.org/html/rfc6455#section-5.</p>
+<p>Message (a.k.a. &quot;Record&quot;, a.k.a.  &quot;Packet&quot;) is a variable-length chunk of arbitrary bytes.
+Can contain newlines, nulls, etc. Quoting is not required for data sent in framed packets.
+Escaping is done through filters.</p>
+<p>Interface is via primitives:</p>
+<ul>
+<li><code>put</code>: analog to <code>echo</code>, but packs arguments into message.</li>
+<li><code>get</code>: analog to <code>read</code>, but unpacks a single record.</li>
+<li><code>escape</code>: read messages from input, output quoted / escaped text.</li>
+<li><code>unescape</code>: lift escaped input into messages of raw strings.</li>
+</ul>
+<h2>Use Cases</h2>
+<ul>
+<li>Safely converting between different formats, with different quoting rules.</li>
+<li>Allow OSH / Oil to route data coming from disparate sources, preserving original message boundaries.</li>
+<li>Possible strategy for / complement to <a href="Structured-Data-Over-Pipes.html">Structured Data Over Pipes</a>.</li>
+<li>Distributed computing.</li>
+<li>Message brokers / queues / event streams.</li>
+</ul>
+<p>Note: by itself, not a format for structured data: just makes it easier and safer to manipulate streams of records from the shell. Allows handling quoting at pipeline endpoints, rather than needing to be managed at each stage by the programmer.</p>
+<h2>Examples</h2>
+<h3>Trivial example</h3>
+<p>Safely output random 64-bit values.</p>
+<pre><code>rand64() {
+  while true; do
+    # bytes may contain embedded nulls, newlines, etc.
+    read -n 8 bytes &lt; /dev/random
+    put &quot;${bytes}&quot;
+  done
+}
+
+rand64 | escape --python -d'\n'
+</code></pre>
+<p>In the above example, <code>rand64</code>'s stdout is framed. Escape must be used to obtain plain text. In this case, python escaping is used, delimiting records with newlines. Escape would default to some sensible shell-quoting dialect. Other formats might include:</p>
+<ul>
+<li>json</li>
+<li>c / c++</li>
+<li>tsv2</li>
+</ul>
+<h3>TODO: Decode JSON, output msgpack to serial port in custom envelope.</h3>
+<p>JSON is &quot;plain text&quot;, msgpack is binary, but otherwise very similar to JSON. Both are &quot;document-oriented&quot;: neither spec defines how to pack multiple documents into a bytestream. JSON can be comfortably new-line delimited -- IF the document is packed onto one line. With msgpack, one needs an explicit framing protocol. With framing, we can use existing tool to safely handle streams of complete documents.</p>
+<p>Advantages to demonstrate:</p>
+<ul>
+<li>msgpack contains embedded nulls, but this is no problem for framed channels.</li>
+<li>input json documents can contain newlines! (i.e. can handle pretty-printed input!)</li>
+</ul>
+<h3>TODO: Re-write Git log example.</h3>
+<h2>Questions:</h2>
+<ul>
+<li>can we use strings as byte buffers, or does there need to be a byte buffer type?
+<ul>
+<li>I.e. What happens if an oil string contains an embedded null?</li>
+</ul>
+</li>
+<li>Is it better if <code>get</code> <code>put</code> work more like <code>read</code>, and interpret their argument as the <em>name</em> of a var?
+<ul>
+<li>i.e. <code>put foo &gt; socket</code> vs . <code>put &quot;${foo}&quot; &gt; socket</code>.</li>
+</ul>
+</li>
+<li>Would <code>get</code> \ <code>put</code> collide with any existing builtins / commands?
+<ul>
+<li>if so, perhaps could be re-cast as either flags for <code>read</code>, <code>echo</code>, <code>printf</code>, or as a &quot;mode&quot; on a file descriptor, accessible via <code>dup</code>. Or some combination.</li>
+</ul>
+</li>
+</ul>
+  </body>
+</html>
+

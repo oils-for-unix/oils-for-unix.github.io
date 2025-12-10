@@ -1,0 +1,85 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Oil Ninja Build</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Back to <a href="Contributing.html">Contributing</a> / <a href="Oil-Dev-Cheat-Sheet.html">Oil Dev Cheat Sheet</a></p>
+<h2>How it Works</h2>
+<ol>
+<li><code>./NINJA-config.sh</code> does two things:
+<ol>
+<li>invokes <code>build/dynamic_deps.py</code> to figure out dependencies of Python code generators</li>
+<li>then calls <code>build/NINJA_main.py</code> to write <code>build.ninja</code>, which is the default file that <code>ninja</code> looks at.</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li><code>build.ninja</code> has many targets due to the build variants we use: <code>dbg</code>, <code>opt</code>, <code>asan</code>, <code>ubsan</code>, <code>coverage</code>, etc.  All of these tools find bugs, help measure performance, or let us use other C++ introspection tools!  They help us with the difficult task of writing and testing the garbage-collected C++ runtime.</li>
+</ul>
+<ol start="2">
+<li>
+<p><code>NINJA_main.py</code> imports the files <code>{build,cpp,mycpp}/NINJA_subgraph.py</code></p>
+</li>
+<li>
+<p>Each of those files writes a subset of the NINJA rules (a &quot;subgraph&quot;).</p>
+<ul>
+<li>This is a little but like a <code>BUILD</code> file in Google's build system Bazel, but not quite.  We should probably move more toward that structure, where the build config lives next to the source files.  That is, EVERY dir will have <code>NINJA_subgraph.py</code>, and the build and tests for <code>osh</code> could be in <code>osh/NINJA_subgraph.py</code>, not in <code>build/NINJA_subgraph.py</code>.</li>
+</ul>
+</li>
+</ol>
+<h3>On Ninja</h3>
+<p>There are essentially only two statements in Ninja: <code>rule</code> and <code>build</code>.</p>
+<ul>
+<li><code>build</code> defines a graph edge from multiple inputs to (potentially) multiple outputs</li>
+<li><code>rule</code> tells what action to perform
+<ul>
+<li>which often delegates to <code>build/NINJA-steps.sh</code></li>
+<li>or sometimes <code>_bin/shwrap/${foo}_main</code>, which allows us to get incremental builds right with textual code generation
+<ul>
+<li>for example, if you change <code>frontend/consts.py</code>, then that should invalidate <code>frontend/consts_gen.py</code>, which will invalidate <code>_gen/frontend/consts.{cc,h}</code>.</li>
+<li>Note: this is the thing where it's unclear how other build systems like CMake handle it.</li>
+<li>It's analogous to <code>gcc -MD</code> with the Makefile fragments and <code>.d</code> files.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Caveats</h2>
+<p>The incremental build is correct in almost all cases. EXCEPTIONS:</p>
+<ul>
+<li>If you change the lexer (e.g. <code>frontend/lexer_def.py</code>), <code>ninja _bin/cxx-dbg/osh_eval</code> won't reflect it.  Because that is shared with the Python build <code>build/py.sh all</code>.</li>
+<li>If you change <code>*/NINJA-steps.sh</code>, it won't be reflected.  (TODO: add these as implicit deps?)</li>
+<li>If you set <code>CXXFLAGS='-D ALLOCLOG' ninja</code>, then objects in <code>_build/obj/cxx-dbg</code>  will be compiled differently.  And then future incremental builds may not be correct.</li>
+</ul>
+<h2>Adding Files</h2>
+<p>2022-09-06</p>
+<ul>
+<li>there is a <code>GC_RUNTIME</code> var in <code>mycpp/NINJA_subgraph.py</code>
+<ul>
+<li>do <code>./NINJA-config.sh; ninja</code></li>
+</ul>
+</li>
+<li>there is a list of C++ unit tests in <code>mycpp/NINJA_subgraph.py</code></li>
+</ul>
+<h2>Include style</h2>
+<p>We are using the <code>clang-format</code> / IWYU / &quot;Google&quot; style.</p>
+<p>Details: <a href="https://google.github.io/styleguide/cppguide.html">https://google.github.io/styleguide/cppguide.html</a></p>
+<p>Summary:</p>
+<ul>
+<li>&quot;traditional&quot; .cc and .h structure (not unity builds)</li>
+<li>Every header has <code>#include</code> guards</li>
+<li>#includes at the top of every file</li>
+<li>run <code>test/lint.sh format-cpp</code>
+<ul>
+<li>avoids the problem where you have to &quot;jiggle&quot; include order to make the build pass</li>
+<li>there is ONE correct build order for dependencies</li>
+</ul>
+</li>
+</ul>
+  </body>
+</html>
+

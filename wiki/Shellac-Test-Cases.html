@@ -1,0 +1,34 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Shellac Test Cases</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<ul>
+<li>Back to <a href="Shellac-Protocol-Proposal-V2.html">Shellac Protocol Proposal V2</a></li>
+</ul>
+<p>Shellac clients are typically shells.  They should handle dequoting / &quot;static&quot; evaluation of the command string into a partial <code>argv</code> array, so that the completion plugin doesn't need to parse shell.  The completion plugin is only responsible for understanding the <code>argv</code> array.</p>
+<p>Here are some important cases for <strong>POSIX shells</strong>.  Obviously, alternative shells like fish will have their own dequoting / evaluation rules.</p>
+<pre><code>ls | wc -&lt;TAB&gt;
+echo hi &amp;&amp; wc -l&lt;TAB&gt;
+echo $(dirname f&lt;TAB&gt;
+echo `dirname f&lt;TAB&gt;
+</code></pre>
+<p>Those should get expanded into:</p>
+<pre><code>[&quot;wc&quot;, &quot;-&quot;]   # lines 1 and 2
+[&quot;dirname&quot;, &quot;f&quot;]   # lines 3 and 4
+</code></pre>
+<p>The rest of the command line is considered irrelevant for completion.  All shell operators should be removed.</p>
+<p>Quoting:</p>
+<pre><code>echo 'filename with spac&lt;TAB&gt;
+echo filename\ with\ spac&lt;TAB&gt;
+</code></pre>
+<p>Should be expanded to:</p>
+<pre><code>[&quot;echo&quot;, &quot;filename with spac&quot;]  # dequoted partial argv
+</code></pre>
+  </body>
+</html>
+

@@ -1,0 +1,27 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Signal Handling in Oil</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Handling signals in Python exposes you to EINTR.</p>
+<p>See <a href="https://www.python.org/dev/peps/pep-0475/">PEP 475 -- Retry system calls failing with EINTR</a>.  We're backporting this work.  That's the main purpose of the <code>native/posixmodule.c</code> fork (in addition to removing over 7,000 lines of unused code).</p>
+<p>Signals Oil cares about:</p>
+<ul>
+<li>SIGWINCH -- to get notified about Window size changes</li>
+<li>... TODO</li>
+</ul>
+<h3>Relevant Files</h3>
+<ul>
+<li><code>demo/eintr.sh</code> in the repository</li>
+</ul>
+<h3>Related Pages</h3>
+<ul>
+<li><a href="Difficulties-With-Unix-Signals.html">Difficulties With Unix Signals</a></li>
+</ul>
+  </body>
+</html>
+

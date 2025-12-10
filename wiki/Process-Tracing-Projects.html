@@ -1,0 +1,67 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Process Tracing Projects</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>This page is <strong>editable</strong>!  Feel free to add similar projects, with good descriptions</p>
+<p>Note: I haven't tried most of these projects; I use the more basic mechanisms at <a href="Process-Tracing-Tips-and-Tools.html">Process Tracing Tips and Tools</a></p>
+<h2>Projects</h2>
+<ul>
+<li><a href="https://codeberg.org/SpecialSnowflake/traceboot">Traceboot: Precise and lightweight tracing for boot and shell scripts</a>
+<ul>
+<li><a href="https://lobste.rs/s/fl7ly9/traceboot_precise_lightweight_tracing">https://lobste.rs/s/fl7ly9/traceboot_precise_lightweight_tracing</a></li>
+<li><em>Bootchart but lighter and more precise.</em> - I remember this bootchart Debian project from many years ago?</li>
+<li><em>Relies on ftrace events to monitor everything needed while incurring a very low overhead. It has a microsecond-precision and doesn't affect the workload being measured by more than a few percents.</em></li>
+<li>Screenshots with Perfetto (Google Chrome tracing UI)</li>
+</ul>
+</li>
+<li><a href="https://github.com/kxxt/tracexec">Show HN: Tracexec – TUI for tracing execve and pre-exec behavior</a>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=40297043">https://news.ycombinator.com/item?id=40297043</a></li>
+<li><em>It's useful for debugging build systems, understanding what shell scripts actually do, figuring out what programs does a proprietary software run, etc.</em></li>
+<li>Comments from <code>abathur</code> on <code>resholve</code> (built with Oils)</li>
+</ul>
+</li>
+<li><a href="https://github.com/jkool702/timep">Show HN: Timep – A next-gen profiler and flamegraph-generator for bash code</a>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=45010461">https://news.ycombinator.com/item?id=45010461</a></li>
+<li>this relies on fragile bash mechanisms; maybe OSH can do better - <em>with profiling there's a bunch of errors but overall it's ~300x slower https://i.imgur.com/qif7Qp3.png so i'm sceptical on all the efficiency claims</em></li>
+</ul>
+</li>
+</ul>
+<h2>Cool Demo with Linux kernel netlink interface</h2>
+<ul>
+<li><a href="https://fabiensanglard.net/st/index.html">Exploring Linux command-line space time
+</a> - Fabien Sanglard
+<ul>
+<li><a href="https://github.com/fabiensanglard/st/blob/main/code/src/netlink.cpp">https://github.com/fabiensanglard/st/blob/main/code/src/netlink.cpp</a></li>
+</ul>
+</li>
+</ul>
+<h2>Not Open Source</h2>
+<h3>Nice Visualizations</h3>
+<ul>
+<li><a href="https://danielchasehooper.com/posts/syscall-build-snooping/">I Made A Real-Time Build Visualizer</a>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=44902127">https://news.ycombinator.com/item?id=44902127</a></li>
+<li><a href="https://lobste.rs/s/zo4nto/snooping_on_slow_builds_using_syscalls">https://lobste.rs/s/zo4nto/snooping_on_slow_builds_using_syscalls</a></li>
+</ul>
+</li>
+</ul>
+<h2>Comments on This Page With More Projects</h2>
+<ul>
+<li><a href="https://lobste.rs/s/uarqvg/process_tracing_projects">https://lobste.rs/s/uarqvg/process_tracing_projects</a></li>
+<li><a href="https://news.ycombinator.com/item?id=45388380">https://news.ycombinator.com/item?id=45388380</a> - no comments yet</li>
+</ul>
+<h2>Related</h2>
+<ul>
+<li><a href="Process-Tracing-Tips-and-Tools.html">Process Tracing Tips and Tools</a></li>
+<li><a href="Surveys-and-Comparisons.html">Surveys and Comparisons</a></li>
+</ul>
+  </body>
+</html>
+

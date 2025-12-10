@@ -1,0 +1,197 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Shell Autocompletion</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Related: <a href="How-Interactive-Shells-Work.html">How Interactive Shells Work</a></p>
+<h3>Threads that started this</h3>
+<ul>
+<li>
+<p><a href="https://lobste.rs/s/z96uyr/survey_what_shell_completion_scripts_do">Survey: What shell completion scripts do you use?</a> (September 2018) -- started by Andy, 36 comments on lobste.rs</p>
+</li>
+<li>
+<p><a href="https://news.ycombinator.com/item?id=18060916">Subthread on Hacker News</a> -- people brought up argcomplete for Python, clap-rs for Rust, Language Server Protocol</p>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=19277948">Subthread about completion invariant</a> -- e.g. you should be able to &quot;spam&quot; TAB and come up with something reasonable</li>
+</ul>
+</li>
+<li>
+<p><a href="http://www.oilshell.org/blog/2018/10/10.html">Running Bash Completion Scripts with OSH</a></p>
+<ul>
+<li><a href="https://lobste.rs/s/mu9nc5/running_bash_completion_scripts_with_osh">lobste.rs comments</a> -- Xiao (author of Elvish) and I discussed the possibility of shared completions.  Discussed the <code>git</code> use case.  Continued into e-mail thread (will summarize on Zulip)
+<ul>
+<li><a href="https://zzamboni.org/post/using-and-writing-completions-in-elvish/">Using and Writing Completions in Elvish</a></li>
+</ul>
+</li>
+<li><a href="https://www.reddit.com/r/oilshell/comments/9n7taq/running_bash_completion_scripts_with_osh/">Reddit comments</a> -- zsh developer and author Oliver Kiddle (okapi-a) discussed the possibility of shared completions.  Continued into e-mail thread (will summarize on Zulip).  Goal: Get upstream authors to maintain completion scripts?
+<ul>
+<li><a href="http://blog.llvm.org/2017/09/clang-bash-better-auto-completion-is.html">Bash auto-completion in Clang</a> -- Oliver brought this up as an example of something limiting.  Doesn't take advantage of zsh features?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="http://www.oilshell.org/blog/2018/10/11.html">Release of OSH 0.6.pre5</a> -- A long list of the things I had to do to emulate bash!  Not done yet.</p>
+</li>
+</ul>
+<h3>More Threads</h3>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=27052505">CLUI: Building a Graphical Command Line</a> (May 2021)
+<ul>
+<li>https://github.com/withfig/autocomplete -- Fig autocomplete specs.</li>
+<li>https://murex.rocks/docs/commands/autocomplete.html -- Murex shell autocomplete</li>
+</ul>
+</li>
+</ul>
+<h3>Design</h3>
+<ul>
+<li>Proposals
+<ul>
+<li><a href="Shellac-Protocol-Proposal.html">Shellac Protocol Proposal</a> (renamed from <a href="SHCOMP-Protocol-Proposal.html">SHCOMP Protocol Proposal</a>)</li>
+<li><a href="Shellac-Protocol-Proposal-V2.html">Shellac Protocol Proposal V2</a>
+<ul>
+<li><a href="Shellac-Test-Cases.html">Shellac Test Cases</a></li>
+</ul>
+</li>
+<li><a href="CLAP-Grammar-Proposal.html">CLAP Grammar Proposal</a></li>
+</ul>
+</li>
+<li>Design Notes
+<ul>
+<li><a href="Autocompletion-Use-Cases.html">Autocompletion Use Cases</a></li>
+<li><a href="Diversity-in-Command-Line-Syntax.html">Diversity in Command Line Syntax</a></li>
+<li><a href="Parsing-Models-Cheatsheet.html">Parsing Models Cheatsheet</a></li>
+<li><a href="Parsing-Shell-Quotes-Requires-Parsing-the-Whole-Language.html">Parsing Shell Quotes Requires Parsing the Whole Language</a></li>
+<li><a href="Startup-Time-Measurements.html">Startup Time Measurements</a></li>
+<li><a href="Flag-Parsers-in-Various-Languages.html">Flag Parsers in Various Languages</a></li>
+<li><a href="Projects-Already-Doing-Something-Like-Shellac.html">Projects Already Doing Something Like Shellac</a></li>
+<li><a href="Completion-Chat-November-2019.html">Completion Chat November 2019</a></li>
+<li><a href="Implementations-of-Shell-Autocompletion.html">Implementations of Shell Autocompletion</a></li>
+</ul>
+</li>
+<li>Andy Questions / Research
+<ul>
+<li>Can we reuse fish's man page parser?  It's a Python script.</li>
+<li>How is zsh's 7000-line <code>git</code> completion generated?  Can we reuse some of that logic?</li>
+</ul>
+</li>
+</ul>
+<h3>Things I've Learned about Shell Auto-Completion (So Far)</h3>
+<p>Here is a draft of an Oil blog post:</p>
+<ul>
+<li>bash and zsh &quot;boiled the ocean&quot; in parallel, i.e. developed completions for common and not-so-common Unix commands.</li>
+<li>zsh maintains many completions in-tree.  Bash is at least two different projects.
+<ul>
+<li>although there is also the zsh-completions and oh-my-zsh projects.</li>
+</ul>
+</li>
+<li>bash does not use its own parser to figure out what the completion context is.
+<ul>
+<li>readline parses the line with COMP_WORDBREAKS.</li>
+<li>Not only that, but bash-completion disregards that, and reparses COMP_LINE.  bash is parsed in bash.</li>
+</ul>
+</li>
+<li>bash <strong>dynamically greps</strong> the output of 'ls' and other commands for flag completion.</li>
+<li>git is the biggest completion by a factor of 2 in both bash and zsh.</li>
+<li>Some commands partially handle their own completion logic.
+<ul>
+<li>npm</li>
+<li>clang</li>
+<li><code>git --listcmds</code></li>
+<li>Ryan Prior used https://github.com/davetron5000/gli (a Ruby command line parser) for Conjur tools and got completion info from GLI data structures.</li>
+</ul>
+</li>
+<li>Some libraries handle their own completion.  See the list above.</li>
+<li>Grammars / pure-declarative approaches are probably good enough for 90% of completions, but not the (IMO) most important use cases like <code>git</code>.</li>
+<li>Grammar-based approaches have been tried in the past
+<ul>
+<li><a href="https://github.com/mbrubeck/compleat">mbrubeck/compleat on Github</a></li>
+<li>https://github.com/grammy-org</li>
+</ul>
+</li>
+<li>zsh has a nicer completion UI.
+<ul>
+<li>It gives you help for flags.</li>
+<li>It doesn't constantly redraw the line like readline! (argh)</li>
+</ul>
+</li>
+<li>Thomas Ballinger (contributor to the BPython shell) has a <a href="http://ballingt.com/blog/">great blog</a> about Terminals.
+<ul>
+<li>It's easier to draw stuff below the prompt than above the prompt.</li>
+</ul>
+</li>
+<li>Emacs and xonsh already do something like Shellac!!!  They shell out to bash.
+<ul>
+<li><a href="Projects-Already-Doing-Something-Like-Shellac.html">Projects Already Doing Something Like Shellac</a></li>
+</ul>
+</li>
+</ul>
+<h3>Big questions</h3>
+<ul>
+<li>
+<p>Should we &quot;boil the ocean&quot; 0, 1, or N times?</p>
+<ul>
+<li>0: emulate bash</li>
+<li>1: share autocompletion among shells</li>
+<li>N: everybody develops their own</li>
+</ul>
+</li>
+<li>
+<p>What would a shared completion API / protocol / grammar / data format look like?</p>
+</li>
+</ul>
+<h3>Forum</h3>
+<ul>
+<li>Visit https://oilshell.zulipchat.com/ and sign in with GIthub!
+_ Advantages:
+<ul>
+<li>Write async messages like e-mail, or chat synchronously in real-time.</li>
+<li>Organize the conversation into threads (the git use case, grammars, Elvish design, etc.)</li>
+<li>Markdown support for code examples</li>
+<li>Notify via e-mail with @, but don't spam people's inbox with every message.</li>
+<li>Public, so new people can view the history (unlike e-mail / IRC)</li>
+<li>Easy login with Github.</li>
+</ul>
+</li>
+</ul>
+<h3>Declarative/DSL/Grammar vs. Invoking Arbitrary Code Behind a Completion Server Protocol</h3>
+<ul>
+<li>Power
+<ul>
+<li>Is the DSL Turing complete?  Does it need to be?</li>
+</ul>
+</li>
+<li>Latency
+<ul>
+<li>Something in-process has better latency.</li>
+</ul>
+</li>
+<li>Version skew of completion definitions:
+<ul>
+<li>Querying a binary directly eliminates version skew.  The upstream author adds a flag via <code>argparse</code> or <code>golang/flags</code>, and everything should work.</li>
+<li>Otherwise there is an extra step of generating a grammar, and this can get out of date.
+<ul>
+<li>(There are many different ways to distribute binaries now.  Package managers are only one.  For example, the Rust toolchain is updated with a <code>curl | sh</code>-style shell script.)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Version skew of the DSL itself.
+<ul>
+<li>Is it statically linked into every library?</li>
+</ul>
+</li>
+<li>Killer app: Could you implement the completion server protocol in VimScript?  Yes, as long as it can
+invoke an arbitrary process.
+<ul>
+<li>You probably cannot implement a DSL in VimScript, or it would be very awkward.</li>
+</ul>
+</li>
+</ul>
+  </body>
+</html>
+

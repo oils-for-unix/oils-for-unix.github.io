@@ -1,0 +1,281 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Slogans  Fallacies  and Concepts</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p><strong>UNDER CONSTRUCTION</strong></p>
+<p>Related: <a href="Patterns-and-Anti-Patterns.html">Patterns and Anti-Patterns</a></p>
+<h2>Slogans to Explain the Oils Project</h2>
+<ul>
+<li>Oils is our upgrade path from bash to a better language and runtime.</li>
+<li>OSH is the most bash-compatible shell, by a mile.</li>
+<li>YSH is for Python and JavaScript users who avoid shell. (the clean slate view)
+<ul>
+<li><em>Shell should be more like the dynamic languages that won</em> (Python, JavaScript, Ruby, PHP, etc.)</li>
+</ul>
+</li>
+<li>YSH is Shell+Python+Regex+JSON+YAML squished together
+<ul>
+<li>(the project expanded beyond shell -- data has to be fixed too)</li>
+<li>Oils adds the <strong>missing declarative part</strong> to shell (via Hay, Ruby-like blocks)</li>
+</ul>
+</li>
+<li><em>The Ultimate Glue Language</em></li>
+<li>Do you need 7 languages to make a distributed system?
+<ul>
+<li><a href="https://lobste.rs/s/1kxvjz/from_languages_language_sets#c_8duyxw">https://lobste.rs/s/1kxvjz/from_languages_language_sets#c_8duyxw</a></li>
+</ul>
+</li>
+<li>Oils lets you make your &quot;devops sludge&quot; nicer, incrementally.  Unix <strong>sludge</strong>: sh, awk, make, CMake, m4.  New cloud sludge: YAML, JSON, Go templates, etc.</li>
+<li>Concept: Tables, Records, and Documents: TSV8, JSON8, and HTML</li>
+<li>If we do a good job, everyone will be <strong>equally unhappy</strong>
+<ul>
+<li>need an xkcd-like picture of language communities - https://xkcd.com/256/</li>
+</ul>
+</li>
+</ul>
+<p>NOT done yet (we need escaping functions):</p>
+<ul>
+<li>To the extent that you believed in RIIR (“Rewrite it in Rust”) for memory safety, you should also believe in RIIY (“rewrite it in YSH”) for string safety. (from https://lobste.rs/s/uihyvs/backdoor_upstream_xz_liblzma_leading_ssh#c_h3urdz)
+<ul>
+<li>There's also an upgrade path from OSH to YSH, more so than from C++ to Rust.</li>
+</ul>
+</li>
+</ul>
+<h3>Interactive Shell</h3>
+<p>Regarding the <strong>Headless Shell</strong> <a href="Headless-Mode.html">Headless Mode</a></p>
+<ul>
+<li>The shell UI should <strong>have</strong> a terminal, it shouldn't <strong>be</strong> a terminal</li>
+<li>The shell is a <strong>language-oriented</strong> interface, but it doesn't have to be a <strong>terminal-oriented</strong> one</li>
+</ul>
+<h2>Slogans to Explain Shell</h2>
+<ul>
+<li>Shell is about <strong>ad hoc, coarse-grained reuse</strong>.  It's for gluing together things that weren't meant to be glued together.  Oils lets you do this correctly.</li>
+<li>Shell is the language of <strong>heterogeneity</strong> and <strong>diversity</strong> (a mix of languages, evaluation models, devices, operating systems, networks, performance characteristics, etc.)
+<ul>
+<li>but without <strong>cacophony</strong>!  (awk / make / YAML are cacophony)</li>
+</ul>
+</li>
+<li>Shell is the language of <strong>process-based concurrency</strong>.  It can use all your cores.</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p>The Worst Amounts of Shell are 0% and 100%</p>
+<ul>
+<li>Three Things That Are Worse Than Shell Scripts - Shell in wiki pages, Shell in package.json, shell that's only on other people's computers (YAML)</li>
+</ul>
+</li>
+<li>
+<p><em>Unix Shell Should Be the Center of User-Centric Computing</em>.  Shell is a language-oriented interface that does what you say!  It doesn't &quot;nudge&quot; you in certain directions with dark patterns.</p>
+</li>
+<li>
+<p>It's for describing the architecture of distributed systems: <strong>processes</strong> and <strong>ports</strong>.</p>
+</li>
+<li>
+<p>Shell is <strong>where software starts</strong> (because it's the language of user space; it bootstraps the rest of the system; all language package managers use it)</p>
+</li>
+<li>
+<p><em>Unix Is Equally Inconvenient For Everyone, and That's a Feature</em> -- https://old.reddit.com/r/ProgrammingLanguages/comments/s7shox/why_static_languages_suffer_from_complexity/htep2dm/</p>
+</li>
+</ul>
+<p>Concepts</p>
+<ul>
+<li>Shell is a <strong>&quot;meta-language&quot;</strong> -- in a few senses.  Generating source code in other languages.  Building source code.  Measuring the output of running programs.</li>
+</ul>
+<h2>Interior Fictions vs. Exterior Reality</h2>
+<p>or Text vs. Types</p>
+<ul>
+<li><strong>When Models and Reality Collide, Reality Wins</strong> <a href="https://lobste.rs/s/9rrxbh/on_types#c_qanywm">https://lobste.rs/s/9rrxbh/on_types#c_qanywm</a></li>
+<li><em>Protocols and Interchange Formats Over In-Memory Data</em> !
+<ul>
+<li>JSON/TSV/HTML over the network / on disk are <strong>primary</strong>; in-memory representations (struct/classes) are <strong>secondary</strong>.   Most programmers think the opposite, but that's a bias caused by the work they do.</li>
+<li>HTML can be processed with DOM or SAX, etc.</li>
+<li>ditto for JSON and jq -- it can cut things down to size first</li>
+<li>or grep on QTT</li>
+<li>Lazy deserialization, doctools/oil_doc.py, etc.</li>
+</ul>
+</li>
+<li>The OS process is the only software abstraction with <strong>hardware support</strong> (the MMU)</li>
+<li>Re-serializing and Re-parsing are idiomatic in shell and Oil (e.g. $0 dispatch pattern and Hay SHELL nodes)</li>
+</ul>
+<h2>Data-Centric Software Architecture</h2>
+<ul>
+<li><em>Data over Code; Protocols over Services</em>.  The Kubernetes diagram talks too much about services and not enough about protocols!
+<ul>
+<li>this is the rule of representation applies to distributed systems.</li>
+<li>*data over code; stateless over stateful, explicit state over implicit state * (Urbit)</li>
+</ul>
+</li>
+</ul>
+<h2>More</h2>
+<ul>
+<li>Shell is <strong>now a good language</strong>
+<ul>
+<li><em>Unix without the 70's style macro processing</em></li>
+</ul>
+</li>
+<li><em>A New Jersey Design with an MIT Implementation Style</em> (Oil is a mix of practical and principled)</li>
+<li><a href="https://www.oilshell.org/blog/2021/07/blog-backlog-1.html#slogans">Unix Programmers And Woodworkers Both Make Their Own Tools</a></li>
+<li><strong>New Unix Sludge Is Worse Than Old Sludge</strong> <a href="https://www.oilshell.org/blog/2021/07/blog-backlog-1.html#slogans">https://www.oilshell.org/blog/2021/07/blog-backlog-1.html#slogans</a></li>
+<li><a href="http://www.oilshell.org/blog/2021/07/blog-backlog-2.html">Kubernetes is Our Generation's Multics</a></li>
+<li><em>The Stuff That Happens Between fork() and exec() is Very Important</em>
+<ul>
+<li>It's where pipelines happen</li>
+<li>It's where containers happen (and traditional dropping of privileges)</li>
+<li>Contrast with: Windows, and Virtual Machines.  They're TOO sandboxed.  You want a mix of isolation and sharing.</li>
+<li>TODO: Link fork() in the road paper.</li>
+</ul>
+</li>
+<li><em>Cloud Platforms like Github Actions are capable, but the languages are weak</em></li>
+<li><em>Shell-Centric Shell Programming</em> (see xargs post for examples)</li>
+</ul>
+<h2>Fallacies</h2>
+<ul>
+<li>Shell is a bad language.  It used to be, but Oil made it good! :)</li>
+<li>The Python replaces shell fallacy.  It's not either-or.  The unix philosophy is for shell to invoke tools in Python.</li>
+<li>PHP straight-line code fallacy.  However we often <strong>want</strong> this!  We want people to have simple ways of reasoning.</li>
+<li>Fine-grained types are always better (from a code perspective, but not from a systems/architecture perspective)</li>
+<li>Processes are slow fallacy</li>
+<li>Strings are slow fallacy (examples: grep, etc.  I think QTT has advantages over graphs of objects in memory too)</li>
+<li>You can't extend your type system across the network
+<ul>
+<li>distributed upgrade problem</li>
+<li>language heterogeneity problem (and &quot;old code&quot; problem)</li>
+<li>Google felt these scaling limits.  protobufs worked well, to a point</li>
+</ul>
+</li>
+<li>Fallacy: Operating Systems Should Have Records (this can be layered on top in the shell layer!)
+<ul>
+<li>Unix explicitly rejected records, while earlier systems had them.  This was the right choice (for scaling / ubiquity).</li>
+<li>this is the &quot;typed API style&quot; as opposed to Unix Text Style
+<ul>
+<li>https://blog.rfox.eu/en/Programming/Programmers_critique_of_missing_structure_of_operating_systems.html</li>
+<li>also &quot;missed opportunities of static types&quot; -- these are both &quot;wrong&quot;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>X as Narrow Waist Fallacy: https://lobste.rs/s/sdum3p/if_you_could_rewrite_anything_from#c_yijvsx
+<ul>
+<li>some people want ND-JSON, other people want space-separated columns, Elvish wants JSON-like values, nushell wants tables, etc.</li>
+<li>the real answer is that byte streams are still the lowest common denominator; documents, objects, and tables are usefully represented as byte streams (HTML/XML, JSON, CSV/TSV/QTT)</li>
+<li>It's very difficult to move narrow waists.   It can happen, but wishing doesn't make it happen.  Building does make it happen, but the builders of Elvish/nushell/Rash disagree.</li>
+</ul>
+</li>
+</ul>
+<p>Related to empirical software engineering: <a href="https://lobste.rs/s/v4unx3/i_ing_hate_science#c_pslfkq">The Soviet-Harvard Delusion</a>.  In contrast, Unix is absorbed through apprenticeship.  Neal Stephenson says that <em>Unix is our Gilgamesh epic</em>.</p>
+<h2>Concepts</h2>
+<ul>
+<li>String Safety aka String Hygiene: proper escaping.  (sort of an analogy to memory safety)</li>
+<li>Process Based Concurrency</li>
+<li>Policy vs. Mechanism; Control Plane vs. Data Plane.
+<ul>
+<li>Shell is about policies and the control plane.</li>
+</ul>
+</li>
+<li>REPL as a debugger for distributed state (since conventional debuggers don't work)</li>
+<li>Code- vs. Data- Centric.  Unix is Data-Centric.  Windows, iOS, Android, and the cloud are code-centric.</li>
+<li><strong>Data Over Code Principle</strong> or <strong>Rule of Representation</strong>
+<ul>
+<li><a href="https://www.oilshell.org/blog/2016/11/29.html">Status Update: the Backbone of the Interpreter</a> (Fred Brooks and Torvalds)</li>
+<li><a href="https://old.reddit.com/r/oilshell/comments/ogfh1a/blog_bankruptcy_part_1_of_2/h57z3cy/?context=3">https://old.reddit.com/r/oilshell/comments/ogfh1a/blog_bankruptcy_part_1_of_2/h57z3cy/?context=3</a> (Rob Pike and Eric Raymond)
+<ul>
+<li><a href="http://www.catb.org/%7Eesr/writings/taoup/html/ch01s06.html#id2878263">http://www.catb.org/%7Eesr/writings/taoup/html/ch01s06.html#id2878263</a></li>
+</ul>
+</li>
+<li>could also be <em>Data-Centric Principle</em> ?  This is a claim about correctness and design of software.  There's also a claim about respecting the user (Windows, iOS,  Android don't)</li>
+</ul>
+</li>
+<li><strong>Situated Language</strong> (via Rich Hickey and Clojure).  Many programs are entangled with &quot;the world&quot;, and entangled with real data.  The model has to be discovered, and changes over time.  Shell scripts often have this flavor, and Oil is a good language for such programs.</li>
+<li><em>distributed shell script</em> -- a shell script that runs on multiple computers <a href="Distributed-Shell.html">Distributed Shell</a></li>
+<li><em>parasitic shell script</em> -- a shell script that reuses entire proprietary cloud platforms!  i.e. Travis CI, or AWS Lambda, etc.
+<ul>
+<li>you keep the <em>control plane</em>, but the <em>data plane</em> is outsourced</li>
+</ul>
+</li>
+<li>Allopoiesis vs. Autopoiesis, from Richard Gabriel's <a href="https://dreamsongs.com/Files/DesignBeyondHumanAbilitiesSimp.pdf">Design Beyond Human Abilities</a> (PDF)</li>
+<li>Models vs. Reality: The Map is Not the Territory (regarding types and runtime behavior)</li>
+<li>Serializations/Concretions vs. Data Structures/Abstractions (Parochial Types, as described by Hickey)</li>
+</ul>
+<blockquote>
+<p>The structure of a system made this way would be of the allopoietic part of it -- the part that does what the<br />
+designers intended, such as banking or web serving -- embedded in the autopoietic part, which would be responsible, in a sense, for keeping the overall system alive.</p>
+</blockquote>
+<p>In a distributed system, &quot;shell scripts&quot; are the autopoietic part.</p>
+<h3>Software Architecture Principles</h3>
+<ul>
+<li><strong>Perlis-Thompson Scaling Principle</strong>
+<ul>
+<li>Shell, Unix kernel, Plan 9, REST, etc.</li>
+</ul>
+</li>
+<li>The <strong>Perlis-Thompson Prophesy</strong> -- the cloud will converge on <strong>single concepts</strong> for distributed OS concepts.  (It won't be Kubernetes; it's not expressive enough or simple enough to be a narrow waist.)</li>
+<li>Principle of Least Power (from Tim Berners-Lee)
+<ul>
+<li>this has to do with remote code.  Division between HTML, JavaScript, and CSS.</li>
+<li>use eggex where possible</li>
+</ul>
+</li>
+<li>Extensibility Principle (TODO: need a name for this)
+<ul>
+<li>Browser features should be explainable in JavaScript: <a href="https://extensiblewebmanifesto.org/">Extensible Web Manifesto</a></li>
+<li>SQL features should be explainable in SQL: <a href="https://scattered-thoughts.net/writing/against-sql/">Against SQL</a>.  Good example of flink windowing vs SQL windowing.  SQL windowing is hard-coded and even requires custom syntax (somewhat like shell's string operators!)</li>
+</ul>
+</li>
+<li>End-to-End Principle</li>
+<li>Framework vs Library: Who holds <code>main()</code>?
+<ul>
+<li>systemd and Kubernetes hold main(), and there is a strong rationale for that.  But there's value to holding main() in shell (doing things that can't be done in a framework)</li>
+</ul>
+</li>
+<li>Typed-API-Style vs. Unix Text Style.  The former is what multics did.  It's arguably easier to use.  But the second style scales and evolves better (over decades!)</li>
+<li><em>Service Topology Abstraction</em> (or maybe a less intimidating term).  The idea that the topology is abstract and can be mapped to physical machines.  We want to run services locally.  We don't hard code ports in source code; we wire services together in shell scripts.</li>
+<li>The Graceful Upgrade / Thin Layer Principle
+<ul>
+<li>The web is a graceful upgrade over Unix and SGML.  It augments the file system hierarchy with URLs and hyperlinks.</li>
+<li>Oil is a graceful upgrade of Thompson -&gt; Bourne -&gt; Korn -&gt; bash shell, as they each were of each other.  (Whether you want to call it evolution or design is up for debate.  Oil emphasizes design)</li>
+</ul>
+</li>
+<li><em>Processes and Files Are Better Than The Wrong Abstraction</em>.  Software complexity is related to superfluous abstractions that don't compose (e.g. Docker).  Restoring the simplicity of &quot;code and data&quot; to distributed systems.</li>
+</ul>
+<h3>Systems Thinking vs. Code Thinking</h3>
+<ul>
+<li>Fallacies</li>
+<li>Things vs. The <em>Relationship between Things</em>.
+<ul>
+<li>code vs. data</li>
+<li>protocols vs. services/processes</li>
+</ul>
+</li>
+</ul>
+<h3>Implementation Concepts</h3>
+<ul>
+<li>Lossless Syntax Tree</li>
+<li>Lexer Modes (for principled parsing)</li>
+<li>Lexing as non-recursive and parsing as recursive</li>
+<li>Coprocesses
+<ul>
+<li>stateful: headless mode</li>
+<li>stateless: capers (not implemented yet)</li>
+</ul>
+</li>
+</ul>
+<h3>Concepts That Need a Name</h3>
+<ul>
+<li>Hacker News Quote: <em>My problem with k8s, is that you learn OS concepts, and then k8s / docker shits all over them.</em>.  This is a special case of the Perlis-Thompson principle.  The new abstractions should &quot;reduce&quot; in some way to the old ones.  There should be a &quot;principle of extension&quot; or something.</li>
+</ul>
+<h2>Analogies</h2>
+<ul>
+<li>Oil vs. Metal (shell as essential lubricant)</li>
+<li>Plants vs. Animals</li>
+<li>Fascia vs big organs (heart, lungs)</li>
+<li>Autopoietic vs Allopoietic (Richard Gabriel)</li>
+</ul>
+  </body>
+</html>
+

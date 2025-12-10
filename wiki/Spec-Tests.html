@@ -1,0 +1,121 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Spec Tests</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Back to  <a href="Contributing.html">Contributing</a> / <a href="Oils-Dev-Cheat-Sheet.html">Oils Dev Cheat Sheet</a></p>
+<p>Spec Tests are written with the <a href="sh_spec.py%7Chttps://github.com/oilshell/oil/blob/master/test/sh_spec.py.html">sh_spec.py|https://github.com/oilshell/oil/blob/master/test/sh_spec.py</a> framework.  There are some comments at the top of that file.</p>
+<p>They live in files like <code>spec/smoke.test.sh</code>, and can be run with shell functions <code>test/spec.sh smoke</code> (sorry they're in different dirs)</p>
+<p>They are published with each release, on the quality page: <a href="https://oils.pub/release/latest/quality.html">https://oils.pub/release/latest/quality.html</a></p>
+<p>They're also published at every commit, with our <a href="Soil.html">Soil</a> CI.</p>
+<h3>Quick Start</h3>
+<p>Follow these steps in <a href="Contributing.html">Contributing</a>:</p>
+<pre><code>$ build/deps.sh fetch 
+$ build/deps.sh install-wedges-fast
+</code></pre>
+<p>Then</p>
+<pre><code>$ test/spec.sh smoke          # run a single file, which lives in spec/smoke.test.sh
+
+$ test/spec-py.sh ysh-all     # all YSH spec tests in parallel
+$ test/spec-py.sh osh-all     # all OSH spec tests in parallel - this may be flaky
+</code></pre>
+<p>Useful shortcuts:</p>
+<pre><code>$ test/spec.sh smoke --range 11-12  # just run two tests
+$ test/spec.sh smoke --range 11-12 --verbose  # show detailed error messages
+
+$ test/spec.sh smoke -r 11-12 -v  # short flags
+</code></pre>
+<p>In general, run <code>test/spec.sh FOO</code> to run the cases in <code>spec/FOO.test.sh</code>.  Example:</p>
+<pre><code>$ test/spec.sh array       # run spec/array.test.sh
+</code></pre>
+<p>Run C++ tests</p>
+<pre><code>$ test/spec-cpp.sh run-file smoke  # one file
+$ test/spec-cpp.sh osh-all
+</code></pre>
+<p>Also see our README.md: <a href="https://github.com/oilshell/oil/blob/master/spec/README.md">https://github.com/oilshell/oil/blob/master/spec/README.md</a></p>
+<h3>Test-Driven Development</h3>
+<p>The idea behind the spec tests to <strong>figure out how OSH should behave</strong> (the spec) by taking an <strong>automated survey</strong> of the behavior of other shells.  I follow a test-driven process like this:</p>
+<ol>
+<li>Write spec tests for a new feature.</li>
+<li>Make the spec tests pass on every shell except OSH.  If shells differ in behavior, this may require annotations on the expected results.
+<ol>
+<li>A given shell may not implement a feature.  For example, <code>bash</code> and <code>zsh</code> both implement the <code>dirs</code> builtin, but <code>mksh</code> and <code>dash</code> don't.</li>
+<li>Shells may implement the same feature differently.  For example, <code>pushd</code> in bash prints the stack to stdout, but <code>pushd</code> in <code>zsh</code> doesn't.</li>
+</ol>
+</li>
+<li>Write code in OSH to make the tests pass.</li>
+</ol>
+<p>After step 2, all columns should be green or yellow, except OSH.  After step 3, the OSH column should be green or yellow as well.</p>
+<h3>Format of the Tests</h3>
+<p>The <code>spec/foo.test.sh</code> files are designed to be syntax-highlighted like normal shell scripts.</p>
+<p>Each line is a &quot;token&quot;.  Lines with four hashes <code>####</code> begin a test case.  Lines with two hashes <code>##</code> add metadata to the test case, e.g. assertions to make on status/stdout/stderr.</p>
+<p>Basic Test:</p>
+<pre><code class="language-sh">#### test for echo
+echo 1
+## status: 0
+## stdout: 1
+</code></pre>
+<p>Test with multiline assertion:</p>
+<pre><code class="language-sh">#### multiline test
+echo 1
+echo 2
+## status: 0
+## STDOUT:
+1
+2
+## END
+</code></pre>
+<p>You can also add <strong>qualifiers</strong> to tests, to account for the different behavior of different shells.  Example:</p>
+<pre><code class="language-sh">#### multiline test with qualifier
+echo 1
+echo 2
+if test $SH = dash; then
+  echo 3
+fi
+## status: 0
+## STDOUT:
+1
+2
+## OK dash STDOUT:
+1
+2
+3
+## END
+</code></pre>
+<p>You can also write assertions as JSON:</p>
+<pre><code class="language-sh">#### test for echo with tab
+echo -e '1\t2'
+## status: 0
+## stdout-json: &quot;1\t2\n&quot;
+</code></pre>
+<h3>Creating Temporary Files</h3>
+<p>The current directory in the spec tests is created for each pair of test and shell. For example, when the third test in <code>builtin-cd</code> is run by <code>osh</code>, it's current directory will be <code>_tmp/spec-tmp/builtin-cd.test.sh/02-osh</code>.</p>
+<h3>Notes</h3>
+<ul>
+<li>Spec tests run in a semi-isolated environment.  It could be more isolated (<a href="https://github.com/oilshell/oil/issues/42">issue 42</a>).
+<ul>
+<li>Almost all tests should pass if you run them on an Ubuntu machine with bash 4.4 (e.g. Ubuntu 18.04).</li>
+<li>However, the tests tickle changes in <strong>minor versions</strong> of all shells, so to get everything to pass, you
+should follow the instructions at the top of <code>test/spec-bin.sh</code>.  This builds shells from source.
+<ul>
+<li>The interactive tests (<code>test/spec.sh interactive</code>) are known to fail with the default bash install on Ubuntu 18.04. See https://github.com/oilshell/oil/pull/414</li>
+</ul>
+</li>
+<li>Right now I run them on Ubuntu 16.04 with the above binaries, but they should run on any Linux distro.</li>
+<li>OS X: TODO.  This has been tried but people are not regularly using it.</li>
+</ul>
+</li>
+<li>It's OK to check in tests that don't pass on OSH yet.  This helps because it specifies the behavior we want to implement.  However, spec tests should not be submitted until they are green/yellow on OTHER shells.  (They can be disabled if the feature isn't implemented at all in a shell.)
+<ul>
+<li>To prevent failing test runs, adjust <code>--allowed-failures</code> in <code>test/spec.sh</code>.  For example, <code>--allowed-failures 3</code>
+will make the <code>sh_spec.py</code> framework exit <code>0</code> if there are exactly 3 red failures in the OSH column.  We only releaes OSH when all spec tests exit <code>0</code>.</li>
+</ul>
+</li>
+</ul>
+  </body>
+</html>
+

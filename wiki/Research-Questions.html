@@ -1,0 +1,82 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Research Questions</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Based on <code>regtest/aports</code>, which is a big shell workload:</p>
+<ul>
+<li>Is there another <code>xz</code> backdoor lurking in the workload ?
+<ul>
+<li>Can we add always-on runtime instrumentation to detect this?  with <strong>O(1) memory</strong> with respect to program runtime ?</li>
+<li>Theme: <strong>supply chain security</strong></li>
+</ul>
+</li>
+<li>Shell is slow, so can we use the &quot;spaces&quot; to run telemetry / always-on profiling?
+<ul>
+<li>how often is shell invoked in the Alpine Linux build?  At Alpine Boot time?</li>
+<li>Debian build / systemd boot ?</li>
+<li>which shell features are used?</li>
+<li>Theme: <strong>language runtime implementation</strong></li>
+</ul>
+</li>
+<li>OSH is as fast as bash, despite being written in <strong>typed Python</strong> (with GC) !
+<ul>
+<li>This is because bash is a suboptimal program!</li>
+<li>Can OSH be as fast as awk / Python?
+<ul>
+<li>By another translation of the executable spec?  (e.g. with tagged pointers)</li>
+<li>Or with hints?  Or by enhancing the metalanguage?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>How to visualize shell traces?</li>
+<li>Can the Alpine Linux build with <code>abuild</code> be parallelized and distributed?
+<ul>
+<li>something like Bazel or Nix?</li>
+<li>Theme: <strong>parallel and distributed computing</strong></li>
+</ul>
+</li>
+<li>Can OSH be transformed to YSH?
+<ul>
+<li>there is no automatic design</li>
+<li>Theme: <strong>program transformation</strong></li>
+</ul>
+</li>
+<li>Can we fix bugs in OSH with LLMs?
+<ul>
+<li>point LLM  at busybox ash / bash source code, and ask it to implement OSH?</li>
+<li>document OSH?</li>
+<li>can we use the <strong>~11,000</strong>-commit history of the Oils repo to improve results?</li>
+<li>problem: changes are often bottlenecked on <strong>review</strong>
+<ul>
+<li>case study: <code>trap</code> builtin</li>
+</ul>
+</li>
+<li>problem: is there an objective metric for &quot;generating ugly code&quot; that's not maintainable by humans?
+<ul>
+<li>I guess that's why we use the commit history</li>
+<li><code>trap</code> builtin is another good example</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Themes</h2>
+<ul>
+<li>Supply Chain Security
+<ul>
+<li>Foundation for a distributed OS</li>
+</ul>
+</li>
+<li>parallel and distributed computing</li>
+<li>program transformation / maintenance</li>
+<li>Generating source code changes</li>
+</ul>
+  </body>
+</html>
+

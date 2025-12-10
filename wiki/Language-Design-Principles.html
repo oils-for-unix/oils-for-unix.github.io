@@ -1,0 +1,204 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Language Design Principles</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<h2>General Principles</h2>
+<ul>
+<li><strong>Syntax and Semantics Should Correspond</strong>
+<ul>
+<li>The same semantics should use the same syntax</li>
+<li>Different semantics should use different syntax</li>
+<li>e.g. discussion in <a href="http://www.oilshell.org/blog/2016/10/28.html">The Five Meanings of #</a></li>
+<li>e.g. <code>find -type f</code> and the <em>I'm too lazy to write a lexer pattern</em> is BANNED!</li>
+</ul>
+</li>
+<li><strong>Users don't read the manual</strong> -- So syntax should be &quot;guessable&quot; based on common, established behavior -- Python, JavaScript, C, JSON, etc.</li>
+<li>The common behavior should be the <strong>default behavior</strong>.  The <strong>short</strong> thing should be the <strong>right</strong> thing.
+<ul>
+<li>For example, simple word evaluation makes it so that you can use <code>$var</code> instead of <code>&quot;$var&quot;</code>.  That's almost always what you want.</li>
+<li><code>read -r</code> should have been the default in bash -- i.e. it inhibits backslash processing, which most people didn't intend with <code>read</code></li>
+<li>Note that <code>bin/ysh</code> has all the right defaults with <code>shopt --set ysh:all</code>.  <code>bin/osh</code> is compatible.</li>
+</ul>
+</li>
+<li><strong>Failures</strong> should not be ignored.
+<ul>
+<li>Example: in bash, when evaluating <code>strftime</code> in printf strings like <code>%(%Y)T</code>, if the result overflows a 128 byte buffer, it's silently truncated!</li>
+</ul>
+</li>
+<li>Every feature should have <strong>Predictable, Linear Performance</strong> (extended globs break this rule with backtracking, so they're not in YSH)</li>
+<li><strong>Minimize the use of global options</strong> (<code>shopt</code>)
+<ul>
+<li>YSH started out with many such options, but I eliminated them over time because it got unwieldy to explain and document.</li>
+<li>There are still many of them and they should be used sparingly.   But note that the <code>strict_</code> ones don't really have any cost, because they abort your program on disallowed behavior.  They don't silently change the semantics.</li>
+<li>Rationale: Global state makes code harder to read.  It's a &quot;hidden mode&quot;.</li>
+<li>They should mostly be hidden under groups like <code>ysh:upgrade</code></li>
+<li>Counterexample: <code>simple_word_eval</code> is probably the most important one that silently changes behavior, and I think it's justified in that case.</li>
+</ul>
+</li>
+<li>Borrowed from the <a href="https://realpython.com/zen-of-python/">Zen of Python</a> (<code>import this</code>)
+<ul>
+<li><em>If the implementation is hard to explain, it's a bad idea.</em></li>
+<li><em>If the implementation is easy to explain, it may be a good idea.</em></li>
+</ul>
+</li>
+</ul>
+<h2>Oils Principles (both OSH and YSH)</h2>
+<ul>
+<li><a href="https://www.oilshell.org/blog/2023/06/ysh-design.html">Oils Is Exterior-First (Code, Text, and Structured Data)</a>
+<ul>
+<li>this means <strong>interior</strong> features are less important: Lisp-like macros as opposed to Unix-like code gen, closures</li>
+</ul>
+</li>
+</ul>
+<h2>YSH Principles</h2>
+<p>YSH is less constrained by compatibility, although there is still some consideration for it.</p>
+<ul>
+<li>It should be a <strong>smooth upgrade</strong> from OSH.  Avoid &quot;wild&quot; breakage.
+<ul>
+<li>We keep all the good concepts and throw out some bad ones.</li>
+</ul>
+</li>
+<li>It should be <strong>explainable</strong> as clean slate language!  This principle is heavily in conflict with the first, but there were surprisingly  few compromises necessary!
+<ul>
+<li>See <a href="https://www.oilshell.org/release/latest/doc/ysh-tour.html">A Tour of the YSH</a></li>
+</ul>
+</li>
+<li><strong>Avoid inventing syntax that doesn't exist in any other language</strong>.  Most of YSH should look familiar to programmers and shell users.
+<ul>
+<li><code>@</code> has precedent in Perl, PowerShell, etc.</li>
+<li>the expression syntax comes from Python, JavaScript, etc.</li>
+<li>However, a corollary of the principle above is:  If YSH has completely new semantics, then inventing a new syntax is justified.</li>
+<li>See <a href="https://www.oilshell.org/release/latest/doc/language-influences.html">YSH Language Influences</a></li>
+</ul>
+</li>
+<li>YSH should be <strong>familiar to Python and JavaScript users</strong>.  Common features like assignment should behave similarly.</li>
+<li>Conversely, if our syntax looks like JavaScript or Python, it should <strong>behave</strong> like JavaScript or Python, unless we're fixing a wart.
+<ul>
+<li>e.g. See <code>#language-design &gt; Things Oils Shipped Without</code></li>
+<li>This is a <strong>corollary</strong> of &quot;syntax and semantics should correspond&quot;, but <strong>across languages</strong></li>
+</ul>
+</li>
+<li><strong>Don't break the interactive shell / top level / examples printed in books</strong>
+<ul>
+<li>e.g. We don't break redirect syntax, and we don't break <code>PYTHONPATH=. foo.py</code></li>
+</ul>
+</li>
+<li>There Should Only Be <strong>One Kind of Expression</strong>
+<ul>
+<li>Shell has <a href="https://www.oilshell.org/blog/2019/02/07.html#list-of-sublanguages">3 to 4 recursive expression languages</a>: arith, bool, word.  And bash has regexes.</li>
+<li>In contrast, YSH has just <strong>one</strong> expression language.  Note that eggexes are &quot;first class&quot;.</li>
+<li>Exception: Globs are still a separate expression language. (But they're unchanged in YSH, inherited from POSIX)</li>
+</ul>
+</li>
+<li><strong>Avoid single-letter flags</strong> and names.  This was OK in the 70's but no longer scales!
+<ul>
+<li>For example, <code>shopt --set</code>  is better than <code>shopt -s</code>;  <code>test --file</code> is better than <code>test -f</code></li>
+</ul>
+</li>
+<li><strong>Arrays are first class</strong>
+<ul>
+<li>In particular, no silent splitting and joining, as happens with unquoted substitutions, <code>$@</code>, <code>echo</code> and <code>eval</code>, etc.</li>
+</ul>
+</li>
+<li>YSH has reference semantics in general, but <strong>value semantics</strong> for everything that shell does
+<ul>
+<li>Making copies of List</li>
+<li>Passing List as ARGV</li>
+<li>But for Python and JS stuff, you have <strong>reference semantics</strong></li>
+</ul>
+</li>
+<li>It's OK to make common things look pretty, even if they are slightly inconsistent
+<ul>
+<li><code>if is-main</code> is nicer than <code>if (_is_main())</code>, even though it conflates success/fail and true/false.  (It is also a builtin, so it doesn't have errexit pitfalls.)</li>
+</ul>
+</li>
+<li>Avoid syntax with confusing <strong>corner cases</strong> -- e.g. <a href="https://www.oilshell.org/blog/2016/10/28.html">What does ${####} Mean?</a> and <a href="Shell-WTFs.html">Shell WTFs</a></li>
+<li>Avoid adding syntax that will be used <strong>rarely</strong>.
+<ul>
+<li>Example: All of these are valid in YSH, and will be <strong>common</strong>: <code>--flag foo</code>, <code>--flag 'foo'</code>, <code>--flag $mystr</code>, <code>--flag=$mystr</code>, <code>--flag u'\n'</code>, etc.  But  <code>--flag=u''</code> is not allowed</li>
+</ul>
+</li>
+<li>Don't take on problems you can't solve correctly
+<ul>
+<li>a major example of this that we don't assume we know the syntax of external commands like <code>cp</code>, <code>ls</code>, etc.</li>
+<li>for both completion and linting</li>
+</ul>
+</li>
+<li>No implicit serialization / deserialization from typed data to strings
+<ul>
+<li>e.g. flags, env vars, or J8 notation</li>
+<li>Conversions are always explicit.   This is mainly because they always involve the possibility of <strong>errors</strong>, and we don't hide errors.</li>
+</ul>
+</li>
+<li>Don't be afraid to be <strong>low-level</strong>
+<ul>
+<li>For example, arguably a &quot;high level&quot; language would use some kind of <code>Decimal</code> number type, since that would match text and JSON.</li>
+<li>But we use double-precision floating point numbers, where <code>0.1 + 0.2 != 0.3</code>, etc.</li>
+<li>This is because doubles are familiar to low-level programmers.  We encourage learning base 2, and the details of floating point numbers -- they are essential low level concepts!</li>
+<li>In general, I like shell because it's an interesting mix of high level (short code) and low level (close to the system).  YSH preserves that flavor.</li>
+</ul>
+</li>
+</ul>
+<h2>OSH Principles</h2>
+<p>OSH is a &quot;cleaned up shell/bash&quot; and heavily constrained by compatibility.  But there are edge cases where we have to <strong>make choices</strong>.  The spec tests have uncovered dozens of cases where  existing shells disagree, so we have to make a choice!</p>
+<ul>
+<li><strong>Avoid complex &quot;line noise&quot; syntax</strong>.  We won't add more syntax that looks like <code>${x@P)</code>, <code>${x^^}</code>, <code>cat &lt;&lt;&lt; 'hi'</code>, or <code>exec 2&gt;&amp;-</code>.  It's too elaborate and unfamiliar.</li>
+<li>The <strong>Common Subset Principle</strong> -- In general, OSH shouldn't introduce incompatible semantics for the same syntax and be very compatible with its legacy shells. It might not run every last bash script. However, in those cases, you should be able to make small modifications to allow your script to run under both, OSH and bash. Most often these changes are to improve clarity.
+<ul>
+<li>Example: In bash, <code>echo X &gt; @(*.py)</code> means the same thing as <code>echo X &gt; '@(*.py)'</code> (yes really).  OSH disallows the former for clarity, but the latter is in the common subset of OSH and bash.</li>
+<li>Example: The meaning of <code>()</code> in <code>declare -A assoc=()</code>  is changed to obey the common subset principle.  It means empty assoc array rather than empty indexed array because the context is clear, and because in bash <code>declare -A dict</code> means something different.</li>
+</ul>
+</li>
+<li><strong>Static Parsing</strong>
+<ul>
+<li>Dynamic Parsing (parsing at runtime) Confuses Code and Data.</li>
+</ul>
+</li>
+<li>Consider <strong>Interactions</strong> Between Language Features (bash doesn't do this, e.g. extended globs)</li>
+<li>Minimize the <strong>combined OSH+YSH language size</strong> to the degree possible.
+<ul>
+<li>Where YSH duplicates functionality from OSH (like arithmetic), it has to be significantly better.</li>
+<li>This partly explains why we keep OSH string literals in YSH, and why bash <code>declare -a/-A</code> behave differently in YSH, and why <code>declare -i</code> isn't supported.</li>
+<li>It also explains some constraints on the syntax, i.e. that we only have a <code>ShCommand</code> lexer mode, and no <code>YshCommand</code> lexer mode</li>
+</ul>
+</li>
+<li><strong>Don't Silently Change What Code Means</strong>.  Instead choose a new syntax
+<ul>
+<li>Early on, I wanted to take over <code>set</code> for assignment (leaving all options for <code>shopt</code>.  But now it's <code>setvar</code>.  It was tempting to take it over, but a bad idea.</li>
+<li><code>cols</code> could have been <code>select</code>, but that rare feature was taken.</li>
+<li>An exception is <code>shopt -s simple_word_eval</code>, which does (silently) change the meaning of unquoted <code>$x</code>.  But most newcomers and even some long-time shell users are surprised by the splitting; that is, many shell scripts actually only operate correctly on names without spaces.  So in many cases this option will silently fix bugs, but will require adding an explicit split() where looping over unquoted variables.</li>
+</ul>
+</li>
+<li><strong>Local reasoning</strong> about code.  You shouldn't have to look at the top of the file constantly to figure out how code behaves.
+<ul>
+<li>Blocks like <code>shopt --set errexit { }</code> allow local reasoning, rather than setting the global permanently</li>
+<li><code>redefine_proc</code> prevents distant definitions from clobbering your code</li>
+<li>TODO: tag procs with <code>ysh:all</code> ?  <a href="https://github.com/oilshell/oil/issues/1147">issue 1147</a></li>
+</ul>
+</li>
+</ul>
+<p>Blog: <a href="http://www.oilshell.org/blog/2021/11/recent-progress.html#how-osh-is-designed-why-osh-isnt-bash">HOW OSH Is Designed / Why OSH Isn't Bash</a></p>
+<h2>Interchange Format / Protocol Design Principles</h2>
+<ul>
+<li>You should be able to express arbitrary byte strings.  Everything should be &quot;8-bit clean&quot; by default.</li>
+<li>UTF-8 is an optional (but common) layer on top.  (Ditto for other encodings.)</li>
+<li>You should be able to use existing Unix tools with new protocols.  (e.g. <code>grep</code> still works with &quot;J8 Lines&quot;.  In contrast, the <code>\0</code> delimited format of <code>find -print0</code> is doesn't work with <code>grep</code>.)
+<ul>
+<li>This is a <strong>narrow waist</strong> argument -- conforming to the waist enables <strong>code reuse</strong></li>
+</ul>
+</li>
+</ul>
+<p>(referring to: <a href="CSTR-Proposal.html">CSTR Proposal</a> and <a href="TSV2-Proposal.html">TSV2 Proposal</a>.  And the deferred <a href="Shellac-Protocol-Proposal.html">Shellac Protocol Proposal</a>, and <a href="Coprocess-Protocol-Proposal.html">Coprocess Protocol Proposal</a>)</p>
+<h2>Related</h2>
+<ul>
+<li>Avoid <a href="Shell-WTFs.html">Shell WTFs</a></li>
+<li><a href="Feature-Detection-is-Better-Than-Version-Detection.html">Feature Detection is Better Than Version Detection</a></li>
+</ul>
+  </body>
+</html>
+

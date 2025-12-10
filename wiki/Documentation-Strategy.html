@@ -1,0 +1,70 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Documentation Strategy</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Related: <a href="Oil-Language-Docs.html">Oil Language Docs</a></p>
+<h2>2020 Progress</h2>
+<ul>
+<li>Everything is plain Markdown files git!  woohoo!
+<ul>
+<li>Github renders them nicely, e.g. <a href="https://github.com/oilshell/oil/blob/master/doc/eggex.md">https://github.com/oilshell/oil/blob/master/doc/eggex.md</a></li>
+<li>But we also have our own renderings on the site: <a href="http://www.oilshell.org/release/latest/doc/eggex.html">http://www.oilshell.org/release/latest/doc/eggex.html</a></li>
+</ul>
+</li>
+<li>I open sourced all of the doc toolchain in <code>doctools/</code></li>
+<li>Lots of tasks left!
+<ul>
+<li>help builtin</li>
+<li>writing Python code to keep the source code and docs in sync</li>
+<li>&quot;advocacy&quot; and promotional docs.  See #<a href="http://www.oilshell.org/blog/tags.html?tag=blog-topics#blog-topics">blog-topics</a></li>
+<li>improving the man page (which should mostly be a stub pointing to help)</li>
+</ul>
+</li>
+</ul>
+<h2>2019 Notes Below</h2>
+<p>TODO:</p>
+<ul>
+<li>Document our strategy for writing good docs!</li>
+<li>Maybe: look at how Python / PHP, etc. do it.  People seem to really like PHP docs, which help them with a confusing language.</li>
+<li>Bash has lots of documentation (not all official); <a href="http://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html">Bash Reference Manual</a>, <a href="http://www.tldp.org/LDP/Bash-Beginners-Guide/html/index.html">Bash guide for beginners</a>, <a href="http://www.tldp.org/LDP/abs/html/index.html">Advanced Bash-Scripting Guide</a>, <a href="https://mywiki.wooledge.org/BashPitfalls">BashPitfalls</a>, <a href="https://devhints.io/bash">Bash Cheatsheet</a>.  - what should be done to incorporate those ideas?</li>
+</ul>
+<h3>Inputs</h3>
+<ul>
+<li>Human-written text - what formatting? - Markdown, rst, something else?</li>
+<li>builtin signatures from <code>osh/builtin.py</code>, etc.</li>
+<li>? ... Test cases ... ?</li>
+</ul>
+<h3>Outputs</h3>
+<ul>
+<li><code>help</code> builtin (following bash)</li>
+<li>HTML for the website</li>
+<li>man page (mdoc)   @msingle is working on this.</li>
+<li>Docstrings and flag description can be displayed in <em>completion</em> as well!</li>
+<li><a href="https://zealdocs.org/">Zeal</a>/<a href="https://kapeli.com/dash">Dash</a> (could be scraped from website)</li>
+</ul>
+<h3>Other</h3>
+<ul>
+<li>This wiki!  I like it for drafting material that may go into &quot;official&quot; docs.</li>
+<li>doc/osh-manual.md and doc/known-differences.md
+<ul>
+<li>These are not published anywhere yet.  Should have a script to dump them on the website for every release?</li>
+</ul>
+</li>
+</ul>
+<h3>Related</h3>
+<ul>
+<li>I use <code>build/doc.sh update-src-versions</code> on every release</li>
+<li>The top of <code>devtools/release.sh</code> shows the release process.  A version of <a href="http://www.oilshell.org/release/0.6.pre22/">this tree of HTML</a> is built every time.</li>
+</ul>
+<h3>Philosophy</h3>
+<ul>
+<li>... Have a single point of truth, but don't go overboard.  i.e. I think the Python project believes in &quot;separately-written docs&quot;?</li>
+</ul>
+  </body>
+</html>
+

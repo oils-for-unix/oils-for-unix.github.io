@@ -1,0 +1,98 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Coprocess Protocol V2</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>April 2021: This is OLD (2018). See <a href="Capers.html">Capers</a></p>
+<p>(Back to <a href="Shell-Autocompletion.html">Shell Autocompletion</a>)</p>
+<p>Related: <a href="Coprocess-Language-Support.html">Coprocess Language Support</a></p>
+<h3>Design Constraints</h3>
+<ul>
+<li>Command line tools written in any langauge should be convertible to coprocesses.</li>
+<li>The patches required to do this must be small and localized.
+<ul>
+<li>For example, we shouldn't require modifying every print statement in the program and its dependencies!</li>
+<li>There shouldn't be any special cases, e.g. for handling <code>stdin</code>, <code>stderr</code>, EOF, etc.</li>
+</ul>
+</li>
+</ul>
+<p>The initial <a href="Coprocess-Protocol-Proposal.html">Coprocess Protocol Proposal</a> would require too much modification to existing tools.  It was more like my 2012 projects <code>fly</code> and <code>xmap</code>.  That only handled command line tools that behaved in a particular way.</p>
+<h3>Observations</h3>
+<ul>
+<li>
+<p>We do not control every print statement in the program.</p>
+<ul>
+<li>Python interpreter prints stack traces to stderr.</li>
+<li>Most VMs, e.g. Python or the JVM, print their own messages to stderr in rare cases, e.g. in out of memory conditions.</li>
+<li>if you build with ASAN, this should work too.</li>
+<li>It would be annoying to change every single <code>print()</code> statement in a Python program to <code>print(msg, file=fcli_out)</code>.</li>
+</ul>
+</li>
+<li>
+<p>Just knowing sending stdin/stdout/stderr</p>
+</li>
+</ul>
+<p>Both of these should work, and they are <strong>different</strong>:</p>
+<pre><code>foo.py &lt; in.txt &gt;out.txt 2&gt;err.txt
+
+foo.py &lt; in.txt &gt;out-err.txt 2&gt;&amp;1
+</code></pre>
+<p>In the first case, the process is started with <strong>three</strong> files connected to its 3 descriptors.</p>
+<p>In the second case, the process is started with <strong>two</strong> files connected to its 3 descriptors.</p>
+<h3>Configuration for FCLI Binaries</h3>
+<ul>
+<li>concurrency policy</li>
+<li>env vars to pass -- all, none, or a specific list</li>
+<li>whether we should use descriptor passing or copying with named pipes (e.g. for pure Python 2 processes without
+recvmsg)
+<ul>
+<li>is there another protocol for JVM and node.js?  i.e. things without <code>dup2()</code>?  Or it sounds like you can do
+<code>setOut(...)</code></li>
+</ul>
+</li>
+<li>falling back to the batch client?  Does the user need the option to use redo-ifchange in batch mode?
+<ul>
+<li>the real binary lives in /usr/bin, and wrapper lives somewhere else on $PATH?  Like in ~/bin ?</li>
+</ul>
+</li>
+</ul>
+<h3>What Clients Look Like</h3>
+<h4>Clients for Shells Without FCLI Support</h4>
+<pre><code>#!/bin/sh
+exec fcli-invoke --fcli-socket /tmp/redoifchange -- redo-ifchange &quot;$@&quot;
+</code></pre>
+<h4>Oil Client</h4>
+<p>We can save the exec() of fcli-invoke.  Just build it in.  Maybe that should just be a builtin so it can behave both ways?</p>
+<h3>TODO</h3>
+<ul>
+<li>Signals?  If you Ctrl-C in the client process, can it kill the whole coprocess?</li>
+<li>Unexpected exit by server</li>
+<li>Process Management
+<ul>
+<li>Do we need a lock file to prevent concurrent requests to the pipe?
+<ul>
+<li>Each shell instance  could open its own?</li>
+</ul>
+</li>
+<li>What is the command to shut down a coprocess?
+<ul>
+<li>I think it should just be ~/fcli/ or something.  or ~/.local/ ?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Configuration for concurrency</li>
+</ul>
+<h3>Prototype</h3>
+<p>See https://github.com/oilshell/shell-protocols/tree/master/coprocess</p>
+<h3>Open Issues</h3>
+<ul>
+<li>Can JVM call dup2() ?   Can it <code>recvmsg()</code> a file descriptor?</li>
+</ul>
+  </body>
+</html>
+

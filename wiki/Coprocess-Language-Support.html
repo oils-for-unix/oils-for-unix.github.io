@@ -1,0 +1,36 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Coprocess Language Support</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Back to <a href="Coprocess-Protocol-V2.html">Coprocess Protocol V2</a></p>
+<ul>
+<li>C and C++ have everything we need -- <code>dup2()</code>, <code>recvmsg()</code></li>
+<li>Python
+<ul>
+<li>Python 2 has <code>dup2()</code> but <strong>not</strong> <code>recvmsg()</code></li>
+<li>Python 3 has both</li>
+</ul>
+</li>
+<li>R: probably need a C extension for <code>dup2()</code></li>
+<li>JVM: Jakub D did an experiment in Clojure (see #shell-completion thread on Zulip &quot;Closh&quot;).  <code>System.setOut</code> and <code>System.setErr</code> seem to work.
+<ul>
+<li>The JVM will prints its stack traces there.</li>
+</ul>
+</li>
+<li>node.js: maybe monkey patch <code>process.stdout</code> and <code>process.stderr</code>?</li>
+</ul>
+<h3>TODO</h3>
+<ul>
+<li>Go -- is it OK to use syscalls?</li>
+<li>Rust should be able to call libc ?</li>
+<li>Ruby, Perl, PHP, etc.</li>
+</ul>
+<p>Ruby can start slowly and there are many command line tools written with it, so this is a good use case.</p>
+  </body>
+</html>
+

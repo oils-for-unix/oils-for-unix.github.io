@@ -1,0 +1,151 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Why Use Oil?</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Related: <a href="Carrots.html">Carrots</a></p>
+<p>This is a <strong>DRAFT</strong>.  On the site:  <a href="http://www.oilshell.org/why.html">Why Use Oil?</a></p>
+<h2>Concise overview of oilshell features</h2>
+<p>A first, terse, plain-text version as starting point:</p>
+<p>(Came out of https://github.com/oilshell/oil/pull/1145#issuecomment-1138108066)</p>
+<pre><code># The Oilshell Feature List -- A Comparative Overview
+(Only single mentions where best applicable and comparing.)
+
+Features in comparison to contending shells
+
+  osh  --  The POSIX and bash compatible interpreter (**/bin/osh**).
+     starts fewer processes
+     (backend) interfaces for modern interactive features
+     ...
+
+  oil:upgrade  --  The mode that enables NEW features in osh:
+    native, typed expressions and real data structures* (not broken as in bash): const, var, setvar
+    ... : proc
+    robust shell I/O idioms*: read --line, read --all, write (and all taking --qsn)
+    reliable errexit (problems solved, enabled by defalt): try boolstatus* &lt;...&gt;
+    reliable error handling*: try {...} case $_status {...}
+  
+      *No side effect beyond occupying namespace, thus these are even active in plain osh mode by default,
+       and may only break in other shells if not shipping a fallback.
+  
+  oil:all  --  The final migration target (mode), same as the &quot;clean slate&quot; **/bin/oil** interpreter:
+    includes all features that oil:upgrade adds to legacy shell
+    disables some bits of shell syntax
+       Now &quot;@...&quot; always means splice, any legacy ext.glob @(...) must be changed to ,(...) 
+    deprecates some shell syntax
+      ...
+    discourages the use of
+      ...
+    
+
+
+Features in comparison to programming languages
+  
+  oil
+    exposes unix system abstractions directly, no unnecessary abstraction layers or verbose syntax
+    allows direct execution of any code or program
+    makes it simple to use all cpu cores
+    has more powerful and simpler loop constructs than Python: for i, key, value in (dict) {...}
+</code></pre>
+<p>Can consolidate the following into it:</p>
+<h2>Why Upgrade to OSH and Oil (2022) ?</h2>
+<p>A framing from: https://github.com/oilshell/oil/pull/1145</p>
+<h3>Fixed with Basic OSH -- you get it for free, with compatibility</h3>
+<ol>
+<li>Static Parsing enables better error messages and tools.  (TODO: color error messages)</li>
+<li>Fix common problems while retaining <strong>compatibiity with other shells</strong> -- <code>shopt --set strict:all</code>).  The &quot;runtime linter&quot;.</li>
+<li>Safely process used supplied-data (QSN and <code>shopt --unset unsafe_word_eval</code>)</li>
+</ol>
+<p>A large number of new Oil features: Python-like expressions, Eggex, named and typed arguments to procs, new builtins, ... (see below)</p>
+<h3>Fixed With a Seamless Upgrade with <code>oil:upgrade</code></h3>
+<ol start="4">
+<li>Eliminate Quoting Hell / !qefs / Simple Word Evaluation</li>
+<li>Reliable Error Handling (<code>command_sub_errexit</code>, <code>try</code> and more)</li>
+</ol>
+<p>Even more features unlocked (with <code>parse_paren</code>):  Ruby-like blocks for DSLs, which enables QTT / functions / coprocesses</p>
+<h3>Oil (<code>oil:all</code> and <code>bin/oil</code>)</h3>
+<ol start="6">
+<li>A clean shell-like language with almost no legacy!  We kept the good parts, got rid of the bad parts, and added useful new features.</li>
+</ol>
+<h2>Seven Features of Oil</h2>
+<p>Note that many of these are on by default.</p>
+<ol>
+<li>Assignment keywords (<code>var</code>, <code>const</code>, <code>setvar</code>) and Python-like expressions on typed data</li>
+<li>Egg Expressions for Statically Parsed and Composable Regexes -- <code>/ d+ /</code></li>
+<li>Ruby-like blocks and typed arguments for DSLs</li>
+<li>Procs have signatures and fixed scoping</li>
+<li>Test framework and argument parsing (TODO)</li>
+<li>QTT and Tabular Data (TODO)</li>
+<li>Functions and Coprocesses (TODO)</li>
+</ol>
+<h2>Older (moved to <a href="http://www.oilshell.org/why.html">Why Use Oil?</a>)</h2>
+<h3>For Users Who Want a Compatible Shell</h3>
+<ul>
+<li>Oil runs your existing POSIX shell scripts and bash scripts.  It doesn't fragment your codebase and contributors into distinct languages.</li>
+<li>Oil starts fewer processes than other shells (it's faster, while remaining compatible)</li>
+<li>If you're not ready to switch to Oil wholesale, you can use it as a <strong>dev tool</strong> that improves your existing shell scripts (run under bash or another shell)
+<ul>
+<li>More error messages due to static parsing (e.g. ble.sh benefitted from this)</li>
+<li>More precise error messages -- column info.</li>
+<li>Oil prevents programming errors (opt in with <code>shopt</code>)
+<ul>
+<li>Strict modes: <code>strict_argv</code>, <code>strict_tilde</code>, etc.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>For Users Who Want To Enhance Existing Shell Scripts</h3>
+<ul>
+<li>Oil fixes problems with shell I/O
+<ul>
+<li><code>read --line</code> and <code>read --all</code>
+<ul>
+<li>buffered I/O in addition to unbuffered (getline as opposed to read)</li>
+<li>read -r should be the default</li>
+<li>exit code, trailing new line corner cases</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Oil fixes problems with errexit</li>
+<li>Oil doesn't confuse flags and files (dashglob)</li>
+</ul>
+<h3>For Users Who want a New, Legacy-Free Shell Language</h3>
+<ul>
+<li>Expression mode, etc.</li>
+<li>Real Data Structures like arrays and associative arrays (that are not broken as in bash)</li>
+</ul>
+<h3>For programmers (e.g. in Python/JS) who have never used shell</h3>
+<ul>
+<li>Shell helps you understand Unix.  Don't abstract away the operating system behind portability layers you don't need.  Unix is already a portability layer over hardware -- in many applications, you don't need yet another one.</li>
+<li>Shell lets you use all your cores</li>
+<li>#shell-the-good-parts</li>
+</ul>
+<h3>For Users Who Only Want an Interactive Shell</h3>
+<ul>
+<li>Oil is a better foundation for an interactive shell
+<ul>
+<li>See posts tagged #interactive-shell</li>
+<li>You have a better language to build features</li>
+</ul>
+</li>
+</ul>
+<p>(But learning shell with save you time in the end; it's the best tool for many kinds of automation)</p>
+<h3>Because You Can Contribute To It</h3>
+<ul>
+<li>It's easy to modify
+<ul>
+<li>Written in a set of high-level DSLs, not low level C.  One of them is bog-standard Python.  The code is short, and you have convenient data structures.  You don't have to worry about memory management.</li>
+<li>It's the <strong>only</strong> shell that's statically typed.  Other shells are written in C, but dynamically typed with small integers and bit flags (e.g. see bash's word structure).  Oil uses MyPy and ASDL types, and we generate analogous code that adheres the C++ type system.</li>
+<li>Good continuous build infrastructure</li>
+</ul>
+</li>
+</ul>
+  </body>
+</html>
+

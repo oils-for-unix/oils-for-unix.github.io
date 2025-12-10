@@ -1,0 +1,154 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>CLAP Grammar Proposal</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<h1>CLAP grammar (Command Line Argument Parse)</h1>
+<p><strong>EARLY DRAFT STATE</strong></p>
+<h2>Introduction</h2>
+<p>A significant part of what makes up completion functions is just lists of options with their descriptions. This duplicates the content of <code>--help</code> output and man pages. It needs to be maintained separately for bash, zsh, fish etc and is in a form that is specific to completion - it can't be used for syntax-highlighting, correction, look ahead prompts or whatever other features someone might imagine. It would also be better for this information to be maintained as part of the upstream project to avoid inaccuracies due to version skew.</p>
+<p>Where upstream projects do include completion functions, they sometimes write them for bash and only support zsh via the <code>bashcompinit</code> compatibility layer. This dumbs down zsh completion to the level of bash. Shell developers should have the freedom to innovate and come up with inventive new interactive features.</p>
+<p>Upstream projects are increasingly coming up with ways to provide shell completions via special options such as in the recent case of clang. The trouble with this is that every project handles this in a slightly different way making it a mess to configure them all. And often solutions are developed by people who don't have a lot of experience with completion or who make bash-centric assumptions.</p>
+<p>The idea here is to define a DSL for the description of the arguments, options and structure of command-line arguments for a particular command. These could be placed in text files under <code>/usr/share</code> and used by any shell, shell plugin or other program with an interest in them.</p>
+<h2>Format</h2>
+<p>We want to specify a parse grammar but it needs to be augmented with additional information like descriptions and tags (which specify what is to be completed). We want it to be concise but powerful enough to handle nearly everything we might encounter on a command-line. While the details below might hint otherwise, it should not be necessary for descriptions to be a dense forest of regular expressions: most arguments are bounded by shell word boundaries and simple delimiters.</p>
+<p>Parsing goes left-right up to the cursor. And the set of possible states at this stage indicates things to be completed. Parsing should also proceed to the right of the cursor which might further limit the sets, mainly by manipulating sentinel values.</p>
+<p>The requirements are in some ways quite different to typical parsing problems such as for a compiler. We don't need all the tokens. An ambiguous parse is not a problem: for completion we have, by definition, an incomplete line. This rules out a PEG parser. A more likely approach is a initial level of recursion but bottom-up style pattern matching at a lower level.</p>
+<pre><code>{ … } blocks of alternatives (no alternation operator needed)
+&lt;…&gt;   delimits tags these correspond to groups of things that might be completed
+[…]   descriptions and headings
+/…/   regex for consumed characters
+&amp;/…/  lookahead
+!/…/  negative lookahead
+\x…x  regex with alternate delimiter
+(…)   sentinel conditions
+=&gt;    concatenation (continuation in next argument)
+-&gt;    concatenation (splitting the current argument)
+$     named sequence (like &lt;…&gt; in BNF), can be scoped
+@     macro or function invocation, can also be scoped
+=     assign a sequence to a name, newline terminates but blocks and trailing operators allow continuation
+</code></pre>
+<p>Alternation is the default within <code>{…}</code> blocks, each alternative can only be passed once unless followed by <code>(*)</code>.</p>
+<p>The following is a sort of example to demonstrate usage</p>
+<pre><code>CLAP 0.0                              # declare grammar specification version
+command cmd = $args                   # define grammar for a command's arguments
+stdin cmd = $in                       # define grammar for redirection in
+stdout cmd = $out                     # define grammar for redirection out
+stderr cmd = $err                     # define grammar for stderr redirection
+envar VAR = $var                      # define grammar for environment variable value
+
+args = $opts =&gt; $arg1 =&gt; $arg2
+
+opts = {                              # define a named sequence
+  &lt;options&gt;:[option]
+  @optargs()
+  /-./                                # match and ignore unknown options
+  /--.+/
+  -f [option description]             # short option with description
+  { -l --long } [synonyms]
+  -r [repeatable option] (*)          # repeatable option
+  -v [verbose]          (*3)          # repeatable with maximum
+  -x [specify argument] (?0arg) =&gt; {  # option taking argument
+    &lt;users&gt;:[user] /.*/               # defer to shell's user completion
+  }
+  -y [desc] (!a)                      # option excluded by sentinel
+  { -o --opt } $sep =&gt;
+  &lt;options/actions&gt;:[action option] (+a) # subgroup incrementing a sentinel
+  --do
+  --undo
+} (*)
+
+arg1 = {
+  @lowercase()                        # predefined function for mapping lower to upper
+  &lt;arg&gt;:[argument]:!&quot;$arg --list-args&quot;  # shell-command to list arguments:descriptions
+}
+
+arg2 = {
+  @partial(_)                         # predefined function so sn_ca matches snake_case
+  snake_case
+  joined_words
+}
+
+desc[de_DE] = &quot;Hilfe ausgeben&quot;        # TBD: mapping of localized descriptions
+import _file_                        # TBD: some form of inclusion, or import mechanism along with namespacing
+
+It therefore will need some sort of macro layer on top so that you can specify the specific form of the parser.
+### Sentinels
+This is the basis for specifying mutual exclusion between options.
+* `*` – allow many
+* `^` - exclusive (allow many but not duplicates)
+* `^list` - exclusive, sharing a dedup list between places.
+* `+o` – increment o counter
+* `-debug` – decrement debug counter
+* ?opt – require opt counter &gt;0
+* !opt – require opt counter &lt;=0
+* 0opt – zero counter
+* 1opt – set counter
+When the parser backtracks, it needs to revert changes to the counts. This is mainly notable because it doesn't happen with _regex_arguments. Finding a matching point should not prevent backtracking: if it is ambiguous we complete all cases.
+
+### Tags and Descriptions
+
+Common tags might be predefined, e.g.
+* options
+* processes
+* files
+* directories
+* users
+* hosts
+For common tags, you can elide the description. We'll need ways to provide options to certain tags like file extensions to be completed. Tags also come with predefined regexes for characters to be consumed.
+
+The grammar files also have the potential to allow for localization of descriptions.
+Zsh has conventions on how to represent default values and units. These could have explicit syntax.
+May also be useful to be able to tag the key verb in per-match descriptions. Sorting matches by it could be useful.
+
+### Macros: TBD
+
+Where common option parsing occurs, the same sections of grammar will end up being repeated. Applying the DRY principle and also a desire to keep specifications minimal looking. We need a way to reduce this. Some form of macros could serve this purpose.
+
+@optargs, loosely would be defined as
+/-.|--[^=$]*(=|$)/ (1arg)
+That sets arg if we've got 
+parameters could vary this for different parser styles.
+</code></pre>
+<p>Zsh's <code>_arguments</code> handles the following command-line parser variantions, including:</p>
+<ul>
+<li>-- terminates options (or not)</li>
+<li>non-option argument terminates options (or not)</li>
+<li>option packing: -abc for -a -b -c and -abc arg forms</li>
+<li>-a arg -a=arg --aa arg --aa=arg</li>
+<li>
+<ul>
+<li>options</li>
+</ul>
+</li>
+<li>optional arguments</li>
+<li>multiple arguments to an option</li>
+</ul>
+<h3>Predefined Macros</h3>
+<p>The following affect matching rules:</p>
+<ul>
+<li>@quote(start,protected[,end])</li>
+<li>@shell_quote() - nested level of shell quoting</li>
+<li>@packed_options() - allow -abc to match -a -b -c</li>
+<li>@uppercase() - lowercase matching uppercase</li>
+<li>@lowercase() - uppercase matching lowercase</li>
+<li>@map() - character equivalence classes</li>
+<li>@partial() -  e.g. /u/l/b completing to /usr/local/bin</li>
+<li>@initial() - initial characters that match nothing, e.g. initial zeroes on a number</li>
+<li>@camel()   - partial matching of camel case (or some generalisation there-of)</li>
+</ul>
+<p>Common pattern constructs. E.g ip subcommands can be abbreviated. So for &quot;table&quot;, we want ta(b(le?)?)?. Perhaps we can define a macro @abbrev(ta,ble) for this.</p>
+<h3>TBD: Aliases</h3>
+<p>Aliases are both matches and, when encountered, are expanded when matching the line. backslash escapes like \a might use this along with subcommand aliases. Not yet sure of a syntax.</p>
+<h3>Regular Expressions</h3>
+<p>^ matches the beginning of a shell argument, $ the end.
+An extension for matching characters from $IFS would be useful.</p>
+<h2>Plan</h2>
+<p>The intention is to implement an initial prototype. In the short term, YAML can be used for description which allows the details and functionality to be refined before fixing the syntax of the DSL. The prototype would be in a form that would be usable as a plugin to existing shells or perhaps a Shellac server. Direct integration into other shells would only come later (and would need the code to be ported/rewritten in C or whatever).</p>
+  </body>
+</html>
+

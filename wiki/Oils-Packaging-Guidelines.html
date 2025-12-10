@@ -1,0 +1,45 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Oils Packaging Guidelines</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<h2>Tips and Naming</h2>
+<ul>
+<li>The latest release is at: <a href="https://www.oilshell.org/release/latest/">https://www.oilshell.org/release/latest/</a></li>
+<li>Please call the package <code>oils-for-unix</code>
+<ul>
+<li>There is no more &quot;oil&quot;.  The project is called <strong>Oils</strong>, or &quot;Oils for Unix&quot;</li>
+<li><a href="https://www.oilshell.org/blog/2023/03/rename.html">Reasons for the Big Renaming to Oils, OSH, and YSH</a> (March 2023)</li>
+</ul>
+</li>
+<li>Invoking <code>./install _bin/cxx-opt-sh/oils-for-unix</code> at the root of source tree will install the executable <code>oils-for-unix</code>.</li>
+<li>It will also install symlinks <code>osh</code> and <code>ysh</code> to that executable, in the style of <code>busybox</code>.
+<ul>
+<li><code>osh</code> is very compatible with POSIX sh and bash, while <code>ysh</code> flips some switches to make it a coherent new language.</li>
+</ul>
+</li>
+<li>Description: <em>Oils is a Unix shell with JSON-compatible structured data.  It's our upgrade path from bash to a better language and runtime.</em></li>
+<li>Longer Description:
+<ul>
+<li><code>bin/osh</code> runs POSIX shell scripts and many bash scripts.  <code>bin/ysh</code> is an improved shell language.</li>
+</ul>
+</li>
+</ul>
+<h2>Help on the Build System</h2>
+<p>See <a href="https://oils.pub/release/latest/doc/help-mirror.html">https://oils.pub/release/latest/doc/help-mirror.html</a></p>
+<h2>2025-04 - Version 0.29.0 Update: The <code>oil-$VERSION</code> tarball was renamed <code>oils-ref-$VERSION</code></h2>
+<p>The recommended tarball is <code>oils-for-unix-$VERSION</code>, <strong>not</strong> <code>oil-$VERSION</code></p>
+<p>Some people were using the old <code>oil</code> tarball, which is obsolete (as of 2024)</p>
+<p><code>oils-ref</code> should <strong>not</strong> be packaged.  It is for people who want to verify that Oils has an &quot;executable spec&quot; that runs under CPython.  It is not meant to be used.</p>
+<h2>Related</h2>
+<ul>
+<li><a href="Oils-Deployments.html">Oils Deployments</a></li>
+<li><a href="Oils-Packaging-Tips.html">Oils Packaging Tips</a> - Add tips here!</li>
+</ul>
+  </body>
+</html>
+

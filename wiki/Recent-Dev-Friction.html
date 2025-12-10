@@ -1,0 +1,55 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Recent Dev Friction</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Back to <a href="Where-Contributors-Have-Problems.html">Where Contributors Have Problems</a></p>
+<p>Summarizing some of <a href="https://oilshell.zulipchat.com/#narrow/stream/121539-oil-dev/topic/Dev.20Friction.20.2F.20Smells">#oil-dev &gt; Dev Friction / Smells</a></p>
+<h2>2023-04</h2>
+<h3>Some global constants are in weird places</h3>
+<p>To do the C++ translation, we moved some constants from their natural place to say <code>frontend/consts.py</code> or <code>frontend/flag_def.py</code>.  I would like to move them back at some point.</p>
+<p>(The translation involves a lot of code generation: these files have counterparts <code>frontend/consts_gen.py</code> and <code>frontend/flag_gen.py</code>.)</p>
+<h3>RuntimeError exception swallowed at the top level</h3>
+<p>Came up while implementing <code>compgen -A builtin</code> with Chris.</p>
+<p>I removed the <code>except:</code>, so you can more easily see a stack trace from the Python interpreter.</p>
+<h3>Inverted Python import from <code>asdl/</code> -&gt; <code>core/</code></h3>
+<p>This caused a Python traceback due to a circular import during the &quot;big parser refactoring&quot;.</p>
+<p>Solution: <strong>duplicate</strong> a small <code>log()</code> function in <code>asdl/</code>.</p>
+<p>The reason it's an inverted dependency is that ASDL is a tool that operates on the OSH interpreter, which includes <code>core/</code>.  So it shouldn't import that code too.</p>
+<p>Some advice: Run the type checker and unit tests <strong>very often</strong> during refactoring.  I generally do it multiple times a minute.  This way I avoid building on top of a bad state.</p>
+<h3>Spec Test Flakiness on Local Machine</h3>
+<p>The spec tests start a ton of processes in parallel.  The work pretty reliably in the CI, but on my local machine, I got</p>
+<pre><code>__ glob
+__ here-doc
+__ if_
+__ interactive
+
+[1]+  Stopped                 test/spec.sh osh-all
+andy@lenny:~/git/oilshell/oil$
+</code></pre>
+<p>There are random stoppages.</p>
+<p>Hilariously, this appears to be longstanding bug / race condition in shell job control in some shells, which we probably also have:  https://github.com/oilshell/oil/issues/330 -- bug going back to 2019!</p>
+<p>The issue is probably that when a child process is not in the foreground, and it tries to write to the terminal, the kernel will send it SIGTTIN or SIGTTOU.</p>
+<p>This is an extremely difficult to debug, and we need help!  There should be a better way of deterministically reproducing it.</p>
+<p>In practice, it's not a big blocker, because I just run single spec tests on my machine serially, and then rely on the CI to run the whole suite.</p>
+<h3><code>build/py.sh minimal</code> left stale <code>.so</code> files from Python extensions</h3>
+<p>We have this split between <code>build/py.sh all</code> (creates <code>.so</code> files) and <code>build/py.sh minimal</code> which I should probably get rid of.  The idea was to let people get started quickly while building less, but it can cause more confusion than it's worth.  See <a href="Contributing.html">Contributing</a>.</p>
+<h3>mycpp got confused about a local variable <code>loc</code> vs. module name <code>loc</code></h3>
+<p>It generated the wrong code, and this resulted in a C++ compile error.</p>
+<p>The workaround was to rename the variable to <code>blame_loc</code>.</p>
+<p>This should ideally be fixed, but realistically it's hard given the architecture of mycpp, and how we build on top of MyPy.</p>
+<p>Though <a href="https://www.oilshell.org/blog/2023/03/roadmap.html#appendix-recent-tool-improvements">mycpp is getting better</a>, and it would be nice to have someone to fix it up a bit.  It's a good intro to compilers.</p>
+<h3>Most shell scripts (&quot;task files&quot;) in the repo don't have help (can be hard to use)</h3>
+<p>There are A LOT of shell scripts that highly automate our dev process.  See the end of <a href="Where-Contributors-Have-Problems.html">Where Contributors Have Problems</a>.</p>
+<p>But they don't have help, and they use a somewhat unfriendly <code>&quot;$@&quot;</code> pattern.</p>
+<p>Chris fixed one of them, but it would be nice to fix all of them.</p>
+<p>Ironically, this is a deficiency of shell that we should fix in OSH and YSH!!!   We can use help!</p>
+<p>So for now, you have to read the comments at the top of the file.  I always have an editor and a terminal open <strong>side by side</strong> for this reason.</p>
+<p>Or use the hints in the web UI for <a href="http://travis-ci.oilshell.org/github-jobs/">http://travis-ci.oilshell.org/github-jobs/</a>.</p>
+  </body>
+</html>
+

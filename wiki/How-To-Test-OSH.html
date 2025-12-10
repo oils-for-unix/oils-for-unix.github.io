@@ -1,0 +1,103 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>How To Test OSH</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>If anything on this page is unclear, or you can't get it to work, feel free to send feedback on Github or start a thread on <a href="https://oilshell.zulipchat.com/">oilshell.zulipchat.com</a> (log in with Github).  More: <a href="Where-To-Send-Feedback.html">Where To Send Feedback</a>.</p>
+<p>Also, feel free to edit the page with tips.</p>
+<p>It would be great to add more scripts to <a href="Shell-Programs-That-Run-Under-OSH.html">Shell Programs That Run Under OSH</a>.</p>
+<p>Related: <a href="What-Is-Expected-to-Run-Under-OSH.html">What Is Expected to Run Under OSH</a></p>
+<h2>Installing</h2>
+<ul>
+<li>For the C++ version (<code>oils-for-unix</code>), run <code>./configure</code>, <code>_build/oils.sh</code>, <code>sudo ./install</code>.  See <a href="https://www.oilshell.org/release/latest/doc/INSTALL.html">INSTALL.txt</a> in the tarball.</li>
+</ul>
+<h2>Notes</h2>
+<ul>
+<li><code>osh</code> behaves just like <code>/bin/bash</code>:
+<ul>
+<li><code>osh -c 'echo hi'</code></li>
+<li><code>osh myscript.sh</code></li>
+<li>Or <code>source myprog.sh</code> within OSH.</li>
+<li>etc.</li>
+</ul>
+</li>
+<li>The startup file is <code>~/.config/oils/oshrc</code>
+<ul>
+<li>Make an <code>~/.oshrc</code> symlink if that gets annoying to type.</li>
+</ul>
+</li>
+<li>Our temporary fork of the bash-completion project has some required features: https://github.com/oilshell/bash-completion
+<ul>
+<li>Check out branch <code>dev/osh-release-0.6.pre15</code></li>
+<li>I also had to fork git-completion.bash and patch it.  Example: <a href="https://github.com/oilshell/oil/commit/565e04b8dc37df930ab106f1a21805d5f25f5a83">Patch git completion to use compopt +o nospace</a></li>
+</ul>
+</li>
+</ul>
+<h3>Feel free to add notes here</h3>
+<ul>
+<li>Tips to get a script to work?</li>
+</ul>
+<h2>Channels for Feedback</h2>
+<ul>
+<li><a href="https://github.com/oilshell/oil/issues">File issues on Github</a></li>
+<li><a href="https://oilshell.zulipchat.com/">oilshell.zulipchat.com</a> (log in with Github)
+<ul>
+<li>Feel free to post a message to <code>#oil-discuss</code> if a script you use works under OSH!  It doesn't have to be a bug report :-)</li>
+</ul>
+</li>
+</ul>
+<h2>Other Ways To Help</h2>
+<ul>
+<li>Write <strong>failing</strong> <a href="Spec-Tests.html">Spec Tests</a>!  This is often more than half the work
+<ul>
+<li>e.g. <code>spec/nix-idioms.test.sh</code>, <code>spec/ble-idioms.test.sh</code></li>
+</ul>
+</li>
+<li>Improve error messages
+<ul>
+<li>Add a number like <code>OILS-ERR-300</code></li>
+<li>Then write <strong>hints</strong> and <strong>actions</strong> associated with the error in <a href="https://www.oilshell.org/release/latest/doc/error-catalog.html">Oils Error Catalog, With Hints</a></li>
+</ul>
+</li>
+</ul>
+<h2>Useful Features for Testing</h2>
+<p>(Some of these might only work in Python?)</p>
+<p>(1) Run <code>osh</code> with <code>OSH_HIJACK_SHEBANG=&lt;shell&gt;</code></p>
+<p>Example:</p>
+<pre><code>OSH_HIJACK_SHEBANG=$(which osh) osh -c 'echo hi; ./myscript.sh'
+
+# Now myscript.sh will be excuted with OSH if its shebang looks like #!/bin/sh or #!/bin/bash.
+</code></pre>
+<p>(2) Run OSH with <code>--debug-file FIFO</code>.  The argument is a file to write log messages to.  It's useful to make it a FIFO / named pipe.</p>
+<p>In tmux, I open up a shell with <code>--debug-file tmp/debug</code>  on the LEFT, and a shell that cats the debug stream on the RIGHT.</p>
+<p>Example:</p>
+<pre><code>$ mkfifo _tmp/debug  # named pipe
+
+$ osh --debug-file _tmp/debug    # do this on the LEFT.  
+                                 # You can also set -x and PS4='+$LINENO '
+                                 # Type commands here like 'source testdata/completion/git'.
+$ cat _tmp/debug                 # do this on the RIGHT.
+</code></pre>
+<p>Also see <a href="Debugging-Completion-Scripts.html">Debugging Completion Scripts</a></p>
+<h3>My oshrc file</h3>
+<pre><code>PS1='[osh] \h \w\$ '  # so I know I'm running OSH
+
+oil_repo=~/git/oilshell/oil
+
+# Load git completion plugin.
+. $oil_repo/testdata/completion/git
+
+# Load my bashrc, which I have patched.  I use the absence of $BASH_VERSION to test for OSH.
+. ~/.bashrc
+
+</code></pre>
+<p>The <code>.bashrc</code> loads my own custom completions, which fall back on the temporary fork of bash-completion (URL and branch above).  Example:</p>
+<pre><code>. ~/git/oilshell/bash-completion/osh_completion` # this script is a modified version of bash_completion
+</code></pre>
+  </body>
+</html>
+

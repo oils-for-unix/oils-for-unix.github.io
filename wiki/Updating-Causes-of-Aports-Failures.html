@@ -1,0 +1,71 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Updating Causes of Aports Failures</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>I maintain the master list of root causes for <code>regtest/aports</code> failures at:</p>
+<ul>
+<li><a href="https://op.oils.pub/aports-build/published.html">https://op.oils.pub/aports-build/published.html</a></li>
+</ul>
+<p>How do you update causes?  This doc describes how.</p>
+<h2>Updating the Source</h2>
+<p>(Refer to <a href="https://github.com/oils-for-unix/oils/commit/2f3030a7e9523cb0c2cd0552136368e8761ff113"><strong>this commit</strong></a> as an example)</p>
+<p>First update <a href="https://github.com/oils-for-unix/oils/blob/master/regtest/aports/cause.awk">regtest/aports/cause.awk</a>.</p>
+<p>For example, you can associate bug <code>#2339</code> with with a string, using this statement:</p>
+<pre><code>patterns[&quot;#2339&quot;] = &quot;requires a signal or hook name&quot;
+</code></pre>
+<p>This will &quot;grep&quot; each package build log for a string.  If the string appears, then the package failure is assigned this root cause.</p>
+<h3>Test Locally</h3>
+<p>Suppose you built packages with <code>aports-run.sh</code>.  Then you will have <code>_tmp/aports-report/$APORTS_EPOCH</code> locally, and you can test it like this:</p>
+<pre><code> $ regtest/aports-html.sh write-all-reports _tmp/aports-report/2025-08-07-fix/
+</code></pre>
+<p>An even faster way:</p>
+<pre><code> $ regtest/aports-html.sh merge-diffs _tmp/aports-report/2025-08-07-fix/
+</code></pre>
+<h3>Retrieve Latest Results for Testing</h3>
+<p>But most people will <strong>not</strong> have run a package build locally.  Then you <strong>don't</strong> have <code>_tmp/aports-report/$APORTS_EPOCH</code></p>
+<p>In this case, you will <strong>sync</strong> results from the server, <strong>extract</strong> them, and <strong>re-run</strong> the report:</p>
+<hr />
+<p>First change <code>EDITING_APORTS_EPOCH</code> in <code>regtest/aports-html.sh</code> to something like <code>2025-08-26-ifs.wwz</code></p>
+<p>Then sync this old report from the <code>op.oils.pub</code> web server:</p>
+<pre><code>$ regtest/aports-html.sh sync-old-wwz  # 2025-08-26-ifs.wwz is optional
+</code></pre>
+<p>Then extract it to a new &quot;epoch&quot;:</p>
+<pre><code>$ regtest/aports-html.sh extract-old-wwz 2025-09-06-edit
+</code></pre>
+<p>Then re-generate HTML with <strong>one</strong> of these commands:</p>
+<pre><code>$ regtest/aports-html.sh write-all-reports _tmp/aports-report/2025-09-06-edit
+$ regtest/aports-html.sh write-disagree-reports _tmp/aports-report/2025-09-06-edit
+</code></pre>
+<p>That is, <code>write-disagree-reports</code> is for <strong>partial</strong> runs.</p>
+<p>You can now iterate on <code>cause.awk</code>, generating new HTML.</p>
+<p>If you quickly want to test out your pattern, you can manually run grep to test it out. For example:</p>
+<pre><code class="language-bash">$ cat _tmp/aports-report/2025-10-27-edit/disagree-2025-10-15-main/osh-as-sh/log/mdev-conf.log.txt \
+| grep -e &quot;readlink disk/by-label/EFI\x20System&quot; 
+grep: warning: stray \ before x # this pattern contains a mistake
+$ cat _tmp/aports-report/2025-10-27-edit/disagree-2025-10-15-main/osh-as-sh/log/mdev-conf.log.txt \
+| grep -e &quot;readlink disk/by-label/EFI&quot; 
+Executing command [ readlink disk/by-label/EFI\x20System ] # this pattern works
+</code></pre>
+<h3>Redeploy</h3>
+<p>Edit the function <code>regtest/aports-html.sh published-html</code> to include a link to <code>2025-09-06-edit</code>.</p>
+<p>Then do:</p>
+<pre><code>$ regtest/aports-html.sh make-wwz _tmp/aports-report/2025-09-06-edit  # creates .wwz file
+
+$ regtest/aports-html.sh deploy-wwz-op _tmp/aports-report/2025-09-06-edit.wwz  # upload it
+</code></pre>
+<p>Now look at:</p>
+<ul>
+<li><a href="https://op.oils.pub/aports-build/published.html">https://op.oils.pub/aports-build/published.html</a></li>
+</ul>
+<h2>Related</h2>
+<ul>
+<li><a href="Tips-on-Reducing-Bugs-to-Small-Test-Cases.html">Tips on Reducing Bugs to Small Test Cases</a></li>
+</ul>
+  </body>
+</html>
+

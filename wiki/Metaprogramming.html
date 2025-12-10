@@ -1,0 +1,276 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Metaprogramming</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Papers:</p>
+<ul>
+<li><a href="https://scholar.google.com/scholar?cluster=536362594647526984&amp;hl=en&amp;as_sdt=0,5&amp;sciodt=0,5">A Survey of Metaprogramming Languages</a> (2019)</li>
+<li><a href="https://scholar.google.com/scholar?cluster=1468233933634205183&amp;hl=en&amp;as_sdt=0,5&amp;sciodt=0,5">Taxonomy of the fundamental concepts of metaprogramming</a> (2008)</li>
+</ul>
+<hr />
+<p>Idea: Use &quot;Lisp-like AST metaprogramming, but with Syntax&quot;.</p>
+<ul>
+<li>
+<p>Scheme: <code>,foo</code> is <code>(unquote foo)</code>, <code>,@foo</code> is unquote-splicing, <code> `(a b)</code> is quasiquote</p>
+</li>
+<li>
+<p>Clojure: <code>~foo</code> is <code>(unquote foo)</code></p>
+</li>
+<li>
+<p>Python-like languages with metaprogramming (TODO: transcribe examples)</p>
+<ul>
+<li><a href="Mython%7Chttp://mython.org/.html">Mython|http://mython.org/</a> -- and the associated Basil framework.  Some of this ended up in PyPy!</li>
+<li><a href="Converge-Guide-to-Compile-Time-Metaprogramming%7Chttp://convergepl.org/documentation/2.0/ctmp/.html">Converge Guide to Compile-Time Metaprogramming|http://convergepl.org/documentation/2.0/ctmp/</a> -- uses <code>$&lt;&lt;&gt;&gt;</code> and <code>[| x |]</code></li>
+</ul>
+</li>
+<li>
+<p>Julia --</p>
+<ul>
+<li><code>:(expr)</code> or <code>quote/end</code> for quotation</li>
+<li><code>$var</code> for interpolation</li>
+<li><code>macro sayhello() ... end</code> for macro definition</li>
+<li><code>@sayhello()</code> for macro invocation</li>
+<li>http://docs.julialang.org/en/stable/manual/metaprogramming/</li>
+<li>https://en.wikibooks.org/wiki/Introducing_Julia/Metaprogramming</li>
+<li>LMS-like technique in Julia: <a href="http://scattered-thoughts.net/blog/2016/10/11/a-practical-relational-query-compiler-in-500-lines/">A practical relational query compiler in 500 lines of code</a></li>
+</ul>
+</li>
+<li>
+<p>Elixir metaprogramming uses <code>quote/end</code> for quotation, and <code>unquote</code> for interpolation. (In fact the entire Elixir language appears to be done with AST metaprogramming, since it's on top of Erlang.)</p>
+<ul>
+<li><code>defmacro</code> for macros, arguments unevaluated</li>
+<li>Monkey language macro system is based on Elixir's system:
+<ul>
+<li><a href="https://interpreterbook.com/lost/%7Chttps://interpreterbook.com/lost/.html">https://interpreterbook.com/lost/|https://interpreterbook.com/lost/</a></li>
+<li><code>quote</code>, <code>unquote</code>, <code>macro() { }</code>, and <code>mymacro()</code></li>
+<li>macro invocation isn't distinguished from function call -- walk the AST and
+use a Go dynamic type check for the <code>object.Macro</code> type</li>
+<li>requires an AST walker because you have to do multiple walks:
+<ul>
+<li>search for <code>unquote()</code> within unevaluated AST subtrees</li>
+<li>define macros</li>
+<li>expand macros</li>
+</ul>
+</li>
+<li>difficulties
+<ul>
+<li>error handling (skipped over, exceptions would be useful here)</li>
+<li>debugging</li>
+<li>modifying token positions -- <a href="Lossless-Syntax-Tree-Pattern.html">Lossless Syntax Tree Pattern</a></li>
+</ul>
+</li>
+<li>limitations:
+<ul>
+<li>what about lexical modification?  like <code>c=n; echo -e &quot;\$$c&quot;</code>.  Need <code>eval(string, ctx)</code> too?</li>
+<li>statements vs. expressions: <em>Currently, we only allow passing expressions to quote and unquote. One consequence of that is that we can't use a <code>return</code> statement or a <code>let</code> statement as an argument in a <code>quote()</code> call, for example. The parser won't let us, simply because arguments in call expression can only be of type <code>ast.Expression</code>.</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="scalameta.org%7Chttp://scalameta.org/.html">scalameta.org|http://scalameta.org/</a> -- q&quot;&quot; for quotation, <code>$var</code> for interpolation.</p>
+</li>
+<li>
+<p>R metaprogramming -- everything is quoted implicitly because it's lazily evaluated</p>
+<ul>
+<li><code>substitute</code>, <code>deparse</code>, <code>eval</code>, etc.  Need to look at examples.</li>
+<li>R is unique in that has lazy evaluation?  So everything can be metaprogrammed before using it?
+<ul>
+<li>macros are just functions?  what about scope?</li>
+</ul>
+</li>
+<li><a href="Non-standard-evaluation%7Chttp://adv-r.had.co.nz/Computing-on-the-language.html.html">Non-standard evaluation|http://adv-r.had.co.nz/Computing-on-the-language.html</a> by Hadley Wickham</li>
+<li><a href="Oil-and-the-R-Language.html">Oil and the R Language</a></li>
+<li><a href="Programming-with-dplyr%7Chttps://cran.r-project.org/web/packages/dplyr/vignettes/programming.html.html">Programming with dplyr|https://cran.r-project.org/web/packages/dplyr/vignettes/programming.html</a>
+<ul>
+<li><em>quo() returns a quosure, which is a special type of formula</em></li>
+<li><em>enquo() uses some dark magic to look at the argument, see what the user typed, and return that value as a quosure.</em></li>
+<li><em>If you’re familiar with quote() and substitute() in base R, quo() is equivalent to quote() and enquo() is equivalent to substitute().)</em></li>
+<li><em>we quote the variable with quo(), then unquoting it in the dplyr call with !!. Notice that we can unquote anywhere inside a complicated expression.</em></li>
+<li><em>Use quos() to capture all the <code>...</code> as a list of formulas.</em></li>
+<li><em>Use <code>!!!</code> instead of <code>!!</code> to splice the arguments into group_by().</em></li>
+<li><em>Automatic quoting makes dplyr very convenient for interactive use. But if you want to program with dplyr, you need some way to refer to variables indirectly. The solution to this problem is quasiquotation, which allows you to evaluate directly inside an expression that is otherwise quoted.</em></li>
+<li><em>The first important operation is the basic unquote, which comes in a functional form, <code>UQ()</code>, and as syntactic-sugar, <code>!!</code></em></li>
+<li><em>Its functional form is <code>UQS()</code> and the syntactic shortcut is <code>!!!</code></em></li>
+<li><em>The final unquote operation is setting argument names. You’ve seen one way to do that above, but you can also use the definition operator := instead of =. := supports unquoting on both the LHS and the RHS.</em></li>
+</ul>
+</li>
+<li>[Tidy evaluation, most common actions|https://edwinth.github.io/blog/dplyr-recipes/](Tidy-evaluation -most-common-actions|https://edwinth.github.io/blog/dplyr-recipes/.html)</li>
+<li>[Non-standard evaluation, how tidy eval builds on base R|https://edwinth.github.io/blog/nse/](Non-standard-evaluation -how-tidy-eval-builds-on-base-R|https://edwinth.github.io/blog/nse/.html)</li>
+</ul>
+</li>
+<li>
+<p>C++ Proposal led by Herb Sutter: Metaprogramming in C++ https://www.youtube.com/watch?v=4AfRAVcThyA&amp;t=1649s</p>
+<ul>
+<li>syntax (this is a proposal, so syntax may change):
+<ul>
+<li><code>constexpr { }</code> blocks for things that must be evaluated at compile time.</li>
+<li><code>-&gt; { }</code> blocks for runtime code</li>
+<li>$ syntax for compile time variables.  For types only, not expressions or statements?</li>
+</ul>
+</li>
+<li>Example: getting string names from an enum.  Very relevant to lexing/parsing!  Many languages have a tiny
+code generator for tokens and AST nodes.</li>
+<li>He is selling it pretty hard, saying &quot;this is already what we do&quot;, &quot;we're not turning C++ into Lisp&quot;, etc.</li>
+<li>&quot;constexpr all the things&quot; -- e.g. STL algorithms and data types</li>
+</ul>
+</li>
+<li>
+<p>Clang AST</p>
+<ul>
+<li><a href="Understanding-the-Clang-AST%7Chttps://jonasdevlieghere.com/understanding-the-clang-ast/.html">Understanding the Clang AST|https://jonasdevlieghere.com/understanding-the-clang-ast/</a></li>
+</ul>
+</li>
+</ul>
+<p>I saw a video where people asked why Clang source tools generate textual changes rather than AST changes... and this is a good example. People for some reason think that ASTs are &quot;cleaner&quot; or more usable, but they can be a pain.</p>
+<p>https://news.ycombinator.com/item?id=13630134</p>
+<h3>Compile-Time Metaprogramming in Systems Languages</h3>
+<ul>
+<li>C++ has <code>constexpr</code></li>
+<li>Zig has <code>comptime</code> (I think the whole language can be evaluated at compile time?)
+<ul>
+<li>printf implementation is an example: https://ziglang.org/documentation/0.1.1/#case-study-printf</li>
+</ul>
+</li>
+<li>Rust: ~2 types of macros and const contexts, which are like <code>expr</code>.</li>
+<li><a href="https://terralang.org/">Lua/Terra research language</a> -- great paper
+<ul>
+<li>criticism of both design and implementation: https://erikmcclure.com/blog/a-rant-on-terra/</li>
+</ul>
+</li>
+<li>Jai also has the ability to evaluate anything at compile time?  It's not released but I think there was a YouTube demo of it.</li>
+<li><a href="https://github.com/mrakgr/The-Spiral-Language">Spiral Language</a> -- functional language for machine learning with &quot;first-class staging&quot;</li>
+</ul>
+<p><a href="https://news.ycombinator.com/item?id=19012369">Comments on &quot;Outperforming everything with anything Python? Sure, why not?&quot;</a></p>
+<h3>Types of Metaprogramming</h3>
+<ul>
+<li>before lexer -- code generation</li>
+<li>before parser -- not sure this exists?  Generate tokens?  Yes this is how the C preprocessor works!  It has roughly the same lexer as C, but a different parser!</li>
+<li>before compiler -- AST metaprogramming.</li>
+<li>at runtime, after compiler -- reflection.</li>
+</ul>
+<h3>Oil Design</h3>
+<ul>
+<li>Do template-like metaprogramming with auto-escaping?  That means you need to lex languages rather than parse them?  You can do this with HTML, but I'm not sure about other languages.</li>
+<li>Philosophy: Oil is about metaprogramming <strong>other languages</strong> (primarily), not metaprogramming itself!</li>
+<li>But we do need a syntax for lazy evaluation, for R-like expressions.  (I don't think we need statements).
+<ul>
+<li>I think this can just be quotation and interpolation.  AST nodes can be opaque/immutable.</li>
+<li>syntax: <code>filter(df, \uri == uri)</code>, or <code>filter(df, \(uri == $$uri)</code>.  <code>$$</code> or <code>%</code> could be interpolation.</li>
+</ul>
+</li>
+<li>And we do have <code>eval()</code> -- for feature detection, at the very least.</li>
+</ul>
+<h3>Language Pairs</h3>
+<ul>
+<li>Lua/Terra -- one is dynamic and one is static.</li>
+<li>C preprocessor and C (same &quot;lexical context&quot;)</li>
+<li>&quot;C with classes&quot; and C++ template metaprogramming -- two different languages
+<ul>
+<li>new &quot;Meta&quot; proposal: C++ and C++</li>
+</ul>
+</li>
+<li>Oil implementation: Python + C (and C++), via textual code generation.</li>
+<li>Python and TensorFlow -- both are dynamic?
+<ul>
+<li>C++ and C++ template metaprogramming -- Eigen</li>
+</ul>
+</li>
+<li>Scala?</li>
+<li>OCaml and MetaOCaml -- both are static?  I think it's not possible to generate a program that doesn't pass the &quot;normal&quot; OCaml type checker?</li>
+<li>Python and RPython -- <em>The hard to understand part is that Python is a meta-programming language for RPython</em>
+<ul>
+<li>http://rpython.readthedocs.io/en/latest/getting-started.html</li>
+</ul>
+</li>
+</ul>
+<h3>Links</h3>
+<ul>
+<li>http://wordsandbuttons.online/outperforming_everything_with_anything.html
+<ul>
+<li>great link that compares C preprocessor and C, C++ template metaprogramming and C++, then Python + LLVM!</li>
+</ul>
+</li>
+</ul>
+<h3>Notes on Converge Paper: Compile-time metaprogramming in a dynamically typed OO language</h3>
+<ul>
+<li>based on Template Haskell</li>
+<li>lexical vs. syntactic (AST) macros
+<ul>
+<li>lexical macros: you need an entirely new language!</li>
+<li>Lisp macro systems require the compiler to recognize macros as different than functions</li>
+<li>languages such as TemplateHaskell distinguish only the macro call itself.  macros can be any function in the
+host language.</li>
+</ul>
+</li>
+<li>Lisp's syntactic minimalism lends itself to metaprgramming</li>
+<li>Converge language
+<ul>
+<li>similar to OPy -- statically analyzable namespaces!  I think this is to distinguish compile-time vs. runtime
+variables.</li>
+<li>has offline compilation and linking step too!</li>
+<li>uses <code>func</code> keyword</li>
+<li>no global scope, just local</li>
+</ul>
+</li>
+<li>section on scoping rules, for compile time and runtime variables</li>
+<li>nice section on error reporting!  One of the most significant unresolved problems.</li>
+<li>use cases:
+<ul>
+<li>conditional compilation</li>
+<li>runtime compilation of <code>printf</code> (similar to what Python's f-strings now do)</li>
+</ul>
+</li>
+<li>user experience: compile-time metaprogramming in its rawest form is not likely to be grasped by every potential developer</li>
+<li>language design implications
+<ul>
+<li>must be able to determine names statically</li>
+</ul>
+</li>
+<li>Compiler architecture is no longer linear?  Didn't quite understand this part.  There is quasi-quote mode and splicing mode.</li>
+<li>AST design
+<ul>
+<li>heterogeneous vs. homogeneous -- he chooses heterogeneous, somewhat dismisses homogeneous</li>
+<li>ASTs should be immutable!  Because of aliasing I guess.  Python's are mutable.</li>
+</ul>
+</li>
+<li>new extension: arbitrary DSLs compiling to converge code!  yes.</li>
+</ul>
+<h3>Second Converge Paper</h3>
+<ul>
+<li>DSL embedding in Converge, which describes DSL blocks.
+<ul>
+<li>Converge Parsing Kit uses Earley Parsing, inspired by SPARK parser (used in original Python ASDL implementation)
+<ul>
+<li>quite slow at 1000 lines/second, or 1 line per millisecond!</li>
+</ul>
+</li>
+<li>src_info concept -- attributing errors to multiple locations</li>
+<li>alpha renaming for hygiene</li>
+<li>rewriting the tokenizer?  You can use Converge's tokenizer, with a list of optional keywords, or you can
+provide your own tokenizer</li>
+<li>example: ORM!  Translating SQL schemas to Converge type definitions (or the opposite?).</li>
+<li>didn't like his terminology of &quot;heterogeneous&quot; and &quot;homogeneous&quot;, to mean 2-language vs. 1-language
+<ul>
+<li>this was even different than a paper cited</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Use Cases</h3>
+<ul>
+<li><a href="https://www.reddit.com/r/ProgrammingLanguages/comments/aazbwp/habermanvtparse_a_library_to_parse_terminal/">vtparse state machine</a></li>
+<li><a href="http://tree-sitter.github.io/tree-sitter/creating-parsers#starting-to-define-the-grammar">Treesitter grammars</a> -- e.g. C++ is defined in terms of C subset, and TypeScript is defined in terms of JavaScript subset</li>
+</ul>
+<p>More: <a href="Metaprogramming-Use-Cases.html">Metaprogramming Use Cases</a></p>
+  </body>
+</html>
+

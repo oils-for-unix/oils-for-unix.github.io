@@ -1,0 +1,86 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>OSH Parser</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>These facts are useful for the parsing contest.</p>
+<p><a href="Shell-WTFs.html">Shell WTFs</a></p>
+<p><a href="OSH-Optimization-Log.html">OSH Optimization Log</a></p>
+<h3>Facts</h3>
+<ul>
+<li>15 lexer modes (lexical state)</li>
+<li>233 IDs (token types / node types) in 23 kinds (<code>core/id_kind_test.py</code> shows this)</li>
+<li>3 recursive descent parsers (command, word, <code>[[</code>)</li>
+<li>1 Pratt parser (arithmetic)</li>
+<li><code>[</code> fallback reuses <code>osh/bool_parser</code></li>
+<li>TODO: modify asdl.py to show these stats?
+<ul>
+<li>X product types</li>
+<li>X sum types with X alternatives</li>
+</ul>
+</li>
+</ul>
+<h3>Facts Requiring Dynamic Instrumentation</h3>
+<ul>
+<li>what CPython opcodes does it use?</li>
+<li>how many lines of code does it use in CPython?  (Compare with execution.)</li>
+<li>What is the distribution of ASDL string and array lengths per node type?
+<ul>
+<li>note: there are several uses of string, not just token.  Is this a good or bad optimization?</li>
+</ul>
+</li>
+</ul>
+<h3>Other Parser Components That Do String Manipulation</h3>
+<ul>
+<li>Brace detection -- this is a separate metaprogramming pass (doesn't depend on input).  This is a recursive parser, although it operates entirely on token types and not chars/strings?</li>
+<li>Per-Word Algorithms
+<ul>
+<li><code>core/glob_.py</code>
+<ul>
+<li><code>LooksLikeGlob</code></li>
+<li><code>GlobEscape</code></li>
+<li><code>GlobUnescape</code> (in case of no matches, may not be necessary)</li>
+</ul>
+</li>
+<li>regex escape, for passing to <code>regcomp()</code> (not done yet)</li>
+</ul>
+</li>
+<li>checking validity of names:
+<ul>
+<li><code>for invalid-var in a b; do ...</code></li>
+<li><code>readonly invalid-var</code></li>
+</ul>
+</li>
+</ul>
+<h3>Runtime String Manipulation</h3>
+<ul>
+<li><code>core/word_eval.py</code> -- after evaluating VarOp arguments, we compile globs to Python regexes, e.g. for <code>${x%foo*}</code></li>
+<li>IFS splitting (this is quite slow and needs to be sped up!)</li>
+<li><code>core/args.py</code> -- this is not a recursive parser</li>
+<li><code>echo -e</code> -- backslash escapes (and <code>printf</code> if it turns out we need it as a builtin)</li>
+<li><code>read</code> without -r -- backslash escapes are parsed</li>
+</ul>
+<h3>Other Notes on Porting to C++</h3>
+<ul>
+<li>Polymorphism:
+<ul>
+<li>Reader
+<ul>
+<li><code>FileLineReader</code>: file system e.g. <code>source</code>, <code>stdin</code></li>
+<li><code>StringLineReader</code>: <code>eval</code>, <code>-c</code> and <code>PS4</code></li>
+<li><code>VirtualLineReader</code>: here docs.</li>
+</ul>
+</li>
+<li><code>BoolParser</code> can take <code>test_builtin._StringWordEmitter</code> or <code>WordParser</code></li>
+<li><code>Arena</code> instances?  Not sure that requires polymorphism, since there is one type right now.  We might
+have different policies for tools vs. the runtime though.</li>
+</ul>
+</li>
+</ul>
+  </body>
+</html>
+

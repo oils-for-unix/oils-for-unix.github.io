@@ -1,0 +1,22 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Parsing Shell Quotes Requires Parsing the Whole Language</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>This is example has <strong>four double quotes</strong>.  To determine whether it means <code>OPEN OPEN CLOSE CLOSE</code> or <code>OPEN CLOSE OPEN CLOSE</code> requires a full shell parser.</p>
+<pre><code>$ echo &quot;foo ${myvar:-&quot;$(f() { echo func-defined-inside-quotes-and-inside-arg; }; f)&quot;} bar&quot;
+foo func-defined-inside-quotes-and-inside-arg bar
+
+$ myvar=x
+$ echo &quot;foo ${myvar:-&quot;$(f() { echo func-defined-inside-quotes-and-inside-arg; }; f)&quot;} bar&quot;
+foo x bar
+</code></pre>
+<p>3/2020 edit: Although I guess you do not have to parse <code>f() { }</code> in order to figure out that the first <code>&quot;</code> is OPEN.  You only have to understand that <code>${</code> is not closed yet, which is not that hard I suppose.</p>
+<p>TODO: Come up with some harder cases.</p>
+  </body>
+</html>
+

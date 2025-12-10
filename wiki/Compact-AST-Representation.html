@@ -1,0 +1,171 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Compact AST Representation</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<h2>Compact AST Representation</h2>
+<ul>
+<li>Reddit Thread: <a href="Representing-ASTs-as-byte-strings-with-with-small-integers-rather-than-pointers%7Chttps://www.reddit.com/r/ProgrammingLanguages/comments/79fkpu/representing_asts_as_byte_strings_with_with_small/.html">Representing ASTs as byte strings with with small integers rather than pointers|https://www.reddit.com/r/ProgrammingLanguages/comments/79fkpu/representing_asts_as_byte_strings_with_with_small/</a></li>
+<li><a href="https://chadaustin.me/tag/sajson/">sajson</a>: <em>Last week, I described a JSON parse tree data structure that, worst case, requires N words for N characters of JSON text.</em>  Single allocation JSON?</li>
+<li><a href="Compiling-tree-transforms-to-operate-on-packed-representations%7Chttps://2017.ecoop.org/event/ecoop-2017-papers-compiling-tree-transforms-to-operate-on-packed-representations.html">Compiling tree transforms to operate on packed representations|https://2017.ecoop.org/event/ecoop-2017-papers-compiling-tree-transforms-to-operate-on-packed-representations</a> at ECOOPLDI 2017
+<ul>
+<li><a href="Conference-Presentation-on-YouTube%7Chttps://www.youtube.com/watch?v=YDa60NpXp6Q.html">Conference Presentation on YouTube|https://www.youtube.com/watch?v=YDa60NpXp6Q</a></li>
+<li>This is much more ambitious, but also more limited.  Not only are there no pointers, but the tree traversal is equivalent to a linear scan through memory.  It compiles a custom programming language and rearranges the operations so this is true.</li>
+<li>See limitations at the end of the paper.</li>
+<li><a href="http://iu-parfunc.github.io/gibbon/">Gibbon compiler</a></li>
+</ul>
+</li>
+<li>Good references in that paper:
+<ul>
+<li>The Lattner/Adve paper below</li>
+<li>Cache-Conscious Data Structure Layout</li>
+<li>Compact Normal Form in Glasgow Haskell Compiler -- reduces both space and garbage collection pressure.</li>
+</ul>
+</li>
+<li>Ken Thompson's postfix encoding for regexes (no pointers) is mentioned here: https://swtch.com/~rsc/regexp/regexp1.html</li>
+</ul>
+<h2>Array of Homogeneous Nodes / &quot;Inverted&quot; Struct-of-Arrays</h2>
+<p>As opposed to array of pointers to heterogeneous structs</p>
+<ul>
+<li>
+<p><a href="https://scholar.google.com/scholar?cluster=18440495171488778499&amp;hl=en&amp;as_sdt=0,5&amp;sciodt=0,5">Vertical object layout and compression for fixed heaps</a></p>
+<ul>
+<li>Implemented in the <a href="http://lambda-the-ultimate.org/node/4716">Virgil Language</a> by Ben Titzer</li>
+<li>Vertical Object Layout basically means transposing objects and fields.  Analogous to arrays of structs -&gt;
+struct of arrays.  Except the &quot;array&quot; is every instance of a given type on the heap.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://old.reddit.com/r/ProgrammingLanguages/comments/k258ez/a_gpucpu_hosted_compiler_written_in_17_lines_of/">Co-dfns APL Compiler Thesis</a> -- Uses an array-based representation of an AST.  Section 3.2 is <em>The AST and Its Representation</em>.  What's novel is that this is a <strong>parallel</strong> compiler hosted on the CPU.  So it's not just compact, but laid out in a way amenable to parallel computation.</p>
+</li>
+<li>
+<p>Zig PR to use Struct-of-Arrays and Indices in AST.  Proof of concept for other IRs: <a href="https://github.com/ziglang/zig/pull/7920">https://github.com/ziglang/zig/pull/7920</a></p>
+<ul>
+<li>Video Explanation: <a href="https://guide.handmade-seattle.com/c/2021/practical-dod/">Practical Data-Oriented Design</a> - Handmade Seattle 2021</li>
+<li>Downside: you lose type info since you have integers rather than pointers</li>
+</ul>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=ZI198eFghJk">Modernizing Compiler Design for Carbon's Toolchain</a> - CppNow 2023</p>
+<ul>
+<li>Primary Homogeneous Dense Array packed with most ubiquitous data</li>
+<li>Indexed access allows most connections to use adjacency (implicit pointer, no storage required)</li>
+<li>Side arrays for secondary data, referred to with compressed index</li>
+<li>Flyweight Handle wrappers</li>
+</ul>
+</li>
+</ul>
+<h2>Compressed Pointers</h2>
+<p>This is related: more general, but more complex.</p>
+<ul>
+<li><a href="https://wiki.openjdk.org/display/HotSpot/CompressedOops">Compressed Ordinary Object Pointers (Oops)</a> in 64-bit JVMs mean that 32-bit integers can address 4 GiB * 8 = 32 GiB of memory (since objects are at least 8-byte aligned)
+<ul>
+<li><a href="https://stackoverflow.com/questions/25120546/trick-behind-jvms-compressed-oops">StackOverflow: Trick behind JVM's compressed Oops</a></li>
+<li>Apparently this is the default since Java 7 circa 2011, when the max heap size is &lt; 32 GiB</li>
+<li>https://shipilev.net/jvm/anatomy-quarks/23-compressed-references/</li>
+</ul>
+</li>
+<li><a href="https://www.gingerbill.org/article/2020/05/17/relative-pointers/">Relative Pointers</a>.  Good survey of 4 kinds of relative pointers, including two that have the <code>memcpy()</code> property:
+<ol>
+<li>Virtual Memory Pointers.  What we all use on modern OSes.</li>
+<li>Global-based pointers (relative to global variable).  There are compiler extensions I didn't know about.</li>
+<li>Offset pointers -- relative to an explicitly defined base, such as the beginning of a file
+<ul>
+<li><em>Offset pointers can also be replicated in C++ through the use of templates. Similar to the previous user-defined based pointers above, the size of the underlying integer can be any size.</em></li>
+</ul>
+</li>
+<li>Self-Relative/Auto-Relative pointers—relative to its own memory address
+<ul>
+<li>TODO: explore this for Oil.  Might be easier to put multiple interpreters in the same address space.
+Will complicated debugging a lot!</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Reddit: [Transparent Pointer Compression for Linked Data Structures by Lattner, Adve|https://www.reddit.com/r/ProgrammingLanguages/comments/79q5jq/transparent_pointer_compression_for_linked_data/](Transparent-Pointer-Compression-for-Linked-Data-Structures-by-Lattner -Adve|https://www.reddit.com/r/ProgrammingLanguages/comments/79q5jq/transparent_pointer_compression_for_linked_data/.html) -- divide address in to 4 GiB pools so that internal pointers are 32-bit.</li>
+<li><a href="Jai-Demo:-Relative-Pointers%7Chttps://www.reddit.com/r/programming/comments/6d9usf/jai_demo_relative_pointers/.html">Jai Demo: Relative Pointers|https://www.reddit.com/r/programming/comments/6d9usf/jai_demo_relative_pointers/</a></li>
+<li><a href="Object-Relative-Addressing:-Compressed-Pointers-in-64-bit-Java-Virtual-Machines%7Chttp://users.elis.ugent.be/~leeckhou/papers/ecoop07.pdf.html">Object-Relative Addressing: Compressed Pointers in 64-bit Java Virtual Machines|http://users.elis.ugent.be/~leeckhou/papers/ecoop07.pdf</a></li>
+<li>Reddit: Idea for <a href="Tiny-Relative-Pointers%7Chttps://www.reddit.com/r/ProgrammingLanguages/comments/7gzaas/tiny_relative_pointers/.html">Tiny Relative Pointers|https://www.reddit.com/r/ProgrammingLanguages/comments/7gzaas/tiny_relative_pointers/</a>.  Using the LSB for external vs. internal might be a good idea.  I also wanted a bit for const vs. non-const.</li>
+<li><a href="https://www.youtube.com/watch?v=Dxy66x6v4HE&amp;t=1537s">CppCon 2019: Steven Pigeon “Small is beautiful: Techniques to minimise memory footprint”</a> -- a lot of C++ metaprogramming tricks with <code>constexpr</code>, etc.  Goes to the extreme on size but says little about speed.  No benchmarks and no concrete applications, just small pieces of C++.</li>
+<li><a href="https://blog.nelhage.com/post/why-sorbet-is-fast/">Why Sorbet Is Fast</a> -- Fast static type checker for Ruby written in nice C++.  32-bit IDs for interned strings for  fast comparison.  <code>GlobalState</code> and <code>Ref</code>.</li>
+<li><a href="https://google.github.io/flatbuffers/">Flat Buffers</a> don't need to be deserialized before using them.  Also
+there is possible precursor here with <a href="http://strlen.com/language-design-overview/">flat_file_memory_management</a> (no code)</li>
+<li><a href="https://v8.dev/blog/pointer-compression">Pointer Compression in V8</a> (March 2020).  Chrome switched to being a 64-bit process in 2014, so they got this problem.  Each v8 instance is limited to around 4 GB, although they still want to have multiple instances in a single address space (I guess for web workers, where all the workers have the same privileges).
+<ul>
+<li><em>In order to simplify integration of Pointer Compression into existing code, we decided to decompress values on every load and compress them on every store. Thus changing only the storage format of tagged values while keeping the execution format unchanged.</em></li>
+<li><em>we observed that Pointer Compression reduces V8 heap size up to 43%! In turn, it reduces Chrome’s renderer process memory up to 20% on Desktop.</em></li>
+<li><a href="https://news.ycombinator.com/item?id=33774046">More comments on Hacker News</a></li>
+</ul>
+</li>
+<li>[<a href="https://github.com/snej/smol_world">smol_world: Compact garbage-collected heap and JSON-like object model</a>] <a href="https://lobste.rs/s/jexsmk/smol_world_compact_garbage_collected">comments on lobste.rs</a>.  Library in C++ 20 using relative 32-bit &quot;pointers&quot;.</li>
+</ul>
+<h3>Layout Should be Orthogonal to Logic</h3>
+<ul>
+<li><a href="https://scholar.google.com/scholar?cluster=4460621633590417011&amp;hl=en&amp;as_sdt=0,5&amp;sciodt=0,5">You Can Have It All: Abstraction and Good Cache Performance</a>.  (2017) Divide objects into pools and can do SoA/AoS on individual sets of fields.  It seems like this is done manually, which might be too onerous for big apps?  The work hasn't been integrated into a compiler yet.  Good related work section, citing a lot of the work above.</li>
+</ul>
+<h3>Tree Pass Fusion</h3>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=24740889">https://news.ycombinator.com/item?id=24740889</a></li>
+<li><em>Miniphases: compilation using modular and efficient tree transformations, Odersky et al.</em> (2017)
+<ul>
+<li><a href="https://scholar.google.com/scholar?cluster=7946863864036706551&amp;hl=en&amp;as_sdt=2005&amp;sciodt=0,5">https://scholar.google.com/scholar?cluster=7946863864036706551&amp;hl=en&amp;as_sdt=2005&amp;sciodt=0,5</a></li>
+</ul>
+</li>
+<li><em>TreeFuser: a framework for analyzing and fusing general recursive tree traversals.</em> (2017)
+<ul>
+<li><a href="https://dl.acm.org/doi/abs/10.1145/3133900">https://dl.acm.org/doi/abs/10.1145/3133900</a></li>
+<li>This one said they prototyped it in Clang.</li>
+</ul>
+</li>
+<li><em>Deforestation: Transforming programs to eliminate trees, Wadler</em> (1988)
+<ul>
+<li><a href="https://scholar.google.com/scholar?cluster=13826873296507613488&amp;hl=en&amp;as_sdt=0,5&amp;sciodt=0,5">https://scholar.google.com/scholar?cluster=13826873296507613488&amp;hl=en&amp;as_sdt=0,5&amp;sciodt=0,5</a></li>
+</ul>
+</li>
+</ul>
+<p><em>I think the key point is that some of the frameworks introduce restrictions that make it hard to write a big program like a compiler. There is a hard tradeoff between the amount of fusing that can be done and how expressive the metalanguage is.</em></p>
+<h3>Serialization, GC Pressure, Code Reuse</h3>
+<ul>
+<li><a href="http://ezyang.com/compact.html">Efficient Communication and Collection with Compact Normal Forms</a> - Glasgow Haskell Compiler
+<ul>
+<li>Paper: http://ezyang.com/papers/ezyang15-cnf.pdf</li>
+<li>Slides: http://ezyang.com/slides/ezyang15-cnf-slides.pdf</li>
+<li>Reduces GC pressure</li>
+<li>No outgoing pointers</li>
+<li>doesn't seem to have identity/sharing?  Duplication is the default</li>
+</ul>
+</li>
+</ul>
+<h3>Reducing Garbage Collection Pressure</h3>
+<ul>
+<li>[Span, Slices, string_view, StringPiece, etc.|https://www.reddit.com/r/ProgrammingLanguages/comments/7e32j8/span_slices_string_view_stringpiece_etc/](Span -Slices -string_view -StringPiece -etc.|https://www.reddit.com/r/ProgrammingLanguages/comments/7e32j8/span_slices_string_view_stringpiece_etc/.html)</li>
+</ul>
+<h2>Old Oil Stuff</h2>
+<ul>
+<li>Oil Blog Post: <a href="What-is-oheap?%7Chttp://www.oilshell.org/blog/2017/01/09.html.html">What is oheap?|http://www.oilshell.org/blog/2017/01/09.html</a>
+<ul>
+<li>Oheap V1 was a read-only format for transporting an ASDL tree across the Python/C++ boundary.  Though it turned out there
+wasn't a single clean boundary in the shell's architecture.</li>
+</ul>
+</li>
+<li><a href="http://www.oilshell.org/cross-ref.html?tag=OHeap2#OHeap2">OHeap2</a> was a read-write format, for OVM2.
+<ul>
+<li>At first I used it to represent .pyc files (Python's <code>CodeObject</code>)</li>
+<li>Meant to replace marshal, pickle, and zipimport.</li>
+<li>4-16-N model: 4 byte refs, 16 byte cells, and N byte slabs.</li>
+<li>See <code>ovm2/oheap2.py</code></li>
+<li>OHeap2 might still be a good idea, but I judged OVM2 not to be a good idea</li>
+</ul>
+</li>
+</ul>
+<h2>Related</h2>
+<ul>
+<li><a href="Lossless-Syntax-Tree-Pattern.html">Lossless Syntax Tree Pattern</a></li>
+</ul>
+  </body>
+</html>
+

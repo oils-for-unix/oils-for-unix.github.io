@@ -1,0 +1,153 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>OSH Builtins: "Hello  world!" Example</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<h1>About</h1>
+<p>This document describes the steps required to create a fictional OSH builtin called <code>hw</code> that prints &quot;Hello, world!&quot; when invoked.</p>
+<p>Code changes are shown using the <code>git-diff(1)</code> command, so that the reader has all the information to understand:</p>
+<ol>
+<li>
+<p>Which files were modified (filepaths)</p>
+</li>
+<li>
+<p>How files were modified (content changes)</p>
+</li>
+<li>
+<p>Where files were modified (line numbers)</p>
+</li>
+</ol>
+<h2>Create <a href="https://github.com/oilshell/oil/wiki/Spec-Tests">Spec Test</a></h2>
+<pre><code>spec/builtin-hw.test.sh
+-----------------------
+#!/bin/bash
+
+#### `hw` prints &quot;Hello, world!&quot;
+hw
+## status: 0
+## STDOUT:
+Hello, world!
+## END
+</code></pre>
+<ul>
+<li>
+<p>The &quot;####&quot; directive provides a test title</p>
+</li>
+<li>
+<p>From the end of this line until the start of the next &quot;##&quot; is a command block containing commands to be executed in top-down order. In this case, there is a single command to execute: <code>hw</code></p>
+</li>
+<li>
+<p>The first occurrence of the &quot;##&quot; directive asserts that the exit status code of the command block, after being executed, must be 0</p>
+</li>
+<li>
+<p>The second occurrence of the &quot;##&quot; directive asserts that the standard output of the command block, after being executed, must be &quot;Hello, world!&quot;</p>
+</li>
+<li>
+<p>The last occurrence of the &quot;##&quot; directive marks the end of the individual spec test</p>
+</li>
+</ul>
+<h2>Update Test Harness</h2>
+<p>Now, we'll update the test harness with a new directive called &quot;builtin-hw&quot; that will run the <code>hw</code> spec test</p>
+<pre><code class="language-diff">$&gt; git diff test/spec.sh
+diff --git a/test/spec.sh b/test/spec.sh
+index 9ea7d710..2e4559f6 100755
+--- a/test/spec.sh
++++ b/test/spec.sh
+@@ -432,6 +432,10 @@ builtin-times() {
+   sh-spec spec/builtin-times.test.sh $BASH $ZSH $OSH_LIST &quot;$@&quot;
+ }
+ 
++builtin-hw() {
++  sh-spec spec/builtin-hw.test.sh $OSH_LIST &quot;$@&quot;
++}
++
+ command-parsing() {
+   sh-spec spec/command-parsing.test.sh ${REF_SHELLS[@]} $OSH_LIST &quot;$@&quot;
+ }
+</code></pre>
+<h2>Confirm Failure</h2>
+<pre><code>$&gt; test/spec.sh builtin-hw
+builtin-hw.test.sh
+case    line    osh
+  0       3     FAIL    `hw` prints &quot;Hello, world!&quot;
+
+
+FATAL: 1 tests failed (1 osh failures)
+</code></pre>
+<h2>Update OSH <a href="https://github.com/oilshell/oil/tree/master/asdl">ASDL</a></h2>
+<p>The OSH ASDL uses a list of builtins to produce compiler artifacts. We'll need to add a <code>hw</code> enumerated type to this list</p>
+<pre><code class="language-diff">$&gt; git diff osh/runtime.asdl
+diff --git a/osh/runtime.asdl b/osh/runtime.asdl
+index 238e4eab..1014124b 100644
+--- a/osh/runtime.asdl
++++ b/osh/runtime.asdl
+@@ -3,7 +3,7 @@
+ module runtime
+ {
+   builtin = 
+-    NONE | TIMES | READ | ECHO | PRINTF | SHIFT
++    NONE | HW | TIMES | READ | ECHO | PRINTF | SHIFT
+   | CD | PWD | PUSHD | POPD | DIRS
+   | EXPORT | READONLY | LOCAL | DECLARE | TYPESET 
+   | UNSET | SET | SHOPT
+</code></pre>
+<h2>Register <code>hw</code> Implementation</h2>
+<pre><code class="language-diff">$&gt; git diff bin/oil.py
+diff --git a/bin/oil.py b/bin/oil.py
+index 443470c9..b61195f4 100755
+--- a/bin/oil.py
++++ b/bin/oil.py
+@@ -446,6 +446,7 @@ def ShellMain(lang, argv0, argv, login_shell):
+       builtin_e.DIRS: builtin.Dirs(mem, dir_stack, errfmt),
+       builtin_e.PWD: builtin.Pwd(mem, errfmt),
+ 
++      builtin_e.HW: builtin.Hw(),
+       builtin_e.TIMES: builtin.Times(),
+       builtin_e.READ: builtin.Read(splitter, mem),
+       builtin_e.HELP: builtin.Help(loader, errfmt),
+</code></pre>
+<h2>Implement <code>hw</code></h2>
+<pre><code class="language-diff">$&gt; git diff osh/builtin.py
+diff --git a/osh/builtin.py b/osh/builtin.py
+index f22c09c0..d68c14ca 100755
+--- a/osh/builtin.py
++++ b/osh/builtin.py
+@@ -89,6 +89,7 @@ _SPECIAL_ASSIGN_BUILTINS = {
+ }
+ 
+ _NORMAL_BUILTINS = {
++    &quot;hw&quot;: builtin_e.HW,
+     &quot;read&quot;: builtin_e.READ,
+     &quot;echo&quot;: builtin_e.ECHO,
+     &quot;printf&quot;: builtin_e.PRINTF,
+@@ -739,3 +740,12 @@ class History(object):
+       item = readline_mod.get_history_item(i)
+       print('%5d  %s' % (i, item))
+     return 0
++
++HW_SPEC = _Register('hw')
++class Hw(object):
++  def __init__(self):
++    pass
++
++  def __call__(self, arg_vec):
++    print(&quot;Hello, world!&quot;)
++    return 0
+</code></pre>
+<h2>Confirm Pass</h2>
+<p>Rebuild <code>osh</code></p>
+<pre><code>$&gt; build/dev.sh all
+[...]
+
+$&gt; test/spec.sh builtin-hw
+builtin-hw.test.sh
+case    line    osh
+  0       3     pass    `hw` prints &quot;Hello, world!&quot;
+</code></pre>
+  </body>
+</html>
+

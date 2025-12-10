@@ -1,0 +1,59 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Headless Mode</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Back to <a href="Interactive-Shell.html">Interactive Shell</a></p>
+<p>Oils has a headless mode with <code>osh --headless</code>, which is meant to divorce the shell and the terminal.  You should be able to interact with a shell through a <strong>GUI</strong>, rather than a terminal.</p>
+<p>It uses the &quot;FANOS&quot; protocol we invented, which is <strong>~200 lines</strong> of C or <strong>~100</strong> lines of Python.  FANOS stands for &quot;file descriptors and netstrings over sockets&quot;.</p>
+<p>Slogans:</p>
+<ul>
+<li>A shell GUI should <strong>have</strong> a terminal; it shouldn't <strong>be</strong> a terminal</li>
+<li>Shell is a <strong>language-oriented</strong> UI, but that's not the same thing as a <strong>terminal-oriented</strong> UI</li>
+</ul>
+<h2>Links</h2>
+<ul>
+<li><a href="https://www.oilshell.org/blog/tags.html?tag=headless#headless">Blog Posts tagged #headless</a>
+<ul>
+<li><a href="https://www.oilshell.org/blog/2023/12/screencasts.html#headless-protocol-oils-web_shell">Interactive Shell Screenshots</a> - the post with a <strong>screenshot</strong> that I show as a demo.  In the web UI, shell input/output is <strong>rendered separately</strong> from child process input/output</li>
+<li><a href="https://www.oilshell.org/blog/2021/06/hotos-shell-panel.html#oils-headless-mode-should-be-useful-for-ui-research">Oil's Headless Mode Should Be Useful for UI Research</a> (Notes on the HotOS Unix Shell Panel)</li>
+</ul>
+</li>
+<li>Docs in the Oils Repo: <a href="https://oils.pub/release/latest/doc/headless.html">https://oils.pub/release/latest/doc/headless.html</a></li>
+<li><code>#shell-gui</code> on Zulip has many discussions: https://oilshell.zulipchat.com/#narrow/stream/266977-shell-gui</li>
+<li><em>Shell as an Engine for a GUI or TUI</em>: https://github.com/oilshell/oil/issues/738</li>
+</ul>
+<h3>Code</h3>
+<ul>
+<li>C library (~200 lines): <a href="https://github.com/oils-for-unix/oils/blob/master/cpp/fanos_shared.c">https://github.com/oils-for-unix/oils/blob/master/cpp/fanos_shared.c</a></li>
+<li>Pure Python 3 library (~100 lines): <a href="https://github.com/oils-for-unix/oils/blob/master/client/py_fanos.py">https://github.com/oils-for-unix/oils/blob/master/client/py_fanos.py</a></li>
+<li>Go web server, using <code>fanos.go</code> library: <a href="https://github.com/subhav/web_shell/">https://github.com/subhav/web_shell/</a></li>
+</ul>
+<h2>Tips</h2>
+<ul>
+<li>Use <code>push-registers { foo }</code> to avoid clobbering <code>$?</code>, <code>BASH_REMATCH</code>, and other registers (VM globals).</li>
+</ul>
+<h2>TODO</h2>
+<ul>
+<li>Demo of how to pass a pipe, and e.g. dump JSON (is our json builtin stable?  Or does <code>read --json</code> and <code>read --qtt</code> make more sense?)</li>
+<li>command line option <code>--source</code> (global) (or should it be <code>--use</code> (namespaced) ?)</li>
+<li>Document &quot;registers&quot; ?</li>
+<li>More docs on how to implement a headless client.  Join <code>#shell-gui</code> on Zulip for discussion!</li>
+</ul>
+<h2>Other</h2>
+<p>This is a non-FANOS interface:</p>
+<ul>
+<li>web_shell prototype: https://github.com/subhav/web_shell/blob/master/command_server.sh
+<ul>
+<li>descriptor passing would be nice.  Uses LD_PRELOAD to trick bash into thinking it's running
+from a terminal.</li>
+</ul>
+</li>
+</ul>
+  </body>
+</html>
+

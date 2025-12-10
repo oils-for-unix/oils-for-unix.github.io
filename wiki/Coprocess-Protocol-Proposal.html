@@ -1,0 +1,128 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Coprocess Protocol Proposal</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>April 2021: This is OLD (2018).   See <a href="Capers.html">Capers</a></p>
+<h1>Coprocess Protocol Proposal (FCLI)</h1>
+<h3>Abstract</h3>
+<p>This document sketches a protocol to allow <strong>coprocesses</strong> to substitute for normal &quot;batch&quot; processes in shell scripts.  A coprocess can be thought of as a <strong>single-threaded server</strong> that reads and writes from pipes.</p>
+<p>The goal is to make shell scripts faster.  It can also make interactive completion faster, since completion scripts often invoke (multiple) external tools.</p>
+<h3>Motivation / Analogy</h3>
+<p>Many language runtimes start up slowly, e.g. when they include a JIT compiler or when many libraries are loaded: Python, Ruby, R, Julia, the JVM (including Clojure), etc.</p>
+<p>This problem seems to be getting worse.  Python 3 is faster than Python 2 in nearly all dimensions <strong>except</strong> startup time.</p>
+<p>Let's call the protocol <strong>FCLI</strong> for now.  There's a rough analogy to FastCGI and CGI:  CGI starts one process per request, while FastCGI handles multiple requests in a process.  (I think FastCGI is threaded unlike FCLI, but let's ignore that for now.)</p>
+<h3>Example / Sketch</h3>
+<p>Suppose we have a Python command line tool that copies files to a cloud file system.  It works like this:</p>
+<pre><code>cloudcopy foo.jpg //remote/myhome/mydir/
+</code></pre>
+<p>(This could also be an R tool that does a linear regression, but let's use the <code>cloudcopy</code> example to be concrete.  The idea is that a lot of the work is &quot;startup time&quot; like initializing libraries, not &quot;actual work&quot;.)</p>
+<p>It could be converted to a FCLI coprocess by wrapping <code>main()</code> in a <code>while True</code> loop.</p>
+<p>A shell would invoke such a process with these environment variables:</p>
+<ul>
+<li><code>FCLI_VERSION</code> -- the process should try to become a coprocess.  Some scripts may ignore this!  That is OK; the
+shell/client should handle it.</li>
+<li><code>FCLI_REQUEST_FIFO</code> -- read requests from this file system path (a named pipe)</li>
+<li><code>FCLI_RESPONSE_FIFO</code> -- write responses to this file system path (a named pipe)</li>
+</ul>
+<p>For worker #9, the shell might set variables like this:</p>
+<pre><code>FCLI_REQUEST_FIFO=/tmp/cloudcopy-pool/request-fifo-9 \
+FCLI_RESPONSE_FIFO=/tmp/cloudcopy-pool/response-fifo-9 \
+  cloudcopy  # no args; they'll be sent as &quot;argv&quot; requests
+</code></pre>
+<p>The requests and responses will look like this.  Note the actual encoding will likely <strong>not</strong> be JSON, but I'm writing in JSON syntax for convenience.</p>
+<pre><code># written by the shell to request-fifo-9
+{ argv: [&quot;cloudcopy&quot;, &quot;bar.jpg&quot;, &quot;//remote/myhome/mydir&quot;]
+  env: {&quot;PYTHONPATH&quot;: &quot;.&quot;}   # optional ENV to override actual env.  May be ignored by some processes.
+}
+
+-&gt; 
+
+# written by the cloudcopy process to response-fifo-9
+{ &quot;status&quot;: 0 }  # 0 on success, 1 on failure
+</code></pre>
+<p><code>stderr</code> is for logging.  <code>stdin</code> / <code>stdout</code> are used as usual.  We probably need to instruct the server to flush its streams in order to properly delimit requests (?).  We won't get an EOF because the pipes are open across multiple  requests.</p>
+<p>If you wanted to copy 1,000 files, you could start a pool of 20 or so coprocesses and drive them from an event loop.  You would only pay the startup time 20 times instead of 1000 times.</p>
+<p>In some cases, it would be possible to add a <code>--num-threads</code> option to your <code>cloudcopy</code> tool.  But there are many cases where something like FCLI would be easier to implement.  Wrapping <code>main()</code> is a fairly basic change.</p>
+<h3>Errors</h3>
+<p>The process may also just <code>exit 1</code> or <code>exit 123</code>, and that will be treated as <code>{&quot;status&quot;: 123}</code>.  A new coprocess will be started for the next request.</p>
+<h3>List of Request Types</h3>
+<ul>
+<li><code>argv</code> -- run a new command and print a response to the fifo.  Use stdin/stdout/stderr as normal.</li>
+<li><code>flush</code> -- flush stdout and stderr.  I think this will make it easier to delimit responses from adjacent commands.</li>
+<li><code>echo</code> -- for testing protocol conformance?</li>
+<li><code>version</code> -- maybe?</li>
+<li><code>cd</code> -- instruct the process to change directories?  This should be straightforward in most (all?) languages.</li>
+<li><code>env</code> -- should this be a separate request, and not part of the <code>argv</code> request?  Not sure.</li>
+</ul>
+<h3>Note: Shells are servers too!</h3>
+<p>Shells are usually thought of as <strong>clients</strong> that drive coprocess &quot;tools&quot; in parallel.  But they can also be <strong>servers</strong>, i.e. processing multiple invocations of <code>sh -c</code> in a single process.</p>
+<p>Shells are often invoked recursively (including by redo).</p>
+<h3>Shell Implementation Strategy: Proxy Processes</h3>
+<p>Internally, a shell can use a mechanism similar to subshells like <code>( myfunc )</code> and <code>myfunc | tee foo.txt</code>.  That is <code>myfunc</code> has to be run in a subprocess.</p>
+<p>So we can have a proxy process that is passed the file descriptors for a coprocess.  And then the shell can interact with the proxy process normally.  It can <code>wait()</code> on it, and it can redirect its output.</p>
+<p>Waiting simultaneously for a process exit  and an event from a pipe is somewhat annoying in Unix, requiring DJB's &quot;self-pipe trick&quot;.  This turns the exit event into a I/O event.</p>
+<p>In a sense, this strategy is the <strong>opposite</strong> here.  We're turning an I/O event (coprocess prints <code>{&quot;status&quot;: 0}</code> into a process exit event!</p>
+<p>The key is that <code>fork()</code> is very fast, but starting Python interpreters and JVMs is slow.  So this will still be a big win.</p>
+<h3>Why Coprocesses and not Multi-threaded Servers?</h3>
+<p>Because it will be easier for existing command line tools to implement this protocol.  Many tools are written with global variables, or they are written in languages that don't freely thread anyway (Python, R, etc.).</p>
+<h3>Use Cases</h3>
+<ul>
+<li>I could have used this for <a href="https://github.com/google/rappor">RAPPOR</a> and several other &quot;data science&quot; projects in R.</li>
+<li>The <a href="https://redo.readthedocs.io/en/latest/">redo</a> build system starts many short-lived processes.
+<ul>
+<li>it starts many shell processes to intrepret rules, and many &quot;tool&quot; processes.</li>
+</ul>
+</li>
+<li><a href="Shellac-Protocol-Proposal.html">Shellac Protocol Proposal</a> -- this protocol for shell-independent command completion can build on top of the coprocess protocol.  It has more of a structured request/response flavor than some command line tools, but that's fine.  FCLI works for both use cases.</li>
+</ul>
+<h3>Relation to Bash Coprocesses</h3>
+<p>Bash coprocesses communicate structured data over two file descriptors / pipes:</p>
+<p>http://wiki.bash-hackers.org/syntax/keywords/coproc</p>
+<p>They are not drop-in replacements for command line tools.</p>
+<p>FCLI uses at least 4 one-way pipes, in order to separate control (argv, status) from data (stdin/stdout).</p>
+<h3>Can bash be a client?</h3>
+<p>It would be nice for adoption to distribute a script like <code>fcli-lib.sh</code> or <code>fcli-lib.bash</code> that could call coprocesses in a transparent fashion.</p>
+<p>However bash can't even determine the length of a byte string, which limits the kind of protocols you can construct with it (i.e. length-prefixed).  (It counts unicode characters unreliably.)</p>
+<p>So bash will not be a client, but it can easily <strong>invoke</strong> a client, e.g. <code>fcli-driver</code>.</p>
+<p>Oil can be a &quot;first-class&quot; client.  That is, coprocesses can be substituted for batch processes <strong>without a syntax change</strong>.</p>
+<pre><code>foo() { foo-batch &quot;$@&quot;; }
+seq 3 | foo x y z &gt;out.txt 2&gt;err.txt  # runs batch job
+
+foo() { foo-coprocess &quot;$@&quot;; }
+seq 3 | foo x y z &gt;out.txt 2&gt;err.txt  # runs coprocess
+</code></pre>
+<h3>stdin problems</h3>
+<p>Don't many tools read until EOF?  Consider a simple Python filter:</p>
+<pre><code>for line in sys.stdin:
+  print(line.upper())
+</code></pre>
+<p>It is somewhat hard to turn this into a coprocess, because the iterator wants an EOF event.  Won't it block forever waiting for the next line?  I guess that is why we need the FIFOs.</p>
+<h3>stderr</h3>
+<p>TODO: Should the shell capture stderr?  Or just use it as the normal logging/error stream?  Usage errors could be printed there.</p>
+<h3>cwd</h3>
+<p>Do processes have to change directories?  It shouldn't be super hard for them to implement a <code>cd</code> command.  (The shell can optimize that away in some cases.)</p>
+<h3>Windows?</h3>
+<p>Process startup time is slow on Windows.  I think it has named pipes, but they might not be on the file system?  They might have their own namespace.</p>
+<h3>Advanced Ideas</h3>
+<ul>
+<li>If you start a coprocess pool, some requests might have <strong>affinity</strong> for certain replicas, i.e. to try to reuse a certain network connection.  The shell could allow the user to specify this logic in a small shell function.</li>
+</ul>
+<h3>Andy's Notes</h3>
+<p>I wrote something like this a few years ago, but it assumed too much about the process.  It assumed that you controlled all I/O in the process.</p>
+<p>Places where you might not:</p>
+<ul>
+<li>On errors, the Python interpreter prints a stack trace to stderr</li>
+<li>R will randomly print warnings and other info to stderr !!!</li>
+<li>Some libraries print to stderr on errors.</li>
+</ul>
+<p>It seems like this is mostly a problem for stderr.</p>
+<h3>Update</h3>
+<p><a href="Coprocess-Protocol-V2.html">Coprocess Protocol V2</a></p>
+  </body>
+</html>
+

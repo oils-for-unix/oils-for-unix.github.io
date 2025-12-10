@@ -1,0 +1,156 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Compiler Engineer Notes</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Old Notes for <a href="Compiler-Engineer-Job.html">Compiler Engineer Job</a></p>
+<h2>More Background</h2>
+<ul>
+<li>Oil is written as a high level &quot;executable spec&quot; in a subset of typed Python.  This is ~40K lines of code painstakingly hand-crafted over 5 years!  It recapitulates 50 years of shell history.</li>
+<li>We have several code generators that translate this spec into ~90K lines of C++.</li>
+<li>The primary one is called &quot;mycpp&quot;, which reuses the MyPy front end.  (A secondary one is Zephyr ASDL for algebraic data types, and another important one is re2c.)</li>
+<li>There is a small C++ runtime implementing <strong>garbage collected, statically typed data structures</strong> like <code>List&lt;T&gt;</code>, <code>Dict&lt;K, V&gt;</code>, and <code>Tuple2&lt;A, B&gt;</code>.  This is a straightforward translation of MyPy's type system to C++'s (they match quite closely!)</li>
+<li>This translation passes more than half the OSH spec tests!  1115 out of 1900 or so.</li>
+</ul>
+<p>However, <strong>mycpp needs a rewrite</strong>.  It's using the internals of MyPy in a hacky way.</p>
+<p>And I don't like the &quot;inverted&quot; visitor style.  The current idea is to rewrite the type checker with Python's 3.10 <code>match</code> statement (only released in October 2021!).  We can reuse the <code>ast</code> library which in recent versions of Python supports type comments.</p>
+<p>However, most of the <strong>time</strong> I spent on this issue was in the relatively small C++ runtime.  The garbage collector is a Cheney semi-space collector, and it took me a long time to debug!  It's still not done.</p>
+<h2>High Level Idea / Work Estimates</h2>
+<p>You should look at this problem and think <em>I can do this whole thing</em> !  (I believe there are many compiler engineers out there with this skillset.)</p>
+<p>Again, we want to translate 40K lines of typed Python to a similar amount of C++.  <strong>And the result has to be debugged and work</strong>!</p>
+<ul>
+<li>The translator should be around 3K lines of code for a type checker, and maybe 3K lines for a code generator.  You get the parser for free with Python.</li>
+<li>The C++ runtime is probably 3-5K lines for the data structures and garbage collector.</li>
+<li>The C++ syscall bindings might be another 3K lines.  This is so you can translate code like <code>os.execvpe()</code> to C++.</li>
+</ul>
+<p>So the whole job should be approximately 10K to 15K lines of code?</p>
+<p>However note that <strong>we already have a working prototype</strong>, which was started in 2019.  It passes over half the tests (though the garbage collector not turned on; it only works on small examples).  So I consider this project &quot;low risk&quot;  in some sense.</p>
+<h2>Compensation / Starting Date</h2>
+<ul>
+<li>TBD !!  This is a draft.</li>
+<li>To be transparent, we will try to get funding from a variety of sources
+<ul>
+<li>Probably apply for NLNet sponsorship (an organization sponsoring a lot of Nix projects, I noticed)</li>
+<li>Github Sponsors (Zig is using this)</li>
+<li>Solicit donations on the blog (which is popular e.g. on Hacker News)</li>
+</ul>
+</li>
+<li>I want to prioritize the <strong>right person</strong> over the funding / compensation.  If the right person shows up, and has a somewhat flexible starting date, I think we can make it happen.  (I can even front a salary myself, but I would prefer not to.)</li>
+<li>We should accept <strong>&quot;bids&quot;</strong> from multiple candidates.  But again we are not just choosing the lowest price!  We want the best quality result, at any price.</li>
+<li>The candidate should provide time estimates of the work above.  It's like a &quot;contracting&quot; position.</li>
+<li>I think that the person should be paid every 2 weeks, similar to a US Job.</li>
+</ul>
+<p>Location: can be anywhere in the world.  You will probably be video conferencing with me in the US eastern time zone.</p>
+<h3>Other details</h3>
+<ul>
+<li>All the code will be open source under the existing license (Apache 2)</li>
+</ul>
+<h2>Code Requirements</h2>
+<ul>
+<li>Output should be human readable, and run in a debugger  (already done in <code>oil-native</code>, must not regress)
+<ul>
+<li>We often choose to avoid &quot;safe&quot; features in favor of ones that can be easily and transparently stepped through in a debugger, similar to C code.  But we're more type safe than C code in general.</li>
+</ul>
+</li>
+<li>Should be compatible with common tools like ASAN and profilers (already done in <code>oil-native</code>, must not regress)</li>
+<li>Should be portable C++.  There should be almost zero #ifdefs for specific architectures or OSes.
+<ul>
+<li>I will help with automated testing on multiple compilers/architectures to verify this.</li>
+<li>We are currently compiling with <code>-std=c++11</code> for wider platform support</li>
+</ul>
+</li>
+<li>The translator should run relatively fast.</li>
+<li>The translator mostly needs to handle our 40K lines of code, so shortcuts should be taken at first.  But eventually the corner cases should turn into hard errors.  (Example: Python flat function scope vs. C++ block scope.   <em>You can simply ignore</em> this issue at first, and let the C++ compiler handle it.)</li>
+<li>The output should compile relatively fast.  We are tracking compile times with GCC and Clang.  (Right now I think the header structure is suboptimal.)</li>
+</ul>
+<h2>Questions</h2>
+<p><em>Who will I be working with?</em></p>
+<p>Mainly me :)  I will be working on the language, documentation, and improving the (very large) build system.  This mostly shouldn't affect what you're doing, although the code will be evolving.  (We catch any regressions in type checking or tests on every commit)</p>
+<p><em>Why not do this yourself?</em></p>
+<p>Basically because it's going too slowly, and potential users like Nix need a fast version of Oil.</p>
+<p><em>Why not recruit open source contributors to do it?</em></p>
+<p>I think this problem can be finished with a big block of time to concentrate on it.  I'm spread too thin, and other contributors have jobs.</p>
+<p>Note that there have been ~47 contributors to Oil's codebase, although none that are consistent over many months.</p>
+<p><em>Why C++?</em></p>
+<ul>
+<li>For the widest OS and CPU architecture support.  Shells are used on all sorts of systems.  To easily turn up new systems, the shell should be compiled with the same compiler as the kernel.</li>
+<li>People have started rewriting Oil in other languages, like Nim and Rust.  I encourage those efforts and hope Oil will have multiple implementations.  But they're not part of the project's core, whereas the C++ version is.</li>
+<li>Note that the estimated ~10K lines of C++ here is the <em>only</em> C++ in the Oil project!  We try to avoid writing C++ by hand
+<ul>
+<li>This also means that this part of the project has to be well-written and well-tested!  Must be of professional quality.</li>
+</ul>
+</li>
+</ul>
+<p><em>Why not plain C?</em></p>
+<p>It makes the translator easier to write, and the code should be easier to read and step through with GDB.</p>
+<ul>
+<li>Python classes are translated to C++ classes; functions are translated to functions</li>
+<li><code>Dict[K, V]</code> in MyPy is translated to <code>Dict&lt;K, V&gt;*</code> in C++</li>
+<li>Python exceptions are C++ exceptions</li>
+<li>Technical note: ASDL makes use of multiple inheritance in C++ to implement first class variant types.  (Rust can't apparently express this.).  This makes the layout slightly more efficient, and note we only don't inherit any fields.  We could do this in plain C without types, but it's nice to have the C++ type system as a sanity check.</li>
+</ul>
+<p><em>Why didn't you write the whole thing in C++ to begin with?</em></p>
+<p>bash is at least 140K of C code.  We implement most of it, and &quot;engulf&quot; it in the much richer Oil language.  So you're basically asking why I didn't write 200K or 300K lines of C or C++ by hand :)</p>
+<p>Our code is also memory safe by construction, since the metalanguage can't express anything unsafe.  So we aim to have 5-10K lines of hand-written native code, rather than 200K or 300K lines.</p>
+<h2>Why Work on this?  /  What You Get For Free</h2>
+<p>TODO</p>
+<ul>
+<li>A useful project</li>
+<li>Shell corner cases ironed out.  You are working with the metalanguage, not the language!  So you don't have to know much about shell.  (Although as mentioned, all the dev tools are written in shell + Python)</li>
+<li>Prototype of all the work that passes over half the tests.</li>
+</ul>
+<h2>Milestones</h2>
+<ol>
+<li>First make more tests pass with the existing translator and old runtime.  (2 weeks)</li>
+<li>Make Python's <code>configure</code> run (the OSH 0.0 milestone!)</li>
+<li>Make the existing ~1100 OSH tests pass</li>
+<li>Make <strong>all</strong> the OSH tests pass.
+<ul>
+<li>This is the &quot;delivery&quot; of <em>Four Features That Justify a New Unix Shell</em></li>
+</ul>
+</li>
+<li>Make it fast
+<ul>
+<li>maybe optimize the garbage collector itself, or optimize the code to generate less garbage</li>
+<li>generally we aim to be on par with bash or better.  If OSH is a lot slower than bash in some use case, then that's considered a bug.</li>
+</ul>
+</li>
+<li>Later: Translate the Oil language.
+<ul>
+<li>This depends on some work I have to do, like rewriting the expression evaluator.</li>
+</ul>
+</li>
+</ol>
+<p>TODO: when is it considered &quot;done&quot; ?  There are corner cases like the <code>./configure</code> script and extended globs, etc.</p>
+<h2>Similar Work</h2>
+<ul>
+<li>Pyxell (does type checking and C++ code generation in a single pass)
+<ul>
+<li>This is done entirely by a talented undergrad!  (who does competitive programming)   Oil probably needs more polish and &quot;production quality&quot;, but it's very similar.</li>
+</ul>
+</li>
+<li>Languist?</li>
+</ul>
+<h2>Prerequisite Work</h2>
+<ul>
+<li>Contributors need to be able to run CI
+<ul>
+<li>Otherwise we're ready to start!</li>
+</ul>
+</li>
+</ul>
+<h2>To Discuss</h2>
+<ul>
+<li>The new &quot;Tea&quot; translator should run on itself!  So we can compile our code faster.</li>
+</ul>
+<h2>Fun Stuff in the Future</h2>
+<p>This is definitely out of the scope of the project.</p>
+<p>But the person who is a good fit for this job might be excited or interested by future work.</p>
+<p>TODO: Tea language, bootstrapping, etc.</p>
+  </body>
+</html>
+

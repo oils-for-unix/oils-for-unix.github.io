@@ -1,0 +1,54 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Oil Dev Tips</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Back to <a href="Contributing.html">Contributing</a></p>
+<h2>Debugging Outside the Spec Test Framework: Pass <code>-p</code></h2>
+<p>Example:</p>
+<pre><code>test/spec.sh smoke -r 0 -p &gt; c0      # print the test case to a file
+_bin/cxx-dbg/osh_eval c0             # run the test case
+gdb --args _bin/cxx-dbg/osh_eval c0  # under GDB
+                                     # 'r' and 'bt' are the most useful commands
+</code></pre>
+<p><a href="Spec-Tests.html">Spec Tests</a></p>
+<h2>Soil CI starts at <code>soil/worker.sh</code></h2>
+<p>This file defines all the &quot;jobs&quot; and &quot;tasks&quot; you see at <a href="http://travis-ci.oilshell.org/github-jobs/">http://travis-ci.oilshell.org/github-jobs/</a></p>
+<p>It's the entry point to dozens of shell scripts!</p>
+<h2>AST and Parse Trees</h2>
+<p>If you do anything with the AST, use the <code>-n</code> flag to preview it</p>
+<pre><code>$ bin/oil -n -c 'proc p(x, @y) { echo hi }'
+(command.Proc
+  name: &lt;p&gt;
+  sig: (proc_sig.Closed untyped:[(UntypedParam name:&lt;Id.Expr_Name x&gt;)] rest:&lt;Id.Expr_Name y&gt;)
+  body: (BraceGroup children:[(C {&lt;echo&gt;} {&lt;hi&gt;})])
+)
+</code></pre>
+<p>This is really the &quot;LST&quot; -- <a href="Lossless-Syntax-Tree-Pattern.html">Lossless Syntax Tree Pattern</a></p>
+<hr />
+<p>If you want to see the Oil expression <strong>parse trees</strong>, uncomment the <code>if 0</code> blocks in <code>frontend/parse_lib.py</code>. Those are the entry points into the Oil parser, which uses a pgen2 grammar.</p>
+<pre><code>$ bin/oil -n -c 'proc p(x, @y) { echo hi }'
+0 oil_proc -
+  0 Op_LParen None
+  1 proc_params x
+    0 proc_param x
+      0 Expr_Name x
+    1 Arith_Comma None
+    2 proc_param @
+      0 Expr_At @
+      1 Expr_Name y
+  2 Op_RParen None
+  3 Op_LBrace None
+(command.Proc
+  name: &lt;p&gt;
+  sig: (proc_sig.Closed untyped:[(UntypedParam name:&lt;Id.Expr_Name x&gt;)] rest:&lt;Id.Expr_Name y&gt;)
+  body: (BraceGroup children:[(C {&lt;echo&gt;} {&lt;hi&gt;})])
+)
+</code></pre>
+  </body>
+</html>
+

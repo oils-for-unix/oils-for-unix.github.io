@@ -1,0 +1,44 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Travis CI for Oil</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Back to <a href="Contributing.html">Contributing</a></p>
+<p>NEW: <a href="Toil.html">Toil</a></p>
+<p>We use <a href="https://travis-ci.org/oilshell/oil">https://travis-ci.org/oilshell/oil</a> to run automated builds and tests.  The results are published to our <strong>own domain</strong> <a href="http://travis-ci.oilshell.org">http://travis-ci.oilshell.org</a>.</p>
+<h2>Build Configurations</h2>
+<p>TODO: Flesh this out more.</p>
+<p>Names:</p>
+<ol>
+<li><code>dev-minimal</code></li>
+<li><code>dev-all</code></li>
+<li><code>ovm-tarball</code></li>
+<li><code>ovm-bin</code></li>
+<li><code>native-tarball</code></li>
+<li><code>native-bin</code></li>
+<li><code>pyoil</code></li>
+</ol>
+<p>Descriptions:</p>
+<ol>
+<li>minimal dev build (<code>build/dev.sh minimal</code>) -- for people to quickly try Oil at <code>HEAD</code>.   Requires few dependencies; no re2c or CommonMark; Nix could make this obsolete.</li>
+<li>regular dev build (<code>build/dev.sh all</code>) -- what developers should run and modify to change Oil's behavior.  Fast iteration</li>
+<li>OVM tarball (<strong>arch independent</strong>).  OVM is the fork of the CPython interpreter.</li>
+<li>OVM binary -- building <code>oil.ovm</code> from the OVM tarball on Alpine, OS X, etc. -- arch-dependent.</li>
+<li><code>oil-native</code> tarball (<strong>arch independent</strong>).  This isn't done on Travis and uses the <code>mycpp</code> tool.</li>
+<li><code>oil-native</code> binary -- building <code>_bin/osh_eval.*</code> and eventually <code>oil</code> from the <code>oil-native</code> tarball.</li>
+</ol>
+<p>Platforms:</p>
+<ol>
+<li>Ubuntu (GNU libc, GNU readline)</li>
+<li>Alpine (musl libc)</li>
+<li>OS X (may or may not use GNU readline)</li>
+<li>nix on Linux</li>
+<li>nix on OS X (sensitive to libc)</li>
+</ol>
+  </body>
+</html>
+

@@ -1,0 +1,156 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Lossless Syntax Tree Pattern</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Feel free to add more resources to this page or clean it up!</p>
+<p><a href="Hacker-News-Comments-on-%22From-AST-to-Lossless-Syntax-Tree%22%7Chttps://news.ycombinator.com/item?id=13628412.html">Hacker News Comments on &quot;From AST to Lossless Syntax Tree&quot;|https://news.ycombinator.com/item?id=13628412</a></p>
+<h3>Other Names</h3>
+<ul>
+<li>RedBaron: Full Syntax Tree</li>
+<li>Go: AST
+<ul>
+<li><a href="Issue-20744:-Free-floating-comments-are-single-biggest-issue-when-manipulating-the-AST%7Chttps://github.com/golang/go/issues/20744.html">Issue 20744: Free-floating comments are single-biggest issue when manipulating the AST|https://github.com/golang/go/issues/20744</a></li>
+</ul>
+</li>
+<li>JavaScript: AST or CST</li>
+<li>Roslyn: Syntax Tree --  makes the explicit claim of being round-trippable
+<ul>
+<li><a href="Red-Green-Trees%7Chttps://ericlippert.com/2012/06/08/red-green-trees/.html">Red-Green Trees|https://ericlippert.com/2012/06/08/red-green-trees/</a>?  This term is more about how to
+handle insertions in an IDE, which change the position of every node after the insertion.  Red tree is a wrapper
+around the green tree.</li>
+</ul>
+</li>
+</ul>
+<h3>IDE Architecture</h3>
+<ul>
+<li>
+<p><a href="Roslyn%7Chttps://github.com/dotnet/roslyn/wiki/Roslyn-Overview.html">Roslyn|https://github.com/dotnet/roslyn/wiki/Roslyn-Overview</a> -- Microsoft's C# compiler platform</p>
+<ul>
+<li><a href="Anders-Hejlsberg-on-Modern-Compiler-Construction%7Chttps://news.ycombinator.com/item?id=11685317.html">Anders Hejlsberg on Modern Compiler Construction|https://news.ycombinator.com/item?id=11685317</a></li>
+</ul>
+</li>
+<li>
+<p><a href="JetBrains-Implementing-Parser-and-PSI%7Chttp://www.jetbrains.org/intellij/sdk/docs/reference_guide/custom_language_support/implementing_parser_and_psi.html.html">JetBrains Implementing Parser and PSI|http://www.jetbrains.org/intellij/sdk/docs/reference_guide/custom_language_support/implementing_parser_and_psi.html</a> -- <em>The AST nodes have a direct mapping to text ranges in the underlying document. The bottom-most nodes of the AST match individual tokens returned by the lexer, and higher level nodes match multiple-token fragments. Operations performed on nodes of the AST tree, such as inserting, removing, reordering nodes and so on, are immediately reflected as changes to the text of the underlying document.</em></p>
+<ul>
+<li><em>There is currently no ready way to reuse existing language grammars, for example, from ANTLR, for creating custom language parsers. The parsers need to be coded manually.</em> -- this should go in my meta-language rant</li>
+<li><em>Custom language parser and PSI classes can be generated from grammars using Grammar-Kit plugin. Besides code generation it provides various features for editing grammar files: syntax highlighting, quick navigation, refactorings and more. The Grammar-Kit plugin is built using its own engine and its source code can be found on GitHub.</em></li>
+<li><a href="https://www.youtube.com/watch?v=zDP9uUMYrvs">Comma, an IntelliJ-Based IDE for Raku</a> (YouTube).  Nice video with concrete experiences.  He talks about PSI nodes, how they are memory intensive and have stubs, etc.</li>
+</ul>
+</li>
+<li>
+<p><a href="Making-Tools-Kythe-Compatible%7Chttps://kythe.io/docs/kythe-compatible-compilers.html.html">Making Tools Kythe-Compatible|https://kythe.io/docs/kythe-compatible-compilers.html</a> -- I would have thought that Kythe had the LST concept, because it's basically an IDE, but I don't see it.  I guess that is because it's read-only?</p>
+</li>
+</ul>
+<h3>Lossless Representations</h3>
+<ul>
+<li>
+<p><a href="cst-for-JavaScript%7Chttps://github.com/cst/cst.html">cst for JavaScript|https://github.com/cst/cst</a> -- <em>CST means Concrete Syntax Tree. Unlike an AST (Abstract Syntax Tree), a CST contains all the information from the JavaScript source file: whitespace, punctuators, comments. This information is extremely useful for code style checkers and other code linters. CST is also useful for cases when you need to apply modifications to existing JavaScript files while preserving the initial file formatting.</em></p>
+</li>
+<li>
+<p><a href="JRuby-Parser%7Chttps://github.com/jruby/jruby-parser.html">JRuby Parser|https://github.com/jruby/jruby-parser</a> -- <em>JRuby once had a parser which kept track of all sorts of extra information when it built it's Abstract Syntax Tree (AST). Stuff like character offsets where a particular element started or ended. The impact of this extra information was a more than noticeable amount of memory and a bit of a perf impact. At the time we decided to discontinue having this sort of parser in JRuby we created JRubyParser.</em>* -- related to <a href="Parsing-Is-Difficult.html">Parsing Is Difficult</a></p>
+</li>
+<li>
+<p><a href="https://github.com/apple/swift/tree/master/lib/Syntax">Swift libSyntax</a> (thanks to <a href="https://www.reddit.com/r/ProgrammingLanguages/comments/8a9tx7/why_dont_more_languages_come_with_their_own/dwzblg0/">CAD1997</a> )</p>
+</li>
+</ul>
+<blockquote>
+<p>Currently, lib/AST structures don't make a very clear distinction between syntactic and semantic information. Long
+term, we hope to achieve the following based on work here:  In no particular order, here is a summary of the design
+and implementation points for this library:</p>
+<ul>
+<li>Represent Swift source with &quot;full fidelity&quot; - parsing a source file and printing the syntax tree should result in the same file.</li>
+<li>Provide good structured editing APIs at all granularities.</li>
+<li>Accommodate &quot;bad syntax&quot; - humans are imperfect and source code is constantly in a state of flux in an editor.</li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p><a href="https://github.com/KirillOsenkov/Bliki/wiki/Roslyn-Immutable-Trees">Roslyn Tree Optimizations</a>, deduplication is a surprisingly big one</p>
+</li>
+<li>
+<p>For configuration files:</p>
+<ul>
+<li>https://kev.inburke.com/kevin/more-comment-preserving-configuration-parsers/</li>
+<li>https://github.com/kevinburke/ssh_config
+<ul>
+<li><em>This is the second comment-preserving configuration parser I've written, after an /etc/hosts parser. Eventually, I will write one for every Linux file format.</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Style-Preserving Source Translators</h3>
+<ul>
+<li>
+<p>2to3 -- for Python 2 to Python 3</p>
+</li>
+<li>
+<p><a href="RedBaron%7Chttp://redbaron.readthedocs.io/en/latest/tuto.html.html">RedBaron|http://redbaron.readthedocs.io/en/latest/tuto.html</a> -- <em>RedBaron, by relying on Baron, uses a Full Syntax Tree (FST). It’s like an AST except it keeps every information, included formatting, and is then a lossless representation of the source code.</em></p>
+</li>
+<li>
+<p><a href="Facebook&#x27;s-jscodeshift%7Chttps://github.com/facebook/jscodeshift.html">Facebook's jscodeshift|https://github.com/facebook/jscodeshift</a> -- uses the recast library</p>
+<ul>
+<li><a href="recast%7Chttps://github.com/benjamn/recast.html">recast|https://github.com/benjamn/recast</a> - <em>JavaScript syntax tree transformer, nondestructive pretty-printer, and automatic source map generator</em></li>
+</ul>
+</li>
+<li>
+<p><a href="Facebook&#x27;s-pfff%7Chttps://github.com/facebook/pfff.html">Facebook's pfff|https://github.com/facebook/pfff</a> -- <em>Tools for code analysis, visualizations, or style-preserving source transformation</em></p>
+<ul>
+<li><a href="Facebook&#x27;s-Spatch-for-PHP%7Chttps://github.com/facebook/pfff/wiki/Spatch.html">Facebook's Spatch for PHP|https://github.com/facebook/pfff/wiki/Spatch</a>, based on the pfff toolkit</li>
+</ul>
+</li>
+<li>
+<p><a href="External-Clang-Examples%7Chttp://clang.llvm.org/docs/ExternalClangExamples.html.html">External Clang Examples|http://clang.llvm.org/docs/ExternalClangExamples.html</a> -- has clang-mutate, but it's dormant</p>
+</li>
+</ul>
+<h3>Source Reformatters</h3>
+<p>TODO: What data structures do these use?</p>
+<ul>
+<li>clang-format -- Clang AST, which is huge
+<ul>
+<li>http://clang.llvm.org/docs/LibFormat.html -- design is undocumented</li>
+</ul>
+</li>
+<li>gofmt -- uses the <a href="Go-AST-package%7Chttps://golang.org/pkg/go/ast/.html">Go AST package|https://golang.org/pkg/go/ast/</a>, which is reputed to be messy</li>
+<li>dartfmt -- <a href="The-Hardest-Program-I&#x27;ve-Ever-Written%7Chttp://journal.stuffwithstuff.com/2015/09/08/the-hardest-program-ive-ever-written/.html">The Hardest Program I've Ever Written|http://journal.stuffwithstuff.com/2015/09/08/the-hardest-program-ive-ever-written/</a></li>
+<li>yapf for Python</li>
+<li><a href="scalafmt%7Chttps://olafurpg.github.io/scalafmt/.html">scalafmt|https://olafurpg.github.io/scalafmt/</a></li>
+<li><a href="prettier%7Chttp://jlongster.com/A-Prettier-Formatter.html">prettier|http://jlongster.com/A-Prettier-Formatter</a> for JavaScript</li>
+<li><a href="rustfmt-Design%7Chttps://github.com/rust-lang-nursery/rustfmt/blob/master/Design.md#operate-on-the-ast.html">rustfmt Design|https://github.com/rust-lang-nursery/rustfmt/blob/master/Design.md#operate-on-the-ast</a> -- <a href="Blog-Post%7Chttp://kamalmarhubi.com/blog/2016/06/02/playing-with-the-rust-ast/.html">Blog Post|http://kamalmarhubi.com/blog/2016/06/02/playing-with-the-rust-ast/</a></li>
+<li><a href="dfmt%7Chttps://github.com/Hackerpilot/dfmt.html">dfmt|https://github.com/Hackerpilot/dfmt</a> First uses a parsers to generate <a href="lists-of-locations-with-special-meanings%7Chttps://github.com/Hackerpilot/dfmt/blob/019d42a4dcaf07fcb8b98039bdbf482b211d9d84/src/dfmt/ast_info.d#L35.html">lists of locations with special meanings|https://github.com/Hackerpilot/dfmt/blob/019d42a4dcaf07fcb8b98039bdbf482b211d9d84/src/dfmt/ast_info.d#L35</a>. Then goes through a lossless token stream to format.</li>
+<li><a href="FemtoCleaner---A-bot-to-automatically-upgrade-your-Julia-syntax%7Chttps://juliacomputing.com/blog/2017/08/17/femtocleaner.html.html">FemtoCleaner - A bot to automatically upgrade your Julia syntax|https://juliacomputing.com/blog/2017/08/17/femtocleaner.html</a> (August 2017)
+<ul>
+<li><em>Unfortunately, while julia’s parser is accessible from within the language and can be used to find these instances of deprecated syntax, it cannot be used for our purposes. This is because it does not support our second goal - style preservation.</em> -- <a href="Parsing-Is-Difficult.html">Parsing Is Difficult</a></li>
+<li><em>There are several names of this concept, “round-tripable representation”, “Concrete Syntax Tree (CST)” or “Lossless Syntax Tree” being perhaps the most common. Luckily, in the Julia ecosystem we have not one, but two choices for such a parser</em></li>
+</ul>
+</li>
+</ul>
+<h3>Other Docs / Designs / Discussions</h3>
+<ul>
+<li>
+<p><a href="Haskell-GHC-AST-Annotations%7Chttps://ghc.haskell.org/trac/ghc/wiki/GhcAstAnnotations.html">Haskell GHC AST Annotations|https://ghc.haskell.org/trac/ghc/wiki/GhcAstAnnotations</a> -- <em>Simplify the roundtripping and modification of source by explicitly capturing the missing location information for the syntactic markers</em></p>
+</li>
+<li>
+<p><a href="What-to-do-about-comments?%7Chttp://lambda-the-ultimate.org/node/2908#comment-64891.html">What to do about comments?|http://lambda-the-ultimate.org/node/2908#comment-64891</a> on Lambda the Ultimate</p>
+</li>
+<li>
+<p>https://news.ycombinator.com/item?id=13914218 -- From C# compiler dev -- <em>Resilient parsing. This is the big one! If you give our parser a string that is illegal according to the grammar, our parser will still give you a syntax tree! (We'll also spit errors out). But getting a syntax tree regardless of the actual validity of the program being passed in means that the IDE can give autocomplete and report type-checking error messages. As an example, the code &quot;var x = velocity.&quot; is invalid C#. However, in order to give autocomplete on &quot;velocity&quot;, that code needs to be parsed into an AST, and then typechecked, and then we can extract the members on the type in order to provide a good user experience.</em></p>
+</li>
+</ul>
+<h3>Transpilers</h3>
+<p>These don't need to use the Lossless Syntax Tree because the resulting code won't be edited by a human.</p>
+<ul>
+<li>CoffeeScript, etc.</li>
+</ul>
+<h3>Related</h3>
+<ul>
+<li><a href="Compact-AST-Representation.html">Compact AST Representation</a></li>
+</ul>
+  </body>
+</html>
+

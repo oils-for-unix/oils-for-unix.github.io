@@ -1,0 +1,67 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Tips on Reducing Bugs to Small Test Cases</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>How can we find bugs more efficiently with <code>regtest/aports</code>?</p>
+<p>This page is <strong>editable</strong>.  Please add tips!</p>
+<h2>Links</h2>
+<ul>
+<li><a href="Process-Tracing-Tips-and-Tools.html">Process Tracing Tips and Tools</a></li>
+<li>Markdown doc in the repo: <a href="https://github.com/oils-for-unix/oils/blob/master/regtest/aports.md">regtest/aports.md</a>
+<ul>
+<li>TODO: maybe we should move that doc to this wiki page</li>
+</ul>
+</li>
+<li>Example from Aidan: <a href="https://aolsen.ca/writings/reproducing-dtc-failure">OSH Bug: Reducing dtc package test failure to a printf '%b' bug</a></li>
+</ul>
+<h2>Set up Chroot</h2>
+<p>This is documented at the top of  <code>regtest/aports-setup.sh</code></p>
+<pre><code>regtest/aports-setup.sh  fetch-all    # git clone aports, etc.
+regtest/aports-setup.sh  prepare-all  # runs alpine-chroot-install  script
+                                      # also sets up OverlayFS dir with oils-for-unix
+</code></pre>
+<p>and</p>
+<pre><code>regtest/aports-setup.sh  remove-all  # start from scratch
+</code></pre>
+<h3>Having trouble?</h3>
+<ul>
+<li>To start <strong>even more</strong> from scratch, fully remove <code>_chroot</code> (<code>rm -r _chroot/</code>) and don't use sudo when running the above commands.</li>
+</ul>
+<h2>Command to Reproduce an Individual Package Failure</h2>
+<p>This is documented in <code>regtest/aports-run.sh</code></p>
+<p>Build package with overlayfs:</p>
+<pre><code>regtest/aports-run.sh build-package-overlayfs osh-as-sh userspace-rcu  # can also pass 'baseline'
+</code></pre>
+<p>Add the INTERACTIVE=1 flag to drop into a shell:</p>
+<pre><code>INTERACTIVE=1 regtest/aports-run.sh build-package-overlayfs osh-as-sh userspace-rcu
+</code></pre>
+<p>Build a package in <code>community</code>, not <code>main</code>:</p>
+<pre><code>regtest/aports-run.sh build-package-overlayfs osh-as-sh R community
+</code></pre>
+<h2>Sometimes You Have to Find a Log File Where the Real Errors Are</h2>
+<p>e.g for <code>userspace-rcu</code>, we get this failure:</p>
+<blockquote>
+<p>See tests/unit/test-suite.log
+Please report to mathieu dot desnoyers at efficios dot com</p>
+</blockquote>
+<p>But then you have to know to change to the right directory in the <code>chroot</code>, which is <code>~/aports/main/userspace-rcu</code></p>
+<p>And then the source is unpacked to <code>src/userspace-rcu-$VERSION</code></p>
+<pre><code>osh-0.35$ pwd
+/home/udu/aports/main/userspace-rcu/src/userspace-rcu-0.15.2
+</code></pre>
+<p>Then <code>tests/unit/test-suite.log</code> is <strong>relative</strong> to that dir</p>
+<h2><code>set -x; export SHELLOPTS</code> enables tracing across all bash (and OSH) processes</h2>
+<p>This is a feature that's specific to bash, and that OSH also has</p>
+<p>This helped Melvin reduce bug <a href="https://github.com/oils-for-unix/oils/issues/2416">#2416</a></p>
+<h2>Related</h2>
+<ul>
+<li><a href="Updating-Causes-of-Aports-Failures.html">Updating Causes of Aports Failures</a></li>
+</ul>
+  </body>
+</html>
+

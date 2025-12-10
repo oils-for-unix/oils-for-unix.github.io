@@ -1,0 +1,74 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>each Keyword in Oil</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<ul>
+<li>Up: <a href="Structured-Data-in-Oil.html">Structured Data in Oil</a>
+<ul>
+<li>Related: <a href="TSV2-Proposal.html">TSV2 Proposal</a></li>
+</ul>
+</li>
+</ul>
+<p>Idea:</p>
+<pre><code>cat tasks.tsv2 | each (...) {
+  run-task $name $age
+}
+
+
+# extract 2 of 4 columns, assert that there are 4
+cat tasks.tsv2 | each (_, name Str, age Int, _) {
+  run-task $name $age
+}
+
+</code></pre>
+<p>Idea for ad-hoc data with no schema.  This is useful because argv aren't typed!!!</p>
+<pre><code>tasks() {
+  # note no header line:
+  echo $'one\t000'
+  echo $'two\t555'
+}
+
+tasks | each [name age] { run-task $name $age }
+</code></pre>
+<ul>
+<li>how do you specify parallelism?</li>
+</ul>
+<pre><code>cat tasks.tsv2 | each -parallel 4 (...) {
+  echo $name $age
+}
+</code></pre>
+<p>Is that hard to parse?</p>
+<h3>Other options</h3>
+<p><code>each --verbose</code> or <code>each --ui</code> -- show progress!  Enable cancellation?</p>
+<h3>Links</h3>
+<ul>
+<li><a href="https://www.oilshell.org/share/05-24-pres.html">What is xargs -P?  And When is it Useful?</a> -- a 5 minute presentation.
+<ul>
+<li>Solution when each process has non-trivial setup time: <a href="Coprocess-Protocol-Proposal.html">Coprocess Protocol Proposal</a></li>
+</ul>
+</li>
+</ul>
+<h3>Oil Builtins</h3>
+<p>Instead of:</p>
+<pre><code>tasks() {
+  echo $'name\tage:int'
+  echo $'one\t000'
+  echo $'two x\t555'
+}
+</code></pre>
+<p>In Oil you could write:</p>
+<pre><code>proc tasks {
+  tsv2-row    name    age:int
+  tsv2-row    one     000
+  tsv2-row    'two x' 555
+}
+</code></pre>
+<p>It's just a nicer syntax.</p>
+  </body>
+</html>
+

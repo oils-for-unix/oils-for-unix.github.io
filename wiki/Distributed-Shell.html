@@ -1,0 +1,148 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Distributed Shell</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Old: <a href="Project-Goals.html">Project Goals</a></p>
+<ul>
+<li>&quot;Toil&quot; for multi-cloud distributed builds: <a href="http://www.oilshell.org/blog/2020/11/fixes-and-updates.html#buildssrht-and-toil">http://www.oilshell.org/blog/2020/11/fixes-and-updates.html#buildssrht-and-toil</a>.
+<ul>
+<li>Results: http://travis-ci.oilshell.org/</li>
+<li>Problems:</li>
+<li>Does too much work (not incremental), and doesn't do it fast enough (not parallel)
+<ul>
+<li>needs dependencies for both problems!</li>
+</ul>
+</li>
+<li>In some cases, the framework has more overhead than the work done by the application.  We want lightweight distributed processes.</li>
+<li>YAML is a really bad syntax for a shell script.</li>
+</ul>
+</li>
+<li>Pash and Posh are related: <a href="https://github.com/oilshell/oil/issues/867">https://github.com/oilshell/oil/issues/867</a>
+<ul>
+<li>Actually Posh is from many of the same authors as gg, but doesn't appear to be open source, and is technically unrelated?</li>
+<li><a href="https://www.usenix.org/conference/atc20/presentation/raghavan">https://www.usenix.org/conference/atc20/presentation/raghavan</a>.  Section 6.2 talks about the execution engine which is not similar to gg.  I suppose it is a slightly different problem.</li>
+</ul>
+</li>
+</ul>
+<h2>Notes on gg (Ad Hoc Multi-Cloud Distribution with Lambdas)</h2>
+<ul>
+<li>Great intro blog post, concentrating mostly on the C++ build use case, which indeed has some unique elements: <a href="https://buttondown.email/nelhage/archive/papers-i-love-gg/">https://buttondown.email/nelhage/archive/papers-i-love-gg/</a>
+<ul>
+<li>reaction: distcc pump is another solution to the preprocessor problem, although neither model substitution or distcc pump are fully general</li>
+</ul>
+</li>
+<li>Great Usenix ATC '19 Video: <a href="https://www.youtube.com/watch?v=Cc_MVldSijA&amp;ab_channel=USENIX">https://www.youtube.com/watch?v=Cc_MVldSijA&amp;ab_channel=USENIX</a>
+<ul>
+<li>I really like the framing: low latency (which is why I use shell in the first place), warm vs. cold clusters</li>
+<li>IR is extremely similar to Blaze/Forge (and described with a tiny set of protobufs!)</li>
+</ul>
+</li>
+<li>HN comments from July 2019: <a href="https://news.ycombinator.com/item?id=20433315">https://news.ycombinator.com/item?id=20433315</a>
+<ul>
+<li>Lambda still has some limitations for huge packages.  Good experience report here (althuogh it sounds like the commenter could benefit from &quot;proper&quot; declared dependencies)</li>
+<li>What about state in lambdas?</li>
+</ul>
+</li>
+<li>Source Code: <a href="https://github.com/StanfordSNR/gg">https://github.com/StanfordSNR/gg</a>
+<ul>
+<li>Example of how to use it to build LLVM: <a href="https://github.com/StanfordSNR/gg/tree/master/examples/llvm">https://github.com/StanfordSNR/gg/tree/master/examples/llvm</a></li>
+</ul>
+</li>
+<li>My initial reaction: <a href="https://lobste.rs/s/virbxa/papers_i_love_gg#c_nbmnod">https://lobste.rs/s/virbxa/papers_i_love_gg#c_nbmnod</a></li>
+<li>Concepts
+<ul>
+<li>Model Substitution</li>
+<li>Tail Recursion</li>
+<li>Dynamic dependendencies, not static (how does it relate to Shake?)</li>
+<li>Lambdas can talk to each other (via NAT traversal?)  Solves a well known performance issue.</li>
+</ul>
+</li>
+<li>Citations: UCop, Ciel</li>
+<li>My sense on limitations
+<ul>
+<li>It's not a fully general shell parallelizer, because it's mainly about small data and big compute.  Some problems are big data and small compute, like analytics (joins, etc.)  Although POSH fills that gap to some extent!</li>
+<li>For C++ compilation, these models are pretty complex: https://github.com/StanfordSNR/gg/tree/master/src/models
+<ul>
+<li>but maybe it's done so it's not a problem?</li>
+<li>No I think this is the core difficulty with gg.   Suppose you pass <code>-fsanitize=address</code> to the C++ compiler.  Then the &quot;model&quot; has to know that this also involves linking the ASAN runtime.  That is a lot of duplication.</li>
+<li>Also is tracing Python command line tools like MyPy a problem?  Then you have to write a Python &quot;model&quot;</li>
+<li>This is very related to Guo's CDE -- using tracing to package up a minimal reproducible binary</li>
+</ul>
+</li>
+<li>The single machine with 48 cores is very competitive with distributed C++ compilation, and beats it in many cases, which shows how hard that problem is.</li>
+<li>It can't handle say a shell script that downloads unknown files in the middle, e.g. doing an <code>apt install</code>.  I think the full set of files has to be known up front, and then gg can select the subset that needs to be transmitted to a particular node.</li>
+</ul>
+</li>
+<li>Their Notes on Limitations / Future Work
+<ul>
+<li>Worker communication (didn't understand the NAT traversal bit)</li>
+<li>They want to schedule thunks onto GPUs</li>
+<li>A gg DSL!  They have a C++ and Python SDK.  They say they want &quot;parallel map&quot;, &quot;fold&quot;, etc. What does this look like?</li>
+</ul>
+</li>
+<li>Questions
+<ul>
+<li>Where does the scheduler run? (on a lambda? Or does the client need to be connected the whole time)</li>
+<li>How does the worker-to-worker communication work?</li>
+<li>What would the DSL look like?</li>
+</ul>
+</li>
+</ul>
+<h2>Project Ideas</h2>
+<ul>
+<li>Can Pash, Posh, gg, be unified under a single IR?  What does language support look like?
+<ul>
+<li>And dgsh and Walker's distributed shell <a href="https://github.com/oilshell/oil/issues/867">https://github.com/oilshell/oil/issues/867</a> ?</li>
+</ul>
+</li>
+<li>First, try gg to see  how well it works
+<ul>
+<li>run their examples</li>
+<li>create a new example (e.g. out of our own repo)</li>
+</ul>
+</li>
+<li>Second: Oil front end rather than model sub, &quot;scripting&quot;, Python, C++).  Does that make sense?  That's in their future work -- a gg DSL.
+<ul>
+<li>Is there some sort of command line wrapper style that specifies inputs / outputs unambiguously that can be used to wrap every command?  Then you don't need model substitution?</li>
+<li>Can we use gg without syscall tracing?  It's not really mainstream; it may cause engineering problems or limit generality.</li>
+</ul>
+</li>
+<li>Run &quot;Toil&quot; on gg.  For portable continuous builds
+<ul>
+<li>And try building container images ?  A &quot;meta build&quot; system.</li>
+</ul>
+</li>
+<li>Does it make sense to augment gg with streams?  For shell pipelines?
+<ul>
+<li>dgsh uses Unix domain sockets to implement pipelines</li>
+</ul>
+</li>
+<li>Big project: write a faster executor that addresses the object distribution problem with differential compression / affinity (e.g. OSTree/casync).  Lambda has some limitations on what containers you can run (500 MiB).</li>
+<li>Could Oil be a local executor the gg runtime?  What does the file system look like?
+<ul>
+<li>you need a component to set up the file system, I guess a user space chroot / bind tool?</li>
+</ul>
+</li>
+<li>How can Oil express explicit dependencies but also get have fine grained tasks that are fast to start up?
+<ul>
+<li>I think we prefer explicit dependencies over model substitution for most problems.  Although I feel like
+the system should be &quot;factored&quot; to support both.</li>
+</ul>
+</li>
+</ul>
+<h2>Research Projects</h2>
+<ul>
+<li>PaSH (parallelizing pipelines, with &amp;)</li>
+<li>POSH (moving code to data)</li>
+<li>PUSH, a DISC Shell: <a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.461.1152&amp;rep=rep1&amp;type=pdf">https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.461.1152&amp;rep=rep1&amp;type=pdf</a></li>
+<li>dgsh -- directed graph shell (Unix domain sockets)</li>
+<li>Walker Shell: forks, joins, cycles, and key-value aggregation</li>
+</ul>
+  </body>
+</html>
+

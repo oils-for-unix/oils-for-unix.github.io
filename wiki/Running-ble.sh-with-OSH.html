@@ -1,0 +1,178 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Running ble.sh with OSH</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Related: <a href="How-Interactive-Shells-Work.html">How Interactive Shells Work</a> - <a href="https://github.com/akinomyoga/ble.sh">https://github.com/akinomyoga/ble.sh</a></p>
+<p>This is <a href="https://github.com/oilshell/oil/issues/653">issue #653</a>, in particular <a href="https://github.com/oilshell/oil/issues/653#issuecomment-599227422">the list of tasks in this comment</a>.</p>
+<h3>Bugs Found by Running Ble.sh</h3>
+<ul>
+<li>[X] <a href="https://oilshell.zulipchat.com/#narrow/stream/121540-oil-discuss/topic/.5Creturn.200.20doesn&#x27;t.20work">Zulip</a> 49. BUG <code>\return 0</code> doesn't work (Refs: <a href="https://github.com/oils-for-unix/oils/issues/2228">#2228</a>)</li>
+<li>[ ] <a href="https://github.com/oils-for-unix/oils/issues/1069#issuecomment-2676227009">#1069</a> 53. BUG: <code>a[1 + 1]=2</code>, etc. fails</li>
+</ul>
+<h3>Features Needed to Run Ble.sh</h3>
+<ul>
+<li>[ ] <a href="https://github.com/oilshell/oil/issues/647">#647</a> NYI: <code>declare -p</code>, etc.
+<ul>
+<li>[x] <code>declare</code>, <code>declare -p</code>  (<a href="https://github.com/oilshell/oil/issues/671">#671</a>)</li>
+<li>[ ] <code>declare -f</code>, <code>type function</code> ★</li>
+<li>[ ] <code>trap</code>, <code>trap -p</code></li>
+</ul>
+</li>
+<li>[ ] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-599222774">#653</a> 16. NYI: <code>read -t timeout</code> / <code>builtin sleep</code> <a href="https://github.com/oilshell/oil/issues/684">#684</a></li>
+<li>[ ] <a href="https://github.com/oilshell/oil/issues/680">#680</a> <code>trap -l</code></li>
+<li>[ ] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-609458027">#653</a> 19. NYI: let (<a href="https://github.com/oilshell/oil/issues/622">#622</a>)</li>
+<li>[ ] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-611830373">#653</a> 28. NYI: <code>declare -iluc</code> and flags <code>iluc</code> in <code>${var@a}</code></li>
+<li>[ ] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-611830373">#653</a> 32. NYI: <code>LC_CTYPE</code> (or Binary manipulations) (<a href="https://github.com/oilshell/oil/issues/527">#527</a> and <a href="https://github.com/oilshell/oil/issues/529">#529</a>)</li>
+<li>[ ] <a href="https://github.com/oilshell/oil/issues/1069#issuecomment-1547022364">#1069</a> 39. NYI: <code>EPOCHREALTIME</code>, <code>SECONDS</code>, and other dynamic variables</li>
+<li>[ ] <a href="https://github.com/oilshell/oil/issues/1069#issuecomment-1547033619">#1069</a> 40. BUG: <code>a=(declare v); &quot;${a[@]}&quot;</code> fails</li>
+<li>[ ] <a href="https://github.com/oils-for-unix/oils/issues/1069#issuecomment-2692737256">#1069</a> 59. Assigning Str to BashArray/BashAssoc removes BashArray/BashAssoc</li>
+</ul>
+<h3>Others</h3>
+<ul>
+<li>[ ] <a href="https://github.com/oilshell/oil/issues/654">#654</a> DOC: redefinable builtins?</li>
+<li>[ ] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-609516596">#653</a> 24. COMPAT/ERRMSG: Oil tries to execute the first path in PATH for an empty command (<a href="https://github.com/oilshell/oil/issues/690">#690</a>)</li>
+<li>[ ] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-611830373">#653</a> 35. COMPAT: Oil session closed by <code>exec non-existent-command</code></li>
+</ul>
+<h3>Completed</h3>
+<ul>
+<li>[x] <a href="https://github.com/oils-for-unix/oils/pull/2197">#2197</a>, <a href="https://github.com/oils-for-unix/oils/pull/2299">#2299</a>, <a href="https://github.com/oils-for-unix/oils/pull/2306">#2306</a> <code>bind -x</code> to get user input.</li>
+<li>[x] <a href="https://github.com/oils-for-unix/oils/issues/1069#issuecomment-2676227009">#1069</a> 52. BUG: <code>\builtin local v=1</code> fails (Refs: <a href="https://oilshell.zulipchat.com/#narrow/channel/121540-oil-discuss/topic/builtin.20local.20in.20eval.20doesn&#x27;t.20work/near/448190466">Zulip</a>)</li>
+<li>[x] <a href="https://github.com/oils-for-unix/oils/issues/1069#issuecomment-2692687254">#1069</a> 56. BUG: <code>declare -p unset</code> does not print any error message</li>
+<li>[x] <a href="https://github.com/oils-for-unix/oils/issues/1069#issuecomment-2692687254">#1069</a> 57. BUG: variable v is invisible after <code>IFS= eval 'local v=...'</code></li>
+<li>[x] <a href="https://oilshell.zulipchat.com/#narrow/stream/384942-language-design/topic/Other.20BashArray.2FBashAssoc.20compatibility.20issues.20-.20ble.2Esh">Zulip</a> 45. NYI sparse array (<a href="https://github.com/oils-for-unix/oils/pulls?q=is%3Apr+is%3Aclose+author%3Aakinomyoga+SparseArray">List of related pull requests</a>)</li>
+<li>[x] <a href="https://github.com/oils-for-unix/oils/issues/1069#issuecomment-2676242763">#1069</a> 54. BUG: <code>shopt -u expand_aliases</code> fails and stops execution (fix <a href="https://github.com/oils-for-unix/oils/commit/24146f4b0a223354c5f2e42e59cad00358ff82a5"><code>24146f4b</code></a>)</li>
+<li>[x] <a href="https://github.com/oils-for-unix/oils/issues/1069#issuecomment-2676695101">#1069</a> 55. BUG: 1.1 GB memory use with <code>eval_unsafe_arith</code> (<a href="https://github.com/oils-for-unix/oils/issues/2263">#2263</a>, Fix: <a href="https://github.com/oils-for-unix/oils/pull/2268">#2268</a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-609516596">#653</a> 22. COMPAT: <code>builtin declare</code> doesn't work (<a href="https://github.com/oilshell/oil/issues/654">#654</a>)</li>
+<li>[x] <a href="https://github.com/oils-for-unix/oils/issues/1069#issuecomment-2692703567">#1069</a> 58. BUG: <code>mapfile -t</code> stops reading the input with an empty line (<a href="https://github.com/oilshell/oil/issues/2287">#2287</a>, fix <a href="https://github.com/oils-for-unix/oils/commit/6431d76a4d3eb9158f60cafe581b13944d359081"><code>6431d76</code></a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/652">#652</a> CONSISTENCY: Check <code>declare -A d=([k]=v)</code> (became irrelevant since InitializerList is implemented in <a href="https://github.com/oils-for-unix/oils/pull/2279">#2279</a>)</li>
+</ul>
+<!-- raw HTML omitted -->
+<h3>Bugs</h3>
+<ul>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-611830373">#653</a> 29. BUG: Cannot parse <code>${arr[@]::}</code>
+<ul>
+<li>Fix <a href="https://github.com/oilshell/oil/pull/725">#725</a> (Rejected)</li>
+<li><a href="https://oilshell.zulipchat.com/#narrow/stream/307442-nix/topic/if.20.28.28.20.29.29.3B.20then.20token.20can&#x27;t.20be.20used.20in.20prefix.20position">#nix &gt; if (( )); then token can't be used in prefix position - Oils - Zulip</a></li>
+<li><a href="https://oilshell.zulipchat.com/#narrow/stream/121540-oil-discuss/topic/.24.7Barr.5B.40.5D.3A.3A.7D.20in.20bash.20-.20is.20it.20documented.3F">#oil-discuss &gt; ${arr[@]::} in bash - is it documented? - Oils - Zulip</a></li>
+<li><a href="https://github.com/oilshell/oil/commit/b8ec0f726c96cc34d696fcc0660e5b3138c87bc4"><code>b8ec0f72</code></a>, <a href="https://github.com/oilshell/oil/commit/2b679882642868557ae4483e8128853511c12aa1"><code>2b679882</code></a>, <a href="https://github.com/oilshell/oil/commit/986a39e09d963cb741acd25a6328892bd7e275ad"><code>986a39e0</code></a></li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/1069#issuecomment-1009741234">#1069</a> 38. Regression <code>${var@a}</code> with compat_array (Fix <a href="https://github.com/oilshell/oil/commit/9559c8ad3aaada39c5cf293b0842e6e2b35566f8"><code>9559c8ad</code></a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/1069#issuecomment-1547046196">#1069</a> 41. BUG: <code>[ -c /dev/null ](--c-/dev/null-.html)</code> fails in C++ version (fix <a href="https://github.com/oilshell/oil/issues/1618">#1618</a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/1069#issuecomment-1548924974">#1069</a> 42. BUG: <code>osh -c 'read -d :'</code> fails in the C++ osh (not in the Python osh) (Fix <a href="https://github.com/oilshell/oil/issues/1629">#1629</a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/1069#issuecomment-1548924974">#1069</a> 43. BUG: <code>shopt -u expand_aliases</code> fails in scripts sourced with arguments (Fix <a href="https://github.com/oilshell/oil/issues/1628">#1628</a>)</li>
+<li>[x] <a href="https://oilshell.zulipchat.com/#narrow/stream/121540-oil-discuss/topic/Integer.20truncation.20bugs">Zulip</a> 46. BUG(c++) ((1&lt;&lt;32)) fails (Fix <a href="https://github.com/oilshell/oil/commit/c84c4054e3923ee1322d7c89b7b125a97222a1d8"><code>c84c4054</code></a>)</li>
+<li>[x] <a href="https://oilshell.zulipchat.com/#narrow/stream/121540-oil-discuss/topic/Integer.20truncation.20bugs">Zulip</a> 47. BUG(c++) printf %d $((1&lt;&lt;31)) fails (Fix <a href="https://github.com/oilshell/oil/commit/c26d3202e2dadd44f0c3b098b15d3361eb89332d"><code>c26d3202</code></a>)</li>
+<li>[x] <a href="https://oilshell.zulipchat.com/#narrow/stream/121540-oil-discuss/topic/osh.20-c.20&#x27;echo.20.24.28.28arr.5B0.5D.29.29&#x27;.20fails">Zulip</a> 48. BUG osh -c 'echo $((arr[0]))' fails (Fix <a href="https://github.com/oilshell/oil/commit/435acd16ba899702586c8476a01958f98962dccf"><code>435acd16</code></a>)</li>
+<li>[x] <a href="https://oilshell.zulipchat.com/#narrow/stream/121540-oil-discuss/topic/builtin.20local.20in.20eval.20doesn&#x27;t.20work">Zulip</a> 50. BUG local in eval doesn't work (Fix <a href="https://github.com/oilshell/oil/commit/c3eee5fd3b091fff21a58bc821b3c75c499588e5"><code>c3eee5fd</code></a>)</li>
+<li>[x] <a href="https://oilshell.zulipchat.com/#narrow/stream/121540-oil-discuss/topic/option.20-i.20.20in.20declare.20-i.20v.3D1.2B2.2B3.2B4.20is.20silently.20ignored">Zulip</a> 51. BUG option -i in declare -i v=1+2+3+4 is silently ignored</li>
+</ul>
+<h2>NYI</h2>
+<ul>
+<li>[x] <code>read -t 0</code> (Or <code>select</code>/<code>poll</code>-like feature)
+<ul>
+<li>what C function do we want to wrap?  <code>select()</code> on the terminal?</li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/146">#146</a> NYI: <code>mapfile</code> / <code>readarray</code> ★ (tests <a href="https://github.com/oilshell/oil/issues/666">#666</a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/701#issuecomment-1548754086">#701</a> 44. NYI nocasematch (Fix <a href="https://github.com/oilshell/oil/pull/1748">#1718</a>)</li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3>Bugs Found by Running Ble.sh</h3>
+<ul>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-611830373">#653</a> 30. BUG: <code>${arr[@]::0}</code> prints all the elements</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-611830373">#653</a> 33. BUG: Redirection of 2 is persistent after <code>: 2&gt;/dev/null &gt;&amp;30</code> (Fix <a href="https://github.com/oilshell/oil/pull/723">#723</a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-611830373">#653</a> 37. BUG: <code>{fd}&gt;&amp;-</code> does not close the fd (Fix <a href="https://github.com/oilshell/oil/pull/723">#723</a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/pull/724">#724</a> BUG: Digits in <code>$((base#num))</code> are reversed</li>
+<li>[x] <a href="https://github.com/oilshell/oil/pull/726">#726</a> BUG: <code>${#BASH_SOURCE}</code> and <code>${BASH_SOURCE:offset:length}</code> count array elements.</li>
+<li>[x] <a href="https://github.com/oilshell/oil/pull/729">#729</a> BUG: Result of <code>IFS= read -n 1 char</code> disappears</li>
+<li>[x] <a href="https://github.com/oilshell/oil/pull/731">#731</a> BUG: <code>declare -a arr</code> removes existing arrays</li>
+</ul>
+<h3>Features Needed to Run Ble.sh</h3>
+<ul>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-611830373">#653</a> 26. NYI: Dynamic <code>unset</code> (<a href="https://github.com/oilshell/oil/issues/706">#706</a> Tests <a href="https://github.com/oilshell/oil/pull/723">#718</a>) ★</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-611830373">#653</a> 31. COMPAT: shopt for <code>$ARRAY</code>? ★ (Fix <a href="https://github.com/oilshell/oil/pull/728">#728</a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-611830373">#653</a> 34. NYI: <code>$BASHPID</code> (or Current subshell PID)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/727">#727</a> NYI <code>1?a=1:1</code> (Ref <a href="https://github.com/oilshell/oil/issues/712">#712</a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/pull/728">#728</a> NYI: shopt for <code>$ARRAY</code>? ★ (Additional fix <a href="https://github.com/oilshell/oil/pull/733">#733</a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/pull/730">#730</a> NYI: <code>printf %d \'</code> for <code>NUL</code></li>
+</ul>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<ul>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/620">#620</a> NYI: <code>return 2&gt;/dev/null</code></li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/637">#637</a> CONSISTENCY: <code>type return</code></li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/537">#537</a> NYI: <code>test -k</code> (<a href="https://github.com/oilshell/oil/issues/649">#649</a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/640">#640</a> NYI: <code>((${prefix}a=${prefix}b))</code> (cf <a href="https://github.com/oilshell/oil/issues/644">#644</a> <a href="https://github.com/oilshell/oil/issues/670">#670</a>) ★★</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/651">#651</a> NYI: <code>unset -v 'a[0]'</code> ★★</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-599087679">#653</a> 1. CONSISTENCY: default <code>[ -o emacs ](--o-emacs-.html)</code> in interactive sessions ★
+<ul>
+<li>[ ] <!-- raw HTML omitted --><a href="https://github.com/oilshell/oil/issues/659">#659</a> <code>set +o emacs</code><!-- raw HTML omitted --></li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-599087679">#653</a> 2. NYI: <code>$FUNCNAME</code> / <code>$BASH_LINENO</code> (<a href="https://github.com/oilshell/oil/issues/656">#656</a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-599087679">#653</a> 3. BUG: <code>${*:offset}</code> (<a href="https://github.com/oilshell/oil/issues/658">#658</a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-599087679">#653</a> 4. BUG: <code>${!prefix@}</code> self-rewrites (<a href="https://github.com/oilshell/oil/issues/657">#657</a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-599177874">#653</a> 5. CONSISTENCY: <code>declare -A dict=()</code> (<a href="https://github.com/oilshell/oil/issues/661">#661</a>) ★★</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-599177874">#653</a> 6. NYI: <code>exec 5&lt;&gt; a.pipe</code> (cf <a href="https://github.com/oilshell/oil/issues/223">#223</a> <a href="https://github.com/oilshell/oil/issues/667">#667</a> <a href="https://github.com/oilshell/oil/issues/672">#672</a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-599177874">#653</a> 7. NYI: <code>exec {fd}&gt; a.txt</code> (cf <a href="https://github.com/oilshell/oil/issues/223">#223</a> <a href="https://github.com/oilshell/oil/issues/672">#672</a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-599177874">#653</a> 8. NYI: <code>exec 5&gt;&amp;-</code> (cf <a href="https://github.com/oilshell/oil/issues/223">#223</a> <a href="https://github.com/oilshell/oil/issues/667">#667</a> <a href="https://github.com/oilshell/oil/issues/672">#672</a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-599177874">#653</a> 9. NYI: <code>read -d ''</code> (<a href="https://github.com/oilshell/oil/issues/356">#356</a> <a href="https://github.com/oilshell/oil/issues/665">#665</a>) ★</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-599177874">#653</a> 10. ERRMSG: <code>builtin read</code></li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-599177874">#653</a> 11. NYI: <code>trap -- ...</code> / <code>eval -- ...</code> (<a href="https://github.com/oilshell/oil/issues/662">#662</a>) ★★</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-599177874">#653</a> 12. NYI: <code>printf '%()T'</code> (cf <a href="https://github.com/oilshell/oil/issues/650">#650</a> <a href="https://github.com/oilshell/oil/issues/668">#668</a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-599177874">#653</a> 13. BUG: <code>${var=x}</code></li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-599177874">#653</a> 14. DOC: Bash/Oil diff
+<ul>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/648">#648</a> recursive arithmetic evaluation ☆ (tests <a href="https://github.com/oilshell/oil/issues/686">#686</a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/664">#664</a> ERRMSG: error inside <code>$((a))</code></li>
+</ul>
+</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-599222774">#653</a> 15. NEWFEAT: <code>OIL_VERSION</code> / <code>OIL_VERSINFO</code>? <a href="https://github.com/oilshell/oil/issues/683">#683</a></li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-599222774">#653</a> 17. BUG: <code>${arr[0]=x}</code> (<a href="https://github.com/oilshell/oil/issues/660">#660</a>) ★</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-609458027">#653</a> 18. BUG? An empty variable in recursive arithmetic evaluation produces fatal error (e379b61)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-609458027">#653</a> 20. BUG <code>${!prefix@}</code> fails when prefix matches with an array name (daab1d6)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-609458027">#653</a> 21. BUG <code>${x/^}</code> crashes (dbf9e00)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-609516596">#653</a> 23. BUG: <code>declare -F</code> funcname doesn't accept non-alphanumeric characters in funcname ★★ (ec62c8a)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-609516596">#653</a> 25. NYI: Attributes <code>${var@a}</code> (<a href="https://github.com/oilshell/oil/issues/689">#689</a>)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-611830373">#653</a> 27. NYI: flags <code>rx</code> in <code>${var@a}</code> (14548dc)</li>
+<li>[x] <a href="https://github.com/oilshell/oil/issues/653#issuecomment-611830373">#653</a> 36. BUG: <code>read</code> fails on empty lines (<a href="https://github.com/oilshell/oil/issues/705">#705</a>) ★★</li>
+</ul>
+<!-- raw HTML omitted -->
+<h1>Try out ble.sh with OSH</h1>
+<p>Currently, ble.sh does not fully work on Oil. Only a part can be run for testing purpose.</p>
+<h2>Clone ble.osh</h2>
+<pre><code class="language-bash">$ git clone --recursive http://github.com/akinomyoga/ble.sh -b osh ble.osh
+$ cd ble.osh
+$ make
+</code></pre>
+<h2>Update ble.osh</h2>
+<p>The branch <code>osh</code> is occasionally force-pushed so need to be forcibly updated by <code>git reset --hard</code> or <code>git checkout -B</code>. <strong>Please be careful not to have your own commits in <code>osh</code> branch or edits in the working tree before running the following commands. They will be lost. You need to save your changes in another branch.</strong></p>
+<pre><code class="language-bash">$ cd ble.osh
+$ git fetch origin
+$ git checkout -B osh origin/osh
+$ make
+</code></pre>
+<h2>Try unit tests for <code>ble/util</code></h2>
+<pre><code class="language-bash">$ cd ble.osh
+$ osh --rcfile oshrc.test-util
+</code></pre>
+<h2>Try <code>read -e</code> by <code>ble.sh</code></h2>
+<p>The builtin <code>read -e</code> (read with line editor) is emulated by <code>ble.sh</code>. Minimal initialization for testing <code>read -e</code> is available with <code>oshrc.read</code> in <code>osh</code> branch of <code>ble.sh</code>.</p>
+<pre><code class="language-bash">$ cd ble.osh
+$ osh --rcfile oshrc.read
+$ read -e
+</code></pre>
+<p>Specify prompt (<code>-p</code>) and initial contents (<code>-i</code>):</p>
+<pre><code class="language-bash">$ read -e -p '[\u@\h \W]\$ ' -i 'echo hello'
+</code></pre>
+<p>Related: <a href="Running-Package-Builds-with-OSH.html">Running Package Builds with OSH</a></p>
+  </body>
+</html>
+

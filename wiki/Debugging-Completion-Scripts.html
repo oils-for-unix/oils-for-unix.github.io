@@ -1,0 +1,30 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Debugging Completion Scripts</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>(Back to <a href="Contributing.html">Contributing</a>)</p>
+<p>Context: <a href="http://www.oilshell.org/blog/2018/10/10.html">Running Bash Completion Scripts with OSH</a></p>
+<p>Related: <a href="How-To-Test-OSH.html">How To Test OSH</a></p>
+<p>Reading and debugging completion scripts is difficult.  Here is a way OSH helps.  This can certainly be improved.</p>
+<p>It helps to open two tmux panes, or two terminals side-by-side.  Then you can <strong>type on the left</strong> and see <strong>debug logs on the right</strong>.</p>
+<pre><code>$ mkfifo _tmp/debug  # named pipe
+
+$ misc/complete.sh osh-trace     # do this on the LEFT.  
+                                 # Type commands here like 'source testdata/completion/git'.
+$ cat _tmp/debug                 # do this on the RIGHT.
+</code></pre>
+<p>For reference, this is the <code>osh-trace function</code>:</p>
+<pre><code>osh-trace() {
+  env -i OSH_CRASH_DUMP_DIR=_tmp PS4='+[${LINENO}:${FUNCNAME[0]}] ' \
+    bin/osh -x --debug-file _tmp/debug --xtrace-to-debug-file &quot;$@&quot;
+}
+</code></pre>
+<p>It uses <code>-x / xtrace</code> and <code>$PS4</code> to display logs.  And it redirects <code>-x</code> output to <code>_tmp/debug</code>.</p>
+  </body>
+</html>
+

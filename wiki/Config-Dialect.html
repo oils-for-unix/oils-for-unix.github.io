@@ -1,0 +1,153 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Config Dialect</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>This is now <a href="Hay.html">Hay</a></p>
+<h2>Use Cases for Hay</h2>
+<p>Each one is a mix of declarative (key-value pairs) and imperative (shell code)</p>
+<h3>Build systems</h3>
+<ul>
+<li>Particularly generating <strong>Ninja</strong> files.  Because you need it for the repo, and it's an easier way of unifying shell and make
+<ul>
+<li>note: does this just print to stdout immediately?  it's not generating structured data?</li>
+<li>existing: cmake, etc.</li>
+</ul>
+</li>
+</ul>
+<h3>Distro Package Definitions</h3>
+<ul>
+<li>Debian -- mish-mash of text files and shell</li>
+<li>Arch Linux -- shell</li>
+<li>Alpine Linux -- shell where they try to parse shell in shell!  (similar to bash auto-completion)</li>
+<li>Nix -- custom language</li>
+<li>Guix -- Guile scheme</li>
+<li>Gentoo -- ebuilds Python</li>
+</ul>
+<h3>Init Daemon Service Definition</h3>
+<ul>
+<li>systemd -- custom language that embeds shell</li>
+<li>What does upstart, etc.? use</li>
+<li>sysvinit is shell scripts with special names -- metadata and names.</li>
+</ul>
+<h3>Cluster Task Config</h3>
+<ul>
+<li>Kubernetes Config
+<ul>
+<li>YAML</li>
+<li>similar to Borg config</li>
+</ul>
+</li>
+</ul>
+<h3>App Server Configuration</h3>
+<p>Difference: These probably <strong>don't have shell</strong> ?  They don't shell out as far as I know.  But maybe they can use key-value pairs.</p>
+<ul>
+<li>Nginx config
+<ul>
+<li>custom language, which inspired UCL / HCL</li>
+</ul>
+</li>
+<li>Bind DNS?</li>
+</ul>
+<h3>CI Services</h3>
+<ul>
+<li>travis YAML</li>
+<li>sourcehut  YAML</li>
+<li>Github Actions YAML</li>
+<li>Gitlab CI YAML</li>
+</ul>
+<h3>Containers Provisioning (both build and runtime)</h3>
+<ul>
+<li>Custom Dockerfile DSL with shell</li>
+</ul>
+<h3>VM and infrastructure provisioning</h3>
+<ul>
+<li>Ansible (Python?)</li>
+<li>Chef / Puppet (Ruby?)</li>
+<li>Vagrant VM build
+<ul>
+<li>Ruby DSL</li>
+</ul>
+</li>
+</ul>
+<h3>Data Structures / DSLs</h3>
+<ul>
+<li>SVG DSL ?</li>
+<li>Graphviz?</li>
+</ul>
+<h3>Languages (not platforms)</h3>
+<ul>
+<li>Awk (predicate / action)</li>
+<li>Find (predicate / action)</li>
+<li>Make (graph</li>
+<li>lexers / parsers
+<ul>
+<li>re2c, yacc, etc .</li>
+</ul>
+</li>
+<li>Stretch:
+<ul>
+<li>schema languages (protobuf, ASDL) -- this could cause nesting?
+<ul>
+<li>ASDL in Oil / Tea would be cool but I think it requires custom syntax ... for type definitions</li>
+</ul>
+</li>
+<li>State machine dialects?
+<ul>
+<li>P language?</li>
+</ul>
+</li>
+<li>Annotations like the pash and posh optimizers use: <a href="https://github.com/oilshell/oil/issues/867">https://github.com/oilshell/oil/issues/867</a></li>
+</ul>
+</li>
+</ul>
+<h2>Summary of Use Cases by Existing Language</h2>
+<ul>
+<li>Custom languages
+<ul>
+<li>CMake</li>
+<li>Starlark for Bazel, etc.</li>
+<li>Nix</li>
+<li>Nginx</li>
+</ul>
+</li>
+<li>YAML
+<ul>
+<li>all CI services and Kubernetes</li>
+</ul>
+</li>
+<li>Ruby and Python
+<ul>
+<li>Chef / Puppet / Ansible</li>
+</ul>
+</li>
+<li>Mix of shell and tiny files / comments / hacks
+<ul>
+<li>Linux distros</li>
+</ul>
+</li>
+</ul>
+<h2>Concrete Examples of Configuraiton + Shell</h2>
+<ul>
+<li><a href="https://github.com/DanySpin97/tt/blob/master/examples/mount-fstab">https://github.com/DanySpin97/tt/blob/master/examples/mount-fstab</a></li>
+<li><a href="https://github.com/shazow/shazow.net/blob/master/.github/workflows/publish.yml">https://github.com/shazow/shazow.net/blob/master/.github/workflows/publish.yml</a>
+<ul>
+<li>from <a href="https://lobste.rs/s/oeelem/using_github_issues_as_hugo_frontend_with">https://lobste.rs/s/oeelem/using_github_issues_as_hugo_frontend_with</a></li>
+</ul>
+</li>
+</ul>
+<h2>Appendix: Oil Builtins  Using Blocks (not config)</h2>
+<ul>
+<li>fork, forkwait, cd</li>
+<li>shopt, shvar</li>
+<li>push-registers</li>
+<li>try</li>
+<li>argparse, describe</li>
+</ul>
+  </body>
+</html>
+

@@ -1,0 +1,37 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Using Zephyr ASDL</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>If you define a sum type like</p>
+<pre><code>expr = Unary(expr e) | Binary(expr left, expr right)
+</code></pre>
+<p>Then you will get three pieces of generated code:</p>
+<ul>
+<li><code>expr_e.Unary</code>:  An integer tag.
+<ul>
+<li>typical usage: <code>if node.tag == expr_e.Unary</code></li>
+</ul>
+</li>
+<li><code>expr.Unary()</code>:  A Python class / type / constructor.
+<ul>
+<li>typical usage: <code>node = expr.Unary(child)</code></li>
+<li>Note that this is an alias for <code>expr__Unary()</code>.  MyPy seems to like this form better.  It makes it easier to statically type the code.</li>
+</ul>
+</li>
+<li><code>expr_t</code>: A common superclass of all the nodes.
+<ul>
+<li>typical usage: <code>isinstance(node, expr_t)</code></li>
+</ul>
+</li>
+</ul>
+<p>The implementation is here, with some more notes in the README.</p>
+<p>https://github.com/oilshell/oil/tree/master/asdl</p>
+<p>For conceptual background, see <a href="http://www.oilshell.org/blog/tags.html?tag=ASDL#ASDL">blog posts tagged #ASDL</a> or the <a href="https://www.cs.princeton.edu/techreports/1997/554.pdf">original Zephyr technical report</a>.</p>
+  </body>
+</html>
+

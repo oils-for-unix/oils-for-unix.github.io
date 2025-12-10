@@ -1,0 +1,32 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Implementer Lore About Garbage Collection</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>&quot;Implementer lore&quot; means &quot;programming techniques that are only in a few experienced people's heads!&quot;</p>
+<p>It's not in textbooks.  I've found that there is a lot of it with respect to implementing garbage collectors.  The algorithms are one thing, but there are many nontrivial problems in the implementation.  It interacts with the host language a lot, which is usually C, C++, or Assembly.</p>
+<p>This page is freely <strong>editable</strong>.</p>
+<ul>
+<li>Mozilla SpiderMonkey: <a href="https://blog.mozilla.org/javascript/2013/07/18/clawing-our-way-back-to-precision/">Clawing Our Way Back to Precision</a> (2013)
+<ul>
+<li><a href="http://udn.realityripple.com/docs/Mozilla/Projects/SpiderMonkey/GC_Rooting_Guide">SpiderMonkey GC Rooting Guide</a></li>
+</ul>
+</li>
+<li>v8 Blog: <a href="https://v8.dev/blog/high-performance-cpp-gc">High-performance garbage collection for C++</a> (May 2020)</li>
+<li>HHVM: <a href="https://hhvm.com/blog/431/on-garbage-collection">On Garbage Collection</a> (2012)
+<ul>
+<li><em>The second, more serious problem that we run into here is root-finding. In my description above, I made HHVM’s root set sound simple (stack, locals, globals) but the reality is quite a bit more complicated than that.</em></li>
+</ul>
+</li>
+<li><a href="https://mras0.github.io/mjs/doc/gc/initial.html">Implementing a Garbage Collector in C++</a> -- about mjs, a JavaScript interpreter</li>
+<li><a href="https://old.reddit.com/r/cpp/comments/uyygvb/lockfree_concurrent_garbage_collector_for_c/">Lock-free Concurrent Garbage Collector for C++</a></li>
+<li><a href="https://github.com/elliottslaughter/rust-gc-talk">High Performance Garbage Collection in Rust</a> from Elliot Slaughter</li>
+</ul>
+<p>Lore on another topic: <a href="Implementing-Debuggers.html">Implementing Debuggers</a></p>
+  </body>
+</html>
+

@@ -1,0 +1,98 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>OSH Word Evaluation Algorithm</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p><strong>OBSOLETE</strong>, See <a href="http://oils.pub/release/latest/doc/simple-word-eval.html">http://oils.pub/release/latest/doc/simple-word-eval.html</a></p>
+<p>This page documents a portion of the OSH implementation.  It differs significantly from other shells in this respect.</p>
+<ul>
+<li>They tend to use a <strong>homogeneous tree</strong> with various flags on nodes (e.g. <code>nosplit</code>, <code>assignment</code>, etc.).</li>
+<li>OSH uses a typed, <strong>heterogeneous tree</strong> (now statically checked with MyPy).</li>
+</ul>
+<p>For example:</p>
+<pre><code>word_part = 
+  Literal(...)
+| BracedVarSub(...)
+| CommandSub(...)
+| SingleQuoted(...)
+| DoubleQuoted(...) 
+| ...
+</code></pre>
+<p>https://github.com/oilshell/oil/blob/master/frontend/syntax.asdl#L107</p>
+<p>Notes:</p>
+<ul>
+<li>Specifying ML-like data structures with ASDL was an implementation style borrowed from CPython itself: see <a href="http://www.oilshell.org/blog/tags.html?tag=ASDL#ASDL">posts tagged #ASDL</a>.</li>
+<li>Smoosh is written in OCaml and Lem and also uses a typed, heterogeneous tree in some places.  However, it also has a notion of &quot;control codes&quot;, probably inherited from libdash, and word expansion operates on these control codes (section 4.2 of the paper).</li>
+</ul>
+<h3>Preliminaries</h3>
+<ol>
+<li>As much parsing as possible is done <a href="https://www.oilshell.org/blog/2019/02/07.html">in a single pass, with lexer modes</a>.</li>
+<li>There are subsequent tweaks for detecting assignments, tildes, etc.  They re-write small parts of the syntax tree, but are not a full parsing pass.</li>
+<li>There is a &quot;metaprogramming&quot; pass for brace expansion: <code>i=0; echo {$((i++)),foo,bar}</code>.  (Bash brace expansion syntax is more like metaprogramming, whereas zsh implements it more like word evaluation.)</li>
+</ol>
+<h3>Word Evaluation Algorithm</h3>
+<p>There are <strong>three</strong> stages (not four as in POSIX).  <code>EvalWordSequence2</code> in <code>osh/word_eval.py</code> is a tiny function that shows the stages explicitly.</p>
+<ol>
+<li>Evaluation of the typed tree.
+<ul>
+<li>There is also a restricted variant of word evaluation for completion, e.g. so arbitrary processes aren't run with you
+hit TAB.</li>
+<li><code>part_value = String(...) | Array(...)</code> in <code>osh/runtime.asdl</code> is an important intermediate data type.</li>
+</ul>
+</li>
+<li>Splitting with IFS.  Ths is specified with a state machine in <code>osh/split.py</code>.  (I think OSH is unique in this regard too.)
+<ul>
+<li>Splitting involves the concept of &quot;frames&quot;, to handle things like <code>x='a b'; y='c d'; echo $x&quot;${@}&quot;$y</code>.  The last part of <code>$x</code> has to be joined with <code>argv[0]</code>, and <code>argv[n-1]</code> has to be joined with <code>$y</code>.</li>
+</ul>
+</li>
+<li>Globbing.</li>
+</ol>
+<p>There is no such thing as &quot;quote removal&quot; in OSH (e.g. any more than a Python or JavaScript interpreter has &quot;quote removal&quot;).  It's just evaluation.</p>
+<ul>
+<li>Caveat: Bug with <code>IFS='\'</code>
+<ol>
+<li>Splitting and globbing are separate stages, but have &quot;dependencies&quot; because of statements like <code>echo $prefix_that_could_be_split/&quot;constant string&quot;*.sh</code></li>
+<li>Internally, splitting and globbing both use <code>\</code> to inhibit &quot;evaluation&quot;.  That is, <code>\*</code> is an escaped glob.  And <code>\ </code> is an escaped space (IFS character).</li>
+<li>This causes problems when <code>IFS='\'</code>.  I think I could choose a different character for OSH, maybe even the <code>NUL</code> byte.</li>
+</ol>
+</li>
+</ul>
+<h3>Motivation</h3>
+<p>OSH wants to treat all sublanguages uniformly.  (Command, Word, Arith, and the non-POSIX bool <code>[[</code>) are the main sublanguages.)</p>
+<p>For some &quot;dynamic&quot; sublanguages like builtin flag syntax, we fall a bit short, but that could change in the future.</p>
+<p>This matters for <strong>interactive completion</strong>, where it would be useful to understand every sublanguage statically.</p>
+<p>For example, note that you can have <strong>variable references</strong> in several sublanguages:</p>
+<p>Static:</p>
+<ol>
+<li><code>x=1</code>  -- assignments are in the command language</li>
+<li><code>echo ${x:-${x:-$y}}</code> -- word language</li>
+<li><code>echo $(( x == y ))</code> -- arithmetic language</li>
+<li><code>[ $x -eq $y ](-$x--eq-$y-.html)</code> -- boolean language</li>
+</ol>
+<p>Dynamic:</p>
+<ol>
+<li><code>code='x=1'; readonly $code</code> -- the dynamic builtin language</li>
+<li>Other builtins that manage variables:
+<ul>
+<li><code>getopts</code></li>
+<li><code>read</code></li>
+<li><code>unset</code></li>
+<li><code>printf -v</code> in bash</li>
+</ul>
+</li>
+<li>Variable references in <code>${!x}</code> in bash/ksh</li>
+</ol>
+<h3>Oil Language</h3>
+<p>Claim: There should only be <strong>one</strong> step to  word evaluation!  I prefer to get rid of multi-stage &quot;expansion&quot; as a notion in shell.</p>
+<ul>
+<li>Splitting is a mistake; a holdover from when shell had no arrays.  See <a href="https://www.oilshell.org/blog/2016/11/06.html">Thirteen Incorrect Ways and Two Awkward Ways to Use Arrays</a></li>
+<li>Dynamically parsed globs are a mistake (just like dynamically parsed arithmetic is).  Shell already has <code>eval</code>, so you lose nothing by making globs static.</li>
+</ul>
+<p>The Oil language will statically parse globs, and I may add something like <code>shopt -s static-glob</code> to OSH in the short term.</p>
+  </body>
+</html>
+

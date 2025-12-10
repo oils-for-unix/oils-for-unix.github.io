@@ -1,0 +1,70 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Translating Oils to Rust</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<h2>Why?</h2>
+<p>Why create <code>liboils</code>?</p>
+<ul>
+<li>Tools like <code>resholve</code> are built on top of the Oils AST (lossless syntax tree), in Python
+<ul>
+<li>I'd like somebody to write an auto-formatter for YSH.</li>
+<li>A formatter based on OSH is also possible, though <code>shfmt</code> exists (in Go)</li>
+</ul>
+</li>
+<li>It would be nice to use something besides GNU readline
+<ul>
+<li>nushell and brush use the <a href="https://docs.rs/reedline/latest/reedline/">reedline</a> create (developed as part of nushell)</li>
+</ul>
+</li>
+</ul>
+<h2>Issues</h2>
+<ul>
+<li>mycpp Modules
+<ul>
+<li>and refactoring to modules: the C++ build should have a pure &quot;liboils&quot; + the Unix I/O</li>
+</ul>
+</li>
+<li>Zephyr ASDL subtyping - multiple inheritance, <strong>graph-shaped</strong> type relationships</li>
+<li>Python/C++ exceptions - I think every function call ends with <code>?</code></li>
+<li>Garbage Collection
+<ul>
+<li><code>Rc&lt;T&gt;</code> is possible, but probably not fast, and would leak cycles</li>
+<li>I would start out with Arena</li>
+<li>maybe do OHeap-like &quot;data-oriented design&quot; - <a href="Compact-AST-Representation.html">Compact AST Representation</a></li>
+<li>later: copying collector</li>
+</ul>
+</li>
+</ul>
+<p>Non-issues:</p>
+<ul>
+<li>mycpp: classes with single inheritance should be easy</li>
+</ul>
+<h2>Related</h2>
+<p><a href="Oils-for-Windows.html">Oils for Windows</a></p>
+<p><a href="Rewriting-YSH-Only-in-Rust.html">Rewriting YSH Only in Rust</a></p>
+<h2>Oils vs. Other Bash-Compatible Shells</h2>
+<p>As of 2025, the only bash-compatible shells I know of are Oils, <code>toysh</code>, <code>brush</code> and <code>sush</code>.</p>
+<p><code>brush</code> and <code>sush</code> are much more compatible than <code>toysh</code>, and both are written in Rust.</p>
+<ul>
+<li>fast edit-run cycle - just start the Python interpreter (~50 ms)</li>
+<li>precise location info and error messages</li>
+<li>has YSH too
+<ul>
+<li>simple word evaluation</li>
+<li>better handling</li>
+</ul>
+</li>
+<li>less binary code than shells in Rust
+<ul>
+<li>though we dynamically link GNU readline, so that is not a totally fair comparison</li>
+</ul>
+</li>
+</ul>
+  </body>
+</html>
+

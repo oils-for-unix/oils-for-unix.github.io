@@ -1,0 +1,46 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>The Oils Repo Is Different From the Tarball Releases</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>(Back to <a href="Contributing.html">Contributing</a>)</p>
+<p>This page addresses <strong>common confusion</strong> with Oils.</p>
+<ul>
+<li>The git repo is hosted at - <a href="https://github.com/oils-for-unix/oils">https://github.com/oils-for-unix/oils</a></li>
+<li>The <strong>release</strong> tarballs are hosted at <a href="https://oils.pub/release/latest/">https://oils.pub/release/latest/</a></li>
+</ul>
+<p>Their contents are very <strong>different</strong>:</p>
+<ul>
+<li>The git repo has <strong>Python</strong> source code.</li>
+<li>The <code>oils-for-unix</code> tarballs have (generated) <strong>C++</strong> source code.  There is no Python.</li>
+</ul>
+<p>(If you don't want to compile the tarball, you may be able to find pre-built binaries in your package managers: <a href="Oils-Deployments.html">Oils Deployments</a>.)</p>
+<h2>FAQs</h2>
+<h3>How do I build a shell binary from the tarball?</h3>
+<p>See the instructions in <a href="https://oils.pub/release/latest/doc/INSTALL.html">INSTALL.html</a>.</p>
+<h3>How do I build the tarball from the repo?</h3>
+<p>This build process is pretty involved, and changes from time to time.  It's <strong>not</strong> meant for end users.</p>
+<p>Details:</p>
+<ul>
+<li>Oils developers should follow the instructions on the <a href="Contributing.html">Contributing</a> page.</li>
+<li>It  involves custom tools like Zephyr ASDL and mycpp.  mycpp is built on a specific version of the <a href="https://mypy-lang.org/">MyPy</a> type checker.</li>
+<li>The <a href="Soil.html">Soil</a> CI makes a tarball at <strong>every commit</strong>.  So we are sure it always works.  See <code>soil/worker.sh</code> and the <code>cpp-tarball</code> job.</li>
+</ul>
+<h3>Is it Unusual That the Repo Is Different than the Tarball?</h3>
+<p>Generating C++ from Python is unusual, but many projects have a non-trivial release process.</p>
+<p>For example, when a project uses autotools, you run its <strong>generated</strong> shell scripts like <code>./configure</code>, and <strong>generated</strong> makefiles.  You're not running the original m4 source code.</p>
+<p>You don't need to install m4 to build and autotools project, only shell and make.  This is an intended <strong>feature</strong>.</p>
+<p>Likewise, with Oils, you  don't need Python to build or run.  You only need a C++ compiler.</p>
+<h3>I want to &quot;bootstrap&quot; Oils</h3>
+<p>Everything is open source, so you can do this.</p>
+<p>However, I wouldn't recommend it as the first thing you do with the source of the Oils project.  People have tried before and gotten stuck!</p>
+<p>A good first contribution would be to pick a bug from the <a href="https://github.com/oils-for-unix/oils/issues">issue tracker</a>.</p>
+<h3>What should be improved about the tarball build?</h3>
+<p>As of March 2025, we shouldn't require root access for building &quot;wedges&quot;, e.g. specific versions of re2c, Python 2, Python 3, etc.</p>
+  </body>
+</html>
+

@@ -1,0 +1,35 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Unifying Make and Shell</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<ul>
+<li>Back: to <a href="ExternalResources.html">ExternalResources</a></li>
+</ul>
+<hr />
+<p>General problem: do they support build variants in multiple output dirs?  For example, I believe this is hard/impossible with the <code>redo</code> model, and I don't like tons of tiny shell scripts.</p>
+<ul>
+<li>
+<p><a href="redo%7Chttp://jdebp.eu./FGA/introduction-to-redo.html.html">redo|http://jdebp.eu./FGA/introduction-to-redo.html</a> -- <em>redo is a package originally designed by Daniel J. Bernstein in 2003. Its purpose is to provide a build system for software packages that does incremental builds</em>.  No parallel builds.</p>
+</li>
+<li>
+<p><a href="danfuzz/blur%7Chttps://github.com/danfuzz/blur.html">danfuzz/blur|https://github.com/danfuzz/blur</a> -- <em>Blur is a very small and simple target-driven (top-down) build system, with (practically speaking) no dependencies: It is written entirely as a small handful of Bash scripts, totaling about 1,200 lines.</em></p>
+</li>
+<li>
+<p><a href="setup.shl%7Chttps://github.com/lih/setup.html">setup.shl|https://github.com/lih/setup</a> - <em>A simple Bash library for setting up a directory structure using Makefile-like definitions</em></p>
+</li>
+<li>
+<p><a href="akkartik/basic-build%7Chttps://www.reddit.com/r/tinycode/comments/6md2l8/make_gmake_cmake_ninja_minimal_build_system_in_50/.html">akkartik/basic-build|https://www.reddit.com/r/tinycode/comments/6md2l8/make_gmake_cmake_ninja_minimal_build_system_in_50/</a> -- <em>A minimal build system using Bourne sh</em>.  I believe one person pointed out the fact that the author has to topologically sort the definitions themselves.</p>
+</li>
+<li>
+<p><a href="rain-1/makes%7Chttps://github.com/rain-1/makes.html">rain-1/makes|https://github.com/rain-1/makes</a></p>
+</li>
+</ul>
+<p>I also ranted a bit in <a href="this-comment-thread%7Chttps://lobste.rs/s/azldgm/oil_comments_about_shell_awk_make.html">this comment thread|https://lobste.rs/s/azldgm/oil_comments_about_shell_awk_make</a> about the overlap between Make and shell.  And what I want from a build tool (build variants to support performance, security, correctness, etc.)</p>
+  </body>
+</html>
+

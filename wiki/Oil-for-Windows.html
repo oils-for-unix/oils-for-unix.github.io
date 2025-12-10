@@ -1,0 +1,41 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Oil for Windows</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<h2>2025</h2>
+<p>Related;</p>
+<ul>
+<li><a href="Translating-Oils-to-Rust.html">Translating Oils to Rust</a></li>
+<li><a href="Rewriting-YSH-Only-in-Rust.html">Rewriting YSH Only in Rust</a></li>
+</ul>
+<h2>2022</h2>
+<p>Oils  runs on WSL because the Windows kernel emulates the Linux kernel.</p>
+<p>But I chatted with Phil Eaton on Twitter about a native Windows port for Oil (i.e. using the Win32 API).</p>
+<p>I think it would be cool.  I don't personally need it, but it might help get other people on board with the project.</p>
+<p>And I think Oil is very well factored for this.  Almost all the I/O happens in <code>core/process.py</code> and <code>core/executor.py</code>, which are translated to C++.</p>
+<h2>Twitter Thread</h2>
+<p><a href="https://twitter.com/oilshellblog/status/1507009555980435466">https://twitter.com/oilshellblog/status/1507009555980435466</a></p>
+<h3>Links I Dug Up</h3>
+<ul>
+<li>Anonymous Pipe Operations: https://docs.microsoft.com/en-us/windows/win32/ipc/anonymous-pipe-operations</li>
+<li>https://cygwin.com/cygwin-ug-net/highlights.html</li>
+<li>https://news.ycombinator.com/item?id=11391797
+<ul>
+<li><em>Yes. That's one thing we spent considerable engineering effort on in this first version of the Windows Subsystem for Linux: We implement fork in the Windows kernel, along with the other POSIX and Linux syscalls. This allows us to build a very efficient fork() and expose it to the GNU/Ubuntu user-mode apps via the fork(syscall). We'll be publishing more details on this very soon.</em></li>
+</ul>
+</li>
+<li><a href="https://www.hamishmb.com/blog/improving-cygwins-performance-fork/">Adventures in Cygwin’s fork performance</a></li>
+<li>http://gnuwin32.sourceforge.net/packages.html -- native Win32 ports</li>
+</ul>
+<p>Related:</p>
+<ul>
+<li><a href="Oil-Native-Quick-Start.html">Oil Native Quick Start</a></li>
+</ul>
+  </body>
+</html>
+

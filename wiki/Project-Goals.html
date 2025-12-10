@@ -1,0 +1,138 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Project Goals</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<h3>Goals</h3>
+<ul>
+<li>Immediate goal: Implement a bash-compatible shell called OSH.</li>
+<li>Long term goal: Design a modern Unix shell language called Oil that can do everything bash/zsh/etc. can do, and more.</li>
+</ul>
+<p>Oil treats shell seriously as a programming language, in terms of both its implementation and defining its semantics.</p>
+<p>For a more immediate view of the project, see the <a href="http://www.oilshell.org/blog/">Oil blog</a>.  In particular, this <a href="http://www.oilshell.org/blog/2017/01/19.html">blog entry</a> was written at the same time as this page.</p>
+<h3>Use Cases</h3>
+<ul>
+<li>System Administration
+<ul>
+<li>Building Linux distributions (e.g. Arch Linux uses bash for PKGBUILD).</li>
+<li>Startup scripts</li>
+<li>Configure and build scripts.  Reproducible and distributed builds.</li>
+</ul>
+</li>
+<li>Distributed Computing
+<ul>
+<li>Building containers</li>
+<li>Specifying remote jobs</li>
+<li>Feedback and Monitoring: performance measurement, security testing.</li>
+</ul>
+</li>
+<li>Data Science / Scientific Computing
+<ul>
+<li>Heterogeneous &quot;big data&quot; and small data pipelines.  The language should scale down as well as scale up, i.e. low startup latency for small jobs.</li>
+<li>Incorporate features of &quot;workflow languages&quot; and systems in the MapReduce family.</li>
+<li>Concise data cleaning, transformation, and summarization.</li>
+<li><a href="https://en.wikipedia.org/wiki/Reproducibility#Reproducible_research">Reproducible Research</a>.</li>
+<li>Non-goal: mathematical modeling.  That should be left to specialized languages like R, Julia, and Matlab.  Communicate with those languages through <strong>coprocesses</strong> (to avoid startup overhead and concurrency.)</li>
+</ul>
+</li>
+<li>Interactive Computing
+<ul>
+<li>A general purpose REPL (terminal and probably a Jupyter kernel).</li>
+</ul>
+</li>
+<li>Document Publishing
+<ul>
+<li>http://oilshell.org/ and many programming books are built and orchestrated with shell scripts / Makefiles</li>
+</ul>
+</li>
+</ul>
+<h3>Oil Language Design Goals</h3>
+<ul>
+<li>Easy upgrade path from bash, the most popular shell in the world.
+<ul>
+<li>To do this, I've written a <a href="http://www.oilshell.org/blog/2016/11/09.html">very compatible bash parser</a>, which will allow automatic conversion of bash (osh) to oil.  So the language has a different syntax and a superset of bash semantics.</li>
+</ul>
+</li>
+<li>Consistent syntax.
+<ul>
+<li>POSIX sh and bash have evolved <a href="http://www.oilshell.org/blog/2016/10/28.html">many quirks</a>.</li>
+</ul>
+</li>
+<li>Fix sh and bash semantics to be more developer-friendly (in a backward compatible way).
+<ul>
+<li>Proper <a href="http://www.oilshell.org/blog/2016/11/06.html">Arrays</a></li>
+<li>Strict mode for developer productivity (enhanced set -o errexit, nounset, pipefail)</li>
+</ul>
+</li>
+<li>Enhance the shell language; treat it as a real programming language.
+<ul>
+<li>Fill in obvious gaps, like abspath, etc.</li>
+<li>Compound data structures</li>
+<li>Example: Completion functions in bash have a bad API involving globals and are difficult to write.  It should feel more like writing completion functions in Python or JavaScript.</li>
+<li>Selected influences: Python, R, Ruby, Perl 6, Lua (API), ML, C and C++.  Power Shell.</li>
+</ul>
+</li>
+<li>Reduce language cacophony in shell programming by reimplementing tools closely related to the shell.
+<ul>
+<li>Example: combine <a href="http://oilshell.org/blog/2016/11/13.html">shell, awk, and make</a>.</li>
+<li>Also combine tools like find (which has its own expression parser and starts processes), and xargs/GNU parallel,
+which start processes in parallel.  GNU parallel is actually mentioned in the bash manual.</li>
+</ul>
+</li>
+<li>Richer constructs for concurrency and parallelism.
+<ul>
+<li>Folding in <code>make -j</code> and <code>xargs -P</code> goes a long way.</li>
+</ul>
+</li>
+<li>Allow secure programs to be written.
+<ul>
+<li>In emitting strings: escaping</li>
+<li>In reading strings: error checking should be easy, better control over &quot;read&quot; delimiters, etc.</li>
+<li>Fix issues with globs and flags, i.e. untrusted file system and untrusted variables</li>
+</ul>
+</li>
+<li>C and C++ bindings
+<ul>
+<li>provide access to advanced Linux kernel features - namespaces, cgroups, seccomp, tracing, /proc, etc. (but remain portable to other Unices)</li>
+<li>It should be possible to write a busybox in oil.</li>
+</ul>
+</li>
+<li>Should be the best language for writing quick command line tools.
+<ul>
+<li>In particular, replace the getopt interface in bash with something much better.</li>
+</ul>
+</li>
+<li>Expand the range of things that can be done with the &quot;polyglot&quot; model.
+<ul>
+<li>Coprocesses</li>
+<li>Built-in serialization formats like CSV, JSON, maybe HTML</li>
+<li>Maybe some binary formats as libraries</li>
+</ul>
+</li>
+<li>No extra &quot;macro processing&quot; on top of the parser.  History substitution will be built in, but disabled in batch mode.  procs can be used instead of aliases.</li>
+</ul>
+<h3>Language Design Style</h3>
+<ul>
+<li>Imperative on the scale of code, but declarative/functional/concurrent on scale of architecture, not unlike <code>sh</code> itself.</li>
+</ul>
+<h3>Implementation Goals</h3>
+<ul>
+<li>Proper error messages like Clang/Swift.  <a href="http://www.oilshell.org/blog/2016/10/22.html">Static Parsing</a>.</li>
+<li>Provide end-to-end tracing and profiling tools (e.g. for pipelines that run for hours)</li>
+<li>Library-based design like LLVM.  Example: the same parser is used in batch mode as well as completion mode, which is not true of all shell implementations.  The parser can be used for auto-formatting and linting, which is also not true of other implementations.</li>
+<li>Few dependencies so it can be used in bootstrapping Unix systems and clusters.  (e.g. distributed as a C++ file and optional oil source.)</li>
+<li>Much of oil should be written in oil (which means the VM needs to be fast enough for this).</li>
+</ul>
+<h3>Longer Term Goals</h3>
+<ul>
+<li>Expose our toolkit for little languages -- lexing, parsing, AST representation, etc.  So that other languages can be built in the same way.</li>
+<li>Metaprogramming with ASTs as first class data structures.</li>
+<li>FastCGI Scripts on shared hosting (using strict input validation and hygienic text generation).</li>
+</ul>
+  </body>
+</html>
+

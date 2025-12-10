@@ -1,0 +1,144 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Contributing</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p><em>NOTE: If anything on this page doesn't work for you, please file a bug!</em></p>
+<p>(Related: <a href="Oil-Native-Quick-Start.html">Oil Native Quick Start</a> / <a href="Where-Contributors-Have-Problems.html">Where Contributors Have Problems</a> / <a href="Oils-Dev-Cheat-Sheet.html">Oils Dev Cheat Sheet</a> / <a href="Oil-Dev-Tips.html">Oil Dev Tips</a> / <a href="Making-Pull-Requests.html">Making Pull Requests</a> / <a href="The-Oils-Repo-Is-Different-From-the-Tarball-Releases.html">The Oils Repo Is Different From the Tarball Releases</a> / <a href="AI-Contribution-Policy.html">AI Contribution Policy</a>)</p>
+<h2>Requirements / Fiddly Bits</h2>
+<h3>Please use Linux to make changes to Oils and test them</h3>
+<p>One reason for this is that the <a href="spec-tests%7CSpec-Tests.html">spec tests|Spec Tests</a> run against four other shells (bash/dash/zsh/mksh), and we don't have a way of building the right versions of these shells on other OSes.</p>
+<p>When I'm on a Mac, I use Ubuntu on Virtualbox to develop. Others have had success with OrbStack's Linux VMs. Note that OSH does work on OS X for end users, but development is a different story.</p>
+<h3>Please clone  oils-for-unix/oils (rather than creating a fork)</h3>
+<p>Right now we have some awkwardness due to CI permissions.</p>
+<p>We want you to send PRs from <code>oils-for-unix/oils</code> and not your own fork, so that Github Actions can get our <code>$TOIL_KEY</code>, and publish HTML results to <a href="http://op.oilshell.org/">http://op.oilshell.org/</a> .</p>
+<p>But this is a hiccup for first time contributors.  I have to add you to the Github project so the CI can run.  Ping me on Zulip!</p>
+<h2>Build Two Complete Oils Interpreters: in Python and in C++ (5-10 minutes)</h2>
+<p>This is the standard dev setup, which involves building tools like <code>re2c</code>, Python 3, and MyPy.</p>
+<p>Note that this process <strong>creates directories <code>/wedge</code> and <code>~/wedge</code></strong>. These are the only directories we touch outside the repository. To clean up the directories, you can simply run <code>rm -rf /wedge ~/wedge</code> or <code>build/deps.sh rm-oils-crap</code>.  (We plan to get rid of <code>/wedge</code>, because it requires root access, but we haven't done it yet)</p>
+<h3>One-Time Setup of Custom Tools</h3>
+<p>This is for shells to test against, or custom Python-to-C++ translator, etc.</p>
+<pre><code>git clone https://github.com/oils-for-unix/oils.git   # please use this repo, not your own fork
+                                                      # this helps us use a Github Action secret on PRs
+
+cd oils                   # enter the base directory
+
+                          # Do ONE of these, depending on your distro
+build/deps.sh wedge-deps-debian   # Works on Ubuntu too -- uses sudo apt-get
+                                  # These are apt packages needed to build Python 2 and 3 from scratch (&quot;wedges&quot;)
+build/deps.sh wedge-deps-alpine   # We test this in our sourcehut CI, so it should work!
+build/deps.sh wedge-deps-fedora   # Ditto, should work!
+
+build/deps.sh fetch                # Download a bunch of source tarballs
+                                   # If you're from China, maybe use:
+                                   # PY_FTP_MIRROR=https://mirrors.huaweicloud.com build/deps.sh fetch
+
+build/deps.sh install-wedges      # Build and install wedges in ../oils.DEPS
+</code></pre>
+<h3>Every Time you <code>git pull</code>, or switch branches</h3>
+<pre><code>. build/dev-shell.sh      # put our build of python2 in your $PATH
+
+build/py.sh all           # Generates Python code - (re2c for lexer, CommonMark for help, etc.)
+
+bin/osh -c 'echo hi'      # Sanity check to make sure it works.
+
+bin/ysh -c '= 1 + 2'      # YSH sanity check
+</code></pre>
+<p>In case you get in trouble:</p>
+<pre><code>build/clean.sh              # deletes all the temp files in the repo
+build/deps.sh rm-oils-crap  # deletes the build &quot;wedges&quot; outside the repo
+                            # this is just rm -rf ~/wedge /wedge - latter requires root permissions
+</code></pre>
+<p>TODO: Clickable demo in gitpod or some other online dev env.</p>
+<h2>Quick Start with &quot;minimal&quot; build (~2 minutes)</h2>
+<p>This can be a quicker way to get started.  It only works if you <strong>already have <code>python2</code> on your machine</strong> (<code>python2</code> being deprecated, of course).</p>
+<h3>One Time Setup</h3>
+<pre><code>git clone https://github.com/oils-for-unix/oils.git 
+
+cd oils
+
+build/py.sh wedge-deps-debian
+</code></pre>
+<h3>Every Time you <code>git pull</code>, or switch branches</h3>
+<pre><code>build/py.sh minimal       # MINIMAL dev build, including native/libc.c Python extension
+
+. build/dev-shell.sh      # Put build tools in $PATH
+
+bin/osh -c 'echo hi' 
+</code></pre>
+<p>This is all you need to make many changes to Oils.</p>
+<h2>Quick Tests</h2>
+<pre><code>test/unit.sh unit frontend/lexer_test.py     # Run an individual unit test
+test/unit.sh all          # run most unit tests, takes about a second or two
+
+test/spec.sh smoke        # run a single file; there are more but this is a good start
+test/spec-py.sh ysh-all      # all YSH tests
+</code></pre>
+<p>See <a href="Spec-Tests.html">Spec Tests</a> for details.</p>
+<h3>Cheat Sheet</h3>
+<p>See <a href="Oils-Dev-Cheat-Sheet.html">Oils Dev Cheat Sheet</a> for a summary of the commands above.</p>
+<p>And tips on running more tests and benchmarks.</p>
+<h3>Other Test Suites</h3>
+<p>There are many other test suites which are reported on:</p>
+<ol>
+<li>The <a href="https://www.oilshell.org/release/0.10.0/quality.html">/release/$VERSION/quality.html</a> page on every release</li>
+<li>The &quot;Soil&quot; continuous build at <a href="http://travis-ci.oilshell.org/github-jobs/">http://travis-ci.oilshell.org/github-jobs/</a></li>
+</ol>
+<p>For example, you can run</p>
+<pre><code>test/parse-errors.sh all
+</code></pre>
+<p>To see a big demonstration of parse errors.  I use this to supplement the spec tests when changing the syntax of the language.</p>
+<h2>Working on C++: oils-cpp</h2>
+<p>If you did the above, then the Python <code>bin/osh</code> should be working.</p>
+<p>If you want to work on C++, then you should get <code>_bin/cxx-asan/osh</code> to work.  See <a href="Oil-Native-Quick-Start.html">Oil Native Quick Start</a>, which links to the mycpp <code>README.md</code>.</p>
+<h2>Tips for Developing</h2>
+<ul>
+<li>Make sure to <code>build/dev.sh minimal</code> (or <code>all</code>) after you <code>git pull</code> !  The Python extension modules (<code>.so</code> files) that OSH uses may be out of date, and they have to match the Python code.</li>
+<li>Use <code>build/clean.sh</code> to start over.
+<ul>
+<li>It deletes all the temp files created by the tools, in underscore dirs like <code>_build</code> and <code>_tmp</code>.</li>
+<li>See <a href="Oil-Dev-Cheat-Sheet.html">Oil Dev Cheat Sheet</a></li>
+</ul>
+</li>
+<li><a href="Spec-Tests.html">Spec Tests</a> are very important!  Make sure you know how to run them quickly and maintain a fast, iterative development style.
+<ul>
+<li><em>Where Do I Put Spec Tests?</em>  If I'm going to change the behavior of the <code>source</code> builtin, I do <code>grep source spec/*.test.sh</code> and that leads to the spec test that should verify the new behavior.</li>
+</ul>
+</li>
+<li><a href="Debugging-Completion-Scripts.html">Debugging Completion Scripts</a> -- Use <code>--debug-file</code>!</li>
+</ul>
+<h2>Pull Requests / Code Review</h2>
+<p>See <a href="Making-Pull-Requests.html">Making Pull Requests</a></p>
+<h3>I aim for 24-hour response time</h3>
+<p>Please feel free to ping <code>andychu</code> on Zulip or Github if you're <strong>waiting</strong> for a pull request review! (or to ask questions)</p>
+<p>Usually I can respond in 24 hours. I might be traveling, in which case I'll respond with something like <em>I hope to look at this by Tuesday</em>.</p>
+<p>I might have also <strong>missed</strong> your Github message, so it doesn't hurt to ping me.</p>
+<p>Thank you for the contributions!</p>
+<h2>Code Style</h2>
+<p>Python code follows <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a>, with some modifications from <a href="https://github.com/google/styleguide/blob/gh-pages/pyguide.md">Google's Python style guide</a>, like <code>CapWords()</code> for function names.</p>
+<ul>
+<li>We use <code>yapf</code> to format Python code.  See <a href="Oil-Dev-Cheat-Sheet.html">Oil Dev Cheat Sheet</a></li>
+<li>We use <code>clang-format</code>  for C++</li>
+</ul>
+<hr />
+<ul>
+<li>For shell code, also follow the existing style.  It has 2 space indents, <code>funcs-like-this</code> (unless POSIX shell is required), and <code>vars_like_this</code>.</li>
+<li>C code generally follows the style that CPython uses (except 2 space indents?)</li>
+</ul>
+<h2>Code Overviews</h2>
+<ul>
+<li>See <a href="https://github.com/oilshell/oil/blob/master/README.md">README.md</a> and <a href="https://github.com/oils-for-unix/oils/blob/master/doc/repo-overview.md">Repo Overview</a></li>
+<li><a href="https://www.oilshell.org/release/latest/pub/metrics.wwz/line-counts/overview.html">https://www.oilshell.org/release/latest/pub/metrics.wwz/line-counts/overview.html</a></li>
+<li><a href="https://www.oilshell.org/release/latest/pub/metrics.wwz/line-counts/for-translation.html">https://www.oilshell.org/release/latest/pub/metrics.wwz/line-counts/for-translation.html</a></li>
+</ul>
+<h2>Links</h2>
+<ul>
+<li><a href="Python-App-Bundle.html">Python App Bundle</a> -- the old &quot;OVM&quot; build</li>
+</ul>
+  </body>
+</html>
+

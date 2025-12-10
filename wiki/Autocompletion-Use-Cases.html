@@ -1,0 +1,60 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Autocompletion Use Cases</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>(Back to <a href="Shell-Autocompletion.html">Shell Autocompletion</a>)</p>
+<ol>
+<li>Completing the <strong>shell language</strong> itself.  The knowledge to do this is all in the shell binary.
+<ul>
+<li>Completing variable names for <code>${v&lt;TAB&gt;}</code>.</li>
+<li>Completing keywords like <code>for</code>, <code>while</code>, etc.</li>
+<li>Completing the shell's own builtins like <code>set -o &lt;TAB&gt;</code>.</li>
+<li>In zsh: completing various glob modes.</li>
+</ul>
+</li>
+<li>Completing <strong>flags names and arguments</strong>.  This info is inherently &quot;upstream&quot;.
+<ul>
+<li>... for <strong>common tools</strong>, which can be grouped:
+<ul>
+<li>GNU coreutils and family tend to use the same syntax.  <code>bash_completion</code> treats them all the same.</li>
+<li>tools in Go tend to use the <code>flags</code> package, which has a consistent syntax.</li>
+</ul>
+</li>
+<li>... for <strong>unusual tools</strong>
+<ul>
+<li><a href="Diversity-in-Command-Line-Syntax.html">Diversity in Command Line Syntax</a> -- bash itself has a nonstandard flag syntax, <code>python -c</code>, <code>test</code>, etc.</li>
+</ul>
+</li>
+<li><strong>Very large</strong> tools -- it would be nicer to reuse the work from upstream.
+<ul>
+<li>git</li>
+<li>clang</li>
+<li>npm?</li>
+</ul>
+</li>
+<li>NOTE: Completing <strong>file system paths</strong> is a special case of a flag argument.  The behavior here may be configurable <strong>in the shell</strong>, e.g. case-sensitivity.</li>
+</ul>
+</li>
+<li>Completing <strong>languages/DSLs within arguments</strong>.
+<ul>
+<li>This is generally a harder problem than completing args, because it may require recursive parsing.</li>
+<li><code>sed -e</code> -- completing all the one letter commands with descriptions, completing the one letter flags with descriptions (from Oliver Kiddle)</li>
+<li><code>ssh</code> -- this is equivalent to parsing all of shell!  i.e. the OSH parser.  (from Oliver Kiddle)</li>
+<li><code>awk</code></li>
+<li>Regexes?  I always forget how spell character classes like <code>[:space:](:space:.html)</code>.</li>
+</ul>
+</li>
+</ol>
+<p>Notes:</p>
+<ul>
+<li><a href="Shellac-Protocol-Proposal.html">Shellac Protocol Proposal</a> handles #2 and #3.  #1 is up to the shell binary.</li>
+<li>It is not clear to me (andychu) if grammar-based approaches can handle #3 (in general).</li>
+</ul>
+  </body>
+</html>
+

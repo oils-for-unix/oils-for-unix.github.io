@@ -1,0 +1,45 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Markdown Tables</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Demo of markdown tables, for comparison with <code>ul-table</code>.</p>
+<p>From <a href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables">https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables</a></p>
+<p>| Command | Description |
+| --- | --- |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |</p>
+<p>| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |</p>
+<p>Github produces this HTML, with <code>align=</code> on every <strong>cell</strong>.   This is a symptom of a problem: HTML doesn't have table alignment by <strong>column</strong></p>
+<pre><code>&lt;table role=&quot;table&quot;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;Left-aligned&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;Center-aligned&lt;/th&gt;
+&lt;th align=&quot;right&quot;&gt;Right-aligned&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;git status&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;git status&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;git status&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;git diff&lt;/td&gt;
+&lt;td align=&quot;center&quot;&gt;git diff&lt;/td&gt;
+&lt;td align=&quot;right&quot;&gt;git diff&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+  </body>
+</html>
+

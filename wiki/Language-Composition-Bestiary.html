@@ -1,0 +1,99 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Language Composition Bestiary</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Languages are generally composed using strings in Unix.  This has well-known downsides like escaping problems leading to code injection attacks.</p>
+<p>There are two ways that languages are composed using strings.</p>
+<ul>
+<li>One language can accept a string in another language (eval)</li>
+<li>One language can generate another: The most basic form of <a href="Metaprogramming.html">Metaprogramming</a></li>
+</ul>
+<h3>Eval (Runtime)</h3>
+<p>Shell:</p>
+<ul>
+<li><code>sh</code> in <code>sh</code>: <code>eval 'echo hi'</code></li>
+<li><code>sh</code> in <code>awk</code>: <code>system('ls | wc -l')</code></li>
+<li><code>sh</code> in <code>make</code>
+<ul>
+<li>every single line in the actions in <code>sh</code> in <code>make</code> !!!  <code>.ONESHELL</code> changes the semantics a bit.</li>
+<li><code>$(shell find /)</code> -- capturing it in a variable rather than an action.</li>
+</ul>
+</li>
+<li><code>sh</code> in Python/C, etc: <code>os.system()</code></li>
+</ul>
+<p>Make:</p>
+<ul>
+<li><code>make</code> in <code>make</code>: <code>$(eval $(mycode))</code></li>
+</ul>
+<p>Other:</p>
+<ul>
+<li>X in <code>sh</code>.  Shell is special, because more binaries have something like <code>-e</code>
+<ul>
+<li><code>python -c</code></li>
+<li><code>perl -e</code></li>
+<li><code>awk '{print $1}'</code></li>
+<li><code>sed -e</code></li>
+</ul>
+</li>
+<li>python in python: <code>eval('1+2')</code>, <code>exec 'print &quot;hi&quot;'</code></li>
+</ul>
+<h3>Code Generation (Build Time)</h3>
+<ul>
+<li>
+<p>shell generating shell</p>
+</li>
+<li>
+<p>sed generating C</p>
+</li>
+<li>
+<p>awk generating C: TODO: Python build system had a sed example I rewrote in Awk.  Shell</p>
+</li>
+<li>
+<p>C preprocessor generating C</p>
+</li>
+<li>
+<p>cmake generating Makefiles</p>
+</li>
+<li>
+<p>autoconf</p>
+<ul>
+<li>m4 generating things that generate shell, make, C headers (config.h)</li>
+<li><code>Makefile.pre.in</code>, <code>config.h.in</code>, etc.</li>
+</ul>
+</li>
+</ul>
+<h3>Web</h3>
+<ul>
+<li>JS in HTML:
+<ul>
+<li><code>&lt;script&gt;&lt;/script&gt;</code></li>
+<li><code>&lt;onload=&quot;&quot;&gt;</code></li>
+</ul>
+</li>
+<li>CSS in HTML:
+<ul>
+<li><code>&lt;style&gt;&lt;/style&gt;</code></li>
+<li><code>&lt;p style=&quot;&quot;&gt;</code></li>
+</ul>
+</li>
+<li>HTML in JS:
+<ul>
+<li><code>document.innerHTML = '&lt;p&gt;hi&lt;/p&gt;'</code></li>
+<li>special extension: JSX, which is PHP-like</li>
+</ul>
+</li>
+<li>CSS in JS:
+<ul>
+<li><code>element.style = 'font-size: large;'</code></li>
+<li><code>document.querySelectorAll('#id')</code></li>
+</ul>
+</li>
+</ul>
+  </body>
+</html>
+

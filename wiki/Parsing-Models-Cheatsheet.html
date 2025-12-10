@@ -1,0 +1,57 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Parsing Models Cheatsheet</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>(Back to <a href="Shell-Autocompletion.html">Shell Autocompletion</a>)</p>
+<p>From Zulip:</p>
+<h3>Parsing Models and Their Computational Complexity</h3>
+<p>NOTE: Speed isn't the most important thing when considering a model; I think the more important issues are expressiveness (what can it parse), readability, and debuggability.</p>
+<ul>
+<li>Basic regexes (e.g. BRE grep/sed or ERE with awk, egrep): linear time matching, constant space</li>
+<li>Perl style regexes (now in Python, Ruby, JS, etc.): exponential in the worst case.  (Russ Cox's articles are all about this.)</li>
+<li>Arbitrary CFG: <code>O(n^3)</code>.   There are like 10 different algorithms to recognize CFGs, with complex sets of advantages and disadvantages.
+<ul>
+<li><code>LR</code> family
+<ul>
+<li><code>LALR(1)</code> grammar (yacc): <code>O(n)</code>, accepting all the limitations with shift-reduce conflicts and such</li>
+</ul>
+</li>
+<li><code>LL</code> family
+<ul>
+<li>Python's pgen: <code>LL(1)</code> which can be matched in <code>O(n)</code> time.</li>
+<li>ANTLR: started out as <code>LL(k)</code> which I believe is also <code>O(n)</code>, but ANTLR v4 introduced a more powerful model <code>ALL(*)</code> (“all-star”).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>PEG: exponential backtracking or linear time memoized packrat parsing.</li>
+<li>Turing complete code: you can write arbitrarily slow code, but people generally don't, because it's <strong>obvious</strong> when you have an <code>O(n^2)</code> loop or are doing exponential backtracking.</li>
+</ul>
+<h3>Case Studies</h3>
+<ul>
+<li><code>sed</code>: uses arbitrary code.</li>
+<li><code>awk</code>: LALR(1) parser with yacc [1].</li>
+<li>Python: an LL(1) parser written with a bespoke grammar DSL <code>pgen</code> [2].</li>
+</ul>
+<p>One of the major motivations for OSH it to test this theory that Chet Ramey wrote about [3], after 20+ years maintaining bash:</p>
+<blockquote>
+<p>One thing I've considered multiple times, but never done, is rewriting the bash parser using straight recursive-descent rather than using bison. [...] Were I starting bash from scratch, I probably would have written a parser by hand. It certainly would have made some things easier.</p>
+</blockquote>
+<p>Andy: In my opinion, this experiment was a <strong>big success</strong>.  The OSH parser is more maintainable and less buggy than bash's parser (although it's admittedly slower, being in Python).  bash is 20+ years old and they are still fixing corner cases involving matching <code>{ }</code> and <code>( )</code>.</p>
+<p>It's because their code s a <strong>messy mix of yacc and C code</strong>, and it would be better off as well-structured code (in C, or a higher level language).  The interface between the two models messy and ill-defined (and filled with global variables).</p>
+<p>Looking at <code>parse.y</code> in bash, there's much more C code there than there is yacc grammar.  The grammar solves maybe 25% of the problems you have.  And <code>subst.c</code> has a ton of ad hoc parsing code outside the grammar.</p>
+<pre><code>$ wc -l parse.y
+&gt;6513 parse.y
+</code></pre>
+<hr />
+<p>[1] I forked Kernighan's original Awk and found a couple minor bugs in it.   https://github.com/andychu/bwk</p>
+<p>[2] The &quot;update&quot; here is due to a private e-mail discussion I had with Guido on pgen's design.  http://python-history.blogspot.com/2018/05/the-origins-of-pgen.html</p>
+<p>[3] http://aosabook.org/en/bash.html</p>
+  </body>
+</html>
+

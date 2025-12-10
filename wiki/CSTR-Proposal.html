@@ -1,0 +1,70 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>CSTR Proposal</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Related: <a href="TSV2-Proposal.html">TSV2 Proposal</a></p>
+<p>Update: This is <strong>done</strong>, and it's now called QSN: Quoted String Notation.  See the <a href="https://github.com/oilshell/oil/tree/master/qsn_">qsn/ directory</a>.</p>
+<hr />
+<p><a href="https://github.com/oilshell/oil/issues/582">Issue 582</a> is to implement CSTR</p>
+<h1>Intro</h1>
+<p>Rationale: <code>ls --escaped</code> and <code>stat</code> print filenames with <code>0xFF</code> bytes differently!   We want to document and formalize this small format.</p>
+<h2>Naming</h2>
+<p>CSTR doesn't stand for anything; it's basically short for &quot;C String&quot;.  It's spelled a bit like JSON.</p>
+<h2>Rough Sketch</h2>
+<p>It's basically a single quoted string with <code>\</code> escapes that can express any byte string.  We use single rather than double quotes to reduce confusion with JSON.</p>
+<p>These are valid strings in the CSTR format:</p>
+<ul>
+<li><code>''</code> - empty string</li>
+<li><code>'foo'</code></li>
+<li><code>'\t\n'</code></li>
+<li><code>'foo \xFF'</code></li>
+<li><code>'nul bytes \0 ok \0'</code></li>
+</ul>
+<h2>Diff from JSON</h2>
+<p>It could be easier to describe CSTR as a &quot;diff&quot; from the JSON string format.</p>
+<ul>
+<li>Take a JSON string <code>&quot;foo bar\n&quot;</code></li>
+<li>Change double quotes to single quotes: <code>'foo bar\n'</code>
+<ul>
+<li>This also means that JSON's <code>&quot;\&quot;&quot;</code> becomes <code>'&quot;'</code></li>
+<li>Conversely, CSTR's <code>'\''</code> is <code>&quot;'&quot;</code> in JSON.</li>
+</ul>
+</li>
+<li>And add the ability to express bytes: <code>'foo bar \xFF \n'</code>.  We should probably keep the ability to express code points like <code>\u00FF</code>.</li>
+</ul>
+<h2>Parser</h2>
+<p>It can be implemented in any number of ways, but it's a regular language so Oil's common style with <code>re2c</code> should work very well.</p>
+<p><a href="http://www.oilshell.org/blog/2019/12/22.html#appendix-a-oils-lexer-uses-two-stages-of-code-generation">http://www.oilshell.org/blog/2019/12/22.html#appendix-a-oils-lexer-uses-two-stages-of-code-generation</a></p>
+<h2>Printer</h2>
+<ul>
+<li>If it doesn't know the encoding, it will always print <code>\x00</code> for non-printable characters.
+<ul>
+<li>Common special cases: <code>\t \r \n \'</code>.  Not sure about <code>\0</code>.</li>
+</ul>
+</li>
+<li>If it does know the encoding, it can print code points like <code>\u1234</code>.</li>
+</ul>
+<h2>Relation to TSV2</h2>
+<p>CSTR is a subset of TSV2.  TSV2 might not be implemented in Oil v1, but CSTR is necessary for basic shell functionality like displaying filenames and <code>argv</code> arrays.</p>
+<p>Unquoted variant.  &quot;bob&quot; is valid because it doesn't TABs.</p>
+<pre><code>name   age
+bob    10
+</code></pre>
+<pre><code>name   age
+'bob'  10
+</code></pre>
+<h2>Relation to Python's <code>repr()</code></h2>
+<ul>
+<li>I think the main difference that in Python, <code>&quot;'&quot;</code> is valid.  In CSTR it has to be <code>'\''</code>.</li>
+</ul>
+<p>https://docs.python.org/2/library/codecs.html#python-specific-encodings</p>
+<h2>Related</h2>
+<p><a href="Unix-Tools.html">Unix Tools</a> lists tools like <code>find</code> which understand backslash escapes.</p>
+  </body>
+</html>
+

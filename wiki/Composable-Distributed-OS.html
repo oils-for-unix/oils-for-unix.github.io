@@ -1,0 +1,158 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Composable Distributed OS</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>Spitballing a distributed OS design following the <a href="Perlis-Thompson-Principle.html">Perlis-Thompson Principle</a>.  (An elaboration on <a href="https://lobste.rs/s/ww7fw4/unix_shell_history_trivia#c_mjcz7m">this lobste.rs subthread</a> on <em>Unix Shell: History and Trivia</em>)</p>
+<h2>Before Reading This</h2>
+<ul>
+<li>Understand Borg (since that's my background).  This system makes sense from first principles, but it's easier to explain as a &quot;diff&quot;.</li>
+<li>Read &quot;A Better Kubernetes from the Ground Up&quot;.  This page doesn't have much overlap with that one, but it's worthwhile to see the &quot;diff&quot;.</li>
+<li>Kubernetes is Our Generation's Multics, and &quot;cloud review&quot; -- a distributed OS should be a bunch of shell scripts.</li>
+</ul>
+<h2>Short Answer</h2>
+<p>Short answer: shell scripts, FastCGI scripts, and git :-)  Loosely coupled, concurrent processes and versioned, hierarchical data.</p>
+<p>Key point: Borg/Kubernetes are the <strong>control</strong> plane, not the data plane.  They deal with extremely little data and can be written in interpreted languages.  The kernel is a very fast data plane, and you just have to use it correctly.</p>
+<ul>
+<li>git needs a couple augmentations:
+<ul>
+<li>The notion of a &quot;pointer&quot; to a tree in another git repository, or a flat blob (leaf).  This creates a big uniform namespace where each subtree is a <strong>value</strong> (in the Rich Hickey sense), and it has a short hash as an immutable identifier (to be concrete, let's say it looks like <code>K-abcd0123</code>)</li>
+<li>A way to &quot;listen&quot; to for updates across a subtree.  The simplest version of this could literally be implemented using <code>inotify()</code>?
+<ul>
+<li>For example, we might have a hierarchy <code>/users/alice</code> and <code>/oci-images/myapp/</code>.  Some scripts/applets might want to listen for changes to <code>/users</code> in order to commit another file, or listen for changes to <code>/oci-images/myapp/</code> in order to deploy new versions.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Summary of Simplifications</h2>
+<ul>
+<li>Unified storage and networking (somewhat like Plan 9).  There's no &quot;networking or RPC&quot;.  It's based on versioned state synchronization, like <code>git pull</code>.</li>
+<li>Single storage namespace.  Logically, there are not separate repos for Debian / PyPI / Docker images.  They all live behind one abstraction and are identified by KIDs</li>
+<li>No separation between WAN and LAN.  It can run across a WAN.</li>
+<li>The &quot;master&quot; state has two implementations: single node or Paxos.  But it's polymorphic.</li>
+<li>It's built to be easily turned up / bootstrapped and doesn't have an &quot;inner platform effect&quot;.  There's no another distributed OS below it that distributes its binaries and has its own auth system.</li>
+<li>Uses only process-based concurrency.  There are no threads and no goroutines.  (This solves O(M * N) problems in distributed tracing and debugging, which are very important.)</li>
+<li>There is a single shell language for coordinating processes :)</li>
+<li>It's a <em>source-based</em> OS.  You push source code (like Heroku) and build configuration, and the system spins up processes to build it into a binary / OCI image that can be deployed to many machines.  Both the source code and binary image are identified with KIDs.
+<ul>
+<li>Being source-based means that distributed debugging and tracing tools can always refer back to source code.  The system knows more about what's running on it than just opaque containers.</li>
+</ul>
+</li>
+<li>There's no geographic split like &quot;AWS regions&quot;.  The cluster manager itself can manage nodes across a WAN, i.e. across multiple geographic regions.  It's based on synchronization of state.
+<ul>
+<li>Applications like databases could have some notion of region if they want, but the cluster manager doesn't.</li>
+</ul>
+</li>
+<li>Controversial: no types or schemas!
+<ul>
+<li>Schemas are another possibly incommensurable &quot;concept&quot;; types inhibit metaprogramming and generic operations, and <a href="https://gbracha.blogspot.com/2011/06/types-are-anti-modular.html">are anti-modular</a>.  All of this has a bearing on distributed systems.  Instead I would use Hickey's style of interfaces: &quot;strengthen a promise&quot; and &quot;relax a requirement&quot;.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>The data model is REST with the &quot;uniform interface constraint&quot;, which is like Plan 9: a hierarchy of tables, objects, and documents.
+<ul>
+<li>objects are used for configuration (Oil configuration evaluates to JSON)</li>
+<li>tables/relations are used for cluster state and metrics (maybe there are streams which are like infinite tables)</li>
+<li>documents are used for the user interface (as well as docs/online help!).  The state of every node has to be reflected a web UI.</li>
+</ul>
+</li>
+<li>The system should separate policy and mechanism.  Example: starting or killing a process is a mechanism.  But gracefully restarting 20 copies of a web server is an algorithm (policy) that belongs at a higher layer.  This shouldn't be embedded in the config file for your service; it's part of a different tool -- that launches a remote process that operates on remote processes!</li>
+</ul>
+<h2>Comparison</h2>
+<ul>
+<li>Web as a modest and humble (and this brilliant) extension of Unix.  This design is for a very minimal extension of UNix.</li>
+<li>It changes the file system to use distributed syncable state with global IDs (KIDs)</li>
+<li>It uses contained processes.</li>
+<li>It uses existing auth mechanisms</li>
+</ul>
+<p>So those are the three concepts: running code, data (control plane or data plane), and some form of identity.</p>
+<p>An OS is a mediator between applications, people, and hardware.  That's it.  This is the minimal system to achieve those goals.</p>
+<h2>Use Cases</h2>
+<ul>
+<li>Use Cases span the gamut.  It scales down as well as scales up.
+<ul>
+<li>Hosting Static Files.  You need something like nginx and a file system.</li>
+<li>Hosting simple database-backed web apps (like Heroku does, e.g. &quot;12 factor apps&quot;)</li>
+<li>Hosting off-the-shelf distributed databases.  It needs to be flexible enough for this.</li>
+<li>Hosting a search engine: batch jobs for indexing, a tree of servers for serving posting lists, etc.</li>
+<li>Hosting its own binaries: metrics, monitoring, alerting</li>
+<li>Hosting another copy of itself: It needs to compose.
+<ul>
+<li>There is a &quot;virtualization theorem&quot; for hardware; likewise we want some kind of &quot;virtualization&quot; for a distributed.  Not because this is necessarily a great idea, but because it's a test of the power of the abstractions developed.  Arguably, the fact that VMs and containers exist is a sign of a deficit in the design of a Unix process.  A process <strong>was</strong> a virtual machine, except where it leaked and caused problems.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>More</h2>
+<ul>
+<li>
+<p>The Inner Platform effect and the Bootstrapping Problem</p>
+<ul>
+<li>We want to solve this.</li>
+</ul>
+</li>
+<li>
+<p>There is a single storage abstraction and single namespace.  Let's call it a &quot;Keg&quot; to be concrete.</p>
+<ul>
+<li>Think of Keg as a wrapper over git.  It supports versioning and differential compression.  It can efficiently hold 1,000 copies of a 1 GiB container (possibly by using &quot;pointers&quot;.
+Programs can read and write its content with the regular POSIX file system API, not a RPC wrapper.</li>
+</ul>
+</li>
+<li>
+<p>Contrast to the cloud</p>
+<ul>
+<li>there is no separate Debian repository or PyPI repository.  We import those all into a Keg and assign them a KID.</li>
+<li>there is no separate Docker image repository</li>
+<li>there is no separate thing to store membership</li>
+</ul>
+</li>
+<li>
+<p>The &quot;master&quot; holds authoriative State, and has at least two implementations.</p>
+<ul>
+<li>A single machine implementation.  It just stores everything on a file system, like a git repo.  A single machine can be very reliable -- more reliable than an entire AWS region, because those have single points of failure and misconfigurations.</li>
+<li>A implementation that uses Paxos.  This probably isn't necessary.  If the master is down, then it just means you can't deploy new code or stop processes.  All the mayors will maintain the integrity of the images they're assigned to run.</li>
+</ul>
+</li>
+<li>
+<p>Everything is a KID.  A KID can be thought of as a value (in the Rich Hickey sense), and also a  distributed pointer.  It's a handle to versioned data.</p>
+<ul>
+<li>To be concrete, let's write it as K-0123abcd.  This is a hex number.</li>
+</ul>
+</li>
+<li>
+<p>Examples</p>
+<ul>
+<li>Every user has a KID (could be a hash of an e-mail address)</li>
+<li>Every machine has a KID.  (It could be a hash of a human-readable name)</li>
+<li>Every version of source code is represented by a KID (can be derived from git hash)</li>
+<li>There is a single executable format like an OCI container, and each one has a unique KID.</li>
+<li>Every running process had a KID.  The Mayor maintains a map from PID to KID.</li>
+</ul>
+</li>
+<li>
+<p>Operations:</p>
+<ul>
+<li>wait() on a set of process KIDs to exit.</li>
+</ul>
+</li>
+<li>
+<p>Components</p>
+<ul>
+<li>Mayor: a distributed init.  Maintains more of its own integrity than Borg.
+<ul>
+<li>Machine state: A table of (KID for binary, KID for user, )</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </body>
+</html>
+

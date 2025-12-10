@@ -1,0 +1,58 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Shell Security Problems</title>
+      <link rel="stylesheet" type="text/css" href="../web/base.css" />
+    </head>
+    <body class="width40">
+
+<p>TODO: Link to good resources on the web.</p>
+<ul>
+<li>
+<p><code>rm -f *</code> -- a file named '-r' can be interpreted as a flag</p>
+</li>
+<li>
+<p>globbing happens after variable expansion.  code as data</p>
+</li>
+<li>
+<p>escaping from generating programs (shell, HTML, what else?)</p>
+</li>
+<li>
+<p>bash shellshock: this was storing code in environment variables.  code as data is an anti-pattern.</p>
+</li>
+</ul>
+<h2>Examples</h2>
+<ul>
+<li>
+<p><a href="Untrusted-git-branch-name-in-prompt%7Chttps://news.ycombinator.com/item?id=13897742.html">Untrusted git branch name in prompt|https://news.ycombinator.com/item?id=13897742</a></p>
+</li>
+<li>
+<p>[Critical security updates for Git, Subversion and Mercurial|https://news.ycombinator.com/item?id=14987853](Critical-security-updates-for-Git -Subversion-and-Mercurial|https://news.ycombinator.com/item?id=14987853.html) -- <em>A &quot;ssh://...&quot; URL can result in a &quot;ssh&quot; command line with a hostname that begins with a dash &quot;-&quot;, which would cause the &quot;ssh&quot; command to instead (mis)treat it as an option.</em></p>
+</li>
+<li>
+<p><a href="Busybox-Shell-Autocompletion-Vulnerability%7Chttps://www.twistlock.com/2017/11/20/cve-2017-16544-busybox-autocompletion-vulnerability/.html">Busybox Shell Autocompletion Vulnerability|https://www.twistlock.com/2017/11/20/cve-2017-16544-busybox-autocompletion-vulnerability/</a></p>
+<ul>
+<li><em>Busybox has code to check for escape sequences and replace them.</em></li>
+<li><em>when using the shell’s autocompletion feature, the filename was not sanitized.</em></li>
+</ul>
+</li>
+</ul>
+<h2>String Hygiene Problems</h2>
+<p>https://www.reddit.com/r/oilshell/comments/7fjl5t/any_idea_on_the_completeness_of_shellchecks_parser/</p>
+<blockquote>
+<ol start="2">
+<li>Its smartness around find. e.g.: find .... -exec sh -c 'foo {}' ... gets suggested to be corrected to find ... -exec sh -c 'foo &quot;$1' -- {}</li>
+</ol>
+</blockquote>
+<p>TODO: Construct an example like this that's a security problem?</p>
+<h2>Pedantic Style</h2>
+<p>Motivation for Oil: get rid of pedantic style.  The simple code should be correct, not be riddled with subtle bugs.</p>
+<p>ShellCheck enforces pedantic style.  Modernish developers a new pedantic style.</p>
+<ul>
+<li>double quote everything (except it's not necessary for RHS of assignment)</li>
+<li>add -- after everything, e.g. <code>cd -- $dir</code> not <code>cd $dir</code>.  Except echo and others which don't support it.</li>
+</ul>
+  </body>
+</html>
+
