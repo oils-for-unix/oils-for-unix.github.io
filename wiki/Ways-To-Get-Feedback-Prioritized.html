@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Ways To Get Feedback Prioritized</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ways To Get Feedback Prioritized</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p><a href="Where-To-Send-Feedback.html">Where To Send Feedback</a> gives tips on good feedback.</p>
 <p>If you feel like your feedback isn't being addressed, here are some ways to make it more actionable.</p>
@@ -68,6 +73,12 @@ I can help with the style and linting, etc.  See <a href="Contributing.html">Con
 <p>Does it make sense?</p>
 <p>Is it actionable?</p>
 <p>(The real last resort!)</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

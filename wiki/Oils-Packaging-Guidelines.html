@@ -1,15 +1,20 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Oils Packaging Guidelines</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oils Packaging Guidelines</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <h2>Tips and Naming</h2>
 <ul>
-<li>The latest release is at: <a href="https://www.oilshell.org/release/latest/">https://www.oilshell.org/release/latest/</a></li>
+<li>The latest release is at: <a href="https://oils.pub/release/latest/">https://oils.pub/release/latest/</a></li>
 <li>Please call the package <code>oils-for-unix</code>
 <ul>
 <li>There is no more &quot;oil&quot;.  The project is called <strong>Oils</strong>, or &quot;Oils for Unix&quot;</li>
@@ -40,6 +45,12 @@
 <li><a href="Oils-Deployments.html">Oils Deployments</a></li>
 <li><a href="Oils-Packaging-Tips.html">Oils Packaging Tips</a> - Add tips here!</li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

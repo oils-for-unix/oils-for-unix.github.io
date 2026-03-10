@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Difficulties With Unix Signals</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Difficulties With Unix Signals</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>This is a list of problems with Unix signals.  Some of them are semantic problems (e.g. with threading), but some are just issues with a bad API and unclear ideas about what is portable.</p>
 <ul>
@@ -57,6 +62,12 @@ handlers for running on the main loop.  (I think bash only changed this recently
 <ul>
 <li><a href="Signal-Handling-in-Oil.html">Signal Handling in Oil</a></li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

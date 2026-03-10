@@ -1,14 +1,25 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>GitTips</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GitTips</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>If there is messy intermediate work, please squash commits.  But don't squash too much either!</p>
 <p>http://eli.thegreenplace.net/2014/02/19/squashing-github-pull-requests-into-a-single-commit</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

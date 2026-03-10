@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Implementations of Shell Autocompletion</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Implementations of Shell Autocompletion</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Back to <a href="Shell-Autocompletion.html">Shell Autocompletion</a></p>
 <h2>bash</h2>
@@ -67,6 +72,12 @@
 <ul>
 <li>https://github.com/oilshell/oil/issues/227 -- I think this is relatively easily handled by our scheme, but I haven't thought about it in awhile.</li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

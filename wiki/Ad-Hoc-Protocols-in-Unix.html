@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Ad Hoc Protocols in Unix</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ad Hoc Protocols in Unix</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Related: <a href="Unix-Tools.html">Unix Tools</a></p>
 <h3>Data / &quot;microformats&quot;</h3>
@@ -33,6 +38,12 @@ I think it was invented as an <em>internal protocol between C preprocessor -&gt;
 <li><code>eval &quot;$(ssh-agent)&quot;</code></li>
 <li><code>gcc -M</code> sends a Makefile fragment</li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

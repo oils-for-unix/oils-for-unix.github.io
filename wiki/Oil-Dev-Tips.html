@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Oil Dev Tips</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oil Dev Tips</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Back to <a href="Contributing.html">Contributing</a></p>
 <h2>Debugging Outside the Spec Test Framework: Pass <code>-p</code></h2>
@@ -49,6 +54,12 @@ gdb --args _bin/cxx-dbg/osh_eval c0  # under GDB
   body: (BraceGroup children:[(C {&lt;echo&gt;} {&lt;hi&gt;})])
 )
 </code></pre>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Technical Writing</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technical Writing</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>TODO: Accept donations?</p>
 <p><a href="http://www.oilshell.org/blog/2020/07/blog-roadmap.html#accepting-donations-for-a-technical-writer">http://www.oilshell.org/blog/2020/07/blog-roadmap.html#accepting-donations-for-a-technical-writer</a></p>
@@ -37,6 +42,12 @@
 </ul>
 <p>Would like to see: prior writing, blog posts, etc.</p>
 <p>Related: <a href="Documentation-Strategy.html">Documentation Strategy</a></p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Headless Shell Protocol</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Headless Shell Protocol</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>(back: <a href="Interactive-Shell.html">Interactive Shell</a> / <a href="Headless-Mode.html">Headless Mode</a>)</p>
 <p>Some Zulip threads</p>
@@ -43,6 +48,12 @@
 </li>
 <li><a href="https://oilshell.zulipchat.com/#narrow/channel/266977-shell-gui/topic/Warpified.20shells.20ignore.20bind.20key.20bindings/with/520482262">#shell-gui &gt; Warpified shells ignore bind key bindings</a></li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

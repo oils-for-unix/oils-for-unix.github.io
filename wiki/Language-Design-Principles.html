@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Language Design Principles</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Language Design Principles</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <h2>General Principles</h2>
 <ul>
@@ -65,7 +70,7 @@
 </li>
 <li>It should be <strong>explainable</strong> as clean slate language!  This principle is heavily in conflict with the first, but there were surprisingly  few compromises necessary!
 <ul>
-<li>See <a href="https://www.oilshell.org/release/latest/doc/ysh-tour.html">A Tour of the YSH</a></li>
+<li>See <a href="https://oils.pub/release/latest/doc/ysh-tour.html">A Tour of the YSH</a></li>
 </ul>
 </li>
 <li><strong>Avoid inventing syntax that doesn't exist in any other language</strong>.  Most of YSH should look familiar to programmers and shell users.
@@ -73,7 +78,7 @@
 <li><code>@</code> has precedent in Perl, PowerShell, etc.</li>
 <li>the expression syntax comes from Python, JavaScript, etc.</li>
 <li>However, a corollary of the principle above is:  If YSH has completely new semantics, then inventing a new syntax is justified.</li>
-<li>See <a href="https://www.oilshell.org/release/latest/doc/language-influences.html">YSH Language Influences</a></li>
+<li>See <a href="https://oils.pub/release/latest/doc/language-influences.html">YSH Language Influences</a></li>
 </ul>
 </li>
 <li>YSH should be <strong>familiar to Python and JavaScript users</strong>.  Common features like assignment should behave similarly.</li>
@@ -199,6 +204,12 @@
 <li>Avoid <a href="Shell-WTFs.html">Shell WTFs</a></li>
 <li><a href="Feature-Detection-is-Better-Than-Version-Detection.html">Feature Detection is Better Than Version Detection</a></li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

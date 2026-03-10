@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Making Pull Requests</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Making Pull Requests</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Back to <a href="Contributing.html">Contributing</a> / <a href="Dev-Guide.html">Dev Guide</a></p>
 <p>These guidelines will help me review PRs more quickly:</p>
@@ -14,6 +19,7 @@
 <ul>
 <li>Add <code>andychu</code> as reviewer in the upper right.</li>
 <li>(This is a new thing as of 2025-11)</li>
+<li>Make sure the PR is <strong>NOT</strong> in the Github <strong>Draft</strong> state</li>
 </ul>
 </li>
 <li>Please write a good <strong>commit description</strong>:
@@ -48,6 +54,12 @@
 <ul>
 <li>This is what I use to find pull requests to review: <a href="https://github.com/oils-for-unix/oils/pulls?q=is%3Apr+is%3Aopen+user-review-requested%3A%40me">https://github.com/oils-for-unix/oils/pulls?q=is%3Apr+is%3Aopen+user-review-requested%3A%40me</a></li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

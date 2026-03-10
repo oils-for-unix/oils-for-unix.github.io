@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Coprocess Protocol V2</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coprocess Protocol V2</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>April 2021: This is OLD (2018). See <a href="Capers.html">Capers</a></p>
 <p>(Back to <a href="Shell-Autocompletion.html">Shell Autocompletion</a>)</p>
@@ -93,6 +98,12 @@ exec fcli-invoke --fcli-socket /tmp/redoifchange -- redo-ifchange &quot;$@&quot;
 <ul>
 <li>Can JVM call dup2() ?   Can it <code>recvmsg()</code> a file descriptor?</li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

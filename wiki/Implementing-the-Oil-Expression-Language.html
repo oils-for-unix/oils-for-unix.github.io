@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Implementing the Oil Expression Language</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Implementing the Oil Expression Language</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p><a href="https://github.com/oilshell/oil/issues/387">Turn Oil's expression grammar into an AST #387</a></p>
 <p>Related: <a href="Tips-on-Using-pgen2.html">Tips on Using pgen2</a></p>
@@ -150,6 +155,12 @@ modes.  (Already implemented to a large extent)</li>
 </code></pre>
 <p>should be enough (on an Ubuntu/Debian machine).</p>
 <p>Important: make sure to re-run this when changing <code>frontend/syntax.asdl</code>.  The file <code>_devbuild/gen/syntax_asdl.py</code> needs to be regenerated.</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

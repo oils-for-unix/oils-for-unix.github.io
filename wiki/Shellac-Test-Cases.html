@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Shellac Test Cases</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shellac Test Cases</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <ul>
 <li>Back to <a href="Shellac-Protocol-Proposal-V2.html">Shellac Protocol Proposal V2</a></li>
@@ -29,6 +34,12 @@ echo filename\ with\ spac&lt;TAB&gt;
 <p>Should be expanded to:</p>
 <pre><code>[&quot;echo&quot;, &quot;filename with spac&quot;]  # dequoted partial argv
 </code></pre>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

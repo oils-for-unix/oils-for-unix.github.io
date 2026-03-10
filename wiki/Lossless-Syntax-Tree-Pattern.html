@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Lossless Syntax Tree Pattern</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lossless Syntax Tree Pattern</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Feel free to add more resources to this page or clean it up!</p>
 <p><a href="Hacker-News-Comments-on-%22From-AST-to-Lossless-Syntax-Tree%22%7Chttps://news.ycombinator.com/item?id=13628412.html">Hacker News Comments on &quot;From AST to Lossless Syntax Tree&quot;|https://news.ycombinator.com/item?id=13628412</a></p>
@@ -151,6 +156,12 @@ and implementation points for this library:</p>
 <ul>
 <li><a href="Compact-AST-Representation.html">Compact AST Representation</a></li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

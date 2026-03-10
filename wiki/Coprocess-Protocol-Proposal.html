@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Coprocess Protocol Proposal</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coprocess Protocol Proposal</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>April 2021: This is OLD (2018).   See <a href="Capers.html">Capers</a></p>
 <h1>Coprocess Protocol Proposal (FCLI)</h1>
@@ -123,6 +128,12 @@ seq 3 | foo x y z &gt;out.txt 2&gt;err.txt  # runs coprocess
 <p>It seems like this is mostly a problem for stderr.</p>
 <h3>Update</h3>
 <p><a href="Coprocess-Protocol-V2.html">Coprocess Protocol V2</a></p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

@@ -1,13 +1,21 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Dev Guide</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dev Guide</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>If you want to fix or enhance Oils, this is where to start!</p>
+<blockquote>
+<p><strong>Note</strong>: This wiki is also available in HTML at <a href="https://pages.oils.pub/wiki/Dev-Guide.html">pages.oils.pub/wiki</a>.</p>
+</blockquote>
 <h2>Table of Contents</h2>
 <ul>
 <li><a href="Contributing.html">Contributing</a> - setting up your dev environment
@@ -66,6 +74,12 @@
 <li><a href="Running-Package-Builds-with-OSH.html">Running Package Builds with OSH</a></li>
 <li><a href="Research-Questions.html">Research Questions</a></li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

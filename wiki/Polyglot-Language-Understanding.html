@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Polyglot Language Understanding</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Polyglot Language Understanding</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>This is a survey of projects/research that try to <strong>understand multiple programming languages</strong> in a &quot;unified&quot; way.</p>
 <p>There are many lexing / syntax-highlighting-only projects toward the end of the page.  The more interesting ones attempt something closer to parsing, and even semantic analysis.</p>
@@ -190,6 +195,12 @@ style issues and potential bugs.*</li>
 </li>
 <li><a href="https://oilshell.zulipchat.com/#narrow/channel/121539-oil-dev">oil-dev</a> &gt; <a href="https://oilshell.zulipchat.com/#narrow/channel/121539-oil-dev/topic/Looking.20for.20sqlite.20auto-formatter/with/532465774">Looking for sqlite auto-formatter</a></li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

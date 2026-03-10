@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Implementer Lore About Garbage Collection</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Implementer Lore About Garbage Collection</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>&quot;Implementer lore&quot; means &quot;programming techniques that are only in a few experienced people's heads!&quot;</p>
 <p>It's not in textbooks.  I've found that there is a lot of it with respect to implementing garbage collectors.  The algorithms are one thing, but there are many nontrivial problems in the implementation.  It interacts with the host language a lot, which is usually C, C++, or Assembly.</p>
@@ -27,6 +32,12 @@
 <li><a href="https://github.com/elliottslaughter/rust-gc-talk">High Performance Garbage Collection in Rust</a> from Elliot Slaughter</li>
 </ul>
 <p>Lore on another topic: <a href="Implementing-Debuggers.html">Implementing Debuggers</a></p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

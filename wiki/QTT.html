@@ -1,16 +1,21 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>QTT</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QTT</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <h1>QTT: Quoted, Typed Tables</h1>
 <ul>
 <li>Older: <a href="TSV2-Proposal.html">TSV2 Proposal</a></li>
-<li>Official docs under construction: <a href="http://www.oilshell.org/release/latest/doc/qtt.html">http://www.oilshell.org/release/latest/doc/qtt.html</a></li>
+<li>Official docs under construction: <a href="http://oils.pub/release/latest/doc/qtt.html">http://oils.pub/release/latest/doc/qtt.html</a></li>
 </ul>
 <h2>Links</h2>
 <ul>
@@ -24,6 +29,12 @@
 </ul>
 </li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

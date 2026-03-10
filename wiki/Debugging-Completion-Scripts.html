@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Debugging Completion Scripts</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Debugging Completion Scripts</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>(Back to <a href="Contributing.html">Contributing</a>)</p>
 <p>Context: <a href="http://www.oilshell.org/blog/2018/10/10.html">Running Bash Completion Scripts with OSH</a></p>
@@ -25,6 +30,12 @@ $ cat _tmp/debug                 # do this on the RIGHT.
 }
 </code></pre>
 <p>It uses <code>-x / xtrace</code> and <code>$PS4</code> to display logs.  And it redirects <code>-x</code> output to <code>_tmp/debug</code>.</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

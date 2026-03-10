@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Alternative Regex Syntax</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alternative Regex Syntax</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>This page lists projects that provide an alternative to traditional regex syntax, e.g. POSIX <code>[:digit:](:digit:.html)+</code> or Perl <code>\d+</code>.</p>
 <p><strong>It's freely editable</strong>, so please add your projects here.</p>
@@ -14,7 +19,7 @@
 <h3>Languages That Compile to Regex</h3>
 <p>Little languages with their own syntax that compile to common regular expressions like POSIX or PCRE.</p>
 <ul>
-<li><a href="https://www.oilshell.org/release/latest/doc/eggex.html">Oil's Egg Expressions</a>
+<li><a href="https://oils.pub/release/latest/doc/eggex.html">Oil's Egg Expressions</a>
 <ul>
 <li>Translates to POSIX ERE for use with grep, awk, sed</li>
 <li>Literal strings are quoted; operators are unquoted / unescaped</li>
@@ -85,6 +90,12 @@
 <ul>
 <li><a href="https://wiki.c2.com/?AlternativesToRegularExpressions">https://wiki.c2.com/?AlternativesToRegularExpressions</a> (as of 2022, last edited in 2014)</li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

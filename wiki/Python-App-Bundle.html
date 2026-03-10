@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Python App Bundle</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Python App Bundle</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Back to <a href="Contributing.html">Contributing</a></p>
 <h2>Background: Python App Bundle Releases</h2>
@@ -30,6 +35,12 @@ devtools/release.sh test-oil-tar           # test that you can build the tarball
 <li>After you've done the steps above, you can also try <code>devtools/release.sh quick-oil-tarball</code> to quickly make tarballs for testing on other machines.  (It doesn't run any tests, so make sure the code works on Linux first.)</li>
 </ul>
 <p>2b. <strong>Oil app bundle build</strong>.  This step is architecture-<strong>dependent</strong> and occurs on the machine of the system packager or end user.  To perform this step, follow the instructions in the <code>INSTALL.txt</code> file at the root of the tarball.</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

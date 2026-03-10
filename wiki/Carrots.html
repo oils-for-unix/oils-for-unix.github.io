@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Carrots</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carrots</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Related: <a href="Why-Use-Oil?.html">Why Use Oil?</a></p>
 <h3>Why should anyone use OSH over bash?</h3>
@@ -69,6 +74,12 @@
 </ul>
 <h3>Oil Carrots</h3>
 <p>It's too early for this since it isn't implemented :-/   There are some potential benefits listed on <a href="http://www.oilshell.org/blog/2018/01/28.html">Why Create a New Unix Shell?</a></p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

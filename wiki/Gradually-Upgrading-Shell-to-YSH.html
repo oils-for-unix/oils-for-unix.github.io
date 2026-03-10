@@ -1,16 +1,21 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Gradually Upgrading Shell to YSH</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gradually Upgrading Shell to YSH</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>The slogan of Oils is that it's <em>our upgrade path from bash to a better language and runtime</em>.</p>
 <p>How exactly does that work?  This page will give you an idea.  Written in response to <a href="https://lobste.rs/s/d9xics/bourne_shell_bash_aren_t_right_languages">this lobste.rs thread</a>.</p>
 <h2>Step 1: Run <code>osh myscript.sh</code></h2>
-<p>Most shell scripts should run as is.  The biggest difference may be better error messages when the script fails.  (If you want gory details, see the <a href="https://www.oilshell.org/release/latest/doc/known-differences.html">Known Differences doc</a>, but again these differences are small and rare.)</p>
+<p>Most shell scripts should run as is.  The biggest difference may be better error messages when the script fails.  (If you want gory details, see the <a href="https://oils.pub/release/latest/doc/known-differences.html">Known Differences doc</a>, but again these differences are small and rare.)</p>
 <p>Optional: change the shebang line to something like <code>#!/usr/local/bin/osh</code>.</p>
 <h3>New Features</h3>
 <p>You can now start using features like <code>var</code>, <code>const</code>, <code>setvar</code>, and <code>proc</code>.  You can just write them anywhere in the middle of your shell program!</p>
@@ -33,7 +38,7 @@ mycopy mytest /tmp              # a proc is just like a shell function
 <p>Oils is currently able to run the git test framework, and it may run others.  TODO: Add more to <a href="Shell-Programs-That-Run-Under-OSH.html">Shell Programs That Run Under OSH</a>.  (Oils should also have its own test framework in the future.)</p>
 <h2>Step 2: Add <code>shopt --set ysh:upgrade</code> To the Top of Your Program</h2>
 <p>This breaks a few things, but opens up more features.</p>
-<p>See <a href="http://www.oilshell.org/release/latest/doc/deprecations.html">Shell Language Deprecations</a></p>
+<p>See <a href="http://oils.pub/release/latest/doc/deprecations.html">Shell Language Deprecations</a></p>
 <p>The most common one is probably subshell:</p>
 <pre><code># No longer valid
 (cd /tmp; ls -l) 
@@ -55,7 +60,7 @@ cd /tmp { ls -l }
 <p>You don't have to remember how to type <code>[ &quot;$x&quot; -gt 0 ]</code> or <code>[ $x -gt 0 ](-$x--gt-0-.html)</code> or <code>test &quot;$x&quot; -gt 0</code>, or the differences between them.  Oils has Python-like expressions.</p>
 <p>Other changes:</p>
 <ul>
-<li>One of the biggest changes is <a href="http://www.oilshell.org/release/latest/doc/simple-word-eval.html">Simple Word Evaluation</a>.  This means you can now write <code>cp --verbose $src $dest</code> without the quotes.
+<li>One of the biggest changes is <a href="http://oils.pub/release/latest/doc/simple-word-eval.html">Simple Word Evaluation</a>.  This means you can now write <code>cp --verbose $src $dest</code> without the quotes.
 <ul>
 <li>You can also splice an array with <code>cp --verbose @list_of_files $dest</code>.  This doesn't mangle your filenames!</li>
 </ul>
@@ -69,10 +74,16 @@ cd /tmp { ls -l }
 <ul>
 <li><a href="OSH-versus-Oil.html">OSH versus Oil</a></li>
 <li>More motivation for upgrading: <a href="https://www.oilshell.org/why.html">Why Use Oils?</a></li>
-<li><a href="http://www.oilshell.org/release/latest/doc/idioms.html">Oils Language Idioms</a>: nicer ways to write code</li>
+<li><a href="http://oils.pub/release/latest/doc/idioms.html">Oils Language Idioms</a>: nicer ways to write code</li>
 <li><a href="What-Is-Expected-To-Run-Under-OSH.html">What Is Expected To Run Under OSH</a></li>
 <li>Older: <a href="Migration-Guide.html">Migration Guide</a> (Is there anything on this page we should rescue?  Probably <code>strict:all</code>)</li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

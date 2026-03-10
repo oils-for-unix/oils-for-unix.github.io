@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>OSH Word Evaluation Algorithm</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OSH Word Evaluation Algorithm</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p><strong>OBSOLETE</strong>, See <a href="http://oils.pub/release/latest/doc/simple-word-eval.html">http://oils.pub/release/latest/doc/simple-word-eval.html</a></p>
 <p>This page documents a portion of the OSH implementation.  It differs significantly from other shells in this respect.</p>
@@ -93,6 +98,12 @@ hit TAB.</li>
 <li>Dynamically parsed globs are a mistake (just like dynamically parsed arithmetic is).  Shell already has <code>eval</code>, so you lose nothing by making globs static.</li>
 </ul>
 <p>The Oil language will statically parse globs, and I may add something like <code>shopt -s static-glob</code> to OSH in the short term.</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

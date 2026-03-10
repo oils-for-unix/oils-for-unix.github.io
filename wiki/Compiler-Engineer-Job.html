@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Compiler Engineer Job</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compiler Engineer Job</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <h2>Summary</h2>
 <p>The <a href="https://www.oilshell.org/">Oil project</a> needs a compiler engineer with experience in <strong>C++ and garbage collection</strong> to help &quot;finish&quot; the project!  As of April 2022, we have a 50K euro grant from <a href="https://nlnet.nl">NLnet</a> to pay someone, and I'm also collecting donations with <a href="https://github.com/sponsors/oilshell">Github Sponsors</a>.</p>
@@ -45,7 +50,7 @@
 </li>
 </ul>
 <h3>Code Overview</h3>
-<p>I made an HTML page that lists the code you'll be working with and working near: <a href="https://www.oilshell.org/release/latest/pub/metrics.wwz/line-counts/for-translation.html">https://www.oilshell.org/release/latest/pub/metrics.wwz/line-counts/for-translation.html</a>.</p>
+<p>I made an HTML page that lists the code you'll be working with and working near: <a href="https://oils.pub/release/latest/pub/metrics.wwz/line-counts/for-translation.html">https://oils.pub/release/latest/pub/metrics.wwz/line-counts/for-translation.html</a>.</p>
 <p>Note the line counts are quite small!  This is not a 100K line project; it's more like 10K lines.  (The big components are inputs and outputs to the compiler, <strong>not</strong> code we need to write.)</p>
 <h2>Skills Sought</h2>
 <p>In order of importance:</p>
@@ -152,6 +157,12 @@
 </ul>
 <hr />
 <p><a href="Compiler-Engineer-Notes.html">Compiler Engineer Notes</a></p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

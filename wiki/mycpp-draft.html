@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>mycpp draft</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>mycpp draft</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <h1>Translating Python to C++: Don't Lose the Stack</h1>
 <p><code>mycpp</code> is the MyPy-based Python-to-C++ translator for the Oils shell project. In contrast to other performance-focused Python compilers and interpreters (<a href="https://antocuni.eu/2025/10/29/inside-spy-part-1-motivations-and-goals/">SPy</a>, CPython, PyPy), it trades off generality for speed in an extreme manner - we only ever intend to compile a single project with it, and are willing to change the source code to simplify the translation.</p>
@@ -179,6 +184,12 @@ def visit_break_stmt(self, o: mypy.nodes.BreakStmt):
 <p>Adding this check uncovered a single example of <code>break</code> being used incorrectly in the codebase!</p>
 <h2>Conclusions?</h2>
 <p>As <code>mycpp</code> matures, we're uncovering more and more edge cases that are awkward to handle with MyPy, leading to more of such global state tracked in and across passes. While the visitor pattern served us well, as we encounter the limits of naïve translation, its abstraction becomes increasingly &quot;leaky.&quot;</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

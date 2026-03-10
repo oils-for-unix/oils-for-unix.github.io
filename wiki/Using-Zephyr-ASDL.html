@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Using Zephyr ASDL</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Using Zephyr ASDL</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>If you define a sum type like</p>
 <pre><code>expr = Unary(expr e) | Binary(expr left, expr right)
@@ -32,6 +37,12 @@
 <p>The implementation is here, with some more notes in the README.</p>
 <p>https://github.com/oilshell/oil/tree/master/asdl</p>
 <p>For conceptual background, see <a href="http://www.oilshell.org/blog/tags.html?tag=ASDL#ASDL">blog posts tagged #ASDL</a> or the <a href="https://www.cs.princeton.edu/techreports/1997/554.pdf">original Zephyr technical report</a>.</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

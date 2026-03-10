@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Running ble.sh with OSH</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Running ble.sh with OSH</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Related: <a href="How-Interactive-Shells-Work.html">How Interactive Shells Work</a> - <a href="https://github.com/akinomyoga/ble.sh">https://github.com/akinomyoga/ble.sh</a></p>
 <p>This is <a href="https://github.com/oilshell/oil/issues/653">issue #653</a>, in particular <a href="https://github.com/oilshell/oil/issues/653#issuecomment-599227422">the list of tasks in this comment</a>.</p>
@@ -173,6 +178,12 @@ $ read -e
 <pre><code class="language-bash">$ read -e -p '[\u@\h \W]\$ ' -i 'echo hello'
 </code></pre>
 <p>Related: <a href="Running-Package-Builds-with-OSH.html">Running Package Builds with OSH</a></p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

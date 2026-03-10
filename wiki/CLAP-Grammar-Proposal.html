@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>CLAP Grammar Proposal</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CLAP Grammar Proposal</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <h1>CLAP grammar (Command Line Argument Parse)</h1>
 <p><strong>EARLY DRAFT STATE</strong></p>
@@ -149,6 +154,12 @@ parameters could vary this for different parser styles.
 An extension for matching characters from $IFS would be useful.</p>
 <h2>Plan</h2>
 <p>The intention is to implement an initial prototype. In the short term, YAML can be used for description which allows the details and functionality to be refined before fixing the syntax of the DSL. The prototype would be in a form that would be usable as a plugin to existing shells or perhaps a Shellac server. Direct integration into other shells would only come later (and would need the code to be ported/rewritten in C or whatever).</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

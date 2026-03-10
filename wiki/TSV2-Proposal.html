@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>TSV2 Proposal</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TSV2 Proposal</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Up: <a href="Structured-Data-in-Oil.html">Structured Data in Oil</a></p>
 <p>Now named <strong><a href="QTT.html">QTT</a>: Quoted, Typed Tables</strong></p>
@@ -139,6 +144,12 @@ spaces&quot;,10
 </li>
 <li>What about <code>float</code> columns?  <code>null</code> could be useful for <code>NA</code>.  It can be represented by IEEE floats.</li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

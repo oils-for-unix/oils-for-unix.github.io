@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Contributing</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contributing</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p><em>NOTE: If anything on this page doesn't work for you, please file a bug!</em></p>
 <p>(Related: <a href="Oil-Native-Quick-Start.html">Oil Native Quick Start</a> / <a href="Where-Contributors-Have-Problems.html">Where Contributors Have Problems</a> / <a href="Oils-Dev-Cheat-Sheet.html">Oils Dev Cheat Sheet</a> / <a href="Oil-Dev-Tips.html">Oil Dev Tips</a> / <a href="Making-Pull-Requests.html">Making Pull Requests</a> / <a href="The-Oils-Repo-Is-Different-From-the-Tarball-Releases.html">The Oils Repo Is Different From the Tarball Releases</a> / <a href="AI-Contribution-Policy.html">AI Contribution Policy</a>)</p>
@@ -85,7 +90,7 @@ test/spec-py.sh ysh-all      # all YSH tests
 <h3>Other Test Suites</h3>
 <p>There are many other test suites which are reported on:</p>
 <ol>
-<li>The <a href="https://www.oilshell.org/release/0.10.0/quality.html">/release/$VERSION/quality.html</a> page on every release</li>
+<li>The <a href="https://oils.pub/release/latest/quality.html">/release/$VERSION/quality.html</a> page on every release</li>
 <li>The &quot;Soil&quot; continuous build at <a href="http://travis-ci.oilshell.org/github-jobs/">http://travis-ci.oilshell.org/github-jobs/</a></li>
 </ol>
 <p>For example, you can run</p>
@@ -101,7 +106,7 @@ test/spec-py.sh ysh-all      # all YSH tests
 <li>Use <code>build/clean.sh</code> to start over.
 <ul>
 <li>It deletes all the temp files created by the tools, in underscore dirs like <code>_build</code> and <code>_tmp</code>.</li>
-<li>See <a href="Oil-Dev-Cheat-Sheet.html">Oil Dev Cheat Sheet</a></li>
+<li>See <a href="Oils-Dev-Cheat-Sheet.html">Oils Dev Cheat Sheet</a></li>
 </ul>
 </li>
 <li><a href="Spec-Tests.html">Spec Tests</a> are very important!  Make sure you know how to run them quickly and maintain a fast, iterative development style.
@@ -132,13 +137,19 @@ test/spec-py.sh ysh-all      # all YSH tests
 <h2>Code Overviews</h2>
 <ul>
 <li>See <a href="https://github.com/oilshell/oil/blob/master/README.md">README.md</a> and <a href="https://github.com/oils-for-unix/oils/blob/master/doc/repo-overview.md">Repo Overview</a></li>
-<li><a href="https://www.oilshell.org/release/latest/pub/metrics.wwz/line-counts/overview.html">https://www.oilshell.org/release/latest/pub/metrics.wwz/line-counts/overview.html</a></li>
-<li><a href="https://www.oilshell.org/release/latest/pub/metrics.wwz/line-counts/for-translation.html">https://www.oilshell.org/release/latest/pub/metrics.wwz/line-counts/for-translation.html</a></li>
+<li><a href="https://oils.pub/release/latest/pub/metrics.wwz/line-counts/overview.html">https://oils.pub/release/latest/pub/metrics.wwz/line-counts/overview.html</a></li>
+<li><a href="https://oils.pub/release/latest/pub/metrics.wwz/line-counts/for-translation.html">https://oils.pub/release/latest/pub/metrics.wwz/line-counts/for-translation.html</a></li>
 </ul>
 <h2>Links</h2>
 <ul>
 <li><a href="Python-App-Bundle.html">Python App Bundle</a> -- the old &quot;OVM&quot; build</li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

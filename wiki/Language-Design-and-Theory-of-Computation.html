@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Language Design and Theory of Computation</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Language Design and Theory of Computation</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <h3>Undecidable Parsing</h3>
 <p>Deciding whether to print &quot;syntax error&quot; shouldn't require simulating a Turing machine.</p>
@@ -149,6 +154,12 @@ ever executing a single instruction.</p>
 <li>Turing completeness vs. side effects/capabilities.  Both of these are design issues and shouldn't be conflated.</li>
 <li>Whether there is abstraction power like functions.  I think Awk was Turing complete at first, but it didn't have functions.  <a href="Related-lobsters-thread%7Chttps://lobste.rs/s/bqjhuv/fac_build_system/comments/yozbxt#c_yozbxt.html">Related lobsters thread|https://lobste.rs/s/bqjhuv/fac_build_system/comments/yozbxt#c_yozbxt</a>.</li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

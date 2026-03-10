@@ -1,13 +1,18 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Command vs Expression Mode</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Command vs Expression Mode</title>
 
-<p>Oil: <a href="http://www.oilshell.org/release/latest/doc/command-vs-expression-mode.html">http://www.oilshell.org/release/latest/doc/command-vs-expression-mode.html</a></p>
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
+
+<p>Oil: <a href="http://oils.pub/release/latest/doc/command-vs-expression-mode.html">http://oils.pub/release/latest/doc/command-vs-expression-mode.html</a></p>
 <p>elvish: Prefix syntax for arithmetic.  So there's only one mode?  Code can get lispy because () is command substitution.</p>
 <p><a href="Oh-Syntax-Comparison%7Chttps://htmlpreview.github.io/?https://raw.githubusercontent.com/michaelmacinnis/oh/master/doc/comparison.html.html">Oh Syntax Comparison|https://htmlpreview.github.io/?https://raw.githubusercontent.com/michaelmacinnis/oh/master/doc/comparison.html</a></p>
 <p>The shell language for single commands is almost identical, but the rest is homoiconic syntax?  There is a <code>math</code> command for infix, e.g. <code>math '1.2 + 3.4'</code>.</p>
@@ -30,6 +35,12 @@
 <p><em>By default, Mash is in &quot;regular Mash&quot; mode. If a command line starts or ends with !, the entire line is interpreted as a Mish command. If ! is issued by itself as a command, then Mash toggles into Mish by default, and the prompt changes from a $ to a !.</em></p>
 <p><a href="Neugram-Shell%7Chttps://github.com/neugram/ng/blob/master/docs/shell.md.html">Neugram Shell|https://github.com/neugram/ng/blob/master/docs/shell.md</a> (Go-based, implemented in Go)</p>
 <p><em>A $$ ... $$ expression in Neugram is a sequence of shell commands. If used as a top-level statement in the interpreter, commands are executed as they are parsed. Otherwise, shell commands are executed when the $$-expression is evaluated according to standard Neugram rules.</em></p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

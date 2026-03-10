@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>OSH Builtins: "Hello  world!" Example</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OSH Builtins: "Hello  world!" Example</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <h1>About</h1>
 <p>This document describes the steps required to create a fictional OSH builtin called <code>hw</code> that prints &quot;Hello, world!&quot; when invoked.</p>
@@ -148,6 +153,12 @@ builtin-hw.test.sh
 case    line    osh
   0       3     pass    `hw` prints &quot;Hello, world!&quot;
 </code></pre>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

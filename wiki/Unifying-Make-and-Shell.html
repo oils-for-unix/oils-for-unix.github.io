@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Unifying Make and Shell</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unifying Make and Shell</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <ul>
 <li>Back: to <a href="ExternalResources.html">ExternalResources</a></li>
@@ -30,6 +35,12 @@
 </li>
 </ul>
 <p>I also ranted a bit in <a href="this-comment-thread%7Chttps://lobste.rs/s/azldgm/oil_comments_about_shell_awk_make.html">this comment thread|https://lobste.rs/s/azldgm/oil_comments_about_shell_awk_make</a> about the overlap between Make and shell.  And what I want from a build tool (build variants to support performance, security, correctness, etc.)</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

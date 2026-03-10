@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>The Biggest Shell Programs in the World</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Biggest Shell Programs in the World</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Help me fill out this page!  It's freely editable.</p>
 <p>What programs should be listed?  I'm using &quot;biggest&quot; in the sense of <strong>substantial</strong>, not necessarily the raw number of lines.</p>
@@ -103,7 +108,7 @@
 <h3>Links</h3>
 <ul>
 <li>
-<p><a href="http://www.oilshell.org/release/latest/test/wild.wwz/">OSH &quot;Wild&quot; Tests</a> parse over a million lines of shell.  However most of these are small programs and distro package definitions like Alpine PKGBUILD and Gentoo ebuilds, which are repetitive.</p>
+<p><a href="http://oils.pub/release/latest/test/wild.wwz/">OSH &quot;Wild&quot; Tests</a> parse over a million lines of shell.  However most of these are small programs and distro package definitions like Alpine PKGBUILD and Gentoo ebuilds, which are repetitive.</p>
 </li>
 <li>
 <p><a href="Shell-Programs-That-Run-Under-OSH.html">Shell Programs That Run Under OSH</a></p>
@@ -112,6 +117,12 @@
 <p><a href="https://yossarian.net/til/post/some-surprising-code-execution-sources-in-bash/">shell script are dangerous</a> The shell is a program to handle your system internally via an interactive console(or not)... It's feature full and extremely dangerous. it's not done to produce applications.</p>
 </li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

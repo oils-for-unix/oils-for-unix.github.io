@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>YSH FAQ</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YSH FAQ</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>This is an initial cut of FAQ based on <a href="https://lobste.rs/s/9dcsmn/tour_oil_language#c_vdakjz">questions from lobste.rs</a>.</p>
 <p>You may want to read <a href="https://oils.pub/release/latest/doc/ysh-tour.html">A Tour of YSH</a> <strong>before</strong> this FAQ.</p>
@@ -39,6 +44,12 @@
 <li><a href="https://oils.pub/release/latest/doc/warts.html">YSH Language Warts</a></li>
 <li><a href="https://oils.pub/release/latest/doc/ysh-faq.html">YSH Language FAQ</a></li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Feature Detection Is Better than Version Detection</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feature Detection Is Better than Version Detection</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Summary: Version Detection like checking <code>$BASH_VERSION == &quot;4.4&quot;</code> or <code>User-Agent == &quot;Mozilla&quot;</code> is bad for portability.</p>
 <p>Instead, it's better to test if the feature exists:</p>
@@ -69,6 +74,12 @@ fi
 <blockquote>
 <p>But listing targets in our code is also fundamentally duplicating work that the libc crate (in our case) has already done.</p>
 </blockquote>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

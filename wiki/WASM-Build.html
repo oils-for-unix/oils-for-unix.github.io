@@ -1,0 +1,72 @@
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WASM Build</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
+
+<h1>WASM Build</h1>
+<p>Building Oils for WASM is an interesting thought.</p>
+<h2>Emscripten</h2>
+<p>Emscripten doesn't support <code>fork()</code>, therefore using a emscripten build is extremely limited (e.g. <code>|</code> doesn't work).
+A working <code>emcc</code> setup is expected and a runtime like <code>node</code>. the library <code>libatomic1</code> is also required and might not be preinstalled.</p>
+<ul>
+<li>Download the tarball</li>
+<li>Fix the <code>configure</code> script to work:
+<ul>
+<li>Change the <code>cc_print_expr</code> function to use a wasm runtime for the checks, e.g. <code>node $TMP/print_expr &gt; $TMP/print_expr.out</code></li>
+<li>Change the <code>cc_or_die</code> function by adding the 2 flags <code>-sEXIT_RUNTIME -sFORCE_FILESYSTEM</code> to the compilation</li>
+</ul>
+</li>
+<li><code>./configure --cxx-for-configure em++</code></li>
+<li><code>CXXFLAGS=-fexceptions _build/oils.sh --cxx em++</code></li>
+<li>Ignore the error regarding <code>strip</code>.</li>
+</ul>
+<p>Now it should be possible to run the following:</p>
+<pre><code>root@289ab6328d1a:/src/oils-for-unix-0.37.0# node _bin/em++-opt-sh/oils-for-unix ysh -c &quot;= 5 + 5&quot;
+(Int)   10
+</code></pre>
+<p>There's still some work to do to run the <code>html</code> file (e.g. passing the proper arguments).</p>
+<h2>WASIX</h2>
+<p>I still haven't managed to get it to build with <code>wasixcc</code>, it fails on the link stage. :(</p>
+<h1>With emulation</h1>
+<p>Using <a href="https://github.com/copy/v86#">copy/v86</a> works, despite being rather slow to start; See the <a href="https://melkor333.github.io/oils-in-the-browser">Demo</a> or follow these instructions;</p>
+<ul>
+<li>clone the repo and go to <code>REPO/tools/docker/alpine</code></li>
+<li>Edit the <code>Dockerfile</code> and add:
+<ul>
+<li>before the very first <code>RUN</code> command: <code>RUN echo https://dl-cdn.alpinelinux.org/alpine/edge/testing &gt;&gt; /etc/apk/repositories</code></li>
+<li>add <code>oils-for-unix</code> to the list of packages to be installed (I had to add <code>mkinitfs</code> to the install list as well)</li>
+</ul>
+</li>
+<li>Run <code>./build.sh</code>
+<ul>
+<li>this requires the pip package <code>zstandard</code></li>
+</ul>
+</li>
+<li>Afterwards, the directory <code>REPO/build/</code> should exist with the relevant packages</li>
+<li>edit the file <code>examples/alpine.html</code> and add the following to the string starting with <code>cmdline</code>; <code>init=/usr/bin/ysh</code>. This makes the VM start directly into ysh, making the startup much faster. <code>ysh</code> effectively becomes <code>PID1</code>. :)</li>
+<li>in the root of the repository, run <code>make run</code>, then open the following URL: http://localhost:8000/examples/alpine.html</li>
+<li>After the boot finishes; it's possible to run <code>ysh</code>, see screenshot below.</li>
+</ul>
+<p>TODOs:</p>
+<ul>
+<li>[ ] Use <code>build-state.js</code> to store the bootup process and make the VM start in an instant</li>
+</ul>
+<!-- raw HTML omitted -->
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
+  </body>
+</html>
+

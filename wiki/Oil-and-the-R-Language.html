@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Oil and the R Language</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oil and the R Language</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Up: <a href="Structured-Data-in-Oil.html">Structured Data in Oil</a></p>
 <p>I've mentioned to several people that Oil will have a <strong>table data structure</strong> influenced by the <a href="R-language%7Chttps://www.r-project.org/about.html.html">R language|https://www.r-project.org/about.html</a> for statistical computing.</p>
@@ -87,6 +92,12 @@ should just use <code>|</code>.</li>
 <p><code>find</code>, <code>stat</code>, <code>time</code>, etc. have printf-style format strings.  This is similar to selecting columns and formatting them.  <code>xargs</code> is missing <code>--format</code>.</p>
 </li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

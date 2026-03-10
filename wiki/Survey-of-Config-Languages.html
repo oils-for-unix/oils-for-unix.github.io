@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Survey of Config Languages</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Survey of Config Languages</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <h2>What is a &quot;Config Language&quot;?  What Belongs on this Page?</h2>
 <p>Config languages let you provide parameters to software, usually at runtime.  For example:</p>
@@ -29,7 +34,7 @@
 <li>Internal DSLs in General Purpose Languages</li>
 </ol>
 <p>This doesn't imply anything about what solution you should use!</p>
-<p>Oils is on the right of that spectrum: <a href="https://www.oilshell.org/release/latest/doc/hay.html">Hay Ain't YAML - Custom Languages for Unix Systems</a>.  It's the only config language embedded in a shell!  It uses a staged evaluation model.</p>
+<p>Oils is on the right of that spectrum: <a href="https://oils.pub/release/latest/doc/hay.html">Hay Ain't YAML - Custom Languages for Unix Systems</a>.  It's the only config language embedded in a shell!  It uses a staged evaluation model.</p>
 <p>This page is <strong>editable</strong>, so feel free to add links below.  And feel free to add notable usages, especially under <em>Who Uses it?</em></p>
 <h2>Languages For String Data</h2>
 <ul>
@@ -178,7 +183,7 @@ primarily targeted towards devops tools, servers, etc.*</li>
 <p>Proprietary / non-open-source: Google's BCL</p>
 <h2>Internal DSLs in General Purpose Languages</h2>
 <ul>
-<li><a href="https://www.oilshell.org/release/latest/doc/hay.html">Hay Ain't YAML - Custom Languages for Unix Systems</a>.  The only config language that's embedded in a shell!  It uses a staged evaluation model.
+<li><a href="https://oils.pub/release/latest/doc/hay.html">Hay Ain't YAML - Custom Languages for Unix Systems</a>.  The only config language that's embedded in a shell!  It uses a staged evaluation model.
 <ul>
 <li><em>Oil adds the missing declarative part to shell.</em></li>
 <li><em>We need a better control plane language for the cloud.</em></li>
@@ -204,6 +209,12 @@ primarily targeted towards devops tools, servers, etc.*</li>
 <li>Notes on Oil: <a href="Config-Dialect.html">Config Dialect</a> / <a href="Hay.html">Hay</a></li>
 <li><a href="https://lobste.rs/s/phqsxk/hay_ain_t_yaml_custom_languages_for_unix">lobste.rs thread on Hay, with more comparisons</a></li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

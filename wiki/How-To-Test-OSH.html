@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>How To Test OSH</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How To Test OSH</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>If anything on this page is unclear, or you can't get it to work, feel free to send feedback on Github or start a thread on <a href="https://oilshell.zulipchat.com/">oilshell.zulipchat.com</a> (log in with Github).  More: <a href="Where-To-Send-Feedback.html">Where To Send Feedback</a>.</p>
 <p>Also, feel free to edit the page with tips.</p>
@@ -13,7 +18,7 @@
 <p>Related: <a href="What-Is-Expected-to-Run-Under-OSH.html">What Is Expected to Run Under OSH</a></p>
 <h2>Installing</h2>
 <ul>
-<li>For the C++ version (<code>oils-for-unix</code>), run <code>./configure</code>, <code>_build/oils.sh</code>, <code>sudo ./install</code>.  See <a href="https://www.oilshell.org/release/latest/doc/INSTALL.html">INSTALL.txt</a> in the tarball.</li>
+<li>For the C++ version (<code>oils-for-unix</code>), run <code>./configure</code>, <code>_build/oils.sh</code>, <code>sudo ./install</code>.  See <a href="https://oils.pub/release/latest/doc/INSTALL.html">INSTALL.txt</a> in the tarball.</li>
 </ul>
 <h2>Notes</h2>
 <ul>
@@ -60,7 +65,7 @@
 <li>Improve error messages
 <ul>
 <li>Add a number like <code>OILS-ERR-300</code></li>
-<li>Then write <strong>hints</strong> and <strong>actions</strong> associated with the error in <a href="https://www.oilshell.org/release/latest/doc/error-catalog.html">Oils Error Catalog, With Hints</a></li>
+<li>Then write <strong>hints</strong> and <strong>actions</strong> associated with the error in <a href="https://oils.pub/release/latest/doc/error-catalog.html">Oils Error Catalog, With Hints</a></li>
 </ul>
 </li>
 </ul>
@@ -98,6 +103,12 @@ oil_repo=~/git/oilshell/oil
 <p>The <code>.bashrc</code> loads my own custom completions, which fall back on the temporary fork of bash-completion (URL and branch above).  Example:</p>
 <pre><code>. ~/git/oilshell/bash-completion/osh_completion` # this script is a modified version of bash_completion
 </code></pre>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

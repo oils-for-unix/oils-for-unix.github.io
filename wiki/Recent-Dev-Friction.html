@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Recent Dev Friction</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recent Dev Friction</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Back to <a href="Where-Contributors-Have-Problems.html">Where Contributors Have Problems</a></p>
 <p>Summarizing some of <a href="https://oilshell.zulipchat.com/#narrow/stream/121539-oil-dev/topic/Dev.20Friction.20.2F.20Smells">#oil-dev &gt; Dev Friction / Smells</a></p>
@@ -50,6 +55,12 @@ andy@lenny:~/git/oilshell/oil$
 <p>Ironically, this is a deficiency of shell that we should fix in OSH and YSH!!!   We can use help!</p>
 <p>So for now, you have to read the comments at the top of the file.  I always have an editor and a terminal open <strong>side by side</strong> for this reason.</p>
 <p>Or use the hints in the web UI for <a href="http://travis-ci.oilshell.org/github-jobs/">http://travis-ci.oilshell.org/github-jobs/</a>.</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

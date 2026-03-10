@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Unix Tools</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unix Tools</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>The shell interacts with a set of Unix tools in <code>/bin</code> and so forth.  However, in many cases, those tools have grown functionality that overlaps with shell.</p>
 <p>Unix Tools ...</p>
@@ -146,6 +151,12 @@ find: Unknown regular expression type ‘-help’; valid types are ‘findutils-
 <li>coreutils <code>time</code> doesn't have millisecond resolution!  https://stackoverflow.com/questions/16959337/usr-bin-time-format-output-elapsed-time-in-milliseconds.  It's hard-coded right in time.c --- usecs/10000.  very arbitrary.</li>
 <li>bash TIMEFORMAT has precision like <code>%3R</code>, but it doesn't have the exit code!  Annoying.</li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

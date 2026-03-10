@@ -1,15 +1,26 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>QSN</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QSN</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <h1>QSN: Quoted String Notation</h1>
-<p>See <a href="http://www.oilshell.org/release/latest/doc/qsn.html">http://www.oilshell.org/release/latest/doc/qsn.html</a></p>
+<p>See <a href="http://oils.pub/release/latest/doc/qsn.html">http://oils.pub/release/latest/doc/qsn.html</a></p>
 <p>Related: <a href="QTT.html">QTT</a>: Quoted, Typed Tables</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>AI Contribution Policy</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Contribution Policy</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Back to <a href="Contributing.html">Contributing</a></p>
 <h2>Disclosure</h2>
@@ -54,6 +59,12 @@ Date:   Wed Sep 24 12:14:15 2025 -0400
 <ul>
 <li><a href="https://nlnet.nl/foundation/policies/generativeAI/">https://nlnet.nl/foundation/policies/generativeAI/</a> - This is similar to our policy, but also worth reading.  All our work should follow this policy.</li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Why Lexing and Parsing Should Be Separate</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Why Lexing and Parsing Should Be Separate</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p><strong>Summary: Do the easy thing with the fast algorithm, and the hard thing with the slow algorithm.  Lexing and parsing are different things.</strong></p>
 <p>Note: the arguments here are more important for big languages/parsers.  For small languages, these issues don't matter as much.</p>
@@ -82,6 +87,12 @@
 <p><a href="https://old.reddit.com/r/ProgrammingLanguages/comments/gdt3xd/why_lexing_and_parsing_should_be_separate/fw94qs8/">from matklad</a> -- Lexers are easy to make incremental, but parsers aren't.  This matters for IDE support.</p>
 </li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

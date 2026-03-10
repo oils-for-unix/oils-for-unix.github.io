@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Oils Dev Cheat Sheet</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oils Dev Cheat Sheet</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Here is a list of commands <strong>I often run</strong>.</p>
 <p><strong>The <a href="Contributing.html">Contributing</a> page walks you through the setup</strong>.</p>
@@ -171,6 +176,12 @@ build/deps.sh install-wedges  # install what you typically need, as above
 <li><a href="Compiler-Engineer-Job.html">Compiler Engineer Job</a></li>
 <li><a href="Where-Contributors-Have-Problems.html">Where Contributors Have Problems</a></li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

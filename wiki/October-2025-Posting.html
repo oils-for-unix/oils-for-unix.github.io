@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>October 2025 Posting</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>October 2025 Posting</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Related: <a href="October-2025-Reply.html">October 2025 Reply</a></p>
 <hr />
@@ -163,6 +168,12 @@ recently received a $4K donation, which I mention in the upcoming blog post.</p>
 <li><a href="Fourth-Grant-Goals-and-Guidelines.html">Fourth Grant Goals and Guidelines</a></li>
 </ul>
 <p>Asking questions on Zulip is always welcome!</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

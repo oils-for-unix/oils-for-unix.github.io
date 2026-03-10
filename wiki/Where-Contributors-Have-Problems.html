@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Where Contributors Have Problems</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Where Contributors Have Problems</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Back to <a href="Contributing.html">Contributing</a></p>
 <p>This page documents where Oils contributors typically have problems.  As of May 2022, the project has existed for 6 years, and Github says there have been 51 contributors.  I would say at least 30 of them contributed code (as opposed to fixing typos, which is welcome).</p>
@@ -42,7 +47,7 @@ $ grep CommandParser */*.sh
 <p><code>ctags</code> and <code>vim</code> also work well on the codebase, although I often forget to set it up!  <code>devtools/ctags.sh</code> has some shell functions.  And I use <code>grep -n pattern */*.py &gt; out.txt</code>, then open up <code>out.txt</code> in Vim and jump directly to locations.  (<code>Ctrl-]</code>)</p>
 <h2>3. A Very Test-Driven Workflow</h2>
 <p>The shell workflow is also test-driven.  Interpreters and compilers are very intricate, so it's useful to isolate a specific piece of code with a failing test (often <a href="Spec-Tests.html">Spec Tests</a>), and then make it go green.</p>
-<p>Then make sure that nothing regressed in <a href="Soil.html">Soil</a>, our CI system.  These tests run on every commit, and they're published with every release on <a href="https://www.oilshell.org/release/latest/quality.html">the quality.html page</a>.</p>
+<p>Then make sure that nothing regressed in <a href="Soil.html">Soil</a>, our CI system.  These tests run on every commit, and they're published with every release on <a href="https://oils.pub/release/latest/quality.html">the quality.html page</a>.</p>
 <p>I find that this type of workflow makes collaboration easier, and progress very objective.  However, I've noticed that not every contributor is comfortable with it.</p>
 <p>I should add that I think it's valuable for any programmer to learn!  It might seem slower in the short term, but it's faster in the long run.</p>
 <h2>4. C and C++</h2>
@@ -149,6 +154,12 @@ $ grep CommandParser */*.sh
 <h3>Recent Dev Friction</h3>
 <p>I keep track of the places where people have problems: <a href="https://oilshell.zulipchat.com/#narrow/stream/121539-oil-dev/topic/Dev.20Friction.20.2F.20Smells">#oil-dev &gt; Dev Friction / Smells</a></p>
 <p>And I summarized a few issues here: <a href="Recent-Dev-Friction.html">Recent Dev Friction</a></p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

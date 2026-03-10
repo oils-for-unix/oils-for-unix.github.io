@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>CSTR Proposal</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSTR Proposal</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Related: <a href="TSV2-Proposal.html">TSV2 Proposal</a></p>
 <p>Update: This is <strong>done</strong>, and it's now called QSN: Quoted String Notation.  See the <a href="https://github.com/oilshell/oil/tree/master/qsn_">qsn/ directory</a>.</p>
@@ -65,6 +70,12 @@ bob    10
 <p>https://docs.python.org/2/library/codecs.html#python-specific-encodings</p>
 <h2>Related</h2>
 <p><a href="Unix-Tools.html">Unix Tools</a> lists tools like <code>find</code> which understand backslash escapes.</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

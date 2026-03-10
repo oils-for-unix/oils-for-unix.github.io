@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Diversity in Command Line Syntax</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diversity in Command Line Syntax</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>(Back to <a href="Shell-Autocompletion.html">Shell Autocompletion</a>)</p>
 <p>Here I'm picking the worst cases. My point is not that we have to handle them -- it's that a  grammar shouldn't <strong>prevent</strong> you from handling these cases.</p>
@@ -35,6 +40,12 @@
 <p>zsh seems to get this right.  (bash doesn't complete flags at all, so it doesn't apply.)</p>
 <h3>echo builtin</h3>
 <p>It doesn't respect <code>--</code> according to POSIX.  Maybe this is easy to express?</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Composable Distributed OS</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Composable Distributed OS</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Spitballing a distributed OS design following the <a href="Perlis-Thompson-Principle.html">Perlis-Thompson Principle</a>.  (An elaboration on <a href="https://lobste.rs/s/ww7fw4/unix_shell_history_trivia#c_mjcz7m">this lobste.rs subthread</a> on <em>Unix Shell: History and Trivia</em>)</p>
 <h2>Before Reading This</h2>
@@ -153,6 +158,12 @@ Programs can read and write its content with the regular POSIX file system API, 
 </ul>
 </li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

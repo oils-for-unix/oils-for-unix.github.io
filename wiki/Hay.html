@@ -1,13 +1,18 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Hay</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hay</title>
 
-<p><em>Hay</em> is the declarative part of Oil: https://www.oilshell.org/release/latest/doc/hay.html</p>
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
+
+<p><em>Hay</em> is the declarative part of Oil: https://oils.pub/release/latest/doc/hay.html</p>
 <ul>
 <li><a href="Survey-of-Config-Languages.html">Survey of Config Languages</a></li>
 <li>Older notes: <a href="Config-Dialect.html">Config Dialect</a></li>
@@ -38,6 +43,12 @@
 <li>https://leebriggs.co.uk/blog/2019/02/07/why-are-we-templating-yaml</li>
 <li>http://mikehadlow.blogspot.com/2012/05/configuration-complexity-clock.html</li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

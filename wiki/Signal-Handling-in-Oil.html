@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Signal Handling in Oil</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signal Handling in Oil</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Handling signals in Python exposes you to EINTR.</p>
 <p>See <a href="https://www.python.org/dev/peps/pep-0475/">PEP 475 -- Retry system calls failing with EINTR</a>.  We're backporting this work.  That's the main purpose of the <code>native/posixmodule.c</code> fork (in addition to removing over 7,000 lines of unused code).</p>
@@ -22,6 +27,12 @@
 <ul>
 <li><a href="Difficulties-With-Unix-Signals.html">Difficulties With Unix Signals</a></li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

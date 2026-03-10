@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Fish Oil Brainstorming</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fish Oil Brainstorming</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Notes from https://gitter.im/fish-shell/fish-oil   so I don't forget</p>
 <h2>Problems with Global State</h2>
@@ -39,6 +44,12 @@
 <h2>Notes on Subinterpreters</h2>
 <p>https://github.com/oilshell/oil/issues/704</p>
 <p>In addition to the config file and <code>ble.sh</code> use cases, Oil could &quot;virtually fork&quot; its heap with <code>memcpy()</code> and <code>pipe()</code> between threads.</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

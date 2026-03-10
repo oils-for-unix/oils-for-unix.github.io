@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Documentation Strategy</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentation Strategy</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Related: <a href="Oil-Language-Docs.html">Oil Language Docs</a></p>
 <h2>2020 Progress</h2>
@@ -13,7 +18,7 @@
 <li>Everything is plain Markdown files git!  woohoo!
 <ul>
 <li>Github renders them nicely, e.g. <a href="https://github.com/oilshell/oil/blob/master/doc/eggex.md">https://github.com/oilshell/oil/blob/master/doc/eggex.md</a></li>
-<li>But we also have our own renderings on the site: <a href="http://www.oilshell.org/release/latest/doc/eggex.html">http://www.oilshell.org/release/latest/doc/eggex.html</a></li>
+<li>But we also have our own renderings on the site: <a href="http://oils.pub/release/latest/doc/eggex.html">http://oils.pub/release/latest/doc/eggex.html</a></li>
 </ul>
 </li>
 <li>I open sourced all of the doc toolchain in <code>doctools/</code></li>
@@ -59,12 +64,18 @@
 <h3>Related</h3>
 <ul>
 <li>I use <code>build/doc.sh update-src-versions</code> on every release</li>
-<li>The top of <code>devtools/release.sh</code> shows the release process.  A version of <a href="http://www.oilshell.org/release/0.6.pre22/">this tree of HTML</a> is built every time.</li>
+<li>The top of <code>devtools/release.sh</code> shows the release process.  A version of <a href="http://oils.pub/release/0.6.pre22/">this tree of HTML</a> is built every time.</li>
 </ul>
 <h3>Philosophy</h3>
 <ul>
 <li>... Have a single point of truth, but don't go overboard.  i.e. I think the Python project believes in &quot;separately-written docs&quot;?</li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

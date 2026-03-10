@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Perlis Thompson Principle</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perlis Thompson Principle</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p><strong>UNDER CONSTRUCTION</strong></p>
 <p>The Perlis-Thompson Principle is an idea in software architecture.  It's arguably the most important one, because it explains the evolution and scaling of the largest and longest-lived software systems, like Unix and the Web.  It also suggests where they fall short.</p>
@@ -231,6 +236,12 @@ shared libraries is a separate job.</li>
 <li><a href="Patterns-and-Anti-Patterns.html">Patterns and Anti-Patterns</a> -- Using shell.</li>
 <li><a href="Composable-Distributed-OS.html">Composable Distributed OS</a> -- Applying the Perlis-Thompson Principle</li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

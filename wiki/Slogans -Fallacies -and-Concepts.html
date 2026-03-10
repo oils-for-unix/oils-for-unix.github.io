@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Slogans  Fallacies  and Concepts</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slogans  Fallacies  and Concepts</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p><strong>UNDER CONSTRUCTION</strong></p>
 <p>Related: <a href="Patterns-and-Anti-Patterns.html">Patterns and Anti-Patterns</a></p>
@@ -276,6 +281,12 @@ designers intended, such as banking or web serving -- embedded in the autopoieti
 <li>Fascia vs big organs (heart, lungs)</li>
 <li>Autopoietic vs Allopoietic (Richard Gabriel)</li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

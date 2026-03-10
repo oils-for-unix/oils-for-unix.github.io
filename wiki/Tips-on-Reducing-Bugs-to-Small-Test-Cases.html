@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Tips on Reducing Bugs to Small Test Cases</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tips on Reducing Bugs to Small Test Cases</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>How can we find bugs more efficiently with <code>regtest/aports</code>?</p>
 <p>This page is <strong>editable</strong>.  Please add tips!</p>
@@ -63,6 +68,12 @@ Please report to mathieu dot desnoyers at efficios dot com</p>
 <ul>
 <li><a href="Updating-Causes-of-Aports-Failures.html">Updating Causes of Aports Failures</a></li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Where To Send Feedback</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Where To Send Feedback</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>We're looking for feedback on Oils!  This includes:</p>
 <ul>
@@ -70,6 +75,12 @@
 <p>See <a href="Language-Design-Principles.html">Language Design Principles</a> for some core axioms -- e.g. <em>YSH is for Python and JavaScript users that avoid shell</em>.</p>
 <hr />
 <p>More <a href="Ways-To-Get-Feedback-Prioritized.html">Ways To Get Feedback Prioritized</a></p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

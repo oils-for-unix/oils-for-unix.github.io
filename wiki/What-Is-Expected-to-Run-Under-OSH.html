@@ -1,15 +1,20 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>What Is Expected to Run Under OSH</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What Is Expected to Run Under OSH</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p><strong>Batch</strong> shell programs generally run under OSH unmodified.  See <a href="Shell-Programs-That-Run-Under-OSH.html">Shell Programs That Run Under OSH</a>.</p>
 <p><strong>Interactive</strong> scripts like <code>.bashrc</code> often don't run without modifications.  However, I <strong>do</strong> share my <code>.bashrc</code> and <code>oshrc</code>, so it can work.  See the last section of <a href="How-To-Test-OSH.html">How To Test OSH</a>.</p>
-<p>Related: <a href="https://www.oilshell.org/release/latest/doc/known-differences.html">Known Differences Between OSH and Other Shells</a></p>
+<p>Related: <a href="https://oils.pub/release/latest/doc/known-differences.html">Known Differences Between OSH and Other Shells</a></p>
 <h3>Common issues</h3>
 <ul>
 <li><code>BASH_VERSINFO</code> checks should be removed.  We don't emulate a specific version of bash.  Note that
@@ -29,6 +34,12 @@
 <li><a href="Gradually-Upgrading-Shell-to-YSH.html">Gradually Upgrading Shell to YSH</a></li>
 <li><a href="Migration-Guide.html">Migration Guide</a></li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

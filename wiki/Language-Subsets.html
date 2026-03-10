@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Language Subsets</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Language Subsets</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Using a subset of a language can aid in automatic translation.  Examples:</p>
 <ul>
@@ -14,6 +19,12 @@
 <li>Go language bootstrapping: convert the parser to a subset of C and then auto-convert to Go.</li>
 </ul>
 <p>In oil: I wrote the osh parser in a limited subset of Python, thinking I might convert it to C++.  Now I'm thinking about compiling to OVM first, and then later porting to oil (which we don't yet have a parser for.)</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

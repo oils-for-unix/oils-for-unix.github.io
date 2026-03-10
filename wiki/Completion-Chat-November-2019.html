@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Completion Chat November 2019</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Completion Chat November 2019</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Back to <a href="Shell-Autocompletion.html">Shell Autocompletion</a></p>
 <p>Notes from discussion:</p>
@@ -90,6 +95,12 @@ raise SyntaxError('arg expected')  # a command arg, not flag arg
 <p>I think that's pretty powerful but I haven't explored it yet</p>
 <p>I think if you were to really evaluate it from an HCI perspective, it would basically force you to do ranking, because it would be such a big win</p>
 <p>bash does no ranking / priority but I think fish does some.  zsh doesn't appear to either</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

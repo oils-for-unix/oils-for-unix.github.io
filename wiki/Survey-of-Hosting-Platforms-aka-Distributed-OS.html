@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Survey of Hosting Platforms aka Distributed OS</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Survey of Hosting Platforms aka Distributed OS</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Let's consider hosting platforms as distributed OSes, that mediate 3 things:</p>
 <ol>
@@ -69,6 +74,12 @@
 <h2>Links</h2>
 <p><a href="Survey-of-Integrated-Language-and-OS-Projects.html">Survey of Integrated Language and OS Projects</a></p>
 <p>Back to <a href="Surveys-and-Comparisons.html">Surveys and Comparisons</a></p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

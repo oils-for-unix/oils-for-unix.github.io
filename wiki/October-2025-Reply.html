@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>October 2025 Reply</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>October 2025 Reply</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p><em>October 13, 2025</em></p>
 <p>Hello!  I posted a request for help on October 2nd, and got over <strong>55</strong> responses!  Thank you</p>
@@ -104,6 +109,12 @@
 <li><a href="Fourth-Grant-Goals-and-Guidelines.html">Fourth Grant Goals and Guidelines</a></li>
 </ul>
 <p>Asking questions on Zulip is always welcome!</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

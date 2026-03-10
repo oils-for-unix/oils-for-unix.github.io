@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Shell Almost Has a JSON Analogue</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shell Almost Has a JSON Analogue</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Up: <a href="Structured-Data-in-Oil.html">Structured Data in Oil</a></p>
 <p>The analogy to JSON is that a serialization format can be defined from a subset of the programming language syntax.</p>
@@ -51,6 +56,12 @@ dash: 1: printf: %q: invalid directive
 <h3>Lesson for Oil</h3>
 <p>Shell needs a serialization format!!!</p>
 <p>Update: This is now <a href="QSN.html">QSN</a>.</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

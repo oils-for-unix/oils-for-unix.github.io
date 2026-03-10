@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Tasks Under NLNet Grant</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tasks Under NLNet Grant</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p><a href="Compiler-Engineer-Job.html">Compiler Engineer Job</a> describes the high level of what we're looking for.  It's about the mycpp translator, static types, and garbage collection.</p>
 <p>But here is a more granular breakdown.</p>
@@ -58,6 +63,12 @@
 <li>Figure out of the homogeneous parse tree ofr <a href="$xref">pgen2</a> should use garbage collected types or not.  I think not.</li>
 <li>Make the Oil interpreter translatable, by making it statically typed.  (OSH is already completely statically typed.</li>
 </ol>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Interactive Shell</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Shell</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p><a href="Project-Goals.html">Project Goals</a></p>
 <ul>
@@ -118,6 +123,12 @@ interacting with REPLs you spawn.  These seem like pretty big problems.</li>
 <p><a href="tmux-xpanes%7Chttps://github.com/greymd/tmux-xpanes.html">tmux-xpanes|https://github.com/greymd/tmux-xpanes</a> - <em>Awesome way to create multiple tmux panes.</em> - Interesting idea.  Like a graphical xargs.</p>
 </li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

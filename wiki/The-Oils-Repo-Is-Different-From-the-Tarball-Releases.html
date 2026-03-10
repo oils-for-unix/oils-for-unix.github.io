@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>The Oils Repo Is Different From the Tarball Releases</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Oils Repo Is Different From the Tarball Releases</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>(Back to <a href="Contributing.html">Contributing</a>)</p>
 <p>This page addresses <strong>common confusion</strong> with Oils.</p>
@@ -41,6 +46,12 @@
 <p>A good first contribution would be to pick a bug from the <a href="https://github.com/oils-for-unix/oils/issues">issue tracker</a>.</p>
 <h3>What should be improved about the tarball build?</h3>
 <p>As of March 2025, we shouldn't require root access for building &quot;wedges&quot;, e.g. specific versions of re2c, Python 2, Python 3, etc.</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

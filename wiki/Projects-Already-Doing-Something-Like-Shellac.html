@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Projects Already Doing Something Like Shellac</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects Already Doing Something Like Shellac</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Back: <a href="Shell-Autocompletion.html">Shell Autocompletion</a> / <a href="Shellac-Protocol-Proposal.html">Shellac Protocol Proposal</a></p>
 <ul>
@@ -32,6 +37,12 @@
 <ul>
 <li>https://shellcomp.github.io/ -- <em>Shellcomp is a simple standard to perform completion. Completion is implemented in the command about to be run: The shell runs the command with a specific --tabcomplete '&lt;partial_string&gt;' option. The command responds with simple JSON structure that the shell will parse to perform completion or display help messages.</em></li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

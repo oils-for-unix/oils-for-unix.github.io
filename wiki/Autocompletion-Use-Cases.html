@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Autocompletion Use Cases</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autocompletion Use Cases</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>(Back to <a href="Shell-Autocompletion.html">Shell Autocompletion</a>)</p>
 <ol>
@@ -55,6 +60,12 @@
 <li><a href="Shellac-Protocol-Proposal.html">Shellac Protocol Proposal</a> handles #2 and #3.  #1 is up to the shell binary.</li>
 <li>It is not clear to me (andychu) if grammar-based approaches can handle #3 (in general).</li>
 </ul>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

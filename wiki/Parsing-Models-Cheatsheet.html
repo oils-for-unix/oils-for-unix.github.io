@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Parsing Models Cheatsheet</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parsing Models Cheatsheet</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>(Back to <a href="Shell-Autocompletion.html">Shell Autocompletion</a>)</p>
 <p>From Zulip:</p>
@@ -52,6 +57,12 @@
 <p>[1] I forked Kernighan's original Awk and found a couple minor bugs in it.   https://github.com/andychu/bwk</p>
 <p>[2] The &quot;update&quot; here is due to a private e-mail discussion I had with Guido on pgen's design.  http://python-history.blogspot.com/2018/05/the-origins-of-pgen.html</p>
 <p>[3] http://aosabook.org/en/bash.html</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 

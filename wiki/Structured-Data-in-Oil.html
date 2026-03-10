@@ -1,11 +1,16 @@
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Structured Data in Oil</title>
-      <link rel="stylesheet" type="text/css" href="../web/base.css" />
-    </head>
-    <body class="width40">
+      <!DOCTYPE html>
+      <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Structured Data in Oil</title>
+
+  <link rel="stylesheet" type="text/css" href="../web/base.css" />
+  <link rel="stylesheet" type="text/css" href="./search.css" />
+</head>
+<body class="width40">
+
+<div id="search"></div>
+<hr>
 
 <p>Oil will parse text so you don't have to!</p>
 <h3>Links / Use Cases</h3>
@@ -30,8 +35,8 @@
 </ul>
 <h3>Design Docs</h3>
 <ul>
-<li><a href="https://www.oilshell.org/release/latest/doc/qsn.html">QSN: A Familiar String Interchange Format</a> -- spec done, encoder done, still need decoder</li>
-<li><a href="https://www.oilshell.org/release/latest/doc/qtt.html">QTT</a> -- An extension to TSV that builds on top of QSN.
+<li><a href="https://oils.pub/release/latest/doc/qsn.html">QSN: A Familiar String Interchange Format</a> -- spec done, encoder done, still need decoder</li>
+<li><a href="https://oils.pub/release/latest/doc/qtt.html">QTT</a> -- An extension to TSV that builds on top of QSN.
 <ul>
 <li>older: <a href="TSV2-Proposal.html">TSV2 Proposal</a></li>
 </ul>
@@ -122,6 +127,12 @@
   then sort -nr tiv_delta flins.csv 
 </code></pre>
 <p>It has a nice expression language.  You compute new columns as a function of older ones, then drop them.</p>
+    <script src="./pagefind/pagefind-ui.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
+    </script>
   </body>
 </html>
 
