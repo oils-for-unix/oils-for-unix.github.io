@@ -37,6 +37,19 @@
 <li><a href="https://oilshell.zulipchat.com/#narrow/channel/266977-shell-gui/topic/RPC.20mechanism.20for.20completion.2C.20history.2C.20and.20more/with/518883654">#shell-gui &gt; RPC mechanism for completion, history, and more</a></li>
 <li><a href="https://oilshell.zulipchat.com/#narrow/channel/266977-shell-gui/topic/HSP.20-.20REPLs.20within.20REPLs/with/520231866">#shell-gui &gt; HSP - REPLs within REPLs</a></li>
 </ul>
+<h3>Requirements / scoping</h3>
+<p><strong>WIP</strong></p>
+<ul>
+<li>Eval a command</li>
+<li>clear separate stdin/stdout/stderr &amp; per command</li>
+<li>multiplexing/concurrent processes/async?</li>
+<li>send signal to the command/current external process (ctrl+c)</li>
+<li>remote (e.g. via SSH/Socket/...)</li>
+<li>implementable in plain bash?</li>
+<li>support PTY features (line modes, WINCH, tput, etc.)</li>
+<li>additional enhancements? (e.g. &quot;upgrade path from PTY?&quot;)</li>
+<li>Don't break any escape sequences</li>
+</ul>
 <h2>Case Studies</h2>
 <h3>Warp</h3>
 <ul>
