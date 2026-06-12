@@ -38,20 +38,20 @@
 <li><a href="https://oilshell.zulipchat.com/#narrow/channel/266977-shell-gui/topic/HSP.20-.20REPLs.20within.20REPLs/with/520231866">#shell-gui &gt; HSP - REPLs within REPLs</a></li>
 </ul>
 <h4>Feature comparison</h4>
-<p>| Feature | readline | FANOS | Warp | DOMTerm | <a href="https://github.com/132ikl/hsp/">hsp experiment</a>
+<p>| Feature | readline | FANOS | Warp | DOMTerm | hsp <a href="1.html">1</a>(https://github.com/132ikl/hsp/)<a href="2.html">2</a>(https://git.ikl.sh/132ikl/hsp-rs/)
 |-|-|-|-|-|-|
-| command information (started, still running, stopped, last exit code, ...) | prompthacks | command stopped | ?? | ?? | ??
-| completion | simple file/directory completion/shell integration | no | ?? | ?? | -
-| history | yes | no | ?? |
-| clear separate stdin/stdout/stderr &amp; per command | - | separate fds per command | - | prompthacks | ?? | ??
-| multiplexing/concurrent processes/async? | no | yes | no? | ?? | yes?
-| send signal to the command/current external process (ctrl+c) | yes | broken? | ?? | ?? | ??
-| remote (e.g. via SSH/Socket/...) | yes | no | yes? | ?? | ??
-| implementable in plain shell | no | no | yes? | no? | yes?
-| support PTY features (line modes, WINCH, tput, etc.) | - | yes | yes? | ?? | no?
-| Don't break any escape sequences | yes | yes | yes? | yes? | yes?
-| &quot;nested&quot; shells like <code>nix-shell</code>, <code>virtualenv</code>, new shell in a container, etc. | yes | possible | yes? | ?? | yes?
-| she-dot / seperate render | no | possible | no? | <a href="https://domterm.org/Wire-byte-protocol.html#Miscellaneous-sequences">insert html; <code>&quot;\e]72;&quot; html-text &quot;\a&quot;</code></a> |</p>
+| command information (started, still running, stopped, last exit code, ...) | prompthacks | command stopped | ?? | ?? | yes
+| completion | simple file/directory completion/shell integration | no | ?? | ?? | possible?
+| history | yes | no | ?? | | yes, client-side
+| clear separate stdin/stdout/stderr &amp; per command | - | separate fds per command | - | prompthacks |yes
+| multiplexing/concurrent processes/async? | no | yes | no? | ?? | no
+| send signal to the command/current external process (ctrl+c) | yes | broken? | ?? | ?? | possible
+| remote (e.g. via SSH/Socket/...) | yes | no | yes? | ?? | possible
+| implementable in plain shell | no | no | yes? | no? | yes
+| support PTY features (line modes, WINCH, tput, etc.) | - | yes | yes? | ?? | possible?
+| Don't break any escape sequences | yes | yes | yes? | yes? | yes
+| &quot;nested&quot; shells like <code>nix-shell</code>, <code>virtualenv</code>, new shell in a container, etc. | yes | possible | yes? | ?? | possible
+| she-dot / seperate render | no | possible | no? | <a href="https://domterm.org/Wire-byte-protocol.html#Miscellaneous-sequences">insert html; <code>&quot;\e]72;&quot; html-text &quot;\a&quot;</code></a> | yes</p>
 <h2>Case Studies</h2>
 <h3>Warp</h3>
 <ul>
